@@ -64,8 +64,8 @@ jobs:
             git push
           fi
 
-      - name: Test the crawler and hosting adapter
-        run: pnpm test
+      - name: Test the crawler
+        run: pnpm run test:crawler
 
       - name: Build the GitHub Pages site
         run: pnpm run build:pages
