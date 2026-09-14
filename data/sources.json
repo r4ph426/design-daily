@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Figma Release Notes",
+    "url": "https://www.figma.com/release-notes/",
+    "feedUrl": "https://www.figma.com/release-notes/feed/atom.xml",
+    "category": "Practice",
+    "tags": ["UI", "Systems"]
+  },
+  {
+    "name": "UX Collective",
+    "url": "https://uxdesign.cc/",
+    "feedUrl": "https://uxdesign.cc/feed",
+    "category": "Practice",
+    "tags": ["UX", "Research"]
+  },
+  {
+    "name": "A List Apart",
+    "url": "https://alistapart.com/",
+    "feedUrl": "https://alistapart.com/main/feed/",
+    "category": "Process",
+    "tags": ["UI", "Systems"]
+  },
+  {
+    "name": "It’s Nice That",
+    "url": "https://www.itsnicethat.com/",
+    "feedUrl": "https://www.itsnicethat.com/articles.atom",
+    "category": "Culture",
+    "tags": ["Culture"]
+  }
+]

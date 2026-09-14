@@ -1,7 +1,8 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
+  base: mode === "pages" ? "/design-daily/" : "/",
   build: {
     outDir: "dist/client",
   },
@@ -16,4 +17,4 @@ export default defineConfig({
     },
   },
   plugins: [react()],
-});
+}));

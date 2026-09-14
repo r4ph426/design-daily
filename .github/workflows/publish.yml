@@ -1,0 +1,83 @@
+name: Publish design daily
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "17 6 * * *"
+      timezone: "Europe/Berlin"
+  workflow_dispatch:
+
+concurrency:
+  group: design-daily-pages
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v6
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Crawl Gmail and the web
+        if: github.event_name != 'push'
+        env:
+          GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+          GOOGLE_REFRESH_TOKEN: ${{ secrets.GOOGLE_REFRESH_TOKEN }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-5.4-mini' }}
+          GMAIL_QUERY: ${{ vars.GMAIL_QUERY || 'newer_than:2d -in:spam -in:trash' }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: pnpm run crawl
+
+      - name: Save the generated edition
+        if: github.event_name != 'push'
+        run: |
+          git config user.name "design-daily bot"
+          git config user.email "design-daily-bot@users.noreply.github.com"
+          git add public/data
+          if ! git diff --cached --quiet; then
+            git commit -m "Publish daily edition"
+            git push
+          fi
+
+      - name: Test the crawler and hosting adapter
+        run: pnpm test
+
+      - name: Build the GitHub Pages site
+        run: pnpm run build:pages
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload the Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist/client
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5

@@ -5,17 +5,16 @@ import {
   CaretDown,
   Check,
   Clock,
-  CopySimple,
   EnvelopeSimple,
   LockSimple,
   MagnifyingGlass,
   X,
 } from "@phosphor-icons/react";
 
-const editionNumber = "0197";
-const teamInbox = "daily@inbox.design-daily.app";
+const fallbackEditionNumber = "0197";
+const newsletterIssueBase = "https://github.com/r4ph426/design-daily/issues/new";
 
-const questions = [
+const fallbackQuestions = [
   {
     id: "01",
     slug: "who-designs-the-system",
@@ -145,26 +144,17 @@ const questions = [
   },
 ];
 
-const archiveDays = [
-  { date: "Thursday, 10 September", edition: "edition 0197 · today", questions },
-  {
-    date: "Tuesday, 8 September",
-    edition: "edition 0195",
-    questions: [
-      { category: "Practice", question: "When should a prototype become production?", answer: "Teams are moving the boundary earlier, but only where ownership is already clear.", counts: { total: 19 } },
-      { category: "Process", question: "Is the design system becoming an operating system?", answer: "Shared rules now connect interface, content, model behavior, and governance.", counts: { total: 21 }, returned: "returned from 14 August" },
-      { category: "Culture", question: "Who gets credit for machine-assisted work?", answer: "Studios are writing authorship rules before disputes force the conversation.", counts: { total: 12 } },
-    ],
-  },
-  {
-    date: "Monday, 7 September",
-    edition: "edition 0194",
-    questions: [
-      { category: "Practice", question: "What should an interface admit it does not know?", answer: "Useful systems expose confidence, alternatives, and a clear route back.", counts: { total: 17 } },
-      { category: "Culture", question: "Can critique scale without becoming consensus?", answer: "Written principles let teams move faster without averaging away a point of view.", counts: { total: 14 } },
-    ],
-  },
-];
+const fallbackEdition = {
+  editionNumber: fallbackEditionNumber,
+  date: "2026-09-10",
+  displayDate: "Thursday, 10 September 2026",
+  filedAt: "08:32 cet",
+  crawlCompletedAt: "06:30",
+  sourceCount: 128,
+  inboxConnected: false,
+  summary: "A daily synthesis of design news, research, workflows, and culture, curated from today’s crawl and the news for rapha inbox.",
+  questions: fallbackQuestions,
+};
 
 function countWord(count) {
   return ["zero", "one", "two", "three", "four"][count] || String(count);
@@ -188,18 +178,18 @@ function SignalsTable({ question }) {
         <tbody>
           {question.signals.map((signal) => (
             <tr key={`${question.id}-${signal.source}`}>
-              <td data-label="source"><span className="source-name">{signal.source}</span><span className="provenance">{signal.kind} · {signal.timing}</span></td>
+              <td data-label="source">{signal.url ? <a className="source-name" href={signal.url} target="_blank" rel="noopener noreferrer">{signal.source}</a> : <span className="source-name">{signal.source}</span>}<span className="provenance">{signal.kind} · {signal.timing}</span></td>
               <td data-label="what happened">{signal.happened}</td>
               <td data-label="what changes">{signal.changes}</td>
-              <td data-label="verdict"><span className={`verdict ${signal.verdict.replace(" ", "-")}`}>{signal.verdict}</span></td>
+              <td data-label="verdict"><span className={`verdict ${signal.verdict.toLowerCase().replaceAll(" ", "-")}`}>{signal.verdict}</span></td>
             </tr>
           ))}
         </tbody>
       </table>
       <div className="further-reads">
         <p className="meta-label">further reads</p>
-        {question.further.map(([title, source]) => (
-          <a href="https://example.com" target="_blank" rel="noopener noreferrer" key={title}><span>{title}</span><small>{source}</small><ArrowRight size={16} /></a>
+        {question.further.map(([title, source, url]) => (
+          <a href={url || "#top"} target={url ? "_blank" : undefined} rel={url ? "noopener noreferrer" : undefined} key={title}><span>{title}</span><small>{source}</small><ArrowRight size={16} /></a>
         ))}
       </div>
     </div>
@@ -209,7 +199,7 @@ function SignalsTable({ question }) {
 function QuestionBlock({ question, isOpen, isSaved, onToggle, onSave }) {
   return (
     <article className={`question-block ${isOpen ? "open" : ""}`} id={question.slug}>
-      <div className="question-number"><span>{question.id}</span><small>{question.category}</small></div>
+      <div className="question-number"><span>{question.id}</span><small>{[question.category, ...(question.tags || []).filter((tag) => tag !== question.category)].join(" · ")}</small></div>
       <div className="question-copy">
         <h2><button type="button" onClick={onToggle}>{question.question}</button></h2>
         <p className="answer-line">{question.answer}</p>
@@ -219,7 +209,7 @@ function QuestionBlock({ question, isOpen, isSaved, onToggle, onSave }) {
         </div>
       </div>
       <aside className="question-provenance">
-        <div><span>{question.counts.total} sources</span><span>{question.counts.web} web · {question.counts.newsletters} newsletters</span><span>first seen {question.firstSeen}</span></div>
+        <div><span>{question.counts.total} sources</span><span>{question.counts.web} web · {question.counts.newsletters} newsletters</span><span>first seen {question.firstSeen || "today"}</span></div>
         <button className={`save-button ${isSaved ? "saved" : ""}`} type="button" aria-pressed={isSaved} onClick={onSave}><BookmarkSimple size={17} weight={isSaved ? "fill" : "regular"} /> {isSaved ? "saved" : "save"}</button>
       </aside>
       <div className="question-details" id={`${question.slug}-details`} hidden={!isOpen}>
@@ -230,41 +220,41 @@ function QuestionBlock({ question, isOpen, isSaved, onToggle, onSave }) {
   );
 }
 
-function NewsletterIntake() {
+function NewsletterIntake({ inboxConnected }) {
   const [url, setUrl] = useState("");
   const [request, setRequest] = useState({ status: "default" });
-  const [copied, setCopied] = useState(false);
   const inputRef = useRef(null);
 
   const submit = (event) => {
     event.preventDefault();
     const requestedUrl = url.trim();
     if (!requestedUrl) return;
+    let parsedUrl;
     let hostname;
-    try { hostname = new URL(requestedUrl).hostname.replace(/^www\./, ""); }
+    try {
+      parsedUrl = new URL(requestedUrl);
+      if (!/^https?:$/.test(parsedUrl.protocol)) throw new Error("Unsupported protocol");
+      hostname = parsedUrl.hostname.replace(/^www\./, "");
+    }
     catch { setRequest({ status: "error", message: "That url did not respond. Paste the signup page or the archive link." }); return; }
-    setRequest({ status: "loading", hostname });
-    window.setTimeout(() => {
-      if (hostname.includes("unreachable")) setRequest({ status: "error", message: "That url did not respond. Paste the signup page or the archive link." });
-      else setRequest({ status: "submitted", hostname });
-    }, 900);
+    const issueUrl = new URL(newsletterIssueBase);
+    issueUrl.searchParams.set("template", "newsletter-suggestion.md");
+    issueUrl.searchParams.set("title", `Newsletter suggestion: ${hostname}`);
+    issueUrl.searchParams.set("body", `Newsletter URL: ${parsedUrl.toString()}\n\nSubmitted from design / daily.`);
+    setRequest({ status: "submitted", hostname, issueUrl: issueUrl.toString() });
+    window.open(issueUrl.toString(), "_blank", "noopener,noreferrer");
   };
 
   const addAnother = () => {
     setUrl(""); setRequest({ status: "default" }); window.setTimeout(() => inputRef.current?.focus(), 0);
   };
 
-  const copyInbox = async () => {
-    try { await navigator.clipboard.writeText(teamInbox); setCopied(true); window.setTimeout(() => setCopied(false), 2000); }
-    catch { setCopied(false); }
-  };
-
   return (
     <aside className="newsletter-panel" id="newsletter-intake">
       <div className="newsletter-heading"><EnvelopeSimple size={22} /><div><p className="meta-label">news for rapha</p><h2>Bring in your newsletters</h2></div></div>
-      <p>Paste a newsletter URL. Our subscription agent visits the page and subscribes with the private “news for rapha” inbox.</p>
+      <p>Paste a newsletter URL. Every suggestion is accepted for now and enters the next daily crawl.</p>
       {request.status === "submitted" ? (
-        <div className="newsletter-success" role="status"><span><Check size={18} /> {request.hostname} is subscribed</span><button type="button" onClick={addAnother}>add another</button></div>
+        <div className="newsletter-success" role="status"><span><Check size={18} /> {request.hostname} is ready</span><a href={request.issueUrl} target="_blank" rel="noopener noreferrer">open suggestion</a><button type="button" onClick={addAnother}>add another</button></div>
       ) : (
         <form className={`newsletter-form ${request.status}`} onSubmit={submit}>
           <label htmlFor="newsletter-url">newsletter url</label>
@@ -276,15 +266,16 @@ function NewsletterIntake() {
           {request.status === "error" && <span className="newsletter-error" role="alert">{request.message}</span>}
         </form>
       )}
-      <div className="inbox-option"><p className="meta-label">already receiving it?</p><p>Forward it here, or use this address when you subscribe.</p><button type="button" onClick={copyInbox}><CopySimple size={16} /> {copied ? "copied" : teamInbox}</button></div>
+      <div className="inbox-option"><p className="meta-label">newsletter intake</p><p>{inboxConnected ? "The private newsletter-only Gmail inbox is connected directly to the daily crawl." : "The secure Gmail integration is prepared and waiting for its one-time authorization."}</p><span className={`private-inbox-status ${inboxConnected ? "" : "pending"}`}><Check size={16} /> {inboxConnected ? "private inbox connected" : "authorization pending"}</span></div>
     </aside>
   );
 }
 
-function Archive({ initialFilter, onClose }) {
+function Archive({ initialFilter, onClose, archiveDays }) {
   const [filter, setFilter] = useState(initialFilter || "All questions");
   const [oldestFirst, setOldestFirst] = useState(false);
   const days = oldestFirst ? [...archiveDays].reverse() : archiveDays;
+  const questionCount = archiveDays.reduce((total, day) => total + day.questions.length, 0);
 
   useEffect(() => {
     const previous = document.body.style.overflow;
@@ -298,7 +289,7 @@ function Archive({ initialFilter, onClose }) {
     <div className="archive-backdrop" role="presentation" onMouseDown={onClose}>
       <section className="archive" role="dialog" aria-modal="true" aria-labelledby="archive-title" onMouseDown={(event) => event.stopPropagation()}>
         <header className="archive-head">
-          <div><p className="meta-label">practice · process · culture</p><h2 id="archive-title">The question index</h2><p>438 questions · 196 editions · since 12 January 2026</p></div>
+          <div><p className="meta-label">practice · process · culture</p><h2 id="archive-title">The question index</h2><p>{questionCount} questions · {archiveDays.length} {archiveDays.length === 1 ? "edition" : "editions"}</p></div>
           <button className="close-button" type="button" aria-label="Close the question index" onClick={onClose} autoFocus><X size={24} /></button>
         </header>
         <div className="archive-controls">
@@ -330,22 +321,62 @@ function Archive({ initialFilter, onClose }) {
 }
 
 export function App() {
+  const [edition, setEdition] = useState(fallbackEdition);
+  const [archiveHistory, setArchiveHistory] = useState([]);
   const [openQuestions, setOpenQuestions] = useState(() => {
-    try { return JSON.parse(localStorage.getItem(`design-daily-${editionNumber}`)) || {}; }
+    try { return JSON.parse(localStorage.getItem(`design-daily-${fallbackEditionNumber}`)) || {}; }
     catch { return {}; }
   });
   const [savedQuestions, setSavedQuestions] = useState({});
   const [archiveOpen, setArchiveOpen] = useState(false);
   const [archiveFilter, setArchiveFilter] = useState("All questions");
   const [searchOpen, setSearchOpen] = useState(false);
-  const issueTitle = useMemo(() => `${countWord(questions.length)} questions shaping design today`, []);
+  const questions = edition.questions?.length ? edition.questions : fallbackQuestions;
+  const editionNumber = edition.editionNumber || fallbackEditionNumber;
+  const archiveDays = useMemo(() => [
+    { date: edition.displayDate?.replace(/ \d{4}$/, "") || "Today", edition: `edition ${editionNumber} · today`, questions },
+    ...archiveHistory.map((archived) => ({
+      date: archived.displayDate?.replace(/ \d{4}$/, "") || archived.date,
+      edition: `edition ${archived.editionNumber}`,
+      questions: archived.questions,
+    })),
+  ], [archiveHistory, edition.displayDate, editionNumber, questions]);
+  const archiveQuestionCount = useMemo(() => archiveDays.reduce((total, day) => total + day.questions.length, 0), [archiveDays]);
+  const issueTitle = useMemo(() => `${countWord(questions.length)} questions shaping design today`, [questions.length]);
 
-  useEffect(() => { localStorage.setItem(`design-daily-${editionNumber}`, JSON.stringify(openQuestions)); }, [openQuestions]);
+  useEffect(() => {
+    const controller = new AbortController();
+    fetch(`${import.meta.env.BASE_URL}data/latest.json`, { cache: "no-store", signal: controller.signal })
+      .then((response) => response.ok ? response.json() : Promise.reject(new Error(`edition ${response.status}`)))
+      .then((payload) => {
+        if (payload?.questions?.length) {
+          setEdition(payload);
+          try { setOpenQuestions(JSON.parse(localStorage.getItem(`design-daily-${payload.editionNumber}`)) || {}); }
+          catch { setOpenQuestions({}); }
+        }
+      })
+      .catch((error) => { if (error.name !== "AbortError") console.warn("Using the bundled fallback edition.", error); });
+    return () => controller.abort();
+  }, []);
+  useEffect(() => {
+    const controller = new AbortController();
+    fetch(`${import.meta.env.BASE_URL}data/archive/index.json`, { cache: "no-store", signal: controller.signal })
+      .then((response) => response.ok ? response.json() : [])
+      .then((entries) => Promise.all(entries
+        .filter((entry) => entry.date && entry.date !== edition.date)
+        .slice(0, 30)
+        .map((entry) => fetch(`${import.meta.env.BASE_URL}data/archive/${entry.date}.json`, { cache: "no-store", signal: controller.signal })
+          .then((response) => response.ok ? response.json() : null))))
+      .then((editions) => setArchiveHistory(editions.filter((item) => item?.questions?.length)))
+      .catch((error) => { if (error.name !== "AbortError") console.warn("Archive index unavailable.", error); });
+    return () => controller.abort();
+  }, [edition.date]);
+  useEffect(() => { localStorage.setItem(`design-daily-${editionNumber}`, JSON.stringify(openQuestions)); }, [editionNumber, openQuestions]);
   useEffect(() => {
     const slug = window.location.hash.replace("#", "");
     const question = questions.find((item) => item.slug === slug);
     if (question) setOpenQuestions((state) => ({ ...state, [question.id]: true }));
-  }, []);
+  }, [questions]);
 
   const openArchive = (filter = "All questions") => { setArchiveFilter(filter); setArchiveOpen(true); };
 
@@ -354,7 +385,7 @@ export function App() {
       <a className="skip-link" href={`#${questions[0].slug}`}>skip to the first question</a>
       <header className="topbar">
         <Brand />
-        <div className="edition-meta"><span>Thursday, 10 September 2026</span><span>edition {editionNumber}</span><span>filed 08:32 cet</span></div>
+        <div className="edition-meta"><span>{edition.displayDate}</span><span>edition {editionNumber}</span><span>filed {edition.filedAt}</span></div>
         <nav className="nav-links" aria-label="Primary">
           {["Practice", "Process", "Culture"].map((item) => <button type="button" onClick={() => openArchive(item)} key={item}>{item}</button>)}
           <button type="button" className="index-mobile" onClick={() => openArchive()}>the index</button>
@@ -368,21 +399,21 @@ export function App() {
       <section className="edition-hero" aria-labelledby="edition-title">
         <div className="edition-intro">
           <h1 id="edition-title">{issueTitle}</h1>
-          <p>A daily synthesis of design news, research, workflows, and culture, curated from today’s crawl and the “news for rapha” inbox.</p>
+          <p>{edition.summary}</p>
           <div className="crawl-line">
-            <span><Clock size={16} /> Last crawl 06:30</span>
-            <span>128 sources</span>
+            <span><Clock size={16} /> Last crawl {edition.crawlCompletedAt}</span>
+            <span>{edition.sourceCount} sources</span>
             <span><LockSimple size={16} /> Shared with the design team</span>
           </div>
         </div>
-        <NewsletterIntake />
+        <NewsletterIntake inboxConnected={Boolean(edition.inboxConnected)} />
       </section>
       <section className="questions" aria-label="Today’s questions">
         {questions.map((question) => <QuestionBlock key={question.id} question={question} isOpen={Boolean(openQuestions[question.id])} isSaved={Boolean(savedQuestions[question.id])} onToggle={() => setOpenQuestions((state) => ({ ...state, [question.id]: !state[question.id] }))} onSave={() => setSavedQuestions((state) => ({ ...state, [question.id]: !state[question.id] }))} />)}
       </section>
-      <button className="index-band" type="button" onClick={() => openArchive()}><span><small>438 questions · 196 editions</small>The question index</span><ArrowRight size={18} /></button>
+      <button className="index-band" type="button" onClick={() => openArchive()}><span><small>{archiveQuestionCount} questions · {archiveDays.length} {archiveDays.length === 1 ? "edition" : "editions"}</small>The question index</span><ArrowRight size={18} /></button>
       <footer className="footer-grid"><Brand /><p>AI-generated. Human-edited.</p><p>Practice · Process · Culture</p><p>Synthesis, not noise.</p></footer>
-      {archiveOpen && <Archive initialFilter={archiveFilter} onClose={() => setArchiveOpen(false)} />}
+      {archiveOpen && <Archive initialFilter={archiveFilter} archiveDays={archiveDays} onClose={() => setArchiveOpen(false)} />}
     </main>
   );
 }

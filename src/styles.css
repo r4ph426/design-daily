@@ -106,11 +106,15 @@ em { font-style: italic; }
 .newsletter-error { display: block; margin-top: 8px; color: var(--signal); font-size: 9px; line-height: 1.4; }
 .newsletter-success { border: 1px solid var(--signal); }
 .newsletter-success > span { min-height: 56px; display: flex; align-items: center; gap: 9px; padding: 0 14px; color: var(--signal); font-size: 10px; }
+.newsletter-success > a { min-height: 38px; display: flex; align-items: center; padding: 0 14px; border-top: 1px solid var(--signal); color: var(--signal); font-size: 9px; }
+.newsletter-success > a:hover { color: var(--forest); background: var(--signal); }
 .newsletter-success button { min-height: 38px; width: 100%; border: 0; border-top: 1px solid var(--signal); color: var(--paper); background: transparent; cursor: pointer; font-size: 9px; }
 .inbox-option { grid-column: 2; grid-row: 3; align-self: end; display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 6px 18px; padding-top: 18px; border-top: 1px solid var(--grid); }
 .inbox-option > p:nth-child(2) { margin: 0; color: var(--muted); font-size: 9px; line-height: 1.45; }
 .inbox-option button { grid-column: 2; grid-row: 1 / span 2; min-height: 42px; display: flex; align-items: center; gap: 7px; max-width: 250px; padding: 0 11px; border: 1px solid var(--grid-strong); color: var(--paper); background: transparent; cursor: pointer; font-size: 9px; overflow-wrap: anywhere; }
 .inbox-option button:hover { color: var(--signal); border-color: var(--signal); }
+.private-inbox-status { grid-column: 2; grid-row: 1 / span 2; min-height: 42px; display: flex; align-items: center; gap: 7px; padding: 0 11px; border: 1px solid var(--grid-strong); color: var(--paper); font-size: 9px; }
+.private-inbox-status.pending { color: var(--muted); }
 
 .questions { grid-column: 1 / -1; border-inline: 1px solid var(--grid); }
 .question-block { display: grid; grid-template-columns: 12% 38% 50%; min-height: 132px; border-bottom: 1px solid var(--grid); }
@@ -149,10 +153,11 @@ em { font-style: italic; }
 .signals-table th:nth-child(4) { width: 12%; }
 .signals-table td { padding: 17px 16px 17px 0; border-bottom: 1px solid var(--grid); vertical-align: top; color: var(--muted); font-family: "Instrument Serif", Iowan Old Style, Baskerville, Georgia, serif; font-size: 13px; line-height: 1.35; }
 .source-name { display: block; color: var(--paper); font-family: "Geist Mono", ui-monospace, monospace; font-size: 9px; }
+a.source-name:hover { color: var(--signal); }
 .provenance { display: block; margin-top: 7px; color: var(--faint); font-family: "Geist Mono", ui-monospace, monospace; font-size: 8px; line-height: 1.4; }
 .verdict { font-family: "Geist Mono", ui-monospace, monospace; font-size: 8px; }
 .verdict.must-read { color: var(--signal); }
-.verdict.background { color: var(--muted); }
+.verdict.background, .verdict.read, .verdict.track { color: var(--muted); }
 .further-reads { margin-top: 22px; }
 .further-reads .meta-label { margin-bottom: 8px; color: var(--faint); }
 .further-reads a { min-height: 44px; display: grid; grid-template-columns: 1fr minmax(140px, auto) 18px; align-items: center; gap: 14px; border-top: 1px solid var(--grid); font-family: "Instrument Serif", Iowan Old Style, Baskerville, Georgia, serif; font-size: 13px; }
@@ -233,6 +238,7 @@ em { font-style: italic; }
   .inbox-option { display: block; margin-top: 28px; }
   .inbox-option > p:nth-child(2) { margin: 8px 0 13px; }
   .inbox-option button { width: 100%; max-width: none; }
+  .private-inbox-status { width: 100%; margin-top: 13px; }
   .question-block { display: grid; grid-template-columns: 82px 1fr; min-height: 0; }
   .question-number { padding: 24px 14px; }
   .question-number span { font-size: 48px; }

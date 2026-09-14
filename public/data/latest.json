@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "editionNumber": "0197",
+  "date": "2026-09-10",
+  "displayDate": "Thursday, 10 September 2026",
+  "filedAt": "08:32 cet",
+  "crawlCompletedAt": "06:30",
+  "sourceCount": 128,
+  "summary": "A daily synthesis of design news, research, workflows, and culture, curated from today’s crawl and the news for rapha inbox.",
+  "generatedAt": "2026-09-10T06:32:00.000Z",
+  "inboxConnected": false,
+  "questions": [
+    {
+      "id": "01",
+      "slug": "who-designs-the-system",
+      "category": "Practice",
+      "tags": ["UI", "AI", "Systems"],
+      "question": "Who designs the system that designs with us?",
+      "answer": "Teams are moving from prompt craft to explicit review systems that make judgment visible and reusable.",
+      "why": "Designers now shape the rules around generation, review, and escalation. That turns critique, governance, and authorship into parts of the product experience.",
+      "counts": { "total": 24, "web": 15, "newsletters": 9 },
+      "firstSeen": "05:58 cet",
+      "signals": [
+        { "source": "Figma Blog", "kind": "Web", "timing": "8 sep, 16:10 · crawled 06:04", "happened": "Product teams are documenting model behavior and review thresholds next to interface decisions.", "changes": "Add decision checkpoints to the design system before automating more production work.", "verdict": "Must read", "url": "https://www.figma.com/blog/" },
+        { "source": "UX Collective", "kind": "Web", "timing": "8 sep, 18:40 · crawled 06:09", "happened": "A cross-team study found that generated output converges when feedback is not captured as a shared artifact.", "changes": "Turn critique into reusable criteria instead of leaving it inside individual prompts.", "verdict": "Read", "url": "https://uxdesign.cc/" }
+      ],
+      "further": [["Interfaces for visible uncertainty", "A List Apart · web", "https://alistapart.com/"]]
+    },
+    {
+      "id": "02",
+      "slug": "what-becomes-valuable",
+      "category": "Process",
+      "tags": ["UX", "AI"],
+      "question": "What becomes valuable when making gets cheaper?",
+      "answer": "The scarce work shifts to framing, taste, and knowing when to stop generating.",
+      "why": "When teams can produce dozens of plausible options, speed stops being a differentiator. The advantage moves to clear constraints and confident selection.",
+      "counts": { "total": 28, "web": 17, "newsletters": 11 },
+      "firstSeen": "06:03 cet",
+      "signals": [
+        { "source": "Design Better", "kind": "Newsletter", "timing": "8 sep, 20:20 · crawled 06:07", "happened": "Teams report that exploration is faster, while alignment and selection now consume more of the schedule.", "changes": "Budget critique time before adding another generation tool.", "verdict": "Must read", "url": "https://www.designbetter.co/" },
+        { "source": "Co.Design", "kind": "Web", "timing": "8 sep, 17:35 · crawled 06:14", "happened": "Studios are publishing fewer directions despite producing more internal options.", "changes": "Measure decision quality and reversibility, not the volume of output.", "verdict": "Track", "url": "https://www.fastcompany.com/co-design" }
+      ],
+      "further": [["Taste is turning into team infrastructure", "The Design Review · newsletter", "https://designreviewed.com/"]]
+    },
+    {
+      "id": "03",
+      "slug": "research-at-machine-speed",
+      "category": "Culture",
+      "tags": ["UX", "Research", "AI"],
+      "question": "Can research stay human at machine speed?",
+      "answer": "Synthetic participants can widen exploration, but lived context remains the source of consequence.",
+      "why": "Speed is useful for finding hypotheses, not for replacing the people affected by a decision. Teams need a visible boundary between simulation and evidence.",
+      "counts": { "total": 18, "web": 10, "newsletters": 8 },
+      "firstSeen": "06:11 cet",
+      "signals": [
+        { "source": "HBR", "kind": "Web", "timing": "8 sep, 15:05 · crawled 06:13", "happened": "Research teams are using synthetic interviews to pressure-test scripts before meeting real participants.", "changes": "Use simulation to improve the plan, then validate consequences with people.", "verdict": "Must read", "url": "https://hbr.org/" },
+        { "source": "Deliberate", "kind": "Newsletter", "timing": "9 sep, 05:44 · crawled 06:21", "happened": "Practitioners found that simulated participants flatten organizational and cultural context.", "changes": "Label synthetic findings as hypotheses in every research readout.", "verdict": "Read", "url": "https://deliberate.substack.com/" }
+      ],
+      "further": [["Research repositories after abundance", "Noahpinion · newsletter", "https://www.noahpinion.blog/"]]
+    },
+    {
+      "id": "04",
+      "slug": "design-culture-change",
+      "category": "Culture",
+      "tags": ["Culture", "AI"],
+      "question": "How should design culture change?",
+      "answer": "Teams are rewriting norms around credit, craft, and critique for an AI-augmented era.",
+      "why": "The strongest teams are making authorship and review visible. Shared standards protect individual judgment while letting new tools accelerate the work.",
+      "counts": { "total": 16, "web": 9, "newsletters": 7 },
+      "firstSeen": "06:17 cet",
+      "signals": [
+        { "source": "The Design Review", "kind": "Newsletter", "timing": "9 sep, 05:52 · crawled 06:17", "happened": "Studios are documenting how credit, critique, and accountability work in machine-assisted projects.", "changes": "Write authorship and review norms before the next AI-supported project begins.", "verdict": "Must read", "url": "https://designreviewed.com/" },
+        { "source": "It’s Nice That", "kind": "Web", "timing": "8 sep, 19:12 · crawled 06:22", "happened": "Creative teams are protecting time for discussion as production cycles become shorter.", "changes": "Treat critique as core infrastructure rather than a final approval step.", "verdict": "Read", "url": "https://www.itsnicethat.com/" }
+      ],
+      "further": [["Authorship after automation", "Deliberate · newsletter", "https://deliberate.substack.com/"]]
+    }
+  ]
+}
