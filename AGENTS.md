@@ -25,7 +25,7 @@ When implementing from a selected generated mock, treat that image as the source
 - The latest visual source of truth replaces the image-led cobalt landing composition with a restrained dark forest-green editorial index. Use warm off-white serif display type for editorial headlines and question titles, Geist Mono for interface copy, hairline olive grid rules, and vivid signal red as the primary accent.
 - Keep the opening spread text-led, with the daily crawl overview on the left and the newsletter intake on the right. Present questions as compact numbered rows with source provenance and save controls aligned to the grid.
 - Avoid large filled accent panels in the main reading view. Preserve whitespace, subtle green atmospheric texture, strict column alignment, and a compact index-style footer.
-- Publish the MVP as a static GitHub Pages site. A scheduled GitHub Actions workflow performs the daily crawl, writes versioned JSON editions, and deploys the result.
+- Publish the MVP as a static GitHub Pages site. A scheduled GitHub Actions workflow performs the crawl Monday through Friday, writes versioned JSON editions, and deploys the result. Do not run scheduled crawls on weekends.
 - Connect the existing newsletter-only Gmail inbox server-side with read-only Google OAuth. Store OAuth and OpenAI credentials only as GitHub Actions secrets; never expose the inbox address or tokens in the client bundle.
 - Treat newsletter suggestions as accepted for the MVP. Public submissions are GitHub issues that the next scheduled crawl ingests automatically; an approval workflow can replace this later.
 
