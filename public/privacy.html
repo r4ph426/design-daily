@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <title>Privacy · design / daily</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap");
+
+      :root {
+        font-family: "Geist Mono", ui-monospace, monospace;
+        color: #e8e8dd;
+        background: #07180f;
+        --forest: #07180f;
+        --paper: #e8e8dd;
+        --signal: #ff3d32;
+        --grid: rgba(198, 207, 181, 0.2);
+        --muted: rgba(232, 232, 221, 0.68);
+      }
+
+      * { box-sizing: border-box; }
+      body { margin: 0; min-width: 320px; background: var(--forest); }
+      a { color: inherit; }
+      .shell { width: min(1040px, calc(100% - 32px)); margin: 0 auto; border-inline: 1px solid var(--grid); }
+      header { min-height: 80px; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 0 24px; border-bottom: 1px solid var(--grid); }
+      .brand { color: var(--signal); font-weight: 500; text-decoration: none; }
+      .back { color: var(--muted); font-size: 12px; text-decoration: none; }
+      .back:hover { color: var(--signal); }
+      main { display: grid; grid-template-columns: minmax(190px, 28%) minmax(0, 1fr); }
+      .intro, .content { padding: 48px 32px; }
+      .intro { border-right: 1px solid var(--grid); }
+      h1, h2 { font-family: "Instrument Serif", Georgia, serif; font-weight: 400; }
+      h1 { margin: 0; font-size: clamp(48px, 7vw, 78px); line-height: 0.92; }
+      .meta { margin-top: 24px; color: var(--muted); font-size: 11px; line-height: 1.6; }
+      section { max-width: 680px; padding: 0 0 28px; margin-bottom: 28px; border-bottom: 1px solid var(--grid); }
+      section:last-child { margin-bottom: 0; border-bottom: 0; }
+      h2 { margin: 0 0 12px; font-size: 30px; line-height: 1; }
+      p, li { color: var(--muted); font-size: 13px; line-height: 1.65; }
+      ul { padding-left: 20px; }
+      strong { color: var(--paper); font-weight: 500; }
+      footer { min-height: 58px; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 12px 24px; border-top: 1px solid var(--grid); color: var(--muted); font-size: 10px; }
+
+      @media (max-width: 700px) {
+        main { display: block; }
+        .intro { border-right: 0; border-bottom: 1px solid var(--grid); }
+        .intro, .content { padding: 36px 20px; }
+        header, footer { padding-inline: 20px; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="shell">
+      <header>
+        <a class="brand" href="./">design / daily</a>
+        <a class="back" href="./">back to today’s edition</a>
+      </header>
+      <main>
+        <div class="intro">
+          <h1>Privacy</h1>
+          <p class="meta">Last updated 14 September 2026</p>
+        </div>
+        <div class="content">
+          <section>
+            <h2>What the product does</h2>
+            <p>design / daily creates a shared daily briefing for a design team. It combines public web sources with newsletters received by a dedicated newsletter-only Gmail inbox.</p>
+          </section>
+          <section>
+            <h2>Google data we access</h2>
+            <p>The product uses Google OAuth with the read-only Gmail scope. It can read messages and mailbox settings in the connected account. It cannot send, modify, or delete email.</p>
+            <p>Access is used only to retrieve newsletter messages for the daily crawl. The connected account should contain newsletters only and should not be used for personal correspondence.</p>
+          </section>
+          <section>
+            <h2>How data is processed</h2>
+            <ul>
+              <li>The scheduled crawler runs in GitHub Actions.</li>
+              <li>Relevant newsletter and web excerpts are sent to the OpenAI API to produce the editorial synthesis. OAuth credentials are never sent to OpenAI.</li>
+              <li>The resulting summaries, source titles, links, and provenance may be published in the public design / daily edition.</li>
+              <li>Raw Gmail message bodies are not committed to the repository or exposed in the website bundle.</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Storage and retention</h2>
+            <p>Google OAuth credentials are stored as encrypted GitHub Actions secrets. Generated daily editions are stored as versioned JSON in the public repository so the archive remains available. Raw newsletter messages are read during a crawl and are not retained by the application.</p>
+          </section>
+          <section>
+            <h2>Services involved</h2>
+            <p>The workflow relies on Google Gmail and OAuth, GitHub Actions and GitHub Pages, and the OpenAI API. Each provider processes data under its own terms and privacy policy.</p>
+          </section>
+          <section>
+            <h2>Your control</h2>
+            <p>You can revoke design / daily’s Gmail access at any time from your Google Account connections. Revoking access stops future inbox crawls. For questions, contact <strong>newsforrapha@gmail.com</strong>.</p>
+          </section>
+        </div>
+      </main>
+      <footer><span>by ra.re design</span><span>Synthesis, not noise.</span></footer>
+    </div>
+  </body>
+</html>

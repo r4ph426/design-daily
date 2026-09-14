@@ -412,7 +412,7 @@ export function App() {
         {questions.map((question) => <QuestionBlock key={question.id} question={question} isOpen={Boolean(openQuestions[question.id])} isSaved={Boolean(savedQuestions[question.id])} onToggle={() => setOpenQuestions((state) => ({ ...state, [question.id]: !state[question.id] }))} onSave={() => setSavedQuestions((state) => ({ ...state, [question.id]: !state[question.id] }))} />)}
       </section>
       <button className="index-band" type="button" onClick={() => openArchive()}><span><small>{archiveQuestionCount} questions · {archiveDays.length} {archiveDays.length === 1 ? "edition" : "editions"}</small>The question index</span><ArrowRight size={18} /></button>
-      <footer className="footer-grid"><Brand /><p>AI-generated. Human-edited.</p><p>Practice · Process · Culture</p><p>Synthesis, not noise.</p></footer>
+      <footer className="footer-grid"><Brand /><p>AI-generated. Human-edited.</p><p>Practice · Process · Culture</p><a href={`${import.meta.env.BASE_URL}privacy.html`}>Privacy</a><p>Synthesis, not noise.</p></footer>
       {archiveOpen && <Archive initialFilter={archiveFilter} archiveDays={archiveDays} onClose={() => setArchiveOpen(false)} />}
     </main>
   );
