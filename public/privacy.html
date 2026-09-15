@@ -6,10 +6,18 @@
     <meta name="color-scheme" content="dark" />
     <title>Privacy · design / daily</title>
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap");
+
+      @font-face {
+        font-family: "Neue Reckless";
+        src: url("./fonts/Reckless-Regular.woff2") format("woff2");
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+      }
 
       :root {
-        font-family: "Geist Mono", ui-monospace, monospace;
+        font-family: "Inter", Arial, sans-serif;
         color: #e8e8dd;
         background: #07180f;
         --forest: #07180f;
@@ -30,7 +38,7 @@
       main { display: grid; grid-template-columns: minmax(190px, 28%) minmax(0, 1fr); }
       .intro, .content { padding: 48px 32px; }
       .intro { border-right: 1px solid var(--grid); }
-      h1, h2 { font-family: "Instrument Serif", Georgia, serif; font-weight: 400; }
+      h1, h2 { font-family: "Neue Reckless", Georgia, serif; font-weight: 400; }
       h1 { margin: 0; font-size: clamp(48px, 7vw, 78px); line-height: 0.92; }
       .meta { margin-top: 24px; color: var(--muted); font-size: 11px; line-height: 1.6; }
       section { max-width: 680px; padding: 0 0 28px; margin-bottom: 28px; border-bottom: 1px solid var(--grid); }
