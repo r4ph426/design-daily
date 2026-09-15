@@ -202,10 +202,10 @@ function QuestionBlock({ question, isOpen, isSaved, onToggle, onSave }) {
       <div className="question-number"><span>{question.id}</span><small>{[question.category, ...(question.tags || []).filter((tag) => tag !== question.category)].join(" · ")}</small></div>
       <div className="question-copy">
         <h2><button type="button" onClick={onToggle}>{question.question}</button></h2>
+        <p className="answer-label">why it matters</p>
         <p className="answer-line">{question.answer}</p>
         <div className="question-actions">
-          <button className="disclosure-button" type="button" aria-expanded={isOpen} aria-controls={`${question.slug}-details`} onClick={onToggle}><CaretDown size={16} /> why it matters</button>
-          <button className="signal-link" type="button" onClick={onToggle}>{question.counts.total} signals</button>
+          <button className="disclosure-button" type="button" aria-expanded={isOpen} aria-controls={`${question.slug}-details`} onClick={onToggle}><CaretDown size={16} /> Signale &amp; Quellen <span>{question.counts.total}</span></button>
         </div>
       </div>
       <aside className="question-provenance">
@@ -213,7 +213,6 @@ function QuestionBlock({ question, isOpen, isSaved, onToggle, onSave }) {
         <button className={`save-button ${isSaved ? "saved" : ""}`} type="button" aria-pressed={isSaved} onClick={onSave}><BookmarkSimple size={17} weight={isSaved ? "fill" : "regular"} /> {isSaved ? "saved" : "save"}</button>
       </aside>
       <div className="question-details" id={`${question.slug}-details`} hidden={!isOpen}>
-        <div className="why-panel"><p className="meta-label">why it matters</p><p>{question.why}</p></div>
         <SignalsTable question={question} />
       </div>
     </article>
@@ -340,7 +339,6 @@ export function App() {
       questions: archived.questions,
     })),
   ], [archiveHistory, edition.displayDate, editionNumber, questions]);
-  const archiveQuestionCount = useMemo(() => archiveDays.reduce((total, day) => total + day.questions.length, 0), [archiveDays]);
   const issueTitle = useMemo(() => `${countWord(questions.length)} questions shaping design today`, [questions.length]);
 
   useEffect(() => {
@@ -387,12 +385,11 @@ export function App() {
         <div className="edition-meta"><span>{edition.displayDate}</span><span>edition {editionNumber}</span><span>filed {edition.filedAt}</span></div>
         <nav className="nav-links" aria-label="Primary">
           {["Practice", "Process", "Culture"].map((item) => <button type="button" onClick={() => openArchive(item)} key={item}>{item}</button>)}
-          <button type="button" className="index-mobile" onClick={() => openArchive()}>the index</button>
+          <button type="button" className="question-index-nav" onClick={() => openArchive()}>Question index</button>
         </nav>
         <div className="top-actions">
           {searchOpen && <input autoFocus aria-label="Search the question index" placeholder="Search questions" onKeyDown={(event) => event.key === "Escape" && setSearchOpen(false)} />}
           <button type="button" className="icon-button" aria-label="Search" onClick={() => setSearchOpen((value) => !value)}><MagnifyingGlass size={20} /></button>
-          <button type="button" className="icon-button desktop-index" aria-label="Open the question index" onClick={() => openArchive()}><BookmarkSimple size={20} /></button>
         </div>
       </header>
       <section className="edition-hero" aria-labelledby="edition-title">
@@ -410,8 +407,7 @@ export function App() {
       <section className="questions" aria-label="Today’s questions">
         {questions.map((question) => <QuestionBlock key={question.id} question={question} isOpen={Boolean(openQuestions[question.id])} isSaved={Boolean(savedQuestions[question.id])} onToggle={() => setOpenQuestions((state) => ({ ...state, [question.id]: !state[question.id] }))} onSave={() => setSavedQuestions((state) => ({ ...state, [question.id]: !state[question.id] }))} />)}
       </section>
-      <button className="index-band" type="button" onClick={() => openArchive()}><span><small>{archiveQuestionCount} questions · {archiveDays.length} {archiveDays.length === 1 ? "edition" : "editions"}</small>The question index</span><ArrowRight size={18} /></button>
-      <footer className="footer-grid"><Brand /><p>AI-generated. Human-edited.</p><p>Practice · Process · Culture</p><a href={`${import.meta.env.BASE_URL}privacy.html`}>Privacy</a><p>Synthesis, not noise.</p></footer>
+      <footer className="footer-grid"><Brand /><p>AI-generated. Human-edited.</p><a href={`${import.meta.env.BASE_URL}privacy.html`}>Privacy</a><p>Synthesis, not noise.</p></footer>
       {archiveOpen && <Archive initialFilter={archiveFilter} archiveDays={archiveDays} onClose={() => setArchiveOpen(false)} />}
     </main>
   );
