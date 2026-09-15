@@ -119,7 +119,7 @@ function extractIssueUrl(issue) {
   return match ? canonicalUrl(match[0]) : "";
 }
 
-async function readNewsletterSuggestions() {
+async function readSharedArticles() {
   const repository = process.env.GITHUB_REPOSITORY || "r4ph426/design-daily";
   const headers = { accept: "application/vnd.github+json", "user-agent": userAgent };
   if (process.env.GITHUB_TOKEN) headers.authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
@@ -130,16 +130,16 @@ async function readNewsletterSuggestions() {
     });
     if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
     return (await response.json())
-      .filter((issue) => !issue.pull_request && /^newsletter suggestion:/i.test(issue.title))
+      .filter((issue) => !issue.pull_request && /^(shared article|newsletter suggestion):/i.test(issue.title))
       .map((issue) => ({
-        name: issue.title.replace(/^newsletter suggestion:\s*/i, "") || `Community suggestion ${issue.number}`,
+        name: issue.title.replace(/^(shared article|newsletter suggestion):\s*/i, "") || `Shared article ${issue.number}`,
         url: extractIssueUrl(issue),
         category: "Practice",
-        tags: ["community suggestion"],
+        tags: ["shared article"],
       }))
       .filter((source) => source.url);
   } catch (error) {
-    console.warn(`Newsletter suggestions skipped: ${error.message}`);
+    console.warn(`Shared articles skipped: ${error.message}`);
     return [];
   }
 }
@@ -274,9 +274,9 @@ async function main() {
 
   const now = new Date();
   const sources = await readJson(sourcesPath, []);
-  const suggestions = await readNewsletterSuggestions();
+  const sharedArticles = await readSharedArticles();
   const [webGroups, inboxItems] = await Promise.all([
-    Promise.all([...sources, ...suggestions].map(crawlSource)),
+    Promise.all([...sources, ...sharedArticles].map(crawlSource)),
     readNewsletterInbox(),
   ]);
   const cutoff = now.getTime() - lookbackHours * 3_600_000;

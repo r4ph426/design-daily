@@ -14,19 +14,19 @@ When implementing from a selected generated mock, treat that image as the source
 - Use flat cobalt as the secondary accent. Avoid broad lavender fields; reserve a saturated flieder accent for compact discovery CTAs that open more signals or sources.
 - Reserve Geist Pixel for short single-line header metadata. Use Clash Display for expressive numerals and Geist Mono for other small interface text.
 - Do not place orange text or controls on cobalt panels. Use #131313 for secondary actions and dark accents on cobalt.
-- The right rail supports newsletter URL intake: a subscription agent uses a dedicated private inbox to subscribe, then received issues enter the daily crawl.
-- The Gmail connection feature is archived. The product is a shared daily read for a design team of more than 20 UX and UI designers.
-- `Add a newsletter` is the primary contribution feature. Accept every suggested newsletter for now; approval and moderation come later.
+- The right rail supports an `Artikel teilen` URL intake. It creates a public GitHub issue that the next scheduled crawl reads as an additional web source.
+- The Gmail connection feature is archived in the interface. The product is a shared daily read for a design team of more than 20 UX and UI designers. Keep Gmail authorization, inbox status, and connection copy out of the main frontend; the newsletter inbox remains a server-side source.
+- `Artikel teilen` is the primary contribution feature. Accept every valid shared article URL for now; approval and moderation come later.
 - Provide one dedicated team inbox that can be used for new newsletter subscriptions or as a forwarding address for newsletters the team already receives.
 - Build the editorial seal as a live vector element. Its center is the lowercase `dd` monogram set in Clash Display.
 - `See all signals` opens a scrollable archive of previous crawls, organized into Practice, Process, and Culture. Must reads are elevated through team saves and community feedback.
 - Give all compact CTAs that reveal more signals or sources one consistent, high-contrast flieder treatment.
-- Preserve the selected cobalt/black/lavender/coral visual direction, exposed editorial grid, strong image field, oversized issue numbers, and dense source-forward information hierarchy.
+- Preserve the selected cobalt/black/lavender/coral visual direction, strict editorial alignment, strong image field, oversized issue numbers, and dense source-forward information hierarchy. Do not render decorative grid lines in the page background.
 - The latest visual source of truth replaces the image-led cobalt landing composition with a restrained dark forest-green editorial index. Use warm off-white serif display type for editorial headlines and question titles, Geist Mono for interface copy, hairline olive grid rules, and vivid signal red as the primary accent.
 - Keep the opening spread text-led, with the daily crawl overview on the left and the newsletter intake on the right. Present questions as compact numbered rows with source provenance and save controls aligned to the grid.
 - Avoid large filled accent panels in the main reading view. Preserve whitespace, subtle green atmospheric texture, strict column alignment, and a compact index-style footer.
 - Publish the MVP as a static GitHub Pages site. A scheduled GitHub Actions workflow performs the crawl Monday through Friday, writes versioned JSON editions, and deploys the result. Do not run scheduled crawls on weekends.
 - Connect the existing newsletter-only Gmail inbox server-side with read-only Google OAuth. Store OAuth and OpenAI credentials only as GitHub Actions secrets; never expose the inbox address or tokens in the client bundle.
-- Treat newsletter suggestions as accepted for the MVP. Public submissions are GitHub issues that the next scheduled crawl ingests automatically; an approval workflow can replace this later.
+- Treat shared article URLs as accepted for the MVP. Public submissions are GitHub issues that the next scheduled crawl ingests automatically; an approval workflow can replace this later.
 
 Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts/prepare-sites-build.mjs`, and `tests/sites-worker.test.mjs` intact so the same local prototype can be handed to Sites. Before a Sites handoff, run `npm run build` and `npm run test:sites`; the build must leave `dist/client/index.html`, `dist/server/index.js`, and `dist/.openai/hosting.json`.

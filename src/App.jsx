@@ -5,14 +5,14 @@ import {
   CaretDown,
   Check,
   Clock,
-  EnvelopeSimple,
+  LinkSimple,
   LockSimple,
   MagnifyingGlass,
   X,
 } from "@phosphor-icons/react";
 
 const fallbackEditionNumber = "0197";
-const newsletterIssueBase = "https://github.com/r4ph426/design-daily/issues/new";
+const articleIssueBase = "https://github.com/r4ph426/design-daily/issues/new";
 
 const fallbackQuestions = [
   {
@@ -220,7 +220,7 @@ function QuestionBlock({ question, isOpen, isSaved, onToggle, onSave }) {
   );
 }
 
-function NewsletterIntake({ inboxConnected }) {
+function ArticleIntake() {
   const [url, setUrl] = useState("");
   const [request, setRequest] = useState({ status: "default" });
   const inputRef = useRef(null);
@@ -236,11 +236,11 @@ function NewsletterIntake({ inboxConnected }) {
       if (!/^https?:$/.test(parsedUrl.protocol)) throw new Error("Unsupported protocol");
       hostname = parsedUrl.hostname.replace(/^www\./, "");
     }
-    catch { setRequest({ status: "error", message: "That url did not respond. Paste the signup page or the archive link." }); return; }
-    const issueUrl = new URL(newsletterIssueBase);
-    issueUrl.searchParams.set("template", "newsletter-suggestion.md");
-    issueUrl.searchParams.set("title", `Newsletter suggestion: ${hostname}`);
-    issueUrl.searchParams.set("body", `Newsletter URL: ${parsedUrl.toString()}\n\nSubmitted from design / daily.`);
+    catch { setRequest({ status: "error", message: "Diese URL ist nicht gültig. Bitte füge den direkten Link zum Artikel ein." }); return; }
+    const issueUrl = new URL(articleIssueBase);
+    issueUrl.searchParams.set("template", "article-submission.md");
+    issueUrl.searchParams.set("title", `Shared article: ${hostname}`);
+    issueUrl.searchParams.set("body", `Article URL: ${parsedUrl.toString()}\n\nSubmitted from design / daily.`);
     setRequest({ status: "submitted", hostname, issueUrl: issueUrl.toString() });
     window.open(issueUrl.toString(), "_blank", "noopener,noreferrer");
   };
@@ -250,23 +250,22 @@ function NewsletterIntake({ inboxConnected }) {
   };
 
   return (
-    <aside className="newsletter-panel" id="newsletter-intake">
-      <div className="newsletter-heading"><EnvelopeSimple size={22} /><div><p className="meta-label">news for rapha</p><h2>Bring in your newsletters</h2></div></div>
-      <p>Paste a newsletter URL. Every suggestion is accepted for now and enters the next daily crawl.</p>
+    <aside className="article-panel" id="article-intake">
+      <div className="article-heading"><LinkSimple size={22} /><div><p className="meta-label">article intake</p><h2>Artikel teilen</h2></div></div>
+      <p>Füge die URL eines Artikels ein. Der Beitrag wird beim nächsten Crawl berücksichtigt.</p>
       {request.status === "submitted" ? (
-        <div className="newsletter-success" role="status"><span><Check size={18} /> {request.hostname} is ready</span><a href={request.issueUrl} target="_blank" rel="noopener noreferrer">open suggestion</a><button type="button" onClick={addAnother}>add another</button></div>
+        <div className="article-success" role="status"><span><Check size={18} /> {request.hostname} ist vorbereitet</span><a href={request.issueUrl} target="_blank" rel="noopener noreferrer">Eintrag auf GitHub bestätigen</a><button type="button" onClick={addAnother}>weiteren Artikel teilen</button></div>
       ) : (
-        <form className={`newsletter-form ${request.status}`} onSubmit={submit}>
-          <label htmlFor="newsletter-url">newsletter url</label>
-          <div className="newsletter-control">
-            <input ref={inputRef} id="newsletter-url" type="url" inputMode="url" placeholder="Paste a newsletter url" value={url} onChange={(event) => { setUrl(event.target.value); if (request.status === "error") setRequest({ status: "default" }); }} disabled={request.status === "loading"} required />
-            <button type="submit" disabled={!url.trim() || request.status === "loading"}>{request.status === "loading" ? "visiting" : "add"}</button>
+        <form className={`article-form ${request.status}`} onSubmit={submit}>
+          <label htmlFor="article-url">Artikel-URL</label>
+          <div className="article-control">
+            <input ref={inputRef} id="article-url" type="url" inputMode="url" placeholder="URL einfügen" value={url} onChange={(event) => { setUrl(event.target.value); if (request.status === "error") setRequest({ status: "default" }); }} disabled={request.status === "loading"} required />
+            <button type="submit" disabled={!url.trim() || request.status === "loading"}>{request.status === "loading" ? "prüfen" : "teilen"}</button>
           </div>
           {request.status === "loading" && <span className="loading-bar" aria-hidden="true" />}
-          {request.status === "error" && <span className="newsletter-error" role="alert">{request.message}</span>}
+          {request.status === "error" && <span className="article-error" role="alert">{request.message}</span>}
         </form>
       )}
-      <div className="inbox-option"><p className="meta-label">newsletter intake</p><p>{inboxConnected ? "The private newsletter-only Gmail inbox is connected directly to the daily crawl." : "The secure Gmail integration is prepared and waiting for its one-time authorization."}</p><span className={`private-inbox-status ${inboxConnected ? "" : "pending"}`}><Check size={16} /> {inboxConnected ? "private inbox connected" : "authorization pending"}</span></div>
     </aside>
   );
 }
@@ -406,7 +405,7 @@ export function App() {
             <span><LockSimple size={16} /> Shared with the design team</span>
           </div>
         </div>
-        <NewsletterIntake inboxConnected={Boolean(edition.inboxConnected)} />
+        <ArticleIntake />
       </section>
       <section className="questions" aria-label="Today’s questions">
         {questions.map((question) => <QuestionBlock key={question.id} question={question} isOpen={Boolean(openQuestions[question.id])} isSaved={Boolean(savedQuestions[question.id])} onToggle={() => setOpenQuestions((state) => ({ ...state, [question.id]: !state[question.id] }))} onSave={() => setSavedQuestions((state) => ({ ...state, [question.id]: !state[question.id] }))} />)}
