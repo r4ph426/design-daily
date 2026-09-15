@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="dark" />
-    <title>Privacy · design / daily</title>
+    <title>Privacy · Design / Daily</title>
     <link rel="stylesheet" href="./tokens.css" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap");
@@ -28,22 +28,22 @@
       a { color: inherit; }
       .shell { width: min(1040px, calc(100% - 32px)); margin: 0 auto; border-inline: 1px solid var(--grid); }
       header { min-height: 80px; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 0 24px; border-bottom: 1px solid var(--grid); }
-      .brand { color: var(--coral); background: var(--ink); font-family: var(--font-mono); font-size: var(--t-body); font-weight: 500; text-decoration: none; }
-      .back { color: var(--text-muted); font-family: var(--font-mono); font-size: var(--t-label); text-decoration: none; }
+      .brand { color: var(--coral-text); background: transparent; font-family: var(--font-ui); font-size: var(--t-body); font-weight: 500; text-decoration: none; }
+      .back { color: var(--text-muted); font-family: var(--font-interface); font-size: var(--t-label); text-decoration: none; }
       .back:hover { color: var(--sage); }
       main { display: grid; grid-template-columns: minmax(190px, 28%) minmax(0, 1fr); }
       .intro, .content { padding: 48px 32px; }
       .intro { border-right: 1px solid var(--grid); }
       h1, h2 { font-family: var(--font-editorial); font-weight: 400; }
       h1 { margin: 0; font-size: var(--t-page-title); line-height: 0.92; }
-      .meta { margin-top: 24px; color: var(--text-muted); font-family: var(--font-mono); font-size: var(--t-meta); line-height: 1.6; }
+      .meta { margin-top: 24px; color: var(--text-muted); font-family: var(--font-interface); font-size: var(--t-meta); line-height: 1.6; }
       section { max-width: 680px; padding: 0 0 28px; margin-bottom: 28px; border-bottom: 1px solid var(--grid); }
       section:last-child { margin-bottom: 0; border-bottom: 0; }
       h2 { margin: 0 0 12px; font-size: var(--t-page-heading); line-height: 1; }
       p, li { color: var(--text-muted); font-size: var(--t-body); line-height: 1.65; }
       ul { padding-left: 20px; }
       strong { color: var(--paper); font-weight: 500; }
-      footer { min-height: 58px; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 12px 24px; border-top: 1px solid var(--grid); color: var(--text-muted); font-family: var(--font-mono); font-size: var(--t-meta); }
+      footer { min-height: 58px; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 12px 24px; border-top: 1px solid var(--grid); color: var(--coral-text); font-family: var(--font-interface); font-size: var(--t-meta); }
 
       @media (max-width: 720px) {
         :root { --t-page-title: 52px; }
@@ -57,8 +57,8 @@
   <body>
     <div class="shell">
       <header>
-        <a class="brand" href="./">design / daily</a>
-        <a class="back" href="./">back to today’s edition</a>
+        <a class="brand" href="./">Design / Daily</a>
+        <a class="back" href="./">Back to today’s edition</a>
       </header>
       <main>
         <div class="intro">
@@ -98,7 +98,7 @@
           </section>
         </div>
       </main>
-      <footer><span>by ra.re design</span><span>Synthesis, not noise.</span></footer>
+      <footer><span>By ra.re design</span><span>Synthesis, not noise.</span></footer>
     </div>
   </body>
 </html>

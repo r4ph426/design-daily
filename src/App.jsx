@@ -30,6 +30,7 @@ const fallbackQuestions = [
     signals: [
       {
         source: "Figma Blog",
+        title: "Designing model behavior into product systems",
         kind: "web",
         timing: "8 sep, 16:10 · crawled 06:04",
         happened: "Product teams are documenting model behavior and review thresholds next to interface decisions.",
@@ -38,6 +39,7 @@ const fallbackQuestions = [
       },
       {
         source: "ux Collective",
+        title: "Why generated interfaces converge",
         kind: "web",
         timing: "8 sep, 18:40 · crawled 06:09",
         happened: "A cross-team study found that generated output converges when feedback is not captured as a shared artifact.",
@@ -46,6 +48,7 @@ const fallbackQuestions = [
       },
       {
         source: "Sidebar",
+        title: "Who owns the final AI-assisted decision?",
         kind: "newsletter",
         timing: "9 sep, 05:31 · crawled 06:18 · seen again",
         happened: "Design leads are pairing model access with explicit ownership of final decisions.",
@@ -72,6 +75,7 @@ const fallbackQuestions = [
     signals: [
       {
         source: "Design Better",
+        title: "What changes when exploration becomes abundant",
         kind: "newsletter",
         timing: "8 sep, 20:20 · crawled 06:07",
         happened: "Teams report that exploration is faster, while alignment and selection now consume more of the schedule.",
@@ -80,6 +84,7 @@ const fallbackQuestions = [
       },
       {
         source: "Co.Design",
+        title: "Why studios publish fewer directions",
         kind: "web",
         timing: "8 sep, 17:35 · crawled 06:14",
         happened: "Studios are publishing fewer directions despite producing more internal options.",
@@ -103,6 +108,7 @@ const fallbackQuestions = [
     signals: [
       {
         source: "hbr.org",
+        title: "Synthetic interviews as research rehearsal",
         kind: "web",
         timing: "8 sep, 15:05 · crawled 06:13",
         happened: "Research teams are using synthetic interviews to pressure-test scripts before meeting real participants.",
@@ -111,6 +117,7 @@ const fallbackQuestions = [
       },
       {
         source: "Deliberate",
+        title: "What synthetic participants leave out",
         kind: "newsletter",
         timing: "9 sep, 05:44 · crawled 06:21",
         happened: "Practitioners found that simulated participants flatten organizational and cultural context.",
@@ -134,6 +141,7 @@ const fallbackQuestions = [
     signals: [
       {
         source: "The Design Review",
+        title: "New rules for authorship in AI-assisted studios",
         kind: "newsletter",
         timing: "9 sep, 05:52 · crawled 06:17",
         happened: "Studios are documenting how credit, critique, and accountability work in machine-assisted projects.",
@@ -142,6 +150,7 @@ const fallbackQuestions = [
       },
       {
         source: "It’s Nice That",
+        title: "Why critique needs protected time",
         kind: "web",
         timing: "8 sep, 19:12 · crawled 06:22",
         happened: "Creative teams are protecting time for discussion as production cycles become shorter.",
@@ -161,25 +170,39 @@ const fallbackEdition = {
   crawlCompletedAt: "06:30",
   sourceCount: 128,
   inboxConnected: false,
-  summary: "AI can accelerate production, but design quality still depends on clear judgment. Today’s edition looks at where teams should place their attention.",
+  summary: "AI can accelerate production, but design quality still depends on clear judgment. Today’s edition examines where automation supports designers and where it hides weak decisions. The useful question is not how much a team can generate, but what deserves to survive review.",
   questions: fallbackQuestions,
 };
 
 validateEditionTaxonomy(fallbackEdition);
 
 function countWord(count) {
-  return ["zero", "one", "two", "three", "four"][count] || String(count);
+  return ["Zero", "One", "Two", "Three", "Four"][count] || String(count);
 }
 
 function pluralize(count, singular, plural = `${singular}s`) {
   return `${count} ${count === 1 ? singular : plural}`;
 }
 
+function sourceKindLabel(kind) {
+  return String(kind || "Web").toLowerCase() === "newsletter" ? "Newsletter" : "Web";
+}
+
+function formatMetadata(value) {
+  return String(value || "").replace(/\bcet\b/gi, "CET").replace(/\bsep\b/gi, "Sep").replace(/\bcrawled\b/gi, "Crawled").replace(/\bseen again\b/gi, "Seen again");
+}
+
+function HighlightedText({ text }) {
+  return String(text || "").split(/(\*\*[^*]+\*\*)/g).map((part, index) => part.startsWith("**") && part.endsWith("**")
+    ? <strong key={`${part}-${index}`}>{part.slice(2, -2)}</strong>
+    : part);
+}
+
 function Brand() {
   return (
-    <a className="brand" href="#top" aria-label="design daily home">
-      <span>design / daily</span>
-      <small>by ra.re design</small>
+    <a className="brand" href="#top" aria-label="Design Daily home">
+      <span>Design / Daily</span>
+      <small>By ra.re design</small>
     </a>
   );
 }
@@ -189,22 +212,26 @@ function SignalsTable({ question }) {
     <div className="signals-table-wrap">
       <table className="signals-table">
         <caption>Signals for {question.question}</caption>
-        <thead><tr><th>source</th><th>what happened</th><th>what changes</th><th>verdict</th></tr></thead>
+        <thead><tr><th>Source</th><th>What happened</th><th>What changes</th><th>Verdict</th></tr></thead>
         <tbody>
           {question.signals.map((signal) => (
             <tr key={`${question.id}-${signal.source}`}>
-              <td data-label="source">{signal.url ? <a className="source-name" href={signal.url} target="_blank" rel="noopener noreferrer">{signal.source}</a> : <span className="source-name">{signal.source}</span>}<span className="provenance">{signal.kind} · {signal.timing}</span></td>
-              <td data-label="what happened">{signal.happened}</td>
-              <td data-label="what changes">{signal.changes}</td>
-              <td data-label="verdict"><span className={`verdict ${signal.verdict.toLowerCase().replaceAll(" ", "-")}`}>{signal.verdict}</span></td>
+              <td data-label="Source">
+                {signal.url ? <a className="source-article-title" href={signal.url} target="_blank" rel="noopener noreferrer">{signal.title || signal.happened}</a> : <span className="source-article-title">{signal.title || signal.happened}</span>}
+                <span className="source-publisher">{signal.source}</span>
+                <span className="provenance">{sourceKindLabel(signal.kind)} · {formatMetadata(signal.timing)}</span>
+              </td>
+              <td data-label="What happened"><HighlightedText text={signal.happened} /></td>
+              <td data-label="What changes"><HighlightedText text={signal.changes} /></td>
+              <td data-label="Verdict"><span className={`verdict ${signal.verdict.toLowerCase().replaceAll(" ", "-")}`}>{signal.verdict}</span></td>
             </tr>
           ))}
         </tbody>
       </table>
       <div className="further-reads">
-        <p className="meta-label">further reads</p>
+        <p className="meta-label">Further reads</p>
         {question.further.map(([title, source, url]) => (
-          <a href={url || "#top"} target={url ? "_blank" : undefined} rel={url ? "noopener noreferrer" : undefined} key={title}><span>{title}</span><small>{source}</small><ArrowRight size={16} /></a>
+          <a href={url || "#top"} target={url ? "_blank" : undefined} rel={url ? "noopener noreferrer" : undefined} key={title}><span>{title}</span><small>{formatMetadata(source).replace(/\bnewsletter\b/gi, "Newsletter").replace(/\bweb\b/gi, "Web")}</small><ArrowRight size={16} /></a>
         ))}
       </div>
     </div>
@@ -223,7 +250,7 @@ function SourceList({ question }) {
         <li key={`${question.id}-${signal.url || signal.source}-${index}`}>
           <a href={signal.url || "#top"} target={signal.url ? "_blank" : undefined} rel={signal.url ? "noopener noreferrer" : undefined}>
             <span className="source-list-title">{signal.title || signal.happened}</span>
-            <span className="source-list-meta">{sourceDomain(signal)} · {signal.kind} · {signal.timing}</span>
+            <span className="source-list-meta">{sourceDomain(signal)} · {sourceKindLabel(signal.kind)} · {formatMetadata(signal.timing)}</span>
           </a>
         </li>
       ))}
@@ -237,18 +264,18 @@ function QuestionBlock({ question, isOpen, isSaved, onToggle, onSave }) {
       <div className="question-number">
         <span>{question.id}</span>
         <small className="category-list">{[question.category, ...question.tags.filter((tag) => tag !== question.category)].join(" · ")}</small>
-        {question.aiLens && <small className="ai-lens"><i aria-hidden="true" />ai lens</small>}
+        {question.aiLens && <small className="ai-lens"><i aria-hidden="true" />AI lens</small>}
       </div>
       <div className="question-copy">
         <h2><button type="button" onClick={onToggle}>{question.question}</button></h2>
-        <p className="answer-label">why it matters</p>
+        <p className="answer-label">Why it matters</p>
         <p className="answer-line">{question.answer}</p>
         <div className="question-actions">
           <button className="disclosure-button" type="button" aria-expanded={isOpen} aria-controls={`${question.slug}-details`} onClick={onToggle}><CaretDown size={16} /> Signals &amp; Sources <span>{question.counts.total}</span></button>
         </div>
       </div>
       <aside className="question-provenance">
-        <div className="provenance-head"><span>{pluralize(question.counts.total, "source")}</span><span>{pluralize(question.counts.web, "web source")} · {pluralize(question.counts.newsletters, "newsletter")}</span><span>first seen {question.firstSeen || "today"}</span></div>
+        <div className="provenance-head"><span>{pluralize(question.counts.total, "Source")}</span><span>{pluralize(question.counts.web, "Web source")} · {pluralize(question.counts.newsletters, "Newsletter")}</span><span>First seen {formatMetadata(question.firstSeen || "Today")}</span></div>
         <button className={`save-button ${isSaved ? "saved" : ""}`} type="button" aria-label={isSaved ? "Remove saved question" : "Save question"} aria-pressed={isSaved} onClick={onSave}><BookmarkSimple size={17} weight={isSaved ? "fill" : "regular"} /></button>
         <SourceList question={question} />
       </aside>
@@ -279,7 +306,7 @@ function ArticleIntake() {
     const issueUrl = new URL(articleIssueBase);
     issueUrl.searchParams.set("template", "article-submission.md");
     issueUrl.searchParams.set("title", `Shared article: ${hostname}`);
-    issueUrl.searchParams.set("body", `Article URL: ${parsedUrl.toString()}\n\nSubmitted from design / daily.`);
+    issueUrl.searchParams.set("body", `Article URL: ${parsedUrl.toString()}\n\nSubmitted from Design / Daily.`);
     setRequest({ status: "submitted", hostname, issueUrl: issueUrl.toString() });
     window.open(issueUrl.toString(), "_blank", "noopener,noreferrer");
   };
@@ -290,16 +317,16 @@ function ArticleIntake() {
 
   return (
     <aside className="article-panel" id="article-intake">
-      <div className="article-heading"><LinkSimple size={22} /><div><p className="meta-label">article intake</p><h2>Share an article</h2></div></div>
+      <div className="article-heading"><LinkSimple size={22} /><div><p className="meta-label">Article intake</p><h2>Share an article</h2></div></div>
       <p>Paste an article URL. It will be considered in the next crawl.</p>
       {request.status === "submitted" ? (
-        <div className="article-success" role="status"><span><Check size={18} /> {request.hostname} is ready</span><a href={request.issueUrl} target="_blank" rel="noopener noreferrer">confirm on GitHub</a><button type="button" onClick={addAnother}>share another article</button></div>
+        <div className="article-success" role="status"><span><Check size={18} /> {request.hostname} is ready</span><a href={request.issueUrl} target="_blank" rel="noopener noreferrer">Confirm on GitHub</a><button type="button" onClick={addAnother}>Share another article</button></div>
       ) : (
         <form className={`article-form ${request.status}`} onSubmit={submit}>
-          <label htmlFor="article-url">article URL</label>
+          <label htmlFor="article-url">Article URL</label>
           <div className="article-control">
             <input ref={inputRef} id="article-url" type="url" inputMode="url" placeholder="Paste an article URL" value={url} onChange={(event) => { setUrl(event.target.value); if (request.status === "error") setRequest({ status: "default" }); }} disabled={request.status === "loading"} required />
-            <button type="submit" disabled={!url.trim() || request.status === "loading"}>{request.status === "loading" ? "checking" : "share"}</button>
+            <button type="submit" disabled={!url.trim() || request.status === "loading"}>{request.status === "loading" ? "Checking" : "Share"}</button>
           </div>
           {request.status === "loading" && <span className="loading-bar" aria-hidden="true" />}
           {request.status === "error" && <span className="article-error" role="alert">{request.message}</span>}
@@ -327,12 +354,12 @@ function Archive({ initialFilter, onClose, archiveDays }) {
     <div className="archive-backdrop" role="presentation" onMouseDown={onClose}>
       <section className="archive" role="dialog" aria-modal="true" aria-labelledby="archive-title" onMouseDown={(event) => event.stopPropagation()}>
         <header className="archive-head">
-          <div><p className="meta-label">ui · ux · process · culture</p><h2 id="archive-title">The question index</h2><p>{pluralize(questionCount, "question")} · {pluralize(archiveDays.length, "edition")}</p></div>
+          <div><p className="meta-label">UI · UX · Process · Culture</p><h2 id="archive-title">The question index</h2><p>{pluralize(questionCount, "Question")} · {pluralize(archiveDays.length, "Edition")}</p></div>
           <button className="close-button" type="button" aria-label="Close the question index" onClick={onClose} autoFocus><X size={24} /></button>
         </header>
         <div className="archive-controls">
           <div className="archive-filters" role="group" aria-label="Filter the question index">{["All questions", ...CATEGORIES].map((item) => <button type="button" className={filter === item ? "selected" : ""} onClick={() => setFilter(item)} key={item}>{item}</button>)}</div>
-          <button className="sort-button" type="button" onClick={() => setOldestFirst((value) => !value)}>{oldestFirst ? "oldest first" : "newest first"}</button>
+          <button className="sort-button" type="button" onClick={() => setOldestFirst((value) => !value)}>{oldestFirst ? "Oldest first" : "Newest first"}</button>
         </div>
         <div className="archive-scroll">
           {days.map((day) => {
@@ -345,13 +372,13 @@ function Archive({ initialFilter, onClose, archiveDays }) {
                   <a className="archive-entry" href={`#${question.slug || "signals"}`} onClick={onClose} key={`${day.edition}-${question.question}`}>
                     <span className="entry-category">{question.category}</span>
                     <div><h4>{question.question}</h4><p>{question.answer}</p>{question.returned && <span className="returned">{question.returned}</span>}</div>
-                    <span className="entry-source-count">{pluralize(question.counts.total, "source")}</span><ArrowRight size={20} />
+                    <span className="entry-source-count">{pluralize(question.counts.total, "Source")}</span><ArrowRight size={20} />
                   </a>
                 ))}
               </section>
             );
           })}
-          <button className="earlier-button" type="button">earlier editions <ArrowRight size={18} /></button>
+          <button className="earlier-button" type="button">Earlier editions <ArrowRight size={18} /></button>
         </div>
       </section>
     </div>
@@ -372,10 +399,10 @@ export function App() {
   const questions = edition.questions?.length ? edition.questions : fallbackQuestions;
   const editionNumber = edition.editionNumber || fallbackEditionNumber;
   const archiveDays = useMemo(() => [
-    { date: edition.displayDate?.replace(/ \d{4}$/, "") || "Today", edition: `edition ${editionNumber} · today`, questions },
+    { date: edition.displayDate?.replace(/ \d{4}$/, "") || "Today", edition: `Edition ${editionNumber} · Today`, questions },
     ...archiveHistory.map((archived) => ({
       date: archived.displayDate?.replace(/ \d{4}$/, "") || archived.date,
-      edition: `edition ${archived.editionNumber}`,
+      edition: `Edition ${archived.editionNumber}`,
       questions: archived.questions,
     })),
   ], [archiveHistory, edition.displayDate, editionNumber, questions]);
@@ -420,10 +447,10 @@ export function App() {
 
   return (
     <main className="site-shell" id="top">
-      <a className="skip-link" href={`#${questions[0].slug}`}>skip to the first question</a>
+      <a className="skip-link" href={`#${questions[0].slug}`}>Skip to the first question</a>
       <header className={`topbar ${searchOpen ? "search-open" : ""}`}>
         <Brand />
-        <div className="edition-meta"><span>{edition.displayDate}</span><span>edition {editionNumber}</span><span>filed {edition.filedAt}</span></div>
+        <div className="edition-meta"><span>{edition.displayDate}</span><span>Edition {editionNumber}</span><span>Filed {formatMetadata(edition.filedAt)}</span></div>
         <nav className="nav-links" aria-label="Primary">
           {CATEGORIES.map((item) => <button type="button" onClick={() => openArchive(item)} key={item}>{item}</button>)}
           <button type="button" className="question-index-nav" onClick={() => openArchive()}>Question index</button>
@@ -439,7 +466,7 @@ export function App() {
           <p className="editor-note">{edition.summary}</p>
           <div className="crawl-line">
             <span><Clock size={16} /> Last crawl {edition.crawlCompletedAt}</span>
-            <span>{pluralize(edition.sourceCount, "source")}</span>
+            <span>{pluralize(edition.sourceCount, "Source")}</span>
             <span><LockSimple size={16} /> Shared with the design team</span>
           </div>
         </div>
@@ -448,7 +475,7 @@ export function App() {
       <section className="questions" aria-label="Today’s questions">
         {questions.map((question) => <QuestionBlock key={question.id} question={question} isOpen={Boolean(openQuestions[question.id])} isSaved={Boolean(savedQuestions[question.id])} onToggle={() => setOpenQuestions((state) => ({ ...state, [question.id]: !state[question.id] }))} onSave={() => setSavedQuestions((state) => ({ ...state, [question.id]: !state[question.id] }))} />)}
       </section>
-      <footer className="footer-grid"><Brand /><p>AI-generated. Human-edited.</p><span className="footer-edition">edition {editionNumber}</span><a href={`${import.meta.env.BASE_URL}privacy.html`}>Privacy</a><p>Synthesis, not noise.</p></footer>
+      <footer className="footer-grid"><Brand /><p>AI-generated. Human-edited.</p><span className="footer-edition">Edition {editionNumber}</span><a href={`${import.meta.env.BASE_URL}privacy.html`}>Privacy <ArrowRight size={14} /></a><p>Synthesis, not noise.</p></footer>
       {archiveOpen && <Archive initialFilter={archiveFilter} archiveDays={archiveDays} onClose={() => setArchiveOpen(false)} />}
     </main>
   );

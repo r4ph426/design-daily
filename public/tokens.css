@@ -1,6 +1,7 @@
 :root {
   --canvas: #162713;
   --coral: #ff3318;
+  --coral-text: #fc4930;
   --yellow: #f1bf42;
   --sage: #b5d2cc;
   --paper: #e8e8dd;
@@ -9,12 +10,12 @@
   --text-subtle: #959d92;
   --grid: color-mix(in srgb, var(--sage) 22%, transparent);
   --grid-strong: color-mix(in srgb, var(--sage) 42%, transparent);
-  --surface-hover: color-mix(in srgb, var(--paper) 4%, transparent);
-  --surface-input: color-mix(in srgb, var(--ink) 16%, transparent);
-  --overlay: color-mix(in srgb, var(--ink) 82%, transparent);
-  --font-ui: "Inter", Arial, sans-serif;
-  --font-mono: "SFMono-Regular", "Cascadia Mono", "Roboto Mono", Consolas, "Liberation Mono", monospace;
-  --font-editorial: "Neue Reckless", Iowan Old Style, Baskerville, Georgia, serif;
+  --surface-hover: color-mix(in srgb, var(--paper) 7%, var(--canvas));
+  --surface-input: color-mix(in srgb, var(--sage) 5%, var(--canvas));
+  --overlay: color-mix(in srgb, var(--canvas) 90%, transparent);
+  --font-ui: "Inter", sans-serif;
+  --font-interface: var(--font-ui);
+  --font-editorial: "Neue Reckless", "Inter", sans-serif;
   --t-meta: 11px;
   --t-label: 12px;
   --t-body: 15px;
