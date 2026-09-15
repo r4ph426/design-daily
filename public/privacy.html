@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="dark" />
     <title>Privacy · design / daily</title>
+    <link rel="stylesheet" href="./tokens.css" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap");
 
@@ -17,39 +18,35 @@
       }
 
       :root {
-        font-family: "Inter", Arial, sans-serif;
-        color: #e8e8dd;
-        background: #07180f;
-        --forest: #07180f;
-        --paper: #e8e8dd;
-        --signal: #ff3d32;
-        --grid: rgba(198, 207, 181, 0.2);
-        --muted: rgba(232, 232, 221, 0.68);
+        font-family: var(--font-ui);
+        color: var(--paper);
+        background: var(--canvas);
       }
 
       * { box-sizing: border-box; }
-      body { margin: 0; min-width: 320px; background: var(--forest); }
+      body { margin: 0; min-width: 320px; background: var(--canvas); }
       a { color: inherit; }
       .shell { width: min(1040px, calc(100% - 32px)); margin: 0 auto; border-inline: 1px solid var(--grid); }
       header { min-height: 80px; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 0 24px; border-bottom: 1px solid var(--grid); }
-      .brand { color: var(--signal); font-weight: 500; text-decoration: none; }
-      .back { color: var(--muted); font-size: 12px; text-decoration: none; }
-      .back:hover { color: var(--signal); }
+      .brand { color: var(--coral); background: var(--ink); font-family: var(--font-mono); font-size: var(--t-body); font-weight: 500; text-decoration: none; }
+      .back { color: var(--text-muted); font-family: var(--font-mono); font-size: var(--t-label); text-decoration: none; }
+      .back:hover { color: var(--sage); }
       main { display: grid; grid-template-columns: minmax(190px, 28%) minmax(0, 1fr); }
       .intro, .content { padding: 48px 32px; }
       .intro { border-right: 1px solid var(--grid); }
-      h1, h2 { font-family: "Neue Reckless", Georgia, serif; font-weight: 400; }
-      h1 { margin: 0; font-size: clamp(48px, 7vw, 78px); line-height: 0.92; }
-      .meta { margin-top: 24px; color: var(--muted); font-size: 11px; line-height: 1.6; }
+      h1, h2 { font-family: var(--font-editorial); font-weight: 400; }
+      h1 { margin: 0; font-size: var(--t-page-title); line-height: 0.92; }
+      .meta { margin-top: 24px; color: var(--text-muted); font-family: var(--font-mono); font-size: var(--t-meta); line-height: 1.6; }
       section { max-width: 680px; padding: 0 0 28px; margin-bottom: 28px; border-bottom: 1px solid var(--grid); }
       section:last-child { margin-bottom: 0; border-bottom: 0; }
-      h2 { margin: 0 0 12px; font-size: 30px; line-height: 1; }
-      p, li { color: var(--muted); font-size: 13px; line-height: 1.65; }
+      h2 { margin: 0 0 12px; font-size: var(--t-page-heading); line-height: 1; }
+      p, li { color: var(--text-muted); font-size: var(--t-body); line-height: 1.65; }
       ul { padding-left: 20px; }
       strong { color: var(--paper); font-weight: 500; }
-      footer { min-height: 58px; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 12px 24px; border-top: 1px solid var(--grid); color: var(--muted); font-size: 10px; }
+      footer { min-height: 58px; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 12px 24px; border-top: 1px solid var(--grid); color: var(--text-muted); font-family: var(--font-mono); font-size: var(--t-meta); }
 
       @media (max-width: 700px) {
+        :root { --t-page-title: 52px; }
         main { display: block; }
         .intro { border-right: 0; border-bottom: 1px solid var(--grid); }
         .intro, .content { padding: 36px 20px; }

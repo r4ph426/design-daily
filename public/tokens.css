@@ -1,0 +1,30 @@
+:root {
+  --canvas: #162713;
+  --coral: #ff3318;
+  --yellow: #f1bf42;
+  --sage: #b5d2cc;
+  --paper: #e8e8dd;
+  --ink: #000000;
+  --text-muted: #aab1a6;
+  --text-subtle: #959d92;
+  --grid: color-mix(in srgb, var(--sage) 22%, transparent);
+  --grid-strong: color-mix(in srgb, var(--sage) 42%, transparent);
+  --surface-hover: color-mix(in srgb, var(--paper) 4%, transparent);
+  --surface-input: color-mix(in srgb, var(--ink) 16%, transparent);
+  --overlay: color-mix(in srgb, var(--ink) 82%, transparent);
+  --font-ui: "Inter", Arial, sans-serif;
+  --font-mono: "SFMono-Regular", "Cascadia Mono", "Roboto Mono", Consolas, "Liberation Mono", monospace;
+  --font-editorial: "Neue Reckless", Iowan Old Style, Baskerville, Georgia, serif;
+  --t-meta: 11px;
+  --t-label: 12px;
+  --t-body: 15px;
+  --t-answer: 16px;
+  --t-question: 38px;
+  --t-hero: 52px;
+  --t-number: 64px;
+  --t-index-hero: 72px;
+  --t-section: 23px;
+  --t-index-question: 25px;
+  --t-page-title: 78px;
+  --t-page-heading: 30px;
+}

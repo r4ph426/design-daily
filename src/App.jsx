@@ -225,7 +225,7 @@ function QuestionBlock({ question, isOpen, isSaved, onToggle, onSave }) {
       </div>
       <aside className="question-provenance">
         <div><span>{question.counts.total} sources</span><span>{question.counts.web} web · {question.counts.newsletters} newsletters</span><span>first seen {question.firstSeen || "today"}</span></div>
-        <button className={`save-button ${isSaved ? "saved" : ""}`} type="button" aria-pressed={isSaved} onClick={onSave}><BookmarkSimple size={17} weight={isSaved ? "fill" : "regular"} /> {isSaved ? "saved" : "save"}</button>
+        <button className={`save-button ${isSaved ? "saved" : ""}`} type="button" aria-label={isSaved ? "Remove saved question" : "Save question"} aria-pressed={isSaved} onClick={onSave}><BookmarkSimple size={17} weight={isSaved ? "fill" : "regular"} /></button>
       </aside>
       <div className="question-details" id={`${question.slug}-details`} hidden={!isOpen}>
         <SignalsTable question={question} />
