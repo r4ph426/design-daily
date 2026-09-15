@@ -1,0 +1,170 @@
+{
+  "schemaVersion": 1,
+  "editionNumber": "0198",
+  "date": "2026-09-14",
+  "displayDate": "Monday, 14 September 2026",
+  "filedAt": "22:09 cet",
+  "crawlCompletedAt": "22:09",
+  "sourceCount": 12,
+  "summary": "Newest signals point to a shift in UX from exploratory, two-stage process models toward faster generation loops, with AI changing both how teams build and how people without design support create work. There is also a practical pattern-level reminder from tables: column structure still affects scan speed. On the culture side, designers are being asked to defend craft, references, and pricing in a world where AI and commoditized tools expand who can produce design-like output. Source coverage is strongest around UX process and AI, with some evidence in interaction design and industry culture.",
+  "generatedAt": "2026-09-14T20:09:08.680Z",
+  "inboxConnected": true,
+  "questions": [
+    {
+      "id": "01",
+      "slug": "if-ai-has-collapsed-the-cost-of-building-what-should-replace-the",
+      "category": "Process",
+      "tags": [
+        "UX"
+      ],
+      "aiLens": true,
+      "question": "If AI has collapsed the cost of building, what should replace the double diamond in our product process?",
+      "answer": "The article argues that the old two-phase model assumed building was expensive and learning was cheap, which no longer holds in AI-heavy software work. Teams should shift to a tighter brief and a wider generation step, then validate earlier and more often. This is a process redesign, not a cosmetic update.",
+      "why": "This is the clearest high-relevance process change in the sources and directly affects how UX teams plan discovery and delivery.",
+      "counts": {
+        "total": 1,
+        "newsletters": 0,
+        "web": 1
+      },
+      "firstSeen": "20:52 cet",
+      "signals": [
+        {
+          "source": "UX Collective",
+          "kind": "Web",
+          "timing": "20:52",
+          "happened": "Published a critique of the Double Diamond as obsolete in AI-era software.",
+          "changes": "Reframes process around one-page briefs and broader generation instead of two equal diamonds.",
+          "verdict": "Must read",
+          "url": "https://uxdesign.cc/the-ux-double-diamond-is-dead-and-in-ai-only-one-survives-for-software-heres-how-to-adapt-f63b57c524ed"
+        }
+      ],
+      "further": [
+        [
+          "Five eras of UX, First drafts, Logos made of data, Voice AIUX patterns",
+          "UX Collective",
+          "https://uxdesign.cc/five-eras-of-ux-first-drafts-logos-made-of-data-voice-aiux-patterns-7b326c9aba4a"
+        ]
+      ]
+    },
+    {
+      "id": "02",
+      "slug": "should-we-combine-table-columns-when-users-need-to-compare-value",
+      "category": "UI",
+      "tags": [
+        "UX"
+      ],
+      "aiLens": false,
+      "question": "Should we combine table columns when users need to compare values faster?",
+      "answer": "Yes, when the task is scanning and cross-checking related values, the newsletter claims combined columns reduce visual fixations and make tables easier to read at a glance. This points to a concrete UI optimization for dashboards and admin tools, especially where users repeatedly scan rows.",
+      "why": "This is the most actionable design pattern signal in the batch and directly maps to UI layout decisions.",
+      "counts": {
+        "total": 1,
+        "newsletters": 1,
+        "web": 0
+      },
+      "firstSeen": "18:41 cet",
+      "signals": [
+        {
+          "source": "UX Movement",
+          "kind": "Newsletter",
+          "timing": "18:41",
+          "happened": "Reported that combined columns help users scan data tables faster.",
+          "changes": "Suggests fewer fixations and quicker row-to-row comparison in dense tables.",
+          "verdict": "Read",
+          "url": "https://uxmovement.substack.com/archive"
+        }
+      ],
+      "further": []
+    },
+    {
+      "id": "03",
+      "slug": "how-should-design-teams-respond-to-the-rise-of-the-designless-an",
+      "category": "Culture",
+      "tags": [
+        "UX"
+      ],
+      "aiLens": true,
+      "question": "How should design teams respond to the rise of the 'designless' and AI-made work?",
+      "answer": "The piece argues AI has not changed the designer’s core job, but it has expanded who can attempt design themselves. That creates three distinct audiences with different needs, from people using default forms to those replacing professional help with prompts. Teams should separate these cases instead of treating all AI use as one trend.",
+      "why": "This is the strongest culture and industry signal because it reframes the audience, the market, and the value of design skill.",
+      "counts": {
+        "total": 1,
+        "newsletters": 0,
+        "web": 1
+      },
+      "firstSeen": "15:59 cet",
+      "signals": [
+        {
+          "source": "UX Collective",
+          "kind": "Web",
+          "timing": "15:59",
+          "happened": "Introduced the idea of the 'designless' as three different groups.",
+          "changes": "Separates AI-driven self-service design into distinct needs and motivations.",
+          "verdict": "Read",
+          "url": "https://uxdesign.cc/for-the-designless-0d3e7936a70c"
+        }
+      ],
+      "further": [
+        [
+          "How to say no when a friend asks for a discount",
+          "UX Collective",
+          "https://uxdesign.cc/how-to-say-no-when-a-friend-asks-for-a-discount-d0e48087eb1d"
+        ],
+        [
+          "“Grunt work is a right of passage”",
+          "It’s Nice That",
+          "https://www.itsnicethat.com/articles/creative-career-condundrums-if-you-could-jobs-advice-140926"
+        ]
+      ]
+    },
+    {
+      "id": "04",
+      "slug": "what-happens-to-our-design-standards-when-visual-taste-and-cultu",
+      "category": "Culture",
+      "tags": [
+        "UI",
+        "UX"
+      ],
+      "aiLens": true,
+      "question": "What happens to our design standards when visual taste and cultural references are diluted at scale?",
+      "answer": "The source warns that cultural references matter and that losing them at scale weakens design meaning. For product teams, that means brand and interface choices should still carry context, not just generic polish. This is a reminder that AI and templates can flatten expression if teams do not protect reference quality.",
+      "why": "This keeps attention on design quality and differentiation, which is a relevant counterweight to AI-driven speed.",
+      "counts": {
+        "total": 3,
+        "newsletters": 0,
+        "web": 3
+      },
+      "firstSeen": "15:59 cet",
+      "signals": [
+        {
+          "source": "UX Collective",
+          "kind": "Web",
+          "timing": "15:59",
+          "happened": "Argued for the value of cultural references in design.",
+          "changes": "Warns that scale can erase meaning and make work more generic.",
+          "verdict": "Track",
+          "url": "https://uxdesign.cc/for-the-designless-0d3e7936a70c"
+        },
+        {
+          "source": "It’s Nice That",
+          "kind": "Web",
+          "timing": "10:00",
+          "happened": "Showed retro branding used to bring warmth and fun to São Paulo venues.",
+          "changes": "Demonstrates how reference-led identity work can create distinctiveness.",
+          "verdict": "Track",
+          "url": "https://www.itsnicethat.com/features/the-view-from-sao-paulo-retro-bar-and-restaurant-branding-graphic-design-140926"
+        },
+        {
+          "source": "It’s Nice That",
+          "kind": "Web",
+          "timing": "10:00",
+          "happened": "Described a heritage brand refresh aimed at younger serious artists.",
+          "changes": "Shows how contemporary identity work can update legacy craft without losing credibility.",
+          "verdict": "Track",
+          "url": "https://www.itsnicethat.com/articles/sylvan-hillebrand-rembrandt-graphic-design-project-140926"
+        }
+      ],
+      "further": []
+    }
+  ]
+}
