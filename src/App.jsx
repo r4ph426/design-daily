@@ -161,7 +161,7 @@ const fallbackEdition = {
   crawlCompletedAt: "06:30",
   sourceCount: 128,
   inboxConnected: false,
-  summary: "A daily synthesis of design news, research, workflows, and culture, curated from today’s crawl and the news for rapha inbox.",
+  summary: "AI can accelerate production, but design quality still depends on clear judgment. Today’s edition looks at where teams should place their attention.",
   questions: fallbackQuestions,
 };
 
@@ -169,6 +169,10 @@ validateEditionTaxonomy(fallbackEdition);
 
 function countWord(count) {
   return ["zero", "one", "two", "three", "four"][count] || String(count);
+}
+
+function pluralize(count, singular, plural = `${singular}s`) {
+  return `${count} ${count === 1 ? singular : plural}`;
 }
 
 function Brand() {
@@ -244,7 +248,7 @@ function QuestionBlock({ question, isOpen, isSaved, onToggle, onSave }) {
         </div>
       </div>
       <aside className="question-provenance">
-        <div className="provenance-head"><span>{question.counts.total} sources</span><span>{question.counts.web} web · {question.counts.newsletters} newsletters</span><span>first seen {question.firstSeen || "today"}</span></div>
+        <div className="provenance-head"><span>{pluralize(question.counts.total, "source")}</span><span>{pluralize(question.counts.web, "web source")} · {pluralize(question.counts.newsletters, "newsletter")}</span><span>first seen {question.firstSeen || "today"}</span></div>
         <button className={`save-button ${isSaved ? "saved" : ""}`} type="button" aria-label={isSaved ? "Remove saved question" : "Save question"} aria-pressed={isSaved} onClick={onSave}><BookmarkSimple size={17} weight={isSaved ? "fill" : "regular"} /></button>
         <SourceList question={question} />
       </aside>
@@ -323,7 +327,7 @@ function Archive({ initialFilter, onClose, archiveDays }) {
     <div className="archive-backdrop" role="presentation" onMouseDown={onClose}>
       <section className="archive" role="dialog" aria-modal="true" aria-labelledby="archive-title" onMouseDown={(event) => event.stopPropagation()}>
         <header className="archive-head">
-          <div><p className="meta-label">ui · ux · process · culture</p><h2 id="archive-title">The question index</h2><p>{questionCount} questions · {archiveDays.length} {archiveDays.length === 1 ? "edition" : "editions"}</p></div>
+          <div><p className="meta-label">ui · ux · process · culture</p><h2 id="archive-title">The question index</h2><p>{pluralize(questionCount, "question")} · {pluralize(archiveDays.length, "edition")}</p></div>
           <button className="close-button" type="button" aria-label="Close the question index" onClick={onClose} autoFocus><X size={24} /></button>
         </header>
         <div className="archive-controls">
@@ -341,7 +345,7 @@ function Archive({ initialFilter, onClose, archiveDays }) {
                   <a className="archive-entry" href={`#${question.slug || "signals"}`} onClick={onClose} key={`${day.edition}-${question.question}`}>
                     <span className="entry-category">{question.category}</span>
                     <div><h4>{question.question}</h4><p>{question.answer}</p>{question.returned && <span className="returned">{question.returned}</span>}</div>
-                    <span className="entry-source-count">{question.counts.total} sources</span><ArrowRight size={20} />
+                    <span className="entry-source-count">{pluralize(question.counts.total, "source")}</span><ArrowRight size={20} />
                   </a>
                 ))}
               </section>
@@ -417,7 +421,7 @@ export function App() {
   return (
     <main className="site-shell" id="top">
       <a className="skip-link" href={`#${questions[0].slug}`}>skip to the first question</a>
-      <header className="topbar">
+      <header className={`topbar ${searchOpen ? "search-open" : ""}`}>
         <Brand />
         <div className="edition-meta"><span>{edition.displayDate}</span><span>edition {editionNumber}</span><span>filed {edition.filedAt}</span></div>
         <nav className="nav-links" aria-label="Primary">
@@ -425,17 +429,17 @@ export function App() {
           <button type="button" className="question-index-nav" onClick={() => openArchive()}>Question index</button>
         </nav>
         <div className="top-actions">
-          {searchOpen && <input autoFocus aria-label="Search the question index" placeholder="Search questions" onKeyDown={(event) => event.key === "Escape" && setSearchOpen(false)} />}
-          <button type="button" className="icon-button" aria-label="Search" onClick={() => setSearchOpen((value) => !value)}><MagnifyingGlass size={20} /></button>
+          <button type="button" className="icon-button" aria-label={searchOpen ? "Close search" : "Search"} onClick={() => setSearchOpen((value) => !value)}>{searchOpen ? <X size={20} /> : <MagnifyingGlass size={20} />}</button>
         </div>
+        {searchOpen && <div className="search-field"><input autoFocus aria-label="Search the question index" placeholder="Search questions" onKeyDown={(event) => event.key === "Escape" && setSearchOpen(false)} /></div>}
       </header>
       <section className="edition-hero" aria-labelledby="edition-title">
         <div className="edition-intro">
           <h1 id="edition-title">{issueTitle}</h1>
-          <p>{edition.summary}</p>
+          <p className="editor-note">{edition.summary}</p>
           <div className="crawl-line">
             <span><Clock size={16} /> Last crawl {edition.crawlCompletedAt}</span>
-            <span>{edition.sourceCount} sources</span>
+            <span>{pluralize(edition.sourceCount, "source")}</span>
             <span><LockSimple size={16} /> Shared with the design team</span>
           </div>
         </div>
@@ -444,7 +448,7 @@ export function App() {
       <section className="questions" aria-label="Today’s questions">
         {questions.map((question) => <QuestionBlock key={question.id} question={question} isOpen={Boolean(openQuestions[question.id])} isSaved={Boolean(savedQuestions[question.id])} onToggle={() => setOpenQuestions((state) => ({ ...state, [question.id]: !state[question.id] }))} onSave={() => setSavedQuestions((state) => ({ ...state, [question.id]: !state[question.id] }))} />)}
       </section>
-      <footer className="footer-grid"><Brand /><p>AI-generated. Human-edited.</p><a href={`${import.meta.env.BASE_URL}privacy.html`}>Privacy</a><p>Synthesis, not noise.</p></footer>
+      <footer className="footer-grid"><Brand /><p>AI-generated. Human-edited.</p><span className="footer-edition">edition {editionNumber}</span><a href={`${import.meta.env.BASE_URL}privacy.html`}>Privacy</a><p>Synthesis, not noise.</p></footer>
       {archiveOpen && <Archive initialFilter={archiveFilter} archiveDays={archiveDays} onClose={() => setArchiveOpen(false)} />}
     </main>
   );
