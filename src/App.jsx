@@ -207,6 +207,26 @@ function SignalsTable({ question }) {
   );
 }
 
+function sourceDomain(signal) {
+  try { return new URL(signal.url).hostname.replace(/^www\./, ""); }
+  catch { return signal.source; }
+}
+
+function SourceList({ question }) {
+  return (
+    <ol className="source-list" aria-label={`Sources for ${question.question}`}>
+      {question.signals.map((signal, index) => (
+        <li key={`${question.id}-${signal.url || signal.source}-${index}`}>
+          <a href={signal.url || "#top"} target={signal.url ? "_blank" : undefined} rel={signal.url ? "noopener noreferrer" : undefined}>
+            <span className="source-list-title">{signal.title || signal.happened}</span>
+            <span className="source-list-meta">{sourceDomain(signal)} · {signal.kind} · {signal.timing}</span>
+          </a>
+        </li>
+      ))}
+    </ol>
+  );
+}
+
 function QuestionBlock({ question, isOpen, isSaved, onToggle, onSave }) {
   return (
     <article className={`question-block ${isOpen ? "open" : ""}`} id={question.slug}>
@@ -224,8 +244,9 @@ function QuestionBlock({ question, isOpen, isSaved, onToggle, onSave }) {
         </div>
       </div>
       <aside className="question-provenance">
-        <div><span>{question.counts.total} sources</span><span>{question.counts.web} web · {question.counts.newsletters} newsletters</span><span>first seen {question.firstSeen || "today"}</span></div>
+        <div className="provenance-head"><span>{question.counts.total} sources</span><span>{question.counts.web} web · {question.counts.newsletters} newsletters</span><span>first seen {question.firstSeen || "today"}</span></div>
         <button className={`save-button ${isSaved ? "saved" : ""}`} type="button" aria-label={isSaved ? "Remove saved question" : "Save question"} aria-pressed={isSaved} onClick={onSave}><BookmarkSimple size={17} weight={isSaved ? "fill" : "regular"} /></button>
+        <SourceList question={question} />
       </aside>
       <div className="question-details" id={`${question.slug}-details`} hidden={!isOpen}>
         <SignalsTable question={question} />

@@ -34,7 +34,8 @@
           "happened": "Product teams are documenting model behavior and review thresholds next to interface decisions.",
           "changes": "Add decision checkpoints to the design system before automating more production work.",
           "verdict": "Must read",
-          "url": "https://www.figma.com/blog/"
+          "url": "https://www.figma.com/blog/",
+          "title": "Designing review systems for AI-assisted products"
         },
         {
           "source": "UX Collective",
@@ -43,7 +44,8 @@
           "happened": "A cross-team study found that generated output converges when feedback is not captured as a shared artifact.",
           "changes": "Turn critique into reusable criteria instead of leaving it inside individual prompts.",
           "verdict": "Read",
-          "url": "https://uxdesign.cc/"
+          "url": "https://uxdesign.cc/",
+          "title": "A field guide to design decisions"
         }
       ],
       "further": [
@@ -79,7 +81,8 @@
           "happened": "Teams report that exploration is faster, while alignment and selection now consume more of the schedule.",
           "changes": "Budget critique time before adding another generation tool.",
           "verdict": "Must read",
-          "url": "https://www.designbetter.co/"
+          "url": "https://www.designbetter.co/",
+          "title": "What becomes valuable when making gets cheaper?"
         },
         {
           "source": "Co.Design",
@@ -88,7 +91,8 @@
           "happened": "Studios are publishing fewer directions despite producing more internal options.",
           "changes": "Measure decision quality and reversibility, not the volume of output.",
           "verdict": "Track",
-          "url": "https://www.fastcompany.com/co-design"
+          "url": "https://www.fastcompany.com/co-design",
+          "title": "Taste is turning into team infrastructure"
         }
       ],
       "further": [
@@ -124,7 +128,8 @@
           "happened": "Research teams are using synthetic interviews to pressure-test scripts before meeting real participants.",
           "changes": "Use simulation to improve the plan, then validate consequences with people.",
           "verdict": "Must read",
-          "url": "https://hbr.org/"
+          "url": "https://hbr.org/",
+          "title": "Can research stay human at machine speed?"
         },
         {
           "source": "Deliberate",
@@ -133,7 +138,8 @@
           "happened": "Practitioners found that simulated participants flatten organizational and cultural context.",
           "changes": "Label synthetic findings as hypotheses in every research readout.",
           "verdict": "Read",
-          "url": "https://deliberate.substack.com/"
+          "url": "https://deliberate.substack.com/",
+          "title": "Research repositories after abundance"
         }
       ],
       "further": [
@@ -167,7 +173,8 @@
           "happened": "Studios are documenting how credit, critique, and accountability work in machine-assisted projects.",
           "changes": "Write authorship and review norms before the next AI-supported project begins.",
           "verdict": "Must read",
-          "url": "https://designreviewed.com/"
+          "url": "https://designreviewed.com/",
+          "title": "How should design culture change?"
         },
         {
           "source": "It’s Nice That",
@@ -176,7 +183,8 @@
           "happened": "Creative teams are protecting time for discussion as production cycles become shorter.",
           "changes": "Treat critique as core infrastructure rather than a final approval step.",
           "verdict": "Read",
-          "url": "https://www.itsnicethat.com/"
+          "url": "https://www.itsnicethat.com/",
+          "title": "Authorship after automation"
         }
       ],
       "further": [

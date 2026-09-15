@@ -29,6 +29,8 @@ When implementing from a selected generated mock, treat that image as the source
 - Keep the opening title and summary text boxes broad enough for roughly 10 to 12 words per line, with body-copy measure capped around 60 characters.
 - Set question numbers in Neue Reckless Light Italic. Source provenance metadata is 11px, two pixels larger than compact control labels.
 - Render non-interactive footer statements in signal red.
+- Keep source links permanently visible in the provenance column with title, domain, source type, and time. Reserve the disclosure for extended signal notes and related reads.
+- Cap the editorial shell at 1600px and use proportional 14% / 48% / 38% question columns on desktop.
 - Place the Question index alongside UI, UX, Process, and Culture in the header. Do not repeat the category list or the Question index in the footer.
 - Keep the opening spread text-led, with the daily crawl overview on the left and the newsletter intake on the right. Present questions as compact numbered rows with source provenance and save controls aligned to the grid.
 - Avoid large filled accent panels in the main reading view. Preserve whitespace, subtle green atmospheric texture, strict column alignment, and a compact index-style footer.

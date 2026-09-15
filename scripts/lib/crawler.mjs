@@ -234,6 +234,7 @@ export function normalizeAiEdition(aiEdition, itemMap) {
         : "today",
       signals: signalItems.map(({ signal, item }) => ({
         source: item.source,
+        title: item.title,
         kind: item.sourceKind === "newsletter inbox" ? "Newsletter" : "Web",
         timing: new Intl.DateTimeFormat("en", { hour: "2-digit", minute: "2-digit", hour12: false, timeZone: "Europe/Berlin" }).format(new Date(item.publishedAt)),
         happened: signal.happened,
