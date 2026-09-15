@@ -205,7 +205,7 @@ function QuestionBlock({ question, isOpen, isSaved, onToggle, onSave }) {
         <p className="answer-label">why it matters</p>
         <p className="answer-line">{question.answer}</p>
         <div className="question-actions">
-          <button className="disclosure-button" type="button" aria-expanded={isOpen} aria-controls={`${question.slug}-details`} onClick={onToggle}><CaretDown size={16} /> Signale &amp; Quellen <span>{question.counts.total}</span></button>
+          <button className="disclosure-button" type="button" aria-expanded={isOpen} aria-controls={`${question.slug}-details`} onClick={onToggle}><CaretDown size={16} /> Signals &amp; Sources <span>{question.counts.total}</span></button>
         </div>
       </div>
       <aside className="question-provenance">
@@ -235,7 +235,7 @@ function ArticleIntake() {
       if (!/^https?:$/.test(parsedUrl.protocol)) throw new Error("Unsupported protocol");
       hostname = parsedUrl.hostname.replace(/^www\./, "");
     }
-    catch { setRequest({ status: "error", message: "Diese URL ist nicht gültig. Bitte füge den direkten Link zum Artikel ein." }); return; }
+    catch { setRequest({ status: "error", message: "That URL is not valid. Paste the direct link to the article." }); return; }
     const issueUrl = new URL(articleIssueBase);
     issueUrl.searchParams.set("template", "article-submission.md");
     issueUrl.searchParams.set("title", `Shared article: ${hostname}`);
@@ -250,16 +250,16 @@ function ArticleIntake() {
 
   return (
     <aside className="article-panel" id="article-intake">
-      <div className="article-heading"><LinkSimple size={22} /><div><p className="meta-label">article intake</p><h2>Artikel teilen</h2></div></div>
-      <p>Füge die URL eines Artikels ein. Der Beitrag wird beim nächsten Crawl berücksichtigt.</p>
+      <div className="article-heading"><LinkSimple size={22} /><div><p className="meta-label">article intake</p><h2>Share an article</h2></div></div>
+      <p>Paste an article URL. It will be considered in the next crawl.</p>
       {request.status === "submitted" ? (
-        <div className="article-success" role="status"><span><Check size={18} /> {request.hostname} ist vorbereitet</span><a href={request.issueUrl} target="_blank" rel="noopener noreferrer">Eintrag auf GitHub bestätigen</a><button type="button" onClick={addAnother}>weiteren Artikel teilen</button></div>
+        <div className="article-success" role="status"><span><Check size={18} /> {request.hostname} is ready</span><a href={request.issueUrl} target="_blank" rel="noopener noreferrer">confirm on GitHub</a><button type="button" onClick={addAnother}>share another article</button></div>
       ) : (
         <form className={`article-form ${request.status}`} onSubmit={submit}>
-          <label htmlFor="article-url">Artikel-URL</label>
+          <label htmlFor="article-url">article URL</label>
           <div className="article-control">
-            <input ref={inputRef} id="article-url" type="url" inputMode="url" placeholder="URL einfügen" value={url} onChange={(event) => { setUrl(event.target.value); if (request.status === "error") setRequest({ status: "default" }); }} disabled={request.status === "loading"} required />
-            <button type="submit" disabled={!url.trim() || request.status === "loading"}>{request.status === "loading" ? "prüfen" : "teilen"}</button>
+            <input ref={inputRef} id="article-url" type="url" inputMode="url" placeholder="Paste an article URL" value={url} onChange={(event) => { setUrl(event.target.value); if (request.status === "error") setRequest({ status: "default" }); }} disabled={request.status === "loading"} required />
+            <button type="submit" disabled={!url.trim() || request.status === "loading"}>{request.status === "loading" ? "checking" : "share"}</button>
           </div>
           {request.status === "loading" && <span className="loading-bar" aria-hidden="true" />}
           {request.status === "error" && <span className="article-error" role="alert">{request.message}</span>}

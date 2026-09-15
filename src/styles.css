@@ -16,6 +16,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Neue Reckless";
+  src: url("/fonts/Reckless-LightItalic.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+}
+
 :root {
   font-family: "Inter", Arial, sans-serif;
   color: #e8e8dd;
@@ -83,10 +91,10 @@ em { font-style: italic; }
 .icon-button, .close-button { width: 40px; height: 40px; display: grid; place-items: center; padding: 0; border: 0; background: transparent; cursor: pointer; }
 .icon-button:hover, .icon-button:focus-visible, .close-button:hover, .close-button:focus-visible { color: var(--signal); background: rgba(255, 255, 255, .035); }
 
-.edition-hero { grid-column: 1 / -1; display: grid; grid-template-columns: 38% 62%; min-height: 275px; border-inline: 1px solid var(--grid); border-bottom: 1px solid var(--grid); }
+.edition-hero { grid-column: 1 / -1; display: grid; grid-template-columns: 44% 56%; min-height: 275px; border-inline: 1px solid var(--grid); border-bottom: 1px solid var(--grid); }
 .edition-intro { min-width: 0; display: flex; flex-direction: column; justify-content: center; padding: 38px 44px 34px 20px; border-right: 1px solid var(--grid); }
-.edition-intro h1 { max-width: 440px; margin: 0 0 16px; font-size: clamp(38px, 3.25vw, 52px); line-height: .95; letter-spacing: -.025em; text-wrap: balance; }
-.edition-intro > p { max-width: 390px; margin: 0; color: var(--muted); font-family: var(--font-editorial); font-size: 17px; line-height: 1.35; }
+.edition-intro h1 { max-width: 20ch; margin: 0 0 16px; font-size: clamp(38px, 3.25vw, 52px); line-height: .95; letter-spacing: -.025em; text-wrap: balance; }
+.edition-intro > p { max-width: 60ch; margin: 0; color: var(--muted); font-family: var(--font-editorial); font-size: 17px; line-height: 1.35; }
 .crawl-line { display: flex; flex-wrap: wrap; gap: 9px 22px; margin-top: 24px; color: var(--muted); font-size: 9px; }
 .crawl-line span { display: inline-flex; align-items: center; gap: 8px; }
 .crawl-line span:last-child { flex-basis: 100%; }
@@ -120,7 +128,7 @@ em { font-style: italic; }
 .question-block { display: grid; grid-template-columns: 12% 38% 50%; min-height: 132px; border-bottom: 1px solid var(--grid); }
 .question-number, .question-copy, .question-provenance { min-width: 0; }
 .question-number { padding: 32px 20px 24px; border-right: 1px solid var(--grid); }
-.question-number span { display: block; color: var(--signal); font-family: var(--font-editorial); font-size: clamp(48px, 4vw, 64px); font-style: italic; line-height: .8; letter-spacing: -.05em; }
+.question-number span { display: block; color: var(--signal); font-family: var(--font-editorial); font-size: clamp(48px, 4vw, 64px); font-style: italic; font-weight: 300; line-height: .8; letter-spacing: -.05em; }
 .question-number small { display: block; margin-top: 20px; color: var(--muted); font-size: 8px; }
 .question-copy { padding: 29px 32px 24px 22px; border-right: 1px solid var(--grid); }
 .question-copy h2 { margin: 0; max-width: 500px; }
@@ -135,13 +143,13 @@ em { font-style: italic; }
 .disclosure-button svg { transition: transform 180ms ease-out; }
 .question-block.open .disclosure-button svg { transform: rotate(180deg); }
 .question-provenance { display: grid; grid-template-columns: minmax(170px, 1fr) auto; align-content: start; gap: 18px; padding: 32px 22px 24px 34px; }
-.question-provenance > div { display: flex; flex-direction: column; gap: 5px; color: var(--muted); font-size: 9px; line-height: 1.3; }
+.question-provenance > div { display: flex; flex-direction: column; gap: 5px; color: var(--muted); font-size: 11px; line-height: 1.35; }
 .question-provenance > div span:first-child { color: var(--paper); }
 .save-button { width: 40px; min-height: 40px; display: grid; place-items: center; padding: 0; border: 0; color: var(--muted); background: transparent; cursor: pointer; font-size: 0; }
 .save-button:hover, .save-button.saved { color: var(--signal); }
-.question-details { grid-column: 2 / 4; border-top: 1px solid var(--grid); }
+.question-details { grid-column: 2 / 4; }
 .question-details[hidden] { display: none; }
-.signals-table-wrap { padding: 10px 28px 30px 22px; }
+.signals-table-wrap { padding: 10px 28px 30px 22px; border: 1px solid var(--grid); }
 .signals-table { width: 100%; border-collapse: collapse; table-layout: fixed; }
 .signals-table caption { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); }
 .signals-table th { padding: 17px 14px 10px 0; border-bottom: 1px solid var(--grid); color: var(--faint); font-size: 8px; font-weight: 400; text-align: left; }
@@ -165,6 +173,7 @@ a.source-name:hover { color: var(--signal); }
 
 .footer-grid { grid-column: 1 / -1; min-height: 58px; display: grid; grid-template-columns: repeat(3, 1fr); border-inline: 1px solid var(--grid); border-bottom: 1px solid var(--grid); }
 .footer-grid > * { min-width: 0; display: flex; align-items: center; justify-content: center; margin: 0; padding: 12px 18px; border-right: 1px solid var(--grid); color: var(--muted); font-size: 8px; line-height: 1.4; text-align: center; }
+.footer-grid > p { color: var(--signal); }
 .footer-grid > a:hover { color: var(--signal); }
 .footer-grid > *:last-child { border-right: 0; color: var(--signal); }
 .footer-grid .brand { display: none; }
