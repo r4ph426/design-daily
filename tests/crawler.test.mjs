@@ -8,13 +8,19 @@ import {
   parseFeed,
   scoreItem,
 } from "../scripts/lib/crawler.mjs";
+import { validateCategoryRecord } from "../src/taxonomy.js";
 
 test("parseFeed reads RSS and canonicalizes tracking URLs", () => {
   const xml = `<?xml version="1.0"?><rss><channel><item><title>Design systems and AI</title><link>https://example.com/story?utm_source=test</link><description><![CDATA[<p>A research framework.</p>]]></description><pubDate>Thu, 10 Sep 2026 06:00:00 GMT</pubDate></item></channel></rss>`;
-  const [item] = parseFeed(xml, { name: "Example", category: "Process", tags: ["AI"] });
+  const [item] = parseFeed(xml, { name: "Example", category: "Process", tags: ["UX"] });
   assert.equal(item.title, "Design systems and AI");
   assert.equal(item.url, "https://example.com/story");
   assert.equal(item.excerpt, "A research framework.");
+});
+
+test("taxonomy rejects free text and legacy categories", () => {
+  assert.throws(() => validateCategoryRecord({ category: "Practice", tags: [], aiLens: false }), /invalid category/);
+  assert.throws(() => validateCategoryRecord({ category: "UX", tags: ["Research"], aiLens: false }), /invalid category tags/);
 });
 
 test("extractGmailMessage reads a newsletter MIME body", () => {

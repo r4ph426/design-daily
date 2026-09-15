@@ -13,11 +13,9 @@
     {
       "id": "01",
       "slug": "who-designs-the-system",
-      "category": "Practice",
+      "category": "Process",
       "tags": [
-        "UI",
-        "AI",
-        "Systems"
+        "UI"
       ],
       "question": "Who designs the system that designs with us?",
       "answer": "Teams are moving from prompt craft to explicit review systems that make judgment visible and reusable.",
@@ -54,15 +52,15 @@
           "A List Apart · web",
           "https://alistapart.com/"
         ]
-      ]
+      ],
+      "aiLens": true
     },
     {
       "id": "02",
       "slug": "what-becomes-valuable",
       "category": "Process",
       "tags": [
-        "UX",
-        "AI"
+        "UX"
       ],
       "question": "What becomes valuable when making gets cheaper?",
       "answer": "The scarce work shifts to framing, taste, and knowing when to stop generating.",
@@ -99,16 +97,15 @@
           "The Design Review · newsletter",
           "https://designreviewed.com/"
         ]
-      ]
+      ],
+      "aiLens": true
     },
     {
       "id": "03",
       "slug": "research-at-machine-speed",
       "category": "Culture",
       "tags": [
-        "UX",
-        "Research",
-        "AI"
+        "UX"
       ],
       "question": "Can research stay human at machine speed?",
       "answer": "Synthetic participants can widen exploration, but lived context remains the source of consequence.",
@@ -145,16 +142,14 @@
           "Noahpinion · newsletter",
           "https://www.noahpinion.blog/"
         ]
-      ]
+      ],
+      "aiLens": true
     },
     {
       "id": "04",
       "slug": "design-culture-change",
       "category": "Culture",
-      "tags": [
-        "Culture",
-        "AI"
-      ],
+      "tags": [],
       "question": "How should design culture change?",
       "answer": "Teams are rewriting norms around credit, craft, and critique for an AI-augmented era.",
       "why": "The strongest teams are making authorship and review visible. Shared standards protect individual judgment while letting new tools accelerate the work.",
@@ -190,7 +185,8 @@
           "Deliberate · newsletter",
           "https://deliberate.substack.com/"
         ]
-      ]
+      ],
+      "aiLens": true
     }
   ]
 }

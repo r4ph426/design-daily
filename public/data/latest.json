@@ -15,9 +15,7 @@
       "slug": "if-ai-has-collapsed-the-cost-of-building-what-should-replace-the",
       "category": "Process",
       "tags": [
-        "UX",
-        "AI",
-        "Research"
+        "UX"
       ],
       "question": "If AI has collapsed the cost of building, what should replace the double diamond in our product process?",
       "answer": "The article argues that the old two-phase model assumed building was expensive and learning was cheap, which no longer holds in AI-heavy software work. Teams should shift to a tighter brief and a wider generation step, then validate earlier and more often. This is a process redesign, not a cosmetic update.",
@@ -45,16 +43,15 @@
           "UX Collective",
           "https://uxdesign.cc/five-eras-of-ux-first-drafts-logos-made-of-data-voice-aiux-patterns-7b326c9aba4a"
         ]
-      ]
+      ],
+      "aiLens": true
     },
     {
       "id": "02",
       "slug": "should-we-combine-table-columns-when-users-need-to-compare-value",
-      "category": "Practice",
+      "category": "UI",
       "tags": [
-        "UI",
-        "UX",
-        "Research"
+        "UX"
       ],
       "question": "Should we combine table columns when users need to compare values faster?",
       "answer": "Yes, when the task is scanning and cross-checking related values, the newsletter claims combined columns reduce visual fixations and make tables easier to read at a glance. This points to a concrete UI optimization for dashboards and admin tools, especially where users repeatedly scan rows.",
@@ -76,15 +73,15 @@
           "url": "https://uxmovement.substack.com/archive"
         }
       ],
-      "further": []
+      "further": [],
+      "aiLens": false
     },
     {
       "id": "03",
       "slug": "how-should-design-teams-respond-to-the-rise-of-the-designless-an",
       "category": "Culture",
       "tags": [
-        "UX",
-        "AI"
+        "UX"
       ],
       "question": "How should design teams respond to the rise of the 'designless' and AI-made work?",
       "answer": "The piece argues AI has not changed the designer’s core job, but it has expanded who can attempt design themselves. That creates three distinct audiences with different needs, from people using default forms to those replacing professional help with prompts. Teams should separate these cases instead of treating all AI use as one trend.",
@@ -117,7 +114,8 @@
           "It’s Nice That",
           "https://www.itsnicethat.com/articles/creative-career-condundrums-if-you-could-jobs-advice-140926"
         ]
-      ]
+      ],
+      "aiLens": true
     },
     {
       "id": "04",
@@ -165,7 +163,8 @@
           "url": "https://www.itsnicethat.com/articles/sylvan-hillebrand-rembrandt-graphic-design-project-140926"
         }
       ],
-      "further": []
+      "further": [],
+      "aiLens": true
     }
   ]
 }

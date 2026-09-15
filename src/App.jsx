@@ -10,6 +10,7 @@ import {
   MagnifyingGlass,
   X,
 } from "@phosphor-icons/react";
+import { CATEGORIES, validateEditionTaxonomy } from "./taxonomy.js";
 
 const fallbackEditionNumber = "0197";
 const articleIssueBase = "https://github.com/r4ph426/design-daily/issues/new";
@@ -18,7 +19,9 @@ const fallbackQuestions = [
   {
     id: "01",
     slug: "who-designs-the-system",
-    category: "Practice",
+    category: "Process",
+    tags: ["UI"],
+    aiLens: true,
     question: "Who designs the system that designs with us?",
     answer: <>Teams are moving from prompt craft to <em>explicit review systems</em> that make judgment visible and reusable.</>,
     why: "Designers now shape the rules around generation, review, and escalation. That turns critique, governance, and authorship into parts of the product experience.",
@@ -59,6 +62,8 @@ const fallbackQuestions = [
     id: "02",
     slug: "what-becomes-valuable",
     category: "Process",
+    tags: ["UX"],
+    aiLens: true,
     question: "What becomes valuable when making gets cheaper?",
     answer: <>The scarce work shifts to framing, taste, and knowing <em>when to stop</em> generating.</>,
     why: "When teams can produce dozens of plausible options, speed stops being a differentiator. The advantage moves to clear constraints and confident selection.",
@@ -88,6 +93,8 @@ const fallbackQuestions = [
     id: "03",
     slug: "research-at-machine-speed",
     category: "Culture",
+    tags: ["UX"],
+    aiLens: true,
     question: "Can research stay human at machine speed?",
     answer: <>Synthetic participants can widen exploration, but lived context remains the source of <em>consequence</em>.</>,
     why: "Speed is useful for finding hypotheses, not for replacing the people affected by a decision. Teams need a visible boundary between simulation and evidence.",
@@ -117,6 +124,8 @@ const fallbackQuestions = [
     id: "04",
     slug: "design-culture-change",
     category: "Culture",
+    tags: [],
+    aiLens: true,
     question: "How should design culture change?",
     answer: <>Teams are rewriting norms around credit, craft, and critique for an <em>AI-augmented era</em>.</>,
     why: "The strongest teams are making authorship and review visible. Shared standards protect individual judgment while letting new tools accelerate the work.",
@@ -155,6 +164,8 @@ const fallbackEdition = {
   summary: "A daily synthesis of design news, research, workflows, and culture, curated from today’s crawl and the news for rapha inbox.",
   questions: fallbackQuestions,
 };
+
+validateEditionTaxonomy(fallbackEdition);
 
 function countWord(count) {
   return ["zero", "one", "two", "three", "four"][count] || String(count);
@@ -199,7 +210,11 @@ function SignalsTable({ question }) {
 function QuestionBlock({ question, isOpen, isSaved, onToggle, onSave }) {
   return (
     <article className={`question-block ${isOpen ? "open" : ""}`} id={question.slug}>
-      <div className="question-number"><span>{question.id}</span><small>{[question.category, ...(question.tags || []).filter((tag) => tag !== question.category)].join(" · ")}</small></div>
+      <div className="question-number">
+        <span>{question.id}</span>
+        <small className="category-list">{[question.category, ...question.tags.filter((tag) => tag !== question.category)].join(" · ")}</small>
+        {question.aiLens && <small className="ai-lens"><i aria-hidden="true" />ai lens</small>}
+      </div>
       <div className="question-copy">
         <h2><button type="button" onClick={onToggle}>{question.question}</button></h2>
         <p className="answer-label">why it matters</p>
@@ -287,11 +302,11 @@ function Archive({ initialFilter, onClose, archiveDays }) {
     <div className="archive-backdrop" role="presentation" onMouseDown={onClose}>
       <section className="archive" role="dialog" aria-modal="true" aria-labelledby="archive-title" onMouseDown={(event) => event.stopPropagation()}>
         <header className="archive-head">
-          <div><p className="meta-label">practice · process · culture</p><h2 id="archive-title">The question index</h2><p>{questionCount} questions · {archiveDays.length} {archiveDays.length === 1 ? "edition" : "editions"}</p></div>
+          <div><p className="meta-label">ui · ux · process · culture</p><h2 id="archive-title">The question index</h2><p>{questionCount} questions · {archiveDays.length} {archiveDays.length === 1 ? "edition" : "editions"}</p></div>
           <button className="close-button" type="button" aria-label="Close the question index" onClick={onClose} autoFocus><X size={24} /></button>
         </header>
         <div className="archive-controls">
-          <div className="archive-filters" role="group" aria-label="Filter the question index">{["All questions", "Practice", "Process", "Culture"].map((item) => <button type="button" className={filter === item ? "selected" : ""} onClick={() => setFilter(item)} key={item}>{item}</button>)}</div>
+          <div className="archive-filters" role="group" aria-label="Filter the question index">{["All questions", ...CATEGORIES].map((item) => <button type="button" className={filter === item ? "selected" : ""} onClick={() => setFilter(item)} key={item}>{item}</button>)}</div>
           <button className="sort-button" type="button" onClick={() => setOldestFirst((value) => !value)}>{oldestFirst ? "oldest first" : "newest first"}</button>
         </div>
         <div className="archive-scroll">
@@ -347,7 +362,7 @@ export function App() {
       .then((response) => response.ok ? response.json() : Promise.reject(new Error(`edition ${response.status}`)))
       .then((payload) => {
         if (payload?.questions?.length) {
-          setEdition(payload);
+          setEdition(validateEditionTaxonomy(payload));
           try { setOpenQuestions(JSON.parse(localStorage.getItem(`design-daily-${payload.editionNumber}`)) || {}); }
           catch { setOpenQuestions({}); }
         }
@@ -364,6 +379,7 @@ export function App() {
         .slice(0, 30)
         .map((entry) => fetch(`${import.meta.env.BASE_URL}data/archive/${entry.date}.json`, { cache: "no-store", signal: controller.signal })
           .then((response) => response.ok ? response.json() : null))))
+      .then((editions) => editions.map((item) => item ? validateEditionTaxonomy(item) : item))
       .then((editions) => setArchiveHistory(editions.filter((item) => item?.questions?.length)))
       .catch((error) => { if (error.name !== "AbortError") console.warn("Archive index unavailable.", error); });
     return () => controller.abort();
@@ -384,7 +400,7 @@ export function App() {
         <Brand />
         <div className="edition-meta"><span>{edition.displayDate}</span><span>edition {editionNumber}</span><span>filed {edition.filedAt}</span></div>
         <nav className="nav-links" aria-label="Primary">
-          {["Practice", "Process", "Culture"].map((item) => <button type="button" onClick={() => openArchive(item)} key={item}>{item}</button>)}
+          {CATEGORIES.map((item) => <button type="button" onClick={() => openArchive(item)} key={item}>{item}</button>)}
           <button type="button" className="question-index-nav" onClick={() => openArchive()}>Question index</button>
         </nav>
         <div className="top-actions">

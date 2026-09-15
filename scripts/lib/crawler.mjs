@@ -1,4 +1,5 @@
 import { createHash } from "node:crypto";
+import { validateCategoryRecord } from "../../src/taxonomy.js";
 
 const DESIGN_TERMS = [
   "accessibility",
@@ -90,6 +91,7 @@ function normalizeDate(value, fallback) {
 }
 
 export function parseFeed(xml, source, now = new Date()) {
+  validateCategoryRecord(source, `source ${source.name}`, { requireAiLens: false });
   const fallbackDate = now.toISOString();
   const blocks = xml.match(/<item(?:\s[^>]*)?>[\s\S]*?<\/item>|<entry(?:\s[^>]*)?>[\s\S]*?<\/entry>/gi) ?? [];
 
@@ -109,7 +111,7 @@ export function parseFeed(xml, source, now = new Date()) {
     const item = {
       source: source.name,
       sourceKind: "web crawl",
-      category: source.category ?? "Practice",
+      category: source.category,
       tags: source.tags ?? [],
       title,
       excerpt: htmlToText(description).slice(0, 1800),
@@ -160,7 +162,7 @@ export function extractGmailMessage(message) {
   const item = {
     source,
     sourceKind: "newsletter inbox",
-    category: "Practice",
+    category: "UX",
     tags: [],
     title: headers.subject || "Untitled newsletter",
     excerpt: htmlToText(rawBody || message.snippet || "").slice(0, 2200),
@@ -202,6 +204,7 @@ export function slugify(value) {
 
 export function normalizeAiEdition(aiEdition, itemMap) {
   return aiEdition.questions.map((question, index) => {
+    validateCategoryRecord(question, `AI question ${index + 1}`);
     const signalItems = question.signals
       .map((signal) => ({ signal, item: itemMap.get(signal.sourceId) }))
       .filter(({ item }) => item)
@@ -217,6 +220,7 @@ export function normalizeAiEdition(aiEdition, itemMap) {
       slug: slugify(question.question) || `question-${index + 1}`,
       category: question.category,
       tags: question.tags,
+      aiLens: question.aiLens,
       question: question.question,
       answer: question.answer,
       why: question.why,

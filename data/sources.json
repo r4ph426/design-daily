@@ -3,22 +3,22 @@
     "name": "Figma Release Notes",
     "url": "https://www.figma.com/release-notes/",
     "feedUrl": "https://www.figma.com/release-notes/feed/atom.xml",
-    "category": "Practice",
-    "tags": ["UI", "Systems"]
+    "category": "Process",
+    "tags": ["UI"]
   },
   {
     "name": "UX Collective",
     "url": "https://uxdesign.cc/",
     "feedUrl": "https://uxdesign.cc/feed",
-    "category": "Practice",
-    "tags": ["UX", "Research"]
+    "category": "UX",
+    "tags": []
   },
   {
     "name": "A List Apart",
     "url": "https://alistapart.com/",
     "feedUrl": "https://alistapart.com/main/feed/",
     "category": "Process",
-    "tags": ["UI", "Systems"]
+    "tags": ["UI"]
   },
   {
     "name": "It’s Nice That",
