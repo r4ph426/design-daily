@@ -128,7 +128,7 @@ em { font-style: italic; }
 .question-number small { display: block; margin-top: 20px; color: var(--text-muted); font-family: var(--font-interface); font-size: var(--t-meta); }
 .question-number .ai-lens { display: flex; align-items: center; gap: 6px; margin-top: 9px; color: var(--paper); }
 .ai-lens i { width: 6px; height: 6px; flex: 0 0 auto; border-radius: 50%; background: var(--yellow); }
-.question-copy { padding: 29px 32px 24px 22px; border-right: 1px solid var(--grid); transition: background-color 160ms ease-out; }
+.question-copy { padding: 29px 32px 24px 22px; border-right: 1px solid var(--grid); cursor: pointer; transition: background-color 160ms ease-out; }
 .question-copy:hover, .question-copy:focus-within { background: var(--surface-hover); }
 .question-copy h2 { margin: 0; max-width: 500px; }
 .question-copy h2 button { padding: 0; border: 0; color: var(--paper); background: transparent; font-family: inherit; font-size: var(--t-question); line-height: .96; letter-spacing: -.018em; text-align: left; text-wrap: balance; cursor: pointer; }

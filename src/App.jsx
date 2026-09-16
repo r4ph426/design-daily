@@ -279,7 +279,10 @@ function QuestionBlock({ question, isOpen, isSaved, onToggle, onSave }) {
         <small className="category-list">{[question.category, ...question.tags.filter((tag) => tag !== question.category)].join(" · ")}</small>
         {question.aiLens && <small className="ai-lens"><i aria-hidden="true" />AI lens</small>}
       </div>
-      <div className="question-copy">
+      <div className="question-copy" onClick={(event) => {
+        if (event.target.closest("button, a, input")) return;
+        onToggle();
+      }}>
         <h2><button type="button" onClick={onToggle}>{question.question}</button></h2>
         <p className="answer-label">Why it matters</p>
         <p className="answer-line">{question.answer}</p>

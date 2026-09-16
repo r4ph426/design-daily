@@ -33,6 +33,7 @@ When implementing from a selected generated mock, treat that image as the source
 - Keep source links permanently visible in the provenance column with title, domain, source type, and time. Reserve the disclosure for extended signal notes and related reads.
 - Mark external source links with the same `↗` affordance used by the Question index.
 - Apply the same subtle full-row hover surface used by Further reads to question content regions, source rows, and interactive footer cells.
+- Clicking anywhere in a question content region toggles its Signals & Sources details. Keep the explicit title and disclosure buttons keyboard accessible and prevent nested controls from toggling twice.
 - Present the article intake as an editorial H2 without a decorative link icon. Its heading should explain that a submitted URL contributes to the next crawl.
 - Show the crawl date beside its time as `today`, `yesterday`, or `DD,MM,YYYY`.
 - Replace the generic shared-team crawl note with a crawl breakdown showing total items, configured web sources, and team-contributed links.
