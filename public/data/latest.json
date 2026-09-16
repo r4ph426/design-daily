@@ -1,119 +1,233 @@
 {
   "schemaVersion": 1,
-  "editionNumber": "0199",
-  "date": "2026-09-15",
-  "displayDate": "Tuesday, 15 September 2026",
-  "filedAt": "11:28 cet",
-  "crawlCompletedAt": "11:28",
-  "sourceCount": 15,
+  "editionNumber": "0200",
+  "date": "2026-09-16",
+  "displayDate": "Wednesday, 16 September 2026",
+  "filedAt": "11:20 cet",
+  "crawlCompletedAt": "11:20",
+  "sourceCount": 22,
   "webSourceCount": 4,
-  "teamContributionCount": 2,
-  "summary": "AI is collapsing old UX process assumptions. The strongest signals say the wireframe, the double diamond, and even the deliverable are losing status as the real work shifts to briefs, generation, and judgment. Designers also need to defend the role of shared cultural references and practical table design, not just AI fluency.",
-  "generatedAt": "2026-09-15T09:28:29.936Z",
+  "teamContributionCount": 1,
+  "summary": "This week’s signal is clear: AI is compressing the cost of making, but not the cost of coherence. The best pieces push designers away from deliverables and toward systems, judgment, and restraint. Teams that treat speed as the standard will ship messy products faster; teams that build guardrails, taste, and shared process will get farther.",
+  "generatedAt": "2026-09-16T09:20:36.425Z",
   "inboxConnected": true,
   "questions": [
     {
       "id": "01",
-      "slug": "if-ai-makes-generation-cheap-what-should-replace-the-double-diam",
+      "slug": "if-ai-makes-first-drafts-cheap-what-new-review-step-prevents-tea",
       "category": "Process",
-      "tags": ["UX"],
+      "tags": [
+        "Process",
+        "UX"
+      ],
       "aiLens": true,
-      "question": "If AI makes generation cheap, what should replace the double diamond in our software process?",
-      "answer": "Use a lean brief first, then widen generation and evaluation around it. The old double diamond assumed building was expensive and learning was cheap, which no longer holds in AI-enabled software work.",
-      "why": "This changes how teams frame discovery, scope, and handoff. It directly affects whether design effort goes into defining the problem or producing artifacts.",
-      "counts": {"total": 1, "newsletters": 0, "web": 1},
-      "firstSeen": "20:52 cet",
+      "question": "If AI makes first drafts cheap, what new review step prevents teams from shipping incoherent products?",
+      "answer": "The strongest pattern is a deliberate pause between generation and commitment. Design teams need a **human coherence check** that tests whether a feature fits the existing product model, not just whether it works in isolation.",
+      "why": "Multiple sources say AI is collapsing the old cost of building, which makes speed the default and coherence the real constraint.",
+      "counts": {
+        "total": 3,
+        "newsletters": 0,
+        "web": 3
+      },
+      "firstSeen": "09:27 cet",
       "signals": [
         {
           "source": "UX Collective",
+          "title": "Don’t let AI build a Winchester Mystery House",
+          "kind": "Web",
+          "timing": "09:27",
+          "happened": "The article argues that AI prototyping is making it easy to add disconnected features one by one. It frames this as a product-level problem, not a tooling win, because each addition can ship without any shared blueprint.",
+          "changes": "Design teams now have to optimize for **system fit** instead of isolated feature output. The tradeoff is obvious: AI increases throughput, but it also lowers the friction that used to expose weak architecture before shipping.",
+          "verdict": "Must read",
+          "url": "https://uxdesign.cc/dont-let-ai-build-a-winchester-mystery-house-2cb59ec05a73"
+        },
+        {
+          "source": "UX Collective",
+          "title": "The UX Double Diamond is dead, and in AI only one survives for software",
           "kind": "Web",
           "timing": "20:52",
-          "title": "The UX Double Diamond is dead, and in AI only one survives for software",
-          "happened": "The article argues that the Double Diamond and design thinking were built for a world where building was the costly step. AI has weakened that assumption by making generation faster and cheaper, while leaving the cost of choosing the right direction largely intact.",
-          "changes": "The proposal replaces two balanced diamonds with a one-page brief and a wider generation step. **More options do not create better decisions on their own**, and a compressed brief can hide unresolved research questions. Teams should judge the model by whether it improves learning and decision quality, not just output speed.",
-          "verdict": "Must read",
+          "happened": "This piece claims the Double Diamond no longer matches how software gets built in an AI era. It suggests the expensive part is no longer solution generation, which weakens a process model built around costly implementation.",
+          "changes": "The old process assumes a long, expensive build phase, but AI collapses that assumption and makes the first draft too easy. That shifts value toward a tighter **generation and selection loop**, where teams must judge options harder instead of pretending the structure still fits.",
+          "verdict": "Read",
           "url": "https://uxdesign.cc/the-ux-double-diamond-is-dead-and-in-ai-only-one-survives-for-software-heres-how-to-adapt-f63b57c524ed"
-        }
-      ],
-      "further": [["The death of the deliverable", "UX Collective", "https://uxdesign.cc/the-death-of-the-deliverable-cbaea0123895"]]
-    },
-    {
-      "id": "02",
-      "slug": "what-happens-to-wireframes-and-other-deliverables-when-ai-can-pr",
-      "category": "Process",
-      "tags": ["UX"],
-      "aiLens": true,
-      "question": "What happens to wireframes and other deliverables when AI can produce them instantly?",
-      "answer": "They become evidence, not the output. The point moves from making the deliverable to using it to test thinking, align decisions, and expose assumptions.",
-      "why": "This is a concrete change for design teams that still treat wireframes as the main handoff. It reframes what quality means in AI-assisted work.",
-      "counts": {"total": 1, "newsletters": 0, "web": 1},
-      "firstSeen": "07:04 cet",
-      "signals": [
+        },
         {
           "source": "UX Collective",
+          "title": "The death of the deliverable",
           "kind": "Web",
           "timing": "07:04",
-          "title": "The death of the deliverable",
-          "happened": "The piece argues that AI did not kill the wireframe, it exposed that the wireframe was never the point. Deliverables matter when they help a team test reasoning, align decisions, and surface assumptions.",
-          "changes": "Generated artifacts lose status as final outputs and become temporary evidence inside a decision process. **Speed makes weak reasoning easier to disguise**, because polished screens can arrive before the team has established what should be learned. Design quality therefore shifts toward framing, critique, and the ability to explain why a direction deserves commitment.",
-          "verdict": "Must read",
+          "happened": "The article argues that AI did not kill the wireframe, but it did expose that deliverables were never the real goal. It treats the artifact as a proxy that can no longer hide weak thinking.",
+          "changes": "This is a direct warning against mistaking output for progress. If teams keep rewarding **pretty deliverables** over decision quality, AI will only make the mismatch more visible and more expensive later.",
+          "verdict": "Read",
           "url": "https://uxdesign.cc/the-death-of-the-deliverable-cbaea0123895"
         }
       ],
-      "further": [["The UX Double Diamond is dead, and in AI only one survives for software", "UX Collective", "https://uxdesign.cc/the-ux-double-diamond-is-dead-and-in-ai-only-one-survives-for-software-heres-how-to-adapt-f63b57c524ed"]]
-    },
-    {
-      "id": "03",
-      "slug": "what-cultural-references-are-designers-at-risk-of-losing-at-scal",
-      "category": "Culture",
-      "tags": ["UI", "UX"],
-      "aiLens": false,
-      "question": "What cultural references are designers at risk of losing at scale, and why does that matter?",
-      "answer": "Designers risk losing the shared references that let forms communicate fast and clearly across contexts. Without that cultural shorthand, work can become technically polished but semantically thin.",
-      "why": "This matters for UI and brand work because many interfaces rely on recognition, not explanation. The source argues scale and AI can flatten the nuance that gives design meaning.",
-      "counts": {"total": 1, "newsletters": 0, "web": 1},
-      "firstSeen": "15:59 cet",
-      "signals": [
-        {
-          "source": "UX Collective",
-          "kind": "Web",
-          "timing": "15:59",
-          "title": "For the designless",
-          "happened": "The article defines the growing designless audience and describes how more people now produce visual work without traditional design training. It warns that shared cultural references lose value when production scales faster than the context needed to understand them.",
-          "changes": "Cultural literacy becomes part of design quality, not decoration. **Access to production is expanding faster than design judgment**, which can make competent output feel interchangeable. Teams need critique and reference practices that preserve context without turning visual culture into a reusable style library.",
-          "verdict": "Read",
-          "url": "https://uxdesign.cc/for-the-designless-0d3e7936a70c"
-        }
-      ],
       "further": [
-        ["Hunter Harvey’s text paintings are graphic parodies where the typeface is the main character", "It’s Nice That", "https://www.itsnicethat.com/articles/hunter-harvey-art-discover-150926"],
-        ["The mascots, design and visual history of Wikipedia, the encyclopedia that puts functionality above aesthetics", "It’s Nice That", "https://www.itsnicethat.com/features/wikipedia-graphic-design-spotlight-150926"]
+        [
+          "How Stripe creates room for good ideas to spread",
+          "Designer Fund",
+          "https://designerfund.substack.com/archive"
+        ],
+        [
+          "Limit the number of details",
+          "HeyDesigner",
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
+        ]
       ]
     },
     {
-      "id": "04",
-      "slug": "how-should-table-layouts-change-if-users-scan-combined-columns-f",
-      "category": "UI",
-      "tags": ["UX"],
+      "id": "02",
+      "slug": "how-much-should-data-table-design-now-favor-scanning-speed-over-",
+      "category": "UX",
+      "tags": [
+        "UX",
+        "UI"
+      ],
       "aiLens": false,
-      "question": "How should table layouts change if users scan combined columns faster?",
-      "answer": "Combine related values into fewer columns when the task is comparison and scanning, because reducing separated fixations can speed reading. Keep the structure only where it supports the task, not where it adds visual work.",
-      "why": "This is an actionable UI pattern for dashboards and admin tools. It gives the team a concrete layout move with a performance rationale.",
-      "counts": {"total": 1, "newsletters": 1, "web": 0},
+      "question": "How much should data-table design now favor scanning speed over complete separation of fields?",
+      "answer": "Combined columns can reduce eye movements, but they also compress meaning into fewer visual stops. The right answer is not always denser tables, but **denser only where the task is comparison**.",
+      "why": "The signal is a concrete interaction study about how structure changes reading behavior, with a direct impact on dashboard and enterprise UI patterns.",
+      "counts": {
+        "total": 1,
+        "newsletters": 1,
+        "web": 0
+      },
       "firstSeen": "18:41 cet",
       "signals": [
         {
           "source": "UX Movement",
+          "title": "Why Users Scan Data Tables Faster with Combined Columns",
           "kind": "Newsletter",
           "timing": "18:41",
-          "title": "Should we combine table columns when users need to compare values faster?",
-          "happened": "The newsletter reports that users scan data tables faster when related values are combined into fewer columns. The proposed benefit comes from reducing the number of visual fixations required to compare a row.",
-          "changes": "Grouping related values can reduce scanning effort, but it may weaken sorting and reuse when people need one field independently. **Column structure is an interaction decision, not a formatting detail.** Teams should test the pattern against real comparison tasks instead of applying it to every dense table.",
-          "verdict": "Track",
+          "happened": "The newsletter claims users scan tables faster when related fields are combined into fewer columns. It frames the pattern as a way to cut visual fixations and make comparison easier at a glance.",
+          "changes": "This favors **task efficiency** over perfectly separated data presentation. The risk is that compressing fields can make tables harder to inspect for nuance, so the design choice should depend on whether users are scanning, validating, or auditing.",
+          "verdict": "Must read",
           "url": "https://uxmovement.substack.com/archive"
         }
       ],
-      "further": [["The UX Double Diamond is dead, and in AI only one survives for software", "UX Collective", "https://uxdesign.cc/the-ux-double-diamond-is-dead-and-in-ai-only-one-survives-for-software-heres-how-to-adapt-f63b57c524ed"]]
+      "further": [
+        [
+          "The users were confident, but wrong. Here’s how to design for that.",
+          "UX Collective",
+          "https://uxdesign.cc/the-users-were-confident-but-wrong-heres-how-to-design-for-that-4b1546dc5864"
+        ]
+      ]
+    },
+    {
+      "id": "03",
+      "slug": "what-operating-rules-let-teams-experiment-with-ai-without-making",
+      "category": "Process",
+      "tags": [
+        "Process",
+        "Culture"
+      ],
+      "aiLens": true,
+      "question": "What operating rules let teams experiment with AI without making speed the product standard?",
+      "answer": "Stripe’s model points to bounded experimentation, not blanket acceleration. The important move is to treat AI as a way to widen learning, while keeping a **separate bar for production quality**.",
+      "why": "One source shows a concrete company approach to experimentation, while the broader newsletter theme warns against confusing speed with maturity.",
+      "counts": {
+        "total": 2,
+        "newsletters": 2,
+        "web": 0
+      },
+      "firstSeen": "16:57 cet",
+      "signals": [
+        {
+          "source": "Designer Fund",
+          "title": "How Stripe creates room for good ideas to spread",
+          "kind": "Newsletter",
+          "timing": "16:57",
+          "happened": "The piece describes Stripe’s approach to experimentation through ideas like AI-cation days and roofshots rather than moonshots. It presents the company as creating space for ideas to spread without letting rapid prototyping become the norm for finished work.",
+          "changes": "The lesson is not to move faster everywhere, but to **separate exploration from execution**. That creates room for AI-assisted invention while still protecting the standards that keep teams from normalizing half-baked output.",
+          "verdict": "Must read",
+          "url": "https://designerfund.substack.com/archive"
+        },
+        {
+          "source": "HeyDesigner",
+          "title": "Limit the number of details",
+          "kind": "Newsletter",
+          "timing": "13:47",
+          "happened": "The newsletter highlights advice about not rushing to the first reasonable answer and distinguishes design principles from principles of design. It positions judgment and strategic intent as more important than surface-level execution.",
+          "changes": "This reinforces a culture of slower commitment even when tools can generate options instantly. The tension is that AI rewards instant agreement, but good process still depends on **deliberate disagreement** before the team locks in a direction.",
+          "verdict": "Read",
+          "url": "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
+        }
+      ],
+      "further": [
+        [
+          "Don’t let AI build a Winchester Mystery House",
+          "UX Collective",
+          "https://uxdesign.cc/dont-let-ai-build-a-winchester-mystery-house-2cb59ec05a73"
+        ],
+        [
+          "The UX Double Diamond is dead, and in AI only one survives for software",
+          "UX Collective",
+          "https://uxdesign.cc/the-ux-double-diamond-is-dead-and-in-ai-only-one-survives-for-software-heres-how-to-adapt-f63b57c524ed"
+        ]
+      ]
+    },
+    {
+      "id": "04",
+      "slug": "are-design-teams-losing-shared-cultural-references-as-ai-and-sca",
+      "category": "Culture",
+      "tags": [
+        "Culture",
+        "UX"
+      ],
+      "aiLens": false,
+      "question": "Are design teams losing shared cultural references as AI and scale flatten what counts as taste?",
+      "answer": "The new cultural signal is not that references disappeared, but that they now matter more because tools can imitate style without understanding context. Designers need sharper reference points and a clearer stance on **why a visual choice belongs**.",
+      "why": "Recent culture pieces and commentary on the hidden culture layer in AI point to the same issue: style can be generated, but cultural judgment still has to be authored.",
+      "counts": {
+        "total": 3,
+        "newsletters": 0,
+        "web": 3
+      },
+      "firstSeen": "13:13 cet",
+      "signals": [
+        {
+          "source": "UX Collective",
+          "title": "The hidden culture layer in AI",
+          "kind": "Web",
+          "timing": "13:13",
+          "happened": "The article argues that AI carries hidden cultural defaults that shape what it produces. It frames culture as a layer inside the model itself, which affects the UX decisions teams think are neutral.",
+          "changes": "This means design teams cannot treat AI output as culturally blank. The real challenge is to catch **embedded defaults** early, or else products will inherit biases and assumptions that were never explicitly chosen.",
+          "verdict": "Read",
+          "url": "https://uxdesign.cc/ai-culture-ux-design-36c7d410cd1f"
+        },
+        {
+          "source": "UX Collective",
+          "title": "For the Designless",
+          "kind": "Web",
+          "timing": "15:59",
+          "happened": "The piece argues that AI has not changed what designers do, but it has changed who can attempt design work. It splits that audience into different forms of need, which shifts the conversation from craft purity to access and intent.",
+          "changes": "That reframes design as a cultural service with different levels of literacy and ambition, not a single professional lane. The tension is that broader access is good, but it can also flatten **cultural specificity** if teams rely on generic prompt-driven aesthetics.",
+          "verdict": "Read",
+          "url": "https://uxdesign.cc/for-the-designless-0d3e7936a70c"
+        },
+        {
+          "source": "It’s Nice That",
+          "title": "The mascots, design and visual history of Wikipedia, the encyclopedia that puts functionality above aesthetics",
+          "kind": "Web",
+          "timing": "10:00",
+          "happened": "This feature on Wikipedia emphasizes functionality over aesthetics and asks who actually makes the platform. It highlights the visual history and mascot work around a product whose audience is essentially everyone.",
+          "changes": "The piece is a reminder that durable design cultures often privilege utility, shared norms, and institutional memory over novelty. For product teams, the tradeoff is between **broad legibility** and flashy distinction, and Wikipedia comes down hard on the side of legibility.",
+          "verdict": "Track",
+          "url": "https://www.itsnicethat.com/features/wikipedia-graphic-design-spotlight-150926"
+        }
+      ],
+      "further": [
+        [
+          "Marina Willer crafts letters with light and projection for BFI London Film Festival’s new identity and campaign",
+          "It’s Nice That",
+          "https://www.itsnicethat.com/articles/marina-willer-pentagram-bfi-london-film-festival-graphic-design-160926"
+        ],
+        [
+          "Elizabeth Goodspeed on Szilveszter Makó and the commercial appeal of the auteur",
+          "It’s Nice That",
+          "https://www.itsnicethat.com/articles/elizabeth-goodspeed-on-what-makes-a-mako-photography-creative-industry-160926"
+        ]
+      ]
     }
   ]
 }

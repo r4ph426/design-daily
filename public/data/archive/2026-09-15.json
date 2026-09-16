@@ -1,0 +1,170 @@
+{
+  "schemaVersion": 1,
+  "editionNumber": "0199",
+  "date": "2026-09-15",
+  "displayDate": "Tuesday, 15 September 2026",
+  "filedAt": "11:28 cet",
+  "crawlCompletedAt": "11:28",
+  "sourceCount": 15,
+  "webSourceCount": 4,
+  "teamContributionCount": 2,
+  "summary": "AI is collapsing old UX process assumptions. The strongest signals say the wireframe, the double diamond, and even the deliverable are losing status as the real work shifts to briefs, generation, and judgment. Designers also need to defend the role of shared cultural references and practical table design, not just AI fluency.",
+  "generatedAt": "2026-09-15T09:28:29.936Z",
+  "inboxConnected": true,
+  "questions": [
+    {
+      "id": "01",
+      "slug": "if-ai-makes-generation-cheap-what-should-replace-the-double-diam",
+      "category": "Process",
+      "tags": [
+        "UX"
+      ],
+      "aiLens": true,
+      "question": "If AI makes generation cheap, what should replace the double diamond in our software process?",
+      "answer": "Use a lean brief first, then widen generation and evaluation around it. The old double diamond assumed building was expensive and learning was cheap, which no longer holds in AI-enabled software work.",
+      "why": "This changes how teams frame discovery, scope, and handoff. It directly affects whether design effort goes into defining the problem or producing artifacts.",
+      "counts": {
+        "total": 1,
+        "newsletters": 0,
+        "web": 1
+      },
+      "firstSeen": "20:52 cet",
+      "signals": [
+        {
+          "source": "UX Collective",
+          "kind": "Web",
+          "timing": "20:52",
+          "title": "The UX Double Diamond is dead, and in AI only one survives for software",
+          "happened": "The article argues that the Double Diamond and design thinking were built for a world where building was the costly step. AI has weakened that assumption by making generation faster and cheaper, while leaving the cost of choosing the right direction largely intact.",
+          "changes": "The proposal replaces two balanced diamonds with a one-page brief and a wider generation step. **More options do not create better decisions on their own**, and a compressed brief can hide unresolved research questions. Teams should judge the model by whether it improves learning and decision quality, not just output speed.",
+          "verdict": "Must read",
+          "url": "https://uxdesign.cc/the-ux-double-diamond-is-dead-and-in-ai-only-one-survives-for-software-heres-how-to-adapt-f63b57c524ed"
+        }
+      ],
+      "further": [
+        [
+          "The death of the deliverable",
+          "UX Collective",
+          "https://uxdesign.cc/the-death-of-the-deliverable-cbaea0123895"
+        ]
+      ]
+    },
+    {
+      "id": "02",
+      "slug": "what-happens-to-wireframes-and-other-deliverables-when-ai-can-pr",
+      "category": "Process",
+      "tags": [
+        "UX"
+      ],
+      "aiLens": true,
+      "question": "What happens to wireframes and other deliverables when AI can produce them instantly?",
+      "answer": "They become evidence, not the output. The point moves from making the deliverable to using it to test thinking, align decisions, and expose assumptions.",
+      "why": "This is a concrete change for design teams that still treat wireframes as the main handoff. It reframes what quality means in AI-assisted work.",
+      "counts": {
+        "total": 1,
+        "newsletters": 0,
+        "web": 1
+      },
+      "firstSeen": "07:04 cet",
+      "signals": [
+        {
+          "source": "UX Collective",
+          "kind": "Web",
+          "timing": "07:04",
+          "title": "The death of the deliverable",
+          "happened": "The piece argues that AI did not kill the wireframe, it exposed that the wireframe was never the point. Deliverables matter when they help a team test reasoning, align decisions, and surface assumptions.",
+          "changes": "Generated artifacts lose status as final outputs and become temporary evidence inside a decision process. **Speed makes weak reasoning easier to disguise**, because polished screens can arrive before the team has established what should be learned. Design quality therefore shifts toward framing, critique, and the ability to explain why a direction deserves commitment.",
+          "verdict": "Must read",
+          "url": "https://uxdesign.cc/the-death-of-the-deliverable-cbaea0123895"
+        }
+      ],
+      "further": [
+        [
+          "The UX Double Diamond is dead, and in AI only one survives for software",
+          "UX Collective",
+          "https://uxdesign.cc/the-ux-double-diamond-is-dead-and-in-ai-only-one-survives-for-software-heres-how-to-adapt-f63b57c524ed"
+        ]
+      ]
+    },
+    {
+      "id": "03",
+      "slug": "what-cultural-references-are-designers-at-risk-of-losing-at-scal",
+      "category": "Culture",
+      "tags": [
+        "UI",
+        "UX"
+      ],
+      "aiLens": false,
+      "question": "What cultural references are designers at risk of losing at scale, and why does that matter?",
+      "answer": "Designers risk losing the shared references that let forms communicate fast and clearly across contexts. Without that cultural shorthand, work can become technically polished but semantically thin.",
+      "why": "This matters for UI and brand work because many interfaces rely on recognition, not explanation. The source argues scale and AI can flatten the nuance that gives design meaning.",
+      "counts": {
+        "total": 1,
+        "newsletters": 0,
+        "web": 1
+      },
+      "firstSeen": "15:59 cet",
+      "signals": [
+        {
+          "source": "UX Collective",
+          "kind": "Web",
+          "timing": "15:59",
+          "title": "For the designless",
+          "happened": "The article defines the growing designless audience and describes how more people now produce visual work without traditional design training. It warns that shared cultural references lose value when production scales faster than the context needed to understand them.",
+          "changes": "Cultural literacy becomes part of design quality, not decoration. **Access to production is expanding faster than design judgment**, which can make competent output feel interchangeable. Teams need critique and reference practices that preserve context without turning visual culture into a reusable style library.",
+          "verdict": "Read",
+          "url": "https://uxdesign.cc/for-the-designless-0d3e7936a70c"
+        }
+      ],
+      "further": [
+        [
+          "Hunter Harvey’s text paintings are graphic parodies where the typeface is the main character",
+          "It’s Nice That",
+          "https://www.itsnicethat.com/articles/hunter-harvey-art-discover-150926"
+        ],
+        [
+          "The mascots, design and visual history of Wikipedia, the encyclopedia that puts functionality above aesthetics",
+          "It’s Nice That",
+          "https://www.itsnicethat.com/features/wikipedia-graphic-design-spotlight-150926"
+        ]
+      ]
+    },
+    {
+      "id": "04",
+      "slug": "how-should-table-layouts-change-if-users-scan-combined-columns-f",
+      "category": "UI",
+      "tags": [
+        "UX"
+      ],
+      "aiLens": false,
+      "question": "How should table layouts change if users scan combined columns faster?",
+      "answer": "Combine related values into fewer columns when the task is comparison and scanning, because reducing separated fixations can speed reading. Keep the structure only where it supports the task, not where it adds visual work.",
+      "why": "This is an actionable UI pattern for dashboards and admin tools. It gives the team a concrete layout move with a performance rationale.",
+      "counts": {
+        "total": 1,
+        "newsletters": 1,
+        "web": 0
+      },
+      "firstSeen": "18:41 cet",
+      "signals": [
+        {
+          "source": "UX Movement",
+          "kind": "Newsletter",
+          "timing": "18:41",
+          "title": "Should we combine table columns when users need to compare values faster?",
+          "happened": "The newsletter reports that users scan data tables faster when related values are combined into fewer columns. The proposed benefit comes from reducing the number of visual fixations required to compare a row.",
+          "changes": "Grouping related values can reduce scanning effort, but it may weaken sorting and reuse when people need one field independently. **Column structure is an interaction decision, not a formatting detail.** Teams should test the pattern against real comparison tasks instead of applying it to every dense table.",
+          "verdict": "Track",
+          "url": "https://uxmovement.substack.com/archive"
+        }
+      ],
+      "further": [
+        [
+          "The UX Double Diamond is dead, and in AI only one survives for software",
+          "UX Collective",
+          "https://uxdesign.cc/the-ux-double-diamond-is-dead-and-in-ai-only-one-survives-for-software-heres-how-to-adapt-f63b57c524ed"
+        ]
+      ]
+    }
+  ]
+}
