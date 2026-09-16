@@ -308,6 +308,8 @@ async function main() {
     filedAt: displayTime(now),
     crawlCompletedAt: new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Berlin", hour: "2-digit", minute: "2-digit", hour12: false }).format(now),
     sourceCount: items.length,
+    webSourceCount: sources.length,
+    teamContributionCount: sharedArticles.length,
     summary: aiEdition.summary,
     generatedAt: now.toISOString(),
     inboxConnected: true,

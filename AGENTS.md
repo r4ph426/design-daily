@@ -32,8 +32,10 @@ When implementing from a selected generated mock, treat that image as the source
 - Render non-interactive footer statements in signal red. Keep interactive footer links sage with a visible underline or arrow affordance.
 - Keep source links permanently visible in the provenance column with title, domain, source type, and time. Reserve the disclosure for extended signal notes and related reads.
 - Mark external source links with the same `↗` affordance used by the Question index.
+- Apply the same subtle full-row hover surface used by Further reads to question content regions, source rows, and interactive footer cells.
 - Present the article intake as an editorial H2 without a decorative link icon. Its heading should explain that a submitted URL contributes to the next crawl.
 - Show the crawl date beside its time as `today`, `yesterday`, or `DD,MM,YYYY`.
+- Replace the generic shared-team crawl note with a crawl breakdown showing total items, configured web sources, and team-contributed links.
 - Place the personal question bookmark on its own labeled row using `Bookmark question for me`.
 - In expanded signal tables, show the article title, publisher, source type, and time in the Source column. Write both `What happened` and `What changes` as two to four sentences. Make `What changes` critical by connecting causes, consequences, and tradeoffs, and emphasize the main insight or one important phrase.
 - Give navigation items and other text links a persistent underline or arrow affordance. On hover, highlight the complete related-read row, not only its text.

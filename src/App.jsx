@@ -5,7 +5,6 @@ import {
   CaretDown,
   Check,
   Clock,
-  LockSimple,
   MagnifyingGlass,
   X,
 } from "@phosphor-icons/react";
@@ -168,6 +167,8 @@ const fallbackEdition = {
   filedAt: "08:32 cet",
   crawlCompletedAt: "06:30",
   sourceCount: 128,
+  webSourceCount: 4,
+  teamContributionCount: 2,
   inboxConnected: false,
   summary: "AI can accelerate production, but design quality still depends on clear judgment. Today’s edition examines where automation supports designers and where it hides weak decisions. The useful question is not how much a team can generate, but what deserves to survive review.",
   questions: fallbackQuestions,
@@ -478,8 +479,11 @@ export function App() {
           <p className="editor-note">{edition.summary}</p>
           <div className="crawl-line">
             <span><Clock size={16} /> Last crawl {formatCrawlDay(edition.date)} · {edition.crawlCompletedAt}</span>
-            <span>{pluralize(edition.sourceCount, "Source")}</span>
-            <span><LockSimple size={16} /> Shared with the design team</span>
+            <div className="crawl-breakdown">
+              <span>Total sources: {edition.sourceCount}</span>
+              <span>Web sources: {edition.webSourceCount ?? 0}</span>
+              <span>Contributed links through team: {edition.teamContributionCount ?? 0}</span>
+            </div>
           </div>
         </div>
         <ArticleIntake />
