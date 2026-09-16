@@ -5,7 +5,6 @@ import {
   CaretDown,
   Check,
   Clock,
-  LinkSimple,
   LockSimple,
   MagnifyingGlass,
   X,
@@ -192,6 +191,18 @@ function formatMetadata(value) {
   return String(value || "").replace(/\bcet\b/gi, "CET").replace(/\bsep\b/gi, "Sep").replace(/\bcrawled\b/gi, "Crawled").replace(/\bseen again\b/gi, "Seen again");
 }
 
+function formatCrawlDay(value, now = new Date()) {
+  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(String(value || ""));
+  if (!match) return value;
+  const [, year, month, day] = match;
+  const editionDay = Date.UTC(Number(year), Number(month) - 1, Number(day));
+  const currentDay = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
+  const daysAgo = Math.round((currentDay - editionDay) / 86_400_000);
+  if (daysAgo === 0) return "today";
+  if (daysAgo === 1) return "yesterday";
+  return `${day},${month},${year}`;
+}
+
 function HighlightedText({ text }) {
   return String(text || "").split(/(\*\*[^*]+\*\*)/g).map((part, index) => part.startsWith("**") && part.endsWith("**")
     ? <strong key={`${part}-${index}`}>{part.slice(2, -2)}</strong>
@@ -200,9 +211,9 @@ function HighlightedText({ text }) {
 
 function Brand() {
   return (
-    <a className="brand" href="#top" aria-label="Design Daily home">
-      <span>Design / Daily</span>
-      <small>By ra.re design</small>
+    <a className="brand" href="#top" aria-label="design / daily home">
+      <span>design / daily</span>
+      <small>by ra.re design</small>
     </a>
   );
 }
@@ -251,6 +262,7 @@ function SourceList({ question }) {
           <a href={signal.url || "#top"} target={signal.url ? "_blank" : undefined} rel={signal.url ? "noopener noreferrer" : undefined}>
             <span className="source-list-title">{signal.title || signal.happened}</span>
             <span className="source-list-meta">{sourceDomain(signal)} · {sourceKindLabel(signal.kind)} · {formatMetadata(signal.timing)}</span>
+            {signal.url && <span className="source-list-external" aria-hidden="true">↗</span>}
           </a>
         </li>
       ))}
@@ -276,8 +288,8 @@ function QuestionBlock({ question, isOpen, isSaved, onToggle, onSave }) {
       </div>
       <aside className="question-provenance">
         <div className="provenance-head"><span>{pluralize(question.counts.total, "Source")}</span><span>{pluralize(question.counts.web, "Web source")} · {pluralize(question.counts.newsletters, "Newsletter")}</span><span>First seen {formatMetadata(question.firstSeen || "Today")}</span></div>
-        <button className={`save-button ${isSaved ? "saved" : ""}`} type="button" aria-label={isSaved ? "Remove saved question" : "Save question"} aria-pressed={isSaved} onClick={onSave}><BookmarkSimple size={17} weight={isSaved ? "fill" : "regular"} /></button>
         <SourceList question={question} />
+        <button className={`save-button ${isSaved ? "saved" : ""}`} type="button" aria-pressed={isSaved} onClick={onSave}><span>{isSaved ? "Bookmarked for me" : "Bookmark question for me"}</span><BookmarkSimple size={17} weight={isSaved ? "fill" : "regular"} /></button>
       </aside>
       <div className="question-details" id={`${question.slug}-details`} hidden={!isOpen}>
         <SignalsTable question={question} />
@@ -306,7 +318,7 @@ function ArticleIntake() {
     const issueUrl = new URL(articleIssueBase);
     issueUrl.searchParams.set("template", "article-submission.md");
     issueUrl.searchParams.set("title", `Shared article: ${hostname}`);
-    issueUrl.searchParams.set("body", `Article URL: ${parsedUrl.toString()}\n\nSubmitted from Design / Daily.`);
+    issueUrl.searchParams.set("body", `Article URL: ${parsedUrl.toString()}\n\nSubmitted from design / daily.`);
     setRequest({ status: "submitted", hostname, issueUrl: issueUrl.toString() });
     window.open(issueUrl.toString(), "_blank", "noopener,noreferrer");
   };
@@ -317,7 +329,7 @@ function ArticleIntake() {
 
   return (
     <aside className="article-panel" id="article-intake">
-      <div className="article-heading"><LinkSimple size={22} /><div><p className="meta-label">Article intake</p><h2>Share an article</h2></div></div>
+      <h2 className="article-heading">Contribute to the next crawl</h2>
       <p>Paste an article URL. It will be considered in the next crawl.</p>
       {request.status === "submitted" ? (
         <div className="article-success" role="status"><span><Check size={18} /> {request.hostname} is ready</span><a href={request.issueUrl} target="_blank" rel="noopener noreferrer">Confirm on GitHub</a><button type="button" onClick={addAnother}>Share another article</button></div>
@@ -465,7 +477,7 @@ export function App() {
           <h1 id="edition-title">{issueTitle}</h1>
           <p className="editor-note">{edition.summary}</p>
           <div className="crawl-line">
-            <span><Clock size={16} /> Last crawl {edition.crawlCompletedAt}</span>
+            <span><Clock size={16} /> Last crawl {formatCrawlDay(edition.date)} · {edition.crawlCompletedAt}</span>
             <span>{pluralize(edition.sourceCount, "Source")}</span>
             <span><LockSimple size={16} /> Shared with the design team</span>
           </div>

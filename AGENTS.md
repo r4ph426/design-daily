@@ -8,7 +8,7 @@ When implementing from a selected generated mock, treat that image as the source
 
 ## Durable prototype direction
 
-- Brand the product as `Design / Daily`, with the byline `By ra.re design`.
+- Brand the product exactly as `design / daily`, with the byline `by ra.re design`.
 - Use only Neue Reckless and Inter. Neue Reckless is for H1, H2, editorial headings, answer copy, source titles, expressive numerals, and all serif roles. Self-host the Regular, Regular Italic, and Light Italic WOFF2 files. Use Inter for body copy, metadata, and interface roles. Do not introduce a monospace or any third font family.
 - Use English for all visible product and interface copy.
 - The taxonomy is exactly UI, UX, Process, and Culture. AI is a separate `ai lens`, never a category. Category tags are validated against the same four-value vocabulary and are never free text.
@@ -31,6 +31,10 @@ When implementing from a selected generated mock, treat that image as the source
 - Set question numbers in Neue Reckless Light Italic. Source provenance metadata and compact controls respect the 11px type floor.
 - Render non-interactive footer statements in signal red. Keep interactive footer links sage with a visible underline or arrow affordance.
 - Keep source links permanently visible in the provenance column with title, domain, source type, and time. Reserve the disclosure for extended signal notes and related reads.
+- Mark external source links with the same `↗` affordance used by the Question index.
+- Present the article intake as an editorial H2 without a decorative link icon. Its heading should explain that a submitted URL contributes to the next crawl.
+- Show the crawl date beside its time as `today`, `yesterday`, or `DD,MM,YYYY`.
+- Place the personal question bookmark on its own labeled row using `Bookmark question for me`.
 - In expanded signal tables, show the article title, publisher, source type, and time in the Source column. Write both `What happened` and `What changes` as two to four sentences. Make `What changes` critical by connecting causes, consequences, and tradeoffs, and emphasize the main insight or one important phrase.
 - Give navigation items and other text links a persistent underline or arrow affordance. On hover, highlight the complete related-read row, not only its text.
 - Cap the editorial shell at 1600px and use proportional 14% / 48% / 38% question columns on desktop.
