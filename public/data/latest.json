@@ -1,203 +1,55 @@
 {
   "schemaVersion": 1,
-  "editionNumber": "0201",
-  "date": "2026-09-17",
-  "displayDate": "Thursday, 17 September 2026",
-  "filedAt": "11:29 cet",
-  "crawlCompletedAt": "11:29",
+  "editionNumber": "0202",
+  "date": "2026-09-18",
+  "displayDate": "Friday, 18 September 2026",
+  "filedAt": "03:16 cet",
+  "crawlCompletedAt": "03:16",
   "sourceCount": 25,
   "webSourceCount": 4,
   "teamContributionCount": 2,
-  "summary": "This week’s strongest signal is not that AI is changing design output, but that it is reshaping the way teams decide what is worth making. The clearest editorial tension is between speed and coherence: agents can draft faster, but the cost is often weaker systems, thinner taste, and more accidental complexity. The best sources push back by arguing for tighter constraints, better judgment, and more explicit design intent.",
-  "generatedAt": "2026-09-17T09:29:44.726Z",
+  "summary": "AI is no longer just changing what designers make, it is changing how teams justify decisions, define problems, and police taste. The strongest signals this cycle push against shallow automation: they argue for sharper discovery, better system thinking, and more disciplined craft. Figma’s latest moves also show the canvas is becoming a production surface, not just a place to hand off work.",
+  "generatedAt": "2026-09-18T01:16:38.687Z",
   "inboxConnected": true,
   "questions": [
     {
       "id": "01",
-      "slug": "if-ai-makes-first-drafts-nearly-free-what-should-design-teams-no",
+      "slug": "if-ai-speeds-up-prototyping-who-is-still-responsible-for-framing",
       "category": "Process",
       "tags": [
         "Process",
         "UX"
       ],
       "aiLens": true,
-      "question": "If AI makes first drafts nearly free, what should design teams now treat as the real scarce artifact: the brief, the system, or the judgment call?",
-      "answer": "The brief is rising in value because it is the main place where teams can still enforce intent before automation multiplies a weak idea. The UX Collective and HeyDesigner sources both suggest that speed is no longer the bottleneck, while the risk is rushing past the hard decision. That shifts design work toward framing, review, and constraint setting rather than production.",
-      "why": "AI is collapsing the cost of generation, which exposes the cost of unclear direction.",
+      "question": "If AI speeds up prototyping, who is still responsible for framing the problem before the first screen exists?",
+      "answer": "Design thinking still matters most in discovery and definition, because AI cannot excuse a weak problem statement. The new pressure is not to make faster mockups, but to prove that the team has questioned assumptions before generating anything. That shifts value from output volume to **problem framing** and evidence.",
+      "why": "This matters because AI tools can now produce plausible concepts immediately, which makes it easier to skip the research work that keeps teams honest.",
       "counts": {
-        "total": 3,
-        "newsletters": 1,
-        "web": 2
-      },
-      "firstSeen": "20:52 cet",
-      "signals": [
-        {
-          "source": "UX Collective",
-          "title": "The UX Double Diamond is dead, and in AI only one survives for software",
-          "kind": "Web",
-          "timing": "20:52",
-          "happened": "The piece argues that the Double Diamond and design thinking were built for a world where building was expensive and learning was cheap. In AI-era software, generation is cheaper and the old split between problem and solution is breaking down.",
-          "changes": "The practical change is that teams can no longer rely on a long discovery phase to justify a clean handoff into delivery. **Generation is now cheap**, so the more important work is deciding what not to generate and when a prototype deserves review. That compresses the process, but it also raises the penalty for vague briefs and shallow research.",
-          "verdict": "Must read",
-          "url": "https://uxdesign.cc/the-ux-double-diamond-is-dead-and-in-ai-only-one-survives-for-software-heres-how-to-adapt-f63b57c524ed"
-        }
-      ],
-      "further": [
-        [
-          "Don’t let AI build a Winchester Mystery House",
-          "UX Collective",
-          "https://uxdesign.cc/dont-let-ai-build-a-winchester-mystery-house-2cb59ec05a73"
-        ],
-        [
-          "How Stripe creates room for good ideas to spread",
-          "Designer Fund",
-          "https://designerfund.substack.com/archive"
-        ]
-      ]
-    },
-    {
-      "id": "02",
-      "slug": "when-ai-produces-usable-but-bland-interfaces-how-do-designers-pr",
-      "category": "UX",
-      "tags": [
-        "UX"
-      ],
-      "aiLens": true,
-      "question": "When AI produces usable but bland interfaces, how do designers preserve taste without turning craft into arbitrary personal preference?",
-      "answer": "Taste is becoming a measurable UX input because AI can imitate form faster than it can understand context. The strongest counterargument in the sources is that fewer details can sharpen attention, but only if the designer is disciplined enough to choose them. That makes editing, not output volume, the differentiator.",
-      "why": "Multiple sources argue that AI raises the importance of judgment, restraint, and context in interface work.",
-      "counts": {
-        "total": 3,
-        "newsletters": 2,
-        "web": 1
-      },
-      "firstSeen": "13:47 cet",
-      "signals": [
-        {
-          "source": "HeyDesigner",
-          "title": "Limit the number of details",
-          "kind": "Newsletter",
-          "timing": "13:47",
-          "happened": "HeyDesigner highlights advice to limit the number of details and to avoid accepting the first reasonable answer. It frames this as a key design skill in the AI era, where speed can easily outrun care.",
-          "changes": "This suggests that interface quality may depend less on adding more options and more on subtracting noise. **Fewer details** can make the remaining choices more legible, but only if teams resist the false confidence of the first AI-generated solution. The tension is that simplification improves clarity while also demanding stronger taste from the designer.",
-          "verdict": "Read",
-          "url": "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
-        },
-        {
-          "source": "Hayden from Fontpair",
-          "title": "One coffee shop website, 5 different brand vibes",
-          "kind": "Newsletter",
-          "timing": "22:13",
-          "happened": "Fontpair demonstrates that the same coffee shop site can signal five different brand personalities using only fonts and colors. The example isolates typography and color as the main drivers of first impression.",
-          "changes": "The lesson is not that visual style is cosmetic, but that it carries real product meaning even when content stays fixed. **Fonts and colors** are doing strategic work here, shaping trust and mood before a user reads a word. That raises the bar for design systems because small tokens now have outsized brand consequences.",
-          "verdict": "Track",
-          "url": "https://fontpairco.substack.com/archive"
-        }
-      ],
-      "further": [
-        [
-          "Publish Weave tools to the Figma Community",
-          "Figma Release Notes",
-          "https://www.figma.com/release-notes/?title=publish-weave-tools-to-the-figma-community"
-        ],
-        [
-          "The mascots, design and visual history of Wikipedia, the encyclopedia that puts functionality above aesthetics",
-          "It’s Nice That",
-          "https://www.itsnicethat.com/features/wikipedia-graphic-design-spotlight-150926"
-        ]
-      ]
-    },
-    {
-      "id": "03",
-      "slug": "as-ai-generated-visuals-spread-which-kinds-of-design-work-become",
-      "category": "Culture",
-      "tags": [
-        "Culture",
-        "UI"
-      ],
-      "aiLens": true,
-      "question": "As AI-generated visuals spread, which kinds of design work become more acceptable precisely because they are judged by utility rather than authorship?",
-      "answer": "The clearest boundary is not between human and machine work, but between expressive design and functional communication. Several sources argue that posters, flyers, and other utility-first artifacts can justify AI if they solve a real problem. That weakens purity tests and pushes the debate toward context and consequence.",
-      "why": "The reporting shows AI being defended where access, urgency, or budget matters more than originality.",
-      "counts": {
-        "total": 3,
+        "total": 2,
         "newsletters": 0,
-        "web": 3
-      },
-      "firstSeen": "06:31 cet",
-      "signals": [
-        {
-          "source": "UX Collective",
-          "title": "Lost dog—or lost designer?",
-          "kind": "Web",
-          "timing": "06:31",
-          "happened": "The essay uses a missing-dog poster and a struggling local pizza shop to argue that AI can be appropriate when people need functional communication and lack other resources. It frames the ethical question around intention and consequence rather than tool purity.",
-          "changes": "That is a meaningful shift because it moves AI debate away from abstract authorship and toward access to practical design help. **Functional communication** becomes the test, which is more honest but also easier to abuse if teams use utility as cover for low standards. The tradeoff is that compassion for limited resources can coexist with criticism of careless execution.",
-          "verdict": "Must read",
-          "url": "https://uxdesign.cc/lost-dog-or-lost-designer-d5de922e54d9"
-        },
-        {
-          "source": "UX Collective",
-          "title": "For the Designless",
-          "kind": "Web",
-          "timing": "15:59",
-          "happened": "This piece argues that AI has made it easier for the designless to produce decent-looking work, especially when the task is vernacular or already has a known form. It separates different motivations and needs instead of treating every AI use the same way.",
-          "changes": "The useful shift here is a more precise vocabulary for judging AI output by situation rather than by ideology. **Different needs** deserve different thresholds, and that matters because a lost-cat poster is not the same as a brand system. The risk is that normalization at the vernacular level can blur standards in more consequential design settings.",
-          "verdict": "Read",
-          "url": "https://uxdesign.cc/for-the-designless-0d3e7936a70c"
-        }
-      ],
-      "further": [
-        [
-          "Crocs and walking alarm clocks: Alistair Nicholls embraces “pure silliness” in his self-funded claymation",
-          "It’s Nice That",
-          "https://www.itsnicethat.com/articles/alistair-nicholls-running-late-animation-project-170926"
-        ],
-        [
-          "Marina Willer crafts letters with light and projection for BFI London Film Festival’s new identity and campaign",
-          "It’s Nice That",
-          "https://www.itsnicethat.com/articles/marina-willer-pentagram-bfi-london-film-festival-graphic-design-160926"
-        ]
-      ]
-    },
-    {
-      "id": "04",
-      "slug": "if-ai-can-generate-features-in-an-afternoon-what-stops-product-t",
-      "category": "Process",
-      "tags": [
-        "Process",
-        "Culture"
-      ],
-      "aiLens": true,
-      "question": "If AI can generate features in an afternoon, what stops product teams from shipping a pile of disconnected fragments instead of a coherent experience?",
-      "answer": "The emerging answer is structural discipline, not more output. Sources on Stripe and the Winchester Mystery House both warn that cheap generation can create local wins while degrading the whole system. The process question now is whether teams can define boundaries, reuse patterns, and keep agents from multiplying chaos.",
-      "why": "AI lowers the cost of making pieces, but not the cost of making them fit together.",
-      "counts": {
-        "total": 3,
-        "newsletters": 1,
         "web": 2
       },
-      "firstSeen": "09:27 cet",
+      "firstSeen": "23:29 cet",
       "signals": [
+        {
+          "source": "UX Collective",
+          "title": "Nothing has changed other than how we talk about it",
+          "kind": "Web",
+          "timing": "23:29",
+          "happened": "A UX Collective piece argues that design thinking and agentic AI fit best in Discover and Define, not in skipping ahead to visuals. The author uses a campground app example to show that the real work comes before using Figma Make or any similar tool. The framing centers the question of what problem the team is trying to solve.",
+          "changes": "AI changes the sequence of work by making it easier to generate artifacts before the team has earned them. That creates a **risk of premature solutioning**, but also a chance to make discovery more explicit and test assumptions sooner. The tradeoff is simple: speed goes up only if the team keeps rigor in the front of the process.",
+          "verdict": "Must read",
+          "url": "https://uxdesign.cc/nothing-has-changed-other-than-how-we-talk-about-it-fcc554e853aa"
+        },
         {
           "source": "UX Collective",
           "title": "Don’t let AI build a Winchester Mystery House",
           "kind": "Web",
           "timing": "09:27",
-          "happened": "The article warns that AI prototyping can produce a software equivalent of the Winchester Mystery House, where each feature works alone but the whole is incoherent. It argues that most organizations use AI, yet many have not adjusted the architecture around it.",
-          "changes": "The important change is that product teams are now punished more for fragmentation than for slow starts. **Each feature works alone** is no longer a harmless side effect, because cheap generation makes disconnected additions easy to stack endlessly. The challenge is to design for reuse and sequence, not just for speed.",
-          "verdict": "Must read",
-          "url": "https://uxdesign.cc/dont-let-ai-build-a-winchester-mystery-house-2cb59ec05a73"
-        },
-        {
-          "source": "Designer Fund",
-          "title": "How Stripe creates room for good ideas to spread",
-          "kind": "Newsletter",
-          "timing": "16:57",
-          "happened": "Designer Fund’s Stripe case study describes experimentation practices like AI-cation days and a bias toward roofshots rather than moonshots. It presents a model where teams make room for ideas to spread without letting speed become the benchmark.",
-          "changes": "That suggests experimentation is moving from raw volume toward managed propagation. **Roofshots, not moonshots** is a useful constraint because it favors learnable, bounded tests over theatrical ambition. The tension is that this discipline may slow some ideas down, but it protects the design system from speed as an excuse.",
+          "happened": "Another UX Collective article warns against letting AI prototyping accumulate features without a coherent master plan. It compares this pattern to the Winchester Mystery House, where rooms were added forever and navigation broke down. The piece says many AI-built apps already resemble that kind of fragmented construction.",
+          "changes": "The real issue is not that AI creates too many ideas, but that it lowers the cost of adding disconnected ones. That encourages **feature sprawl** and weak information architecture, which eventually makes the product harder to use and harder to govern. The warning is that convenience now can become structural debt later.",
           "verdict": "Read",
-          "url": "https://designerfund.substack.com/archive"
+          "url": "https://uxdesign.cc/dont-let-ai-build-a-winchester-mystery-house-2cb59ec05a73"
         }
       ],
       "further": [
@@ -207,9 +59,156 @@
           "https://uxdesign.cc/the-death-of-the-deliverable-cbaea0123895"
         ],
         [
-          "Publish Weave tools to the Figma Community",
+          "The evidence at work",
+          "UX Collective",
+          "https://uxdesign.cc/the-evidence-at-work-7407503330e8"
+        ]
+      ]
+    },
+    {
+      "id": "02",
+      "slug": "are-foldables-becoming-worth-designing-for-or-just-a-new-excuse-",
+      "category": "UX",
+      "tags": [
+        "UX"
+      ],
+      "aiLens": false,
+      "question": "Are foldables becoming worth designing for, or just a new excuse to stretch existing layouts?",
+      "answer": "The better answer is to design adaptively instead of forcing a phone UI to behave like a larger tablet clone. The argument is shifting because foldables now have a more credible commercial future, so teams need responsive patterns and state-aware layouts rather than cosmetic scaling. The old “small market, ignore it” logic is weakening.",
+      "why": "Foldable support is now less speculative, and product teams that wait may have to retrofit interaction patterns under pressure.",
+      "counts": {
+        "total": 1,
+        "newsletters": 0,
+        "web": 1
+      },
+      "firstSeen": "23:34 cet",
+      "signals": [
+        {
+          "source": "UX Collective",
+          "title": "Please don’t stretch your app for foldables",
+          "kind": "Web",
+          "timing": "23:34",
+          "happened": "UX Collective argues that foldables should not be handled by simply stretching a standard app layout. The piece says the market has existed for years, but Apple’s rumored iPhone Duo changes the business case because it could materially expand adoption. It points readers toward adaptive examples from apps like Airbnb and Spotify.",
+          "changes": "The design challenge has moved from whether foldables matter to how quickly teams can adapt without breaking the core experience. That means **responsive behavior** and form-factor-specific thinking matter more than one-size-fits-all layouts. The tension is investment versus adoption, but the article makes a strong case that ignoring the format now is becoming a strategic error.",
+          "verdict": "Track",
+          "url": "https://uxdesign.cc/please-dont-stretch-your-app-for-foldables-a62f1f8230ac"
+        }
+      ],
+      "further": [
+        [
+          "Preview what's inside folders",
           "Figma Release Notes",
-          "https://www.figma.com/release-notes/?title=publish-weave-tools-to-the-figma-community"
+          "https://www.figma.com/release-notes/?title=preview-inside-folders"
+        ]
+      ]
+    },
+    {
+      "id": "03",
+      "slug": "when-ai-content-is-generated-inside-design-workflows-does-the-ca",
+      "category": "UI",
+      "tags": [
+        "UI"
+      ],
+      "aiLens": true,
+      "question": "When AI content is generated inside design workflows, does the canvas become a production system or just another shortcut?",
+      "answer": "Figma is pushing the canvas toward production by linking existing designs directly into Weave workflows and by letting teams publish Weave tools to the Community. That makes the design file less like a passive artifact and more like a source of structured content and reusable UI logic. The benefit is consistency; the danger is that teams may blur authorship and governance.",
+      "why": "These releases matter because they tighten the path from design asset to operational output, which changes how teams build, review, and maintain UI content.",
+      "counts": {
+        "total": 3,
+        "newsletters": 0,
+        "web": 3
+      },
+      "firstSeen": "02:00 cet",
+      "signals": [
+        {
+          "source": "Figma Release Notes",
+          "title": "Create on-brand content with your Figma designs in Weave workflows",
+          "kind": "Web",
+          "timing": "02:00",
+          "happened": "Figma says teams can now connect designs created in Figma Design directly to Figma Weave workflows. The release frames this as a way to create on-brand content from existing canvas work. It effectively turns design output into an input for downstream workflow automation.",
+          "changes": "This reduces the distance between making a screen and operationalizing its content, which can improve consistency and speed. But it also raises the stakes around **design system discipline** because weak structure in the source file now propagates into production. The tradeoff is clearer reuse versus a higher burden to keep assets clean and intentional.",
+          "verdict": "Must read",
+          "url": "https://www.figma.com/release-notes/?title=figma-node-on-brand-content"
+        },
+        {
+          "source": "Figma Release Notes",
+          "title": "Publish Weave tools to the Figma Community",
+          "kind": "Web",
+          "timing": "02:00",
+          "happened": "Figma also announced that Weave tools can be published to the Figma Community. That lets teams share custom tools so others can use them directly on the canvas in Figma Design. The move expands Weave from a private workflow layer into a distributable ecosystem.",
+          "changes": "Publishing tools makes the platform more extensible, but it also invites a flood of inconsistent utilities if quality control is loose. The upside is shared leverage; the downside is **ecosystem sprawl** and variable craft standards across teams. For designers, this means the canvas is becoming more programmable, not less curated.",
+          "verdict": "Read",
+          "url": "https://www.figma.com/release-notes/?title=publish-weave-tools-to-the-figma-community"
+        }
+      ],
+      "further": [
+        [
+          "Create on-brand content with your Figma designs in Weave workflows",
+          "Figma Release Notes",
+          "https://www.figma.com/release-notes/?title=figma-node-on-brand-content"
+        ]
+      ]
+    },
+    {
+      "id": "04",
+      "slug": "is-taste-becoming-the-last-durable-design-skill-when-ai-can-imit",
+      "category": "Culture",
+      "tags": [
+        "Culture",
+        "UI"
+      ],
+      "aiLens": false,
+      "question": "Is taste becoming the last durable design skill when AI can imitate style so easily?",
+      "answer": "Several pieces point to the same pressure: differentiation now depends less on raw production and more on judgment, context, and restraint. Font choice, visual voice, and authorship are being treated as strategic levers again because automation makes generic output cheap. The best design work will be the work that can still explain why it looks the way it does.",
+      "why": "As AI-generated output gets more fluent, teams need clearer reasons for aesthetic decisions and stronger editorial instincts to avoid sameness.",
+      "counts": {
+        "total": 5,
+        "newsletters": 1,
+        "web": 4
+      },
+      "firstSeen": "03:16 cet",
+      "signals": [
+        {
+          "source": "emilkowal.ski",
+          "title": "Agents with Taste",
+          "kind": "Web",
+          "timing": "03:16",
+          "happened": "A short post asks how to transfer taste into AI. The framing suggests that model capability alone is no longer the interesting part of the conversation. Instead, the challenge is how human judgment survives when tools can imitate a polished aesthetic.",
+          "changes": "This puts **taste** back at the center of design leadership, but only if teams can define what taste actually means in practice. Otherwise, AI simply amplifies familiar preferences without improving them. The question is less about style generation and more about editorial control.",
+          "verdict": "Track",
+          "url": "https://emilkowal.ski/ui/agents-with-taste"
+        },
+        {
+          "source": "Hayden from Fontpair",
+          "title": "One coffee shop website, 5 different brand vibes",
+          "kind": "Newsletter",
+          "timing": "22:13",
+          "happened": "Fontpair shows one coffee shop website rewritten through five different font and color combinations to create five distinct brand vibes. The example isolates typography and color as the main drivers of first impression. It demonstrates how small visual changes can dramatically alter perceived identity.",
+          "changes": "The piece reinforces that visual system choices still do a lot of branding work, even on the same content. That is useful because it makes the craft tangible, but it also risks reducing brand strategy to surface styling. The real lesson is that **typographic judgment** remains a high-leverage design decision.",
+          "verdict": "Read",
+          "url": "https://fontpairco.substack.com/archive"
+        },
+        {
+          "source": "UX Collective",
+          "title": "Rethinking writing in the world of design and AI",
+          "kind": "Web",
+          "timing": "23:33",
+          "happened": "A UX Collective essay reflects on writing 100 design articles while thinking through design and AI. The author treats writing as a way to clarify thought and warns that if people cannot think well, others will do their thinking for them. The article frames writing as a durable design practice rather than a side skill.",
+          "changes": "In an AI-heavy workflow, writing becomes a defense against unexamined automation because it forces reasoning into the open. That creates a useful tension: speed is tempting, but **clear thinking** is what keeps design from becoming reactive. The piece is strongest when it treats prose as part of the product of design, not just commentary on it.",
+          "verdict": "Read",
+          "url": "https://uxdesign.cc/rethinking-writing-in-the-world-of-design-and-ai-1c70188b3998"
+        }
+      ],
+      "further": [
+        [
+          "What Shakespeare got wrong about AI",
+          "UX Collective",
+          "https://uxdesign.cc/what-shakespeare-got-wrong-about-ai-73e9f58bfbc8"
+        ],
+        [
+          "Lost dog—or lost designer?",
+          "UX Collective",
+          "https://uxdesign.cc/lost-dog-or-lost-designer-d5de922e54d9"
         ]
       ]
     }
