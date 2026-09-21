@@ -5,6 +5,7 @@ import {
   CaretDown,
   Check,
   Clock,
+  LinkSimple,
   MagnifyingGlass,
   X,
 } from "@phosphor-icons/react";
@@ -466,7 +467,7 @@ function ArticleIntake() {
 
   return (
     <aside className="article-panel" id="article-intake">
-      <h2 className="article-heading">Contribute to the next crawl</h2>
+      <div className="article-heading"><LinkSimple size={22} /><div><p className="meta-label">article intake</p><h2>Share an article</h2></div></div>
       <p>Paste a useful article. We’ll add it anonymously to the next weekday crawl.</p>
       {isConfirmation ? (
         <ArticleConfirmation request={request} onReset={addAnother} />
