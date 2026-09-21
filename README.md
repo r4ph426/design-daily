@@ -5,7 +5,7 @@
 ## Publication architecture
 
 - GitHub Pages serves the static React site.
-- GitHub Actions runs the crawl Monday through Friday at 06:17 in `Europe/Berlin`.
+- GitHub Actions runs the crawl Monday through Friday at 01:17 in `Europe/Berlin`.
 - The Gmail API reads the newsletter inbox with the read-only scope.
 - The OpenAI Responses API clusters and synthesizes the crawl into structured JSON.
 - Generated editions live in `public/data`. Previous editions are copied into `public/data/archive`.
@@ -53,9 +53,7 @@ The static site never receives a GitHub token. `submission-worker/` contains the
 2. Create a Workers KV namespace and bind it as `SUBMISSION_KV`.
 3. Copy `submission-worker/wrangler.toml.example` to `submission-worker/wrangler.toml` and add the KV namespace ID.
 4. Add Worker secrets named `GITHUB_TOKEN` and `TURNSTILE_SECRET`. Use a fine-grained GitHub token with Issues read and write access only for this repository.
-5. Deploy the Worker and set these GitHub Actions repository variables:
-   - `ARTICLE_SUBMISSION_ENDPOINT`, the deployed Worker URL
-   - `TURNSTILE_SITE_KEY`, the public Turnstile site key
+5. Deploy the Worker. The production Worker URL and public Turnstile site key are included as safe frontend defaults; the optional GitHub Actions variables `ARTICLE_SUBMISSION_ENDPOINT` and `TURNSTILE_SITE_KEY` can override them.
 
 The Worker allows up to five links per browser per hour and 50 per network per day. It rejects URLs already queued or found in a completed crawl. After a successful edition is written, the crawler closes the processed issues so later duplicate checks can distinguish queued links from crawl history.
 

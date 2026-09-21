@@ -1,6 +1,7 @@
 import { canonicalArticleUrl, nextCrawlInfo } from "../shared/article-intake.mjs";
 
-const endpoint = import.meta.env.VITE_ARTICLE_SUBMISSION_ENDPOINT || "";
+const endpoint = import.meta.env.VITE_ARTICLE_SUBMISSION_ENDPOINT
+  || "https://design-daily-article-intake.rare-design-daily.workers.dev";
 const mockKey = "design-daily:mock-submissions";
 
 function wait(milliseconds) {
@@ -58,12 +59,16 @@ export async function submitArticle({ url, clientId, turnstileToken = "", websit
 
 export function getSubmissionClientId() {
   const key = "design-daily:submission-client";
-  let id = window.localStorage.getItem(key);
-  if (!id) {
-    id = window.crypto?.randomUUID?.() || `${Date.now()}-${Math.random().toString(16).slice(2)}`;
-    window.localStorage.setItem(key, id);
+  try {
+    let id = window.localStorage.getItem(key);
+    if (!id) {
+      id = window.crypto?.randomUUID?.() || `${Date.now()}-${Math.random().toString(16).slice(2)}`;
+      window.localStorage.setItem(key, id);
+    }
+    return id;
+  } catch {
+    return window.crypto?.randomUUID?.() || `${Date.now()}-${Math.random().toString(16).slice(2)}`;
   }
-  return id;
 }
 
 export function clearMockArticleSubmissions() {

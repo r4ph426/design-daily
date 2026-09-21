@@ -11,7 +11,7 @@ export function canonicalArticleUrl(rawUrl = "") {
     if (/^(127\.|0\.|10\.|192\.168\.|169\.254\.)/.test(parsed.hostname)) return "";
     if (/^172\.(1[6-9]|2\d|3[01])\./.test(parsed.hostname)) return "";
     const host = parsed.hostname.replace(/^\[|\]$/g, "");
-    if (host === "::1" || host.startsWith("fd") || host.startsWith("fc") || host.startsWith("fe80:")) return "";
+    if (host.includes(":") && (host === "::1" || host.startsWith("fd") || host.startsWith("fc") || host.startsWith("fe80:"))) return "";
 
     parsed.hash = "";
     parsed.hostname = parsed.hostname.toLowerCase();
@@ -61,7 +61,7 @@ function isoDate(date) {
 
 export function nextCrawlInfo(now = new Date(), options = {}) {
   const timeZone = options.timeZone || "Europe/Berlin";
-  const crawlHour = options.crawlHour ?? 6;
+  const crawlHour = options.crawlHour ?? 1;
   const crawlMinute = options.crawlMinute ?? 17;
   const parts = zonedParts(now, timeZone);
   const today = calendarDate(parts);

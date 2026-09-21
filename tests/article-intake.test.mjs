@@ -47,6 +47,9 @@ test("canonicalArticleUrl removes tracking and rejects private URLs", () => {
   assert.equal(canonicalArticleUrl("https://Example.com/story/?utm_source=x&b=2#a"), "https://example.com/story?b=2");
   assert.equal(canonicalArticleUrl("www.abc-article.com/story"), "https://www.abc-article.com/story");
   assert.equal(canonicalArticleUrl("abc-article.com/story"), "https://abc-article.com/story");
+  assert.equal(canonicalArticleUrl("fcb.com/story"), "https://fcb.com/story");
+  assert.equal(canonicalArticleUrl("fd.design/story"), "https://fd.design/story");
+  assert.equal(canonicalArticleUrl("http://[fd00::1]/article"), "");
   assert.equal(canonicalArticleUrl("http://localhost:3000/article"), "");
   assert.equal(canonicalArticleUrl("http://[::1]/article"), "");
   assert.equal(canonicalArticleUrl("ftp://example.com/article"), "");
@@ -54,7 +57,10 @@ test("canonicalArticleUrl removes tracking and rejects private URLs", () => {
 
 test("nextCrawlInfo skips weekends and respects the Berlin cutoff", () => {
   assert.equal(nextCrawlInfo(new Date("2026-09-18T18:00:00Z")).date, "2026-09-21");
-  assert.equal(nextCrawlInfo(new Date("2026-09-21T03:00:00Z")).relativeLabel, "today");
+  assert.equal(nextCrawlInfo(new Date("2026-09-20T23:16:00Z")).relativeLabel, "today");
+  assert.equal(nextCrawlInfo(new Date("2026-09-20T23:17:00Z")).relativeLabel, "tomorrow");
+  assert.equal(nextCrawlInfo(new Date("2026-09-21T03:00:00Z")).relativeLabel, "tomorrow");
+  assert.equal(nextCrawlInfo(new Date("2026-09-21T03:00:00Z")).scheduledTime, "01:17");
   assert.equal(nextCrawlInfo(new Date("2026-09-21T10:00:00Z")).relativeLabel, "tomorrow");
 });
 
@@ -92,4 +98,40 @@ test("worker checks older issue pages for duplicates", async () => {
   const response = await worker.fetch(request({ url: "https://example.com/older", clientId: "client-789" }), env);
   assert.equal((await response.json()).status, "duplicate_queued");
   assert.equal(env.calls.filter((call) => call.url.includes("/issues?")).length, 2);
+});
+
+test("worker accepts a scheme-less URL and blocks the sixth hourly request", async () => {
+  const env = envWithIssues();
+  for (let index = 0; index < 5; index += 1) {
+    const response = await worker.fetch(request({ url: `www.example.com/article-${index}`, clientId: "client-limit" }), env);
+    assert.equal(response.status, 201);
+    assert.equal((await response.json()).url, `https://www.example.com/article-${index}`);
+  }
+  const response = await worker.fetch(request({ url: "www.example.com/article-6", clientId: "client-limit" }), env);
+  assert.equal(response.status, 429);
+  assert.equal((await response.json()).status, "rate_limited");
+  assert.equal(env.calls.filter((call) => call.options.method === "POST").length, 5);
+});
+
+test("worker refuses unverified requests without creating an issue", async () => {
+  const env = envWithIssues();
+  delete env.ALLOW_UNVERIFIED_SUBMISSIONS;
+  const response = await worker.fetch(request({ url: "www.example.com/story", clientId: "client-verify" }), env);
+  assert.equal(response.status, 400);
+  assert.equal((await response.json()).status, "verification_required");
+  assert.equal(env.calls.length, 0);
+});
+
+test("worker handles CORS preflight and missing backend configuration", async () => {
+  const env = envWithIssues();
+  const preflight = await worker.fetch(new Request("https://intake.example.com", {
+    method: "OPTIONS", headers: { origin: "http://localhost:5173" },
+  }), env);
+  assert.equal(preflight.status, 204);
+  assert.equal(await preflight.text(), "");
+  assert.equal(preflight.headers.get("access-control-allow-origin"), "http://localhost:5173");
+  delete env.GITHUB_TOKEN;
+  const response = await worker.fetch(request({ url: "example.com/article", clientId: "client-config" }), env);
+  assert.equal(response.status, 503);
+  assert.equal(env.calls.length, 0);
 });
