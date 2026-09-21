@@ -45,7 +45,7 @@ function envWithIssues(issues = []) {
 
 test("canonicalArticleUrl removes tracking and rejects private URLs", () => {
   assert.equal(canonicalArticleUrl("https://Example.com/story/?utm_source=x&b=2#a"), "https://example.com/story?b=2");
-  assert.equal(canonicalArticleUrl("www.abc-article.com/story"), "https://www.abc-article.com/story");
+  assert.equal(canonicalArticleUrl("www.abc-article.com/story"), "https://abc-article.com/story");
   assert.equal(canonicalArticleUrl("abc-article.com/story"), "https://abc-article.com/story");
   assert.equal(canonicalArticleUrl("fcb.com/story"), "https://fcb.com/story");
   assert.equal(canonicalArticleUrl("fd.design/story"), "https://fd.design/story");
@@ -77,7 +77,7 @@ test("worker creates an anonymous issue and returns the next crawl", async () =>
 
 test("worker distinguishes queued and historical duplicates", async () => {
   const queuedEnv = envWithIssues([{ state: "open", title: "Shared article: example.com", body: "Article URL: https://example.com/a" }]);
-  const queued = await worker.fetch(request({ url: "https://example.com/a", clientId: "client-123" }), queuedEnv);
+  const queued = await worker.fetch(request({ url: "https://www.example.com/a", clientId: "client-123" }), queuedEnv);
   assert.equal((await queued.json()).status, "duplicate_queued");
 
   const historyEnv = envWithIssues([{ state: "closed", closed_at: "2026-09-14T06:20:00Z", title: "Shared article: example.com", body: "Article URL: https://example.com/a" }]);
@@ -105,7 +105,7 @@ test("worker accepts a scheme-less URL and blocks the sixth hourly request", asy
   for (let index = 0; index < 5; index += 1) {
     const response = await worker.fetch(request({ url: `www.example.com/article-${index}`, clientId: "client-limit" }), env);
     assert.equal(response.status, 201);
-    assert.equal((await response.json()).url, `https://www.example.com/article-${index}`);
+    assert.equal((await response.json()).url, `https://example.com/article-${index}`);
   }
   const response = await worker.fetch(request({ url: "www.example.com/article-6", clientId: "client-limit" }), env);
   assert.equal(response.status, 429);

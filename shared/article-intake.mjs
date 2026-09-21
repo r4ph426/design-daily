@@ -14,7 +14,7 @@ export function canonicalArticleUrl(rawUrl = "") {
     if (host.includes(":") && (host === "::1" || host.startsWith("fd") || host.startsWith("fc") || host.startsWith("fe80:"))) return "";
 
     parsed.hash = "";
-    parsed.hostname = parsed.hostname.toLowerCase();
+    parsed.hostname = parsed.hostname.toLowerCase().replace(/^www\./, "");
     if (parsed.pathname.length > 1) parsed.pathname = parsed.pathname.replace(/\/+$/, "");
     for (const key of [...parsed.searchParams.keys()]) {
       if (TRACKING_PARAMETER.test(key)) parsed.searchParams.delete(key);
