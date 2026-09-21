@@ -63,7 +63,7 @@
       <main>
         <div class="intro">
           <h1>Privacy</h1>
-          <p class="meta">Last updated 14 September 2026</p>
+          <p class="meta">Last updated 21 September 2026</p>
         </div>
         <div class="content">
           <section>
@@ -85,16 +85,21 @@
             </ul>
           </section>
           <section>
+            <h2>Article submissions</h2>
+            <p>You can share an article without an account. The submitted URL becomes a public GitHub issue so the scheduled crawler can read it. Do not submit private or sensitive links.</p>
+            <p>We store a random identifier in your browser and use short-lived, hashed network signals to enforce submission limits. Cloudflare Turnstile checks submissions for automated abuse. design / daily does not retain your raw IP address.</p>
+          </section>
+          <section>
             <h2>Storage and retention</h2>
             <p>Google OAuth credentials are stored as encrypted GitHub Actions secrets. Generated daily editions are stored as versioned JSON in the public repository so the archive remains available. Raw newsletter messages are read during a crawl and are not retained by the application.</p>
           </section>
           <section>
             <h2>Services involved</h2>
-            <p>The workflow relies on Google Gmail and OAuth, GitHub Actions and GitHub Pages, and the OpenAI API. Each provider processes data under its own terms and privacy policy.</p>
+            <p>The workflow relies on Google Gmail and OAuth, GitHub Actions and GitHub Pages, Cloudflare Workers and Turnstile, and the OpenAI API. Each provider processes data under its own terms and privacy policy.</p>
           </section>
           <section>
             <h2>Your control</h2>
-            <p>You can revoke design / daily’s Gmail access at any time from your Google Account connections. Revoking access stops future inbox crawls. For questions, contact <strong>newsforrapha@gmail.com</strong>.</p>
+            <p>You can revoke design / daily’s Gmail access at any time from your Google Account connections. Revoking access stops future inbox crawls. For questions, contact the design / daily team.</p>
           </section>
         </div>
       </main>

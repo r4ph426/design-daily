@@ -20,6 +20,9 @@ When implementing from a selected generated mock, treat that image as the source
 - The right rail supports a `Share an article` URL intake. It creates a public GitHub issue that the next scheduled crawl reads as an additional web source.
 - The Gmail connection feature is archived in the interface. The product is a shared daily read for a design team of more than 20 UX and UI designers. Keep Gmail authorization, inbox status, and connection copy out of the main frontend; the newsletter inbox remains a server-side source.
 - `Share an article` is the primary contribution feature. Accept every valid shared article URL for now; approval and moderation come later.
+- Keep article submission anonymous and inside `design / daily`; do not redirect contributors to GitHub. Add spam protection and sensible per-user submission limits without making the flow feel account-gated.
+- After a successful submission, confirm that the article was added to the next crawl and name the applicable day or date, such as tomorrow or Monday. Do not promise that the article will be published in the edition.
+- Reject duplicate article URLs when they are already queued or appeared in a previous crawl. Explain which case applies; a future iteration may link duplicates to their earlier question or edition in the archive.
 - Provide one dedicated team inbox that can be used for new newsletter subscriptions or as a forwarding address for newsletters the team already receives.
 - If the editorial seal returns, build it as a live vector element using only Neue Reckless and Inter.
 - `See all signals` opens a scrollable archive of previous crawls, organized into UI, UX, Process, and Culture. Must reads are elevated through team saves and community feedback.

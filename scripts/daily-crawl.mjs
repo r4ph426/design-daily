@@ -138,11 +138,36 @@ async function readSharedArticles() {
         url: extractIssueUrl(issue),
         category: "UX",
         tags: [],
+        issueNumber: issue.number,
       }))
       .filter((source) => source.url);
   } catch (error) {
     console.warn(`Shared articles skipped: ${error.message}`);
     return [];
+  }
+}
+
+async function markSharedArticlesProcessed(sharedArticles) {
+  const issueNumbers = sharedArticles.map((article) => article.issueNumber).filter(Boolean);
+  if (!issueNumbers.length || !process.env.GITHUB_TOKEN) return;
+  const repository = process.env.GITHUB_REPOSITORY || "r4ph426/design-daily";
+  const headers = {
+    accept: "application/vnd.github+json",
+    authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+    "content-type": "application/json",
+    "user-agent": userAgent,
+  };
+  const results = await Promise.allSettled(issueNumbers.map(async (issueNumber) => {
+    const response = await fetch(`https://api.github.com/repos/${repository}/issues/${issueNumber}`, {
+      method: "PATCH",
+      headers,
+      body: JSON.stringify({ state: "closed", state_reason: "completed" }),
+      signal: AbortSignal.timeout(20_000),
+    });
+    if (!response.ok) throw new Error(`Issue ${issueNumber}: ${response.status} ${response.statusText}`);
+  }));
+  for (const result of results) {
+    if (result.status === "rejected") console.warn(`Shared article could not be marked processed: ${result.reason.message}`);
   }
 }
 
@@ -316,6 +341,7 @@ async function main() {
     questions: normalizeAiEdition(aiEdition, itemMap),
   };
   await writeEdition(edition);
+  await markSharedArticlesProcessed(sharedArticles);
   console.log(`Published edition ${edition.editionNumber} from ${items.length} recent sources.`);
 }
 

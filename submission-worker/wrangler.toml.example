@@ -1,0 +1,14 @@
+name = "design-daily-article-intake"
+main = "index.js"
+compatibility_date = "2026-09-21"
+
+[vars]
+ALLOWED_ORIGINS = "https://r4ph426.github.io,http://localhost:5173"
+GITHUB_REPOSITORY = "r4ph426/design-daily"
+
+# Create this namespace before deployment, then replace the placeholder.
+[[kv_namespaces]]
+binding = "SUBMISSION_KV"
+id = "replace-with-kv-namespace-id"
+
+# Store GITHUB_TOKEN and TURNSTILE_SECRET with `wrangler secret put`.

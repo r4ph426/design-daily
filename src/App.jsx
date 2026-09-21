@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   ArrowRight,
   BookmarkSimple,
@@ -9,9 +9,15 @@ import {
   X,
 } from "@phosphor-icons/react";
 import { CATEGORIES, validateEditionTaxonomy } from "./taxonomy.js";
+import { canonicalArticleUrl, crawlPossessive } from "../shared/article-intake.mjs";
+import {
+  articleSubmissionEndpointConfigured,
+  getSubmissionClientId,
+  submitArticle,
+} from "./article-submission.js";
 
 const fallbackEditionNumber = "0197";
-const articleIssueBase = "https://github.com/r4ph426/design-daily/issues/new";
+const turnstileSiteKey = import.meta.env.VITE_TURNSTILE_SITE_KEY || "";
 
 const fallbackQuestions = [
   {
@@ -302,50 +308,180 @@ function QuestionBlock({ question, isOpen, isSaved, onToggle, onSave }) {
   );
 }
 
+function TurnstileChallenge({ onToken, onError, resetSignal }) {
+  const containerRef = useRef(null);
+  const widgetIdRef = useRef(null);
+
+  useEffect(() => {
+    if (!turnstileSiteKey) return undefined;
+    let active = true;
+
+    const render = () => {
+      if (!active || !containerRef.current || widgetIdRef.current !== null || !window.turnstile) return;
+      widgetIdRef.current = window.turnstile.render(containerRef.current, {
+        sitekey: turnstileSiteKey,
+        appearance: "interaction-only",
+        theme: "dark",
+        callback: onToken,
+        "expired-callback": () => onToken(""),
+        "error-callback": onError,
+      });
+    };
+
+    const existing = document.querySelector('script[data-design-daily-turnstile="true"]');
+    if (existing) {
+      if (window.turnstile) render();
+      else existing.addEventListener("load", render, { once: true });
+    } else {
+      const script = document.createElement("script");
+      script.src = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
+      script.async = true;
+      script.defer = true;
+      script.dataset.designDailyTurnstile = "true";
+      script.addEventListener("load", render, { once: true });
+      script.addEventListener("error", onError, { once: true });
+      document.head.appendChild(script);
+    }
+
+    return () => {
+      active = false;
+      if (widgetIdRef.current !== null && window.turnstile) window.turnstile.remove(widgetIdRef.current);
+      widgetIdRef.current = null;
+    };
+  }, [onError, onToken]);
+
+  useEffect(() => {
+    if (resetSignal && widgetIdRef.current !== null && window.turnstile) {
+      window.turnstile.reset(widgetIdRef.current);
+    }
+  }, [resetSignal]);
+
+  if (!turnstileSiteKey) return null;
+  return <div className="turnstile-slot" ref={containerRef} aria-label="Spam protection" />;
+}
+
+function submissionDisplayUrl(value = "") {
+  try {
+    const parsed = new URL(value);
+    const path = parsed.pathname === "/" ? "" : parsed.pathname;
+    return `${parsed.hostname.replace(/^www\./, "")}${path}`;
+  } catch {
+    return value;
+  }
+}
+
+function ArticleConfirmation({ request, onReset }) {
+  const isAccepted = request.status === "accepted";
+  const isQueued = request.status === "duplicate_queued";
+  let eyebrow = "article received";
+  let title = `Added to ${crawlPossessive(request.crawl)} crawl`;
+  let description = "We’ll consider this link with the next source set. Not every shared link appears in the edition.";
+
+  if (isQueued) {
+    eyebrow = "already in the queue";
+    title = `Already added to ${crawlPossessive(request.crawl)} crawl`;
+    description = "This link is already waiting with the next source set. You don’t need to submit it again.";
+  }
+  if (request.status === "duplicate_history") {
+    eyebrow = "already crawled";
+    title = `Already crawled on ${request.previousCrawlDate || "an earlier date"}`;
+    description = "We’ve seen this article before. A future archive update will point back to the earlier edition.";
+  }
+
+  return (
+    <div className={`article-confirmation ${request.status}`}>
+      <div className="confirmation-mark" aria-hidden="true"><Check size={19} weight="bold" /></div>
+      <div className="confirmation-copy" role="status" aria-live="polite">
+        <p className="confirmation-eyebrow">{eyebrow}</p>
+        <h3>{title}</h3>
+        {request.crawl?.displayDate && <p className="confirmation-date">{request.crawl.displayDate} · {request.crawl.scheduledTime} Berlin</p>}
+        <p className="confirmation-url" title={request.url}>{submissionDisplayUrl(request.url)}</p>
+        <p className="confirmation-note">{description}</p>
+      </div>
+      <button type="button" onClick={onReset}>{isAccepted ? "share another article" : "try another article"}<ArrowRight size={14} /></button>
+    </div>
+  );
+}
+
 function ArticleIntake() {
   const [url, setUrl] = useState("");
   const [request, setRequest] = useState({ status: "default" });
+  const [website, setWebsite] = useState("");
+  const [turnstileToken, setTurnstileToken] = useState("");
+  const [turnstileReset, setTurnstileReset] = useState(0);
   const inputRef = useRef(null);
+  const configured = articleSubmissionEndpointConfigured();
+  const isWorking = request.status === "checking";
+  const isConfirmation = ["accepted", "duplicate_queued", "duplicate_history"].includes(request.status);
+  const handleTurnstileError = useCallback(() => {
+    setRequest({ status: "error", message: "Spam protection couldn’t load. Refresh and try again." });
+  }, []);
 
-  const submit = (event) => {
+  const submit = async (event) => {
     event.preventDefault();
-    const requestedUrl = url.trim();
-    if (!requestedUrl) return;
-    let parsedUrl;
-    let hostname;
-    try {
-      parsedUrl = new URL(requestedUrl);
-      if (!/^https?:$/.test(parsedUrl.protocol)) throw new Error("Unsupported protocol");
-      hostname = parsedUrl.hostname.replace(/^www\./, "");
+    const requestedUrl = canonicalArticleUrl(url);
+    if (!requestedUrl) {
+      setRequest({ status: "error", message: "Paste a valid public article URL." });
+      return;
     }
-    catch { setRequest({ status: "error", message: "That URL is not valid. Paste the direct link to the article." }); return; }
-    const issueUrl = new URL(articleIssueBase);
-    issueUrl.searchParams.set("template", "article-submission.md");
-    issueUrl.searchParams.set("title", `Shared article: ${hostname}`);
-    issueUrl.searchParams.set("body", `Article URL: ${parsedUrl.toString()}\n\nSubmitted from design / daily.`);
-    setRequest({ status: "submitted", hostname, issueUrl: issueUrl.toString() });
-    window.open(issueUrl.toString(), "_blank", "noopener,noreferrer");
+    if (!configured) {
+      setRequest({ status: "error", message: "Article submission is temporarily unavailable." });
+      return;
+    }
+    if (turnstileSiteKey && !turnstileToken) {
+      setRequest({ status: "error", message: "Spam protection is still checking this browser. Try again in a moment." });
+      return;
+    }
+
+    setRequest({ status: "checking" });
+    try {
+      const result = await submitArticle({
+        url: requestedUrl,
+        clientId: getSubmissionClientId(),
+        turnstileToken,
+        website,
+      });
+      if (["accepted", "duplicate_queued", "duplicate_history"].includes(result.status)) {
+        setRequest(result);
+      } else if (result.status === "rate_limited") {
+        const hours = Math.ceil((result.retryAfterMinutes || 60) / 60);
+        setRequest({ status: "limited", message: `You’ve reached the sharing limit. Try again in about ${hours} ${hours === 1 ? "hour" : "hours"}.` });
+      } else {
+        setRequest({ status: "error", message: result.message || "We couldn’t add this link. Nothing was submitted." });
+      }
+    } catch (error) {
+      setRequest({ status: "error", message: error.message || "We couldn’t add this link. Nothing was submitted." });
+    } finally {
+      setTurnstileToken("");
+      setTurnstileReset((value) => value + 1);
+    }
   };
 
   const addAnother = () => {
-    setUrl(""); setRequest({ status: "default" }); window.setTimeout(() => inputRef.current?.focus(), 0);
+    setUrl("");
+    setWebsite("");
+    setRequest({ status: "default" });
+    window.setTimeout(() => inputRef.current?.focus(), 0);
   };
 
   return (
     <aside className="article-panel" id="article-intake">
       <h2 className="article-heading">Contribute to the next crawl</h2>
-      <p>Paste an article URL. It will be considered in the next crawl.</p>
-      {request.status === "submitted" ? (
-        <div className="article-success" role="status"><span><Check size={18} /> {request.hostname} is ready</span><a href={request.issueUrl} target="_blank" rel="noopener noreferrer">Confirm on GitHub</a><button type="button" onClick={addAnother}>Share another article</button></div>
+      <p>Paste a useful article. We’ll add it anonymously to the next weekday crawl.</p>
+      {isConfirmation ? (
+        <ArticleConfirmation request={request} onReset={addAnother} />
       ) : (
         <form className={`article-form ${request.status}`} onSubmit={submit}>
           <label htmlFor="article-url">Article URL</label>
           <div className="article-control">
-            <input ref={inputRef} id="article-url" type="url" inputMode="url" placeholder="Paste an article URL" value={url} onChange={(event) => { setUrl(event.target.value); if (request.status === "error") setRequest({ status: "default" }); }} disabled={request.status === "loading"} required />
-            <button type="submit" disabled={!url.trim() || request.status === "loading"}>{request.status === "loading" ? "Checking" : "Share"}</button>
+            <input ref={inputRef} id="article-url" type="text" inputMode="url" autoCapitalize="none" autoCorrect="off" spellCheck="false" placeholder="www.example.com/article" value={url} aria-describedby="article-help article-message" onChange={(event) => { setUrl(event.target.value); if (["error", "limited"].includes(request.status)) setRequest({ status: "default" }); }} disabled={isWorking} required />
+            <button type="submit" disabled={!url.trim() || isWorking || !configured || (turnstileSiteKey && !turnstileToken)}>{isWorking ? "Checking" : turnstileSiteKey && !turnstileToken ? "Verifying" : "Add to crawl"}</button>
           </div>
-          {request.status === "loading" && <span className="loading-bar" aria-hidden="true" />}
-          {request.status === "error" && <span className="article-error" role="alert">{request.message}</span>}
+          {isWorking && <span className="loading-bar" aria-hidden="true" />}
+          <span id="article-help" className="article-help">https:// optional · no account needed · up to 5 links per hour</span>
+          {["error", "limited"].includes(request.status) && <span id="article-message" className="article-error" role="alert">{request.message}</span>}
+          <label className="submission-honeypot" aria-hidden="true">Leave this field empty<input type="text" name="website" tabIndex="-1" autoComplete="off" value={website} onChange={(event) => setWebsite(event.target.value)} /></label>
+          <TurnstileChallenge onToken={setTurnstileToken} onError={handleTurnstileError} resetSignal={turnstileReset} />
         </form>
       )}
     </aside>
