@@ -5,10 +5,9 @@ import {
   CaretDown,
   Check,
   Clock,
-  LinkSimple,
   MagnifyingGlass,
 } from "@phosphor-icons/react";
-import { CATEGORIES, validateEditionTaxonomy } from "./taxonomy.js";
+import { validateEditionTaxonomy } from "./taxonomy.js";
 import {
   ArchivePage,
   normalizeArchiveDays,
@@ -238,8 +237,8 @@ function SignalsTable({ question }) {
         <caption>Signals for {question.question}</caption>
         <thead><tr><th>Source</th><th>What happened</th><th>What changes</th><th>Verdict</th></tr></thead>
         <tbody>
-          {question.signals.map((signal) => (
-            <tr key={`${question.id}-${signal.source}`}>
+          {question.signals.map((signal, index) => (
+            <tr key={`${question.id}-${signal.source}-${index}`}>
               <td data-label="Source">
                 {signal.url ? <a className="source-article-title" href={signal.url} target="_blank" rel="noopener noreferrer">{signal.title || signal.happened}</a> : <span className="source-article-title">{signal.title || signal.happened}</span>}
                 <span className="source-publisher">{signal.source}</span>
@@ -252,11 +251,13 @@ function SignalsTable({ question }) {
           ))}
         </tbody>
       </table>
-      <div className="further-reads">
-        <p className="meta-label">Further reads</p>
-        {question.further.map(([title, source, url]) => (
-          <a href={url || "#top"} target={url ? "_blank" : undefined} rel={url ? "noopener noreferrer" : undefined} key={title}><span>{title}</span><small>{formatMetadata(source).replace(/\bnewsletter\b/gi, "Newsletter").replace(/\bweb\b/gi, "Web")}</small><ArrowRight size={16} /></a>
-        ))}
+      <div className="question-trail">
+        <p className="meta-label">Question trail</p>
+        <a href={`#/archive?category=${encodeURIComponent(question.category)}`}>
+          <span>Explore similar questions</span>
+          <small>More from {question.category} in the archive</small>
+          <ArrowRight size={16} />
+        </a>
       </div>
     </div>
   );
@@ -379,17 +380,17 @@ function submissionDisplayUrl(value = "") {
 function ArticleConfirmation({ request, onReset }) {
   const isAccepted = request.status === "accepted";
   const isQueued = request.status === "duplicate_queued";
-  let eyebrow = "article received";
+  let eyebrow = "Article received";
   let title = `Added to ${crawlPossessive(request.crawl)} crawl`;
   let description = "We’ll consider this link with the next source set. Not every shared link appears in the edition.";
 
   if (isQueued) {
-    eyebrow = "already in the queue";
+    eyebrow = "Already in the queue";
     title = `Already added to ${crawlPossessive(request.crawl)} crawl`;
     description = "This link is already waiting with the next source set. You don’t need to submit it again.";
   }
   if (request.status === "duplicate_history") {
-    eyebrow = "already crawled";
+    eyebrow = "Already crawled";
     title = `Already crawled on ${request.previousCrawlDate || "an earlier date"}`;
     description = "We’ve seen this article before. A future archive update will point back to the earlier edition.";
   }
@@ -404,7 +405,7 @@ function ArticleConfirmation({ request, onReset }) {
         <p className="confirmation-url" title={request.url}>{submissionDisplayUrl(request.url)}</p>
         <p className="confirmation-note">{description}</p>
       </div>
-      <button type="button" onClick={onReset}>{isAccepted ? "share another article" : "try another article"}<ArrowRight size={14} /></button>
+      <button type="button" onClick={onReset}>{isAccepted ? "Share another article" : "Try another article"}<ArrowRight size={14} /></button>
     </div>
   );
 }
@@ -472,8 +473,11 @@ function ArticleIntake() {
 
   return (
     <aside className="article-panel" id="article-intake">
-      <div className="article-heading"><LinkSimple size={22} /><div><p className="meta-label">article intake</p><h2>Share an article</h2></div></div>
-      <p>Paste a useful article. We’ll add it anonymously to the next weekday crawl.</p>
+      <div className="article-heading">
+        <p className="meta-label">Article intake</p>
+        <h2>Contribute to the next crawl</h2>
+        <p>Paste a useful article. We’ll add it anonymously to the next weekday crawl.</p>
+      </div>
       {isConfirmation ? (
         <ArticleConfirmation request={request} onReset={addAnother} />
       ) : (
@@ -500,7 +504,6 @@ function SiteHeader({ edition, editionNumber }) {
       <Brand />
       <div className="edition-meta"><span>{edition.displayDate}</span><span>Edition {editionNumber}</span><span>Filed {formatMetadata(edition.filedAt)}</span></div>
       <nav className="nav-links" aria-label="Primary">
-        {CATEGORIES.map((item) => <a href={`#/archive?category=${encodeURIComponent(item)}`} key={item}>{item}</a>)}
         <a className="question-index-nav" href="#/archive">Archive</a>
       </nav>
       <div className="top-actions">

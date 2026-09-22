@@ -44,10 +44,14 @@ When implementing from a selected generated mock, treat that image as the source
 - Replace the generic shared-team crawl note with a crawl breakdown showing total items, configured web sources, and team-contributed links.
 - Place the personal question bookmark on its own labeled row using `Bookmark question for me`.
 - In expanded signal tables, show the article title, publisher, source type, and time in the Source column. Write both `What happened` and `What changes` as two to four sentences. Make `What changes` critical by connecting causes, consequences, and tradeoffs, and emphasize the main insight or one important phrase.
+- Render emphasized phrases inside signal tables in coral so the critical insight is visible at a glance.
 - Give navigation items and other text links a persistent underline or arrow affordance. On hover, highlight the complete related-read row, not only its text.
 - Cap the editorial shell at 1600px and use proportional 14% / 48% / 38% question columns on desktop.
-- Place `Archive` alongside UI, UX, Process, and Culture in the header. Keep `Question index` as the internal dense-index section heading, and do not repeat the category list or Archive in the footer.
+- Keep `Archive` as the only primary navigation item in the header. Keep `Question index` as the internal dense-index section heading, and do not repeat Archive in the footer.
 - Keep the opening spread text-led, with the daily crawl overview on the left and the article intake on the right. The opening note is a two-line editorial point of view, not a recap. Present questions as compact numbered rows with source provenance and save controls aligned to the grid.
+- Use comfortably open display leading for the daily H1 and question titles; do not let multiline editorial headlines feel compressed.
+- Stack the article-intake heading, explanatory copy, and URL form vertically. Use `Article intake` in title case, make the H2 explain its contribution to the next crawl, and keep the URL field below the explanatory copy.
+- Replace the empty `Further reads` area in expanded signal details with a working `Question trail` link that opens similar questions in the Archive.
 - Use a type floor of 11px. Retarget responsive states at 1200px for tablet and 720px for mobile. At mobile size, preserve the date, expose horizontally scrollable category filters, keep search available, and make every interactive target at least 44 by 44px.
 - Keep exposed hairline grid rules around major regions. Do not use gradients, rounded SaaS cards, glass effects, or drop shadows.
 - Avoid large filled accent panels in the main reading view. Preserve whitespace, subtle green atmospheric texture, strict column alignment, and a compact index-style footer.
