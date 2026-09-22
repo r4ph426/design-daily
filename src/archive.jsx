@@ -5,6 +5,7 @@ import {
   BookmarkSimple,
   MagnifyingGlass,
 } from "@phosphor-icons/react";
+import { AiLensBadge } from "./AiLensBadge.jsx";
 import { CATEGORIES } from "./taxonomy.js";
 
 export const RECENT_POPULARITY = Object.freeze({ minimumSaves: 3, trailingDays: 30 });
@@ -114,6 +115,7 @@ export function normalizeArchiveDays(archiveDays) {
       key,
       slug,
       archiveNumber: String(index + 1).padStart(2, "0"),
+      archiveReference: `${day.editionNumber}/${String(index + 1).padStart(2, "0")}`,
       skillLabels: inferSkillLabels(question),
       popularity: { allTimeSaves, recent30DaySaves },
     };
@@ -209,9 +211,9 @@ function ArchiveRow({ record, saved, onBookmark }) {
   return (
     <article className="archive-question-row">
       <div className="archive-question-id">
-        <span>{record.archiveNumber}</span>
+        <span className="archive-reference">{record.archiveReference}</span>
         <small>{record.category}</small>
-        {record.aiLens && <small className="archive-ai-lens">AI lens</small>}
+        {record.aiLens && <AiLensBadge />}
       </div>
       <div className="archive-question-copy">
         <h3><a href={questionRoute(record)}>{record.question}</a></h3>
@@ -236,7 +238,6 @@ export function ArchivePage({ records, bookmarks, onBookmark, initialCategory = 
   const [category, setCategory] = useState(initialCategory);
   const [skill, setSkill] = useState("All skills");
   const [date, setDate] = useState("any");
-  const [view, setView] = useState("all");
   const searchRef = useRef(null);
 
   useEffect(() => setCategory(initialCategory), [initialCategory]);
@@ -253,23 +254,20 @@ export function ArchivePage({ records, bookmarks, onBookmark, initialCategory = 
     const result = records.filter((record) => {
       const searchable = `${record.question} ${record.answerText} ${record.why || ""} ${record.skillLabels.join(" ")} ${(record.signals || []).map((signal) => `${signal.title || ""} ${signal.source || ""}`).join(" ")}`.toLowerCase();
       return (!needle || searchable.includes(needle))
-        && (category === "All" || record.category === category)
+        && (category === "All"
+          || (category === "Must read" && record.signals?.some((signal) => signal.verdict?.toLowerCase() === "must read"))
+          || record.category === category)
         && (skill === "All skills" || record.skillLabels.includes(skill))
-        && dateMatches(record, date)
-        && (view !== "bookmarked" || bookmarks[record.key]);
+        && dateMatches(record, date);
     });
-    return [...result].sort((a, b) => {
-      if (view === "popular") return b.popularity.allTimeSaves - a.popularity.allTimeSaves || b.dateISO.localeCompare(a.dateISO);
-      return b.dateISO.localeCompare(a.dateISO) || Number(a.archiveNumber) - Number(b.archiveNumber);
-    });
-  }, [bookmarks, category, date, query, records, skill, view]);
+    return [...result].sort((a, b) => b.dateISO.localeCompare(a.dateISO) || Number(a.archiveNumber) - Number(b.archiveNumber));
+  }, [category, date, query, records, skill]);
 
   const resetFilters = () => {
     setQuery("");
     setCategory("All");
     setSkill("All skills");
     setDate("any");
-    setView("all");
   };
 
   return (
@@ -294,25 +292,22 @@ export function ArchivePage({ records, bookmarks, onBookmark, initialCategory = 
             <p className="meta-label">Dense index</p>
             <h2 id="question-index-title">Question index</h2>
           </div>
-          <p>Search the question, its answer, skill labels, and source titles.</p>
         </header>
 
         <div className="archive-search-row">
           <label className="archive-search">
             <MagnifyingGlass size={19} />
             <span className="visually-hidden">Search questions</span>
-            <input ref={searchRef} type="search" placeholder="Search questions, answers, or sources" value={query} onChange={(event) => setQuery(event.target.value)} />
+            <span className="archive-search-copy">
+              <input ref={searchRef} type="search" placeholder="Search questions, answers, or sources" value={query} onChange={(event) => setQuery(event.target.value)} />
+              <small>Search by question, answer, skill label, or source title.</small>
+            </span>
           </label>
-          <div className="archive-view-tabs" role="group" aria-label="Archive view">
-            {[["all", "All questions"], ["popular", "Popular"], ["bookmarked", "My bookmarks"]].map(([value, label]) => (
-              <button type="button" className={view === value ? "selected" : ""} aria-pressed={view === value} onClick={() => setView(value)} key={value}>{label}</button>
-            ))}
-          </div>
         </div>
 
         <div className="archive-filter-panel">
           <div className="category-filters" role="group" aria-label="Category filter">
-            {["All", ...CATEGORIES].map((item) => <button type="button" className={category === item ? "selected" : ""} aria-pressed={category === item} onClick={() => setCategory(item)} key={item}>{item}</button>)}
+            {["All", ...CATEGORIES, "Must read"].map((item) => <button type="button" className={category === item ? "selected" : ""} aria-pressed={category === item} onClick={() => setCategory(item)} key={item}>{item}</button>)}
           </div>
           <label><span>Skill label</span><select value={skill} onChange={(event) => setSkill(event.target.value)}><option>All skills</option>{SKILL_LABELS.map((label) => <option key={label.name}>{label.name}</option>)}</select></label>
           <label><span>Date</span><select value={date} onChange={(event) => setDate(event.target.value)}><option value="any">Any date</option><option value="days:30">Past 30 days</option><option value="days:90">Past 90 days</option>{months.map((month) => <option value={`month:${month}`} key={month}>{new Intl.DateTimeFormat("en-GB", { month: "long", year: "numeric" }).format(new Date(`${month}-01T12:00:00`))}</option>)}</select></label>
@@ -321,15 +316,15 @@ export function ArchivePage({ records, bookmarks, onBookmark, initialCategory = 
         <div className="archive-results-summary">
           <p>{filtered.length} {filtered.length === 1 ? "question" : "questions"}</p>
           <p>Skill labels describe the practice needed to engage with a question.</p>
-          {(query || category !== "All" || skill !== "All skills" || date !== "any" || view !== "all") && <button type="button" onClick={resetFilters}>Clear filters</button>}
+          {(query || category !== "All" || skill !== "All skills" || date !== "any") && <button type="button" onClick={resetFilters}>Clear filters</button>}
         </div>
 
         <div className="archive-question-list">
           {filtered.map((record) => <ArchiveRow record={record} saved={Boolean(bookmarks[record.key])} onBookmark={onBookmark} key={record.key} />)}
           {!filtered.length && (
             <div className="archive-empty">
-              <h3>{view === "bookmarked" ? "No bookmarked questions yet." : "No questions match these filters."}</h3>
-              <p>{view === "bookmarked" ? "Save a question from the archive or a question page and it will appear here on this browser." : "Try a broader search or clear one of the filters."}</p>
+              <h3>No questions match these filters.</h3>
+              <p>Try a broader search or clear one of the filters.</p>
               <button type="button" onClick={resetFilters}>Show all questions</button>
             </div>
           )}
@@ -370,7 +365,7 @@ export function QuestionDetailPage({ record, records, saved, onBookmark, renderS
     <>
       <nav className="detail-breadcrumb" aria-label="Breadcrumb"><a href="#/archive"><ArrowLeft size={16} /> Question archive</a></nav>
       <section className="question-detail-hero">
-        <div className="detail-number"><span>{record.archiveNumber}</span><small>{record.category}</small>{record.aiLens && <small>AI lens</small>}</div>
+        <div className="detail-number"><span className="archive-reference">{record.archiveReference}</span><small>{record.category}</small>{record.aiLens && <AiLensBadge />}</div>
         <div className="detail-title">
           <p className="meta-label">{record.editionLabel} · {record.dateLabel}</p>
           <h1>{record.question}</h1>

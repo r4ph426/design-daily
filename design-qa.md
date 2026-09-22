@@ -1,68 +1,54 @@
-# Design QA: Annotated editorial refinement
+# Design QA: navigation and archive refinement
 
 ## Findings
 
-- No actionable P0, P1, or P2 findings remain.
-- P3: Cloudflare Turnstile can show a domain-verification warning in the local preview. The production-bound anti-spam integration and form behavior were not changed by this visual pass.
+- No actionable P0, P1, P2, or P3 findings remain.
+- The first comparison exposed a typography leak: the shared `AI lens` pill inherited the oversized issue-number style in archive rows. Number spans now have explicit classes, so the pill keeps the same compact Inter treatment on daily, archive, and detail views.
 
 ## Evidence
 
-- Source visual truth: the eight annotated browser screenshots attached to the current request, captured from the home and archive routes at 1262 × 998 CSS pixels.
-- Implemented view: browser-rendered captures from `http://127.0.0.1:4173/#` and `#/archive`. The in-app browser did not expose screenshot filesystem paths.
-- Matched desktop comparison: 1262 × 998 CSS pixels at browser density 1.
-- Responsive validation: 390 × 844 CSS pixels at browser density 1.
-- Compared states: home opening spread, first expanded Signals & Sources table, Question trail action, archive category result, and mobile home/intake/question layout.
-- Full-view evidence: the annotated opening-spread screenshots and the revised 1262 × 998 home capture were compared for navigation density, H1 leading, article-intake hierarchy, form order, and major-region proportions.
-- Focused-region evidence: the annotated signal-table and second-question screenshots were compared with the revised expanded detail capture for coral emphasis, Question trail anatomy, and question-title leading.
+- Source visual truth: the nine annotated production screenshots supplied with this request from `https://r4ph426.github.io/design-daily/`, captured at 1262 × 998 CSS pixels. The in-app browser does not expose screenshot filesystem paths.
+- Implemented view: browser-rendered checks at `http://127.0.0.1:4173/#` and `http://127.0.0.1:4173/#/archive`, captured at the matched 1262 × 998 CSS-pixel viewport. The in-app browser does not expose screenshot filesystem paths.
+- Responsive validation: both routes checked at 390 × 844 CSS pixels, then the temporary viewport override was reset.
+- Reference patterns: Financial Times Edit's current-edition/editions split and Apple News Today navigation supported two short top-level destinations. Google navigation guidance supported concise labels, a small number of top-level tabs, and a persistent selected state.
 
 ## Fidelity surfaces
 
-### Fonts and typography
+### Navigation
 
-- Neue Reckless remains the editorial display family and Inter remains the interface family.
-- The daily H1 now uses 1.02 leading and multiline question titles use 1.03 leading, resolving the compressed line rhythm identified in the annotations.
-- `Article intake` uses normal title capitalization. The intake H2 is an editorial heading rather than a compact interface label.
+- The header now contains exactly two equal-status destinations: `Today` and `Archive`.
+- The current destination uses `aria-current="page"`, a persistent underline, and a restrained green hover/selected surface.
+- Header search was removed. Search remains inside Archive, where its scope is clear.
+- Desktop and mobile states have no horizontal page overflow. On mobile, both navigation targets are 48 pixels high and split the row evenly.
 
-### Spacing and layout
+### Archive retrieval
 
-- The primary navigation now contains only `Archive`; category links remain available inside the archive filters where they are contextually useful.
-- Article-intake content follows a vertical reading order: label, H2, explanatory copy, then URL form.
-- The intake form spans the available right-column width and preserves the opening spread's strict two-column alignment.
-- Desktop and mobile views have no horizontal overflow.
+- Removed the competing `All questions`, `Popular`, and `My bookmarks` view tabs.
+- The single category row now contains `All`, UI, UX, Process, Culture, and `Must read`.
+- `Must read` is editorially derived from source verdicts and remains separate from all-time saves and `Popular recently`.
+- Browser interaction verified that `Must read` selects correctly and reduces the current result set from 32 to 21 questions.
+- Search guidance now sits immediately below the archive search input.
+- Archive IDs use edition/question references such as `008/01`; the browser showed the expected sequence and detail views reuse the same identifier.
 
-### Colors, imagery, and icons
+### Labels and typography
 
-- Strong phrases in signal-table analysis use the shared coral token, matching the requested editorial emphasis.
-- Sage remains reserved for links and interactive affordances; yellow remains the focus and `Must read` signal color.
-- No new imagery or approximate assets were introduced. Existing Phosphor navigation and bookmark icons remain consistent.
-
-### Copy and content
-
-- The intake heading is now `Contribute to the next crawl`, which explains the outcome before asking for a URL.
-- The empty `Further reads` label was replaced by the clearer `Question trail` feature.
-- Its action reads `Explore similar questions`, with category context in `More from {category} in the archive`.
+- `AI lens` is rendered through one shared component: a 25-pixel-high yellow pill with a robot icon, black text, and 11-pixel Inter type.
+- Critical phrases in signal analysis are coral, Neue Reckless, and italic.
+- Source links and `Question trail` links both resolve to `padding-left: 0px` for grid alignment.
+- Existing open headline leading is preserved: the daily H1 resolves to 1.02 leading and mobile question titles to approximately 1.03.
 
 ## Interaction and accessibility checks
 
-- The Question trail for the first Process question opens `#/archive?category=Process`, selects Process, and returns 13 matching questions.
-- Archive remains a semantic header link and the only primary-navigation item.
-- Article input, submit state, question disclosures, bookmarks, source links, search, and archive filters remain semantic and keyboard accessible.
-- The fresh post-fix browser tab returned no console warnings or errors.
-- Mobile controls retain practical tap targets and the new vertical intake order remains readable at 390 pixels.
-
-## Comparison history
-
-- Source annotations identified excessive header choices, compressed H1 and question leading, lowercase intake labeling, a horizontally fragmented intake, low-contrast analytical emphasis, and an empty Further reads region.
-- Fix: removed header category links; increased headline leading; rebuilt the intake as a vertical editorial block; moved explanatory copy above the URL form; changed emphasis to coral; and added the working Question trail.
-- First implementation QA exposed duplicate React keys when a question included two signals from the same publisher. This was a P2 implementation-quality issue because rows could become unstable.
-- Fix: signal-row keys now include their array position. A fresh browser session returned no React errors.
-- Post-fix evidence: the matched 1262 × 998 capture preserves the original editorial grid while implementing every annotated change, and the 390 × 844 capture has no horizontal overflow.
+- Today and Archive expose correct active-page semantics on their respective routes.
+- Archive search, filters, selects, bookmark controls, source links, and question destinations remain semantic and keyboard accessible.
+- Mobile category filters remain horizontally scrollable; every category button is 44 pixels high.
+- The local preview console returned no warnings or errors after the final fix.
 
 ## Verification
 
 - `npm run build`: passed and emitted the required Sites artifacts.
 - `npm test`: 17 of 17 tests passed.
 - `npm run test:sites`: 4 of 4 tests passed.
-- `git diff --check`: passed.
+- Browser QA: desktop and mobile passed with no horizontal overflow.
 
 final result: passed

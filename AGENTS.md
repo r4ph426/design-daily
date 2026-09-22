@@ -25,7 +25,7 @@ When implementing from a selected generated mock, treat that image as the source
 - Reject duplicate article URLs when they are already queued or appeared in a previous crawl. Explain which case applies; a future iteration may link duplicates to their earlier question or edition in the archive.
 - Provide one dedicated team inbox that can be used for new newsletter subscriptions or as a forwarding address for newsletters the team already receives.
 - If the editorial seal returns, build it as a live vector element using only Neue Reckless and Inter.
-- `See all signals` opens a scrollable archive of previous crawls, organized into UI, UX, Process, and Culture. Must reads are elevated through team saves and community feedback.
+- `See all signals` opens a scrollable archive of previous crawls, organized into UI, UX, Process, and Culture. `Must read` is an editorial filter based on source verdicts and remains separate from team-save popularity.
 - Replace the Question index modal with a dedicated, shareable hybrid archive page. Lead with a compact editorial `Start here` area for junior designers, then hand off to a dense searchable index for repeat retrieval. Rank overall popularity by all-time team saves, expose the save count transparently, and add a separate `Popular recently` signal when a question gains at least three distinct team saves in the trailing 30 days. Keep both signals separate from editorially selected foundational reading.
 - Count editions from the first live publication, not from the prototype seed. Thursday, 10 September 2026 is Edition 001; increment once for each actual published weekday edition, preserve the number on same-day reruns, and do not create weekend gaps.
 - Give all compact CTAs that reveal more signals or sources one consistent sage treatment.
@@ -47,7 +47,10 @@ When implementing from a selected generated mock, treat that image as the source
 - Render emphasized phrases inside signal tables in coral so the critical insight is visible at a glance.
 - Give navigation items and other text links a persistent underline or arrow affordance. On hover, highlight the complete related-read row, not only its text.
 - Cap the editorial shell at 1600px and use proportional 14% / 48% / 38% question columns on desktop.
-- Keep `Archive` as the only primary navigation item in the header. Keep `Question index` as the internal dense-index section heading, and do not repeat Archive in the footer.
+- Use `Today` and `Archive` as the only primary header destinations, with a persistent active state. Search belongs inside Archive and must not appear as a header action. Keep `Question index` as the internal dense-index section heading, and do not repeat Archive in the footer.
+- Use edition-aware archive identifiers in `EEE/QQ` format, such as `008/01`, so question numbers remain unique across editions.
+- Render `AI lens` through one shared compact yellow pill with a robot icon on daily, archive, and question-detail surfaces.
+- Keep archive retrieval controls to search, the UI/UX/Process/Culture categories, a `Must read` editorial filter, skill labels, and date. Do not add separate popularity or bookmark view tabs.
 - Keep the opening spread text-led, with the daily crawl overview on the left and the article intake on the right. The opening note is a two-line editorial point of view, not a recap. Present questions as compact numbered rows with source provenance and save controls aligned to the grid.
 - Use comfortably open display leading for the daily H1 and question titles; do not let multiline editorial headlines feel compressed.
 - Stack the article-intake heading, explanatory copy, and URL form vertically. Use `Article intake` in title case, make the H2 explain its contribution to the next crawl, and keep the URL field below the explanatory copy.

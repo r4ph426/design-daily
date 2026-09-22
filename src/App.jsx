@@ -5,8 +5,8 @@ import {
   CaretDown,
   Check,
   Clock,
-  MagnifyingGlass,
 } from "@phosphor-icons/react";
+import { AiLensBadge } from "./AiLensBadge.jsx";
 import { validateEditionTaxonomy } from "./taxonomy.js";
 import {
   ArchivePage,
@@ -288,9 +288,9 @@ function QuestionBlock({ question, isOpen, isSaved, onToggle, onSave }) {
   return (
     <article className={`question-block ${isOpen ? "open" : ""}`} id={question.slug}>
       <div className="question-number">
-        <span>{question.id}</span>
+        <span className="question-sequence">{question.id}</span>
         <small className="category-list">{[question.category, ...question.tags.filter((tag) => tag !== question.category)].join(" · ")}</small>
-        {question.aiLens && <small className="ai-lens"><i aria-hidden="true" />AI lens</small>}
+        {question.aiLens && <AiLensBadge />}
       </div>
       <div className="question-copy" onClick={(event) => {
         if (event.target.closest("button, a, input")) return;
@@ -498,17 +498,17 @@ function ArticleIntake() {
   );
 }
 
-function SiteHeader({ edition, editionNumber }) {
+function SiteHeader({ edition, editionNumber, routeName }) {
+  const todayIsCurrent = routeName === "home";
+  const archiveIsCurrent = routeName === "archive" || routeName === "question";
   return (
     <header className="topbar">
       <Brand />
       <div className="edition-meta"><span>{edition.displayDate}</span><span>Edition {editionNumber}</span><span>Filed {formatMetadata(edition.filedAt)}</span></div>
       <nav className="nav-links" aria-label="Primary">
-        <a className="question-index-nav" href="#/archive">Archive</a>
+        <a className={todayIsCurrent ? "active" : ""} aria-current={todayIsCurrent ? "page" : undefined} href="#">Today</a>
+        <a className={archiveIsCurrent ? "active" : ""} aria-current={archiveIsCurrent ? "page" : undefined} href="#/archive">Archive</a>
       </nav>
-      <div className="top-actions">
-        <a className="icon-button" aria-label="Search the question archive" href="#/archive?focus=search"><MagnifyingGlass size={20} /></a>
-      </div>
     </header>
   );
 }
@@ -597,7 +597,7 @@ export function App() {
   return (
     <main className={`site-shell ${route.name !== "home" ? "route-shell" : ""}`} id="top">
       {route.name === "home" && <a className="skip-link" href={`#${questions[0].slug}`}>Skip to the first question</a>}
-      <SiteHeader edition={edition} editionNumber={editionNumber} />
+      <SiteHeader edition={edition} editionNumber={editionNumber} routeName={route.name} />
       {route.name !== "home" && (routeContent || (
         <section className="route-message"><p className="meta-label">design / daily</p><h1>This page could not be found.</h1><a href="#">Return to today <ArrowRight size={17} /></a></section>
       ))}
