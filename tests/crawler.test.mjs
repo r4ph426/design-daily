@@ -5,6 +5,7 @@ import {
   decodeBase64Url,
   dedupeItems,
   extractGmailMessage,
+  nextEditionNumber,
   parseFeed,
   scoreItem,
 } from "../scripts/lib/crawler.mjs";
@@ -49,4 +50,11 @@ test("dedupeItems and scoreItem favor recent design newsletters", () => {
   assert.equal(dedupeItems([item, { ...item }]).length, 1);
   assert.ok(scoreItem(item, now) > scoreItem({ ...item, sourceKind: "web crawl", title: "General update", excerpt: "", publishedAt: "2026-09-08T11:00:00Z" }, now));
   assert.equal(canonicalUrl("https://example.com/a?utm_campaign=x"), "https://example.com/a");
+});
+
+test("edition numbers count actual publication days from 001", () => {
+  assert.equal(nextEditionNumber(null, "2026-09-10"), "001");
+  assert.equal(nextEditionNumber({ date: "2026-09-10", editionNumber: "001" }, "2026-09-10"), "001");
+  assert.equal(nextEditionNumber({ date: "2026-09-10", editionNumber: "001" }, "2026-09-14"), "002");
+  assert.equal(nextEditionNumber({ date: "2026-09-21", editionNumber: "007" }, "2026-09-22"), "008");
 });

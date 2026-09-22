@@ -202,6 +202,17 @@ export function slugify(value) {
     .slice(0, 64);
 }
 
+export function nextEditionNumber(previousEdition, currentDate) {
+  if (previousEdition?.date === currentDate && previousEdition.editionNumber) {
+    return String(previousEdition.editionNumber).padStart(3, "0");
+  }
+  const previousNumber = Number(previousEdition?.editionNumber || 0);
+  const nextNumber = Number.isSafeInteger(previousNumber) && previousNumber >= 0
+    ? previousNumber + 1
+    : 1;
+  return String(nextNumber).padStart(3, "0");
+}
+
 export function normalizeAiEdition(aiEdition, itemMap) {
   return aiEdition.questions.map((question, index) => {
     validateCategoryRecord(question, `AI question ${index + 1}`);

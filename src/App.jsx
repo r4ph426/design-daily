@@ -22,7 +22,7 @@ import {
   submitArticle,
 } from "./article-submission.js";
 
-const fallbackEditionNumber = "0197";
+const fallbackEditionNumber = "001";
 const turnstileSiteKey = import.meta.env.VITE_TURNSTILE_SITE_KEY || "0x4AAAAAAE_ELsNAkDxmkHLc";
 
 const fallbackQuestions = [

@@ -2,27 +2,41 @@
   {
     "date": "2026-09-22",
     "displayDate": "Tuesday, 22 September 2026",
-    "editionNumber": "0204"
+    "editionNumber": "008"
   },
   {
-    "date": "2026-09-21"
+    "date": "2026-09-21",
+    "displayDate": "Monday, 21 September 2026",
+    "editionNumber": "007"
   },
   {
-    "date": "2026-09-18"
+    "date": "2026-09-18",
+    "displayDate": "Friday, 18 September 2026",
+    "editionNumber": "006"
   },
   {
-    "date": "2026-09-17"
+    "date": "2026-09-17",
+    "displayDate": "Thursday, 17 September 2026",
+    "editionNumber": "005"
   },
   {
-    "date": "2026-09-16"
+    "date": "2026-09-16",
+    "displayDate": "Wednesday, 16 September 2026",
+    "editionNumber": "004"
   },
   {
-    "date": "2026-09-15"
+    "date": "2026-09-15",
+    "displayDate": "Tuesday, 15 September 2026",
+    "editionNumber": "003"
   },
   {
-    "date": "2026-09-14"
+    "date": "2026-09-14",
+    "displayDate": "Monday, 14 September 2026",
+    "editionNumber": "002"
   },
   {
-    "date": "2026-09-10"
+    "date": "2026-09-10",
+    "displayDate": "Thursday, 10 September 2026",
+    "editionNumber": "001"
   }
 ]

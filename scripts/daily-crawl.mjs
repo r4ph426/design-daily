@@ -9,6 +9,7 @@ import {
   extractResponseText,
   htmlToText,
   itemId,
+  nextEditionNumber,
   normalizeAiEdition,
   parseFeed,
   scoreItem,
@@ -289,9 +290,23 @@ async function writeEdition(edition) {
     ? (await import("node:fs/promises")).readdir(archivePath)
     : [];
   const files = await archiveFiles;
+  const archivedEntries = await Promise.all(
+    files
+      .filter((name) => name.endsWith(".json") && name !== "index.json")
+      .sort()
+      .reverse()
+      .map(async (name) => {
+        const archived = await readJson(path.join(archivePath, name), {});
+        return {
+          date: archived.date || name.replace(".json", ""),
+          displayDate: archived.displayDate,
+          editionNumber: archived.editionNumber,
+        };
+      }),
+  );
   const index = [
     { date: edition.date, displayDate: edition.displayDate, editionNumber: edition.editionNumber },
-    ...files.filter((name) => name.endsWith(".json") && name !== "index.json").sort().reverse().map((name) => ({ date: name.replace(".json", "") })),
+    ...archivedEntries.filter((entry) => entry.date !== edition.date),
   ];
   await writeFile(path.join(archivePath, "index.json"), `${JSON.stringify(index, null, 2)}\n`);
 }
@@ -320,10 +335,8 @@ async function main() {
 
   const aiEdition = await synthesize(items);
   const currentDate = editionDate(now);
-  const previous = await readJson(latestPath, { editionNumber: "0000" });
-  const nextNumber = previous.date === currentDate
-    ? previous.editionNumber
-    : String(Number(previous.editionNumber || 0) + 1).padStart(4, "0");
+  const previous = await readJson(latestPath, { editionNumber: "000" });
+  const nextNumber = nextEditionNumber(previous, currentDate);
   const itemMap = new Map(items.map((item) => [item.id, item]));
   const edition = {
     schemaVersion: 1,
