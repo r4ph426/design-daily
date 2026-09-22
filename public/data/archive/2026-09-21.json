@@ -1,0 +1,161 @@
+{
+  "schemaVersion": 1,
+  "editionNumber": "0203",
+  "date": "2026-09-21",
+  "displayDate": "Monday, 21 September 2026",
+  "filedAt": "03:03 cet",
+  "crawlCompletedAt": "03:03",
+  "sourceCount": 6,
+  "webSourceCount": 4,
+  "teamContributionCount": 2,
+  "summary": "The sharpest shift this week is not AI capability, but the design burden it creates: teams are now being asked to shape how models write, cite, and admit uncertainty before output reaches users. At the same time, older interface conventions like store badges are fading, which suggests product teams are trading platform trust signals for tighter brand control. The real editorial question is whether designers will define these new systems, or just clean up after them.",
+  "generatedAt": "2026-09-21T01:03:13.834Z",
+  "inboxConnected": true,
+  "questions": [
+    {
+      "id": "01",
+      "slug": "should-teams-add-a-pre-generation-editing-step-to-stop-ai-from-o",
+      "category": "Process",
+      "tags": [
+        "Process",
+        "UX"
+      ],
+      "aiLens": true,
+      "question": "Should teams add a pre-generation editing step to stop AI from overbuilding interfaces before code is written?",
+      "answer": "Probably yes, if the goal is to reduce waste rather than just fix output later. The emerging pattern is that the cost of AI-generated bloat is paid in review time, maintenance, and brittle code paths, so a gate that forces scope discipline is a design decision, not a coding flourish.",
+      "why": "The source argues that many AI coding failures are about bloat, not bugs, and points to a free skill meant to constrain Claude before it writes too much code.",
+      "counts": {
+        "total": 1,
+        "newsletters": 1,
+        "web": 0
+      },
+      "firstSeen": "15:00 cet",
+      "signals": [
+        {
+          "source": "Actionable AI",
+          "title": "write less code",
+          "kind": "Newsletter",
+          "timing": "15:00",
+          "happened": "A newsletter item argues that AI coding tools often overbuild simple tasks and that a new free skill tries to stop that before code is generated. The framing is that the problem is not broken logic alone, but excessive output that creates more places to fail.",
+          "changes": "This shifts the design problem upstream from debugging to **scope control**, which matters because every extra line becomes future maintenance debt. The tradeoff is that teams may gain leaner output but lose some of the model's helpful improvisation, so the real win is not less code for its own sake but **less accidental complexity**.",
+          "verdict": "Must read",
+          "url": "http://www.w3.org/1999/xhtml"
+        }
+      ],
+      "further": [
+        [
+          "Agents with Taste",
+          "emilkowal.ski",
+          "https://emilkowal.ski/ui/agents-with-taste"
+        ]
+      ]
+    },
+    {
+      "id": "02",
+      "slug": "do-we-need-an-interface-standard-for-showing-ai-source-quality-a",
+      "category": "UX",
+      "tags": [
+        "UX",
+        "Culture"
+      ],
+      "aiLens": true,
+      "question": "Do we need an interface standard for showing AI source quality and uncertainty to readers?",
+      "answer": "Yes, because trust breaks when users cannot tell whether a system is confident, speculative, or simply citing badly. The stronger UX move is not to hide the model, but to make its evidence visible and legible in the flow of reading.",
+      "why": "One source explicitly frames the problem as designing an interface between writers, readers, and AI, which suggests credibility is now a product interface issue.",
+      "counts": {
+        "total": 1,
+        "newsletters": 0,
+        "web": 1
+      },
+      "firstSeen": "14:36 cet",
+      "signals": [
+        {
+          "source": "UX Collective",
+          "title": "AI nutrition facts",
+          "kind": "Web",
+          "timing": "14:36",
+          "happened": "A UX Collective piece proposes 'AI nutrition facts' as a way to mediate between writers, readers, and AI. The premise is that users need a clearer sense of what was generated, what was assisted, and what remains human judgment.",
+          "changes": "This raises the bar for content UX because disclosure is no longer a legal footnote, it is part of the reading experience. The tension is that richer labeling can build trust, but **too much explanation can clutter the page** unless the system makes provenance easy to scan and hard to ignore.",
+          "verdict": "Must read",
+          "url": "https://uxdesign.cc/ai-nutrition-facts-cbfa8f9874e8"
+        }
+      ],
+      "further": [
+        [
+          "Altman and Amodei’s “unsafe at any prompt” moment for AI",
+          "UX Collective",
+          "https://uxdesign.cc/altman-and-amodeis-unsafe-at-any-prompt-moment-for-ai-6a73f144b56e"
+        ]
+      ]
+    },
+    {
+      "id": "03",
+      "slug": "what-replaces-platform-store-badges-when-websites-want-a-downloa",
+      "category": "UI",
+      "tags": [
+        "UI"
+      ],
+      "aiLens": false,
+      "question": "What replaces platform store badges when websites want a download CTA without leaning on Apple or Google branding?",
+      "answer": "Branded buttons are taking over because teams want more control, but that may weaken the standardized trust users once got for free. Designers now have to build a believable download pattern from scratch instead of borrowing it from the platform.",
+      "why": "The source notes that 'Download on the App Store' and 'Get it on Google Play' badges have largely disappeared from websites and have been replaced by custom branded calls to action.",
+      "counts": {
+        "total": 1,
+        "newsletters": 0,
+        "web": 1
+      },
+      "firstSeen": "23:20 cet",
+      "signals": [
+        {
+          "source": "UX Collective",
+          "title": "Whatever happened to “Download on the App Store” buttons?",
+          "kind": "Web",
+          "timing": "23:20",
+          "happened": "A UX Collective article says the once-standard App Store and Google Play badges are vanishing from websites. In their place, many products now use custom branded download buttons with similar calls to action but without the platform-owned marks.",
+          "changes": "This is a quiet but important UI shift because teams are choosing brand consistency over inherited platform trust. The cost is that the old badges carried instant recognition, so the replacement must do **more trust-building work** while still feeling native to the site.",
+          "verdict": "Read",
+          "url": "https://uxdesign.cc/whatever-happened-to-download-on-the-app-store-buttons-e39edb72df79"
+        }
+      ],
+      "further": []
+    },
+    {
+      "id": "04",
+      "slug": "are-ai-vendors-being-let-off-the-hook-by-blaming-user-mistakes-f",
+      "category": "Culture",
+      "tags": [
+        "Culture",
+        "UX"
+      ],
+      "aiLens": true,
+      "question": "Are AI vendors being let off the hook by blaming user mistakes for failures that should be measured and fixed at the system level?",
+      "answer": "They are, and that framing is becoming a design culture problem as much as a safety one. If the industry keeps treating failures as user error, it will delay the shared metrics and accountability designers need to ship responsibly.",
+      "why": "The source argues that the AI industry is repeating the car-safety playbook by blaming users while lacking a shared way to measure harm.",
+      "counts": {
+        "total": 1,
+        "newsletters": 0,
+        "web": 1
+      },
+      "firstSeen": "09:38 cet",
+      "signals": [
+        {
+          "source": "UX Collective",
+          "title": "Altman and Amodei’s “unsafe at any prompt” moment for AI",
+          "kind": "Web",
+          "timing": "09:38",
+          "happened": "A UX Collective essay compares today's AI debate with Ralph Nader's fight over car safety. It argues that vendors are framing failures as user error while avoiding a shared standard for measuring harm.",
+          "changes": "The cultural shift here is from product optimism to **accountability pressure**, and that matters because design teams cannot improve what the industry refuses to measure. The tension is that clearer safety metrics may slow release velocity, but the alternative is a system that normalizes harm and leaves users to absorb the blame.",
+          "verdict": "Must read",
+          "url": "https://uxdesign.cc/altman-and-amodeis-unsafe-at-any-prompt-moment-for-ai-6a73f144b56e"
+        }
+      ],
+      "further": [
+        [
+          "AI nutrition facts",
+          "UX Collective",
+          "https://uxdesign.cc/ai-nutrition-facts-cbfa8f9874e8"
+        ]
+      ]
+    }
+  ]
+}
