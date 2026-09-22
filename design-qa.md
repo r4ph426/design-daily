@@ -1,78 +1,69 @@
-# Design QA: Gmail connection flow
+# Design QA: Hybrid question archive
 
 ## Findings
 
 - No actionable P0, P1, or P2 findings remain.
-- P3: the prototype simulates the handoff to Google's consent screen. Real OAuth, token storage, revocation callbacks, and mailbox synchronization remain production work by design.
+- P3: team-save metrics use deterministic prototype values when an edition does not yet provide a `question.popularity` payload. The UI already prefers supplied all-time and trailing-30-day values, so the data pipeline can replace the fallback without changing the archive layout.
 
 ## Evidence
 
-- Source visual truth: `/Users/raphael.regli/Documents/ChatGPT/design-dojo/public/assets/design-daily-reference.png`, the existing implemented design system, and the user's request for a Gmail connection flow.
-- Implemented view: browser-rendered captures from `http://localhost:4173/` in the current in-app browser tab. The browser tool did not expose screenshot filesystem paths.
-- Desktop comparison viewport: 1484 × 1060 CSS px at browser density 1.
-- Mobile validation viewport: 390 × 844 CSS px at browser density 1.
-- Source pixels: 1484 × 1060. Desktop implementation CSS size: 1484 × 1060.
-- Compared states: base page, permission review, newsletter source selection, empty selection, one-source completion, five-source completion, disconnect, and keyboard dismissal.
-- Full-view comparison: the reference image and updated base page were displayed together in one comparison input at the same desktop viewport. The Gmail flow does not alter the underlying hero grid, image crop, signal row, footer, typography hierarchy, or color balance.
-- Focused region comparison: permission, source-selection, and completion dialogs were inspected separately at desktop size. The permission dialog was also captured at 390 × 844 to confirm readable wrapping, scrolling, and usable controls.
+- Selected source visual: `/Users/raphael.regli/.codex/visualizations/2026/09/22/01a0c927-3526-7ac0-8f01-65419c571ca1/question-archive-first-look.html`, hybrid state with compact editorial paths and team signals enabled.
+- Implemented view: browser-rendered captures from `http://127.0.0.1:4173/#/archive` and a stable `#/questions/{date}/{slug}` detail route. The browser tool did not expose screenshot filesystem paths.
+- Comparison viewports: 1440 × 1000 desktop, 1024 × 900 tablet, and 390 × 844 mobile CSS pixels at browser density 1.
+- Compared states: default archive, category filter, controlled skill filter, all-time popularity sort, personal bookmarks with reload persistence, text search, empty/filter reset behavior, and archived-question detail.
+- Full-view evidence: the default desktop archive was compared with the previously selected first-look visualization for section order, editorial/index balance, density, typography, token use, and hairline grid rhythm.
+- Focused-region evidence: the mobile index controls and mobile question detail were inspected separately; the desktop dense rows and detail hierarchy were also inspected at the 14% / 48% / 38% grid.
 
 ## Fidelity surfaces
 
-### Fonts and typography
+### Fonts and hierarchy
 
-- Clash Display remains applied to flow headings.
-- Geist Mono remains applied to explanations, permission details, newsletter metadata, and privacy copy.
-- Geist Pixel remains applied to the progress indicator, status values, compact actions, and source count.
-- All flow copy uses sentence case. No em dashes are used.
+- Neue Reckless is used for the H1, H2, H3 question titles, expressive numerals, answers, and source titles; Inter remains the interface, metadata, filter, and supporting-copy family.
+- The archive has one H1, `Start here` and `Question index` as H2 sections, and path/question titles as H3 elements. No artificial H4 layer was introduced.
+- Long question strings wrap without clipping at desktop, tablet, and mobile sizes.
 
-### Spacing and layout rhythm
+### Spacing and layout
 
-- The dialog uses the existing square editorial surface, one-pixel borders, cobalt offset, and dense spacing system.
-- The three-step progress indicator, permission rows, source list, actions, and completion summary align to one shared content width.
-- The desktop dialog remains within the viewport. On mobile it is capped to the available height and scrolls internally without horizontal overflow.
+- The hybrid order is preserved: compact editorial starting points first, followed by the denser retrieval index.
+- Major sections and question rows use exposed hairline rules rather than rounded cards, shadows, gradients, or decorative background grids.
+- Desktop question rows retain the 14% / 48% / 38% composition. Tablet paths collapse to two columns, and mobile rows preserve a compact number rail with stacked content and metadata.
+- Horizontal-overflow checks passed at 1440, 1024, and 390 pixel viewports.
 
-### Colors and visual tokens
+### Colors, imagery, and icons
 
-- Existing cobalt, coral, lavender, black, off-white, green success, and gray divider tokens are reused.
-- Active steps and selected source metadata use lavender. The primary continuation path uses coral. Success uses the established green status color.
-
-### Image quality and asset fidelity
-
-- The flow does not introduce new imagery. The supplied hero image and transparent seal remain unchanged behind the modal treatment.
-- Phosphor icons are used for mail, privacy, completion, navigation, and close controls.
+- The implementation uses the shared forest, coral, yellow, sage, paper, and black tokens; no new hardcoded color literals were introduced.
+- Coral remains editorial, sage marks interactions, and yellow remains the focus treatment.
+- No imagery was required by the selected text-led archive direction. Phosphor icons supply consistent search, bookmark, navigation, and external-link affordances.
 
 ### Copy and content
 
-- The permission step distinguishes Google's read-only Gmail authorization from the product's narrower behavior of importing only approved senders.
-- The flow explicitly states that it cannot send, edit, or delete email and that access can be disconnected.
-- The source-selection step shows sender address, cadence, selected count, and a disabled completion action when no sources are selected.
-- Completion reflects the actual number of selected senders rather than a fixed placeholder count.
-- Prototype limitations are stated without asking users to enter credentials.
+- `Start here` explicitly states that its four paths are editorially selected and never determined by save count.
+- Overall popularity exposes all-time team-save counts. `Popular recently` is a separate label and appears only at three or more distinct saves in the trailing 30 days.
+- Skill labels use a controlled vocabulary and the UI explains that they describe the practice needed to engage with a question.
+- Each question destination exposes its answer, sources, edition, related questions, popularity context, and personal bookmark control.
 
 ## Interaction and accessibility checks
 
-- Verified the complete path from Connect Gmail to permission review, source selection, and completion.
-- Verified checkbox selection and deselection, live selected count, zero-selection disabled state, one-source completion, and disconnect.
-- Verified backdrop close, close button, Back action, and Escape key dismissal.
-- The dialog traps Tab focus within its enabled buttons and inputs, then restores focus when closed.
-- Native checkboxes, semantic dialog labeling, visible focus styles, and mobile tap targets are present.
-- Browser console check returned no warnings or errors.
+- Search, category, skill, date, all-time popularity, and personal bookmark views are present and usable.
+- The UX category test returned four UX questions only. Combining UX with the Research label returned two matching questions.
+- The Popular view returned descending all-time counts: 35, 34, 32, 29, 29, 28, 27, 27 for the first eight rows.
+- All rendered `Popular recently` labels reported at least three saves; observed values ranged from three to five in the prototype dataset.
+- A bookmark remained saved after reload through browser-local persistence and appeared in `My bookmarks`.
+- Stable question routes loaded directly and preserved the question answer, sources, edition, related questions, and bookmark state.
+- Navigation and filters use semantic links, buttons, labels, selects, headings, and regions. Mobile controls meet the 44 pixel target and the category rail remains horizontally available.
+- Browser console checks returned no warnings or errors on archive and detail routes.
 
 ## Comparison history
 
-- First flow pass used a fixed count of 18 sources in the completion state regardless of source selection. This was a P2 content and trust mismatch.
-- Fix: the selected source count is now passed into the connected state and pluralized correctly. The completion summary shows the actual approved sender count.
-- First accessibility pass supported pointer dismissal but did not constrain keyboard focus. This was a P2 modal behavior gap.
-- Fix: Escape dismissal, Tab focus containment, and previous-focus restoration were added and verified.
-- Post-fix evidence: the full flow completes with accurate counts, the zero-selection state blocks completion, mobile content remains accessible through internal scrolling, and the browser console is clean.
+- The first archive pass displayed raw markdown emphasis markers in answer excerpts. They were stripped before presentation.
+- The first source-count pass used a fixed plural. It now renders `1 source` and pluralizes larger counts correctly.
+- The first route QA pass retained the previous scroll position after direct navigation in the test browser. The detail component resets the page to the top on route change, and direct-load verification passed.
 
-## Implementation checklist
+## Verification
 
-- Permission review complete.
-- Google handoff explained as a prototype.
-- Newsletter selection complete.
-- Accurate connected state complete.
-- Disconnect and keyboard behavior complete.
-- Desktop, mobile, build, and browser checks complete.
+- `npm run build`: passed and emitted `dist/client/index.html`, `dist/server/index.js`, and `dist/.openai/hosting.json`.
+- `npm test`: 16 of 16 tests passed.
+- `npm run test:sites`: 4 of 4 tests passed.
+- `git diff --check`: passed.
 
 final result: passed

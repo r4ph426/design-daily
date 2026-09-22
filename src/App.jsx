@@ -7,9 +7,14 @@ import {
   Clock,
   LinkSimple,
   MagnifyingGlass,
-  X,
 } from "@phosphor-icons/react";
 import { CATEGORIES, validateEditionTaxonomy } from "./taxonomy.js";
+import {
+  ArchivePage,
+  normalizeArchiveDays,
+  QuestionDetailPage,
+  readHashRoute,
+} from "./archive.jsx";
 import { canonicalArticleUrl, crawlPossessive } from "../shared/article-intake.mjs";
 import {
   articleSubmissionEndpointConfigured,
@@ -217,9 +222,9 @@ function HighlightedText({ text }) {
     : part);
 }
 
-function Brand() {
+function Brand({ href = "#" }) {
   return (
-    <a className="brand" href="#top" aria-label="design / daily home">
+    <a className="brand" href={href} aria-label="design / daily home">
       <span>design / daily</span>
       <small>by ra.re design</small>
     </a>
@@ -489,77 +494,57 @@ function ArticleIntake() {
   );
 }
 
-function Archive({ initialFilter, onClose, archiveDays }) {
-  const [filter, setFilter] = useState(initialFilter || "All questions");
-  const [oldestFirst, setOldestFirst] = useState(false);
-  const days = oldestFirst ? [...archiveDays].reverse() : archiveDays;
-  const questionCount = archiveDays.reduce((total, day) => total + day.questions.length, 0);
-
-  useEffect(() => {
-    const previous = document.body.style.overflow;
-    const onKeyDown = (event) => event.key === "Escape" && onClose();
-    document.body.style.overflow = "hidden";
-    window.addEventListener("keydown", onKeyDown);
-    return () => { document.body.style.overflow = previous; window.removeEventListener("keydown", onKeyDown); };
-  }, [onClose]);
-
+function SiteHeader({ edition, editionNumber }) {
   return (
-    <div className="archive-backdrop" role="presentation" onMouseDown={onClose}>
-      <section className="archive" role="dialog" aria-modal="true" aria-labelledby="archive-title" onMouseDown={(event) => event.stopPropagation()}>
-        <header className="archive-head">
-          <div><p className="meta-label">UI · UX · Process · Culture</p><h2 id="archive-title">The question index</h2><p>{pluralize(questionCount, "Question")} · {pluralize(archiveDays.length, "Edition")}</p></div>
-          <button className="close-button" type="button" aria-label="Close the question index" onClick={onClose} autoFocus><X size={24} /></button>
-        </header>
-        <div className="archive-controls">
-          <div className="archive-filters" role="group" aria-label="Filter the question index">{["All questions", ...CATEGORIES].map((item) => <button type="button" className={filter === item ? "selected" : ""} onClick={() => setFilter(item)} key={item}>{item}</button>)}</div>
-          <button className="sort-button" type="button" onClick={() => setOldestFirst((value) => !value)}>{oldestFirst ? "Oldest first" : "Newest first"}</button>
-        </div>
-        <div className="archive-scroll">
-          {days.map((day) => {
-            const entries = day.questions.filter((question) => filter === "All questions" || question.category === filter);
-            if (!entries.length) return null;
-            return (
-              <section className="archive-day" key={day.edition}>
-                <header><h3>{day.date}</h3><span>{day.edition}</span></header>
-                {entries.map((question) => (
-                  <a className="archive-entry" href={`#${question.slug || "signals"}`} onClick={onClose} key={`${day.edition}-${question.question}`}>
-                    <span className="entry-category">{question.category}</span>
-                    <div><h4>{question.question}</h4><p>{question.answer}</p>{question.returned && <span className="returned">{question.returned}</span>}</div>
-                    <span className="entry-source-count">{pluralize(question.counts.total, "Source")}</span><ArrowRight size={20} />
-                  </a>
-                ))}
-              </section>
-            );
-          })}
-          <button className="earlier-button" type="button">Earlier editions <ArrowRight size={18} /></button>
-        </div>
-      </section>
-    </div>
+    <header className="topbar">
+      <Brand />
+      <div className="edition-meta"><span>{edition.displayDate}</span><span>Edition {editionNumber}</span><span>Filed {formatMetadata(edition.filedAt)}</span></div>
+      <nav className="nav-links" aria-label="Primary">
+        {CATEGORIES.map((item) => <a href={`#/archive?category=${encodeURIComponent(item)}`} key={item}>{item}</a>)}
+        <a className="question-index-nav" href="#/archive">Question index</a>
+      </nav>
+      <div className="top-actions">
+        <a className="icon-button" aria-label="Search the question archive" href="#/archive?focus=search"><MagnifyingGlass size={20} /></a>
+      </div>
+    </header>
   );
 }
 
 export function App() {
   const [edition, setEdition] = useState(fallbackEdition);
   const [archiveHistory, setArchiveHistory] = useState([]);
+  const [archiveReady, setArchiveReady] = useState(false);
+  const [route, setRoute] = useState(() => readHashRoute());
   const [openQuestions, setOpenQuestions] = useState(() => {
     try { return JSON.parse(localStorage.getItem(`design-daily-${fallbackEditionNumber}`)) || {}; }
     catch { return {}; }
   });
-  const [savedQuestions, setSavedQuestions] = useState({});
-  const [archiveOpen, setArchiveOpen] = useState(false);
-  const [archiveFilter, setArchiveFilter] = useState("All questions");
-  const [searchOpen, setSearchOpen] = useState(false);
+  const [savedQuestions, setSavedQuestions] = useState(() => {
+    try { return JSON.parse(localStorage.getItem("design-daily-question-bookmarks-v1")) || {}; }
+    catch { return {}; }
+  });
   const questions = edition.questions?.length ? edition.questions : fallbackQuestions;
   const editionNumber = edition.editionNumber || fallbackEditionNumber;
   const archiveDays = useMemo(() => [
-    { date: edition.displayDate?.replace(/ \d{4}$/, "") || "Today", edition: `Edition ${editionNumber} · Today`, questions },
+    { date: edition.displayDate?.replace(/ \d{4}$/, "") || "Today", dateISO: edition.date, editionNumber, questions },
     ...archiveHistory.map((archived) => ({
       date: archived.displayDate?.replace(/ \d{4}$/, "") || archived.date,
-      edition: `Edition ${archived.editionNumber}`,
+      dateISO: archived.date,
+      editionNumber: archived.editionNumber,
       questions: archived.questions,
     })),
   ], [archiveHistory, edition.displayDate, editionNumber, questions]);
+  const archiveRecords = useMemo(() => normalizeArchiveDays(archiveDays), [archiveDays]);
+  const selectedQuestion = route.name === "question"
+    ? archiveRecords.find((record) => record.dateISO === route.dateISO && record.slug === route.slug)
+    : null;
   const issueTitle = useMemo(() => `${countWord(questions.length)} questions shaping design today`, [questions.length]);
+
+  useEffect(() => {
+    const onHashChange = () => setRoute(readHashRoute());
+    window.addEventListener("hashchange", onHashChange);
+    return () => window.removeEventListener("hashchange", onHashChange);
+  }, []);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -586,33 +571,34 @@ export function App() {
           .then((response) => response.ok ? response.json() : null))))
       .then((editions) => editions.map((item) => item ? validateEditionTaxonomy(item) : item))
       .then((editions) => setArchiveHistory(editions.filter((item) => item?.questions?.length)))
-      .catch((error) => { if (error.name !== "AbortError") console.warn("Archive index unavailable.", error); });
+      .catch((error) => { if (error.name !== "AbortError") console.warn("Archive index unavailable.", error); })
+      .finally(() => setArchiveReady(true));
     return () => controller.abort();
   }, [edition.date]);
   useEffect(() => { localStorage.setItem(`design-daily-${editionNumber}`, JSON.stringify(openQuestions)); }, [editionNumber, openQuestions]);
+  useEffect(() => { localStorage.setItem("design-daily-question-bookmarks-v1", JSON.stringify(savedQuestions)); }, [savedQuestions]);
   useEffect(() => {
-    const slug = window.location.hash.replace("#", "");
-    const question = questions.find((item) => item.slug === slug);
+    if (route.name !== "home" || !route.anchor) return;
+    const question = questions.find((item) => item.slug === route.anchor);
     if (question) setOpenQuestions((state) => ({ ...state, [question.id]: true }));
-  }, [questions]);
+  }, [questions, route.anchor, route.name]);
 
-  const openArchive = (filter = "All questions") => { setArchiveFilter(filter); setArchiveOpen(true); };
+  const toggleBookmark = (key) => setSavedQuestions((state) => ({ ...state, [key]: !state[key] }));
+
+  const routeContent = route.name === "archive"
+    ? <ArchivePage key={route.key} records={archiveRecords} bookmarks={savedQuestions} onBookmark={toggleBookmark} initialCategory={route.category} focusSearch={route.focusSearch} />
+    : route.name === "question"
+      ? <QuestionDetailPage record={selectedQuestion} records={archiveRecords} saved={Boolean(selectedQuestion && savedQuestions[selectedQuestion.key])} onBookmark={toggleBookmark} renderSignals={(question) => <SignalsTable question={question} />} archiveReady={archiveReady} />
+      : null;
 
   return (
-    <main className="site-shell" id="top">
-      <a className="skip-link" href={`#${questions[0].slug}`}>Skip to the first question</a>
-      <header className={`topbar ${searchOpen ? "search-open" : ""}`}>
-        <Brand />
-        <div className="edition-meta"><span>{edition.displayDate}</span><span>Edition {editionNumber}</span><span>Filed {formatMetadata(edition.filedAt)}</span></div>
-        <nav className="nav-links" aria-label="Primary">
-          {CATEGORIES.map((item) => <button type="button" onClick={() => openArchive(item)} key={item}>{item}</button>)}
-          <button type="button" className="question-index-nav" onClick={() => openArchive()}>Question index</button>
-        </nav>
-        <div className="top-actions">
-          <button type="button" className="icon-button" aria-label={searchOpen ? "Close search" : "Search"} onClick={() => setSearchOpen((value) => !value)}>{searchOpen ? <X size={20} /> : <MagnifyingGlass size={20} />}</button>
-        </div>
-        {searchOpen && <div className="search-field"><input autoFocus aria-label="Search the question index" placeholder="Search questions" onKeyDown={(event) => event.key === "Escape" && setSearchOpen(false)} /></div>}
-      </header>
+    <main className={`site-shell ${route.name !== "home" ? "route-shell" : ""}`} id="top">
+      {route.name === "home" && <a className="skip-link" href={`#${questions[0].slug}`}>Skip to the first question</a>}
+      <SiteHeader edition={edition} editionNumber={editionNumber} />
+      {route.name !== "home" && (routeContent || (
+        <section className="route-message"><p className="meta-label">design / daily</p><h1>This page could not be found.</h1><a href="#">Return to today <ArrowRight size={17} /></a></section>
+      ))}
+      {route.name === "home" && <>
       <section className="edition-hero" aria-labelledby="edition-title">
         <div className="edition-intro">
           <h1 id="edition-title">{issueTitle}</h1>
@@ -629,10 +615,13 @@ export function App() {
         <ArticleIntake />
       </section>
       <section className="questions" aria-label="Today’s questions">
-        {questions.map((question) => <QuestionBlock key={question.id} question={question} isOpen={Boolean(openQuestions[question.id])} isSaved={Boolean(savedQuestions[question.id])} onToggle={() => setOpenQuestions((state) => ({ ...state, [question.id]: !state[question.id] }))} onSave={() => setSavedQuestions((state) => ({ ...state, [question.id]: !state[question.id] }))} />)}
+        {questions.map((question) => {
+          const bookmarkKey = `${edition.date}:${question.slug}`;
+          return <QuestionBlock key={question.id} question={question} isOpen={Boolean(openQuestions[question.id])} isSaved={Boolean(savedQuestions[bookmarkKey])} onToggle={() => setOpenQuestions((state) => ({ ...state, [question.id]: !state[question.id] }))} onSave={() => toggleBookmark(bookmarkKey)} />;
+        })}
       </section>
+      </>}
       <footer className="footer-grid"><Brand /><p>AI-generated. Human-edited.</p><span className="footer-edition">Edition {editionNumber}</span><a href={`${import.meta.env.BASE_URL}privacy.html`}>Privacy <ArrowRight size={14} /></a><p>Synthesis, not noise.</p></footer>
-      {archiveOpen && <Archive initialFilter={archiveFilter} archiveDays={archiveDays} onClose={() => setArchiveOpen(false)} />}
     </main>
   );
 }
