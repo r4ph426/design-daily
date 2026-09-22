@@ -501,7 +501,7 @@ function SiteHeader({ edition, editionNumber }) {
       <div className="edition-meta"><span>{edition.displayDate}</span><span>Edition {editionNumber}</span><span>Filed {formatMetadata(edition.filedAt)}</span></div>
       <nav className="nav-links" aria-label="Primary">
         {CATEGORIES.map((item) => <a href={`#/archive?category=${encodeURIComponent(item)}`} key={item}>{item}</a>)}
-        <a className="question-index-nav" href="#/archive">Question index</a>
+        <a className="question-index-nav" href="#/archive">Archive</a>
       </nav>
       <div className="top-actions">
         <a className="icon-button" aria-label="Search the question archive" href="#/archive?focus=search"><MagnifyingGlass size={20} /></a>

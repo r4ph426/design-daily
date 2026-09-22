@@ -36,7 +36,7 @@ When implementing from a selected generated mock, treat that image as the source
 - Set question numbers in Neue Reckless Light Italic. Source provenance metadata and compact controls respect the 11px type floor.
 - Render non-interactive footer statements in signal red. Keep interactive footer links sage with a visible underline or arrow affordance.
 - Keep source links permanently visible in the provenance column with title, domain, source type, and time. Reserve the disclosure for extended signal notes and related reads.
-- Mark external source links with the same `↗` affordance used by the Question index.
+- Mark external source links with the same `↗` affordance used by the Archive navigation item.
 - Apply the same subtle full-row hover surface used by Further reads to question content regions, source rows, and interactive footer cells.
 - Clicking anywhere in a question content region toggles its Signals & Sources details. Keep the explicit title and disclosure buttons keyboard accessible and prevent nested controls from toggling twice.
 - Present the article intake as an editorial H2 without a decorative link icon. Its heading should explain that a submitted URL contributes to the next crawl.
@@ -46,7 +46,7 @@ When implementing from a selected generated mock, treat that image as the source
 - In expanded signal tables, show the article title, publisher, source type, and time in the Source column. Write both `What happened` and `What changes` as two to four sentences. Make `What changes` critical by connecting causes, consequences, and tradeoffs, and emphasize the main insight or one important phrase.
 - Give navigation items and other text links a persistent underline or arrow affordance. On hover, highlight the complete related-read row, not only its text.
 - Cap the editorial shell at 1600px and use proportional 14% / 48% / 38% question columns on desktop.
-- Place the Question index alongside UI, UX, Process, and Culture in the header. Do not repeat the category list or the Question index in the footer.
+- Place `Archive` alongside UI, UX, Process, and Culture in the header. Keep `Question index` as the internal dense-index section heading, and do not repeat the category list or Archive in the footer.
 - Keep the opening spread text-led, with the daily crawl overview on the left and the article intake on the right. The opening note is a two-line editorial point of view, not a recap. Present questions as compact numbered rows with source provenance and save controls aligned to the grid.
 - Use a type floor of 11px. Retarget responsive states at 1200px for tablet and 720px for mobile. At mobile size, preserve the date, expose horizontally scrollable category filters, keep search available, and make every interactive target at least 44 by 44px.
 - Keep exposed hairline grid rules around major regions. Do not use gradients, rounded SaaS cards, glass effects, or drop shadows.
