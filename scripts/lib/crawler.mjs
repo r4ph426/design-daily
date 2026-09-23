@@ -136,11 +136,26 @@ function findMimeBody(part) {
   return findMimePart(part, "text/html") || findMimePart(part, "text/plain");
 }
 
+function isDocumentInfrastructureUrl(url) {
+  const hostname = url.hostname.toLowerCase().replace(/^www\./, "");
+  const pathname = url.pathname.toLowerCase();
+  if (hostname === "w3.org" && (
+    pathname === "/1999/xhtml"
+    || pathname.startsWith("/tr/xhtml1/dtd/")
+    || pathname.startsWith("/2001/xmlschema")
+  )) return true;
+  return hostname === "schema.org" || hostname === "xmlns.com";
+}
+
 function firstUsefulUrl(value = "") {
-  const links = value.match(/https?:\/\/[^\s"'<>\])]+/g) ?? [];
+  const decoded = decodeEntities(value);
+  const anchorLinks = [...decoded.matchAll(/\bhref\s*=\s*["']([^"']+)["']/gi)].map((match) => match[1]);
+  const rawLinks = decoded.match(/https?:\/\/[^\s"'<>\])]+/g) ?? [];
+  const links = [...new Set([...anchorLinks, ...rawLinks])];
   for (const link of links) {
     try {
       const parsed = new URL(decodeEntities(link));
+      if (!/^https?:$/.test(parsed.protocol) || isDocumentInfrastructureUrl(parsed)) continue;
       if (/(unsubscribe|preferences|tracking|pixel|list-manage|mailchi\.mp|click\.convertkit|email\.mail|trk\.)/i.test(`${parsed.hostname}${parsed.pathname}`)) continue;
       parsed.search = "";
       parsed.hash = "";

@@ -38,7 +38,7 @@
           "happened": "HeyDesigner highlights a piece arguing that prompt-to-code interfaces reduce execution cost to almost nothing. The same roundup also spotlights AI prototyping as the highest-value UX method, alongside a warning to be militant about what not to build.",
           "changes": "The shift is not just about speed. AI is changing the economic logic of design work, which means the harder skill is now **choosing what deserves to exist**. That creates a useful tension: teams can explore more, but they also risk flooding the roadmap with cheap, underexamined output.",
           "verdict": "Must read",
-          "url": "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
+          "url": "https://heydesigner.com/newsletter/designing-with-ai/"
         },
         {
           "source": "Actionable AI",
@@ -48,7 +48,7 @@
           "happened": "Actionable AI frames the move from prompts to loops as the practical next step in AI work. It says the people building the tools are no longer writing prompts, but building repeatable workflows instead.",
           "changes": "This pushes AI work from one-off interactions toward **operational systems**. The tradeoff is that loops can make teams more productive while also making it easier to automate away reflection, so the quality bar must move upstream into setup and review.",
           "verdict": "Read",
-          "url": "http://www.w3.org/1999/xhtml"
+          "url": "https://theactionableai.com/guides/loops-starter-guide"
         }
       ],
       "further": [
@@ -149,7 +149,7 @@
         [
           "steal these loops",
           "Actionable AI",
-          "http://www.w3.org/1999/xhtml"
+          "https://theactionableai.com/guides/loops-starter-guide"
         ],
         [
           "UX Roundup: People Tell AI Their Secrets | Employment & AI | Long Forms | Two Ways of Using AI | Flow | Funny AI | Triangulation | IKEA Effect | Focus",

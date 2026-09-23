@@ -39,7 +39,7 @@
           "happened": "A newsletter item argues that AI coding tools often overbuild simple tasks and that a new free skill tries to stop that before code is generated. The framing is that the problem is not broken logic alone, but excessive output that creates more places to fail.",
           "changes": "This shifts the design problem upstream from debugging to **scope control**, which matters because every extra line becomes future maintenance debt. The tradeoff is that teams may gain leaner output but lose some of the model's helpful improvisation, so the real win is not less code for its own sake but **less accidental complexity**.",
           "verdict": "Must read",
-          "url": "http://www.w3.org/1999/xhtml"
+          "url": "https://theactionableai.com/guides/lazy-ai-code"
         }
       ],
       "further": [

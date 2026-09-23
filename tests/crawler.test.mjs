@@ -44,6 +44,26 @@ test("extractGmailMessage reads a newsletter MIME body", () => {
   assert.match(decodeBase64Url(Buffer.from("hello").toString("base64url")), /hello/);
 });
 
+test("extractGmailMessage ignores HTML schema and doctype URLs", () => {
+  const html = `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml"><body>
+      <a href="https://example.com/issue?utm_source=newsletter">Read the issue</a>
+    </body></html>`;
+  const item = extractGmailMessage({
+    id: "message-with-schema",
+    internalDate: "1789012800000",
+    payload: {
+      headers: [
+        { name: "From", value: "Design Notes <notes@example.com>" },
+        { name: "Subject", value: "A real issue link" },
+      ],
+      mimeType: "text/html",
+      body: { data: Buffer.from(html).toString("base64url") },
+    },
+  });
+  assert.equal(item.url, "https://example.com/issue");
+});
+
 test("dedupeItems and scoreItem favor recent design newsletters", () => {
   const now = new Date("2026-09-10T12:00:00Z");
   const item = { source: "A", sourceKind: "newsletter inbox", title: "AI design research framework", excerpt: "A UI and UX case study", url: "https://example.com/a", publishedAt: "2026-09-10T11:00:00Z" };
