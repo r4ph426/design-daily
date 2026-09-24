@@ -1,0 +1,215 @@
+{
+  "schemaVersion": 1,
+  "editionNumber": "009",
+  "date": "2026-09-23",
+  "displayDate": "Wednesday, 23 September 2026",
+  "filedAt": "03:29 cet",
+  "crawlCompletedAt": "03:29",
+  "sourceCount": 23,
+  "webSourceCount": 4,
+  "teamContributionCount": 4,
+  "summary": "This week’s signal is clear: AI is not just speeding up design work, it is reshaping what gets valued, who gets hired, and how trust is earned. The strongest pieces push against shallow automation, arguing for judgment, accessibility, and deliberate scope control over more output. Meanwhile, the field looks increasingly split between polished AI execution and the slower work of growing people and preserving standards.",
+  "generatedAt": "2026-09-23T01:29:37.519Z",
+  "inboxConnected": true,
+  "questions": [
+    {
+      "id": "01",
+      "slug": "are-ai-loops-and-prompt-to-code-tools-helping-teams-discover-bet",
+      "category": "Process",
+      "tags": [
+        "Process"
+      ],
+      "aiLens": true,
+      "question": "Are AI loops and prompt-to-code tools helping teams discover better ideas, or just making mediocre ideas cheaper to ship?",
+      "answer": "They are clearly lowering execution cost, but that does not automatically improve product judgment. The editorial read is that teams should treat these tools as a way to explore more options, not as a license to produce more surface area.",
+      "why": "The strongest AI framing this week argues that faster execution only matters if it creates room for better decision-making, not if it accelerates weak choices.",
+      "counts": {
+        "total": 2,
+        "newsletters": 2,
+        "web": 0
+      },
+      "firstSeen": "13:46 cet",
+      "signals": [
+        {
+          "source": "HeyDesigner",
+          "title": "Designing with AI",
+          "kind": "Newsletter",
+          "timing": "13:46",
+          "happened": "HeyDesigner highlights a piece arguing that prompt-to-code interfaces reduce execution cost to almost nothing. The same roundup also spotlights AI prototyping as the highest-value UX method, alongside a warning to be militant about what not to build.",
+          "changes": "The shift is not just about speed. AI is changing the economic logic of design work, which means the harder skill is now **choosing what deserves to exist**. That creates a useful tension: teams can explore more, but they also risk flooding the roadmap with cheap, underexamined output.",
+          "verdict": "Must read",
+          "url": "https://heydesigner.com/newsletter/designing-with-ai/"
+        },
+        {
+          "source": "Actionable AI",
+          "title": "steal these loops",
+          "kind": "Newsletter",
+          "timing": "15:02",
+          "happened": "Actionable AI frames the move from prompts to loops as the practical next step in AI work. It says the people building the tools are no longer writing prompts, but building repeatable workflows instead.",
+          "changes": "This pushes AI work from one-off interactions toward **operational systems**. The tradeoff is that loops can make teams more productive while also making it easier to automate away reflection, so the quality bar must move upstream into setup and review.",
+          "verdict": "Read",
+          "url": "https://theactionableai.com/guides/loops-starter-guide"
+        }
+      ],
+      "further": [
+        [
+          "UX Roundup: People Tell AI Their Secrets | Employment & AI | Long Forms | Two Ways of Using AI | Flow | Funny AI | Triangulation | IKEA Effect | Focus",
+          "uxtigers.com",
+          "https://www.uxtigers.com/post/ux-roundup-20260921"
+        ],
+        [
+          "The variance problem in AI products",
+          "UX Collective",
+          "https://uxdesign.cc/the-variance-problem-in-ai-products-62a58272564c"
+        ]
+      ]
+    },
+    {
+      "id": "02",
+      "slug": "if-ai-absorbs-junior-level-work-who-is-still-responsible-for-tra",
+      "category": "Culture",
+      "tags": [
+        "Culture"
+      ],
+      "aiLens": true,
+      "question": "If AI absorbs junior-level work, who is still responsible for training the next generation of designers?",
+      "answer": "The burden is moving back onto leaders. Several pieces suggest that if teams stop making risky junior hires, they will also stop producing the judgment they will need later.",
+      "why": "This is the clearest workforce signal in the batch, and it connects AI adoption directly to talent pipeline collapse.",
+      "counts": {
+        "total": 2,
+        "newsletters": 1,
+        "web": 1
+      },
+      "firstSeen": "23:27 cet",
+      "signals": [
+        {
+          "source": "UX Collective",
+          "title": "In the age of AI, the UX field survives on leaders who cultivate juniors",
+          "kind": "Web",
+          "timing": "23:27",
+          "happened": "UX Collective argues that AI tools have absorbed the starter work juniors used to learn from. It says hiring has tilted toward seniors because they ramp faster and require less review.",
+          "changes": "That looks efficient in the short term, but it quietly breaks the apprenticeship model. The article’s sharper point is that the field may be optimizing for **present-day throughput** while starving itself of future judgment, which is a structural tradeoff, not just a hiring preference.",
+          "verdict": "Must read",
+          "url": "https://uxdesign.cc/in-the-age-of-ai-the-ux-field-survives-on-leaders-who-cultivate-juniors-595c548f1d70"
+        },
+        {
+          "source": "UX Collective",
+          "title": "For the Designless",
+          "kind": "Newsletter",
+          "timing": "13:03",
+          "happened": "For the Designless argues that AI has changed who can now attempt design work, while insisting that design itself is still a commercial problem-solving job. It reframes the audience for design as people who lack access, awareness, or motivation.",
+          "changes": "This widens the market for design help, but it also blurs the line between professional craft and accessible self-service. The tension is that broader participation can be good, yet without training pathways it may further normalize **good-enough design without design judgment**.",
+          "verdict": "Read",
+          "url": "https://newsletter.uxdesign.cc/archive"
+        }
+      ],
+      "further": [
+        [
+          "Should the job of a UX designer be reserved for humans?",
+          "UX Collective",
+          "https://uxdesign.cc/should-ux-design-be-reserved-for-humans-and-the-future-of-work-9afae1265578"
+        ],
+        [
+          "The lie we keep telling ourselves about regulating AI",
+          "UX Collective",
+          "https://uxdesign.cc/the-lie-we-keep-telling-ourselves-about-regulating-ai-61e0163d795e"
+        ]
+      ]
+    },
+    {
+      "id": "03",
+      "slug": "should-ai-interfaces-optimize-for-speed-or-should-they-expose-va",
+      "category": "UX",
+      "tags": [
+        "UX"
+      ],
+      "aiLens": true,
+      "question": "Should AI interfaces optimize for speed, or should they expose variance so users know what to trust?",
+      "answer": "The stronger argument is that transparency beats surprise. Users can accept slower output if the system explains timing, but unexplained inconsistency erodes confidence quickly.",
+      "why": "Trust is the core UX metric here, and the clearest evidence says the problem is not latency alone, but unpredictable latency without context.",
+      "counts": {
+        "total": 1,
+        "newsletters": 0,
+        "web": 1
+      },
+      "firstSeen": "13:22 cet",
+      "signals": [
+        {
+          "source": "UX Collective",
+          "title": "The variance problem in AI products",
+          "kind": "Web",
+          "timing": "13:22",
+          "happened": "UX Collective describes an AI transcription product where the same model felt broken because response times changed across use cases. The article argues that users forgive slowness more than inconsistency when the system fails to explain itself.",
+          "changes": "This shifts the design brief from raw performance to expectation management. The real UX risk is not a six-second wait, but **unexplained variance** that makes users doubt the system’s competence, so the interface has to communicate normal behavior, not just speed.",
+          "verdict": "Must read",
+          "url": "https://uxdesign.cc/the-variance-problem-in-ai-products-62a58272564c"
+        }
+      ],
+      "further": [
+        [
+          "steal these loops",
+          "Actionable AI",
+          "https://theactionableai.com/guides/loops-starter-guide"
+        ],
+        [
+          "UX Roundup: People Tell AI Their Secrets | Employment & AI | Long Forms | Two Ways of Using AI | Flow | Funny AI | Triangulation | IKEA Effect | Focus",
+          "uxtigers.com",
+          "https://www.uxtigers.com/post/ux-roundup-20260921"
+        ]
+      ]
+    },
+    {
+      "id": "04",
+      "slug": "are-we-seeing-a-useful-return-to-tactile-material-design-cues-or",
+      "category": "UI",
+      "tags": [
+        "UI",
+        "Culture"
+      ],
+      "aiLens": false,
+      "question": "Are we seeing a useful return to tactile, material design cues, or just novelty dressing in physical products and visual identity?",
+      "answer": "There is a real appetite for forms that feel grounded, but the better work still earns that feeling through function and craft. When material choices are just spectacle, they read as gimmick fast.",
+      "why": "The signal is broader than one product: several sources point to a reaction against flat or purely digital thinking, which designers need to separate from aesthetic nostalgia.",
+      "counts": {
+        "total": 1,
+        "newsletters": 1,
+        "web": 0
+      },
+      "firstSeen": "10:00 cet",
+      "signals": [
+        {
+          "source": "Dezeen",
+          "title": "Debate: \"Appropriately looks like Darth Vader's lair\"",
+          "kind": "Newsletter",
+          "timing": "10:00",
+          "happened": "Dezeen highlights a human-sized Pokémon Poké Ball guesthouse and a toaster that uses sensors to detect toast color. The discussion around both objects is framed as debate, with readers questioning whether the concepts are clever or absurd.",
+          "changes": "These projects show how quickly UI-style logic spills into product form language. The tradeoff is between **sensory novelty** and actual usefulness, and the source makes clear that provocation alone is not enough to justify form.",
+          "verdict": "Track",
+          "url": "https://newsletter.dezeen.com/t/r-e-tuhlidit-piytkhriyh-r"
+        },
+        {
+          "source": "It’s Nice That",
+          "title": "Templo’s visual identity for DeafCity Hub is a fusion of creative coding, British sign language and gestural motion capture",
+          "kind": "Web",
+          "timing": "10:00",
+          "happened": "It’s Nice That covers Templo’s DeafCity Hub identity, which combines creative coding, British Sign Language, and motion capture. The project centers Deaf culture rather than treating accessibility as an afterthought.",
+          "changes": "This is the strongest example of material and motion serving a cultural purpose instead of pure decoration. The work suggests that tactile and gestural systems can carry meaning when they are rooted in **community-specific expression**, not just visual trend.",
+          "verdict": "Read",
+          "url": "https://www.itsnicethat.com/articles/templo-deafcity-hub-identity-graphic-design-project-220926"
+        }
+      ],
+      "further": [
+        [
+          "What is a screen made of?",
+          "UX Collective",
+          "https://uxdesign.cc/what-is-a-screen-made-of-f2b1318778d4"
+        ],
+        [
+          "Designers lost their unit of measurement. That’s why we’re struggling.",
+          "UX Collective",
+          "https://uxdesign.cc/designers-lost-their-unit-of-measurement-thats-why-we-re-struggling-b3c6beeea74f"
+        ]
+      ]
+    }
+  ]
+}
