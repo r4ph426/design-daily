@@ -1,112 +1,112 @@
 {
   "schemaVersion": 1,
-  "editionNumber": "010",
-  "date": "2026-09-24",
-  "displayDate": "Thursday, 24 September 2026",
-  "filedAt": "03:22 cet",
-  "crawlCompletedAt": "03:22",
-  "sourceCount": 30,
+  "editionNumber": "011",
+  "date": "2026-09-25",
+  "displayDate": "Friday, 25 September 2026",
+  "filedAt": "03:28 cet",
+  "crawlCompletedAt": "03:28",
+  "sourceCount": 24,
   "webSourceCount": 4,
-  "teamContributionCount": 2,
-  "summary": "This issue is about restraint, not expansion. Across AI tooling, UX method, and accessibility, the clearest signal is that speed and automation only matter when they reduce waste without flattening judgment. Design teams should be wary of copying surface patterns and should instead invest in systems, standards, and the slower skills that AI cannot replace.",
-  "generatedAt": "2026-09-24T01:22:52.627Z",
+  "teamContributionCount": 0,
+  "summary": "AI is increasingly shaping everyday design production, but the sharper signal is that teams still need better judgment, not just faster output. The strongest stories this week push against copy-paste UX and hype, and point toward more durable practices: clearer form defaults, earlier accessibility work, and better apprenticeship for juniors. Designers should read this as a warning against letting automation erase the craft that makes interfaces trustworthy.",
+  "generatedAt": "2026-09-25T01:28:49.554Z",
   "inboxConnected": true,
   "questions": [
     {
       "id": "01",
-      "slug": "if-ai-makes-execution-nearly-free-how-should-design-teams-decide",
-      "category": "Process",
+      "slug": "are-prompt-driven-image-workflows-becoming-a-practical-design-to",
+      "category": "UI",
       "tags": [
-        "Process"
+        "UI"
       ],
       "aiLens": true,
-      "question": "If AI makes execution nearly free, how should design teams decide what not to build?",
-      "answer": "Treat AI as a way to lower production cost, not to justify more output. The stronger move is to use that slack to test more ideas, cut weaker paths sooner, and be ruthless about scope.",
-      "why": "HeyDesigner frames prompt-to-code interfaces as reducing execution cost to almost nothing, while Liam Nugent argues for being militant about removing features. Together they suggest that AI changes the bottleneck from building to choosing, which makes product discipline more important, not less.",
+      "question": "Are prompt-driven image workflows becoming a practical design tool, or just a fast way to generate inconsistent visual direction?",
+      "answer": "The new value is speed and breadth, not consistency. A single prompt can produce nine distinct looks, which is useful for exploration but risky if teams confuse variation with a coherent system.",
+      "why": "Source 004ee958fb548030 shows one image pushed through nine styles with no design tool and no designer involvement, which makes the output feel immediate but also weakens control over repeatability.",
       "counts": {
         "total": 1,
         "newsletters": 1,
         "web": 0
       },
-      "firstSeen": "13:46 cet",
+      "firstSeen": "15:01 cet",
       "signals": [
         {
-          "source": "HeyDesigner",
-          "title": "Designing with AI",
+          "source": "Actionable AI",
+          "title": "nine styles, one prompt",
           "kind": "Newsletter",
-          "timing": "13:46",
-          "happened": "HeyDesigner highlighted a piece arguing that prompt-to-code tools lower execution cost so much that teams can spend more time exploring the unknown. The same newsletter also surfaced a separate take that the most important product decision is what you do not build.",
-          "changes": "The shift is not just faster delivery, it is **a lower cost of trying**. That creates an opportunity to explore more options, but it also raises the risk of shipping unnecessary work unless teams become more selective about scope and deletion.",
+          "timing": "15:01",
+          "happened": "A newsletter demo showed one photo transformed into nine visual styles through Claude connected to an image engine. The example framed the result as something that looked like outputs from different design tools, but produced without a designer.",
+          "changes": "This shifts AI from a concept tool to a **production-facing style generator**, which can widen early exploration while also making visual authorship easier to blur. The tradeoff is obvious: more output, less consistency, so design teams will need stronger taste filters and governance if they want the results to stay usable.",
           "verdict": "Must read",
-          "url": "https://us5.forward-to-friend.com/forward"
+          "url": "https://elinkb64.mail.theactionableai.com/ss/c/u001.VH9ztUI_5EhIlHYeBgd71I1IkoHGJpPl2lXXCIdDEpll-lqt47GyLmzb4uaM0mWaxhA3Qrud1z1T1yZ2GZDqCQb9BMLTd5uOaWt9Eoj9MxFhYumr03CU1ZhaDxGT4hy7Lp_SveTmF4cac4qGfZ62pPizb0zzaPpW5AD4dApYf4WrRRVA4LYV0XWhBe8HBsPXNvYFV_j2dbSuVsIv1uPQmjpFeoMRdu70s3W_MgIio73MCbp0XgwkwihTXPSB9o0iubOwiH7gwXDJ9nEG-Y8steDW8p8qHuTujTBo9ixL-kBfR2g1vyBQQggowb-zEC7IHSaCqYEqxgSDQPxlLHcI-8gWd857d73XaZJgx1R_ChXJyT3D-RalQyMSaYL3tyMsat29Kd_PbSUC7UHvkw_ICNgwaoq2x2lioTjdRpx5O92rEyk_f1bwze-B4Vm9qcTbfxmAB5mxRmtdPiRIzOo2ChSz5rLi-9yrME7otzm8fQT_xb1dWqfOSknmWkK2aY3W_3fQMh-AhpBxgVkpel5WoYMbLzmNcPjmwH8Ggb2zoSxZ_0QGviz4Jhv6OOGMXVYxXHnAAaVhp6SRJKnl7DUodw6xOKs8bgmuVfGP7hTttJUaAKAMA5CA4DvA2kpyIshiLd9D6DgwdOMBe2g7VTDNFWjLU_RA4Xuxd7Rknnew38B7rhxT9hUiBQDACW4I1wauSRv1dkxutVUPyQz9qLtwiUuLUGjYT2V885WWiY6hhrPBSRE1tZTad-F-1NNiOLbPzGbXEJolRaGzroqnP1LykQ5AGza8Vhi385rp--QmTsCbI1-0ekcZY_oFMdBxj8Zh/4ub/Nu9ouKQBRludEfDY-rByaw/h0/h001.fDEcGL9nwq9_vgmrx70TcMj3dYU0I_d_PLT87XFycKo"
         }
       ],
       "further": [
         [
-          "what people are building",
+          "no more flicker",
           "Actionable AI",
-          "https://elinkb64.mail.theactionableai.com/ss/c/u001.6sW-Zb5MPa1tCpDadcg7OfvskU5fYRcIeh3ZY8lFa7I0-4SDNq9WJmDgMl4XCeGQ4u7NaHnwKkBdx0rn7QyQuRwC60HQgkI-RTU-Rk8wWC7LtFH621FSNPz9NK3w1xH6Wc-fDtcGAWBXeocG2R6w4AbPlKxDKfMt8qrJofzTxzT_adXeLkjlxJlVk9wX3CZdrkcbnwepdNeREL2JTuaaew/4u9/SGJppqt0TjO0z6o1IaW-jA/h0/h001.L03osV6w-ebAPUW2O6QIzyRvOzstWJmmD_jS0EndZr8"
+          "https://elinkb64.mail.theactionableai.com/ss/c/u001.VH9ztUI_5EhIlHYeBgd71I1IkoHGJpPl2lXXCIdDEpnSL1Oqly0Sa-dl3OhK59omaRC_uw0ZuIa39PId8l_T-FeUkaLbXtazS4ZU1iKWCPRbs_v5wv6jQqqjdA_VmXoqvz_3gS0fusCRBBxULenJPJ_H5MRak4MdCqJVlJ40xPVYTE6EkqQpR209QJNExFE_VFg-MlSk33ojBrhuN-iJN6w57svehBYB80YpiC8wyM_Xj1HbveolatdbpkaYPZdF5-Qaq3i71gzLb_oxnf-oHT0zODiX5l1V3Z0wxrC7DmDM49VqCyNKLhvOcJ_jFtKjx-aBT-_AJJCTXUgWup_BhyvugnPJdZyCNofM6xWdR8ab0_MvH_ywYJyyinzXBdXA-Ms87-2eMrMCluvkjHEe7i-akn6RS73J0JwB41g97UbxV8F4ODwEDlJMXvbDeA_OZHs-W3k_uGCyBeA7OwamE5rGP8dV6OBUgk6qbIV0dvZSQdy0BxmKgLHo7XkUUVLR-sm5jY_Pi-VCYsCFdLdLe7wq1Y8nmVs_Dd9PeGqZFrvtUKkcVDNxVT1oJIIZyCCXU8U3Nok_PiLROagpAX0L61LEIbq4Qo3AdL7md2us-Jkk6LyFL8NHJNsuS_i28A0MhNIwjMHmJgP5XslHCraVH9j-qfFZYjk86Ol6J9jl1Xf5gW6Mgr-0pKIPIV4ACZLFI99X6g1XN3BT19kf5jzx_hEENqSQEidaL-rsDiRRE-LGM8NkSGS38W164geTAJ2XQkpqBbVdMxxAU43b3ZR28jbN4dYM4Hu8ao3_6MCB6YlqGzgrTp3ga063WR6Rn1WCwP_r4ciJfrtNJKBMmIoRlA/4ua/fxPCEzofRLKqiXFTgNDnww/h0/h001.5DNwleLf5LA4aNJBqAYshWHU-ao48IWG0cyfNiGn0no"
+        ],
+        [
+          "New skills: /mobile-native and /write-swift",
+          "Emil (aiforui.dev)",
+          "https://fonts.googleapis.com/css"
         ]
       ]
     },
     {
       "id": "02",
-      "slug": "are-we-overrating-pattern-copying-and-underrating-first-principl",
+      "slug": "if-ai-products-vary-in-speed-and-output-quality-what-should-user",
       "category": "UX",
       "tags": [
         "UX"
       ],
-      "aiLens": false,
-      "question": "Are we overrating pattern copying and underrating first principles in UX work?",
-      "answer": "Yes. Reusing familiar interfaces can help with speed, but it does not teach judgment, and it can cap originality and fit for the actual problem.",
-      "why": "Anthony Tseng explicitly argues that copying Google or Apple teaches surface imitation rather than UX, and the article on the rules versus the eye pushes designers back to fundamentals. This is a reminder that frameworks and perception matter more than stylistic borrowing.",
+      "aiLens": true,
+      "question": "If AI products vary in speed and output quality, what should users be told so they do not mistake normal variance for failure?",
+      "answer": "Teams need to set expectations explicitly. When an interface explains timing and output conditions, it protects trust better than pretending every run should feel identical.",
+      "why": "Source 17bfa0efc45587bc argues that unexplained variance, not variance itself, is what breaks trust in AI experiences. That is a concrete UX problem, not an abstract AI debate.",
       "counts": {
-        "total": 2,
-        "newsletters": 2,
-        "web": 0
+        "total": 1,
+        "newsletters": 0,
+        "web": 1
       },
-      "firstSeen": "07:15 cet",
+      "firstSeen": "13:22 cet",
       "signals": [
         {
-          "source": "Substack",
-          "title": "Anthony Tseng posted new notes",
-          "kind": "Newsletter",
-          "timing": "07:15",
-          "happened": "Anthony Tseng posted a note saying many designers start by copying big-brand UI, but that this does not teach what UX is. He argues for UX standards and principles grounded in human perception and cognition instead.",
-          "changes": "The value shift is from **surface imitation to durable judgment**. Copying may get a screen out the door, but it leaves teams dependent on borrowed patterns instead of helping them understand why interfaces work in the first place.",
-          "verdict": "Read",
-          "url": "https://substack.com/@uxmovement/note/c-339465063"
-        },
-        {
-          "source": "HeyDesigner",
-          "title": "Designing with AI",
-          "kind": "Newsletter",
-          "timing": "13:46",
-          "happened": "HeyDesigner surfaced a piece saying you can hand AI the rules, but not the eye. The framing is that designers should study fundamentals until they can see them in their own work.",
-          "changes": "That is a useful correction to tool hype because it treats taste and perception as learnable practice, not magic. The tension is that AI can accelerate output, but it cannot replace the trained eye that decides whether the output is any good.",
-          "verdict": "Read",
-          "url": "https://us5.forward-to-friend.com/forward"
+          "source": "UX Collective",
+          "title": "The variance problem in AI products",
+          "kind": "Web",
+          "timing": "13:22",
+          "happened": "A UX case study described an AI transcription product that returned the same length clip in two seconds one week and six seconds the next, even though nothing changed in the system. The user assumed the product was broken because the first run set the expectation.",
+          "changes": "The design lesson is that **timing is part of the product promise**, especially when AI outputs are probabilistic or workload-dependent. If interfaces do not explain why a result differs, users fill the gap with distrust, so disclosure and progress messaging become core UX requirements rather than polish.",
+          "verdict": "Must read",
+          "url": "https://uxdesign.cc/the-variance-problem-in-ai-products-62a58272564c"
         }
       ],
       "further": [
         [
-          "When AI-generated output is effortless, experience is your edge",
-          "adobe.design",
-          "https://adobe.design/ideas/when-ai-generated-output-is-effortless-experience-is-your-edge"
+          "New skills: /mobile-native and /write-swift",
+          "Emil (aiforui.dev)",
+          "https://fonts.googleapis.com/css"
+        ],
+        [
+          "no more flicker",
+          "Actionable AI",
+          "https://elinkb64.mail.theactionableai.com/ss/c/u001.VH9ztUI_5EhIlHYeBgd71I1IkoHGJpPl2lXXCIdDEpnSL1Oqly0Sa-dl3OhK59omaRC_uw0ZuIa39PId8l_T-FeUkaLbXtazS4ZU1iKWCPRbs_v5wv6jQqqjdA_VmXoqvz_3gS0fusCRBBxULenJPJ_H5MRak4MdCqJVlJ40xPVYTE6EkqQpR209QJNExFE_VFg-MlSk33ojBrhuN-iJN6w57svehBYB80YpiC8wyM_Xj1HbveolatdbpkaYPZdF5-Qaq3i71gzLb_oxnf-oHT0zODiX5l1V3Z0wxrC7DmDM49VqCyNKLhvOcJ_jFtKjx-aBT-_AJJCTXUgWup_BhyvugnPJdZyCNofM6xWdR8ab0_MvH_ywYJyyinzXBdXA-Ms87-2eMrMCluvkjHEe7i-akn6RS73J0JwB41g97UbxV8F4ODwEDlJMXvbDeA_OZHs-W3k_uGCyBeA7OwamE5rGP8dV6OBUgk6qbIV0dvZSQdy0BxmKgLHo7XkUUVLR-sm5jY_Pi-VCYsCFdLdLe7wq1Y8nmVs_Dd9PeGqZFrvtUKkcVDNxVT1oJIIZyCCXU8U3Nok_PiLROagpAX0L61LEIbq4Qo3AdL7md2us-Jkk6LyFL8NHJNsuS_i28A0MhNIwjMHmJgP5XslHCraVH9j-qfFZYjk86Ol6J9jl1Xf5gW6Mgr-0pKIPIV4ACZLFI99X6g1XN3BT19kf5jzx_hEENqSQEidaL-rsDiRRE-LGM8NkSGS38W164geTAJ2XQkpqBbVdMxxAU43b3ZR28jbN4dYM4Hu8ao3_6MCB6YlqGzgrTp3ga063WR6Rn1WCwP_r4ciJfrtNJKBMmIoRlA/4ua/fxPCEzofRLKqiXFTgNDnww/h0/h001.5DNwleLf5LA4aNJBqAYshWHU-ao48IWG0cyfNiGn0no"
         ]
       ]
     },
     {
       "id": "03",
-      "slug": "do-creation-forms-need-a-carry-over-model-to-stop-re-entering-th",
+      "slug": "why-are-teams-still-treating-repetitive-form-entry-as-acceptable",
       "category": "Process",
       "tags": [
         "Process"
       ],
       "aiLens": false,
-      "question": "Do creation forms need a carry-over model to stop re-entering the same data over and over?",
-      "answer": "Yes, for repeated workflows. Carry-over can reduce friction and repetitive effort, but only if defaults are transparent and easy to override.",
-      "why": "UX Movement is focusing on repeated creation flows where users re-enter the same team members and settings every week. That points to a practical process fix rather than a visual polish issue.",
+      "question": "Why are teams still treating repetitive form entry as acceptable when small defaults could remove so much work?",
+      "answer": "Because many products still design the first use case and ignore repeat use. Carry-over defaults are a low-cost way to reduce friction without redesigning the whole flow.",
+      "why": "Source 1980f7295c6522fd focuses on creation forms and shows that repeated setup is often the real cost, not the act of creating itself.",
       "counts": {
         "total": 1,
         "newsletters": 1,
@@ -119,13 +119,18 @@
           "title": "How to Make Creation Forms Faster to Fill Out",
           "kind": "Newsletter",
           "timing": "14:49",
-          "happened": "UX Movement published a piece on making creation forms faster by using a carry-over toggle. The example is a dashboard where users repeatedly create similar items and should not have to reselect the same team members and settings each time.",
-          "changes": "The design opportunity is to remove repetitive work at the point where users feel it most. The tradeoff is that carry-over must stay legible and reversible, otherwise the very shortcut meant to save effort can create hidden mistakes.",
-          "verdict": "Must read",
+          "happened": "UX Movement published guidance on making creation forms faster by carrying over values users enter repeatedly, like invited team members and settings. The article argues that frequent creators should not have to rebuild the same form every week.",
+          "changes": "This is a reminder that process improvements often live in tiny product decisions, not big redesigns. The upside is clear efficiency, but the real test is whether teams will preserve these defaults without creating hidden state or stale inputs that users later have to unwind.",
+          "verdict": "Read",
           "url": "https://uxmovement.substack.com/archive"
         }
       ],
       "further": [
+        [
+          "Nobody starts as an accessibility expert",
+          "UX Collective",
+          "https://uxdesign.cc/nobody-starts-as-an-accessibility-expert-6a16e8a99960"
+        ],
         [
           "The variance problem in AI products",
           "UX Collective",
@@ -135,15 +140,15 @@
     },
     {
       "id": "04",
-      "slug": "as-ai-absorbs-junior-level-tasks-who-is-responsible-for-training",
+      "slug": "is-the-field-finally-admitting-that-design-culture-depends-on-me",
       "category": "Culture",
       "tags": [
         "Culture"
       ],
-      "aiLens": true,
-      "question": "As AI absorbs junior-level tasks, who is responsible for training the next generation of designers?",
-      "answer": "Design leaders are. If teams keep optimizing for seniors only, they will protect short-term output while starving the field of future judgment.",
-      "why": "The UX Collective essay argues that AI has absorbed starter work and that the field is stopping the habit of growing its own people. This is a culture question as much as a hiring one, because mentorship becomes a strategic investment, not a nice-to-have.",
+      "aiLens": false,
+      "question": "Is the field finally admitting that design culture depends on mentoring juniors, not just hiring seniors with polished portfolios?",
+      "answer": "Yes, and the pressure is coming from AI as much as from hiring economics. If entry-level work disappears, the industry has to create other ways for people to learn judgment.",
+      "why": "Source 14bc75ba8baccb7d makes the case that junior hiring has thinned while AI absorbs starter tasks, which threatens the pipeline that produces senior designers later.",
       "counts": {
         "total": 1,
         "newsletters": 0,
@@ -156,17 +161,22 @@
           "title": "In the age of AI, the UX field survives on leaders who cultivate juniors",
           "kind": "Web",
           "timing": "23:27",
-          "happened": "UX Collective published an essay arguing that AI has taken over much of the work juniors used to learn from, while hiring increasingly favors senior designers. The piece says the field is becoming less willing to make the long bet required to develop judgment.",
-          "changes": "The consequence is a **shrinking pipeline of future seniors** even as demand for experience rises. Teams may feel safer hiring only proven talent, but that safety comes at the cost of mentorship, resilience, and the slow accumulation of judgment.",
+          "happened": "A UX Collective essay argued that AI is removing the starter work juniors used to learn on, while hiring managers increasingly favor senior designers. The piece frames this as a cultural break in how the field grows its own talent.",
+          "changes": "The shift is not just a staffing preference, it is a **pipeline problem** that will starve teams of future judgment if leaders do nothing. Design organizations may save time by hiring only seniors, but they risk hollowing out the apprenticeship model that keeps the discipline resilient.",
           "verdict": "Must read",
           "url": "https://uxdesign.cc/in-the-age-of-ai-the-ux-field-survives-on-leaders-who-cultivate-juniors-595c548f1d70"
         }
       ],
       "further": [
         [
-          "Designing with AI",
-          "HeyDesigner",
-          "https://us5.forward-to-friend.com/forward"
+          "Why the best resume may be the wrong resume for a design team",
+          "UX Collective",
+          "https://uxdesign.cc/why-the-best-resume-may-be-the-wrong-resume-for-a-design-team-c019b8568662"
+        ],
+        [
+          "What the Bible got right about AI",
+          "UX Collective",
+          "https://uxdesign.cc/what-the-bible-got-right-about-ai-340d32b82b5c"
         ]
       ]
     }
