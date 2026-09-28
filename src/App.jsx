@@ -581,6 +581,16 @@ export function App() {
   }, []);
 
   useEffect(() => {
+    const isToolbox = route.name === "toolbox";
+    document.documentElement.classList.toggle("toolbox-route", isToolbox);
+    document.body.classList.toggle("toolbox-route", isToolbox);
+    return () => {
+      document.documentElement.classList.remove("toolbox-route");
+      document.body.classList.remove("toolbox-route");
+    };
+  }, [route.name]);
+
+  useEffect(() => {
     const controller = new AbortController();
     fetch(`${import.meta.env.BASE_URL}data/latest.json`, { cache: "no-store", signal: controller.signal })
       .then((response) => response.ok ? response.json() : Promise.reject(new Error(`edition ${response.status}`)))

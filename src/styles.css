@@ -35,6 +35,7 @@
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; background: var(--canvas); }
 body { margin: 0; min-width: 320px; min-height: 100vh; color: var(--paper); background: var(--canvas); -webkit-font-smoothing: antialiased; }
+html.toolbox-route, body.toolbox-route { background: var(--white); }
 button, input, select { font: inherit; font-family: var(--font-interface); }
 button { color: inherit; }
 button, a { -webkit-tap-highlight-color: transparent; }

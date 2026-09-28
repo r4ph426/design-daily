@@ -77,7 +77,7 @@ Today, Archive, and Toolbox use one editorial opening-section system. Page color
 
 ### Toolbox
 
-- White canvas with ink typography and subtle neutral grey/black hairline rules. Navigation remains white and carries state through its persistent underline. Toolbox uses no forest or sage; yellow identifies selected filters and verdict highlights.
+- White full-viewport canvas, including the gutters outside the capped editorial shell, with ink typography and subtle neutral grey/black hairline rules. Navigation remains white and carries state through its persistent underline. Toolbox uses no forest or sage; yellow identifies selected filters and verdict highlights.
 - Coral appears only on the `Add to crawl` action. Toolbox rows do not use coral or AI lens tags.
 - Yellow is a flat rectangular background highlight for `Useful now`, never an underline or rounded badge.
 - Keep two visibly distinct layers: `New this week` for date-bound editorial signals, then `Our toolbox` for the persistent, searchable collection.

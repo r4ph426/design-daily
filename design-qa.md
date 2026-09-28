@@ -80,6 +80,7 @@ The selected source and browser-rendered implementation were opened and inspecte
 - Retained coral only for the shared `Add to crawl` action and contrast-adjusted footer statements.
 - Shortened the shared yellow AI-lens badge label from `AI lens` to `AI` while retaining its robot icon and semantic role.
 - Removed the remaining forest and sage treatments from Toolbox. The brand and status text now use ink, while selected and empty-state filter actions use yellow.
+- Applied the Toolbox light theme to `html` and `body` as well as the capped shell so wide viewports cannot expose forest-colored outer gutters.
 
 ## Required fidelity surfaces
 
