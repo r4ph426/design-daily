@@ -83,7 +83,7 @@ em { font-style: italic; }
 .nav-links a { min-width: 100px; min-height: 52px; display: inline-flex; align-items: center; justify-content: center; padding: 0 18px; border-right: 1px solid var(--grid); color: var(--text-muted); background: transparent; cursor: pointer; font-size: var(--t-label); text-decoration: underline; text-decoration-color: var(--grid-strong); text-decoration-thickness: 1px; text-underline-offset: 6px; transition: color 150ms ease-out, background-color 150ms ease-out; }
 .nav-links a:last-child { border-right: 0; }
 .nav-links a:hover, .nav-links a:focus-visible { color: var(--sage); background: var(--surface-hover); text-decoration-color: var(--sage); }
-.nav-links a.active { color: var(--paper); background: var(--surface-hover); text-decoration-color: var(--sage); }
+.nav-links a.active { color: var(--paper); background: var(--surface-hover); box-shadow: inset 0 -3px 0 var(--sage); font-weight: 600; text-decoration: none; }
 .header-tagline { display: flex; align-items: center; justify-content: flex-end; margin: 0; padding-inline: 20px; color: var(--text-muted); font-family: var(--font-interface); font-size: var(--t-label); line-height: 1.35; text-align: right; }
 .search-field { position: absolute; z-index: 4; top: 18px; right: 64px; width: min(360px, calc(100% - 88px)); }
 .search-field input { width: 100%; min-height: 44px; padding: 0 12px; border: 1px solid var(--sage); color: var(--paper); background: var(--canvas); outline: 0; font-size: var(--t-meta); }
@@ -450,11 +450,11 @@ input:focus-visible { outline: 2px solid var(--yellow); outline-offset: 3px; }
   color: var(--ink);
   background: var(--white);
 }
-.toolbox-shell .brand span { color: var(--ink); }
+.toolbox-shell .brand span { color: var(--coral); }
 .toolbox-shell .topbar-secondary .nav-links a { color: var(--ink); background: var(--white); }
 .toolbox-shell .topbar-secondary .nav-links a:hover,
 .toolbox-shell .topbar-secondary .nav-links a:focus-visible { color: var(--ink); background: var(--surface-hover); text-decoration-color: var(--ink); }
-.toolbox-shell .topbar-secondary .nav-links a.active { color: var(--ink); background: var(--white); text-decoration-color: var(--ink); }
+.toolbox-shell .topbar-secondary .nav-links a.active { color: var(--ink); background: var(--surface-hover); box-shadow: inset 0 -3px 0 var(--ink); font-weight: 600; text-decoration: none; }
 .toolbox-shell :focus-visible { outline-color: var(--ink); box-shadow: 0 0 0 4px var(--yellow); }
 .toolbox-shell .footer-grid { border-color: var(--grid); background: var(--white); }
 .toolbox-shell .footer-grid > * { border-color: var(--grid); }
@@ -497,7 +497,7 @@ input:focus-visible { outline: 2px solid var(--yellow); outline-offset: 3px; }
 .toolbox-type-filters, .toolbox-verdict-filters { display: flex; align-items: flex-start; gap: 3px; padding-left: 22px; }
 .toolbox-type-filters { padding-right: 22px; border-right: 1px solid var(--grid); }
 .toolbox-type-filters button, .toolbox-verdict-filters button, .toolbox-verdict-filters select { min-height: 44px; padding: 0 17px; border: 1px solid var(--grid-strong); border-radius: 0; color: var(--ink); background: transparent; cursor: pointer; font-size: var(--t-meta); }
-.toolbox-type-filters button.selected, .toolbox-verdict-filters button.selected { background: var(--yellow); }
+.toolbox-type-filters button.selected, .toolbox-verdict-filters button.selected { background: var(--sage); }
 .toolbox-verdict-filters { justify-content: flex-end; }
 .toolbox-verdict-filters label { min-width: 126px; }
 .toolbox-verdict-filters select { width: 100%; appearance: auto; }
@@ -531,6 +531,10 @@ input:focus-visible { outline: 2px solid var(--yellow); outline-offset: 3px; }
 .toolbox-empty button { min-height: 44px; padding: 0 14px; border: 1px solid var(--grid-strong); background: var(--yellow); cursor: pointer; }
 
 @media (max-width: 1200px) {
+  .weekly-signal-grid { grid-template-columns: 1fr; }
+  .weekly-signal { min-height: 0; border-right: 0; border-bottom: 1px solid var(--grid); }
+  .weekly-signal:last-child { border-bottom: 0; }
+  .weekly-summary { min-height: 0; }
   .toolbox-controls { grid-template-columns: 1fr; gap: 8px; padding-bottom: 10px; }
   .toolbox-type-filters, .toolbox-verdict-filters { min-height: 44px; padding-left: 0; padding-right: 0; border-right: 0; }
   .toolbox-verdict-filters { justify-content: flex-start; }

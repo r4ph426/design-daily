@@ -49,7 +49,7 @@ The header is one shared component across all routes. Treat it as protected infr
 
 - Row one contains only the brand and current edition date.
 - Row two contains exactly Today, Archive, and Toolbox plus a route-aware editorial descriptor.
-- Every route has one persistent active destination.
+- Every route has one persistent active destination using the same logic: a subtle surface fill, heavier label, and three-pixel inset bottom rule. Today and Archive use sage for the rule; Toolbox uses ink.
 - Search belongs inside Archive. Personal saves remain in the content rows where their meaning is clear; neither appears as a header utility.
 - The full date appears on larger screens. A compact `D Mon YYYY` form preserves the date without colliding with the brand on mobile.
 - Do not add page-specific controls, badges, or one-off treatments to the header.
@@ -77,8 +77,8 @@ Today, Archive, and Toolbox use one editorial opening-section system. Page color
 
 ### Toolbox
 
-- White full-viewport canvas, including the gutters outside the capped editorial shell, with ink typography and subtle neutral grey/black hairline rules. Navigation remains white and carries state through its persistent underline. Toolbox uses no forest or sage; yellow identifies selected filters and verdict highlights.
-- Coral appears only on the `Add to crawl` action. Toolbox rows do not use coral or AI lens tags.
+- White full-viewport canvas, including the gutters outside the capped editorial shell, with ink typography and subtle neutral grey/black hairline rules. The masthead brand uses the exact Tangity coral token, `#FF3318`. Toolbox navigation remains white; its active tab uses a subtle neutral fill, heavier label, and a three-pixel inset ink rule.
+- Sage identifies selected Toolbox filters. Yellow is reserved for verdict highlights and focus, while coral appears on the masthead brand, `Add to crawl` action, and footer claims. Toolbox rows do not use coral or AI lens tags.
 - Yellow is a flat rectangular background highlight for `Useful now`, never an underline or rounded badge.
 - Keep two visibly distinct layers: `New this week` for date-bound editorial signals, then `Our toolbox` for the persistent, searchable collection.
 - Dense evidence and source provenance matter more than marketplace-style promotion.
@@ -87,6 +87,7 @@ Today, Archive, and Toolbox use one editorial opening-section system. Page color
 
 - Maximum shell width: 1600px.
 - Responsive changes occur at 1200px and 720px.
+- At the 1200px tablet breakpoint, stack the three `New this week` signals vertically instead of compressing them into narrow columns.
 - Major regions and content rows use exposed one-pixel hairline borders.
 - Use alignment, scale, and whitespace for hierarchy. Do not add decorative background grids.
 - Avoid rounded SaaS cards, gradients, glass, drop shadows, and oversized filled accent panels.

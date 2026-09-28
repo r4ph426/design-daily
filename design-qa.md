@@ -81,6 +81,8 @@ The selected source and browser-rendered implementation were opened and inspecte
 - Shortened the shared yellow AI-lens badge label from `AI lens` to `AI` while retaining its robot icon and semantic role.
 - Removed the remaining forest and sage treatments from Toolbox. The brand and status text now use ink, while selected and empty-state filter actions use yellow.
 - Applied the Toolbox light theme to `html` and `body` as well as the capped shell so wide viewports cannot expose forest-colored outer gutters.
+- Refined the Toolbox tablet state: the masthead brand uses exact Tangity coral `#FF3318`, weekly signals stack vertically at 1200px, selected filters use sage, and the active Toolbox tab combines a neutral fill with a heavier label and inset ink rule.
+- Unified the shared navigation active state across Today, Archive, and Toolbox: each uses a subtle fill, heavier label, and three-pixel inset rule; the dark routes use sage and Toolbox uses ink.
 
 ## Required fidelity surfaces
 
