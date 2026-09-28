@@ -5,113 +5,11 @@ import {
   Check,
   MagnifyingGlass,
 } from "@phosphor-icons/react";
+import toolboxData from "../data/toolbox.json";
 
-const weeklySignals = [
-  {
-    id: "01",
-    title: "MCP Apps SDK",
-    verdict: "Useful now",
-    summary: "A new SDK for building and distributing MCP apps across popular tools.",
-    source: "github.com/modelcontextprotocol",
-    url: "https://github.com/modelcontextprotocol",
-  },
-  {
-    id: "02",
-    title: "Interface audit skill",
-    verdict: "Worth trying",
-    summary: "An AI skill that reviews interfaces for usability issues and suggests practical fixes.",
-    source: "github.com/openai",
-    url: "https://github.com/openai",
-  },
-  {
-    id: "03",
-    title: "Design system agent",
-    verdict: "Watching",
-    summary: "An agent that suggests design-system components and flags inconsistencies.",
-    source: "github.com/topics/design-system",
-    url: "https://github.com/topics/design-system",
-  },
-];
-
-const tools = [
-  {
-    id: "01",
-    title: "Figma MCP",
-    type: "MCP",
-    categories: ["UI", "Process"],
-    description: "Connects Figma to AI tools with a clean, permissioned interface for reading designs, extracting context, and making changes in your files. It meaningfully reduces friction for design handoffs and iteration.",
-    verdict: "Useful now",
-    confidence: "High",
-    reviewed: "25 Sep 2026",
-    source: "github.com/figma/mcp",
-    url: "https://github.com/figma/mcp-server-guide",
-    access: "Open source",
-    setup: "10–15 minutes",
-    recommendation: "Stable, well-documented, and already useful in real projects. A strong example of an MCP server designed for designers.",
-  },
-  {
-    id: "02",
-    title: "Accessibility review skill",
-    type: "Skill",
-    categories: ["UX", "Process"],
-    description: "Analyzes designs for accessibility issues, suggests fixes, and explains the reasoning. Helps teams catch problems earlier and build more inclusive products.",
-    verdict: "Worth trying",
-    confidence: "Medium",
-    reviewed: "25 Sep 2026",
-    source: "github.com/openai/accessibility-skill",
-    url: "https://github.com/openai/skills",
-    access: "Requires ChatGPT Plus",
-    setup: "5–10 minutes",
-    recommendation: "A practical way to automate first-pass accessibility checks. Good results, but it still misses some nuanced issues.",
-  },
-  {
-    id: "03",
-    title: "Design QA agent",
-    type: "Agent",
-    categories: ["Process", "Culture"],
-    description: "Reviews designs against your team’s criteria, flags inconsistencies, and suggests improvements. Useful for maintaining quality across large bodies of work.",
-    verdict: "Worth trying",
-    confidence: "Medium",
-    reviewed: "25 Sep 2026",
-    source: "github.com/topics/design-qa",
-    url: "https://github.com/topics/design-qa",
-    access: "Open source",
-    setup: "15–30 minutes",
-    recommendation: "Promising for teams with clear design systems. Still early, but already helpful for spotting common issues.",
-  },
-  {
-    id: "04",
-    title: "Playwright MCP",
-    type: "MCP",
-    categories: ["UI", "Process"],
-    description: "Lets an AI agent inspect and operate browser interfaces through structured accessibility data. Useful for repeatable product checks and prototype walkthroughs.",
-    verdict: "Best practice",
-    confidence: "High",
-    reviewed: "18 Sep 2026",
-    source: "github.com/microsoft/playwright-mcp",
-    url: "https://github.com/microsoft/playwright-mcp",
-    access: "Open source",
-    setup: "10–20 minutes",
-    recommendation: "A dependable bridge between product intent and browser evidence. Keep permissions narrow and make automated actions observable.",
-  },
-  {
-    id: "05",
-    title: "Design critique skill",
-    type: "Skill",
-    categories: ["UI", "Culture"],
-    description: "Turns a team’s critique principles into a reusable review workflow for hierarchy, clarity, consistency, and accessibility.",
-    verdict: "Best practice",
-    confidence: "High",
-    reviewed: "11 Sep 2026",
-    source: "github.com/topics/design-critique",
-    url: "https://github.com/topics/design-critique",
-    access: "Open source",
-    setup: "20–30 minutes",
-    recommendation: "Most useful when the criteria are authored by the team. Treat it as structured critique support, not an automatic design decision.",
-  },
-];
-
-const toolTypes = ["All types", "MCP", "Skill", "Agent"];
+const { weekLabel, weeklySignals, tools } = toolboxData;
+const toolTypes = ["All types", "MCP", "Skill", "Agent", "Tool"];
+const practices = ["All practices", "Taste", "Drafting", "UI sketches", "Flows", "Accessibility", "Review", "Creative exploration", "Pattern research"];
 const verdicts = ["All verdicts", "Useful now", "Worth trying", "Best practice", "Watching"];
 
 function ToolContribution() {
@@ -177,7 +75,7 @@ function ToolRow({ tool, saved, onSave }) {
       <div className="toolbox-tool-id">
         <span>{tool.id}</span>
         <small>{tool.type}</small>
-        <small>{tool.categories.join(" · ")}</small>
+        <small>{tool.practices.join(" · ")}</small>
       </div>
       <div className="toolbox-tool-copy">
         <h3>{tool.title}</h3>
@@ -206,6 +104,7 @@ function ToolRow({ tool, saved, onSave }) {
 export function ToolboxPage() {
   const [query, setQuery] = useState("");
   const [type, setType] = useState("All types");
+  const [practice, setPractice] = useState("All practices");
   const [verdict, setVerdict] = useState("All verdicts");
   const [savedTools, setSavedTools] = useState(() => {
     try { return JSON.parse(localStorage.getItem("design-daily-tool-bookmarks-v1")) || {}; }
@@ -215,13 +114,14 @@ export function ToolboxPage() {
   const visibleTools = useMemo(() => {
     const normalizedQuery = query.trim().toLowerCase();
     return tools.filter((tool) => {
-      const matchesQuery = !normalizedQuery || [tool.title, tool.type, tool.description, tool.verdict, ...tool.categories]
+      const matchesQuery = !normalizedQuery || [tool.title, tool.type, tool.description, tool.verdict, ...tool.categories, ...tool.practices]
         .join(" ").toLowerCase().includes(normalizedQuery);
       const matchesType = type === "All types" || tool.type === type;
+      const matchesPractice = practice === "All practices" || tool.practices.includes(practice);
       const matchesVerdict = verdict === "All verdicts" || tool.verdict === verdict;
-      return matchesQuery && matchesType && matchesVerdict;
+      return matchesQuery && matchesType && matchesPractice && matchesVerdict;
     });
-  }, [query, type, verdict]);
+  }, [query, type, practice, verdict]);
 
   const toggleSave = (id) => {
     setSavedTools((current) => {
@@ -245,7 +145,7 @@ export function ToolboxPage() {
       <section className="toolbox-weekly" id="toolbox-weekly" aria-labelledby="weekly-title">
         <header className="toolbox-weekly-heading">
           <div><p className="toolbox-eyebrow">New this week</p><h2 id="weekly-title">What’s new and sparking our interest</h2></div>
-          <p>Week 39 · 25 Sep 2026</p>
+          <p>{weekLabel}</p>
         </header>
         <div className="weekly-signal-grid">
           {weeklySignals.map((signal) => <WeeklySignal key={signal.id} signal={signal} />)}
@@ -272,11 +172,17 @@ export function ToolboxPage() {
             <button type="button" className={verdict === "Worth trying" ? "selected" : ""} onClick={() => setVerdict(verdict === "Worth trying" ? "All verdicts" : "Worth trying")}>Worth trying</button>
             <button type="button" className={verdict === "Best practice" ? "selected" : ""} onClick={() => setVerdict(verdict === "Best practice" ? "All verdicts" : "Best practice")}>Best practice</button>
           </div>
+          <div className="toolbox-practice-filters" aria-label="Design practice">
+            <span>Use in practice</span>
+            <div>
+              {practices.map((item) => <button key={item} type="button" className={practice === item ? "selected" : ""} aria-pressed={practice === item} onClick={() => setPractice(item)}>{item}</button>)}
+            </div>
+          </div>
         </div>
         <p className="toolbox-results" aria-live="polite">{visibleTools.length} {visibleTools.length === 1 ? "tool" : "tools"}</p>
         <div className="toolbox-tool-list">
           {visibleTools.map((tool) => <ToolRow key={tool.id} tool={tool} saved={Boolean(savedTools[tool.id])} onSave={() => toggleSave(tool.id)} />)}
-          {!visibleTools.length && <div className="toolbox-empty"><h3>No tools match yet.</h3><p>Try a broader search or clear one of the filters.</p><button type="button" onClick={() => { setQuery(""); setType("All types"); setVerdict("All verdicts"); }}>Clear filters</button></div>}
+          {!visibleTools.length && <div className="toolbox-empty"><h3>No tools match yet.</h3><p>Try a broader search or clear one of the filters.</p><button type="button" onClick={() => { setQuery(""); setType("All types"); setPractice("All practices"); setVerdict("All verdicts"); }}>Clear filters</button></div>}
         </div>
       </section>
 

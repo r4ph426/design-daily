@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "practices": [
+    "Taste",
+    "Drafting",
+    "UI sketches",
+    "Flows",
+    "Accessibility",
+    "Review",
+    "Creative exploration",
+    "Pattern research"
+  ],
+  "knownSources": [
+    "https://github.com/dickwu/apple-design-skill",
+    "https://github.com/emilkowalski/skills",
+    "https://github.com/nateherkai/scroll-craft",
+    "https://mobbin.com/mcp",
+    "https://savee.com/mcp/",
+    "https://screensdesign.com/",
+    "https://www.cosmos.so/",
+    "https://ploy.ai/",
+    "https://www.raylight.app/",
+    "https://geometric-art.com/en/pro",
+    "https://www.canva.dev/docs/apps/mcp/",
+    "https://github.com/canva-sdks/canva-skills",
+    "https://developers.pinterest.com/about-pinterest-mcp/",
+    "https://github.com/muzimu217/ui-design-agent-kit",
+    "https://github.com/ayangabryl/seenry-skills"
+  ],
+  "githubQueries": [
+    { "label": "Design MCPs", "query": "mcp design ux ui in:name,description,readme" },
+    { "label": "Designer skills", "query": "agent skill design in:name,description,readme" },
+    { "label": "Interface review", "query": "design review accessibility agent skill in:name,description,readme" },
+    { "label": "Creative tooling", "query": "creative coding design tool in:name,description,readme" },
+    { "label": "Taste and art direction", "query": "design motion branding presentation skill in:name,description,readme" },
+    { "label": "Inspiration MCPs", "query": "mcp inspiration boards creative in:name,description,readme" }
+  ]
+}

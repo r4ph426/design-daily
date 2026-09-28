@@ -1,0 +1,53 @@
+name: Refresh toolbox candidates
+
+on:
+  schedule:
+    - cron: "37 4 * * 1"
+      timezone: "Europe/Berlin"
+  workflow_dispatch:
+
+concurrency:
+  group: design-daily-toolbox
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v6
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Refresh the candidate queue
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: pnpm run crawl:toolbox
+
+      - name: Validate the curated toolbox
+        run: pnpm run test:toolbox
+
+      - name: Save candidates for editorial review
+        run: |
+          git config user.name "design-daily bot"
+          git config user.email "design-daily-bot@users.noreply.github.com"
+          git add data/toolbox-candidates.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Refresh toolbox candidates"
+            git push
+          fi

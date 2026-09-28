@@ -1,0 +1,1171 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-28T19:28:16.322Z",
+  "editorialStatus": "Candidate queue only. Review in Codex before adding to the published toolbox.",
+  "practices": [
+    "Taste",
+    "Drafting",
+    "UI sketches",
+    "Flows",
+    "Accessibility",
+    "Review",
+    "Creative exploration",
+    "Pattern research"
+  ],
+  "queries": [
+    "Design MCPs",
+    "Designer skills",
+    "Interface review",
+    "Creative tooling",
+    "Taste and art direction",
+    "Inspiration MCPs"
+  ],
+  "discoveryErrors": [],
+  "monitoredSources": [
+    {
+      "url": "https://github.com/dickwu/apple-design-skill",
+      "status": "Available",
+      "finalUrl": "https://github.com/dickwu/apple-design-skill",
+      "title": "GitHub - dickwu/apple-design-skill: Cross-platform UI/UX design reviewer based on Apple HIG. Works with Flutter, Tauri, Electron, React Native. Compatible with Claude Code, Cursor, Codex. · GitHub",
+      "description": "Cross-platform UI/UX design reviewer based on Apple HIG. Works with Flutter, Tauri, Electron, React Native. Compatible with Claude Code, Cursor, Codex. - dickwu/apple-design-skill"
+    },
+    {
+      "url": "https://github.com/emilkowalski/skills",
+      "status": "Available",
+      "finalUrl": "https://github.com/emilkowalski/skills",
+      "title": "GitHub - emilkowalski/skills: Skills for Designers and Engineers. · GitHub",
+      "description": "Skills for Designers and Engineers. Contribute to emilkowalski/skills development by creating an account on GitHub."
+    },
+    {
+      "url": "https://github.com/nateherkai/scroll-craft",
+      "status": "Available",
+      "finalUrl": "https://github.com/nateherkai/scroll-craft",
+      "title": "GitHub - nateherkai/scroll-craft: An agent skill for building premium, immersive, scroll-driven websites. Works with Codex, Claude Code, and other coding agents. Also available as a Claude Code plugin. · GitHub",
+      "description": "An agent skill for building premium, immersive, scroll-driven websites. Works with Codex, Claude Code, and other coding agents. Also available as a Claude Code plugin. - nateherkai/scroll-craft"
+    },
+    {
+      "url": "https://mobbin.com/mcp",
+      "status": "Check failed",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://savee.com/mcp/",
+      "status": "Check failed",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://screensdesign.com/",
+      "status": "Available",
+      "finalUrl": "https://screensdesign.com/",
+      "title": "ScreensDesign: App Design Library &amp; AI Screen Generator",
+      "description": "Research real iOS app screens, onboarding flows, paywalls, and revenue-backed patterns, then generate app screens from proven mobile design examples."
+    },
+    {
+      "url": "https://www.cosmos.so/",
+      "status": "Check failed",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://ploy.ai/",
+      "status": "Check failed",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://www.raylight.app/",
+      "status": "Check failed",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://geometric-art.com/en/pro",
+      "status": "Check failed",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://www.canva.dev/docs/apps/mcp/",
+      "status": "Check failed",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://github.com/canva-sdks/canva-skills",
+      "status": "Available",
+      "finalUrl": "https://github.com/canva-sdks/canva-skills",
+      "title": "GitHub - canva-sdks/canva-skills: Ready-to-use Canva Skills that improve creative workflows using the Canva Connector. · GitHub",
+      "description": "Ready-to-use Canva Skills that improve creative workflows using the Canva Connector. - canva-sdks/canva-skills"
+    },
+    {
+      "url": "https://developers.pinterest.com/about-pinterest-mcp/",
+      "status": "Check failed",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://github.com/muzimu217/ui-design-agent-kit",
+      "status": "Available",
+      "finalUrl": "https://github.com/muzimu217/ui-design-agent-kit",
+      "title": "GitHub - muzimu217/ui-design-agent-kit: UI Design Agent Kit: prompt kit for a UI/UX agent with spring physics, tool routing, design contract, and evidence-based verification. · GitHub",
+      "description": "UI Design Agent Kit: prompt kit for a UI/UX agent with spring physics, tool routing, design contract, and evidence-based verification. - muzimu217/ui-design-agent-kit"
+    },
+    {
+      "url": "https://github.com/ayangabryl/seenry-skills",
+      "status": "Available",
+      "finalUrl": "https://github.com/ayangabryl/seenry-skills",
+      "title": "GitHub - ayangabryl/seenry-skills: Curated agent skills for Seenry website, motion, branding and presentation research · GitHub",
+      "description": "Curated agent skills for Seenry website, motion, branding and presentation research - ayangabryl/seenry-skills"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "github:VoltAgent/awesome-openclaw-skills",
+      "name": "awesome-openclaw-skills",
+      "fullName": "VoltAgent/awesome-openclaw-skills",
+      "description": "The awesome collection of OpenClaw skills. 5,400+ skills filtered and categorized from the official OpenClaw Skills Registry.🦞",
+      "url": "https://github.com/VoltAgent/awesome-openclaw-skills",
+      "source": "GitHub search",
+      "discoveredThrough": "Inspiration MCPs",
+      "topics": [
+        "agent-skills",
+        "awesome",
+        "awesome-list",
+        "awesome-lists",
+        "clawd",
+        "clawdbot",
+        "clawdbot-skill",
+        "clawdhub",
+        "moltbot",
+        "moltbot-skills",
+        "openclaw",
+        "openclaw-skills"
+      ],
+      "stars": 52850,
+      "updatedAt": "2026-09-28T18:14:04Z",
+      "suggestedType": "Skill",
+      "suggestedPractices": [
+        "Creative exploration"
+      ],
+      "relevanceScore": 27,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:scenario-labs/skills",
+      "name": "skills",
+      "fullName": "scenario-labs/skills",
+      "description": "Get production-ready images, video, audio, and 3D from any AI agent: skills that pick the right model, price before spending, and keep characters and brands consistent through the Scenario MCP, plus expert teams that drive Blender, Maya, ZBrush, Unreal, and Unity.",
+      "url": "https://github.com/scenario-labs/skills",
+      "source": "GitHub search",
+      "discoveredThrough": "Inspiration MCPs",
+      "topics": [
+        "3d-generation",
+        "agent-skills",
+        "blender",
+        "claude-code",
+        "claude-skills",
+        "codex",
+        "game-assets",
+        "game-development",
+        "gamedev",
+        "generative-ai",
+        "image-generation",
+        "maya",
+        "mcp",
+        "model-context-protocol",
+        "scenario",
+        "skills-sh",
+        "unity",
+        "unreal-engine",
+        "video-generation",
+        "zbrush"
+      ],
+      "stars": 676,
+      "updatedAt": "2026-09-28T18:30:35Z",
+      "suggestedType": "MCP",
+      "suggestedPractices": [
+        "Drafting",
+        "Creative exploration"
+      ],
+      "relevanceScore": 27,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:Correia-jpv/fucking-design-resources-for-developers",
+      "name": "fucking-design-resources-for-developers",
+      "fullName": "Correia-jpv/fucking-design-resources-for-developers",
+      "description": "Curated list of design and UI resources from stock photos, web templates, CSS frameworks, UI libraries, tools and much more. With repository stars⭐ and forks🍴",
+      "url": "https://github.com/Correia-jpv/fucking-design-resources-for-developers",
+      "source": "GitHub search",
+      "discoveredThrough": "Inspiration MCPs",
+      "topics": [
+        "css",
+        "css-framework",
+        "design",
+        "design-system",
+        "design-thinking",
+        "design-tools",
+        "ui",
+        "ui-components",
+        "ui-design",
+        "ui-library",
+        "uikit",
+        "web-template",
+        "webdesign",
+        "webdesigner"
+      ],
+      "stars": 20,
+      "updatedAt": "2026-09-28T16:49:57Z",
+      "suggestedType": "Tool",
+      "suggestedPractices": [
+        "Taste",
+        "Pattern research",
+        "UI sketches"
+      ],
+      "relevanceScore": 27,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:dembrandt/dembrandt",
+      "name": "dembrandt",
+      "fullName": "dembrandt/dembrandt",
+      "description": "Extract any website’s design system into tokens in seconds: logo, colors, typography, borders & more. One command.",
+      "url": "https://github.com/dembrandt/dembrandt",
+      "source": "GitHub search",
+      "discoveredThrough": "Design MCPs",
+      "topics": [
+        "brand-audits",
+        "claude-code",
+        "cli",
+        "css",
+        "design-engineering",
+        "design-md",
+        "design-ops",
+        "design-systems",
+        "design-to-code",
+        "design-tokens",
+        "developer-experience",
+        "dtcg",
+        "mcp",
+        "nodejs",
+        "open-source",
+        "playwright",
+        "reverse-engineering",
+        "tailwind-css",
+        "token-drift",
+        "ui-audit"
+      ],
+      "stars": 3581,
+      "updatedAt": "2026-09-28T19:27:15Z",
+      "suggestedType": "MCP",
+      "suggestedPractices": [
+        "Review",
+        "UI sketches",
+        "Drafting"
+      ],
+      "relevanceScore": 24,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:exxrawrrr/nyobakantorai",
+      "name": "nyobakantorai",
+      "fullName": "exxrawrrr/nyobakantorai",
+      "description": "Local-first, human-governed multi-agent office with evidence-gated orchestration, explicit approval gates, and fail-closed runtime adapters.",
+      "url": "https://github.com/exxrawrrr/nyobakantorai",
+      "source": "GitHub search",
+      "discoveredThrough": "Inspiration MCPs",
+      "topics": [
+        "agent-office",
+        "agent-orchestration",
+        "ai-agents",
+        "ai-safety",
+        "hermes",
+        "hermes-agent",
+        "human-in-the-loop",
+        "javascript",
+        "local-first",
+        "multi-agent",
+        "pixel-agents",
+        "python",
+        "workflow"
+      ],
+      "stars": 0,
+      "updatedAt": "2026-09-28T17:35:22Z",
+      "suggestedType": "Agent",
+      "suggestedPractices": [
+        "Flows"
+      ],
+      "relevanceScore": 24,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:karthikrshet/Career-Agents",
+      "name": "Career-Agents",
+      "fullName": "karthikrshet/Career-Agents",
+      "description": "The Open-Source AI Career Operating System. 167 Specialized AI Agents across 19 Divisions, Spoken Voice Lab (27 Languages), AI job search ,ATS Resume Studio, FAANG Interview Tracks, GitHub Portfolio Auditor, Model Context Protocol (MCP) Server, and Career Knowledge Graph.",
+      "url": "https://github.com/karthikrshet/Career-Agents",
+      "source": "GitHub search",
+      "discoveredThrough": "Design MCPs",
+      "topics": [
+        "ai-agents",
+        "anthropic",
+        "ats-score",
+        "career",
+        "career-agents",
+        "career-copilot",
+        "career-development",
+        "career-intelligence",
+        "chatgpt",
+        "claude",
+        "codex",
+        "developer-tools",
+        "faang-interviews",
+        "interview-prep",
+        "interview-preparation",
+        "job-search",
+        "llm-agents",
+        "mcp",
+        "open-source",
+        "resume-builder"
+      ],
+      "stars": 53,
+      "updatedAt": "2026-09-28T19:23:38Z",
+      "suggestedType": "MCP",
+      "suggestedPractices": [
+        "Review",
+        "Drafting"
+      ],
+      "relevanceScore": 21,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:marcusquinn/aidevops",
+      "name": "aidevops",
+      "fullName": "marcusquinn/aidevops",
+      "description": "Vibe-Coding is easy. DevOps is hard. OpenCode & Git token-efficient AI agent automation for your app, business, and personal development. Opinionated tools, services, CLI & API stack for speed, security, and 24/7 results. Open-source first. SOTA everything. The best AI harness for GitHub & teamwork.",
+      "url": "https://github.com/marcusquinn/aidevops",
+      "source": "GitHub search",
+      "discoveredThrough": "Design MCPs",
+      "topics": [
+        "agents",
+        "agents-md",
+        "ai",
+        "ai-agents",
+        "ai-assistant",
+        "ai-assistants",
+        "ai-assisted-development",
+        "ai-code-review",
+        "ai-coding",
+        "ai-dev-ops",
+        "ai-devops",
+        "ai-system-admin",
+        "claude",
+        "devops",
+        "devops-tools",
+        "git-workflow",
+        "git-worktrees",
+        "opencode",
+        "opencode-plugin"
+      ],
+      "stars": 403,
+      "updatedAt": "2026-09-28T19:19:27Z",
+      "suggestedType": "Agent",
+      "suggestedPractices": [
+        "Flows",
+        "Review",
+        "Drafting"
+      ],
+      "relevanceScore": 15,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:cathrynlavery/diagram-design",
+      "name": "diagram-design",
+      "fullName": "cathrynlavery/diagram-design",
+      "description": "Editorial diagram design for Claude Code, Codex, and Pi. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+      "url": "https://github.com/cathrynlavery/diagram-design",
+      "source": "GitHub search",
+      "discoveredThrough": "Interface review",
+      "topics": [
+        "agent-skills",
+        "claude-code",
+        "codex",
+        "data-visualization",
+        "diagrams",
+        "drawio",
+        "mermaid",
+        "svg"
+      ],
+      "stars": 42660,
+      "updatedAt": "2026-09-28T19:26:52Z",
+      "suggestedType": "Skill",
+      "suggestedPractices": [
+        "Taste",
+        "Drafting"
+      ],
+      "relevanceScore": 12,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:manak-debug/claude-skills",
+      "name": "claude-skills",
+      "fullName": "manak-debug/claude-skills",
+      "description": "Personal backup: awesome-claude-skills + Remotion skills",
+      "url": "https://github.com/manak-debug/claude-skills",
+      "source": "GitHub search",
+      "discoveredThrough": "Inspiration MCPs",
+      "topics": [],
+      "stars": 0,
+      "updatedAt": "2026-09-28T18:49:25Z",
+      "suggestedType": "Skill",
+      "suggestedPractices": [
+        "Creative exploration"
+      ],
+      "relevanceScore": 12,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:utkarshcse2026/claude-code",
+      "name": "claude-code",
+      "fullName": "utkarshcse2026/claude-code",
+      "description": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
+      "url": "https://github.com/utkarshcse2026/claude-code",
+      "source": "GitHub search",
+      "discoveredThrough": "Designer skills",
+      "topics": [
+        "claude",
+        "claude-ai",
+        "claude-code",
+        "claude-code-skill",
+        "claude-desktop",
+        "claude-leak",
+        "claude-skills",
+        "cluade-code-leaked"
+      ],
+      "stars": 0,
+      "updatedAt": "2026-09-28T19:23:57Z",
+      "suggestedType": "Skill",
+      "suggestedPractices": [
+        "Flows",
+        "Drafting"
+      ],
+      "relevanceScore": 12,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:Dicklesworthstone/coding_agent_session_search",
+      "name": "coding_agent_session_search",
+      "fullName": "Dicklesworthstone/coding_agent_session_search",
+      "description": "Unified TUI and CLI to index and search your local coding agent session history across 11+ providers (Codex, Claude, Gemini, Cursor, Aider, etc.)",
+      "url": "https://github.com/Dicklesworthstone/coding_agent_session_search",
+      "source": "GitHub search",
+      "discoveredThrough": "Interface review",
+      "topics": [
+        "ai-agents",
+        "developer-tools",
+        "rust",
+        "search",
+        "tui"
+      ],
+      "stars": 1149,
+      "updatedAt": "2026-09-28T19:23:33Z",
+      "suggestedType": "Agent",
+      "suggestedPractices": [
+        "Drafting"
+      ],
+      "relevanceScore": 9,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:atomantic/PortOS",
+      "name": "PortOS",
+      "fullName": "atomantic/PortOS",
+      "description": "Self-hosted, Self-Improving, Federated Everything App — dev management, agent orchestration, persistent mind, digital twin, second brain, and creative pipeline from a single dashboard over Tailscale to port the user into the OS",
+      "url": "https://github.com/atomantic/PortOS",
+      "source": "GitHub search",
+      "discoveredThrough": "Designer skills",
+      "topics": [
+        "ai-agents",
+        "dashboard",
+        "developer-tools",
+        "digital-twin",
+        "expressjs",
+        "pm2",
+        "quantified-self",
+        "react",
+        "second-brain",
+        "self-hosted",
+        "tailscale",
+        "threejs"
+      ],
+      "stars": 42,
+      "updatedAt": "2026-09-28T19:28:13Z",
+      "suggestedType": "Agent",
+      "suggestedPractices": [
+        "Creative exploration"
+      ],
+      "relevanceScore": 9,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:lolly-tools/lolly",
+      "name": "lolly",
+      "fullName": "lolly-tools/lolly",
+      "description": "Lolly generates production-ready assets - QR codes, charts, graphics, PDFs and more - from simple inputs. Constraint-first, template-driven, works offline.",
+      "url": "https://github.com/lolly-tools/lolly",
+      "source": "GitHub search",
+      "discoveredThrough": "Taste and art direction",
+      "topics": [
+        "cmyk",
+        "content-creation",
+        "content-credentials",
+        "creative",
+        "creative-coding",
+        "design-tools",
+        "edge-computing",
+        "generative-art",
+        "self-hosted",
+        "svg"
+      ],
+      "stars": 11,
+      "updatedAt": "2026-09-28T19:23:17Z",
+      "suggestedType": "Tool",
+      "suggestedPractices": [
+        "Drafting",
+        "Creative exploration"
+      ],
+      "relevanceScore": 9,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:jeffjbernier/Accessible-Vibe-Coding",
+      "name": "Accessible-Vibe-Coding",
+      "fullName": "jeffjbernier/Accessible-Vibe-Coding",
+      "description": "Guides and skills to improve accessibility while vibe coding.",
+      "url": "https://github.com/jeffjbernier/Accessible-Vibe-Coding",
+      "source": "GitHub search",
+      "discoveredThrough": "Design MCPs",
+      "topics": [],
+      "stars": 0,
+      "updatedAt": "2026-09-28T19:21:11Z",
+      "suggestedType": "Skill",
+      "suggestedPractices": [
+        "Accessibility"
+      ],
+      "relevanceScore": 9,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:heygen-com/hyperframes",
+      "name": "hyperframes",
+      "fullName": "heygen-com/hyperframes",
+      "description": "Write HTML. Render video. Built for agents.",
+      "url": "https://github.com/heygen-com/hyperframes",
+      "source": "GitHub search",
+      "discoveredThrough": "Taste and art direction",
+      "topics": [
+        "ai",
+        "animation",
+        "ffmpeg",
+        "framework",
+        "gsap",
+        "html",
+        "mcp",
+        "puppeteer",
+        "rendering",
+        "typescript",
+        "video"
+      ],
+      "stars": 53869,
+      "updatedAt": "2026-09-28T19:24:01Z",
+      "suggestedType": "MCP",
+      "suggestedPractices": [
+        "Creative exploration"
+      ],
+      "relevanceScore": 6,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:hanishrao/collective-ai-tools",
+      "name": "collective-ai-tools",
+      "fullName": "hanishrao/collective-ai-tools",
+      "description": "Search across curated tools, MCP servers, prompts, skills, and trending repos, one query, every corner of the ecosystem.",
+      "url": "https://github.com/hanishrao/collective-ai-tools",
+      "source": "GitHub search",
+      "discoveredThrough": "Taste and art direction",
+      "topics": [
+        "ai",
+        "aitools",
+        "awesome",
+        "awesome-ai",
+        "awesome-list",
+        "awesome-lists",
+        "contributions-welcome",
+        "easywithai",
+        "first-contributions",
+        "first-timers-friendly",
+        "hacktoberfest",
+        "hacktoberfest2025",
+        "hacktoberfest2026",
+        "javascript",
+        "machinelearning",
+        "open-source",
+        "opensource",
+        "react",
+        "thereisanaiforthat",
+        "typescript"
+      ],
+      "stars": 240,
+      "updatedAt": "2026-09-28T19:18:48Z",
+      "suggestedType": "MCP",
+      "suggestedPractices": [
+        "Taste"
+      ],
+      "relevanceScore": 6,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:AlexanderMattTurner/agent-glovebox",
+      "name": "agent-glovebox",
+      "fullName": "AlexanderMattTurner/agent-glovebox",
+      "description": "A minimal-friction secure experience that lets agents do their work. (beta)",
+      "url": "https://github.com/AlexanderMattTurner/agent-glovebox",
+      "source": "GitHub search",
+      "discoveredThrough": "Creative tooling",
+      "topics": [],
+      "stars": 66,
+      "updatedAt": "2026-09-28T19:26:50Z",
+      "suggestedType": "Agent",
+      "suggestedPractices": [
+        "Creative exploration"
+      ],
+      "relevanceScore": 6,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:radiantlogicinc/fastworkflow",
+      "name": "fastworkflow",
+      "fullName": "radiantlogicinc/fastworkflow",
+      "description": "A framework for building large-scale, deterministic, interactive workflows with a fault-tolerant, conversational UX",
+      "url": "https://github.com/radiantlogicinc/fastworkflow",
+      "source": "GitHub search",
+      "discoveredThrough": "Design MCPs",
+      "topics": [],
+      "stars": 52,
+      "updatedAt": "2026-09-28T19:26:18Z",
+      "suggestedType": "Tool",
+      "suggestedPractices": [
+        "Flows",
+        "Drafting"
+      ],
+      "relevanceScore": 6,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:MGrin/awesome-bb-plugins",
+      "name": "awesome-bb-plugins",
+      "fullName": "MGrin/awesome-bb-plugins",
+      "description": "A curated list of community plugins for bb, the agent IDE — the ecosystem's missing directory.",
+      "url": "https://github.com/MGrin/awesome-bb-plugins",
+      "source": "GitHub search",
+      "discoveredThrough": "Interface review",
+      "topics": [
+        "ai-agents",
+        "awesome",
+        "awesome-list",
+        "bb",
+        "bb-plugin"
+      ],
+      "stars": 52,
+      "updatedAt": "2026-09-28T19:22:04Z",
+      "suggestedType": "Agent",
+      "suggestedPractices": [
+        "Taste"
+      ],
+      "relevanceScore": 6,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:alvin-reyes/better-agentic-ide",
+      "name": "better-agentic-ide",
+      "fullName": "alvin-reyes/better-agentic-ide",
+      "description": "Better Agentic Development Environment",
+      "url": "https://github.com/alvin-reyes/better-agentic-ide",
+      "source": "GitHub search",
+      "discoveredThrough": "Design MCPs",
+      "topics": [],
+      "stars": 25,
+      "updatedAt": "2026-09-28T19:22:33Z",
+      "suggestedType": "Agent",
+      "suggestedPractices": [
+        "Creative exploration"
+      ],
+      "relevanceScore": 6,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:prismlabarizona/AIHDL-2026",
+      "name": "AIHDL-2026",
+      "fullName": "prismlabarizona/AIHDL-2026",
+      "description": "AI Hardware Design League 2025-2026 - Educational competition combining AI tools with hardware design",
+      "url": "https://github.com/prismlabarizona/AIHDL-2026",
+      "source": "GitHub search",
+      "discoveredThrough": "Creative tooling",
+      "topics": [],
+      "stars": 11,
+      "updatedAt": "2026-09-28T19:23:56Z",
+      "suggestedType": "Tool",
+      "suggestedPractices": [
+        "Creative exploration"
+      ],
+      "relevanceScore": 6,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:eaviles/Ollin",
+      "name": "Ollin",
+      "fullName": "eaviles/Ollin",
+      "description": "A Metal-rendered creative-coding framework for Swift on Apple platforms: live reload and live coding, generative techniques, GPU shaders and effects, ray-traced 3D, physics and simulation, audio analysis and synthesis, computer vision, the iPhone as a sensor, Syphon/MIDI/OSC/DMX, and video, print, and pen-plotter export.",
+      "url": "https://github.com/eaviles/Ollin",
+      "source": "GitHub search",
+      "discoveredThrough": "Creative tooling",
+      "topics": [
+        "animation",
+        "audio",
+        "audio-visualization",
+        "computer-vision",
+        "creative-coding",
+        "generative-art",
+        "gpu",
+        "graphics",
+        "live-coding",
+        "macos",
+        "metal",
+        "midi",
+        "pen-plotter",
+        "physics",
+        "procedural-generation",
+        "raymarching",
+        "sdf",
+        "shaders",
+        "simulation",
+        "swift"
+      ],
+      "stars": 9,
+      "updatedAt": "2026-09-28T19:27:07Z",
+      "suggestedType": "Tool",
+      "suggestedPractices": [
+        "Taste",
+        "Creative exploration"
+      ],
+      "relevanceScore": 6,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:imagineVid/awesome-grok-imagine-video-prompts-and-skills",
+      "name": "awesome-grok-imagine-video-prompts-and-skills",
+      "fullName": "imagineVid/awesome-grok-imagine-video-prompts-and-skills",
+      "description": "Source-backed Grok Imagine Video prompts with real result clips, camera paths, audio-aware workflows, and multilingual guides.",
+      "url": "https://github.com/imagineVid/awesome-grok-imagine-video-prompts-and-skills",
+      "source": "GitHub search",
+      "discoveredThrough": "Taste and art direction",
+      "topics": [],
+      "stars": 3,
+      "updatedAt": "2026-09-28T19:14:31Z",
+      "suggestedType": "Skill",
+      "suggestedPractices": [
+        "Flows"
+      ],
+      "relevanceScore": 6,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:gwpicard/ai-build-kit",
+      "name": "ai-build-kit",
+      "fullName": "gwpicard/ai-build-kit",
+      "description": "An installable workflow that helps non-developers build reliable software with an AI coding agent.",
+      "url": "https://github.com/gwpicard/ai-build-kit",
+      "source": "GitHub search",
+      "discoveredThrough": "Designer skills",
+      "topics": [],
+      "stars": 1,
+      "updatedAt": "2026-09-28T19:23:48Z",
+      "suggestedType": "Agent",
+      "suggestedPractices": [
+        "Flows",
+        "Drafting"
+      ],
+      "relevanceScore": 6,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:AddisonTech/Niagara_MCP",
+      "name": "Niagara_MCP",
+      "fullName": "AddisonTech/Niagara_MCP",
+      "description": "MCP server for Tridium Niagara stations, read-only AI access to points, alarms, and history",
+      "url": "https://github.com/AddisonTech/Niagara_MCP",
+      "source": "GitHub search",
+      "discoveredThrough": "Design MCPs",
+      "topics": [],
+      "stars": 0,
+      "updatedAt": "2026-09-28T19:27:31Z",
+      "suggestedType": "MCP",
+      "suggestedPractices": [
+        "Creative exploration"
+      ],
+      "relevanceScore": 6,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:julio242023/skill-antigravity",
+      "name": "skill-antigravity",
+      "fullName": "julio242023/skill-antigravity",
+      "description": "Skills para Antigravity",
+      "url": "https://github.com/julio242023/skill-antigravity",
+      "source": "GitHub search",
+      "discoveredThrough": "Design MCPs",
+      "topics": [],
+      "stars": 0,
+      "updatedAt": "2026-09-28T19:27:34Z",
+      "suggestedType": "Skill",
+      "suggestedPractices": [
+        "Creative exploration"
+      ],
+      "relevanceScore": 6,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:guilhermedworakowski/guilhermedworakowski",
+      "name": "guilhermedworakowski",
+      "fullName": "guilhermedworakowski/guilhermedworakowski",
+      "description": "Product Designer Pleno com mais de 4 anos em produtos digitais (hosting, SaaS e programas de fidelidade).  Uno discovery, pesquisa com usuários e Design Systems para transformar dores reais em decisões de produto. ",
+      "url": "https://github.com/guilhermedworakowski/guilhermedworakowski",
+      "source": "GitHub search",
+      "discoveredThrough": "Designer skills",
+      "topics": [],
+      "stars": 0,
+      "updatedAt": "2026-09-28T19:19:01Z",
+      "suggestedType": "Tool",
+      "suggestedPractices": [
+        "Creative exploration"
+      ],
+      "relevanceScore": 6,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:openviglet/viglet-design-system",
+      "name": "viglet-design-system",
+      "fullName": "openviglet/viglet-design-system",
+      "description": "Viglet Design System",
+      "url": "https://github.com/openviglet/viglet-design-system",
+      "source": "GitHub search",
+      "discoveredThrough": "Interface review",
+      "topics": [],
+      "stars": 0,
+      "updatedAt": "2026-09-28T19:22:26Z",
+      "suggestedType": "Tool",
+      "suggestedPractices": [
+        "Creative exploration"
+      ],
+      "relevanceScore": 6,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:marcelscruz/dev-resources",
+      "name": "dev-resources",
+      "fullName": "marcelscruz/dev-resources",
+      "description": "A collaborative list of resources for developers",
+      "url": "https://github.com/marcelscruz/dev-resources",
+      "source": "GitHub search",
+      "discoveredThrough": "Inspiration MCPs",
+      "topics": [
+        "assets",
+        "awesome",
+        "awesome-list",
+        "courses",
+        "design",
+        "dev-resources",
+        "development",
+        "hacktoberfest",
+        "information",
+        "infrastructure",
+        "jobs",
+        "programming",
+        "public-apis",
+        "resources",
+        "tools"
+      ],
+      "stars": 1346,
+      "updatedAt": "2026-09-28T14:38:06Z",
+      "suggestedType": "Tool",
+      "suggestedPractices": [
+        "Creative exploration"
+      ],
+      "relevanceScore": 3,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:stickerdaniel/saas-starter",
+      "name": "saas-starter",
+      "fullName": "stickerdaniel/saas-starter",
+      "description": "SvelteKit + Convex-native SaaS starter optimised for coding agents, with auth, billing, admin, AI, and built-in regression guardrails.",
+      "url": "https://github.com/stickerdaniel/saas-starter",
+      "source": "GitHub search",
+      "discoveredThrough": "Interface review",
+      "topics": [
+        "ai-chat",
+        "better-auth",
+        "bun",
+        "cloudflare-workers",
+        "convex",
+        "saas-boilerplate",
+        "saas-starter",
+        "saas-template",
+        "shadcn-svelte",
+        "svelte",
+        "sveltekit",
+        "tailwindcss",
+        "template",
+        "tolgee",
+        "typescript"
+      ],
+      "stars": 57,
+      "updatedAt": "2026-09-28T19:27:19Z",
+      "suggestedType": "Agent",
+      "suggestedPractices": [
+        "Creative exploration"
+      ],
+      "relevanceScore": 3,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:camcima/duraflows",
+      "name": "duraflows",
+      "fullName": "camcima/duraflows",
+      "description": "A durable workflow runtime for TypeScript built on top of @camcima/finita.",
+      "url": "https://github.com/camcima/duraflows",
+      "source": "GitHub search",
+      "discoveredThrough": "Interface review",
+      "topics": [],
+      "stars": 4,
+      "updatedAt": "2026-09-28T19:22:59Z",
+      "suggestedType": "Tool",
+      "suggestedPractices": [
+        "Flows"
+      ],
+      "relevanceScore": 3,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:trevorotts1/openclaw-onboarding",
+      "name": "openclaw-onboarding",
+      "fullName": "trevorotts1/openclaw-onboarding",
+      "description": "Complete 14-skill onboarding package for OpenClaw AI assistants. Download the ZIP, share Start Here.md with your AI, and it handles the rest.",
+      "url": "https://github.com/trevorotts1/openclaw-onboarding",
+      "source": "GitHub search",
+      "discoveredThrough": "Taste and art direction",
+      "topics": [],
+      "stars": 3,
+      "updatedAt": "2026-09-28T19:21:33Z",
+      "suggestedType": "Skill",
+      "suggestedPractices": [
+        "Flows",
+        "Creative exploration"
+      ],
+      "relevanceScore": 3,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:semcod/koru",
+      "name": "koru",
+      "fullName": "semcod/koru",
+      "description": "Closed-loop automation across semcod/ repositories.",
+      "url": "https://github.com/semcod/koru",
+      "source": "GitHub search",
+      "discoveredThrough": "Design MCPs",
+      "topics": [
+        "automation",
+        "closed-loop",
+        "ide",
+        "koru",
+        "mcp",
+        "orchestration",
+        "python",
+        "refactor",
+        "refactoring",
+        "semcod"
+      ],
+      "stars": 2,
+      "updatedAt": "2026-09-28T19:25:41Z",
+      "suggestedType": "MCP",
+      "suggestedPractices": [
+        "Creative exploration"
+      ],
+      "relevanceScore": 3,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:correspondMerchant/LAGO-R-Package",
+      "name": "LAGO-R-Package",
+      "fullName": "correspondMerchant/LAGO-R-Package",
+      "description": "R package for optimizing interventions in Learn-As-you-GO (LAGO) adaptive trials",
+      "url": "https://github.com/correspondMerchant/LAGO-R-Package",
+      "source": "GitHub search",
+      "discoveredThrough": "Designer skills",
+      "topics": [
+        "adaptive-design",
+        "biostatistics",
+        "causal-inference",
+        "clinical-trials",
+        "implementation-trials",
+        "intervention-study",
+        "lago",
+        "r",
+        "r-package",
+        "statistics"
+      ],
+      "stars": 2,
+      "updatedAt": "2026-09-28T19:28:10Z",
+      "suggestedType": "Tool",
+      "suggestedPractices": [
+        "Creative exploration"
+      ],
+      "relevanceScore": 3,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:robokrunch/awesome-jev",
+      "name": "awesome-jev",
+      "fullName": "robokrunch/awesome-jev",
+      "description": "A curated list of resources for Jev — TypeSafe AI's System One decision model. Maintained by RoboKrunch.",
+      "url": "https://github.com/robokrunch/awesome-jev",
+      "source": "GitHub search",
+      "discoveredThrough": "Designer skills",
+      "topics": [
+        "ai-agents",
+        "awesome-list",
+        "edge-ai",
+        "jev",
+        "robotics",
+        "typesafe"
+      ],
+      "stars": 2,
+      "updatedAt": "2026-09-28T19:28:15Z",
+      "suggestedType": "Agent",
+      "suggestedPractices": [
+        "Taste"
+      ],
+      "relevanceScore": 3,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:Kentrow/keymaker",
+      "name": "keymaker",
+      "fullName": "Kentrow/keymaker",
+      "description": "Local web interface to inventory, audit, revoke and create OVHcloud API keys. Unofficial, zero persistence, Docker only.",
+      "url": "https://github.com/Kentrow/keymaker",
+      "source": "GitHub search",
+      "discoveredThrough": "Creative tooling",
+      "topics": [
+        "api-keys",
+        "api-keys-management",
+        "audit",
+        "credentials",
+        "docker",
+        "golang",
+        "ovh",
+        "ovhcloud",
+        "security",
+        "security-tools",
+        "self-hosted"
+      ],
+      "stars": 2,
+      "updatedAt": "2026-09-28T19:27:42Z",
+      "suggestedType": "Tool",
+      "suggestedPractices": [
+        "Review",
+        "UI sketches"
+      ],
+      "relevanceScore": 3,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:YouMind-OpenLab/awesome-gemini-omni",
+      "name": "awesome-gemini-omni",
+      "fullName": "YouMind-OpenLab/awesome-gemini-omni",
+      "description": "Curated Gemini Omni resources, guides, workflows, and community research.",
+      "url": "https://github.com/YouMind-OpenLab/awesome-gemini-omni",
+      "source": "GitHub search",
+      "discoveredThrough": "Taste and art direction",
+      "topics": [
+        "ai-video",
+        "gemini-omni",
+        "gemini-omni-flash",
+        "google-gemini",
+        "prompts"
+      ],
+      "stars": 2,
+      "updatedAt": "2026-09-28T19:16:24Z",
+      "suggestedType": "Tool",
+      "suggestedPractices": [
+        "Flows",
+        "Taste",
+        "Pattern research"
+      ],
+      "relevanceScore": 3,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:OGShawnLee/pino-lang",
+      "name": "pino-lang",
+      "fullName": "OGShawnLee/pino-lang",
+      "description": "A modern, simple, and highly aesthetic programming language built to make coding joyful. Features an expression-oriented design, functional closures, custom structs, a native C# interpreter (.NET 10), and a client-side JS playground.",
+      "url": "https://github.com/OGShawnLee/pino-lang",
+      "source": "GitHub search",
+      "discoveredThrough": "Creative tooling",
+      "topics": [
+        "csharp",
+        "programming-language"
+      ],
+      "stars": 2,
+      "updatedAt": "2026-09-28T19:22:55Z",
+      "suggestedType": "Tool",
+      "suggestedPractices": [
+        "Creative exploration"
+      ],
+      "relevanceScore": 3,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:openwop/openwop",
+      "name": "openwop",
+      "fullName": "openwop/openwop",
+      "description": "openwop — Open Workflow Orchestration Protocol",
+      "url": "https://github.com/openwop/openwop",
+      "source": "GitHub search",
+      "discoveredThrough": "Design MCPs",
+      "topics": [],
+      "stars": 1,
+      "updatedAt": "2026-09-28T19:25:29Z",
+      "suggestedType": "Tool",
+      "suggestedPractices": [
+        "Flows"
+      ],
+      "relevanceScore": 3,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:panopticon-scanner/panopticon",
+      "name": "panopticon",
+      "fullName": "panopticon-scanner/panopticon",
+      "description": "Multi lens code review skill, backed by static analysis",
+      "url": "https://github.com/panopticon-scanner/panopticon",
+      "source": "GitHub search",
+      "discoveredThrough": "Interface review",
+      "topics": [],
+      "stars": 1,
+      "updatedAt": "2026-09-28T19:26:54Z",
+      "suggestedType": "Skill",
+      "suggestedPractices": [
+        "Review",
+        "Drafting"
+      ],
+      "relevanceScore": 3,
+      "editorialStatus": "Needs review"
+    }
+  ]
+}
