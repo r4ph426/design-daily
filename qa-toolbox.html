@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toolbox design QA</title>
+    <style>
+      * { box-sizing: border-box; }
+      html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; background: #111; }
+      main { width: 1280px; height: 720px; display: grid; grid-template-columns: 640px 640px; }
+      .pane { position: relative; display: grid; place-items: center; overflow: hidden; }
+      .pane:first-child { border-right: 2px solid #111; }
+      img { display: block; width: 640px; height: auto; }
+      iframe { position: absolute; top: 132.5px; left: 0; width: 1440px; height: 1024px; border: 0; background: #b5d2cc; zoom: .444444; }
+    </style>
+  </head>
+  <body>
+    <main aria-label="Selected Toolbox layout beside the local implementation">
+      <div class="pane"><img src="/assets/toolbox-layout-reference.png" alt="Selected Toolbox layout" /></div>
+      <div class="pane"><iframe src="/#/toolbox" title="Local Toolbox implementation"></iframe></div>
+    </main>
+  </body>
+</html>

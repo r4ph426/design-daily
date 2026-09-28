@@ -1,7 +1,7 @@
 import { canonicalArticleUrl, nextCrawlInfo } from "../shared/article-intake.mjs";
 
 const endpoint = import.meta.env.VITE_ARTICLE_SUBMISSION_ENDPOINT
-  || "https://design-daily-article-intake.rare-design-daily.workers.dev";
+  || (import.meta.env.PROD ? "https://design-daily-article-intake.rare-design-daily.workers.dev" : "");
 const mockKey = "design-daily:mock-submissions";
 
 function wait(milliseconds) {

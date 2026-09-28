@@ -20,9 +20,11 @@ import {
   getSubmissionClientId,
   submitArticle,
 } from "./article-submission.js";
+import { ToolboxPage } from "./toolbox.jsx";
 
 const fallbackEditionNumber = "001";
-const turnstileSiteKey = import.meta.env.VITE_TURNSTILE_SITE_KEY || "0x4AAAAAAE_ELsNAkDxmkHLc";
+const turnstileSiteKey = import.meta.env.VITE_TURNSTILE_SITE_KEY
+  || (import.meta.env.PROD ? "0x4AAAAAAE_ELsNAkDxmkHLc" : "");
 
 const fallbackQuestions = [
   {
@@ -181,7 +183,7 @@ const fallbackEdition = {
   webSourceCount: 4,
   teamContributionCount: 2,
   inboxConnected: false,
-  summary: "AI can accelerate production, but design quality still depends on clear judgment. Today’s edition examines where automation supports designers and where it hides weak decisions. The useful question is not how much a team can generate, but what deserves to survive review.",
+  summary: "AI is making execution cheaper, not judgment. Today’s strongest signals ask teams to invest the saved time in clearer constraints, accessibility, and future designers.",
   questions: fallbackQuestions,
 };
 
@@ -215,6 +217,18 @@ function formatCrawlDay(value, now = new Date()) {
   return `${day},${month},${year}`;
 }
 
+function formatHeaderDate(value) {
+  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(String(value || ""));
+  if (!match) return String(value || "");
+  const [, year, month, day] = match;
+  return new Intl.DateTimeFormat("en-GB", {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+    timeZone: "UTC",
+  }).format(new Date(Date.UTC(Number(year), Number(month) - 1, Number(day))));
+}
+
 function HighlightedText({ text }) {
   return String(text || "").split(/(\*\*[^*]+\*\*)/g).map((part, index) => part.startsWith("**") && part.endsWith("**")
     ? <strong key={`${part}-${index}`}>{part.slice(2, -2)}</strong>
@@ -227,6 +241,16 @@ function Brand({ href = "#" }) {
       <span>design / daily</span>
       <small>by ra.re design</small>
     </a>
+  );
+}
+
+function SiteFooter() {
+  return (
+    <footer className="footer-grid">
+      <p>AI-generated. Human-edited.</p>
+      <a href={`${import.meta.env.BASE_URL}privacy.html`}>Privacy <ArrowRight size={14} /></a>
+      <p>Synthesis, not noise.</p>
+    </footer>
   );
 }
 
@@ -472,7 +496,7 @@ function ArticleIntake() {
   };
 
   return (
-    <aside className="article-panel" id="article-intake">
+    <aside className="article-panel page-opening-aside" id="article-intake">
       <div className="article-heading">
         <p className="meta-label">Article intake</p>
         <h2>Contribute to the next crawl</h2>
@@ -483,12 +507,12 @@ function ArticleIntake() {
       ) : (
         <form className={`article-form ${request.status}`} onSubmit={submit}>
           <label htmlFor="article-url">Article URL</label>
-          <div className="article-control">
+          <div className="article-control contribution-control contribution-control-dark">
             <input ref={inputRef} id="article-url" type="text" inputMode="url" autoCapitalize="none" autoCorrect="off" spellCheck="false" placeholder="www.example.com/article" value={url} aria-describedby="article-help article-message" onChange={(event) => { setUrl(event.target.value); if (["error", "limited"].includes(request.status)) setRequest({ status: "default" }); }} disabled={isWorking} required />
-            <button type="submit" disabled={!url.trim() || isWorking || !configured || (turnstileSiteKey && !turnstileToken)}>{isWorking ? "Checking" : turnstileSiteKey && !turnstileToken ? "Verifying" : "Add to crawl"}</button>
+            <button className="contribution-submit" type="submit" disabled={!url.trim() || isWorking || !configured || (turnstileSiteKey && !turnstileToken)}>{isWorking ? "Checking" : turnstileSiteKey && !turnstileToken ? "Verifying" : "Add to crawl"}</button>
           </div>
           {isWorking && <span className="loading-bar" aria-hidden="true" />}
-          <span id="article-help" className="article-help">https:// optional · no account needed · up to 5 links per hour</span>
+          <span id="article-help" className="article-help">https:// optional. No account needed. Up to 5 links per hour.</span>
           {["error", "limited"].includes(request.status) && <span id="article-message" className="article-error" role="alert">{request.message}</span>}
           <label className="submission-honeypot" aria-hidden="true">Leave this field empty<input type="text" name="website" tabIndex="-1" autoComplete="off" value={website} onChange={(event) => setWebsite(event.target.value)} /></label>
           <TurnstileChallenge onToken={setTurnstileToken} onError={handleTurnstileError} resetSignal={turnstileReset} />
@@ -498,17 +522,25 @@ function ArticleIntake() {
   );
 }
 
-function SiteHeader({ edition, editionNumber, routeName }) {
+function SiteHeader({ edition, routeName }) {
   const todayIsCurrent = routeName === "home";
   const archiveIsCurrent = routeName === "archive" || routeName === "question";
+  const toolboxIsCurrent = routeName === "toolbox";
+  const compactHeaderDate = formatHeaderDate(edition.date);
   return (
     <header className="topbar">
-      <Brand />
-      <div className="edition-meta"><span>{edition.displayDate}</span><span>Edition {editionNumber}</span><span>Filed {formatMetadata(edition.filedAt)}</span></div>
-      <nav className="nav-links" aria-label="Primary">
-        <a className={todayIsCurrent ? "active" : ""} aria-current={todayIsCurrent ? "page" : undefined} href="#">Today</a>
-        <a className={archiveIsCurrent ? "active" : ""} aria-current={archiveIsCurrent ? "page" : undefined} href="#/archive">Archive</a>
-      </nav>
+      <div className="topbar-primary">
+        <Brand />
+        <div className="edition-meta"><span className="edition-date-full">{edition.displayDate}</span><span className="edition-date-compact">{compactHeaderDate}</span></div>
+      </div>
+      <div className="topbar-secondary">
+        <nav className="nav-links" aria-label="Primary">
+          <a className={todayIsCurrent ? "active" : ""} aria-current={todayIsCurrent ? "page" : undefined} href="#">Today</a>
+          <a className={archiveIsCurrent ? "active" : ""} aria-current={archiveIsCurrent ? "page" : undefined} href="#/archive">Archive</a>
+          <a className={toolboxIsCurrent ? "active" : ""} aria-current={toolboxIsCurrent ? "page" : undefined} href="#/toolbox">Toolbox</a>
+        </nav>
+        <p className="header-tagline">{toolboxIsCurrent ? "A weekly editorial guide to AI tools for UX/UI designers" : "A daily editorial source of truth for design teams"}</p>
+      </div>
     </header>
   );
 }
@@ -541,7 +573,6 @@ export function App() {
   const selectedQuestion = route.name === "question"
     ? archiveRecords.find((record) => record.dateISO === route.dateISO && record.slug === route.slug)
     : null;
-  const issueTitle = useMemo(() => `${countWord(questions.length)} questions shaping design today`, [questions.length]);
 
   useEffect(() => {
     const onHashChange = () => setRoute(readHashRoute());
@@ -592,20 +623,24 @@ export function App() {
     ? <ArchivePage key={route.key} records={archiveRecords} bookmarks={savedQuestions} onBookmark={toggleBookmark} initialCategory={route.category} focusSearch={route.focusSearch} />
     : route.name === "question"
       ? <QuestionDetailPage record={selectedQuestion} records={archiveRecords} saved={Boolean(selectedQuestion && savedQuestions[selectedQuestion.key])} onBookmark={toggleBookmark} renderSignals={(question) => <SignalsTable question={question} />} archiveReady={archiveReady} />
-      : null;
+      : route.name === "toolbox"
+        ? <ToolboxPage />
+        : null;
 
   return (
-    <main className={`site-shell ${route.name !== "home" ? "route-shell" : ""}`} id="top">
+    <main className={`site-shell ${route.name !== "home" ? "route-shell" : ""} ${route.name === "toolbox" ? "toolbox-shell" : ""}`} id="top">
       {route.name === "home" && <a className="skip-link" href={`#${questions[0].slug}`}>Skip to the first question</a>}
-      <SiteHeader edition={edition} editionNumber={editionNumber} routeName={route.name} />
+      {route.name === "toolbox" && <a className="skip-link" href="#toolbox-weekly">Skip to this week’s tools</a>}
+      <SiteHeader edition={edition} routeName={route.name} />
       {route.name !== "home" && (routeContent || (
         <section className="route-message"><p className="meta-label">design / daily</p><h1>This page could not be found.</h1><a href="#">Return to today <ArrowRight size={17} /></a></section>
       ))}
       {route.name === "home" && <>
-      <section className="edition-hero" aria-labelledby="edition-title">
-        <div className="edition-intro">
-          <h1 id="edition-title">{issueTitle}</h1>
-          <p className="editor-note">{edition.summary}</p>
+      <section className="edition-hero page-opening" aria-labelledby="edition-title">
+        <div className="edition-intro page-opening-main">
+          <p className="page-opening-eyebrow">Today’s edition</p>
+          <h1 id="edition-title"><span className="page-opening-title-line">{countWord(questions.length)} questions</span><span className="page-opening-title-line">shaping design today</span></h1>
+          <p className="editor-note page-opening-summary">{edition.summary}</p>
           <div className="crawl-line">
             <span><Clock size={16} /> Last crawl {formatCrawlDay(edition.date)} · {edition.crawlCompletedAt}</span>
             <div className="crawl-breakdown">
@@ -624,7 +659,7 @@ export function App() {
         })}
       </section>
       </>}
-      <footer className="footer-grid"><Brand /><p>AI-generated. Human-edited.</p><span className="footer-edition">Edition {editionNumber}</span><a href={`${import.meta.env.BASE_URL}privacy.html`}>Privacy <ArrowRight size={14} /></a><p>Synthesis, not noise.</p></footer>
+      <SiteFooter />
     </main>
   );
 }

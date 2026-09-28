@@ -1,10 +1,15 @@
 :root {
-  --canvas: #162713;
+  --forest: #162713;
+  --canvas: var(--forest);
   --coral: #ff3318;
   --coral-text: #fc4930;
+  --coral-on-light: color-mix(in srgb, var(--coral) 85%, var(--ink));
+  --footer-claim: var(--coral-text);
   --yellow: #f1bf42;
   --sage: #b5d2cc;
-  --paper: #e8e8dd;
+  --paper-surface: #e8e8dd;
+  --paper: var(--paper-surface);
+  --white: #ffffff;
   --ink: #000000;
   --text-muted: #aab1a6;
   --text-subtle: #959d92;
@@ -28,4 +33,6 @@
   --t-index-question: 25px;
   --t-page-title: 78px;
   --t-page-heading: 30px;
+  --t-opening-title: 64px;
+  --t-opening-summary: 17px;
 }

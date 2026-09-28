@@ -136,6 +136,9 @@ export function readHashRoute() {
       key: raw,
     };
   }
+  if (parts[0] === "toolbox") {
+    return { name: "toolbox", key: raw };
+  }
   if (parts[0] === "questions" && parts[1] && parts[2]) {
     return { name: "question", dateISO: parts[1], slug: parts[2], key: raw };
   }
@@ -272,13 +275,13 @@ export function ArchivePage({ records, bookmarks, onBookmark, initialCategory = 
 
   return (
     <>
-      <section className="archive-hero" aria-labelledby="archive-page-title">
-        <div>
-          <p className="meta-label">Question archive</p>
-          <h1 id="archive-page-title">Questions worth returning to.</h1>
-          <p>Find a question you remember, or follow an editorial path into the ideas shaping design practice.</p>
+      <section className="archive-hero page-opening" aria-labelledby="archive-page-title">
+        <div className="page-opening-main">
+          <p className="meta-label page-opening-eyebrow">Question archive</p>
+          <h1 id="archive-page-title"><span className="page-opening-title-line">Questions worth</span><span className="page-opening-title-line">returning to.</span></h1>
+          <p className="page-opening-summary">Find a question you remember, or follow an editorial path into the ideas shaping design practice.</p>
         </div>
-        <aside>
+        <aside className="page-opening-aside">
           <p className="archive-total">{records.length}<small>Questions across {new Set(records.map((record) => record.editionNumber)).size} weekday editions</small></p>
           <p>Popular ranks all-time team saves. Popular recently means at least {RECENT_POPULARITY.minimumSaves} distinct saves in the trailing {RECENT_POPULARITY.trailingDays} days.</p>
         </aside>
