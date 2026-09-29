@@ -1,29 +1,77 @@
 {
   "schemaVersion": 1,
-  "editionNumber": "012",
-  "date": "2026-09-28",
-  "displayDate": "Monday, 28 September 2026",
-  "filedAt": "03:38 cet",
-  "crawlCompletedAt": "03:38",
-  "sourceCount": 4,
+  "editionNumber": "013",
+  "date": "2026-09-29",
+  "displayDate": "Tuesday, 29 September 2026",
+  "filedAt": "04:34 cet",
+  "crawlCompletedAt": "04:34",
+  "sourceCount": 13,
   "webSourceCount": 4,
-  "teamContributionCount": 0,
-  "summary": "AI is no longer just changing what teams build, it is quietly stripping away the entry-level work that used to teach design judgment. At the same time, practitioners are responding by turning folders, structure, and systems into the new interface for agents, while adjacent culture coverage signals how taste and reference still shape design identity. The bigger question is whether teams will treat automation as a shortcut or a new curriculum.",
-  "generatedAt": "2026-09-28T01:38:15.861Z",
+  "teamContributionCount": 1,
+  "summary": "AI is pressuring design teams to formalize governance, preserve junior craft, and choose cheaper tools with clearer limits. The sharper question is whether we use this moment to rebuild practice or just automate away the parts that teach it.",
+  "generatedAt": "2026-09-29T02:34:15.494Z",
   "inboxConnected": true,
   "questions": [
     {
       "id": "01",
-      "slug": "if-ai-now-handles-transcript-tagging-and-similar-junior-tasks-wh",
+      "slug": "are-we-treating-ai-governance-as-a-living-product-decision-or-st",
       "category": "Process",
       "tags": [
         "Process",
         "UX"
       ],
       "aiLens": true,
-      "question": "If AI now handles transcript tagging and similar junior tasks, what work do teams need to preserve so early-career designers still learn craft instead of just output?",
-      "answer": "The strongest signal argues that transcript tagging and redlining were never only production chores. They were low-stakes practice spaces where juniors learned to hear nuance, spot system boundaries, and make repeatable judgments. If teams remove them without replacement, they save time but weaken the next generation’s ability to reason about design.",
-      "why": "Source 3a7504ff9f5693ea says AI now performs tasks such as transcript tagging well enough that teams stop assigning them, even though those tasks taught researchers and designers how users mean more than they say and how systems make spacing decisions.",
+      "question": "Are we treating AI governance as a living product decision, or still waiting for a single policy moment that never arrives?",
+      "answer": "We should treat AI policy like an operating system, not a one-time approval. The stronger editorial reading is that **governance must ship iteratively** because the technology keeps changing faster than any all-in-one rulebook can.",
+      "why": "The UX Collective piece argues Congress is stuck in waterfall thinking while AI evolves underfoot, and that governance should be steered like a product.",
+      "counts": {
+        "total": 2,
+        "newsletters": 1,
+        "web": 1
+      },
+      "firstSeen": "13:01 cet",
+      "signals": [
+        {
+          "source": "UX Collective",
+          "title": "The lie we keep telling ourselves about regulating AI",
+          "kind": "Newsletter",
+          "timing": "13:01",
+          "happened": "A UX Collective issue framed AI regulation as a mismatch between fast-moving technology and slow legislative habits. The excerpt argues against waiting for a single comprehensive bill and instead favors continuous steering. That framing places process, not ideology, at the center of the debate.",
+          "changes": "The practical shift is away from symbolic policy-making and toward **ongoing governance**, which is messier but more realistic. That creates tension between clarity and adaptability, but the source suggests the cost of waiting for perfection is that the rules arrive after the product has already changed.",
+          "verdict": "Must read",
+          "url": "https://newsletter.uxdesign.cc/archive"
+        },
+        {
+          "source": "UX Collective",
+          "title": "Regulating AI, Quantifying stress, The variance problem",
+          "kind": "Web",
+          "timing": "13:14",
+          "happened": "The web crawl version surfaced the same argument alongside editor picks about screen materiality, AI variance, and archival responsibility. It connects regulation to the everyday realities of product teams, not just lawmakers. The issue makes the governance problem feel operational rather than abstract.",
+          "changes": "That broader framing matters because it shows AI governance is now colliding with design work, reliability, and ownership. The tradeoff is that teams may need to accept **partial, revisable controls** instead of waiting for a clean legal endpoint, which is more demanding but more honest.",
+          "verdict": "Read",
+          "url": "https://uxdesign.cc/regulating-ai-quantifying-stress-the-variance-problem-1ce71d56a34a"
+        }
+      ],
+      "further": [
+        [
+          "How we save entry-level UX work that teaches craft in the time of AI. Our field depends on this.",
+          "UX Collective",
+          "https://uxdesign.cc/how-we-save-entry-level-ux-work-that-teaches-craft-in-the-time-of-ai-our-field-depends-on-this-e1684a0d67eb"
+        ]
+      ]
+    },
+    {
+      "id": "02",
+      "slug": "if-ai-can-do-the-junior-tasks-how-do-we-preserve-the-practice-th",
+      "category": "Process",
+      "tags": [
+        "Process",
+        "UX"
+      ],
+      "aiLens": true,
+      "question": "If AI can do the junior tasks, how do we preserve the practice that actually teaches design judgment?",
+      "answer": "Teams should stop confusing output efficiency with skill building. The source makes a strong case that **practice is the product** for entry-level designers, and AI should not erase the tasks that create future judgment.",
+      "why": "The article argues that transcript tagging, redlining, and similar work teach the craft that juniors need, even if AI can automate the immediate output.",
       "counts": {
         "total": 1,
         "newsletters": 0,
@@ -36,108 +84,103 @@
           "title": "How we save entry-level UX work that teaches craft in the time of AI. Our field depends on this.",
           "kind": "Web",
           "timing": "21:38",
-          "happened": "Teams have begun handing transcript tagging and other repetitive research tasks to AI tools. The source says the automation is good enough that people stop questioning it and stop documenting what was lost. The result is a visible shift away from supervised entry-level practice.",
-          "changes": "This changes junior work from **guided judgment** into passive review, which is efficient but thin. The tradeoff is obvious: teams get faster summaries, yet they risk training designers who can consume outputs but cannot reconstruct the reasoning behind them. That weakens the bench precisely when the field needs more people who can catch what AI misses.",
+          "happened": "A UX Collective article argued that AI is taking over tasks junior designers used to perform while learning the craft. It specifically cites transcript tagging and redlining as work that trains pattern recognition and decision-making. The piece frames these tasks as practice, not just production.",
+          "changes": "The consequence is that teams risk creating a talent pipeline with less hands-on judgment and fewer shared habits. The article’s sharper point is that **automation can hollow out apprenticeship** unless managers deliberately protect low-stakes, supervised work that builds competence over time.",
           "verdict": "Must read",
           "url": "https://uxdesign.cc/how-we-save-entry-level-ux-work-that-teaches-craft-in-the-time-of-ai-our-field-depends-on-this-e1684a0d67eb"
         }
       ],
-      "further": []
+      "further": [
+        [
+          "The lie we keep telling ourselves about regulating AI",
+          "UX Collective",
+          "https://newsletter.uxdesign.cc/archive"
+        ]
+      ]
     },
     {
-      "id": "02",
-      "slug": "why-are-agent-workflows-moving-from-prompts-to-folder-structure-",
-      "category": "Process",
+      "id": "03",
+      "slug": "are-designers-still-relying-too-much-on-interface-polish-when-th",
+      "category": "UX",
       "tags": [
-        "Process",
         "UX"
       ],
-      "aiLens": true,
-      "question": "Why are agent workflows moving from prompts to folder structure, and what does that say about the real design problem in AI systems?",
-      "answer": "The newsletter’s argument is that reliability comes less from clever prompting than from giving the agent an organized memory. In practice, that means the design task is shifting from writing better instructions to shaping the information architecture that lets the system remember, retrieve, and act consistently.",
-      "why": "Source bfab1804bc874064 frames folder structure as the prerequisite for a working agent and treats prompt quality as secondary to memory and organization.",
+      "aiLens": false,
+      "question": "Are designers still relying too much on interface polish when the real product value sits in the surrounding context?",
+      "answer": "Yes, and the better work seems to be moving outward from the screen itself. The strongest signal here is that **the interface is no longer the whole product**, so design needs to account for systems, behavior, and context around it.",
+      "why": "The UX Collective article titled The next larger context points beyond the interface, product, and prompt as the proper design frame.",
+      "counts": {
+        "total": 1,
+        "newsletters": 0,
+        "web": 1
+      },
+      "firstSeen": "00:29 cet",
+      "signals": [
+        {
+          "source": "UX Collective",
+          "title": "The next larger context",
+          "kind": "Web",
+          "timing": "00:29",
+          "happened": "UX Collective published an essay arguing for designing beyond the interface, the product, and the prompt. The headline alone signals a move away from screen-first thinking. It suggests the discipline needs a larger frame for value and meaning.",
+          "changes": "That matters because teams that optimize only the visible UI may miss where users actually experience friction or trust. The editorial tension is between craft at the surface and **designing the broader context**, which is harder to measure but more faithful to real use.",
+          "verdict": "Read",
+          "url": "https://uxdesign.cc/the-next-larger-context-4dd0c91a7c5b"
+        }
+      ],
+      "further": [
+        [
+          "What makes a brand last?",
+          "UX Collective",
+          "https://uxdesign.cc/what-makes-a-brand-last-baf152419576"
+        ],
+        [
+          "Quest is a highly designed sci-fi and fantasy magazine built for web fiction",
+          "It’s Nice That",
+          "https://www.itsnicethat.com/articles/ross-gendels-zane-miller-quest-magazine-graphic-design-publication-project-280926"
+        ]
+      ]
+    },
+    {
+      "id": "04",
+      "slug": "as-budgets-tighten-are-open-source-replacements-good-enough-to-r",
+      "category": "UI",
+      "tags": [
+        "UI"
+      ],
+      "aiLens": false,
+      "question": "As budgets tighten, are open source replacements good enough to reset the economics of the design stack?",
+      "answer": "They may be good enough for some teams, but not without clear limits. The important signal is that **cheap is not the same as equivalent**, so the savings story depends on the gap between a repo and a mature product.",
+      "why": "Actionable AI promoted open source GitHub projects that replace paid software such as Figma, Jira, ElevenLabs, DocuSign, and Mailchimp, while saying it checked price, license, and caps directly.",
       "counts": {
         "total": 1,
         "newsletters": 1,
         "web": 0
       },
-      "firstSeen": "15:00 cet",
+      "firstSeen": "15:02 cet",
       "signals": [
         {
           "source": "Actionable AI",
-          "title": "your agent doesn't need a better prompt",
+          "title": "9 free repos that replace $261 a month in paid software",
           "kind": "Newsletter",
-          "timing": "15:00",
-          "happened": "The source argues that successful agents start with a folder structure, not a prompt. It describes file structure as the thing that prevents the system from forgetting between sessions. This reframes setup as a design problem in memory management rather than wording.",
-          "changes": "The practical change is a move from prompt theater to **information architecture**. That matters because teams will now be judged on whether they can design systems that retain context, not just systems that sound smart for one turn. The tension is that this is less visible and less sexy, but far more decisive for real use.",
+          "timing": "15:02",
+          "happened": "Actionable AI published a newsletter pitch about open source repos that can replace subscription software. It names tools familiar to designers and product teams, including Figma and Jira, and says the guide checks pricing, licensing, and tier limits directly. The framing is explicitly about monthly savings.",
+          "changes": "The shift is economic pressure moving into tool choice, which can change what teams standardize on and what they tolerate. But the source also implies a tradeoff: **lower cost comes with self-hosting friction and hidden caps**, so the savings only matter if teams can absorb the operational burden.",
           "verdict": "Read",
-          "url": "https://elinkb64.mail.theactionableai.com/ss/c/u001.VH9ztUI_5EhIlHYeBgd71I1IkoHGJpPl2lXXCIdDEplVsSRaNSpBxkNXx2o83nssOlnQ5oLVqjuZgl7SIZndk5HmOIBj4fx6AWe2IEcmqjO2NbPSMUJipSXW3UHIMg5Q0aVJkoTMNNFNovF7NstEEZnPPj6NDSxzvoUkBGFipRvl-b5JzGc37mBw-QapkuJE07sHK2hc1RnXQebfNloICHTKNWjojRsUJY8UhKHP_aFHLWdqhcqCWIujpfOZR0s53rqOLuHOFShMBc_bmVPubukj-PX3YJzfYGcKFnTcVLr6Y3eAPGE7Ah7pnFlsIZb-_5T0UAsqzYC8CCa1MAZhSqh4GOS3uFzIZxDioneBunxojRaLSF2d80WSUjP4iftCTA08-u2ytpQ20-0zLgWf-uCaEkn9lVRD52ch6POA8hmwsMZJ9YZxIjGPAxd1wiR9h9PLtzfz0PUsn2c_hkKAz3zFIdD9FKoSG4sjjxO6hjL0H4LwJoEtT99gQRawlzfHARgUPJpPO7-ooOkJVn9tZsH3a6T9I9GyJEkH59CQLRWINNevwg6VEY0-RrzAdS64YK_DhBVXICklt3x7wG4JLB82XcyEXLruuA01coNTWzzneEvFzaZXDjdcFaJfTLsIUWcWBfHH42j_2Ue84vQW-8mq9X3enXBeIzlUlDuI7AYXhfs06q8izXM5IhigYr2kFS0BRibvUTNEEJFZGDqrPcgK-4P2QVgeaifzmzxWWga4wYS2uSgskkRMxdDaWxtj7jz8wSV0ACo-X2MlVQ-SlIePcYwb-XwUsWixWm8b5hilFffXv5bc7XSrPh-7e007/4ud/HAFpONbzQbeeyiwW7cLSRg/h0/h001.To_tKt-xwoCvZwWQDHO3zkFnHVA6YzVo0mjoceGzZ7Q"
+          "url": "https://elinkb64.mail.theactionableai.com/ss/c/u001.VH9ztUI_5EhIlHYeBgd71I1IkoHGJpPl2lXXCIdDEpll-lqt47GyLmzb4uaM0mWawKpv3M7Ng6QYNKECE6l0ZizDA7PRO4WQ1vqqpKKbdacLZG2WgMRku29uuxbLhtdjjkP-uuagOVWNmkDRs9Nu761K1PI7icAwi3kuhr6mYCglbGzksAKvYIHySiTMfN8F88hMOTlbVF0gQAUfeZ7D8D1w4IxAaWTuUlbtpEXYy4nZHeCuvbeq7ptsLas0VfPgk2g4vcrJvIgQM14DfKmag325pGYOvRq7hjGClEba72jKHkE-Z9g4rWbh4NbMktsy3Ljbb32jS_3ySkzpO7DWKyHTiV5MUK9amZ4xaEmk887fEnzB1O9mAgtILmi5u5z06QGhDq4Sxv63VFojusUUAcYh0ACtCpSPivhWBoK0yKOb3jpk347Tn-V6A7x7oEfEJlN5UoDKZ1-y2v4rpj9X1dveQM9pVow4QU8hGZB5qd43f3hI7GHh_D-D69DCbJTRJ1k87YdcNHEh3Kb3rdanrk6ISsjqNvhzIqiyVlEmtFFCPGOKk0DqGB0VTb3PpH_Tb7J9VYmCVoy6aL6IutMwB9uiAORnEEPV1zBtkDi1upueqdDzQkjivKKTQ-awsgY-x5juI2ye6Iqaki6AooYhGeBA8B331n2WuVYZPZcSYGthecKhFfaqstbIlCERj3BkDk7-7530TpJ8sgSl5TmWtzUAZ-A-S5wV2F5ZSPPPbBwzqB0uwK1D6SBXHtqJl3YWbLmlNk09ggg_J2cgtHUpSyXRMICRsQNHjSwCku20ogHleDUpE2oxcgOVrJJiAcJPkivIjyEmBOUy4l3MIdWPNuzmE19-VYmXifc1Xhg9hAg/4uf/j59PHdaARxavm-lwo7jgLg/h0/h001.oMrv9fs17g1JdjhrW89fjfEhpF84h3GBHLBE5_kOHuw"
         }
       ],
-      "further": []
-    },
-    {
-      "id": "03",
-      "slug": "what-does-the-resurfacing-of-everyday-service-problems-in-design",
-      "category": "UX",
-      "tags": [
-        "UX",
-        "Culture"
-      ],
-      "aiLens": false,
-      "question": "What does the resurfacing of everyday service problems in design discourse suggest about the limits of generic product thinking?",
-      "answer": "The short-form question about burgers points to a familiar UX problem: people keep borrowing an existing system to solve a different one. That usually signals weak service design boundaries, where convenience hides confusion until the queue, the context, or the expectation breaks down.",
-      "why": "Source e60150378ce17199 is too brief to support specifics, but its framing points toward a UX critique of repurposed systems and mismatched use cases.",
-      "counts": {
-        "total": 1,
-        "newsletters": 0,
-        "web": 1
-      },
-      "firstSeen": "23:51 cet",
-      "signals": [
-        {
-          "source": "UX Collective",
-          "title": "Is this the line for burgers?",
-          "kind": "Web",
-          "timing": "23:51",
-          "happened": "The piece poses a familiar service-design style question about an item or place doing work outside its original brief. Even in fragment form, the framing suggests a system being used in a context it was not designed for. That kind of mismatch usually becomes visible only at the point of friction.",
-          "changes": "The issue is not novelty, it is **brief drift**. When teams let one surface absorb unrelated jobs, they create convenience in the short term and confusion in the long term. The editorial lesson is to be suspicious of solutions that work only because users have learned to tolerate the mismatch.",
-          "verdict": "Track",
-          "url": "https://uxdesign.cc/is-this-the-line-for-burgers-9730dd45999d"
-        }
-      ],
-      "further": []
-    },
-    {
-      "id": "04",
-      "slug": "what-does-this-weekend-profile-style-coverage-say-about-how-desi",
-      "category": "Culture",
-      "tags": [
-        "Culture"
-      ],
-      "aiLens": false,
-      "question": "What does this weekend-profile style coverage say about how design culture still uses taste, film, and retail rituals to define its references?",
-      "answer": "This kind of feature shows that design-adjacent culture is still built through personal curation as much as formal work. The references people choose, from gallery shows to vintage shopping and films, continue to shape the aesthetic vocabulary that designers import into products and brands.",
-      "why": "Source 663c1c4d052989b9 is a culture profile that centers leisure, taste, and reference points rather than product work.",
-      "counts": {
-        "total": 1,
-        "newsletters": 0,
-        "web": 1
-      },
-      "firstSeen": "10:00 cet",
-      "signals": [
-        {
-          "source": "It’s Nice That",
-          "title": "The Weekend With Claire Marie Healy",
-          "kind": "Web",
-          "timing": "10:00",
-          "happened": "The piece profiles a cultural figure through weekend preferences, including galleries, vintage shopping, and film. It treats those choices as meaningful signals of identity and taste. That is classic culture coverage, but it also mirrors how design teams build shared reference points.",
-          "changes": "This kind of coverage keeps aesthetic influence moving through **personal taste** rather than formal design systems. The upside is that it broadens the reference pool and keeps culture porous. The downside is that it can privilege stylish signals over evidence, so teams should be careful not to confuse mood with method.",
-          "verdict": "Track",
-          "url": "https://www.itsnicethat.com/features/the-weekend-with-claire-marie-healy-250926"
-        }
-      ],
-      "further": []
+      "further": [
+        [
+          "Regulating AI, Quantifying stress, The variance problem",
+          "UX Collective",
+          "https://uxdesign.cc/regulating-ai-quantifying-stress-the-variance-problem-1ce71d56a34a"
+        ],
+        [
+          "Confirm your subscription to Agentic Design School",
+          "Agentic Design School",
+          "https://buttondown.com/agenticdesignschool/confirm-subscription/4ab23c1b-eb84-4837-9aff-8e5592a4db0c"
+        ]
+      ]
     }
   ]
 }
