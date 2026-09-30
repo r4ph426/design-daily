@@ -60,7 +60,7 @@ The header is one shared component across all routes. Treat it as protected infr
 
 Today, Archive, and Toolbox use one editorial opening-section system. Page color and secondary-panel content may differ, but geometry and typography do not.
 
-- Use a 64% / 36% desktop split and a 360px minimum height.
+- Published Today, Archive, and Toolbox use the reviewed seven-module Grid composition, approved for publication on 30 September 2026. Privacy keeps its route-specific seven-module opening.
 - Use the same 34px block padding and 26px leading inset for the editorial panel; the secondary panel uses the shared `page-opening-aside` inset.
 - Every opening has a 12px Inter eyebrow, a 64px Neue Reckless title at desktop, and a 17px Neue Reckless summary.
 - Compose desktop titles as two intentional editorial lines. At mobile width, allow those lines to wrap naturally.
@@ -86,7 +86,8 @@ Today, Archive, and Toolbox use one editorial opening-section system. Page color
 
 ### Privacy
 
-- Keep the forest and paper editorial treatment, with a 64% / 36% opening, a numbered section index, and clear reading-width paragraphs.
+- Keep the forest and paper editorial treatment on a full-width seven-module field with clipped perimeter modules, a numbered section index, and clear reading-width paragraphs. The index sticks below the persistent header on desktop and tablet and returns to document flow on mobile.
+- Use neutral paper/ink mixes for noninteractive text; reserve sage text for links and interactive controls. Align major surfaces to the grid with one-pixel insets, and use the three-cell editorial footer.
 - Use the single-word H1 `Privacy` without a repeated eyebrow or header descriptor.
 - Explain browser-only reading state, public GitHub contribution issues, temporary anti-abuse data, newsletter and AI processing, providers, retention, and user control using implementation-verified facts.
 - Keep `privacy.html` as a redirect. Use `raphael.regli@nttdata.com` as the direct contact; omit the responsible legal entity for this iteration.
@@ -94,7 +95,13 @@ Today, Archive, and Toolbox use one editorial opening-section system. Page color
 
 ## Layout language
 
-- Maximum shell width: 1600px.
+The reviewed Grid composition is approved for the published Today, Archive, and Toolbox routes as of 30 September 2026. The separate `grid-prototype.html` remains a review entry using the same components. It retains a full-width seven-module square field with 1px inset content surfaces, current and archived editions, contribution review flow, shared AI badge, navigation, source provenance, expandable sources, question trail, filters, and personal bookmarks. Privacy and existing shareable question-detail routes remain available. Route-specific style sheets stay isolated to preserve these surfaces during navigation.
+The prototype's square tracks and grid rules share one scrollbar-aware width. Each content box sits 1px inside its exact module boundary. Header destinations have no text underline; the upper-right descriptor aligns right. The sticky header has visible top, bottom, inner-rail, and viewport-edge hairlines. Its cells have 1px insets, and its borders do not reduce track widths. Opaque route-colored perimeter modules cover content while scrolling. Footer claims sit centered in separate square modules.
+The Today prototype opening pairs the title and crawl perspective horizontally on desktop. Article intake begins one full square row below, leaving an open band of modules. Question spreads use a prominent coral Reckless number and filtered prototype Archive category links beneath the editorial title. Expanded source details align to whole grid rows and occupy four desktop modules; the Question trail occupies three. Source disclosure is a visible sage `Open sources` / `Close sources` button.
+The Archive prototype uses the same forest field for an open editorial introduction, `Start here` paths, and a dense searchable 1 / 4 / 2 question index. The Toolbox prototype uses the same field on white, with three distinct weekly discoveries, a persistent evidence-led collection, contextual URL intake, and retrieval filters. Its persistent collection is a compact scan-first list: two short entries share a square row on wide screens, separated by a hairline; each shows title, short editorial reason, verdict, source, and bookmark control. Smaller screens use taller rows for legibility. A separate detail view or side panel remains a later iteration. Both routes retain functional controls and 1px inset cells. The prototype footer has three centered square cells: the two coral claims around the linked sage or ink `Privacy` cell.
+On the forest prototype, noninteractive answer copy, source labels, metadata, and skill labels use neutral paper and ink mixes. Sage text identifies links and interactive controls. Today and Archive render the same compact AI lens badge. The Archive result summary fills one square row, then each result cell begins on the grid with a 1px inset. The Privacy index rail fills the full height of the article sections with a 1px inset. On desktop and tablet, only its inner `On this page` list sticks below the header; it returns to document flow on mobile. Privacy article sections round up to whole module rows, keeping the footer aligned to the field.
+
+- The seven-module prototype field extends to the literal viewport edges through partial perimeter modules and has no desktop shell cap.
 - Responsive changes occur at 1200px and 720px.
 - At the 1200px tablet breakpoint, stack the three `New this week` signals vertically instead of compressing them into narrow columns.
 - Major regions and content rows use exposed one-pixel hairline borders.
@@ -127,7 +134,7 @@ Today and Toolbox share one contribution pattern, even when their surrounding su
 
 ### Shared footer
 
-- Every route ends with the same two-cell footer anatomy: `AI-generated. Human-edited.` and `Synthesis, not noise.`. Privacy is in the primary navigation.
+- Every route uses `src/SiteFooter.jsx` and `src/site-footer.css`: `AI-generated. Human-edited.`, an underlined `Privacy` link with an arrow, and `Synthesis, not noise.`. The three cells occupy modules 1, 4, and 7 with identical centering and 1px insets. The mobile arrangement and interactive cell behavior also come from this shared component.
 - Both footer claims are coral.
 - Today, Archive, and Privacy use the dark forest footer. Toolbox uses the same footer in its white light theme with neutral rules and contrast-safe coral claims.
 
@@ -187,3 +194,6 @@ Before handing off a visual change:
 4. Confirm that typography, color, border, and button roles reuse existing tokens and patterns.
 5. Run `npm run build`, `npm test`, and `npm run test:sites`.
 6. Leave the working local preview open on the most relevant route.
+# Deferred follow-up
+
+The reviewed footer still has alignment issues. The user has requested pushing the current version first and fixing footer alignment in the next iteration.

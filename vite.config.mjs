@@ -5,6 +5,9 @@ export default defineConfig(({ mode }) => ({
   base: mode === "pages" ? "/design-daily/" : "/",
   build: {
     outDir: "dist/client",
+    rollupOptions: {
+      input: { main: "index.html", prototype: "grid-prototype.html" },
+    },
   },
   optimizeDeps: {
     include: ["react", "react-dom/client"],

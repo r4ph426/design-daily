@@ -247,6 +247,7 @@ export function normalizeAiEdition(aiEdition, itemMap) {
       category: question.category,
       tags: question.tags,
       aiLens: question.aiLens,
+      editorialTitle: question.editorialTitle,
       question: question.question,
       answer: question.answer,
       why: question.why,

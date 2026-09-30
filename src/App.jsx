@@ -22,6 +22,7 @@ import {
 } from "./article-submission.js";
 import { ToolboxPage } from "./toolbox.jsx";
 import { PrivacyPage } from "./privacy.jsx";
+import { SiteFooter } from "./SiteFooter.jsx";
 
 const fallbackEditionNumber = "001";
 const turnstileSiteKey = import.meta.env.VITE_TURNSTILE_SITE_KEY
@@ -245,15 +246,6 @@ function Brand({ href = "#" }) {
   );
 }
 
-function SiteFooter() {
-  return (
-    <footer className="footer-grid">
-      <p>AI-generated. Human-edited.</p>
-      <p>Synthesis, not noise.</p>
-    </footer>
-  );
-}
-
 function SignalsTable({ question }) {
   return (
     <div className="signals-table-wrap">
@@ -401,8 +393,9 @@ function submissionDisplayUrl(value = "") {
   }
 }
 
-function ArticleVerificationDialog({ url, token, error, isWorking, onToken, onError, onConfirm, onClose, resetSignal }) {
+function ArticleVerificationDialog({ url, token, error, isWorking, onToken, onError, onConfirm, onClose, resetSignal, context = "article" }) {
   const dialogRef = useRef(null);
+  const isTool = context === "tool";
 
   useEffect(() => {
     const dialog = dialogRef.current;
@@ -420,12 +413,12 @@ function ArticleVerificationDialog({ url, token, error, isWorking, onToken, onEr
     >
       <div className="contribution-dialog-content">
         <div className="contribution-dialog-topline">
-          <span className="meta-label">Article intake</span>
+          <span className="meta-label">{isTool ? "Tool intake" : "Article intake"}</span>
           <button type="button" className="contribution-dialog-close" onClick={onClose} disabled={isWorking} aria-label="Close contribution review">Close</button>
         </div>
         <h2 id="contribution-dialog-title">Review your contribution</h2>
-        <p id="contribution-dialog-description">{turnstileSiteKey ? "Verify this browser, then confirm the article for the next crawl." : "Confirm the article for the next crawl."}</p>
-        <div className="contribution-dialog-url"><span>Article URL</span><strong>{submissionDisplayUrl(url)}</strong></div>
+        <p id="contribution-dialog-description">{turnstileSiteKey ? `Verify this browser, then confirm the ${isTool ? "tool" : "article"} for the next crawl.` : `Confirm the ${isTool ? "tool" : "article"} for the next crawl.`}</p>
+        <div className="contribution-dialog-url"><span>{isTool ? "Tool URL" : "Article URL"}</span><strong>{submissionDisplayUrl(url)}</strong></div>
         {turnstileSiteKey && (
           <div className="contribution-verification">
             <span className="meta-label">Browser verification</span>
@@ -443,10 +436,11 @@ function ArticleVerificationDialog({ url, token, error, isWorking, onToken, onEr
   );
 }
 
-function ArticleConfirmation({ request, onReset }) {
+function ArticleConfirmation({ request, onReset, context = "article" }) {
   const isAccepted = request.status === "accepted";
   const isQueued = request.status === "duplicate_queued";
-  let eyebrow = "Article received";
+  const noun = context === "tool" ? "tool" : "article";
+  let eyebrow = context === "tool" ? "Tool received" : "Article received";
   let title = `Added to ${crawlPossessive(request.crawl)} crawl`;
   let description = "We’ll consider this link with the next source set. Not every shared link appears in the edition.";
 
@@ -458,7 +452,7 @@ function ArticleConfirmation({ request, onReset }) {
   if (request.status === "duplicate_history") {
     eyebrow = "Already crawled";
     title = `Already crawled on ${request.previousCrawlDate || "an earlier date"}`;
-    description = "We’ve seen this article before. A future archive update will point back to the earlier edition.";
+    description = `We’ve seen this ${noun} before. A future archive update will point back to the earlier edition.`;
   }
 
   return (
@@ -471,12 +465,13 @@ function ArticleConfirmation({ request, onReset }) {
         <p className="confirmation-url" title={request.url}>{submissionDisplayUrl(request.url)}</p>
         <p className="confirmation-note">{description}</p>
       </div>
-      <button type="button" onClick={onReset}>{isAccepted ? "Share another article" : "Try another article"}<ArrowRight size={14} /></button>
+      <button type="button" onClick={onReset}>{isAccepted ? `Share another ${noun}` : `Try another ${noun}`}<ArrowRight size={14} /></button>
     </div>
   );
 }
 
-function ArticleIntake() {
+export function ArticleIntake({ context = "article" } = {}) {
+  const isTool = context === "tool";
   const [url, setUrl] = useState("");
   const [request, setRequest] = useState({ status: "default" });
   const [website, setWebsite] = useState("");
@@ -496,7 +491,7 @@ function ArticleIntake() {
     event.preventDefault();
     const requestedUrl = canonicalArticleUrl(url);
     if (!requestedUrl) {
-      setRequest({ status: "error", message: "Paste a valid public article URL." });
+      setRequest({ status: "error", message: `Paste a valid public ${isTool ? "tool" : "article"} URL.` });
       return;
     }
     if (!configured) {
@@ -556,17 +551,17 @@ function ArticleIntake() {
   return (
     <aside className="article-panel page-opening-aside" id="article-intake">
       <div className="article-heading">
-        <p className="meta-label">Article intake</p>
+        <p className="meta-label">{isTool ? "Tool intake" : "Article intake"}</p>
         <h2>Contribute to the next crawl</h2>
-        <p>Paste a useful article. We’ll add it anonymously to the next weekday crawl.</p>
+        <p>{isTool ? "Share a useful tool. We’ll add it anonymously to the next weekday crawl." : "Paste a useful article. We’ll add it anonymously to the next weekday crawl."}</p>
       </div>
       {isConfirmation ? (
-        <ArticleConfirmation request={request} onReset={addAnother} />
+        <ArticleConfirmation request={request} onReset={addAnother} context={context} />
       ) : (
         <form className={`article-form ${request.status}`} onSubmit={review}>
-          <label htmlFor="article-url">Article URL</label>
+          <label htmlFor="article-url">{isTool ? "Tool URL" : "Article URL"}</label>
           <div className="article-control contribution-control contribution-control-dark">
-            <input ref={inputRef} id="article-url" type="text" inputMode="url" autoCapitalize="none" autoCorrect="off" spellCheck="false" placeholder="www.example.com/article" value={url} aria-describedby="article-help article-message" onChange={(event) => { setUrl(event.target.value); if (["error", "limited"].includes(request.status)) setRequest({ status: "default" }); }} disabled={isWorking} required />
+            <input ref={inputRef} id="article-url" type="text" inputMode="url" autoCapitalize="none" autoCorrect="off" spellCheck="false" placeholder={isTool ? "www.example.com/tool" : "www.example.com/article"} value={url} aria-describedby="article-help article-message" onChange={(event) => { setUrl(event.target.value); if (["error", "limited"].includes(request.status)) setRequest({ status: "default" }); }} disabled={isWorking} required />
             <button className="contribution-submit" type="submit" disabled={!url.trim() || isWorking || !configured}>Add to crawl</button>
           </div>
           {isWorking && <span className="loading-bar" aria-hidden="true" />}
@@ -575,7 +570,7 @@ function ArticleIntake() {
           <label className="submission-honeypot" aria-hidden="true">Leave this field empty<input type="text" name="website" tabIndex="-1" autoComplete="off" value={website} onChange={(event) => setWebsite(event.target.value)} /></label>
         </form>
       )}
-      {dialogOpen && <ArticleVerificationDialog url={url} token={turnstileToken} error={dialogError} isWorking={isWorking} onToken={setTurnstileToken} onError={handleTurnstileError} onConfirm={submit} onClose={closeDialog} resetSignal={turnstileReset} />}
+      {dialogOpen && <ArticleVerificationDialog url={url} token={turnstileToken} error={dialogError} isWorking={isWorking} onToken={setTurnstileToken} onError={handleTurnstileError} onConfirm={submit} onClose={closeDialog} resetSignal={turnstileReset} context={context} />}
     </aside>
   );
 }
@@ -635,7 +630,9 @@ export function App() {
     : null;
 
   useEffect(() => {
-    const onHashChange = () => setRoute(readHashRoute());
+    const onHashChange = () => {
+      if (!window.location.hash || window.location.hash === "#" || window.location.hash.startsWith("#/")) setRoute(readHashRoute());
+    };
     window.addEventListener("hashchange", onHashChange);
     return () => window.removeEventListener("hashchange", onHashChange);
   }, []);
@@ -700,7 +697,7 @@ export function App() {
           : null;
 
   return (
-    <main className={`site-shell ${route.name !== "home" ? "route-shell" : ""} ${route.name === "toolbox" ? "toolbox-shell" : ""}`} id="top">
+    <main className={`site-shell ${route.name !== "home" ? "route-shell" : ""} ${route.name === "toolbox" ? "toolbox-shell" : ""} ${route.name === "privacy" ? "privacy-shell" : ""}`} id="top">
       {route.name === "home" && <a className="skip-link" href={`#${questions[0].slug}`}>Skip to the first question</a>}
       {route.name === "toolbox" && <a className="skip-link" href="#toolbox-weekly">Skip to this week’s tools</a>}
       {route.name === "privacy" && <a className="skip-link" href="#privacy-content">Skip to privacy details</a>}
@@ -732,7 +729,7 @@ export function App() {
         })}
       </section>
       </>}
-      <SiteFooter />
+      <SiteFooter theme={route.name === "toolbox" ? "light" : "forest"} className={route.name === "privacy" ? "privacy-footer" : ""} privacyHref="#/privacy" />
     </main>
   );
 }

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import { ArrowRight } from "@phosphor-icons/react";
 
 const sections = [
@@ -30,11 +30,40 @@ function scrollToSection(id) {
 }
 
 export function PrivacyPage() {
+  const pageRef = useRef(null);
   const [cleared, setCleared] = useState(false);
   const [confirmClear, setConfirmClear] = useState(false);
 
+  useLayoutEffect(() => {
+    const page = pageRef.current;
+    const shell = page.closest(".privacy-shell");
+    const sections = [...page.querySelectorAll(".privacy-section")];
+    let frame;
+
+    const snapSections = () => {
+      const mobile = window.matchMedia("(max-width: 720px)").matches;
+      const module = shell.getBoundingClientRect().width / 8;
+      for (const section of sections) {
+        if (mobile) section.style.removeProperty("--privacy-section-rows");
+        else {
+          const content = section.querySelector(":scope > div");
+          const rows = Math.max(2, Math.ceil((content.getBoundingClientRect().height + 2) / module));
+          section.style.setProperty("--privacy-section-rows", rows);
+        }
+      }
+    };
+    const observer = new ResizeObserver(() => {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(snapSections);
+    });
+    observer.observe(shell);
+    sections.forEach((section) => observer.observe(section.querySelector(":scope > div")));
+    snapSections();
+    return () => { observer.disconnect(); cancelAnimationFrame(frame); };
+  }, []);
+
   return (
-    <div className="privacy-page">
+    <div className="privacy-page" ref={pageRef}>
       <section className="privacy-hero page-opening" aria-labelledby="privacy-title">
         <div className="page-opening-main">
           <h1 id="privacy-title">Privacy</h1>
@@ -50,12 +79,14 @@ export function PrivacyPage() {
       </section>
 
       <div className="privacy-body">
-        <nav className="privacy-index" aria-label="On this page">
-          <p className="meta-label">On this page</p>
-          {sections.map(([id, title], index) => (
-            <button key={id} type="button" onClick={() => scrollToSection(id)}><span>{String(index + 1).padStart(2, "0")}</span>{title}<ArrowRight size={14} aria-hidden="true" /></button>
-          ))}
-        </nav>
+        <aside className="privacy-index-rail">
+          <nav className="privacy-index" aria-label="On this page">
+            <p className="meta-label">On this page</p>
+            {sections.map(([id, title], index) => (
+              <button key={id} type="button" onClick={() => scrollToSection(id)}><span>{String(index + 1).padStart(2, "0")}</span>{title}<ArrowRight size={14} aria-hidden="true" /></button>
+            ))}
+          </nav>
+        </aside>
 
         <div className="privacy-articles" id="privacy-content">
           <section className="privacy-section" id="reading" aria-labelledby="reading-title">
