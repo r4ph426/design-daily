@@ -21,6 +21,7 @@ import {
   submitArticle,
 } from "./article-submission.js";
 import { ToolboxPage } from "./toolbox.jsx";
+import { PrivacyPage } from "./privacy.jsx";
 
 const fallbackEditionNumber = "001";
 const turnstileSiteKey = import.meta.env.VITE_TURNSTILE_SITE_KEY
@@ -248,7 +249,6 @@ function SiteFooter() {
   return (
     <footer className="footer-grid">
       <p>AI-generated. Human-edited.</p>
-      <a href={`${import.meta.env.BASE_URL}privacy.html`}>Privacy <ArrowRight size={14} /></a>
       <p>Synthesis, not noise.</p>
     </footer>
   );
@@ -308,9 +308,9 @@ function SourceList({ question }) {
   );
 }
 
-function QuestionBlock({ question, isOpen, isSaved, onToggle, onSave }) {
+function QuestionBlock({ question, index = 0, isOpen, isSaved, onToggle, onSave }) {
   return (
-    <article className={`question-block ${isOpen ? "open" : ""}`} id={question.slug}>
+    <article className={`question-block module-entry ${isOpen ? "open" : ""}`} id={question.slug} style={{ "--entry-index": index }}>
       <div className="question-number">
         <span className="question-sequence">{question.id}</span>
         <small className="category-list">{[question.category, ...question.tags.filter((tag) => tag !== question.category)].join(" · ")}</small>
@@ -496,7 +496,7 @@ function ArticleIntake() {
   };
 
   return (
-    <aside className="article-panel page-opening-aside" id="article-intake">
+    <aside className="article-panel page-opening-aside module-entry" id="article-intake" style={{ "--entry-index": 2 }}>
       <div className="article-heading">
         <p className="meta-label">Article intake</p>
         <h2>Contribute to the next crawl</h2>
@@ -522,26 +522,182 @@ function ArticleIntake() {
   );
 }
 
-function SiteHeader({ edition, routeName }) {
+function ModuleField() {
+  const fieldRef = useRef(null);
+  const [rowCount, setRowCount] = useState(4);
+
+  useEffect(() => {
+    const field = fieldRef.current;
+    const panel = field?.parentElement;
+    const content = field?.nextElementSibling;
+    if (!field || !panel || !content) return undefined;
+
+    let animationFrame = 0;
+    const updateField = () => {
+      window.cancelAnimationFrame(animationFrame);
+      animationFrame = window.requestAnimationFrame(() => {
+        const columns = field.querySelector(".module-field-columns");
+        const sampleModule = columns?.children[1];
+        const moduleSize = sampleModule?.getBoundingClientRect().width || field.clientWidth / 7;
+        const fieldHeight = Math.max(panel.clientHeight, content.scrollHeight);
+        const nextRowCount = Math.max(4, Math.ceil(fieldHeight / Math.max(moduleSize, 1)));
+        field.style.setProperty("--resolved-module-size", `${moduleSize}px`);
+        setRowCount((current) => current === nextRowCount ? current : nextRowCount);
+      });
+    };
+
+    const resizeObserver = new ResizeObserver(updateField);
+    resizeObserver.observe(panel);
+    resizeObserver.observe(content);
+    window.addEventListener("resize", updateField);
+    updateField();
+
+    return () => {
+      window.cancelAnimationFrame(animationFrame);
+      resizeObserver.disconnect();
+      window.removeEventListener("resize", updateField);
+    };
+  }, []);
+
+  return (
+    <div className="module-field" ref={fieldRef} aria-hidden="true">
+      <div className="module-field-columns">
+        {Array.from({ length: 9 }, (_, index) => <span key={index} />)}
+      </div>
+      <div className="module-field-rows">
+        {Array.from({ length: rowCount }, (_, index) => <span key={index} />)}
+      </div>
+    </div>
+  );
+}
+
+function SiteHeader({ edition, routeName, onNavigate }) {
   const todayIsCurrent = routeName === "home";
   const archiveIsCurrent = routeName === "archive" || routeName === "question";
   const toolboxIsCurrent = routeName === "toolbox";
+  const privacyIsCurrent = routeName === "privacy";
   const compactHeaderDate = formatHeaderDate(edition.date);
   return (
     <header className="topbar">
       <div className="topbar-primary">
         <Brand />
+        <span className="header-grid-cell" aria-hidden="true" />
         <div className="edition-meta"><span className="edition-date-full">{edition.displayDate}</span><span className="edition-date-compact">{compactHeaderDate}</span></div>
+        <span className="header-grid-cell" aria-hidden="true" />
+        {privacyIsCurrent
+          ? <span className="header-grid-cell" aria-hidden="true" />
+          : <p className="header-tagline">{toolboxIsCurrent ? "A weekly editorial guide to AI tools for UX/UI designers" : "A daily editorial source of truth for design teams"}</p>}
       </div>
       <div className="topbar-secondary">
         <nav className="nav-links" aria-label="Primary">
-          <a className={todayIsCurrent ? "active" : ""} aria-current={todayIsCurrent ? "page" : undefined} href="#">Today</a>
-          <a className={archiveIsCurrent ? "active" : ""} aria-current={archiveIsCurrent ? "page" : undefined} href="#/archive">Archive</a>
+          <a className={todayIsCurrent ? "active" : ""} aria-current={todayIsCurrent ? "page" : undefined} href="#" onClick={(event) => onNavigate?.(event, "home")}>Today</a>
+          <a className={archiveIsCurrent ? "active" : ""} aria-current={archiveIsCurrent ? "page" : undefined} href="#/archive" onClick={(event) => onNavigate?.(event, "archive")}>Archive</a>
           <a className={toolboxIsCurrent ? "active" : ""} aria-current={toolboxIsCurrent ? "page" : undefined} href="#/toolbox">Toolbox</a>
+          <a className={privacyIsCurrent ? "active" : ""} aria-current={privacyIsCurrent ? "page" : undefined} href="#/privacy">Privacy</a>
         </nav>
-        <p className="header-tagline">{toolboxIsCurrent ? "A weekly editorial guide to AI tools for UX/UI designers" : "A daily editorial source of truth for design teams"}</p>
+        <span className="header-grid-cell" aria-hidden="true" />
+        <span className="header-grid-cell" aria-hidden="true" />
+        <span className="header-grid-cell" aria-hidden="true" />
+        <span className="header-grid-cell" aria-hidden="true" />
       </div>
     </header>
+  );
+}
+
+function TodayPage({ edition, questions, openQuestions, savedQuestions, setOpenQuestions, toggleBookmark }) {
+  const summarySentences = edition.summary?.match(/[^.!?]+[.!?]+(?=\s|$)/g);
+  const openingSummary = summarySentences?.slice(0, 1).join(" ").trim() || edition.summary;
+  return (
+    <>
+      <section className="edition-hero mosaic-opening" aria-labelledby="edition-title">
+        <div className="edition-title-block protected-module module-entry" style={{ "--entry-index": 0 }}>
+          <p className="page-opening-eyebrow">Today’s edition</p>
+          <h1 id="edition-title"><span>{countWord(questions.length)} questions</span><span>shaping <em>design</em> today</span></h1>
+        </div>
+        <div className="edition-summary-block protected-module module-entry" style={{ "--entry-index": 1 }}>
+          <p className="editor-note">{openingSummary}</p>
+          <div className="crawl-line">
+            <span><Clock size={16} /> Last crawl {formatCrawlDay(edition.date)} · {edition.crawlCompletedAt}</span>
+            <div className="crawl-breakdown">
+              <span>Total sources: {edition.sourceCount}</span>
+              <span>Web sources: {edition.webSourceCount ?? 0}</span>
+              <span>Contributed links through team: {edition.teamContributionCount ?? 0}</span>
+            </div>
+          </div>
+        </div>
+        <ArticleIntake />
+      </section>
+      <section className="questions" aria-label="Today’s questions">
+        {questions.map((question, index) => {
+          const bookmarkKey = `${edition.date}:${question.slug}`;
+          return (
+            <QuestionBlock
+              key={question.id}
+              question={question}
+              index={index + 3}
+              isOpen={Boolean(openQuestions[question.id])}
+              isSaved={Boolean(savedQuestions[bookmarkKey])}
+              onToggle={() => setOpenQuestions((state) => ({ ...state, [question.id]: !state[question.id] }))}
+              onSave={() => toggleBookmark(bookmarkKey)}
+            />
+          );
+        })}
+      </section>
+    </>
+  );
+}
+
+function RouteGridTransition({ activeRoute, today, archive }) {
+  const stageRef = useRef(null);
+  const timersRef = useRef([]);
+  const [visibleRoute, setVisibleRoute] = useState(activeRoute);
+  const [phase, setPhase] = useState("idle");
+
+  useEffect(() => {
+    timersRef.current.forEach((timer) => window.clearTimeout(timer));
+    timersRef.current = [];
+    if (activeRoute === visibleRoute) {
+      setPhase("idle");
+      return undefined;
+    }
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setVisibleRoute(activeRoute);
+      setPhase("idle");
+      stageRef.current?.scrollTo({ top: 0, behavior: "auto" });
+      return undefined;
+    }
+
+    setPhase("collapsing");
+    timersRef.current = [
+      window.setTimeout(() => {
+        setVisibleRoute(activeRoute);
+        setPhase("grid");
+        stageRef.current?.scrollTo({ top: 0, behavior: "auto" });
+      }, 300),
+      window.setTimeout(() => setPhase("expanding"), 440),
+      window.setTimeout(() => setPhase("idle"), 1040),
+    ];
+
+    return () => {
+      timersRef.current.forEach((timer) => window.clearTimeout(timer));
+      timersRef.current = [];
+    };
+  }, [activeRoute]);
+
+  const isToday = visibleRoute === "home";
+  return (
+    <div
+      className={`route-transition-stage is-${phase}`}
+      ref={stageRef}
+      data-visible-route={visibleRoute}
+      aria-busy={phase !== "idle"}
+    >
+      <section className={`route-transition-panel ${isToday ? "today-panel" : "archive-panel"}`} aria-label={isToday ? "Today" : "Archive"}>
+        <ModuleField />
+        <div className="route-panel-content">{isToday ? today : archive}<SiteFooter /></div>
+      </section>
+    </div>
   );
 }
 
@@ -573,12 +729,19 @@ export function App() {
   const selectedQuestion = route.name === "question"
     ? archiveRecords.find((record) => record.dateISO === route.dateISO && record.slug === route.slug)
     : null;
+  const isDeckRoute = route.name === "home" || route.name === "archive";
+  const deckActiveRoute = route.name === "archive" ? "archive" : "home";
 
   useEffect(() => {
     const onHashChange = () => setRoute(readHashRoute());
     window.addEventListener("hashchange", onHashChange);
     return () => window.removeEventListener("hashchange", onHashChange);
   }, []);
+
+  useEffect(() => {
+    const titles = { home: "Today", archive: "Archive", toolbox: "Toolbox", privacy: "Privacy", question: "Question" };
+    document.title = `${titles[route.name] || "design / daily"} · design / daily`;
+  }, [route.name]);
 
   useEffect(() => {
     const isToolbox = route.name === "toolbox";
@@ -629,47 +792,49 @@ export function App() {
 
   const toggleBookmark = (key) => setSavedQuestions((state) => ({ ...state, [key]: !state[key] }));
 
+  const updateDeckRoute = useCallback((name, mode = "replace") => {
+    if (!isDeckRoute || (name !== "home" && name !== "archive")) return;
+    if ((route.name === "archive" ? "archive" : "home") === name) return;
+    const url = new URL(window.location.href);
+    url.hash = name === "archive" ? "/archive" : "";
+    window.history[mode === "push" ? "pushState" : "replaceState"](null, "", url);
+    setRoute(readHashRoute());
+  }, [isDeckRoute, route.name]);
+
+  const handleHeaderNavigate = useCallback((event, name) => {
+    if (!isDeckRoute || (name !== "home" && name !== "archive")) return;
+    event.preventDefault();
+    updateDeckRoute(name, "push");
+  }, [isDeckRoute, updateDeckRoute]);
+
   const routeContent = route.name === "archive"
     ? <ArchivePage key={route.key} records={archiveRecords} bookmarks={savedQuestions} onBookmark={toggleBookmark} initialCategory={route.category} focusSearch={route.focusSearch} />
     : route.name === "question"
       ? <QuestionDetailPage record={selectedQuestion} records={archiveRecords} saved={Boolean(selectedQuestion && savedQuestions[selectedQuestion.key])} onBookmark={toggleBookmark} renderSignals={(question) => <SignalsTable question={question} />} archiveReady={archiveReady} />
       : route.name === "toolbox"
         ? <ToolboxPage />
+        : route.name === "privacy"
+          ? <PrivacyPage />
         : null;
 
   return (
-    <main className={`site-shell ${route.name !== "home" ? "route-shell" : ""} ${route.name === "toolbox" ? "toolbox-shell" : ""}`} id="top">
+    <main className={`site-shell ${isDeckRoute ? "deck-shell" : "route-shell"} ${route.name === "toolbox" ? "toolbox-shell" : ""}`} id="top">
       {route.name === "home" && <a className="skip-link" href={`#${questions[0].slug}`}>Skip to the first question</a>}
+      {route.name === "archive" && <a className="skip-link" href="#question-index">Skip to the question index</a>}
       {route.name === "toolbox" && <a className="skip-link" href="#toolbox-weekly">Skip to this week’s tools</a>}
-      <SiteHeader edition={edition} routeName={route.name} />
-      {route.name !== "home" && (routeContent || (
+      {route.name === "privacy" && <a className="skip-link" href="#privacy-content" onClick={(event) => { event.preventDefault(); document.getElementById("privacy-content")?.scrollIntoView(); }}>Skip to privacy details</a>}
+      <SiteHeader edition={edition} routeName={isDeckRoute ? deckActiveRoute : route.name} onNavigate={handleHeaderNavigate} />
+      {isDeckRoute && (
+        <RouteGridTransition
+          activeRoute={deckActiveRoute}
+          today={<TodayPage edition={edition} questions={questions} openQuestions={openQuestions} savedQuestions={savedQuestions} setOpenQuestions={setOpenQuestions} toggleBookmark={toggleBookmark} />}
+          archive={<ArchivePage key={route.key} records={archiveRecords} bookmarks={savedQuestions} onBookmark={toggleBookmark} initialCategory={route.category} focusSearch={route.focusSearch} embedded />}
+        />
+      )}
+      {!isDeckRoute && (routeContent || (
         <section className="route-message"><p className="meta-label">design / daily</p><h1>This page could not be found.</h1><a href="#">Return to today <ArrowRight size={17} /></a></section>
       ))}
-      {route.name === "home" && <>
-      <section className="edition-hero page-opening" aria-labelledby="edition-title">
-        <div className="edition-intro page-opening-main">
-          <p className="page-opening-eyebrow">Today’s edition</p>
-          <h1 id="edition-title"><span className="page-opening-title-line">{countWord(questions.length)} questions</span><span className="page-opening-title-line">shaping design today</span></h1>
-          <p className="editor-note page-opening-summary">{edition.summary}</p>
-          <div className="crawl-line">
-            <span><Clock size={16} /> Last crawl {formatCrawlDay(edition.date)} · {edition.crawlCompletedAt}</span>
-            <div className="crawl-breakdown">
-              <span>Total sources: {edition.sourceCount}</span>
-              <span>Web sources: {edition.webSourceCount ?? 0}</span>
-              <span>Contributed links through team: {edition.teamContributionCount ?? 0}</span>
-            </div>
-          </div>
-        </div>
-        <ArticleIntake />
-      </section>
-      <section className="questions" aria-label="Today’s questions">
-        {questions.map((question) => {
-          const bookmarkKey = `${edition.date}:${question.slug}`;
-          return <QuestionBlock key={question.id} question={question} isOpen={Boolean(openQuestions[question.id])} isSaved={Boolean(savedQuestions[bookmarkKey])} onToggle={() => setOpenQuestions((state) => ({ ...state, [question.id]: !state[question.id] }))} onSave={() => toggleBookmark(bookmarkKey)} />;
-        })}
-      </section>
-      </>}
-      <SiteFooter />
+      {!isDeckRoute && <SiteFooter />}
     </main>
   );
 }

@@ -298,6 +298,38 @@
       "access": "Open source",
       "setup": "10–20 minutes",
       "recommendation": "The package connects reference evidence to actual design decisions and verification. Start with one skill because the full suite introduces a substantial workflow of its own."
+    },
+    {
+      "id": "18",
+      "title": "Dembrandt",
+      "type": "MCP",
+      "categories": ["UI", "Process"],
+      "practices": ["Review", "Pattern research"],
+      "description": "An MCP and CLI that extracts design tokens, typography, spacing, components, and accessibility findings from live websites.",
+      "verdict": "Worth trying",
+      "confidence": "Medium",
+      "reviewed": "30 Sep 2026",
+      "source": "github.com/dembrandt/dembrandt",
+      "url": "https://github.com/dembrandt/dembrandt",
+      "access": "Open source",
+      "setup": "10–15 minutes",
+      "recommendation": "Try it on a small set of reference sites to speed up design-system comparison. Check the extracted tokens and accessibility findings against the live pages before using them as evidence."
+    },
+    {
+      "id": "19",
+      "title": "Diagram Design",
+      "type": "Skill",
+      "categories": ["UX", "Process"],
+      "practices": ["Flows", "UI sketches"],
+      "description": "A Codex-compatible design skill for producing structured, editable diagrams, including user journeys and flow diagrams.",
+      "verdict": "Worth trying",
+      "confidence": "Medium",
+      "reviewed": "30 Sep 2026",
+      "source": "github.com/cathrynlavery/diagram-design",
+      "url": "https://github.com/cathrynlavery/diagram-design",
+      "access": "Open source",
+      "setup": "5–10 minutes",
+      "recommendation": "Try it on a user journey or service flow and compare the resulting diagram with the team’s existing documentation. Review generated structure and labels before sharing."
     }
   ]
 }

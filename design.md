@@ -47,24 +47,24 @@ Coral is editorial except for the shared `Add to crawl` action on Today and Tool
 
 The header is one shared component across all routes. Treat it as protected infrastructure.
 
-- Row one contains only the brand and current edition date.
-- Row two contains exactly Today, Archive, and Toolbox plus a route-aware editorial descriptor.
-- Every route has one persistent active destination using the same logic: a subtle surface fill, heavier label, and three-pixel inset bottom rule. Today and Archive use sage for the rule; Toolbox uses ink.
+- Row one places the brand in the left track and the current edition date in the middle track. The right track carries the route-aware editorial descriptor except on Privacy, where it stays empty.
+- Row two contains exactly Today, Archive, Toolbox, and Privacy in the left track; the remaining structural tracks stay deliberately empty.
+- Every route has one persistent active destination using the same logic: a subtle surface fill, heavier label, and three-pixel inset bottom rule. Today, Archive, and Privacy use sage for the rule; Toolbox uses ink.
 - Search belongs inside Archive. Personal saves remain in the content rows where their meaning is clear; neither appears as a header utility.
 - The full date appears on larger screens. A compact `D Mon YYYY` form preserves the date without colliding with the brand on mobile.
 - Do not add page-specific controls, badges, or one-off treatments to the header.
-- Test header changes on Today, Archive, and Toolbox at desktop and mobile widths.
+- Test header changes on Today, Archive, Toolbox, and Privacy at desktop and mobile widths.
 
-## Shared page-opening contract
+## Page-opening contracts
 
-Today, Archive, and Toolbox use one editorial opening-section system. Page color and secondary-panel content may differ, but geometry and typography do not.
+Toolbox, Privacy, and standalone detail routes use the shared editorial opening-section system. Today and Archive use the selected 2.1-A viewport deck described under Layout language.
 
 - Use a 64% / 36% desktop split and a 360px minimum height.
 - Use the same 34px block padding and 26px leading inset for the editorial panel; the secondary panel uses the shared `page-opening-aside` inset.
-- Every opening has a 12px Inter eyebrow, a 64px Neue Reckless title at desktop, and a 17px Neue Reckless summary.
-- Compose desktop titles as two intentional editorial lines. At mobile width, allow those lines to wrap naturally.
+- Openings use a 12px Inter eyebrow, a 64px Neue Reckless title at desktop, and a 17px Neue Reckless summary. Privacy omits the eyebrow and uses a single-word H1.
+- Compose editorial desktop titles as two intentional lines where the title needs them. At mobile width, allow those lines to wrap naturally.
 - Collapse every opening at 720px with the same 30px / 20px editorial inset, 46px title, 16px summary, and stacked secondary panel.
-- Keep the content role page-specific: crawl overview on Today, archive orientation on Archive, and weekly tool perspective on Toolbox.
+- Keep the content role page-specific: archive orientation on standalone Archive/detail surfaces and weekly tool perspective on Toolbox.
 
 ## Surface themes
 
@@ -73,7 +73,7 @@ Today, Archive, and Toolbox use one editorial opening-section system. Page color
 - Dark forest canvas with warm paper editorial type.
 - Coral is reserved for the masthead, question numerals, `Why it matters`, and non-interactive editorial claims.
 - Sage carries interaction states and text-link affordances.
-- Questions use a strict 14% / 48% / 38% desktop grid for number, editorial content, and provenance.
+- Today questions use a 15.4% / 43.7% / 25.7% / 15.2% desktop grid for number, editorial content, provenance, and the discussion action. Other dense question indexes may use their own documented retrieval grid.
 
 ### Toolbox
 
@@ -83,12 +83,30 @@ Today, Archive, and Toolbox use one editorial opening-section system. Page color
 - Keep two visibly distinct layers: `New this week` for date-bound editorial signals, then `Our toolbox` for the persistent, searchable collection.
 - Dense evidence and source provenance matter more than marketplace-style promotion.
 
+### Privacy
+
+- Keep the forest and paper editorial treatment, with a 64% / 36% opening, a numbered section index, and clear reading-width paragraphs.
+- Use the single-word H1 `Privacy` with no repeated eyebrow or editorial tagline in the upper-right header track.
+- Explain browser-only reading state, public GitHub contribution issues, temporary anti-abuse data, newsletter and AI processing, providers, retention, and user control using implementation-verified facts.
+- Preserve `privacy.html` as a redirect into the shareable app route. The current contact is `raphael.regli@nttdata.com`; the responsible legal entity is intentionally omitted for this iteration and may be added after a formal review.
+
 ## Layout language
 
-- Maximum shell width: 1600px.
+- Today and Archive are viewport-native and have no maximum shell width. The seven square columns are the visible editorial scaffold as well as the underlying field, so header, opening, question, and archive-row rules meet the same vertical tracks. Partial perimeter modules carry the structural field to the literal viewport edges. Dense standalone routes may still use a capped reading measure where appropriate.
 - Responsive changes occur at 1200px and 720px.
 - At the 1200px tablet breakpoint, stack the three `New this week` signals vertically instead of compressing them into narrow columns.
 - Major regions and content rows use exposed one-pixel hairline borders.
+- The selected Today direction may use a 7 by 4 square-module grid inside major editorial regions, plus partial perimeter modules that appear cut by the viewport. The grid is structural rather than a decorative page background.
+- Treat the initial 7 by 4 field at a 16:9 viewport as the starting frame, not the end of the system. Continue square module rows for the full rendered height of Today and Archive, including content below the fold, while preserving the clipped perimeter rails and their joined top, side, and bottom outlines.
+- Keep the square field subtly visible wherever no content cell is needed. Content occupies only the minimum one- or two-row module span it needs; unused modules remain forest and expose the underlying rules. Protected content surfaces stop rules from crossing text.
+- The selected local grid prototype uses inset content boxes with a 1px offset from their square-module boundaries. This exposes the hairline grid around each box while keeping the rules below the text.
+- Text always occupies a protected inset region. Grid rules stop at or disappear beneath text boxes, and no line may cross a headline, paragraph, label, or control.
+- Do not place cropped words, ghosted type, or other typographic noise behind content. Build movement from module spans, whitespace, clipped outlines, and restrained transitions instead.
+- Today and Archive occupy one route-transition stage below the shared sticky two-row header. Do not use horizontal scrolling, swipe navigation, or lateral page movement. Header navigation updates the URL and active state immediately, collapses the visible content cells to reveal the underlying seven-by-four grid, holds that grid briefly, then expands the destination cells in their new arrangement.
+- The Today opening maps the seven columns into a four-module headline, one-module crawl perspective, and two-module article intake. Archive uses a four-module title, then places its two-module orientation and one-module count in only the lower square row so the unused upper modules remain visible.
+- Today questions and Archive index rows align to a 1 / 4 / 2 module split. Today keeps the live product’s in-row `Signals & Sources` disclosure and does not add a separate discussion rail.
+- Route blocks collapse toward their horizontal centers and repopulate with a short opacity and expansion stagger. The destination resets to its top during the exposed-grid beat. Reduced-motion mode swaps routes immediately. Mobile uses the same header-driven model without swipe.
+- Keep Toolbox outside the animated stage for v1, but preserve an extensible route model so it can join the grid transition later.
 - Use alignment, scale, and whitespace for hierarchy. Do not add decorative background grids.
 - Avoid rounded SaaS cards, gradients, glass, drop shadows, and oversized filled accent panels.
 - At mobile width, stack dense columns, keep the date visible, keep search available inside Archive, and make category filters horizontally scrollable where needed.
@@ -117,9 +135,8 @@ Today and Toolbox share one contribution pattern, even when their surrounding su
 
 ### Shared footer
 
-- Every route ends with the same three-cell footer anatomy: `AI-generated. Human-edited.`, `Privacy →`, and `Synthesis, not noise.`
-- Non-interactive claims are coral. The Privacy link is underlined and uses the arrow affordance.
-- Today and Archive use the dark forest footer. Toolbox uses the same footer in its white light theme with neutral rules, a contrast-safe darker coral for the claims, and an ink Privacy link.
+- Every route ends with the same two-cell footer anatomy: `AI-generated. Human-edited.` and `Synthesis, not noise.`. Privacy lives in the primary navigation and does not appear in the footer.
+- Both claims are coral. Today, Archive, and Privacy use the dark forest footer. Toolbox uses the same footer in its white light theme with neutral rules and a contrast-safe darker coral for the claims.
 
 ### Editorial signals
 

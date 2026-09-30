@@ -3,107 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="color-scheme" content="dark" />
+    <meta http-equiv="refresh" content="0; url=./#/privacy" />
     <title>Privacy · design / daily</title>
-    <link rel="stylesheet" href="./tokens.css" />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap");
-
-      @font-face {
-        font-family: "Neue Reckless";
-        src: url("./fonts/Reckless-Regular.woff2") format("woff2");
-        font-style: normal;
-        font-weight: 400;
-        font-display: swap;
-      }
-
-      :root {
-        font-family: var(--font-ui);
-        color: var(--paper);
-        background: var(--canvas);
-      }
-
-      * { box-sizing: border-box; }
-      body { margin: 0; min-width: 320px; background: var(--canvas); }
-      a { color: inherit; }
-      .shell { width: min(1040px, calc(100% - 32px)); margin: 0 auto; border-inline: 1px solid var(--grid); }
-      header { min-height: 80px; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 0 24px; border-bottom: 1px solid var(--grid); }
-      .brand { color: var(--coral-text); background: transparent; font-family: var(--font-ui); font-size: var(--t-body); font-weight: 500; text-decoration: none; }
-      .back { color: var(--text-muted); font-family: var(--font-interface); font-size: var(--t-label); text-decoration: none; }
-      .back:hover { color: var(--sage); }
-      main { display: grid; grid-template-columns: minmax(190px, 28%) minmax(0, 1fr); }
-      .intro, .content { padding: 48px 32px; }
-      .intro { border-right: 1px solid var(--grid); }
-      h1, h2 { font-family: var(--font-editorial); font-weight: 400; }
-      h1 { margin: 0; font-size: var(--t-page-title); line-height: 0.92; }
-      .meta { margin-top: 24px; color: var(--text-muted); font-family: var(--font-interface); font-size: var(--t-meta); line-height: 1.6; }
-      section { max-width: 680px; padding: 0 0 28px; margin-bottom: 28px; border-bottom: 1px solid var(--grid); }
-      section:last-child { margin-bottom: 0; border-bottom: 0; }
-      h2 { margin: 0 0 12px; font-size: var(--t-page-heading); line-height: 1; }
-      p, li { color: var(--text-muted); font-size: var(--t-body); line-height: 1.65; }
-      ul { padding-left: 20px; }
-      strong { color: var(--paper); font-weight: 500; }
-      footer { min-height: 58px; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 12px 24px; border-top: 1px solid var(--grid); color: var(--coral-text); font-family: var(--font-interface); font-size: var(--t-meta); }
-
-      @media (max-width: 720px) {
-        :root { --t-page-title: 52px; }
-        main { display: block; }
-        .intro { border-right: 0; border-bottom: 1px solid var(--grid); }
-        .intro, .content { padding: 36px 20px; }
-        header, footer { padding-inline: 20px; }
-      }
-    </style>
   </head>
   <body>
-    <div class="shell">
-      <header>
-        <a class="brand" href="./">design / daily</a>
-        <a class="back" href="./">Back to today’s edition</a>
-      </header>
-      <main>
-        <div class="intro">
-          <h1>Privacy</h1>
-          <p class="meta">Last updated 21 September 2026</p>
-        </div>
-        <div class="content">
-          <section>
-            <h2>What the product does</h2>
-            <p>design / daily creates a shared daily briefing for a design team. It combines public web sources with newsletters received by a dedicated newsletter-only Gmail inbox.</p>
-          </section>
-          <section>
-            <h2>Google data we access</h2>
-            <p>The product uses Google OAuth with the read-only Gmail scope. It can read messages and mailbox settings in the connected account. It cannot send, modify, or delete email.</p>
-            <p>Access is used only to retrieve newsletter messages for the daily crawl. The connected account should contain newsletters only and should not be used for personal correspondence.</p>
-          </section>
-          <section>
-            <h2>How data is processed</h2>
-            <ul>
-              <li>The scheduled crawler runs in GitHub Actions.</li>
-              <li>Relevant newsletter and web excerpts are sent to the OpenAI API to produce the editorial synthesis. OAuth credentials are never sent to OpenAI.</li>
-              <li>The resulting summaries, source titles, links, and provenance may be published in the public design / daily edition.</li>
-              <li>Raw Gmail message bodies are not committed to the repository or exposed in the website bundle.</li>
-            </ul>
-          </section>
-          <section>
-            <h2>Article submissions</h2>
-            <p>You can share an article without an account. The submitted URL becomes a public GitHub issue so the scheduled crawler can read it. Do not submit private or sensitive links.</p>
-            <p>We store a random identifier in your browser and use short-lived, hashed network signals to enforce submission limits. Cloudflare Turnstile checks submissions for automated abuse. design / daily does not retain your raw IP address.</p>
-          </section>
-          <section>
-            <h2>Storage and retention</h2>
-            <p>Google OAuth credentials are stored as encrypted GitHub Actions secrets. Generated daily editions are stored as versioned JSON in the public repository so the archive remains available. Raw newsletter messages are read during a crawl and are not retained by the application.</p>
-          </section>
-          <section>
-            <h2>Services involved</h2>
-            <p>The workflow relies on Google Gmail and OAuth, GitHub Actions and GitHub Pages, Cloudflare Workers and Turnstile, and the OpenAI API. Each provider processes data under its own terms and privacy policy.</p>
-          </section>
-          <section>
-            <h2>Your control</h2>
-            <p>You can revoke design / daily’s Gmail access at any time from your Google Account connections. Revoking access stops future inbox crawls. For questions, contact the design / daily team.</p>
-          </section>
-        </div>
-      </main>
-      <footer><span>by ra.re design</span><span>Synthesis, not noise.</span></footer>
-    </div>
+    <p>The Privacy page has moved to <a href="./#/privacy">design / daily Privacy</a>.</p>
   </body>
 </html>

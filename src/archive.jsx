@@ -139,6 +139,9 @@ export function readHashRoute() {
   if (parts[0] === "toolbox") {
     return { name: "toolbox", key: raw };
   }
+  if (parts[0] === "privacy") {
+    return { name: "privacy", key: raw };
+  }
   if (parts[0] === "questions" && parts[1] && parts[2]) {
     return { name: "question", dateISO: parts[1], slug: parts[2], key: raw };
   }
@@ -175,7 +178,7 @@ function BookmarkButton({ record, saved, onBookmark, longLabel = false }) {
 
 function StartHere({ records }) {
   return (
-    <section className="start-here" aria-labelledby="start-here-title">
+    <section className="start-here module-entry" style={{ "--entry-index": 3 }} aria-labelledby="start-here-title">
       <header className="section-heading">
         <div>
           <p className="meta-label">Editorial starting points</p>
@@ -184,10 +187,10 @@ function StartHere({ records }) {
         <p>Four foundations for designers finding their footing. Selected by the editors, never by save count.</p>
       </header>
       <div className="start-here-grid">
-        {startHerePaths.map((path) => {
+        {startHerePaths.map((path, index) => {
           const record = records.find((item) => item.category === path.category);
           return (
-            <article className="start-path" key={path.category}>
+            <article className="start-path module-entry" style={{ "--entry-index": index + 4 }} key={path.category}>
               <span>{path.category}</span>
               <h3>{path.title}</h3>
               <p>{path.copy}</p>
@@ -236,7 +239,7 @@ function ArchiveRow({ record, saved, onBookmark }) {
   );
 }
 
-export function ArchivePage({ records, bookmarks, onBookmark, initialCategory = "All", focusSearch = false }) {
+export function ArchivePage({ records, bookmarks, onBookmark, initialCategory = "All", focusSearch = false, embedded = false }) {
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState(initialCategory);
   const [skill, setSkill] = useState("All skills");
@@ -245,11 +248,12 @@ export function ArchivePage({ records, bookmarks, onBookmark, initialCategory = 
 
   useEffect(() => setCategory(initialCategory), [initialCategory]);
   useEffect(() => {
+    if (embedded) return undefined;
     document.title = "Question archive · design / daily";
     window.scrollTo(0, 0);
     if (focusSearch) window.setTimeout(() => searchRef.current?.focus(), 0);
     return () => { document.title = "design / daily"; };
-  }, [focusSearch]);
+  }, [embedded, focusSearch]);
 
   const months = useMemo(() => [...new Set(records.map((record) => record.dateISO.slice(0, 7)))].sort().reverse(), [records]);
   const filtered = useMemo(() => {
@@ -275,21 +279,23 @@ export function ArchivePage({ records, bookmarks, onBookmark, initialCategory = 
 
   return (
     <>
-      <section className="archive-hero page-opening" aria-labelledby="archive-page-title">
-        <div className="page-opening-main">
+      <section className="archive-hero mosaic-opening" aria-labelledby="archive-page-title">
+        <div className="archive-title-block protected-module module-entry" style={{ "--entry-index": 0 }}>
           <p className="meta-label page-opening-eyebrow">Question archive</p>
           <h1 id="archive-page-title"><span className="page-opening-title-line">Questions worth</span><span className="page-opening-title-line">returning to.</span></h1>
-          <p className="page-opening-summary">Find a question you remember, or follow an editorial path into the ideas shaping design practice.</p>
         </div>
-        <aside className="page-opening-aside">
-          <p className="archive-total">{records.length}<small>Questions across {new Set(records.map((record) => record.editionNumber)).size} weekday editions</small></p>
+        <aside className="archive-orientation-block protected-module module-entry" style={{ "--entry-index": 1 }}>
+          <p>Find a question you remember, or follow an editorial path into the ideas shaping design practice.</p>
           <p>Popular ranks all-time team saves. Popular recently means at least {RECENT_POPULARITY.minimumSaves} distinct saves in the trailing {RECENT_POPULARITY.trailingDays} days.</p>
+        </aside>
+        <aside className="archive-count-block protected-module module-entry" style={{ "--entry-index": 2 }}>
+          <p className="archive-total">{records.length}<small>Questions across {new Set(records.map((record) => record.editionNumber)).size} weekday editions</small></p>
         </aside>
       </section>
 
       <StartHere records={records} />
 
-      <section className="archive-index" id="question-index" aria-labelledby="question-index-title">
+      <section className="archive-index module-entry" style={{ "--entry-index": 4 }} id="question-index" aria-labelledby="question-index-title">
         <header className="section-heading index-heading">
           <div>
             <p className="meta-label">Dense index</p>

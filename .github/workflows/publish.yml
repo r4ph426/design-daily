@@ -60,7 +60,7 @@ jobs:
         run: |
           git config user.name "design-daily bot"
           git config user.email "design-daily-bot@users.noreply.github.com"
-          git add public/data
+          git add public/data data/toolbox-submissions.json
           if ! git diff --cached --quiet; then
             git commit -m "Publish daily edition"
             git push
