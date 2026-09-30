@@ -37,8 +37,8 @@ em { font-style: italic; }
 .crawl-line { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 16px; color: var(--text-muted); font: 400 11px/1.4 var(--font-ui); }
 .crawl-line span { display: inline-flex; align-items: center; gap: 6px; }
 .crawl-line small { font: inherit; }
-.intake-cell { grid-column: 1 / 5; grid-row: 4 / span 2; display: flex; align-items: center; padding: clamp(16px, 1.8vw, 30px); }
-.article-panel { width: 100%; display: flex; flex-direction: column; gap: 17px; }
+.intake-cell { grid-column: 1 / 4; grid-row: 4 / span 2; display: flex; align-items: center; padding: clamp(16px, 1.8vw, 30px); }
+.article-panel { container: contribution / inline-size; width: 100%; display: flex; flex-direction: column; gap: 17px; }
 .article-heading .meta-label { color: var(--text-muted); font: 500 11px/1.4 var(--font-ui); }
 .article-heading h2 { max-width: 18ch; margin-top: 7px; font: 400 clamp(28px, 2.4vw, 39px)/1.04 var(--font-editorial); letter-spacing: -.02em; }
 .article-heading > p:last-child { max-width: 49ch; margin-top: 9px; color: var(--text-muted); font: 400 16px/1.35 var(--font-editorial); }
@@ -49,6 +49,10 @@ em { font-style: italic; }
 .contribution-control input { min-width: 0; padding: 0 15px; border-right: 0; outline: 0; color: var(--paper); background: var(--surface-input); }
 .contribution-control input::placeholder { color: var(--text-subtle); }
 .contribution-control input:focus { border-color: var(--yellow); box-shadow: inset 0 -2px var(--yellow); }
+@container contribution (max-width: 420px) {
+  .contribution-control { grid-template-columns: 1fr; gap: 8px; }
+  .contribution-control input { border-right: 1px solid var(--grid-strong); }
+}
 .contribution-submit { padding: 0 12px; border-color: var(--coral); color: var(--ink); background: var(--coral); cursor: pointer; font-weight: 600; }
 .contribution-submit:hover:not(:disabled) { background: color-mix(in srgb, var(--ink) 8%, var(--coral)); }
 .contribution-submit:active:not(:disabled) { transform: translateY(1px); }
@@ -215,9 +219,12 @@ em { font-style: italic; }
 .prototype-archive-controls .prototype-select:nth-child(3) { grid-column: 1 / 3; }
 .prototype-archive-controls .prototype-select:nth-child(4) { grid-column: 3 / 5; }
 .prototype-archive-controls { grid-template-rows: repeat(2, var(--module-size)); }
-.prototype-result-summary { grid-template-rows: var(--module-size); }
-.prototype-result-summary p { grid-column: 1 / 4; display: flex; align-items: center; color: var(--text-muted); font: 400 12px/1.3 var(--font-ui); }
-.prototype-result-summary button { grid-column: 6 / 8; border: 0; color: var(--sage); cursor: pointer; text-align: left; text-decoration: underline; text-underline-offset: 3px; font: 500 11px/1.3 var(--font-ui); }
+.prototype-clear-cell { grid-column: 6 / 8; grid-row: 2; display: flex; align-items: center; }
+.prototype-clear-filters { min-height: 44px; padding: 0; border: 0; color: var(--sage); background: transparent; cursor: pointer; text-align: left; text-decoration: underline; text-underline-offset: 3px; font: 500 11px/1.3 var(--font-ui); }
+.prototype-clear-filters:hover { color: var(--paper); }
+.prototype-toolbox-index-heading > .prototype-toolbox-count { grid-column: 4 / 5; gap: 8px; }
+.prototype-toolbox-count > span { font: italic 300 clamp(44px, 5vw, 88px)/.95 var(--font-editorial); letter-spacing: -.04em; }
+.prototype-toolbox-count > p { font: 400 11px/1.3 var(--font-ui); }
 .prototype-archive-row { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); grid-template-rows: var(--module-size); }
 .prototype-archive-row:hover .content-panel, .prototype-tool-row:hover .content-panel { background: var(--surface-hover); }
 .prototype-archive-number { grid-column: 1 / 2; display: flex; flex-direction: column; gap: 6px; justify-content: center; }
@@ -249,11 +256,10 @@ em { font-style: italic; }
 .is-toolbox .prototype-date, .is-toolbox .prototype-descriptor, .is-toolbox .eyebrow, .is-toolbox .article-heading .meta-label { color: color-mix(in srgb, var(--ink) 66%, var(--white)); }
 .is-toolbox .prototype-toolbox-title h1 em { color: var(--coral); }
 .prototype-toolbox-intake { grid-column: 6 / 8; grid-row: 1 / 4; display: flex; align-items: center; }
-.prototype-toolbox-intake .article-panel { gap: 15px; }
 .prototype-toolbox-intake .article-heading h2 { font-size: clamp(27px, 2.3vw, 39px); }
 .is-toolbox .article-heading > p:last-child, .is-toolbox .article-form > label:first-child, .is-toolbox .article-help { color: color-mix(in srgb, var(--ink) 65%, var(--white)); }
-.prototype-toolbox-intake .contribution-control { grid-template-columns: 1fr; gap: 7px; }
-.prototype-toolbox-intake .contribution-control input { border-right: 1px solid var(--gridline); }
+.is-toolbox .prototype-clear-filters { color: var(--ink); }
+.is-toolbox .prototype-clear-filters:hover { color: var(--coral-on-light); }
 .is-toolbox .contribution-control input { color: var(--ink); background: var(--surface-input); }
 .is-toolbox .contribution-control input::placeholder { color: color-mix(in srgb, var(--ink) 55%, var(--white)); }
 .is-toolbox .article-error { color: var(--coral-on-light); }
@@ -411,8 +417,8 @@ em { font-style: italic; }
   .prototype-category-filters, .prototype-tool-type { min-height: var(--module-size); flex-wrap: nowrap; overflow-x: auto; }
   .prototype-category-filters button, .prototype-tool-type button { flex: 0 0 auto; }
   .prototype-select { min-height: var(--module-size); }
-  .prototype-result-summary { display: flex; flex-direction: row; justify-content: space-between; min-height: var(--module-size); }
-  .prototype-result-summary p, .prototype-result-summary button { flex: 1; }
+  .prototype-clear-cell { min-height: var(--module-size); }
+  .prototype-toolbox-index-heading > .prototype-toolbox-count { min-height: var(--module-size); flex-direction: row; align-items: baseline; justify-content: flex-start; }
   .prototype-archive-number { grid-column: 1; grid-row: 1 / 3; min-height: 0; flex-direction: column; align-items: flex-start; justify-content: center; padding: 10px; }
   .prototype-archive-reference { font-size: clamp(27px, 7vw, 40px); }
   .prototype-archive-copy { grid-column: 2; grid-row: 1 / 3; min-height: 0; padding: 10px; }

@@ -17,6 +17,10 @@ const toolTypes = ["All types", "MCP", "Skill", "Agent", "Tool"];
 const practices = ["All practices", "Taste", "Drafting", "UI sketches", "Flows", "Accessibility", "Review", "Creative exploration", "Pattern research"];
 const verdicts = ["All verdicts", "Useful now", "Worth trying", "Best practice", "Watching"];
 
+function ClearFilters({ active, onClear }) {
+  return active && <div className="prototype-clear-cell content-panel"><button className="prototype-clear-filters" type="button" onClick={onClear}>Clear filters ↗</button></div>;
+}
+
 function sourceCount(record) {
   const count = record.counts?.total || record.signals?.length || 0;
   return `${count} ${count === 1 ? "source" : "sources"}`;
@@ -95,8 +99,9 @@ export function PrototypeArchive({ records, ready, bookmarks, onBookmark, initia
           <div className="prototype-category-filters content-panel" role="group" aria-label="Category filter">{["All", ...categories, "Must read"].map((item) => <button type="button" key={item} aria-pressed={category === item} className={category === item ? "selected" : ""} onClick={() => setCategory(item)}>{item}</button>)}</div>
           <label className="prototype-select content-panel"><span>Skill label</span><select value={skill} onChange={(event) => setSkill(event.target.value)}><option>All skills</option>{SKILL_LABELS.map((item) => <option key={item.name}>{item.name}</option>)}</select></label>
           <label className="prototype-select content-panel"><span>Date</span><select value={date} onChange={(event) => setDate(event.target.value)}><option value="any">Any date</option><option value="days:30">Past 30 days</option><option value="days:90">Past 90 days</option>{months.map((month) => <option key={month} value={`month:${month}`}>{new Intl.DateTimeFormat("en-GB", { month: "long", year: "numeric" }).format(new Date(`${month}-01T12:00:00`))}</option>)}</select></label>
+          <ClearFilters active={query || category !== "All" || skill !== "All skills" || date !== "any"} onClear={clearFilters} />
         </div>
-        <div className="prototype-result-summary module-layout"><p className="content-panel" aria-live="polite">{ready ? `${filtered.length} ${filtered.length === 1 ? "question" : "questions"}` : "Loading previous editions…"}</p>{(query || category !== "All" || skill !== "All skills" || date !== "any") && <button className="content-panel" type="button" onClick={clearFilters}>Clear filters ↗</button>}</div>
+        {!ready && <p className="visually-hidden" role="status">Loading previous editions…</p>}
         {filtered.map((record) => <ArchiveResult key={record.key} record={record} saved={Boolean(bookmarks[record.key])} onBookmark={onBookmark} />)}
         {ready && !filtered.length && <div className="prototype-empty content-panel"><h3>No questions match these filters.</h3><p>Try a broader search or clear one of the filters.</p><button type="button" onClick={clearFilters}>Show all questions</button></div>}
       </section>
@@ -146,14 +151,14 @@ export function PrototypeToolbox() {
     </section>
 
     <section className="prototype-toolbox-index" aria-labelledby="prototype-our-toolbox-title">
-      <div className="prototype-toolbox-index-heading module-layout"><div className="content-panel"><p className="eyebrow">Persistent collection</p><h2 id="prototype-our-toolbox-title">Our toolbox</h2></div><p className="content-panel">A maintained collection of tools we use, recommend, or are actively testing.</p></div>
+      <div className="prototype-toolbox-index-heading module-layout"><div className="content-panel"><p className="eyebrow">Persistent collection</p><h2 id="prototype-our-toolbox-title">Our toolbox</h2></div><div className="prototype-toolbox-count content-panel" role="status" aria-live="polite"><span>{visible.length}</span><p>{visible.length === 1 ? "tool" : "tools"}</p></div><p className="content-panel">A maintained collection of tools we use, recommend, or are actively testing.</p></div>
       <div className="prototype-toolbox-controls module-layout">
         <label className="prototype-search content-panel"><MagnifyingGlass size={19} aria-hidden="true" /><span className="visually-hidden">Search tools</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search tools, use cases, or keywords" /></label>
         <div className="prototype-tool-type content-panel" role="group" aria-label="Tool type">{toolTypes.map((item) => <button key={item} type="button" className={type === item ? "selected" : ""} aria-pressed={type === item} onClick={() => setType(item)}>{item}</button>)}</div>
         <label className="prototype-select prototype-tool-practice content-panel"><span>Practice</span><select value={practice} onChange={(event) => setPractice(event.target.value)}>{practices.map((item) => <option key={item}>{item}</option>)}</select></label>
         <label className="prototype-select prototype-tool-verdict content-panel"><span>Verdict</span><select value={verdict} onChange={(event) => setVerdict(event.target.value)}>{verdicts.map((item) => <option key={item}>{item}</option>)}</select></label>
+        <ClearFilters active={query || type !== "All types" || practice !== "All practices" || verdict !== "All verdicts"} onClear={clearFilters} />
       </div>
-      <div className="prototype-result-summary module-layout"><p className="content-panel" aria-live="polite">{visible.length} {visible.length === 1 ? "tool" : "tools"}</p>{(query || type !== "All types" || practice !== "All practices" || verdict !== "All verdicts") && <button className="content-panel" type="button" onClick={clearFilters}>Clear filters ↗</button>}</div>
       <div className={`prototype-tool-list ${visible.length % 2 ? "has-odd-row" : ""}`}>{visible.map((tool) => <PrototypeToolRow key={tool.id} tool={tool} saved={Boolean(saved[tool.id])} onBookmark={() => toggleSave(tool.id)} />)}</div>
       {!visible.length && <div className="prototype-empty content-panel"><h3>No tools match yet.</h3><p>Try a broader search or clear one of the filters.</p><button type="button" onClick={clearFilters}>Show all tools</button></div>}
     </section>
