@@ -23,6 +23,7 @@ import {
 import { ToolboxPage } from "./toolbox.jsx";
 import { PrivacyPage } from "./privacy.jsx";
 import { SiteFooter } from "./SiteFooter.jsx";
+import { GridHeader } from "./GridHeader.jsx";
 
 const fallbackEditionNumber = "001";
 const turnstileSiteKey = import.meta.env.VITE_TURNSTILE_SITE_KEY
@@ -701,7 +702,7 @@ export function App() {
       {route.name === "home" && <a className="skip-link" href={`#${questions[0].slug}`}>Skip to the first question</a>}
       {route.name === "toolbox" && <a className="skip-link" href="#toolbox-weekly">Skip to this week’s tools</a>}
       {route.name === "privacy" && <a className="skip-link" href="#privacy-content">Skip to privacy details</a>}
-      <SiteHeader edition={edition} routeName={route.name} />
+      {route.name === "privacy" ? <GridHeader date={edition.date} route="privacy" /> : <SiteHeader edition={edition} routeName={route.name} />}
       {route.name !== "home" && (routeContent || (
         <section className="route-message"><p className="meta-label">design / daily</p><h1>This page could not be found.</h1><a href="#">Return to today <ArrowRight size={17} /></a></section>
       ))}

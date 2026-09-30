@@ -1,0 +1,15 @@
+/* Each tile contributes half a stroke on either side of its boundary.
+   Inset surfaces therefore expose one complete 1px rule on every route. */
+.grid-prototype,
+.privacy-shell::before {
+  background-image:
+    linear-gradient(to right, var(--gridline) .5px, transparent .5px, transparent calc(100% - .5px), var(--gridline) calc(100% - .5px)),
+    linear-gradient(to bottom, var(--gridline) .5px, transparent .5px, transparent calc(100% - .5px), var(--gridline) calc(100% - .5px));
+  background-size: var(--module-size) 100%, 100% var(--module-size);
+  background-position: calc(var(--module-size) * .5) 0, 0 var(--field-start, 0px);
+}
+
+@media (max-width: 720px) {
+  .grid-prototype,
+  .privacy-shell::before { background-position: 0 0, 0 var(--field-start, 0px); }
+}

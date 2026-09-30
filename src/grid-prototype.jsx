@@ -3,6 +3,7 @@ import { BookmarkSimple, CaretDown, Clock } from "@phosphor-icons/react";
 import { ArticleIntake } from "./App.jsx";
 import { AiLensBadge } from "./AiLensBadge.jsx";
 import { SiteFooter } from "./SiteFooter.jsx";
+import { GridHeader } from "./GridHeader.jsx";
 import { validateEditionTaxonomy } from "./taxonomy.js";
 import { normalizeArchiveDays } from "./archive.jsx";
 import { PrototypeArchive, PrototypeToolbox } from "./grid-prototype-routes.jsx";
@@ -50,24 +51,6 @@ function prototypeRoute() {
     return { name: "archive", category: ["UI", "UX", "Process", "Culture"].includes(category) ? category : "All" };
   }
   return { name: path === "toolbox" ? "toolbox" : "today", category: "All" };
-}
-
-function PrototypeHeader({ edition, route }) {
-  return (
-    <header className="prototype-header">
-      <div className="prototype-header-primary">
-        <a className="prototype-brand" href={editorialHref()} aria-label="design / daily home"><span>design / daily</span><small>by ra.re design</small></a>
-        <p className="prototype-date"><span>{formatDate(edition.date)}</span><span>{formatDate(edition.date, true)}</span></p>
-        <p className="prototype-descriptor">{route === "toolbox" ? "An editorial guide to tools for design teams" : route === "archive" ? "A searchable record of questions shaping design" : "A daily editorial source of truth for design teams"}</p>
-      </div>
-      <nav className="prototype-nav" aria-label="Primary">
-        <a className={route === "today" ? "active" : ""} aria-current={route === "today" ? "page" : undefined} href={editorialHref()}>Today</a>
-        <a className={route === "archive" ? "active" : ""} aria-current={route === "archive" ? "page" : undefined} href={editorialHref("/archive")}>Archive</a>
-        <a className={route === "toolbox" ? "active" : ""} aria-current={route === "toolbox" ? "page" : undefined} href={editorialHref("/toolbox")}>Toolbox</a>
-        <a href={publishedHref("/privacy")}>Privacy</a>
-      </nav>
-    </header>
-  );
 }
 
 function SignalDetails({ question }) {
@@ -194,7 +177,7 @@ export function GridPrototype() {
   return (
     <div className={`prototype-shell ${route.name === "toolbox" ? "is-toolbox" : ""}`}>
       <a className="prototype-skip" href={route.name === "today" ? "#prototype-question-01" : route.name === "archive" ? "#prototype-archive-index" : "#prototype-our-toolbox-title"}>Skip to main content</a>
-      <PrototypeHeader edition={edition} route={route.name} />
+      <GridHeader date={edition.date} route={route.name} />
       <main className="grid-prototype" aria-label={`design / daily ${route.name}`}>
         <div className="grid-content">
           {route.name === "archive" && <PrototypeArchive records={archiveRecords} ready={archiveReady} bookmarks={savedQuestions} onBookmark={(key) => setSavedQuestions((state) => ({ ...state, [key]: !state[key] }))} initialCategory={route.category} />}

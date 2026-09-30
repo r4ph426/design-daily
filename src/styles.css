@@ -659,22 +659,11 @@ input:focus-visible { outline: 2px solid var(--yellow); outline-offset: 3px; }
 }
 
 /* The Privacy route uses the same open seven-module field as the reviewed editorial prototype. */
-.privacy-shell { container-type: inline-size; --privacy-module: 12.5cqw; --footer-module: var(--privacy-module); --text-muted: color-mix(in srgb, var(--paper) 78%, var(--ink)); --text-subtle: color-mix(in srgb, var(--paper) 66%, var(--ink)); display: block; max-width: none; padding: 0; overflow: visible; background: var(--forest); }
+.privacy-shell { container-type: inline-size; --privacy-module: 12.5cqw; --module-size: var(--privacy-module); --gridline: var(--grid); --footer-module: var(--privacy-module); --text-muted: color-mix(in srgb, var(--paper) 78%, var(--ink)); --text-subtle: color-mix(in srgb, var(--paper) 66%, var(--ink)); display: block; max-width: none; padding: 0; overflow: visible; background: var(--forest); }
 /* Resolve cqw on a child of the query container, as Today does. On the
    container itself it resolves against the viewport, including the scrollbar. */
-.privacy-shell::before { position: absolute; z-index: -1; inset: 0; content: ""; pointer-events: none; background-image: linear-gradient(to right, var(--grid) 1px, transparent 1px), repeating-linear-gradient(to bottom, transparent 0, transparent calc(var(--privacy-module) - 1px), var(--grid) calc(var(--privacy-module) - 1px), var(--grid) var(--privacy-module)); background-size: var(--privacy-module) 100%, 100% var(--privacy-module); background-position: calc(var(--privacy-module) * .5) 0, 0 115px; }
-.privacy-shell > .topbar, .privacy-shell > .privacy-page, .privacy-shell > .site-footer { width: calc(var(--privacy-module) * 7); margin-inline: calc(var(--privacy-module) / 2); }
-.privacy-shell .topbar { position: sticky; isolation: isolate; z-index: 20; top: 0; padding-bottom: 1px; border: 0; }
-.privacy-shell .topbar::before, .privacy-shell .topbar::after { box-sizing: border-box; position: absolute; inset-block: 0; content: ""; pointer-events: none; }
-.privacy-shell .topbar::before { z-index: -1; left: calc(var(--privacy-module) * -.5); width: 100cqw; border: 1px solid var(--grid); background: var(--forest); }
-.privacy-shell .topbar::after { inset-inline: 0; border-inline: 1px solid var(--grid); }
-.privacy-shell .topbar-primary { min-height: 68px; grid-template-columns: repeat(7, minmax(0, 1fr)); }
-.privacy-shell .topbar-primary .brand, .privacy-shell .topbar-primary .edition-meta { min-height: calc(67px - var(--grid-inset) * 2); margin: var(--grid-inset); background: var(--forest); }
-.privacy-shell .topbar-primary .brand { grid-column: 1 / 3; }
-.privacy-shell .topbar-primary .edition-meta { grid-column: 4 / 6; justify-content: center; border-right: 1px solid var(--grid); }
-.privacy-shell .topbar-secondary { min-height: 46px; }
-.privacy-shell .topbar-secondary .nav-links { width: calc(var(--privacy-module) * 2); min-height: 46px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
-.privacy-shell .nav-links a { min-width: 0; min-height: calc(46px - var(--grid-inset) * 2); margin: var(--grid-inset); padding-inline: 4px; text-decoration: none; }
+.privacy-shell::before { position: absolute; z-index: -1; inset: 0; content: ""; pointer-events: none; --field-start: 115px; }
+.privacy-shell > .privacy-page, .privacy-shell > .site-footer { width: calc(var(--privacy-module) * 7); margin-inline: calc(var(--privacy-module) / 2); }
 .privacy-shell .privacy-page { border: 0; }
 .privacy-shell .privacy-hero { min-height: calc(var(--privacy-module) * 2); grid-template-columns: 4fr 3fr; border: 0; background: transparent; }
 .privacy-shell .privacy-hero .page-opening-main { border: 0; }
@@ -707,16 +696,8 @@ input:focus-visible { outline: 2px solid var(--yellow); outline-offset: 3px; }
 
 @media (max-width: 720px) {
   .privacy-shell { --privacy-module: 25cqw; }
-  .privacy-shell::before { background-position: 0 0, 0 107px; }
-  .privacy-shell > .topbar, .privacy-shell > .privacy-page, .privacy-shell > .site-footer { width: 100%; margin-inline: 0; }
-  .privacy-shell .topbar::before { left: 0; }
-  .privacy-shell .topbar::after { display: none; }
-  .privacy-shell .topbar-primary { min-height: 58px; grid-template-columns: 1fr 1fr; }
-  .privacy-shell .topbar-primary .brand, .privacy-shell .topbar-primary .edition-meta { min-height: calc(57px - var(--grid-inset) * 2); }
-  .privacy-shell .topbar-primary .brand { grid-column: 1; }
-  .privacy-shell .topbar-primary .edition-meta { grid-column: 2; justify-content: flex-end; border-right: 0; }
-  .privacy-shell .topbar-secondary .nav-links { width: 100%; min-height: 48px; }
-  .privacy-shell .nav-links a { min-height: calc(48px - var(--grid-inset) * 2); }
+  .privacy-shell::before { --field-start: 107px; }
+  .privacy-shell > .privacy-page, .privacy-shell > .site-footer { width: 100%; margin-inline: 0; }
   .privacy-shell .privacy-hero { display: block; }
   .privacy-shell .privacy-hero .page-opening-main { min-height: calc(var(--privacy-module) * 3); padding: 22px; }
   .privacy-shell .privacy-hero-aside { min-height: calc(var(--privacy-module) * 3); padding: 22px; }
