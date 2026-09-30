@@ -20,7 +20,7 @@
   background-repeat: repeat-x, no-repeat;
 }
 
-.site-footer::after { position: absolute; inset: 0; border-right: 1px solid var(--footer-rule); content: ""; pointer-events: none; }
+.site-footer::after { box-sizing: border-box; position: absolute; inset: 0; border-right: 1px solid var(--footer-rule); content: ""; pointer-events: none; }
 
 .site-footer[data-theme="light"] {
   --footer-surface: var(--white);
@@ -35,7 +35,7 @@
   min-height: 0;
   display: grid;
   place-items: center;
-  margin: 1px;
+  margin: var(--grid-inset);
   padding: 10px;
   color: inherit;
   background: var(--footer-surface);

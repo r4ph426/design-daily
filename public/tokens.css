@@ -1,4 +1,5 @@
 :root {
+  --grid-inset: 0.5px;
   --forest: #162713;
   --canvas: var(--forest);
   --coral: #ff3318;
