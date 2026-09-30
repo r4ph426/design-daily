@@ -1,0 +1,186 @@
+{
+  "schemaVersion": 1,
+  "editionNumber": "013",
+  "date": "2026-09-29",
+  "displayDate": "Tuesday, 29 September 2026",
+  "filedAt": "04:34 cet",
+  "crawlCompletedAt": "04:34",
+  "sourceCount": 13,
+  "webSourceCount": 4,
+  "teamContributionCount": 1,
+  "summary": "AI is pressuring design teams to formalize governance, preserve junior craft, and choose cheaper tools with clearer limits. The sharper question is whether we use this moment to rebuild practice or just automate away the parts that teach it.",
+  "generatedAt": "2026-09-29T02:34:15.494Z",
+  "inboxConnected": true,
+  "questions": [
+    {
+      "id": "01",
+      "slug": "are-we-treating-ai-governance-as-a-living-product-decision-or-st",
+      "category": "Process",
+      "tags": [
+        "Process",
+        "UX"
+      ],
+      "aiLens": true,
+      "question": "Are we treating AI governance as a living product decision, or still waiting for a single policy moment that never arrives?",
+      "answer": "We should treat AI policy like an operating system, not a one-time approval. The stronger editorial reading is that **governance must ship iteratively** because the technology keeps changing faster than any all-in-one rulebook can.",
+      "why": "The UX Collective piece argues Congress is stuck in waterfall thinking while AI evolves underfoot, and that governance should be steered like a product.",
+      "counts": {
+        "total": 2,
+        "newsletters": 1,
+        "web": 1
+      },
+      "firstSeen": "13:01 cet",
+      "signals": [
+        {
+          "source": "UX Collective",
+          "title": "The lie we keep telling ourselves about regulating AI",
+          "kind": "Newsletter",
+          "timing": "13:01",
+          "happened": "A UX Collective issue framed AI regulation as a mismatch between fast-moving technology and slow legislative habits. The excerpt argues against waiting for a single comprehensive bill and instead favors continuous steering. That framing places process, not ideology, at the center of the debate.",
+          "changes": "The practical shift is away from symbolic policy-making and toward **ongoing governance**, which is messier but more realistic. That creates tension between clarity and adaptability, but the source suggests the cost of waiting for perfection is that the rules arrive after the product has already changed.",
+          "verdict": "Must read",
+          "url": "https://newsletter.uxdesign.cc/archive"
+        },
+        {
+          "source": "UX Collective",
+          "title": "Regulating AI, Quantifying stress, The variance problem",
+          "kind": "Web",
+          "timing": "13:14",
+          "happened": "The web crawl version surfaced the same argument alongside editor picks about screen materiality, AI variance, and archival responsibility. It connects regulation to the everyday realities of product teams, not just lawmakers. The issue makes the governance problem feel operational rather than abstract.",
+          "changes": "That broader framing matters because it shows AI governance is now colliding with design work, reliability, and ownership. The tradeoff is that teams may need to accept **partial, revisable controls** instead of waiting for a clean legal endpoint, which is more demanding but more honest.",
+          "verdict": "Read",
+          "url": "https://uxdesign.cc/regulating-ai-quantifying-stress-the-variance-problem-1ce71d56a34a"
+        }
+      ],
+      "further": [
+        [
+          "How we save entry-level UX work that teaches craft in the time of AI. Our field depends on this.",
+          "UX Collective",
+          "https://uxdesign.cc/how-we-save-entry-level-ux-work-that-teaches-craft-in-the-time-of-ai-our-field-depends-on-this-e1684a0d67eb"
+        ]
+      ]
+    },
+    {
+      "id": "02",
+      "slug": "if-ai-can-do-the-junior-tasks-how-do-we-preserve-the-practice-th",
+      "category": "Process",
+      "tags": [
+        "Process",
+        "UX"
+      ],
+      "aiLens": true,
+      "question": "If AI can do the junior tasks, how do we preserve the practice that actually teaches design judgment?",
+      "answer": "Teams should stop confusing output efficiency with skill building. The source makes a strong case that **practice is the product** for entry-level designers, and AI should not erase the tasks that create future judgment.",
+      "why": "The article argues that transcript tagging, redlining, and similar work teach the craft that juniors need, even if AI can automate the immediate output.",
+      "counts": {
+        "total": 1,
+        "newsletters": 0,
+        "web": 1
+      },
+      "firstSeen": "21:38 cet",
+      "signals": [
+        {
+          "source": "UX Collective",
+          "title": "How we save entry-level UX work that teaches craft in the time of AI. Our field depends on this.",
+          "kind": "Web",
+          "timing": "21:38",
+          "happened": "A UX Collective article argued that AI is taking over tasks junior designers used to perform while learning the craft. It specifically cites transcript tagging and redlining as work that trains pattern recognition and decision-making. The piece frames these tasks as practice, not just production.",
+          "changes": "The consequence is that teams risk creating a talent pipeline with less hands-on judgment and fewer shared habits. The article’s sharper point is that **automation can hollow out apprenticeship** unless managers deliberately protect low-stakes, supervised work that builds competence over time.",
+          "verdict": "Must read",
+          "url": "https://uxdesign.cc/how-we-save-entry-level-ux-work-that-teaches-craft-in-the-time-of-ai-our-field-depends-on-this-e1684a0d67eb"
+        }
+      ],
+      "further": [
+        [
+          "The lie we keep telling ourselves about regulating AI",
+          "UX Collective",
+          "https://newsletter.uxdesign.cc/archive"
+        ]
+      ]
+    },
+    {
+      "id": "03",
+      "slug": "are-designers-still-relying-too-much-on-interface-polish-when-th",
+      "category": "UX",
+      "tags": [
+        "UX"
+      ],
+      "aiLens": false,
+      "question": "Are designers still relying too much on interface polish when the real product value sits in the surrounding context?",
+      "answer": "Yes, and the better work seems to be moving outward from the screen itself. The strongest signal here is that **the interface is no longer the whole product**, so design needs to account for systems, behavior, and context around it.",
+      "why": "The UX Collective article titled The next larger context points beyond the interface, product, and prompt as the proper design frame.",
+      "counts": {
+        "total": 1,
+        "newsletters": 0,
+        "web": 1
+      },
+      "firstSeen": "00:29 cet",
+      "signals": [
+        {
+          "source": "UX Collective",
+          "title": "The next larger context",
+          "kind": "Web",
+          "timing": "00:29",
+          "happened": "UX Collective published an essay arguing for designing beyond the interface, the product, and the prompt. The headline alone signals a move away from screen-first thinking. It suggests the discipline needs a larger frame for value and meaning.",
+          "changes": "That matters because teams that optimize only the visible UI may miss where users actually experience friction or trust. The editorial tension is between craft at the surface and **designing the broader context**, which is harder to measure but more faithful to real use.",
+          "verdict": "Read",
+          "url": "https://uxdesign.cc/the-next-larger-context-4dd0c91a7c5b"
+        }
+      ],
+      "further": [
+        [
+          "What makes a brand last?",
+          "UX Collective",
+          "https://uxdesign.cc/what-makes-a-brand-last-baf152419576"
+        ],
+        [
+          "Quest is a highly designed sci-fi and fantasy magazine built for web fiction",
+          "It’s Nice That",
+          "https://www.itsnicethat.com/articles/ross-gendels-zane-miller-quest-magazine-graphic-design-publication-project-280926"
+        ]
+      ]
+    },
+    {
+      "id": "04",
+      "slug": "as-budgets-tighten-are-open-source-replacements-good-enough-to-r",
+      "category": "UI",
+      "tags": [
+        "UI"
+      ],
+      "aiLens": false,
+      "question": "As budgets tighten, are open source replacements good enough to reset the economics of the design stack?",
+      "answer": "They may be good enough for some teams, but not without clear limits. The important signal is that **cheap is not the same as equivalent**, so the savings story depends on the gap between a repo and a mature product.",
+      "why": "Actionable AI promoted open source GitHub projects that replace paid software such as Figma, Jira, ElevenLabs, DocuSign, and Mailchimp, while saying it checked price, license, and caps directly.",
+      "counts": {
+        "total": 1,
+        "newsletters": 1,
+        "web": 0
+      },
+      "firstSeen": "15:02 cet",
+      "signals": [
+        {
+          "source": "Actionable AI",
+          "title": "9 free repos that replace $261 a month in paid software",
+          "kind": "Newsletter",
+          "timing": "15:02",
+          "happened": "Actionable AI published a newsletter pitch about open source repos that can replace subscription software. It names tools familiar to designers and product teams, including Figma and Jira, and says the guide checks pricing, licensing, and tier limits directly. The framing is explicitly about monthly savings.",
+          "changes": "The shift is economic pressure moving into tool choice, which can change what teams standardize on and what they tolerate. But the source also implies a tradeoff: **lower cost comes with self-hosting friction and hidden caps**, so the savings only matter if teams can absorb the operational burden.",
+          "verdict": "Read",
+          "url": "https://elinkb64.mail.theactionableai.com/ss/c/u001.VH9ztUI_5EhIlHYeBgd71I1IkoHGJpPl2lXXCIdDEpll-lqt47GyLmzb4uaM0mWawKpv3M7Ng6QYNKECE6l0ZizDA7PRO4WQ1vqqpKKbdacLZG2WgMRku29uuxbLhtdjjkP-uuagOVWNmkDRs9Nu761K1PI7icAwi3kuhr6mYCglbGzksAKvYIHySiTMfN8F88hMOTlbVF0gQAUfeZ7D8D1w4IxAaWTuUlbtpEXYy4nZHeCuvbeq7ptsLas0VfPgk2g4vcrJvIgQM14DfKmag325pGYOvRq7hjGClEba72jKHkE-Z9g4rWbh4NbMktsy3Ljbb32jS_3ySkzpO7DWKyHTiV5MUK9amZ4xaEmk887fEnzB1O9mAgtILmi5u5z06QGhDq4Sxv63VFojusUUAcYh0ACtCpSPivhWBoK0yKOb3jpk347Tn-V6A7x7oEfEJlN5UoDKZ1-y2v4rpj9X1dveQM9pVow4QU8hGZB5qd43f3hI7GHh_D-D69DCbJTRJ1k87YdcNHEh3Kb3rdanrk6ISsjqNvhzIqiyVlEmtFFCPGOKk0DqGB0VTb3PpH_Tb7J9VYmCVoy6aL6IutMwB9uiAORnEEPV1zBtkDi1upueqdDzQkjivKKTQ-awsgY-x5juI2ye6Iqaki6AooYhGeBA8B331n2WuVYZPZcSYGthecKhFfaqstbIlCERj3BkDk7-7530TpJ8sgSl5TmWtzUAZ-A-S5wV2F5ZSPPPbBwzqB0uwK1D6SBXHtqJl3YWbLmlNk09ggg_J2cgtHUpSyXRMICRsQNHjSwCku20ogHleDUpE2oxcgOVrJJiAcJPkivIjyEmBOUy4l3MIdWPNuzmE19-VYmXifc1Xhg9hAg/4uf/j59PHdaARxavm-lwo7jgLg/h0/h001.oMrv9fs17g1JdjhrW89fjfEhpF84h3GBHLBE5_kOHuw"
+        }
+      ],
+      "further": [
+        [
+          "Regulating AI, Quantifying stress, The variance problem",
+          "UX Collective",
+          "https://uxdesign.cc/regulating-ai-quantifying-stress-the-variance-problem-1ce71d56a34a"
+        ],
+        [
+          "Confirm your subscription to Agentic Design School",
+          "Agentic Design School",
+          "https://buttondown.com/agenticdesignschool/confirm-subscription/4ab23c1b-eb84-4837-9aff-8e5592a4db0c"
+        ]
+      ]
+    }
+  ]
+}
