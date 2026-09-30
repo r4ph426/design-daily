@@ -113,6 +113,7 @@ Today and Toolbox share one contribution pattern, even when their surrounding su
 - Keep the same 48px control height, square corners, border weight, typography, focus treatment, active movement, and stacked mobile behavior.
 - The action uses the same coral fill and ink label on Today and Toolbox. The contextual input fill may change; anatomy and language do not.
 - Success copy confirms addition to the next crawl without promising publication.
+- Keep browser verification inside a review dialog opened by `Add to crawl`; never display the Cloudflare widget in the main reading view. Show the URL and a separate `Confirm contribution` action, then return to the existing crawl confirmation on success.
 
 ### Buttons and controls
 
