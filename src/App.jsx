@@ -729,7 +729,7 @@ export function App() {
         })}
       </section>
       </>}
-      <SiteFooter theme={route.name === "toolbox" ? "light" : "forest"} className={route.name === "privacy" ? "privacy-footer" : ""} privacyHref="#/privacy" />
+      <SiteFooter theme={route.name === "toolbox" ? "light" : "forest"} privacyHref="#/privacy" />
     </main>
   );
 }

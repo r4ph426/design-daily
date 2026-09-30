@@ -216,7 +216,7 @@ export function GridPrototype() {
           })}
           </>}
 
-          <SiteFooter theme={route.name === "toolbox" ? "light" : "forest"} className="prototype-footer" privacyHref={publishedHref("/privacy")} />
+          <SiteFooter theme={route.name === "toolbox" ? "light" : "forest"} privacyHref={publishedHref("/privacy")} />
         </div>
       </main>
     </div>

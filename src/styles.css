@@ -659,7 +659,10 @@ input:focus-visible { outline: 2px solid var(--yellow); outline-offset: 3px; }
 }
 
 /* The Privacy route uses the same open seven-module field as the reviewed editorial prototype. */
-.privacy-shell { container-type: inline-size; --privacy-module: 12.5cqw; --text-muted: color-mix(in srgb, var(--paper) 78%, var(--ink)); --text-subtle: color-mix(in srgb, var(--paper) 66%, var(--ink)); display: block; max-width: none; padding: 0; overflow: visible; background-color: var(--forest); background-image: linear-gradient(to right, var(--grid) 1px, transparent 1px), repeating-linear-gradient(to bottom, transparent 0, transparent calc(var(--privacy-module) - 1px), var(--grid) calc(var(--privacy-module) - 1px), var(--grid) var(--privacy-module)); background-size: var(--privacy-module) 100%, 100% var(--privacy-module); background-position: calc(var(--privacy-module) * .5) 0, 0 115px; }
+.privacy-shell { container-type: inline-size; --privacy-module: 12.5cqw; --footer-module: var(--privacy-module); --text-muted: color-mix(in srgb, var(--paper) 78%, var(--ink)); --text-subtle: color-mix(in srgb, var(--paper) 66%, var(--ink)); display: block; max-width: none; padding: 0; overflow: visible; background: var(--forest); }
+/* Resolve cqw on a child of the query container, as Today does. On the
+   container itself it resolves against the viewport, including the scrollbar. */
+.privacy-shell::before { position: absolute; z-index: -1; inset: 0; content: ""; pointer-events: none; background-image: linear-gradient(to right, var(--grid) 1px, transparent 1px), repeating-linear-gradient(to bottom, transparent 0, transparent calc(var(--privacy-module) - 1px), var(--grid) calc(var(--privacy-module) - 1px), var(--grid) var(--privacy-module)); background-size: var(--privacy-module) 100%, 100% var(--privacy-module); background-position: calc(var(--privacy-module) * .5) 0, 0 115px; }
 .privacy-shell > .topbar, .privacy-shell > .privacy-page, .privacy-shell > .site-footer { width: calc(var(--privacy-module) * 7); margin-inline: calc(var(--privacy-module) / 2); }
 .privacy-shell .topbar { position: sticky; isolation: isolate; z-index: 20; top: 0; padding-bottom: 1px; border: 0; }
 .privacy-shell .topbar::before, .privacy-shell .topbar::after { box-sizing: border-box; position: absolute; inset-block: 0; content: ""; pointer-events: none; }
@@ -691,7 +694,6 @@ input:focus-visible { outline: 2px solid var(--yellow); outline-offset: 3px; }
 .privacy-shell .privacy-section h2 { font-size: clamp(34px, 3vw, 55px); line-height: 1.08; }
 .privacy-shell .privacy-section p:not(.meta-label) { max-width: 60ch; color: var(--text-muted); }
 .privacy-shell .privacy-section .privacy-clear-status { color: var(--paper) !important; }
-.privacy-shell .privacy-footer { margin-top: var(--privacy-module); }
 
 @media (max-width: 1600px) and (min-width: 721px) {
   .privacy-shell .privacy-hero { min-height: calc(var(--privacy-module) * 3); }
@@ -704,7 +706,8 @@ input:focus-visible { outline: 2px solid var(--yellow); outline-offset: 3px; }
 }
 
 @media (max-width: 720px) {
-  .privacy-shell { --privacy-module: 25cqw; background-position: 0 0, 0 107px; }
+  .privacy-shell { --privacy-module: 25cqw; }
+  .privacy-shell::before { background-position: 0 0, 0 107px; }
   .privacy-shell > .topbar, .privacy-shell > .privacy-page, .privacy-shell > .site-footer { width: 100%; margin-inline: 0; }
   .privacy-shell .topbar::before { left: 0; }
   .privacy-shell .topbar::after { display: none; }

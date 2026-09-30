@@ -194,6 +194,6 @@ Before handing off a visual change:
 4. Confirm that typography, color, border, and button roles reuse existing tokens and patterns.
 5. Run `npm run build`, `npm test`, and `npm run test:sites`.
 6. Leave the working local preview open on the most relevant route.
-# Deferred follow-up
+## Footer alignment implementation
 
-The reviewed footer still has alignment issues. The user has requested pushing the current version first and fixing footer alignment in the next iteration.
+All forest routes reuse the Today footer geometry and shared spacing; Toolbox changes only the theme. The shared footer draws its own square rules aligned to its columns, including on mobile where preceding content has a natural height. The Privacy raster is drawn on a child pseudo-element of its query container so both its lines and the footer cells resolve module widths from the same scrollbar-aware container. Do not apply a separate Privacy footer margin or calculate its background modules against the viewport.

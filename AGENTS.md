@@ -1,8 +1,10 @@
 # Prototype Instructions
 
-## Current follow-up
+## Footer consistency
 
-- The footer alignment is still unresolved in the reviewed version. The user has explicitly deferred its correction until after this version is pushed; retain the current footer for this push and address alignment in the next iteration.
+- All forest routes must use the Today footer component and its shared spacing rules. Toolbox uses the same geometry with its white theme. Never patch Privacy footer positioning with a separate route-specific margin.
+- The shared footer draws its own square rules against its own columns so naturally flowing mobile content cannot shift background lines through the footer cells. Use the same inset, column geometry, and outlines on every route.
+- Resolve Privacy grid background container units on a child or pseudo-element inside its query container, so grid rules and footer cells both use the same scrollbar-aware width. Container units on the container itself resolve against the viewport and misalign the raster.
 
 Run the local server yourself and open the preview in the browser available to this environment. Do not give the user server-start instructions when you can run it.
 
