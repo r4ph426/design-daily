@@ -85,7 +85,7 @@ export function PrivacyPage() {
               <p className="meta-label">The editorial workflow</p>
               <h2 id="sources-title">Sources & synthesis</h2>
               <p>The weekday crawl reads selected public web sources, accepted team links, and newsletters in a dedicated newsletter-only Gmail inbox. Server-side Google OAuth grants read-only access to messages and mailbox settings in that account. The app cannot send, change, or delete mail.</p>
-              <p>Source text and metadata are sent to the OpenAI API to help group and synthesize the crawl. Submitted Toolbox links may also receive an AI-assisted first-pass review for the editor. A human decides what is published and which tools receive a verdict.</p>
+              <p>Source text and metadata are sent to the OpenAI API to help group and synthesize the crawl. A human decides what is published and which tools receive a verdict.</p>
               <p>Published editions and archive files contain summaries, questions, source titles, links, and provenance. Raw Gmail messages and OAuth credentials are not included in the public site bundle. The private Toolbox candidate queue is not published with the site.</p>
             </div>
           </section>
@@ -99,7 +99,7 @@ export function PrivacyPage() {
                 <p><strong>GitHub</strong><span>Hosts the public site, versioned editions, public contribution issues, and scheduled crawl. OAuth and API credentials are held in GitHub Actions secrets.</span><a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noreferrer">GitHub privacy ↗</a></p>
                 <p><strong>Google</strong><span>Holds the dedicated newsletter inbox for the server-side crawl and serves the Inter font to site visitors.</span><a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer">Google privacy ↗</a></p>
                 <p><strong>Cloudflare</strong><span>Runs article intake and Turnstile verification, with temporary rate-limit data in Workers KV.</span><a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noreferrer">Cloudflare privacy ↗</a></p>
-                <p><strong>OpenAI</strong><span>Processes source material submitted by the server-side crawl for editorial synthesis and candidate triage.</span><a href="https://openai.com/policies/privacy-policy/" target="_blank" rel="noreferrer">OpenAI privacy ↗</a></p>
+                <p><strong>OpenAI</strong><span>Processes source material submitted by the server-side crawl for editorial synthesis.</span><a href="https://openai.com/policies/privacy-policy/" target="_blank" rel="noreferrer">OpenAI privacy ↗</a></p>
               </div>
               <p>Public GitHub issues and published editions remain available in the repository and its history unless the team removes them. The crawler reads newsletter messages during a run and does not commit raw message bodies to the repository. Each provider also applies its own retention practices.</p>
             </div>
