@@ -220,47 +220,6 @@
       "editorialStatus": "Needs review"
     },
     {
-      "id": "github:dembrandt/dembrandt",
-      "name": "dembrandt",
-      "fullName": "dembrandt/dembrandt",
-      "description": "Extract any website’s design system into tokens in seconds: logo, colors, typography, borders & more. One command.",
-      "url": "https://github.com/dembrandt/dembrandt",
-      "source": "GitHub search",
-      "discoveredThrough": "Design MCPs",
-      "topics": [
-        "brand-audits",
-        "claude-code",
-        "cli",
-        "css",
-        "design-engineering",
-        "design-md",
-        "design-ops",
-        "design-systems",
-        "design-to-code",
-        "design-tokens",
-        "developer-experience",
-        "dtcg",
-        "mcp",
-        "nodejs",
-        "open-source",
-        "playwright",
-        "reverse-engineering",
-        "tailwind-css",
-        "token-drift",
-        "ui-audit"
-      ],
-      "stars": 3581,
-      "updatedAt": "2026-09-28T19:27:15Z",
-      "suggestedType": "MCP",
-      "suggestedPractices": [
-        "Review",
-        "UI sketches",
-        "Drafting"
-      ],
-      "relevanceScore": 24,
-      "editorialStatus": "Needs review"
-    },
-    {
       "id": "github:exxrawrrr/nyobakantorai",
       "name": "nyobakantorai",
       "fullName": "exxrawrrr/nyobakantorai",
@@ -370,34 +329,6 @@
         "Drafting"
       ],
       "relevanceScore": 15,
-      "editorialStatus": "Needs review"
-    },
-    {
-      "id": "github:cathrynlavery/diagram-design",
-      "name": "diagram-design",
-      "fullName": "cathrynlavery/diagram-design",
-      "description": "Editorial diagram design for Claude Code, Codex, and Pi. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
-      "url": "https://github.com/cathrynlavery/diagram-design",
-      "source": "GitHub search",
-      "discoveredThrough": "Interface review",
-      "topics": [
-        "agent-skills",
-        "claude-code",
-        "codex",
-        "data-visualization",
-        "diagrams",
-        "drawio",
-        "mermaid",
-        "svg"
-      ],
-      "stars": 42660,
-      "updatedAt": "2026-09-28T19:26:52Z",
-      "suggestedType": "Skill",
-      "suggestedPractices": [
-        "Taste",
-        "Drafting"
-      ],
-      "relevanceScore": 12,
       "editorialStatus": "Needs review"
     },
     {
