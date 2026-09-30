@@ -198,6 +198,8 @@ Before handing off a visual change:
 
 The shared raster inset is `--grid-inset: 0.75px` in `public/tokens.css`. Header, content, Privacy, and footer surfaces use this token; square rules remain 1px. Snapped heights and widths account for the inset on both sides.
 
+Both raster layers repeat in square, module-sized paint tiles. Avoid page-height gradient images: on the long Archive, oversized background textures can make vertical hairlines disappear even when panel insets and track positions are correct.
+
 All forest routes reuse the Today footer geometry and shared spacing; Toolbox changes only the theme. The shared footer draws its own square rules aligned to its columns, including on mobile where preceding content has a natural height. The Privacy raster is drawn on a child pseudo-element of its query container so both its lines and the footer cells resolve module widths from the same scrollbar-aware container. Do not apply a separate Privacy footer margin or calculate its background modules against the viewport.
 
 - Keep raster strokes centered on module boundaries and one CSS pixel wide, so 0.75px inset panels expose the full line. Today, Archive, Toolbox, and Privacy use the same `GridHeader` component and `square-field.css` raster rules; do not reimplement Privacy header borders. Route changes must preserve module width, perimeter offset, header height, and raster phase.

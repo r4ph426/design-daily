@@ -5,7 +5,9 @@
   background-image:
     linear-gradient(to right, var(--gridline) .5px, transparent .5px, transparent calc(100% - .5px), var(--gridline) calc(100% - .5px)),
     linear-gradient(to bottom, var(--gridline) .5px, transparent .5px, transparent calc(100% - .5px), var(--gridline) calc(100% - .5px));
-  background-size: var(--module-size) 100%, 100% var(--module-size);
+  /* Keep each paint tile square. A page-height vertical gradient becomes
+     an oversized texture on the long Archive and can lose its thin rules. */
+  background-size: var(--module-size) var(--module-size);
   background-position: calc(var(--module-size) * .5) 0, 0 var(--field-start, 0px);
 }
 

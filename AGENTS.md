@@ -3,6 +3,7 @@
 ## Footer consistency
 
 - All raster-aligned surfaces use the shared `--grid-inset: 0.75px` token, including header cells, content panels, Privacy surfaces, and footer cells. Keep the raster strokes at 1px and subtract twice the inset from snapped panel dimensions.
+- Paint the shared square field with repeated module-sized tiles in both dimensions. Never stretch a vertical grid background to the full page height: the long Archive can cause the browser to lose its thin vertical rules.
 
 - All forest routes must use the Today footer component and its shared spacing rules. Toolbox uses the same geometry with its white theme. Never patch Privacy footer positioning with a separate route-specific margin.
 - The shared footer draws its own square rules against its own columns so naturally flowing mobile content cannot shift background lines through the footer cells. Use the same inset, column geometry, and outlines on every route.
