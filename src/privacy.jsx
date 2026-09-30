@@ -63,7 +63,7 @@ export function PrivacyPage() {
             <div>
               <p className="meta-label">The public site</p>
               <h2 id="reading-title">Reading & saving</h2>
-              <p>You can read Today, Archive, and Toolbox without signing in. This app does not add an analytics service. GitHub Pages hosts the site and logs visitors’ IP addresses for security. The Inter typeface is loaded from Google Fonts when the site opens.</p>
+              <p>You can read Today, Archive, and Toolbox without signing in. This app does not add an analytics service. GitHub Pages hosts the site and logs visitors’ IP addresses for security. The Inter and Neue Reckless typefaces are served from this site.</p>
               <p>Question bookmarks, tool bookmarks, open question panels, and a random article-submission identifier are stored in your browser’s local storage. They stay on this device unless you clear them. Your saved items are not sent to the publication workflow.</p>
             </div>
           </section>
@@ -97,7 +97,7 @@ export function PrivacyPage() {
               <h2 id="services-title">Services & retention</h2>
               <div className="privacy-service-list">
                 <p><strong>GitHub</strong><span>Hosts the public site, versioned editions, public contribution issues, and scheduled crawl. OAuth and API credentials are held in GitHub Actions secrets.</span><a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noreferrer">GitHub privacy ↗</a></p>
-                <p><strong>Google</strong><span>Holds the dedicated newsletter inbox for the server-side crawl and serves the Inter font to site visitors.</span><a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer">Google privacy ↗</a></p>
+                <p><strong>Google</strong><span>Holds the dedicated newsletter inbox for the server-side crawl.</span><a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer">Google privacy ↗</a></p>
                 <p><strong>Cloudflare</strong><span>Runs article intake and Turnstile verification, with temporary rate-limit data in Workers KV.</span><a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noreferrer">Cloudflare privacy ↗</a></p>
                 <p><strong>OpenAI</strong><span>Processes source material submitted by the server-side crawl for editorial synthesis.</span><a href="https://openai.com/policies/privacy-policy/" target="_blank" rel="noreferrer">OpenAI privacy ↗</a></p>
               </div>

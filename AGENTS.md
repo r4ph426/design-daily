@@ -12,6 +12,7 @@ When implementing from a selected generated mock, treat that image as the source
 
 - Brand the product exactly as `design / daily`, with the byline `by ra.re design`.
 - Use only Neue Reckless and Inter. Neue Reckless is for H1, H2, editorial headings, answer copy, source titles, expressive numerals, and all serif roles. Self-host the Regular, Regular Italic, and Light Italic WOFF2 files. Use Inter for body copy, metadata, and interface roles. Do not introduce a monospace or any third font family.
+- Serve Inter locally from the site's font files; do not load it from Google Fonts.
 - Use English for all visible product and interface copy.
 - The taxonomy is exactly UI, UX, Process, and Culture. AI is a separate `ai lens`, never a category. Category tags are validated against the same four-value vocabulary and are never free text.
 - Never set interface copy in all caps. Use natural English sentence case or title case and never force labels or interface phrases to lowercase. Do not use em dashes as visual separators or in product copy.

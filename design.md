@@ -23,6 +23,7 @@ The brand is written exactly as `design / daily`, with the byline `by ra.re desi
 - Neue Reckless: editorial headlines, question and source titles, answers, and expressive numerals.
 - Neue Reckless Light Italic: issue, question, and tool numbers.
 - Inter: navigation, body copy, labels, metadata, controls, and form fields.
+- Serve Inter locally from the site's font files; do not request it from Google Fonts.
 - No third typeface and no monospace.
 - The minimum rendered type size is 11px.
 - Editorial headlines use open leading and balanced wrapping. Body copy should usually stay near a 60-character measure.
