@@ -148,7 +148,7 @@ Today and Toolbox share one contribution pattern, even when their surrounding su
 
 ### Saved items
 
-- Daily questions use `Bookmark question for me`.
+- Daily questions use `Bookmark for me` at the top right of their source-list panel (`Bookmarked for me` when saved). Keep `Open sources` / `Close sources` below the source list in that same panel. On narrow panels, the bookmark sits above the source label and remains right-aligned.
 - Toolbox rows use `Bookmark tool`.
 - Save state is personal and must not be visually confused with editorial ranking.
 
