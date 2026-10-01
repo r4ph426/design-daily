@@ -82,21 +82,21 @@ function EditorialSpread({ question, editorialTitle, isOpen, isSaved, onToggle, 
         </div>
       </div>
       <div className="editorial-note content-panel" onClick={(event) => { if (!event.target.closest("button, a, input")) onToggle(); }}>
-        <p className="section-kicker">The question</p>
+        <div className="question-overline">
+          <p className="section-kicker">The question</p>
+          <button className={`bookmark-button ${isSaved ? "saved" : ""}`} type="button" aria-pressed={isSaved} onClick={onSave}>{isSaved ? "Bookmarked for me" : "Bookmark for me"}<BookmarkSimple size={17} weight={isSaved ? "fill" : "regular"} aria-hidden="true" /></button>
+        </div>
         <h3>{question.question}</h3>
         <p className="section-kicker why-label">Why it matters</p>
         <p className="answer-copy"><HighlightedText text={question.answer} as="em" /></p>
       </div>
       <div className="practice-panel content-panel"><p className="section-kicker">Editorial context</p><p>{question.why}</p><small>First seen {String(question.firstSeen || "").replace(/\bcet\b/i, "CET")}</small></div>
       <div className="source-panel content-panel">
-        <div className="source-panel-header">
-          <p className="section-kicker">{question.signals.length === 1 ? "Source" : "Sources"} <span>·</span> {question.signals.length}</p>
-          <button className={`bookmark-button ${isSaved ? "saved" : ""}`} type="button" aria-pressed={isSaved} onClick={onSave}>{isSaved ? "Bookmarked for me" : "Bookmark for me"}<BookmarkSimple size={17} weight={isSaved ? "fill" : "regular"} aria-hidden="true" /></button>
-        </div>
+        <p className="section-kicker">{question.signals.length === 1 ? "Source" : "Sources"} <span>·</span> {question.signals.length}</p>
         <ol className="prototype-source-list">{question.signals.map((signal, signalIndex) => (
           <li key={`${question.id}-${signalIndex}`}><a href={signal.url} target="_blank" rel="noopener noreferrer"><span className="source-title">{signal.title}</span><span className="source-meta">{sourceDomain(signal)} · {signal.kind} · {signal.timing}</span><span className="source-external" aria-hidden="true">↗</span></a></li>
         ))}</ol>
-        <button className="signals-disclosure" type="button" aria-expanded={isOpen} aria-controls={detailId} onClick={onToggle}><CaretDown size={16} aria-hidden="true" /> {isOpen ? "Close sources" : "Open sources"} <span>{question.counts?.total || question.signals.length}</span></button>
+        <button className="signals-disclosure" type="button" aria-expanded={isOpen} aria-controls={detailId} onClick={onToggle}>{isOpen ? "Close sources" : "Open sources"} <span>{question.counts?.total || question.signals.length}</span><CaretDown size={16} aria-hidden="true" /></button>
       </div>
       <div className="signal-details" id={detailId} hidden={!isOpen}><SignalDetails question={question} /></div>
     </section>
