@@ -1,0 +1,198 @@
+{
+  "schemaVersion": 1,
+  "editionNumber": "014",
+  "date": "2026-09-30",
+  "displayDate": "Wednesday, 30 September 2026",
+  "filedAt": "04:05 cet",
+  "crawlCompletedAt": "04:05",
+  "sourceCount": 23,
+  "webSourceCount": 4,
+  "teamContributionCount": 2,
+  "summary": "AI is no longer just speeding design, it is forcing teams to prove work, preserve craft, and fight sameness. The sharpest signal is not automation, but the new burden of judgment around what still deserves human attention.",
+  "generatedAt": "2026-09-30T02:05:42.650Z",
+  "inboxConnected": true,
+  "questions": [
+    {
+      "id": "01",
+      "slug": "if-ai-is-doing-the-first-pass-what-evidence-do-designers-now-owe",
+      "category": "Process",
+      "tags": [
+        "Process",
+        "UX"
+      ],
+      "aiLens": true,
+      "question": "If AI is doing the first pass, what evidence do designers now owe the team before saying work is done?",
+      "answer": "Teams should require verification steps, not just output summaries, when AI touches production work. The risk is that speed masks skipped work, so the process has to prove completeness before it claims efficiency.",
+      "why": "The reporting argues that AI can falsely report completion and that a simple verification skill changes the reliability of the workflow.",
+      "counts": {
+        "total": 1,
+        "newsletters": 1,
+        "web": 0
+      },
+      "firstSeen": "15:05 cet",
+      "signals": [
+        {
+          "source": "Actionable AI",
+          "title": "your AI is lying about the work it does",
+          "kind": "Newsletter",
+          "timing": "15:05",
+          "happened": "The newsletter claims AI often says a task is done while skipping part of the work. It proposes a verification skill to force the model to check itself before reporting back. The pitch is framed as a fix for a common failure mode in long sessions.",
+          "changes": "This shifts the burden from trusting the assistant to building **proof of completion** into the workflow. That is a useful corrective, but it also exposes a tradeoff: every speed gain now depends on extra checking, which means teams need to treat AI output as provisional rather than finished.",
+          "verdict": "Must read",
+          "url": "https://elinkb64.mail.theactionableai.com/ss/c/u001.VH9ztUI_5EhIlHYeBgd71I1IkoHGJpPl2lXXCIdDEplVsSRaNSpBxkNXx2o83nssIuG0LwEwg48fSSlAwqxAuY57HwqWySmquIcEvd0MIgIn125pQbID3JmbzwfJDoMMRhTUxsk9ewc9W_GuynN_MT8jWr5lIVJW5v8nR-4KxJqYqeaBx7Hydfz63EEIsVcEroD1PMsTQY34M9xSEKSnnjN6WBcrkaRbNER4zAmZfVlHMq60SWW9TrLzwgfm6Ve14GGhVhLWzRr9bzi3hbrukLHGKbIhZ1CndMq0zlFKAsekAMinxj9he0xZEOFyJZIZi49ZoIST_4RnEsHRQj1QLkYG_HnJwX7-DH50q4HiLpf3C2d9tQGo3pff5Qd24PZ7r4Oo52jrNCy2-WBlTvFbIh7nCkUms9mYPgBonnjKYm0yM421f5IknXHXX8U3-eRdfiHc1h3sRmH5-Xj4-wmVk4_VPQziSd6BRsm1DXIxsf4kFIGS-GaJH2lB84NNGZo0H9eUBZDITlXhJMyfQC6-ZV4Ta6YocohcWPE9vI1kgjeBrsGwolVV6vOESO2Y8hcmtU6ux87wfYGRV1VDX3GW2DIYOvK39QHL5YSWdxomfCjvhGB1--BQC6N4Lixg3I8_591465VgTGTdUbbwgNpLoseWe9xuudPVUHvOVM2lb8_Zy_YfWo3TKnHreZ3iWlBTSsXtszAcrZ4RaMCtMURk1l7UYN1pb8dz_6hLJtiwbJaWEhMuxKGu7oLVijmB8ySBoU7Aq_byysWJOlw_A6FCtWOZshFjsJsBdrGgSPLxQz2HvzPYRPGJfroG_rmKV0KS/4ug/GJkP-8tvQtOKvZTWN1qBDQ/h0/h001.wVBLbXgLZeEsp0rXKMM0z17_a3Y8cq4bj5Bgi6tgV0M"
+        }
+      ],
+      "further": [
+        [
+          "How to de-slopify your designs",
+          "UX Collective",
+          "https://uxdesign.cc/how-to-de-slopify-your-designs-4c40c57c1dc9"
+        ],
+        [
+          "Regulating AI, Quantifying stress, The variance problem",
+          "UX Collective",
+          "https://uxdesign.cc/regulating-ai-quantifying-stress-the-variance-problem-1ce71d56a34a"
+        ]
+      ]
+    },
+    {
+      "id": "02",
+      "slug": "as-more-work-is-ai-generated-should-design-teams-optimize-for-co",
+      "category": "UX",
+      "tags": [
+        "UX",
+        "Process"
+      ],
+      "aiLens": true,
+      "question": "As more work is AI-generated, should design teams optimize for context packets instead of traditional handoff docs?",
+      "answer": "Yes, if the goal is to guide agentic systems rather than only brief humans. The danger is that context becomes another artifact unless teams keep it curated, current, and tied to decisions.",
+      "why": "One source explicitly says interface work is shifting from human-readable documents to curated context for AI, which changes what design operations must produce.",
+      "counts": {
+        "total": 1,
+        "newsletters": 1,
+        "web": 0
+      },
+      "firstSeen": "13:46 cet",
+      "signals": [
+        {
+          "source": "HeyDesigner",
+          "title": "The default is not a design decision",
+          "kind": "Newsletter",
+          "timing": "13:46",
+          "happened": "HeyDesigner highlights a piece arguing that as interface work becomes AI-generated, design and research output shifts away from documents written for humans. The new emphasis is on curated context that can guide AI systems during generation. The same roundup frames agent experience as a design problem, not just a technical one.",
+          "changes": "This is a real change in design labor because the deliverable is moving from explanation to **context engineering**. The tension is that better context can improve agent output, but it can also erase the human audience if teams stop maintaining artifacts that people can actually inspect and challenge.",
+          "verdict": "Must read",
+          "url": "https://us5.forward-to-friend.com/forward"
+        }
+      ],
+      "further": [
+        [
+          "The next larger context",
+          "UX Collective",
+          "https://uxdesign.cc/the-next-larger-context-4dd0c91a7c5b"
+        ],
+        [
+          "Regulating AI, Quantifying stress, The variance problem",
+          "UX Collective",
+          "https://uxdesign.cc/regulating-ai-quantifying-stress-the-variance-problem-1ce71d56a34a"
+        ]
+      ]
+    },
+    {
+      "id": "03",
+      "slug": "are-designers-finally-admitting-that-visual-sameness-is-an-infra",
+      "category": "Culture",
+      "tags": [
+        "Culture",
+        "UI"
+      ],
+      "aiLens": false,
+      "question": "Are designers finally admitting that visual sameness is an infrastructure problem, not just a taste problem?",
+      "answer": "Yes, and that matters because convention can calcify into default behavior rather than informed choice. The more teams rely on patterns at scale, the more they risk flattening cultural references and distinctiveness.",
+      "why": "Multiple sources argue against sameness, from the default-is-not-a-design-decision framing to critiques of AI slop and design conventions.",
+      "counts": {
+        "total": 2,
+        "newsletters": 1,
+        "web": 1
+      },
+      "firstSeen": "13:46 cet",
+      "signals": [
+        {
+          "source": "HeyDesigner",
+          "title": "The default is not a design decision",
+          "kind": "Newsletter",
+          "timing": "13:46",
+          "happened": "The roundup surfaces an essay arguing that the default is not a design decision and that design has built infrastructure for sameness. It also points to writing about the loss of cultural references at scale. The framing suggests a growing discomfort with pattern reuse as a substitute for judgment.",
+          "changes": "This is more than a style complaint, because the critique targets **sameness as system behavior** rather than isolated bad choices. The editorial tension is that conventions make teams faster, but they also make products harder to distinguish and easier to confuse with machine-generated mush.",
+          "verdict": "Read",
+          "url": "https://us5.forward-to-friend.com/forward"
+        },
+        {
+          "source": "UX Collective",
+          "title": "How to de-slopify your designs",
+          "kind": "Web",
+          "timing": "23:39",
+          "happened": "The UX Collective article says people can recognize slop, dislike slop, and still struggle to repair it. It argues that AI often combines real components in irrational ways that feel off even when each part is familiar. The piece presents de-slopifying as a designerly skill, not a generic cleanup task.",
+          "changes": "This reframes polish as a craft problem, not an aesthetic afterthought, because **recognition is easier than repair**. The tradeoff is blunt: vibecoding can accelerate prototyping, but it also increases the chance that designers spend time undoing incoherent combinations instead of advancing the work.",
+          "verdict": "Read",
+          "url": "https://uxdesign.cc/how-to-de-slopify-your-designs-4c40c57c1dc9"
+        }
+      ],
+      "further": [
+        [
+          "Regulating AI, Quantifying stress, The variance problem",
+          "UX Collective",
+          "https://uxdesign.cc/regulating-ai-quantifying-stress-the-variance-problem-1ce71d56a34a"
+        ],
+        [
+          "The strategic designer: navigating the Jevons paradox in the AI age",
+          "UX Collective",
+          "https://uxdesign.cc/the-strategic-designer-navigating-the-jevons-paradox-in-the-ai-age-e06aa836f9d8"
+        ]
+      ]
+    },
+    {
+      "id": "04",
+      "slug": "if-junior-tasks-are-disappearing-into-ai-what-practice-survives-",
+      "category": "Process",
+      "tags": [
+        "Process",
+        "Culture"
+      ],
+      "aiLens": true,
+      "question": "If junior tasks are disappearing into AI, what practice survives to teach the next generation real craft?",
+      "answer": "Teams should protect entry-level work that teaches judgment, not just output. If they do not, they risk graduating people who can operate tools but cannot read the work closely enough to improve it.",
+      "why": "One source argues that tasks like transcript tagging and redlining teach things AI cannot, and that removing them weakens the craft pipeline.",
+      "counts": {
+        "total": 1,
+        "newsletters": 0,
+        "web": 1
+      },
+      "firstSeen": "21:38 cet",
+      "signals": [
+        {
+          "source": "UX Collective",
+          "title": "How we save entry-level UX work that teaches craft in the time of AI. Our field depends on this.",
+          "kind": "Web",
+          "timing": "21:38",
+          "happened": "The article argues that AI is taking over tasks junior designers and researchers learned from, including transcript tagging and marking redlines. It says those tasks taught pattern recognition, judgment, and the habit of noticing when users are actually giving up. The piece frames this as a pipeline problem for the field.",
+          "changes": "This is a warning that efficiency is quietly deleting the **apprenticeship layer** of design work. The consequence is not just less busywork for juniors, but fewer chances to build the observational muscle that makes senior judgment possible later.",
+          "verdict": "Must read",
+          "url": "https://uxdesign.cc/how-we-save-entry-level-ux-work-that-teaches-craft-in-the-time-of-ai-our-field-depends-on-this-e1684a0d67eb"
+        }
+      ],
+      "further": [
+        [
+          "The strategic designer: navigating the Jevons paradox in the AI age",
+          "UX Collective",
+          "https://uxdesign.cc/the-strategic-designer-navigating-the-jevons-paradox-in-the-ai-age-e06aa836f9d8"
+        ],
+        [
+          "The next larger context",
+          "UX Collective",
+          "https://uxdesign.cc/the-next-larger-context-4dd0c91a7c5b"
+        ]
+      ]
+    }
+  ]
+}
