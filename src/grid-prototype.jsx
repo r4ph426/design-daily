@@ -8,7 +8,7 @@ import { validateEditionTaxonomy } from "./taxonomy.js";
 import { normalizeArchiveDays } from "./archive.jsx";
 import { PrototypeArchive, PrototypeToolbox } from "./grid-prototype-routes.jsx";
 import { editorialHref, publishedHref } from "./editorial-routes.js";
-import { useSquarePanelRows } from "./useSquarePanelRows.js";
+import { useSquareLayouts } from "./useSquareLayouts.js";
 import { HighlightedText } from "./HighlightedText.jsx";
 
 const editorialTitles = {
@@ -107,11 +107,7 @@ function readSavedQuestions() {
 }
 
 function TodayOpening({ edition, questions, headline, summary }) {
-  const openingRef = useRef(null);
-  useSquarePanelRows(openingRef, ".question-index-content", "--index-rows", 2);
-  useSquarePanelRows(openingRef, ".intake-cell > .article-panel", "--intake-rows", 2);
-
-  return <section ref={openingRef} className="opening" id="today" aria-label="Today’s edition overview">
+  return <section className="opening" id="today" aria-label="Today’s edition overview">
     <div className="opening-copy content-panel"><p className="eyebrow">Today <span>·</span> {questions.length} questions worth asking</p><h1>{headline}</h1></div>
     <div className="opening-summary content-panel"><p>{summary}</p><div className="crawl-line"><span><Clock size={15} aria-hidden="true" /> Last crawl {crawlDay(edition.date)} · {edition.crawlCompletedAt}</span><small>{edition.sourceCount} total sources · {edition.webSourceCount} web sources · {edition.teamContributionCount} team links</small></div></div>
     <div className="intake-cell content-panel"><ArticleIntake /></div>
@@ -122,6 +118,8 @@ function TodayOpening({ edition, questions, headline, summary }) {
 }
 
 export function GridPrototype() {
+  const shellRef = useRef(null);
+  useSquareLayouts(shellRef);
   const [edition, setEdition] = useState(null);
   const [loadError, setLoadError] = useState(false);
   const [openQuestions, setOpenQuestions] = useState({});
@@ -186,7 +184,7 @@ export function GridPrototype() {
     : <>Today’s design questions, <em>in focus.</em></>);
 
   return (
-    <div className={`prototype-shell ${route.name === "toolbox" ? "is-toolbox" : ""}`}>
+    <div ref={shellRef} className={`prototype-shell ${route.name === "toolbox" ? "is-toolbox" : ""}`}>
       <a className="prototype-skip" href={route.name === "today" ? "#prototype-question-01" : route.name === "archive" ? "#prototype-archive-index" : "#prototype-our-toolbox-title"}>Skip to main content</a>
       <GridHeader date={edition.date} route={route.name} />
       <main className="grid-prototype" aria-label={`design / daily ${route.name}`}>

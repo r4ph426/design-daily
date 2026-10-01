@@ -1,11 +1,10 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { BookmarkSimple, MagnifyingGlass } from "@phosphor-icons/react";
 import toolboxData from "../data/toolbox.json";
 import { RECENT_POPULARITY, SKILL_LABELS, questionRoute } from "./archive.jsx";
 import { AiLensBadge } from "./AiLensBadge.jsx";
 import { ArticleIntake } from "./App.jsx";
 import { editorialHref } from "./editorial-routes.js";
-import { useSquarePanelRows } from "./useSquarePanelRows.js";
 
 const categories = ["UI", "UX", "Process", "Culture"];
 const paths = [
@@ -23,9 +22,7 @@ function ClearFilters({ active, onClear }) {
 }
 
 function ArchiveStartingPoints() {
-  const pathsRef = useRef(null);
-  useSquarePanelRows(pathsRef, ".prototype-start-content", "--path-rows", 1);
-  return <section ref={pathsRef} className="prototype-start module-layout" aria-labelledby="prototype-start-title">
+  return <section className="prototype-start module-layout" aria-labelledby="prototype-start-title">
     <div className="prototype-start-heading content-panel"><p className="eyebrow">Editorial starting points</p><h2 id="prototype-start-title">Start here</h2><p>Four foundations for designers finding their footing.</p></div>
     {paths.map((path, index) => <article className={`prototype-start-path prototype-start-path-${index + 1} content-panel`} key={path.category}><div className="prototype-start-content"><span>{path.category}</span><h3>{path.title}</h3><p>{path.copy}</p><a href={editorialHref(`/archive?category=${encodeURIComponent(path.category)}`)}>Explore {path.category} questions <span aria-hidden="true">↗</span></a></div></article>)}
   </section>;

@@ -1,0 +1,59 @@
+/* Intrinsic children stay measurable even before their parent gains a row. */
+@media (min-width: 721px) {
+  .content-panel > *, .privacy-hero .page-opening-main > *, .privacy-hero-aside > * { flex-shrink: 0; }
+  .prototype-search input { flex-shrink: 1; }
+  .opening { grid-template-rows: repeat(calc(var(--fit-hero, 2) + 1), var(--module-size)); }
+  .question-index { grid-row: 1 / span var(--fit-index, 3); }
+  .opening-copy, .opening-summary { grid-row: 1 / span var(--fit-hero, 2); }
+  .intake-cell { grid-row: calc(var(--fit-hero, 2) + 2) / span var(--fit-intake, 2); }
+
+  .editorial-spread, .editorial-spread.is-open {
+    grid-template-rows: repeat(var(--fit-spread, 3), var(--module-size));
+    grid-auto-rows: var(--module-size);
+  }
+  .editorial-heading { grid-row: 1 / span var(--fit-heading, 1); }
+  .practice-panel, .source-panel { grid-row: calc(var(--fit-heading, 1) + 1) / span var(--fit-support, 2); }
+  .editorial-note { grid-row: 1 / span var(--fit-spread, 3); }
+  .signal-details { grid-row: calc(var(--fit-spread, 3) + 1) / span var(--fit-details, 2); overflow: visible; }
+  .signal-table-wrap { min-height: 0; display: flow-root; }
+
+  .prototype-archive-opening, .prototype-toolbox-opening { grid-template-rows: repeat(var(--fit-opening, 3), var(--module-size)); }
+  .prototype-archive-title, .prototype-archive-orientation { grid-row: 1 / span var(--fit-intro, 2); }
+  .prototype-archive-count { grid-row: 2 / span var(--fit-count, 2); }
+  .prototype-toolbox-title { grid-row: 1 / span var(--fit-intro, 2); }
+  .prototype-toolbox-orientation { grid-row: 1 / span var(--fit-orientation, 2); }
+  .prototype-toolbox-intake { grid-row: 1 / span var(--fit-opening, 3); }
+
+  .prototype-start { grid-template-rows: calc(var(--module-size) * var(--fit-heading, 1)) repeat(2, calc(var(--module-size) * var(--fit-paths, 1))); }
+  .prototype-index-heading, .prototype-toolbox-index-heading { grid-template-rows: calc(var(--module-size) * var(--fit-heading, 1)); }
+  .prototype-archive-controls, .prototype-toolbox-controls { grid-template-rows: calc(var(--module-size) * var(--fit-filters, 1)) calc(var(--module-size) * var(--fit-selects, 1)); }
+  .prototype-select { grid-row: 2; }
+  .prototype-empty { min-height: 0; height: calc(var(--module-size) * var(--fit-empty, 2) - var(--grid-inset) * 2); }
+  .prototype-archive-row { grid-template-rows: calc(var(--module-size) * var(--fit-row, 1)); }
+  .prototype-weekly { grid-template-rows: calc(var(--module-size) * var(--fit-heading, 1)) calc(var(--module-size) * var(--fit-weekly, 2)); }
+  .prototype-weekly-slot { grid-row: 2; }
+  .prototype-tool-list { grid-auto-rows: auto; }
+  .prototype-tool-row { grid-template-rows: calc(var(--module-size) * var(--fit-row, 1)); border-bottom: 0; }
+  .prototype-tool-list.has-odd-row::after { height: calc(var(--module-size) * var(--fit-odd-halves, 1) / 2); }
+  .privacy-shell .privacy-hero { min-height: 0; grid-template-rows: calc(var(--privacy-module) * var(--fit-hero, 2)); }
+  .privacy-shell .privacy-section { min-height: calc(var(--privacy-module) * var(--fit-section, 2) - var(--grid-inset) * 2); }
+}
+
+@media (min-width: 1601px) {
+  .prototype-tool-row { grid-template-rows: calc(var(--module-size) * var(--fit-halves, 1) / 2); }
+  .prototype-tool-row { position: relative; }
+  .prototype-tool-row:nth-child(odd)::after { position: absolute; inset-inline: 0; bottom: 0; height: 1px; content: ""; pointer-events: none; background: var(--gridline); }
+}
+
+@media (max-width: 1200px) and (min-width: 721px) {
+  .signal-details { grid-column: 1 / -1; }
+  .prototype-toolbox-intake { grid-row: calc(var(--fit-orientation, 1) + 1) / span var(--fit-intake, 2); }
+  .prototype-weekly { grid-template-rows: calc(var(--module-size) * var(--fit-heading, 1)) repeat(3, calc(var(--module-size) * var(--fit-weekly, 2))); }
+  .prototype-weekly-slot-1 { grid-row: 2; }
+  .prototype-weekly-slot-2 { grid-row: 3; }
+  .prototype-weekly-slot-3 { grid-row: 4; }
+}
+
+@media (max-width: 900px) and (min-width: 721px) {
+  .prototype-tool-row { grid-template-rows: calc(var(--module-size) * var(--fit-top, 1)) calc(var(--module-size) * var(--fit-bottom, 1)); }
+}

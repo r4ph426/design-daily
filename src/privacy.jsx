@@ -1,4 +1,5 @@
-import { useLayoutEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
+import { useSquareLayouts } from "./useSquareLayouts.js";
 import { ArrowRight } from "@phosphor-icons/react";
 
 const sections = [
@@ -34,34 +35,7 @@ export function PrivacyPage() {
   const [cleared, setCleared] = useState(false);
   const [confirmClear, setConfirmClear] = useState(false);
 
-  useLayoutEffect(() => {
-    const page = pageRef.current;
-    const shell = page.closest(".privacy-shell");
-    const sections = [...page.querySelectorAll(".privacy-section")];
-    let frame;
-
-    const snapSections = () => {
-      const mobile = window.matchMedia("(max-width: 720px)").matches;
-      const module = shell.getBoundingClientRect().width / 8;
-      const inset = parseFloat(getComputedStyle(shell).getPropertyValue("--grid-inset"));
-      for (const section of sections) {
-        if (mobile) section.style.removeProperty("--privacy-section-rows");
-        else {
-          const content = section.querySelector(":scope > div");
-          const rows = Math.max(2, Math.ceil((content.getBoundingClientRect().height + inset * 2) / module));
-          section.style.setProperty("--privacy-section-rows", rows);
-        }
-      }
-    };
-    const observer = new ResizeObserver(() => {
-      cancelAnimationFrame(frame);
-      frame = requestAnimationFrame(snapSections);
-    });
-    observer.observe(shell);
-    sections.forEach((section) => observer.observe(section.querySelector(":scope > div")));
-    snapSections();
-    return () => { observer.disconnect(); cancelAnimationFrame(frame); };
-  }, []);
+  useSquareLayouts(pageRef);
 
   return (
     <div className="privacy-page" ref={pageRef}>
