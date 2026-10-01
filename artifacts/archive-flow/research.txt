@@ -1,0 +1,122 @@
+design / daily: Eine Frage im Archiv öffnen
+UX-Erkundung, 1. Oktober 2026
+
+Empfehlung
+
+Ein breites temporäres Sidepanel auf Desktop, eine volle Leseansicht auf Tablet
+und Mobile und eine eigenständige Seite für Direktlinks. Die zentrale Leistung
+ist die zuverlässige Rückkehr zu derselben Suche, denselben Filtern und derselben
+Scrollposition. Die Animation allein behebt den bisherigen Flow nicht.
+Dies ist eine Designhypothese, noch keine getestete oder freigegebene Lösung.
+
+Beobachteter aktueller Flow
+
+1. Archiv nach "first pass" durchsuchen: funktioniert, Frage 014/01 erscheint.
+   Beleg: 01-filtered-archive.jpg.
+2. Fragetitel öffnen: Inhalt vorhanden, aber Wechsel von GridPrototype zu App.
+   Die lange Frage steht groß in einer schmalen Spalte. Die Metadatenspalte
+   beansprucht viel leeren Raum, während Antwort und Quellen weiter unten liegen.
+   Kurz erschien "This question could not be found.", bevor der Inhalt ankam.
+   Beleg: 02-current-question.jpg; Ladefehler im Browser beobachtet.
+3. Über Question archive zurückkehren: Suche geleert, Archiv wieder oben.
+   Für spätere Referenzbilder wurde die Suche "verification" erneut eingegeben.
+   Belege: 03-archive-reference.jpg und 04-index-reference.jpg.
+4. Detail bei 390 x 844px: Inhalte stapeln sich. Titel, Skill-Labels und das
+   separate Bookmark-/Metadatensegment verschieben die Antwort weit nach unten.
+   Beleg: 05-current-question-mobile.jpg.
+
+Der Quellcode bestätigt den Layoutwechsel in src/main.jsx: Archive verwendet
+GridPrototype, questions/... verwendet App. Beim Wechsel wird die Komponente
+mit lokalem Suchzustand verlassen. QuestionDetailPage setzt die Scrollposition
+auf 0. Neue Panelinteraktionen wurden in dieser Erkundung nicht implementiert.
+
+ScreensDesign: Beobachtung und Übertragung
+
+Wikipedia öffnet eine Referenzerklärung über dem sichtbaren Ursprungsartikel.
+Übertragung: Belege prüfen und den Ausgangspunkt behalten. Eine Analogie,
+kein aufgezeichneter Desktop-Sidepanel-Flow.
+https://screensdesign.com/apps/wikipedia/?vs=97098
+https://screensdesign.com/apps/wikipedia/?av=1564&flow=56733&ts=26.000
+
+Pocket zeigt eine ruhige Lesespalte mit Herkunft und klarem Home-Rückweg.
+Übertragung: Antwort und Belege vor übergroßem Titel und leerer Metadatenspalte.
+https://screensdesign.com/apps/pocket-stay-informed/?vs=13918
+https://screensdesign.com/apps/pocket-stay-informed/?av=211&flow=65013&ts=105.000
+
+Flipboard zeigt ein Sheet mit kurzen artikelbezogenen Aktionen und Close.
+Dies ist ein Aktionsmenü, kein langer Lesebereich. Daher keine direkte Vorlage
+für unsere vollständige mobile Frage.
+https://screensdesign.com/apps/flipboard-the-social-magazine/?vs=103129
+
+Alle Referenzen wurden mit der MCP recherchiert und visuell geöffnet.
+Sie sind aufgezeichnete mobile Screens. Die Desktop-Empfehlung ist unsere
+Übertragung; sie ist kein Beleg für gemessene Usability oder heutige Verfügbarkeit.
+
+Drei Layoutstudien in der sichtbaren Reihenfolge
+
+1. concept-1-contextual-drawer.png: temporäres Sidepanel.
+   Liste -> öffnen -> lesen/Quellen prüfen -> schließen -> ursprüngliche Liste.
+   Stärke: Bestehende Archivkomposition bleibt hinter dem Panel bestehen.
+   Tradeoff: Teil der Liste verdeckt; bei modalem Panel nicht bedienbar.
+   Der Mock zeigt Hierarchie und Lesebreite. Überlagerung, unveränderte
+   Hintergrundspalten und Fokusverhalten sind aus dem Standbild nicht prüfbar.
+2. concept-2-reading-desk.png: feste Liste neben Leseansicht.
+   Liste -> Auswahl -> lesen -> andere Frage direkt in derselben Liste wählen.
+   Stärke: Zügiges Vergleichen mehrerer Fragen.
+   Tradeoff: Dauerhafter Umbau des Archivs und schmalere Ergebnisliste.
+3. concept-3-question-page.png: eigenständige Leseseite.
+   Liste -> breite Leseseite -> Back to results -> erhaltene Ergebnisse.
+   Stärke: Viel Lesefläche, Direktlinks und einfache mobile Nutzung.
+   Tradeoff: Liste beim Lesen unsichtbar; Rückkehr muss sauber gespeichert werden.
+
+Die generierten Bilder sind Layoutstudien. Einzelne Beispieldaten, Labels und
+zusätzliche Ergebniszählzeilen sind keine freigegebenen Produktentscheidungen.
+Bei Umsetzung reale Editionsdaten und bestehende Designregeln verwenden.
+Insbesondere keine neue Ergebniszählzeile und keine Änderung des Headers.
+
+Zielablauf für das Sidepanel
+
+A. Titel bleibt ein echter Link zur teilbaren Frage-URL. Normaler Archivklick
+   öffnet das Panel. Cmd/Ctrl-Klick und Öffnen in neuem Tab funktionieren normal.
+   Bookmarkklicks öffnen die Frage nicht. Suche, Kategorie, Must read, Skill,
+   Datum, Reihenfolge, Scrollposition und auslösender Link bleiben erhalten.
+B. Desktop: ungefähr vier Module Lesebreite, Ziel etwa 680 bis 840px.
+   Reale scrollbarbereinigte Feldbreite prüfen. Bei zu wenig Platz volle Ansicht.
+   Gemeinsamer Header bleibt erhalten. Panel eigener Scrollbereich, klare
+   Close-Aktion, ruhige Kontur. Modal: Hintergrund steht still und ist inert.
+C. Inhalt: kompakte Edition/Datum/Kategorie/AI -> vollständige Frage ->
+   Why it matters -> Antwort -> Bookmark for me/Copy link -> Quellen ->
+   Signalnotizen -> Question trail. Quellenlinks bleiben sichtbar.
+   What happened und What changes untereinander, keine vier schmalen Spalten.
+   Hauptinsichten coral; sage für Interaktion; yellow für Fokus und AI.
+   Persönlicher Bookmark, Team-Saves und Must read bleiben getrennt.
+D. Previous/Next navigieren durch die aktive gefilterte Ergebnisliste.
+   Bei einem Treffer keine Navigation. Panelwechsel setzt dessen Scrollposition
+   zurück; Archiv bleibt stehen. Keine verschachtelten Frage-Panels.
+   Question trail ersetzt den Panelinhalt oder wechselt ausdrücklich zu
+   verwandten Archiv-Ergebnissen.
+E. Close, Escape, Hintergrundklick und Browser-Zurück schließen das Panel.
+   Fokus kehrt zum Titel zurück. Erstes Öffnen erzeugt einen History-Schritt;
+   Weiterblättern ersetzt ihn, damit Zurück direkt zur Liste führt.
+   Direktlinks ohne Archiv-Kontext öffnen die volle Leseseite mit Back to archive.
+F. Tablet bis 1200px und Mobile bis 720px: volle Leseansicht als Ausgangshypothese.
+   Über 1200px zusätzlich verfügbare Panelbreite prüfen. Kein kleines Bottom
+   Sheet für lange Texte. Kompakte Nummer, moderate Titelgröße, Antwort vor
+   ausführlichen Metadaten, 44px Controls. Close führt zu erhaltenen Ergebnissen.
+G. Modaler Fokus hineinführen, halten und beim Schließen zurückgeben.
+   Benannte Dialogregion, sichtbarer gelber Fokus, reduced-motion beachten.
+   Nicht gefunden erst nach abgeschlossenem Laden zeigen. Bookmarks teilen
+   Zustand zwischen Liste, Panel und Direktansicht.
+
+Nächste Prüfung
+
+Mit zwei bis drei Teammitgliedern: Frage suchen, Hauptgedanken nennen, Quelle
+prüfen, zweite Frage lesen und zur ersten Ergebnisliste zurückkehren.
+Prüfen, ob sie ihren Platz finden, Quellen entdecken und sicher schließen.
+Desktop, knapp über 1200px, Tablet 834/768px, Mobile 390px; lange Titel, viele
+Quellen, ein Treffer, Bookmark, Direktlink, Reload, Zurück und Tastatur.
+
+Status
+
+Keine App-UI verändert, nichts veröffentlicht. Vorhandene lokale Änderungen
+erhalten. Sidepanel-Präferenz als offene Erkundung in AGENTS.md festgehalten.

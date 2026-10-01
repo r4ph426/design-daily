@@ -1,144 +1,72 @@
-# Design QA: Toolbox
+# Archive reading desk QA
 
-## Comparison target
+final result: passed
 
-- Source visual truth path: `/Users/raphael.regli/Documents/ChatGPT/design-dojo/public/assets/toolbox-layout-reference.png`
-- Original supplied source: `/var/folders/qk/wyf2xq9d0z1b0pbvm4pqz0240000gq/T/codex-clipboard-867a651f-b9f1-4703-a7f4-bb55db4ba25e.png`
-- Implementation screenshot evidence: Codex in-app browser capture of `http://localhost:4173/#/toolbox` in the current build session. The in-app browser does not expose a screenshot filesystem path.
-- Comparison helper: `http://localhost:4173/qa-toolbox.html`
-- Viewport: 1440 × 1024 CSS pixels, device scale factor 1.
-- Source pixels: 1488 × 1058, normalized to the 1440 × 1024 CSS viewport without cropping.
-- Implementation pixels: 1440 × 1024 browser viewport capture.
-- State: Toolbox route, default search and filters, no saved tools, empty contribution field.
+## Latest annotation fix: entire result row is a link
 
-## Full-view comparison evidence
+The user's second browser annotation requires the complete question row to switch questions. A stretched native title link now covers the row's number, metadata and padding; the separate bookmark is layered above it. No visual geometry changed. Keyboard focus outlines the entire row in the existing yellow token.
 
-The selected source and browser-rendered implementation were opened and inspected at the same 1440 × 1024 desktop state. The implementation preserves the source hierarchy and proportions: two-row header, split editorial hero, dated three-column weekly strip, persistent `Our toolbox` heading and filters, and the 11% / 39% / 34% / 16% tool-row grid. The latest direction replaces the original sage canvas with warm paper, keeps sage for navigation and selection, uses black for typography, and limits yellow to the `Useful now` background highlight.
+- Native coordinate clicks at (90, 620) and (90, 850) in a 1280 × 988 CSS viewport switched to 015/01 and 015/02 respectively, outside the title/arrow targets.
+- Bookmark 015/01 toggled while question 015/02 remained selected; the test save was reverted.
+- Enter on the semantic question link selected 015/01 and focused its reader heading. Shift+Tab from its bookmark focused the link and produced a 2px yellow full-row outline (`desk-full-row-keyboard.jpg`).
+- At 390 × 844, a native click in the left bottom padding of the first row opened the mobile reader with no horizontal overflow.
+- Final annotated-question capture: `artifacts/archive-flow/desk-full-row-final.jpg`, question 015/02. Browser console contained no errors. This interaction-only change preserves the visual source and earlier comparison results.
+- Build and all 26 tests passed; Sites checks passed 4/4. The user authorized pushing the prototype and fixes to main. The opt-in prototype scope remains intact.
 
-## Focused comparison evidence
+## Latest revision: natural-height index, 1 October 2026
 
-- Header and hero: the final pass shows the shared current-edition date, Toolbox active state, broad two-line headline, and contribution form aligned to the same hairline grid as the source.
-- Weekly strip: all three signals preserve the source number/title/verdict/summary/source anatomy. The highlighted verdict has a square yellow background and no underline.
-- Persistent index: search, type filters, verdict controls, evidence columns, recommendation column, and bookmark row match the source density and alignment.
-- No image-focused crop was needed because the target contains no editorial photography, illustration, or product imagery. The only visible symbols are supplied Phosphor interface icons.
+User browser Comment 1 overrides the initial fixed-height index: the Archive region must grow with its question list, initially covering at least the last 30 days. The original Option 2 image remains the visual reference for the reader anatomy.
+
+- Latest matched-state capture: `artifacts/archive-flow/desk-long-list-filtered.jpg`, 1425 × 1013 pixels at a requested 1440 × 1024 CSS viewport, question 014/01 with verification + Process filters. Combined with the normalized original reference in `desk-long-list-comparison.png` and visually inspected. Reader typography, controls, proportions, tokens, and provenance remain consistent. New focused crops were unnecessary because the change concerns overall region height and scrolling; the earlier reader-anatomy comparison remains applicable.
+- Unfiltered desktop evidence: `desk-long-list-scroll.jpg`, 1280 × 988 CSS viewport, question 014/04 selected midway through the list. The Archive region measures 12,707px, containing all 60 real questions from the current last-30-day window. Results use document scrolling; the reader stays at 115.75px under the header with its own 871.5px scrolling area. Footer follows the complete list.
+- P1 found at the final question: the sticky reader was constrained upward by the region end, clipping its heading after selection. Opening a question now limits the page scroll only as far as needed to fit the reader. Fixed evidence: `desk-long-list-end-final.jpg`; last question 001/04 shows its title at 279.25px, reader top at 115.75px, and Archive bottom at 988px. `desk-long-list-end.jpg` preserves the pre-fix evidence. Closing restores the originating results position.
+- Tablet at 834px and mobile at 390px keep natural reader heights and the existing single-view behavior. Back restored the original question link visibly in the viewport at 548.88px and 356.39px respectively; mobile has no horizontal document overflow.
+- Older questions reveal in batches of 20 as the list end approaches, with a keyboard-accessible button fallback. Search/date filters retrieve all matching history, and older shared questions extend the visible index. All available real editions currently fit inside 30 days, so no real older batch exists yet; window boundaries, batch limits, historical retrieval and older selection are covered by four fixture-based tests. This prototype progressively renders the already fetched archive data; it does not add a paginated network API.
+- Fresh browser console check: no error logs. Build passed; `npm test` passed 26/26 and `npm run test:sites` passed 4/4.
+
+This latest revision supersedes the independent-results-scroll description in the initial verification below. No actionable P0/P1/P2 findings remain.
+
+## Visual source and implementation
+
+- Source visual truth: `artifacts/archive-flow/concept-2-reading-desk.png`, the second displayed exploration option selected by the user.
+- Source pixels: 1487 × 1058, unframed generated desktop reference.
+- Implementation: `http://localhost:5181/grid-prototype.html?reading=desk#/questions/2026-09-30/if-ai-is-doing-the-first-pass-what-evidence-do-designers-now-owe?q=verification&category=Process`.
+- Final capture: `artifacts/archive-flow/desk-desktop-final.jpg`, 1425 × 1013 capture pixels, browser viewport requested at 1440 × 1024 CSS pixels, default device density. The browser capture omits its scrollbar edge. The reference was resized to the exact capture dimensions for comparison; no browser chrome or device frame is included.
+- State: dark forest, Archive active, query `verification`, Process selected, question 014/01 open, reader at top, no bookmark or copy-success state.
+- Full-view comparison: `artifacts/archive-flow/desk-desktop-final-comparison.png`, both images in one comparison input.
+- Focused comparison: `artifacts/archive-flow/desk-reading-region-comparison.png`, matching reader crops placed together.
 
 ## Comparison history
 
-### Pass 1
+1. `desk-desktop-v1-comparison.png`: P1 opening a question scrolled the page past the reader title and index controls; P2 numeral styles leaked into the shared AI badge. Fixed by resetting the page and reader scroll on selection and excluding the AI badge from numeral styling.
+2. `desk-desktop-v2.jpg`: P2 index controls could scroll out of view. Fixed by keeping index heading and filters outside a separately scrollable results area. Programmatic heading focus no longer draws a decorative focus box around noninteractive copy; keyboard controls keep their yellow rings.
+3. First combined final comparison: P2 index heading and filters consumed excess vertical space relative to the chosen compact direction. Removed the extra introductory line and tightened desktop heading, filter gaps, and result typography. Retained 44px controls.
+4. Revised `desk-desktop-final-comparison.png` and focused comparison inspected together: fixed index controls, compact results, full reader heading, shared AI anatomy, hairlines, editorial typography, neutral metadata and clearly identifiable interactive controls. No actionable P0/P1/P2 findings remain.
 
-- [P2] Toolbox header inherited edition number and filed-time metadata, while the source shows only the date.
-  - Fix: scoped the Toolbox header to `Friday, 25 September 2026` and removed the extra edition metadata from this route.
-- [P2] Persistent tool rows were too tall, moving the third row materially farther below the fold than the source.
-  - Fix: tightened row padding, display size, fact spacing, recommendation leading, and bookmark-row height without reducing the 11px interface type floor.
+## Intentional differences
 
-### Pass 2
+- Reuse the existing shared header and footer rather than the generated mock's altered header descriptor placement.
+- Real edition content produces two matching results rather than the mock's fabricated three; long titles remain accessible in full and are clamped only in the desktop index.
+- Real source notes, provenance, dates and save counts replace abbreviated/generated content. Emphasis comes from actual double-asterisk markup rather than invented editorial emphasis.
+- No redundant visible result-count row or duplicate Copy link action. Existing design rules require Clear filters inside retrieval controls and recent popularity separate from team saves.
+- Fixed three/four-module panes follow the selected flow. Natural reading height and 44px controls intentionally take precedence over square-row height snapping inside this local experiment.
+- Tablet/mobile adaptations are new responsive interpretations of the selected desktop reference, not fidelity comparisons against nonexistent device mocks.
 
-- Post-fix browser evidence shows no remaining actionable P0, P1, or P2 mismatch.
-- Remaining rasterization differences between the generated reference and browser-rendered Neue Reckless are acceptable P3-level rendering variance.
+## Responsive and interaction verification
 
-### Pass 3: merged shell and control consistency
+- Desktop: 1440 × 1024; three/four-module split, independently scrolling results and reader, selected row, fixed search/filter area, shared header and footer.
+- Breakpoint: 1201px keeps both panes; 1200px shows one full-width view. Selection survives resizing and reading returns to the top at the layout transition.
+- Tablet: 834 × 1194 (`desk-tablet-final.jpg`) and 768 × 1024; full-width reader, readable measure and sticky action strip.
+- Mobile: 390 × 844 (`desk-mobile-final.jpg`, `desk-mobile-index.jpg`) and 320 × 740; no document horizontal overflow, horizontally scrollable category filters, natural stacked content, 44px interactive targets in index and reader.
+- Open from a scrolled mobile list and return: restored page scroll to 1463.5px and focused the original question link, visibly in the viewport.
+- Browser Back returned from reader to `archive?q=verification&category=Process` with the search intact. Close/Back to results and Escape restore results. Reader question changes replace the current history entry.
+- Search, category, Must read, skill and date filters verified together; Ethics + September + Must read + verification returned one result. Empty query result and Clear filters verified.
+- Reader bookmark toggles updated the index bookmark and shared local storage; reverted the test bookmark afterwards.
+- Copy link showed its success label; direct question URLs loaded with the filter context and real edition data. Source links and Question trail use real targets.
+- Today, Archive and Toolbox retain their 115px shared desktop header geometry and correct active navigation.
+- Console: fresh final tab after reload and responsive captures contained no error logs. A temporary hot-reload ReferenceError during implementation was corrected before the final verification.
+- Build passed. `npm test`: 22/22 passed. `npm run test:sites`: 4/4 passed; required Sites outputs present.
 
-- Verified that Today, Archive, and Toolbox still render through one two-row header with the correct persistent active state.
-- Replaced the Toolbox-specific `Add to review` language with the shared `Contribute to the next crawl` / `Add to crawl` pattern.
-- Unified Today and Toolbox contribution controls at 48px with the same square geometry, typography, focus, active, and mobile stacking behavior.
-- At 390px, the full edition date crowded the brand and header actions. The header now swaps only the date label to a compact `D Mon YYYY` form on mobile; the structure and desktop treatment remain unchanged.
+## Residual scope
 
-### Pass 4: shared-header design critique
-
-- [P1] Two generations of header CSS defined different grids, heights, padding, and responsive behavior. The visual result depended on cascade order rather than one component contract.
-  - Fix: consolidated the header into one desktop definition and one mobile definition shared by Today, Archive, and Toolbox.
-- [P2] Search and Bookmarks competed with edition metadata in the global chrome even though search belongs to Archive and personal saves already live in context.
-  - Fix: removed both header utilities and gave the brand/date row a stable 42% / 58% grid.
-- [P2] Toolbox used a paper-filled active tab while Today and Archive used a restrained surface highlight.
-  - Fix: kept the Toolbox palette but reused the same active-state logic and dimensions as the daily surfaces.
-- [P2] Toolbox metadata fell below the documented 11px type floor and its bookmark control was shorter than comparable actions.
-  - Fix: moved metadata to `--t-meta`, raised the bookmark row to 44px, and normalized filter targets to 44px.
-- [P2] The header changed dates and metadata density between routes, making Toolbox feel like a separate microsite.
-  - Fix: every route now uses the same current-edition date, with no route-specific edition or filing metadata in the shared chrome. Header interface copy uses one 12px scale while editorial metadata retains the 11px floor.
-
-### Pass 5: shared page-opening design critique
-
-- [P1] The three primary routes implemented their opening sections independently. At 1280px, Today used a 52px title with no eyebrow and 38px / 20px inset, Archive used a 78px title with a 52px / 22px inset, and Toolbox used a 64px title with a 12px / 26px inset.
-  - Fix: all three routes now use the same `page-opening`, `page-opening-main`, `page-opening-aside`, eyebrow, title-line, and summary classes.
-- [P2] Desktop splits varied between 44% / 56%, 64% / 36%, and 59% / 41%, while section heights ranged from roughly 230px to 371px.
-  - Fix: every route uses a 64% / 36% split and 360px minimum height. Page-specific content may grow the section, but the baseline frame is shared.
-- [P2] Responsive behavior diverged: Today collapsed at 1200px while Archive and Toolbox held two columns until mobile.
-  - Fix: the shared layout holds through tablet and every route collapses at the same 720px breakpoint with the same 46px title, 16px summary, and 30px / 20px inset.
-
-### Pass 6: paper Toolbox, coral contribution, and shared footer
-
-- Replaced the sage Toolbox canvas with warm paper while retaining sage for all navigation tabs and selected filters. Structural rules now use a light sage mix; controls retain a stronger neutral boundary where needed.
-- Restored the same coral `Add to crawl` fill on Today and Toolbox. The rendered ink-on-coral pair measures 5.74:1.
-- Replaced the Toolbox-only metadata footer with one shared three-cell footer on every route: coral editorial claims around an underlined sage Privacy link with an arrow.
-- Measured the shared footer on its forest surface: the brighter coral text token is 4.60:1 and the sage Privacy link is 9.79:1.
-- At 390px, the shared footer stacks into three full-width rows. At 320px, Toolbox reports no horizontal overflow and all navigation targets remain 48px tall.
-
-### Pass 7: white Toolbox reskin and compact AI label
-
-- Reskinned Toolbox to a pure white canvas with subtle neutral grey/black rules, including the shared footer.
-- Kept Toolbox navigation white in its resting and active states; the persistent underline now carries the active state without a filled tab.
-- Retained coral only for the shared `Add to crawl` action and contrast-adjusted footer statements.
-- Shortened the shared yellow AI-lens badge label from `AI lens` to `AI` while retaining its robot icon and semantic role.
-- Removed the remaining forest and sage treatments from Toolbox. The brand and status text now use ink, while selected and empty-state filter actions use yellow.
-- Applied the Toolbox light theme to `html` and `body` as well as the capped shell so wide viewports cannot expose forest-colored outer gutters.
-- Refined the Toolbox tablet state: the masthead brand uses exact Tangity coral `#FF3318`, weekly signals stack vertically at 1200px, selected filters use sage, and the active Toolbox tab combines a neutral fill with a heavier label and inset ink rule.
-- Unified the shared navigation active state across Today, Archive, and Toolbox: each uses a subtle fill, heavier label, and three-pixel inset rule; the dark routes use sage and Toolbox uses ink.
-
-## Required fidelity surfaces
-
-### Fonts and typography
-
-- Neue Reckless Regular and Light Italic are self-hosted and used for editorial headlines, tool names, verdicts, and expressive numerals.
-- Inter remains the only interface and metadata family.
-- Headline wrapping, open display leading, compact evidence labels, and the 11px interface floor match the selected direction.
-
-### Spacing and layout rhythm
-
-- Desktop grid, hairline divisions, square controls, and section order match the source.
-- The 1200px and 720px responsive states were checked. At 390px and 720px the document and shell report no horizontal overflow; filters become scrollable or stacked and controls retain at least 44px targets.
-- The shared header also passes at the 320px minimum: brand and compact date remain separate, every navigation target is 48px tall, and horizontal overflow remains zero.
-
-### Colors and visual tokens
-
-- Toolbox is scoped to Tangity paper, sage, black, dark forest, coral, and yellow tokens.
-- Coral appears only on the Toolbox contribution action and shared footer claims; it is not used for tool rankings, rows, or navigation.
-- No gradients, drop shadows, glass surfaces, black panels, or rounded SaaS cards were introduced.
-- Measured Toolbox navigation contrast is 13.06:1 for inactive tabs and 11.00:1 for the active tab.
-
-### Image quality and asset fidelity
-
-- The selected screen contains no raster content that needs recreation.
-- Search, bookmark, check, and external-link symbols use the existing Phosphor icon dependency rather than custom SVG or CSS drawings.
-- The supplied visual target is retained as a project QA reference asset without being shipped as interface content.
-
-### Copy and content
-
-- Weekly discovery and persistent-toolbox copy follow the approved two-layer editorial model.
-- `New this week`, `What’s new and sparking our interest`, `Our toolbox`, verdicts, source provenance, and recommendation fields match the selected source.
-
-## Interaction and accessibility checks
-
-- Search reduced the collection to the expected `Playwright MCP` result.
-- `Best practice` returned both matching tools and toggled back to the full five-tool collection.
-- Bookmarking changed the accessible label and pressed state to `Bookmarked`, then reset correctly.
-- A valid contribution URL produced `Added to next week’s crawl.`; clearing the field restored the default form state.
-- Navigation exposes a persistent Toolbox active state and semantic links.
-- Today and Toolbox use the same `Add to crawl` action label and contribution-control anatomy.
-- Invalid tool URLs show an inline alert, valid tool URLs show the polite success state, and keyboard focus on the contribution action renders a 2px ink outline with a 4px yellow halo.
-- Today, Archive, and Toolbox expose the same three footer items in the accessibility tree.
-- The browser console returned no warnings or errors.
-
-## Verification
-
-- `npm run build`: passed and emitted `dist/client/index.html`, `dist/server/index.js`, and `dist/.openai/hosting.json`.
-- `npm test`: 18 of 18 tests passed.
-- `npm run test:sites`: 4 of 4 tests passed.
-- `git diff --check`: passed.
-- Primary browser interactions: passed.
-- Console errors: none.
-
-## Follow-up polish
-
-- P3: replace illustrative repository examples with crawler-produced weekly data when the editorial pipeline is connected.
-
-final result: passed
+Local prototype only. No publication or live main-Archive replacement. The source copy action was exercised through its success state; no external article was submitted. Responsive behavior was checked in browser viewports, not on physical touch devices.

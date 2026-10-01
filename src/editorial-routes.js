@@ -4,5 +4,6 @@ export function publishedHref(route = "") {
 
 export function editorialHref(route = "") {
   const review = window.location.pathname.endsWith("/grid-prototype.html");
-  return review ? `${import.meta.env.BASE_URL}grid-prototype.html#${route}` : publishedHref(route);
+  const query = review && new URLSearchParams(window.location.search).get("reading") === "desk" ? "?reading=desk" : "";
+  return review ? `${import.meta.env.BASE_URL}grid-prototype.html${query}#${route}` : publishedHref(route);
 }

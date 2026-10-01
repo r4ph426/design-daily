@@ -10,6 +10,9 @@ import { PrototypeArchive, PrototypeToolbox } from "./grid-prototype-routes.jsx"
 import { editorialHref, publishedHref } from "./editorial-routes.js";
 import { useSquareLayouts } from "./useSquareLayouts.js";
 import { HighlightedText } from "./HighlightedText.jsx";
+import { ArchiveReadingDesk } from "./ArchiveReadingDesk.jsx";
+
+const readingDesk = window.location.pathname.endsWith("grid-prototype.html") && new URLSearchParams(window.location.search).get("reading") === "desk";
 
 const editorialTitles = {
   "if-ai-is-doing-the-first-pass-what-evidence-do-designers-now-owe": <>A first pass needs <em>proof.</em></>,
@@ -42,6 +45,7 @@ function sourceDomain(signal) {
 function prototypeRoute() {
   const hash = window.location.hash;
   const [path, query = ""] = hash.replace(/^#\/?/, "").split("?");
+  if (readingDesk && path.startsWith("questions/")) return { name: "archive", category: "All" };
   if (path === "archive") {
     const category = new URLSearchParams(query).get("category");
     return { name: "archive", category: ["UI", "UX", "Process", "Culture"].includes(category) ? category : "All" };
@@ -187,11 +191,17 @@ export function GridPrototype() {
 
   return (
     <div ref={shellRef} className={`prototype-shell ${route.name === "toolbox" ? "is-toolbox" : ""}`}>
-      <a className="prototype-skip" href={route.name === "today" ? "#prototype-question-01" : route.name === "archive" ? "#prototype-archive-index" : "#prototype-our-toolbox-title"}>Skip to main content</a>
+      <a className="prototype-skip" href={route.name === "today" ? "#prototype-question-01" : route.name === "archive" ? "#prototype-archive-index" : "#prototype-our-toolbox-title"} onClick={readingDesk && route.name === "archive" ? (event) => {
+        event.preventDefault();
+        const target = document.querySelector("#desk-question-title") || document.querySelector("#prototype-archive-index");
+        target?.focus({ preventScroll: true });
+      } : undefined}>Skip to main content</a>
       <GridHeader date={edition.date} route={route.name} />
       <main className="grid-prototype" aria-label={`design / daily ${route.name}`}>
         <div className="grid-content">
-          {route.name === "archive" && <PrototypeArchive records={archiveRecords} ready={archiveReady} bookmarks={savedQuestions} onBookmark={(key) => setSavedQuestions((state) => ({ ...state, [key]: !state[key] }))} initialCategory={route.category} />}
+          {route.name === "archive" && (readingDesk
+            ? <ArchiveReadingDesk records={archiveRecords} ready={archiveReady} bookmarks={savedQuestions} onBookmark={(key) => setSavedQuestions((state) => ({ ...state, [key]: !state[key] }))} />
+            : <PrototypeArchive records={archiveRecords} ready={archiveReady} bookmarks={savedQuestions} onBookmark={(key) => setSavedQuestions((state) => ({ ...state, [key]: !state[key] }))} initialCategory={route.category} />)}
           {route.name === "toolbox" && <PrototypeToolbox />}
           {route.name === "today" && <>
           <TodayOpening edition={edition} questions={questions} headline={headline} summary={summary} />
