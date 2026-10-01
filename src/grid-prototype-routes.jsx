@@ -1,10 +1,11 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { BookmarkSimple, MagnifyingGlass } from "@phosphor-icons/react";
 import toolboxData from "../data/toolbox.json";
 import { RECENT_POPULARITY, SKILL_LABELS, questionRoute } from "./archive.jsx";
 import { AiLensBadge } from "./AiLensBadge.jsx";
 import { ArticleIntake } from "./App.jsx";
 import { editorialHref } from "./editorial-routes.js";
+import { useSquarePanelRows } from "./useSquarePanelRows.js";
 
 const categories = ["UI", "UX", "Process", "Culture"];
 const paths = [
@@ -19,6 +20,15 @@ const verdicts = ["All verdicts", "Useful now", "Worth trying", "Best practice",
 
 function ClearFilters({ active, onClear }) {
   return active && <div className="prototype-clear-cell content-panel"><button className="prototype-clear-filters" type="button" onClick={onClear}>Clear filters ↗</button></div>;
+}
+
+function ArchiveStartingPoints() {
+  const pathsRef = useRef(null);
+  useSquarePanelRows(pathsRef, ".prototype-start-content", "--path-rows", 1);
+  return <section ref={pathsRef} className="prototype-start module-layout" aria-labelledby="prototype-start-title">
+    <div className="prototype-start-heading content-panel"><p className="eyebrow">Editorial starting points</p><h2 id="prototype-start-title">Start here</h2><p>Four foundations for designers finding their footing.</p></div>
+    {paths.map((path, index) => <article className={`prototype-start-path prototype-start-path-${index + 1} content-panel`} key={path.category}><div className="prototype-start-content"><span>{path.category}</span><h3>{path.title}</h3><p>{path.copy}</p><a href={editorialHref(`/archive?category=${encodeURIComponent(path.category)}`)}>Explore {path.category} questions <span aria-hidden="true">↗</span></a></div></article>)}
+  </section>;
 }
 
 function sourceCount(record) {
@@ -85,12 +95,7 @@ export function PrototypeArchive({ records, ready, bookmarks, onBookmark, initia
         <div className="prototype-archive-count content-panel"><span>{records.length}</span><p>Questions across {new Set(records.map((record) => record.editionNumber)).size} weekday editions</p><small>Popular ranks all-time team saves. Popular recently reflects distinct saves in the last 30 days.</small></div>
       </section>
 
-      <section className="prototype-start module-layout" aria-labelledby="prototype-start-title">
-        <div className="prototype-start-heading content-panel"><p className="eyebrow">Editorial starting points</p><h2 id="prototype-start-title">Start here</h2><p>Four foundations for designers finding their footing.</p></div>
-        {paths.map((path, index) => {
-          return <article className={`prototype-start-path prototype-start-path-${index + 1} content-panel`} key={path.category}><span>{path.category}</span><h3>{path.title}</h3><p>{path.copy}</p><a href={editorialHref(`/archive?category=${encodeURIComponent(path.category)}`)}>Explore {path.category} questions <span aria-hidden="true">↗</span></a></article>;
-        })}
-      </section>
+      <ArchiveStartingPoints />
 
       <section className="prototype-archive-index" id="prototype-archive-index" aria-labelledby="prototype-index-title">
         <div className="prototype-index-heading module-layout"><div className="content-panel"><p className="eyebrow">Dense index</p><h2 id="prototype-index-title">Question index</h2></div><p className="content-panel">Search by question, answer, skill label, or source title.</p></div>

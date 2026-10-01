@@ -6,6 +6,7 @@ import {
   MagnifyingGlass,
 } from "@phosphor-icons/react";
 import { AiLensBadge } from "./AiLensBadge.jsx";
+import { HighlightedText } from "./HighlightedText.jsx";
 import { CATEGORIES } from "./taxonomy.js";
 
 export const RECENT_POPULARITY = Object.freeze({ minimumSaves: 3, trailingDays: 30 });
@@ -387,7 +388,7 @@ export function QuestionDetailPage({ record, records, saved, onBookmark, renderS
       <section className="question-answer" aria-labelledby="why-it-matters-title">
         <div><h2 id="why-it-matters-title">Why it matters</h2></div>
         <div>
-          <p className="detail-answer-copy">{record.answerText}</p>
+          <p className="detail-answer-copy"><HighlightedText text={record.answer ?? record.answerText} as="em" /></p>
           {record.why && <p className="detail-why-copy">{record.why}</p>}
         </div>
         <aside><p>The answer is editorial synthesis. Open the source record below to inspect the evidence and tradeoffs.</p></aside>

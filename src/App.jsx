@@ -7,6 +7,7 @@ import {
   Clock,
 } from "@phosphor-icons/react";
 import { AiLensBadge } from "./AiLensBadge.jsx";
+import { HighlightedText } from "./HighlightedText.jsx";
 import { validateEditionTaxonomy } from "./taxonomy.js";
 import {
   ArchivePage,
@@ -232,12 +233,6 @@ function formatHeaderDate(value) {
   }).format(new Date(Date.UTC(Number(year), Number(month) - 1, Number(day))));
 }
 
-function HighlightedText({ text }) {
-  return String(text || "").split(/(\*\*[^*]+\*\*)/g).map((part, index) => part.startsWith("**") && part.endsWith("**")
-    ? <strong key={`${part}-${index}`}>{part.slice(2, -2)}</strong>
-    : part);
-}
-
 function Brand({ href = "#" }) {
   return (
     <a className="brand" href={href} aria-label="design / daily home">
@@ -315,7 +310,7 @@ function QuestionBlock({ question, isOpen, isSaved, onToggle, onSave }) {
       }}>
         <h2><button type="button" onClick={onToggle}>{question.question}</button></h2>
         <p className="answer-label">Why it matters</p>
-        <p className="answer-line">{question.answer}</p>
+        <p className="answer-line"><HighlightedText text={question.answer} as="em" /></p>
         <div className="question-actions">
           <button className="disclosure-button" type="button" aria-expanded={isOpen} aria-controls={`${question.slug}-details`} onClick={onToggle}><CaretDown size={16} /> Signals &amp; Sources <span>{question.counts.total}</span></button>
         </div>

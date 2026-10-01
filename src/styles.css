@@ -187,7 +187,7 @@ em { font-style: italic; }
 .question-copy h2 button:hover { color: var(--sage); }
 .answer-label { width: max-content; margin: 16px 0 0; padding: 0; color: var(--coral-text); background: transparent; font-family: var(--font-interface); font-size: var(--t-label); line-height: 1.35; }
 .answer-line { max-width: 580px; margin: 5px 0 0; color: var(--text-muted); font-family: var(--font-editorial); font-size: var(--t-answer); line-height: 1.38; }
-.answer-line em { color: var(--paper); }
+.answer-line em, .detail-answer-copy em { color: var(--coral-text); font-style: italic; font-weight: 400; }
 .question-actions { display: flex; align-items: center; gap: 22px; margin-top: 14px; }
 .disclosure-button { min-height: 44px; display: inline-flex; align-items: center; gap: 7px; padding: 0 4px; border: 0; border-bottom: 1px solid var(--sage); color: var(--sage); background: transparent; cursor: pointer; font-family: var(--font-interface); font-size: var(--t-label); font-weight: 600; }
 .disclosure-button > span { margin-left: 5px; color: var(--text-muted); }

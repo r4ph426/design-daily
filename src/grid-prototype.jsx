@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { BookmarkSimple, CaretDown, Clock } from "@phosphor-icons/react";
 import { ArticleIntake } from "./App.jsx";
 import { AiLensBadge } from "./AiLensBadge.jsx";
@@ -8,6 +8,8 @@ import { validateEditionTaxonomy } from "./taxonomy.js";
 import { normalizeArchiveDays } from "./archive.jsx";
 import { PrototypeArchive, PrototypeToolbox } from "./grid-prototype-routes.jsx";
 import { editorialHref, publishedHref } from "./editorial-routes.js";
+import { useSquarePanelRows } from "./useSquarePanelRows.js";
+import { HighlightedText } from "./HighlightedText.jsx";
 
 const editorialTitles = {
   "if-ai-is-doing-the-first-pass-what-evidence-do-designers-now-owe": <>A first pass needs <em>proof.</em></>,
@@ -37,12 +39,6 @@ function sourceDomain(signal) {
   catch { return signal.source || "Source"; }
 }
 
-function highlighted(text) {
-  return String(text || "").split(/(\*\*[^*]+\*\*)/g).map((part, index) => part.startsWith("**") && part.endsWith("**")
-    ? <strong key={`${part}-${index}`}>{part.slice(2, -2)}</strong>
-    : part);
-}
-
 function prototypeRoute() {
   const hash = window.location.hash;
   const [path, query = ""] = hash.replace(/^#\/?/, "").split("?");
@@ -62,8 +58,8 @@ function SignalDetails({ question }) {
         <tbody>{question.signals.map((signal, index) => (
           <tr key={`${question.id}-${index}`}>
             <td data-label="Source"><a className="signal-source-title" href={signal.url} target="_blank" rel="noopener noreferrer">{signal.title} <span aria-hidden="true">↗</span></a><span className="signal-publisher">{signal.source}</span><span className="signal-source-meta">{signal.kind} · {signal.timing}</span></td>
-            <td data-label="What happened"><div className="signal-copy">{highlighted(signal.happened)}</div></td>
-            <td data-label="What changes"><div className="signal-copy">{highlighted(signal.changes)}</div></td>
+            <td data-label="What happened"><div className="signal-copy"><HighlightedText text={signal.happened} /></div></td>
+            <td data-label="What changes"><div className="signal-copy"><HighlightedText text={signal.changes} /></div></td>
             <td data-label="Verdict"><span className={signal.verdict === "Must read" ? "must-read" : ""}>{signal.verdict}</span></td>
           </tr>
         ))}</tbody>
@@ -89,7 +85,7 @@ function EditorialSpread({ question, editorialTitle, isOpen, isSaved, onToggle, 
         <p className="section-kicker">The question</p>
         <h3>{question.question}</h3>
         <p className="section-kicker why-label">Why it matters</p>
-        <p className="answer-copy">{question.answer}</p>
+        <p className="answer-copy"><HighlightedText text={question.answer} as="em" /></p>
         <button className="signals-disclosure" type="button" aria-expanded={isOpen} aria-controls={detailId} onClick={onToggle}><CaretDown size={16} aria-hidden="true" /> {isOpen ? "Close sources" : "Open sources"} <span>{question.counts?.total || question.signals.length}</span></button>
       </div>
       <div className="practice-panel content-panel"><p className="section-kicker">Editorial context</p><p>{question.why}</p><small>First seen {String(question.firstSeen || "").replace(/\bcet\b/i, "CET")}</small></div>
@@ -108,6 +104,21 @@ function EditorialSpread({ question, editorialTitle, isOpen, isSaved, onToggle, 
 function readSavedQuestions() {
   try { return JSON.parse(localStorage.getItem("design-daily-question-bookmarks-v1") || "{}"); }
   catch { return {}; }
+}
+
+function TodayOpening({ edition, questions, headline, summary }) {
+  const openingRef = useRef(null);
+  useSquarePanelRows(openingRef, ".question-index-content", "--index-rows", 2);
+  useSquarePanelRows(openingRef, ".intake-cell > .article-panel", "--intake-rows", 2);
+
+  return <section ref={openingRef} className="opening" id="today" aria-label="Today’s edition overview">
+    <div className="opening-copy content-panel"><p className="eyebrow">Today <span>·</span> {questions.length} questions worth asking</p><h1>{headline}</h1></div>
+    <div className="opening-summary content-panel"><p>{summary}</p><div className="crawl-line"><span><Clock size={15} aria-hidden="true" /> Last crawl {crawlDay(edition.date)} · {edition.crawlCompletedAt}</span><small>{edition.sourceCount} total sources · {edition.webSourceCount} web sources · {edition.teamContributionCount} team links</small></div></div>
+    <div className="intake-cell content-panel"><ArticleIntake /></div>
+    <aside className="question-index content-panel" aria-label="Today’s four questions"><div className="question-index-content"><p className="section-kicker">The questions</p><ol>{questions.map((question, index) => (
+      <li key={question.id}><span className="question-number">Q{index + 1}</span><span className="question-entry"><a href={`#prototype-question-${question.id}`}>{question.question}<span aria-hidden="true">&nbsp;↘</span></a><small>{[question.category, ...(question.tags || []).filter((tag) => tag !== question.category)].join(" · ")}</small></span></li>
+    ))}</ol><p className="index-note">Edition {edition.editionNumber} · {formatDate(edition.date)}</p></div></aside>
+  </section>;
 }
 
 export function GridPrototype() {
@@ -183,14 +194,7 @@ export function GridPrototype() {
           {route.name === "archive" && <PrototypeArchive records={archiveRecords} ready={archiveReady} bookmarks={savedQuestions} onBookmark={(key) => setSavedQuestions((state) => ({ ...state, [key]: !state[key] }))} initialCategory={route.category} />}
           {route.name === "toolbox" && <PrototypeToolbox />}
           {route.name === "today" && <>
-          <section className="opening" id="today" aria-label="Today’s edition overview">
-            <div className="opening-copy content-panel"><p className="eyebrow">Today <span>·</span> {questions.length} questions worth asking</p><h1>{headline}</h1></div>
-            <div className="opening-summary content-panel"><p>{summary}</p><div className="crawl-line"><span><Clock size={15} aria-hidden="true" /> Last crawl {crawlDay(edition.date)} · {edition.crawlCompletedAt}</span><small>{edition.sourceCount} total sources · {edition.webSourceCount} web sources · {edition.teamContributionCount} team links</small></div></div>
-            <div className="intake-cell content-panel"><ArticleIntake /></div>
-            <aside className="question-index content-panel" aria-label="Today’s four questions"><p className="section-kicker">The questions</p><ol>{questions.map((question, index) => (
-              <li key={question.id}><span className="question-number">Q{index + 1}</span><span className="question-entry"><a href={`#prototype-question-${question.id}`}>{question.question}<span aria-hidden="true">&nbsp;↘</span></a><small>{[question.category, ...(question.tags || []).filter((tag) => tag !== question.category)].join(" · ")}</small></span></li>
-            ))}</ol><p className="index-note">Edition {edition.editionNumber} · {formatDate(edition.date)}</p></aside>
-          </section>
+          <TodayOpening edition={edition} questions={questions} headline={headline} summary={summary} />
 
           {questions.map((question) => {
             const savedKey = `${edition.date}:${question.slug}`;
