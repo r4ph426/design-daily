@@ -2,6 +2,39 @@
 
 final result: passed
 
+## Publication approval
+
+The user approved pushing the reviewed combined Archive to main. The regular `#/archive` entry now renders the shared opening and reading desk, and `#/questions/...` stays in the Grid layout and opens that reader. Existing identifiers and both opt-in review modes remain available.
+
+- Regular-route desktop capture: `artifacts/archive-flow/published-archive-reader.jpg`, 1280 × 988, UX filtered, question 015/02. Start here category links open the correct index and selecting a result uses the regular shareable question URL; the reader starts at 115.75px.
+- A fresh regular question URL loaded at 390 × 844 with the opening hidden, reader top at 107.75px and no document horizontal overflow (`published-archive-mobile.jpg`). Back to results restored the combined Archive with the UX URL filter. Privacy navigation still opens the dedicated Privacy surface.
+- The reader now synchronizes its breakpoint state when attaching the media-query listener, covering viewport changes during initial loading.
+- Production build, all 26 tests and Sites packaging checks are verified before the publishing commit. The prior main state is tagged so the Archive promotion can be reverted as one commit.
+
+## Latest opening annotations
+
+All three browser comments are addressed in the shared Archive/Toolbox styles. This supersedes the earlier preserved opening-to-Start here separation; the separate blank module before Question index remains.
+
+- Removed the Archive Start here top margin. At 1280px, the opening-to-Start here gap changes from 160px to 0px and the combined index starts at 1555px instead of 1715px. The four path cards and all following content move up exactly one square row.
+- The intrinsic-height measurement's `flex-shrink: 0` made orientation copy 402.75px wide inside a 318.5px panel. Explicit `width: 100%` now bounds both Archive and Toolbox paragraphs to the available content width, while keeping the existing 35ch maximum. At 1280px they measure 276.27px, including neither padding nor neighboring panels, and wrap naturally.
+- Desktop evidence: `artifacts/archive-flow/opening-annotations-before.jpg`, `opening-annotations-archive-fixed.jpg`, and `opening-annotations-toolbox-fixed.jpg`. Visually inspected both corrected openings: no text paints into the question-count or contribution panels; shared header, raster strokes and typography remain consistent.
+- At 834px tablet and 390px mobile, both paragraphs stay completely within their panel bounds and the document has no horizontal overflow. The Archive separation remains 0px. Responsive captures: `opening-annotations-archive-834.jpg`, `opening-annotations-toolbox-834.jpg`, `opening-annotations-archive-390.jpg`, and `opening-annotations-toolbox-390.jpg`; tablet Archive and mobile Toolbox were visually inspected.
+- Production build and whitespace checks passed. No additional tests were added for these two reversible CSS changes. The combined local Archive remains available for review; no publication was performed.
+
+## Latest combined Archive review, 1 October 2026
+
+The user requested the current live opening from screenshot 1 followed by the approved reading desk replacing the old Question index from screenshot 2. Local review URL: `http://localhost:5181/grid-prototype.html?reading=combined#/archive`. The main Archive still uses its original lower index; this turn does not publish the combined composition.
+
+- Both supplied screenshots were inspected. The upper source is the existing live-route markup, now shared through `ArchiveEditorialOpening`. At 1280 × 988 CSS pixels, the original and combined opening both measure 480px; Start here measures 800px and ends at 1555px; the index starts at 1715px after the preserved 160px blank module.
+- Matched full-page captures: `artifacts/archive-flow/combined-before-full.jpg` (main Archive before extraction) and `combined-after-full.jpg` (combined prototype). Their upper 1280 × 1555 regions were placed together in `combined-opening-comparison.jpg` and visually inspected. Only an 8 × 8 arrow antialiasing region differs; all upper layout, copy, typography and raster geometry are preserved.
+- Reader anatomy remains the selected Option 2 direction recorded below. Final desktop evidence: `combined-desktop-final.jpg`, 1280 × 988, All filter, question 015/01, reader at top. The compact index and full reader use the same typography, token colors, provenance and controls as the approved standalone desk. The integration deliberately preserves the live editorial opening above them.
+- Start here Process, UX and Culture paths selected their category and revealed the index beneath the header. A fresh direct question load focused its reader heading with index top 115.5px. A full-row coordinate click at (100, 760) switched from 015/01 to 015/02. Browser Back returned to results and restored the originating question-link focus. Search, categories, skill/date controls and URL state reuse the existing reading-desk implementation.
+- Tablet 834 × 1112: `combined-tablet-reader.jpg` and `combined-tablet-results.jpg`. Selecting a question hides the opening and index while the reader fills the field. Return restores the upper Archive and the original result link; no document horizontal overflow.
+- Mobile 390 × 844: `combined-mobile-reader.jpg` and `combined-mobile-results.jpg`. Reader begins at 107.75px beneath the shared header with no extra gap or horizontal document overflow. Back restored the Culture results and the originating link at 330px in the viewport. Category filters retain their horizontal scrolling and 44px controls.
+- Additional 768 × 1024 tablet and 320 × 740 mobile checks passed: reader and results use the intended single-view layout without horizontal document overflow. Temporary viewport overrides were reset before opening the review for the user.
+- A P1 found during verification was corrected: a fresh shared question could retain an unrelated document scroll position. Initial filtered and question URLs now jump after fonts and square-row measurements settle. Returning from tablet/mobile similarly waits for the opening's layout to settle before restoring the saved position.
+- Production build passed; all 26 tests passed; Sites packaging checks passed 4/4. Browser console had no errors or warnings. No remaining actionable P0/P1/P2 findings.
+
 ## Latest annotation fix: entire result row is a link
 
 The user's second browser annotation requires the complete question row to switch questions. A stretched native title link now covers the row's number, metadata and padding; the separate bookmark is layered above it. No visual geometry changed. Keyboard focus outlines the entire row in the existing yellow token.

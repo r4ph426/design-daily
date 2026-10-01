@@ -12,7 +12,8 @@ import { useSquareLayouts } from "./useSquareLayouts.js";
 import { HighlightedText } from "./HighlightedText.jsx";
 import { ArchiveReadingDesk } from "./ArchiveReadingDesk.jsx";
 
-const readingDesk = window.location.pathname.endsWith("grid-prototype.html") && new URLSearchParams(window.location.search).get("reading") === "desk";
+const readingMode = window.location.pathname.endsWith("grid-prototype.html") ? new URLSearchParams(window.location.search).get("reading") : "combined";
+const readingDesk = ["desk", "combined"].includes(readingMode);
 
 const editorialTitles = {
   "if-ai-is-doing-the-first-pass-what-evidence-do-designers-now-owe": <>A first pass needs <em>proof.</em></>,
@@ -195,12 +196,17 @@ export function GridPrototype() {
         event.preventDefault();
         const target = document.querySelector("#desk-question-title") || document.querySelector("#prototype-archive-index");
         target?.focus({ preventScroll: true });
+        if (readingMode === "combined") {
+          const desk = document.querySelector("#prototype-archive-index");
+          const headerHeight = document.querySelector(".prototype-header")?.getBoundingClientRect().height || 0;
+          window.scrollTo({ top: Math.max(0, desk.getBoundingClientRect().top + window.scrollY - headerHeight), behavior: "instant" });
+        }
       } : undefined}>Skip to main content</a>
       <GridHeader date={edition.date} route={route.name} />
       <main className="grid-prototype" aria-label={`design / daily ${route.name}`}>
         <div className="grid-content">
           {route.name === "archive" && (readingDesk
-            ? <ArchiveReadingDesk records={archiveRecords} ready={archiveReady} bookmarks={savedQuestions} onBookmark={(key) => setSavedQuestions((state) => ({ ...state, [key]: !state[key] }))} />
+            ? <ArchiveReadingDesk records={archiveRecords} ready={archiveReady} bookmarks={savedQuestions} onBookmark={(key) => setSavedQuestions((state) => ({ ...state, [key]: !state[key] }))} withEditorialOpening={readingMode === "combined"} />
             : <PrototypeArchive records={archiveRecords} ready={archiveReady} bookmarks={savedQuestions} onBookmark={(key) => setSavedQuestions((state) => ({ ...state, [key]: !state[key] }))} initialCategory={route.category} />)}
           {route.name === "toolbox" && <PrototypeToolbox />}
           {route.name === "today" && <>

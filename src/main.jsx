@@ -8,7 +8,7 @@ import squareStyles from "./square-layouts.css?inline";
 
 function usesGridLayout() {
   const path = window.location.hash.replace(/^#\/?/, "").split("?")[0];
-  return !path || path === "archive" || path === "toolbox" || !window.location.hash.startsWith("#/");
+  return !path || path === "archive" || path === "toolbox" || path.startsWith("questions/") || !window.location.hash.startsWith("#/");
 }
 
 function PublishedSite() {

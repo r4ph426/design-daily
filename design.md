@@ -226,3 +226,13 @@ At 721px through 1200px, selecting a question switches to a full-width reader wi
 The mock establishes the layout and anatomy. Real edition text, dates, save counts, and the shared source metadata take precedence over generated sample content. Keep the established 11px type floor, 44px controls, and neutral metadata; do not copy the mock's fabricated result count or duplicate Copy link action. The reading desk remains a separate opt-in prototype.
 
 The complete result row is the question link's pointer target, including the number, date, source/save metadata, and padding. Keep one semantic title link as its keyboard entry and use a yellow outline around the complete row when that link receives keyboard focus. The personal bookmark sits above the link hit area and remains independently operable. The user authorized pushing the prototype and annotation fixes to `main` on 1 October 2026; the default main Archive retains its existing entry until promotion is requested.
+
+### Combined Archive review
+
+`grid-prototype.html?reading=combined#/archive` combines the live Archive opening with the reading desk. The upper opening, question count and four Start here paths reuse `ArchiveEditorialOpening` without changing their content, typography, geometry, or intrinsic square-row sizing. Preserve the empty module before the new Question index. Only the lower retrieval controls and results are replaced by the compact three-module index and four-module reader.
+
+The subsequent annotation review removes the empty module between the opening and Start here, moving all following Archive content up one square row. Keep the blank module before the Question index. In Archive and Toolbox, constrain orientation paragraphs to the panel's available content width with a 35ch maximum, so text wraps inside its own surface instead of extending into the count or contribution panel.
+
+Start here links clear previous retrieval filters, select the corresponding category, and reveal the index beneath the shared header. Direct question links open the reader at the index. At tablet and mobile widths, the opening and results disappear while reading; Back to results restores the complete combined archive and its previous results position and keyboard focus. Keep both existing review modes and the current main Archive available. This combined composition is a local review prototype pending the user's later publishing decision.
+
+The user approved publication after the annotation fixes on 1 October 2026. The regular `#/archive` route now uses the combined composition, and `#/questions/...` opens the same reader with the existing shareable identifiers. Privacy retains its dedicated route. The opt-in standalone and combined review URLs remain available.

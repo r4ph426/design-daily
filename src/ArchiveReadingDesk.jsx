@@ -4,6 +4,7 @@ import { AiLensBadge } from "./AiLensBadge.jsx";
 import { HighlightedText } from "./HighlightedText.jsx";
 import { RECENT_POPULARITY, SKILL_LABELS } from "./archive.jsx";
 import { archiveReadingWindow, OLDER_QUESTION_BATCH } from "./archive-reading-window.js";
+import { ArchiveEditorialOpening } from "./ArchiveEditorialOpening.jsx";
 import "./archive-reading-desk.css";
 
 const categories = ["UI", "UX", "Process", "Culture"];
@@ -47,7 +48,7 @@ function sourceDomain(signal) {
   catch { return signal.source; }
 }
 
-export function ArchiveReadingDesk({ records, ready, bookmarks, onBookmark }) {
+export function ArchiveReadingDesk({ records, ready, bookmarks, onBookmark, withEditorialOpening = false }) {
   const [route, setRoute] = useState(readLocation);
   const [copied, setCopied] = useState("");
   const [copyError, setCopyError] = useState(false);
@@ -60,6 +61,8 @@ export function ArchiveReadingDesk({ records, ready, bookmarks, onBookmark }) {
   const previousSelection = useRef(null);
   const copyTimer = useRef(null);
   const loadMoreRef = useRef(null);
+  const pendingIndexJump = useRef(withEditorialOpening && Boolean(route.dateISO || route.query || route.category !== "All" || route.mustRead || route.skill !== "All skills" || route.date !== "any"));
+  const pendingRestore = useRef(false);
   const [olderCount, setOlderCount] = useState(0);
   const [narrow, setNarrow] = useState(() => window.matchMedia("(max-width: 1200px)").matches);
   const previousNarrow = useRef(narrow);
@@ -67,6 +70,21 @@ export function ArchiveReadingDesk({ records, ready, bookmarks, onBookmark }) {
   const selected = records.find((record) => record.key === selectedKey);
   const reading = Boolean(selectedKey);
   const QuestionHeading = narrow ? "h1" : "h2";
+  const IndexHeading = withEditorialOpening ? "h2" : "h1";
+
+  function indexPageTop() {
+    if (!deskRef.current) return 0;
+    const inset = parseFloat(getComputedStyle(deskRef.current).getPropertyValue("--grid-inset")) || 0;
+    return Math.max(0, deskRef.current.getBoundingClientRect().top + window.scrollY - headerHeight - inset);
+  }
+
+  function keepReaderVisible() {
+    if (!deskRef.current) return;
+    const end = deskRef.current.getBoundingClientRect().bottom + window.scrollY;
+    const minTop = withEditorialOpening ? indexPageTop() : 0;
+    const maxTop = Math.max(minTop, end - window.innerHeight);
+    if (window.scrollY < minTop || window.scrollY > maxTop) window.scrollTo({ top: Math.min(maxTop, Math.max(minTop, window.scrollY)), behavior: "instant" });
+  }
 
   useEffect(() => {
     const update = () => setRoute(readLocation());
@@ -74,6 +92,7 @@ export function ArchiveReadingDesk({ records, ready, bookmarks, onBookmark }) {
     const media = window.matchMedia("(max-width: 1200px)");
     const resize = () => setNarrow(media.matches);
     media.addEventListener("change", resize);
+    resize();
     const header = document.querySelector(".prototype-header");
     const observer = new ResizeObserver(() => setHeaderHeight(header?.getBoundingClientRect().height || 115));
     if (header) observer.observe(header);
@@ -96,23 +115,54 @@ export function ArchiveReadingDesk({ records, ready, bookmarks, onBookmark }) {
       if (previous !== selectedKey || previousNarrow.current !== narrow) {
         readerRef.current?.scrollTo({ top: 0, behavior: "instant" });
         if (narrow || previousNarrow.current !== narrow) window.scrollTo({ top: 0, behavior: "instant" });
-        else if (deskRef.current) {
-          const end = deskRef.current.getBoundingClientRect().bottom + window.scrollY;
-          const maxTop = Math.max(0, end - window.innerHeight);
-          if (window.scrollY > maxTop) window.scrollTo({ top: maxTop, behavior: "instant" });
-        }
+        else keepReaderVisible();
         titleRef.current?.focus({ preventScroll: true });
       }
     } else if (previous && !reading) {
+      if (withEditorialOpening) {
+        if (origin.current) pendingRestore.current = true;
+        else pendingIndexJump.current = true;
+      }
       if (listRef.current && origin.current) listRef.current.scrollTop = origin.current.listTop;
       if (origin.current || narrow) window.scrollTo({ top: origin.current?.pageTop || 0, behavior: "instant" });
       const link = origin.current?.link;
       if (link?.isConnected) link.focus({ preventScroll: true });
-      else deskRef.current?.querySelector("input")?.focus({ preventScroll: true });
+      else {
+        if (withEditorialOpening) window.scrollTo({ top: indexPageTop(), behavior: "instant" });
+        deskRef.current?.querySelector("input")?.focus({ preventScroll: true });
+      }
     }
     if (selected || !reading) previousSelection.current = selectedKey;
     previousNarrow.current = narrow;
-  }, [reading, selected, selectedKey, narrow]);
+  }, [reading, selected, selectedKey, narrow, withEditorialOpening]);
+
+  // Wait for shared square-row sizing and fonts before jumping from an editorial path
+  // or loading a directly shared question below the preserved opening.
+  useEffect(() => {
+    if (!withEditorialOpening || (!pendingRestore.current && !pendingIndexJump.current && !(reading && selected && !narrow))) return;
+    let cancelled = false;
+    let frame;
+    let finalFrame;
+    document.fonts.ready.then(() => {
+      if (cancelled) return;
+      frame = requestAnimationFrame(() => {
+        finalFrame = requestAnimationFrame(() => {
+          if (cancelled) return;
+          if (pendingRestore.current && origin.current) {
+            pendingRestore.current = false;
+            window.scrollTo({ top: origin.current.pageTop, behavior: "instant" });
+            origin.current.link?.focus({ preventScroll: true });
+          } else if (pendingIndexJump.current) {
+            pendingIndexJump.current = false;
+            window.scrollTo({ top: indexPageTop(), behavior: "instant" });
+            if (reading) titleRef.current?.focus({ preventScroll: true });
+            else deskRef.current?.querySelector("input")?.focus({ preventScroll: true });
+          } else keepReaderVisible();
+        });
+      });
+    });
+    return () => { cancelled = true; cancelAnimationFrame(frame); cancelAnimationFrame(finalFrame); };
+  }, [route, selected, narrow, withEditorialOpening, headerHeight]);
 
   const filtered = useMemo(() => {
     const needle = route.query.trim().toLowerCase();
@@ -161,6 +211,17 @@ export function ArchiveReadingDesk({ records, ready, bookmarks, onBookmark }) {
     setRoute(next);
   }
 
+  function explorePath(event, category) {
+    if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    const next = { ...route, category, dateISO: null, slug: null, query: "", mustRead: false, skill: "All skills", date: "any" };
+    origin.current = null;
+    pendingRestore.current = false;
+    pendingIndexJump.current = true;
+    window.location.hash = hashFor(next, null);
+    setRoute(next);
+  }
+
   function openQuestion(event, record, fromList = false) {
     if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
     event.preventDefault();
@@ -201,11 +262,12 @@ export function ArchiveReadingDesk({ records, ready, bookmarks, onBookmark }) {
     } catch { setCopyError(true); }
   }
 
-  return (
-    <section ref={deskRef} id="prototype-archive-index" tabIndex={-1} className={`reading-desk ${reading ? "is-reading" : ""}`} style={{ "--reading-header-height": `${headerHeight}px` }} aria-label="Question archive reading desk">
+  return (<>
+    {withEditorialOpening && <div className="prototype-route prototype-archive desk-editorial-opening" hidden={narrow && reading}><ArchiveEditorialOpening records={records} onExplore={explorePath} /></div>}
+    <section ref={deskRef} id="prototype-archive-index" tabIndex={-1} className={`reading-desk ${reading ? "is-reading" : ""} ${withEditorialOpening ? "is-integrated" : ""}`} style={{ "--reading-header-height": `${headerHeight}px` }} aria-label="Question archive reading desk">
       <div className="desk-list" hidden={narrow && reading}>
         <header className="desk-index-heading">
-          <p className="eyebrow">Dense index</p><h1>Question index</h1>
+          <p className="eyebrow">Dense index</p><IndexHeading>Question index</IndexHeading>
           <p className="desk-index-intro">Find a question. Read the evidence.</p>
         </header>
         <div className="desk-filters">
@@ -271,5 +333,5 @@ export function ArchiveReadingDesk({ records, ready, bookmarks, onBookmark }) {
         </div> : <div className="desk-reader-empty"><p className="eyebrow">Question archive</p><h2 id="desk-reader-message">{reading ? ready ? "This question could not be found." : "Loading this question…" : "Choose a question to read."}</h2><p>{reading ? ready ? "Return to the results to explore another question." : "Fetching its edition and sources." : "Your results stay here while you read the answer and inspect its sources."}</p></div>}
       </section>
     </section>
-  );
+  </>);
 }
