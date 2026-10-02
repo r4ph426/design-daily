@@ -50,9 +50,27 @@ export function useSquareLayouts(rootRef) {
       if (disposed) return;
       const mobile = window.matchMedia("(max-width: 720px)").matches;
       if (mobile) {
-        root.querySelectorAll("[data-square-measured]").forEach((element) => {
-          for (const property of [...element.style]) if (property.startsWith("--fit-")) element.style.removeProperty(property);
-        });
+        const module = shell.getBoundingClientRect().width / 8;
+        if (!module) return;
+        const panels = [...root.querySelectorAll(".content-panel, .signal-details, .desk-index-heading, .desk-filters, .desk-result, .desk-pagination, .desk-empty, .privacy-hero > *, .privacy-index-rail, .privacy-section")]
+          .filter((panel) => panel.getClientRects().length && !panel.closest(".prototype-tool-row, .prototype-archive-row"));
+        panels.push(...root.querySelectorAll(".prototype-tool-row, .prototype-archive-row"));
+        const next = new Set([shell]);
+        for (const panel of panels) {
+          next.add(panel);
+          [...panel.children].forEach((child) => next.add(child));
+          // A component owns an inset on each side of its allocated square rows.
+          const inset = panel.matches(".privacy-section, .prototype-tool-row, .prototype-archive-row") ? number(getComputedStyle(shell).getPropertyValue("--grid-inset")) * 2 : 0;
+          const intrinsic = panel.matches(".prototype-tool-row")
+            ? Math.max(contentHeight(panel.children[0]), contentHeight(panel.children[1])) + contentHeight(panel.children[2]) + contentHeight(panel.children[3])
+            : panel.matches(".prototype-archive-row")
+              ? Math.max(contentHeight(panel.children[0]), contentHeight(panel.children[1])) + contentHeight(panel.children[2])
+              : contentHeight(panel);
+          write(panel, "--fit-mobile-rows", Math.max(1, Math.ceil((intrinsic + inset) / module)));
+          panel.dataset.squareMeasured = "";
+        }
+        for (const element of observed) if (!next.has(element)) { resize.unobserve(element); observed.delete(element); }
+        for (const element of next) if (!observed.has(element)) { resize.observe(element); observed.add(element); }
         return;
       }
       const module = shell.getBoundingClientRect().width / 8;
@@ -139,7 +157,7 @@ export function useSquareLayouts(rootRef) {
     const schedule = () => { cancelAnimationFrame(frame); frame = requestAnimationFrame(snap); };
     const resize = new ResizeObserver(schedule);
     const mutations = new MutationObserver(schedule);
-    mutations.observe(root, { subtree: true, childList: true, characterData: true, attributes: true, attributeFilter: ["hidden"] });
+    mutations.observe(root, { subtree: true, childList: true, characterData: true, attributes: true, attributeFilter: ["hidden", "open"] });
     window.addEventListener("resize", schedule);
     document.fonts.addEventListener("loadingdone", schedule);
     snap();

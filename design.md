@@ -236,3 +236,15 @@ The subsequent annotation review removes the empty module between the opening an
 Start here links clear previous retrieval filters, select the corresponding category, and reveal the index beneath the shared header. Direct question links open the reader at the index. At tablet and mobile widths, the opening and results disappear while reading; Back to results restores the complete combined archive and its previous results position and keyboard focus. Keep both existing review modes and the current main Archive available. This combined composition is a local review prototype pending the user's later publishing decision.
 
 The user approved publication after the annotation fixes on 1 October 2026. The regular `#/archive` route now uses the combined composition, and `#/questions/...` opens the same reader with the existing shareable identifiers. Privacy retains its dedicated route. The opt-in standalone and combined review URLs remain available.
+
+### Mobile revision · 2 October 2026
+
+The mobile field uses eight smaller squares across the viewport. Seven squares carry content; half squares frame the sides and the top/bottom. Panels retain the shared 0.75px inset and their intrinsic heights snap to whole rows, including expanded content. The footer shares the same module width and draws its own rules.
+
+Use a fluid mobile type scale: 32–48px opening titles, 18–23px questions, 17–20px reading copy, and an 11px metadata floor. Static text is paper on forest, ink on white, or coral emphasis. Sage belongs to interactive states, not static reading copy.
+
+Mobile Archive presents eight questions per page, explicit Previous/Next actions, full-history search, and a direct Find a question jump from the opening. One question expands inline with its answer and source provenance. Extended signal notes open separately. Shareable question URLs, independent bookmarks, list context, and keyboard focus survive opening and closing. The desktop and tablet reader remain unchanged. This revision is under local review.
+
+On mobile, Today's Article intake follows all four complete question sections, before the shared footer. Its DOM order follows the same reading and keyboard sequence; desktop and tablet retain the opening placement. Mobile Archive column layouts preserve both row inset margins without collapsing them, keeping the results, pagination, and footer aligned to the shared square field.
+
+The user approved publication of this reviewed mobile revision, including the footer alignment and intake placement fixes, on 2 October 2026. It applies to the regular routes and the shared prototype entry.

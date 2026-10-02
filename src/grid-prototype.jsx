@@ -113,11 +113,15 @@ function readSavedQuestions() {
   catch { return {}; }
 }
 
-function TodayOpening({ edition, questions, headline, summary }) {
+function TodayIntake() {
+  return <div className="intake-cell content-panel"><ArticleIntake /></div>;
+}
+
+function TodayOpening({ edition, questions, headline, summary, mobile }) {
   return <section className="opening" id="today" aria-label="Today’s edition overview">
     <div className="opening-copy content-panel"><p className="eyebrow">Today <span>·</span> {questions.length} questions worth asking</p><h1>{headline}</h1></div>
     <div className="opening-summary content-panel"><p>{summary}</p><div className="crawl-line"><span><Clock size={15} aria-hidden="true" /> Last crawl {crawlDay(edition.date)} · {edition.crawlCompletedAt}</span><small>{edition.sourceCount} total sources · {edition.webSourceCount} web sources · {edition.teamContributionCount} team links</small></div></div>
-    <div className="intake-cell content-panel"><ArticleIntake /></div>
+    {!mobile && <TodayIntake />}
     <aside className="question-index content-panel" aria-label="Today’s four questions"><div className="question-index-content"><p className="section-kicker">The questions</p><ol>{questions.map((question, index) => (
       <li key={question.id}><span className="question-number">Q{index + 1}</span><span className="question-entry"><a href={`#prototype-question-${question.id}`}>{question.question}<span aria-hidden="true">&nbsp;↘</span></a><small>{[question.category, ...(question.tags || []).filter((tag) => tag !== question.category)].join(" · ")}</small></span></li>
     ))}</ol><p className="index-note">Edition {edition.editionNumber} · {formatDate(edition.date)}</p></div></aside>
@@ -134,6 +138,15 @@ export function GridPrototype() {
   const [route, setRoute] = useState(prototypeRoute);
   const [archiveEditions, setArchiveEditions] = useState([]);
   const [archiveReady, setArchiveReady] = useState(false);
+  const [mobile, setMobile] = useState(() => window.matchMedia("(max-width: 720px)").matches);
+
+  useEffect(() => {
+    const query = window.matchMedia("(max-width: 720px)");
+    const update = () => setMobile(query.matches);
+    query.addEventListener("change", update);
+    update();
+    return () => query.removeEventListener("change", update);
+  }, []);
 
   useEffect(() => {
     const light = route.name === "toolbox";
@@ -210,13 +223,14 @@ export function GridPrototype() {
             : <PrototypeArchive records={archiveRecords} ready={archiveReady} bookmarks={savedQuestions} onBookmark={(key) => setSavedQuestions((state) => ({ ...state, [key]: !state[key] }))} initialCategory={route.category} />)}
           {route.name === "toolbox" && <PrototypeToolbox />}
           {route.name === "today" && <>
-          <TodayOpening edition={edition} questions={questions} headline={headline} summary={summary} />
+          <TodayOpening edition={edition} questions={questions} headline={headline} summary={summary} mobile={mobile} />
 
           {questions.map((question) => {
             const savedKey = `${edition.date}:${question.slug}`;
             const editorialTitle = question.editorialTitle || editorialTitles[question.slug] || question.question;
             return <EditorialSpread key={question.id} question={question} editorialTitle={editorialTitle} isOpen={Boolean(openQuestions[question.id])} isSaved={Boolean(savedQuestions[savedKey])} onToggle={() => setOpenQuestions((state) => ({ ...state, [question.id]: !state[question.id] }))} onSave={() => setSavedQuestions((state) => ({ ...state, [savedKey]: !state[savedKey] }))} />;
           })}
+          {mobile && <section className="today-contribution" aria-label="Contribute an article"><TodayIntake /></section>}
           </>}
 
           <SiteFooter theme={route.name === "toolbox" ? "light" : "forest"} privacyHref={publishedHref("/privacy")} />

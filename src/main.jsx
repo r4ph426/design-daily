@@ -4,6 +4,7 @@ import { App } from "./App.jsx";
 import { GridPrototype } from "./grid-prototype.jsx";
 import appStyles from "./styles.css?inline";
 import gridStyles from "./grid-prototype.css?inline";
+import mobileStyles from "./mobile-grid.css?inline";
 import squareStyles from "./square-layouts.css?inline";
 
 function usesGridLayout() {
@@ -21,7 +22,7 @@ function PublishedSite() {
     return () => window.removeEventListener("hashchange", update);
   }, []);
 
-  return <><style>{(grid ? gridStyles : appStyles) + squareStyles}</style>{grid ? <GridPrototype /> : <App />}</>;
+  return <><style>{(grid ? gridStyles : appStyles) + squareStyles + mobileStyles}</style>{grid ? <GridPrototype /> : <App />}</>;
 }
 
 createRoot(document.getElementById("root")).render(

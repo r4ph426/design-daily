@@ -4,3 +4,5 @@ import "./grid-prototype.css";
 import "./square-layouts.css";
 
 createRoot(document.getElementById("grid-prototype-root")).render(<GridPrototype />);
+
+import "./mobile-grid.css";

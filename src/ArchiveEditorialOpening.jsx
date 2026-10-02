@@ -11,7 +11,11 @@ export function ArchiveEditorialOpening({ records, onExplore }) {
   return <>
     <section className="prototype-archive-opening module-layout" aria-labelledby="prototype-archive-title">
       <div className="prototype-archive-title content-panel"><p className="eyebrow">Question archive</p><h1 id="prototype-archive-title">Questions worth <em>returning to.</em></h1></div>
-      <div className="prototype-archive-orientation content-panel"><p>Find a question you remember, or follow an editorial path into the ideas shaping design practice.</p></div>
+      <div className="prototype-archive-orientation content-panel"><p>Find a question you remember, or follow an editorial path into the ideas shaping design practice.</p><button className="mobile-index-jump" type="button" onClick={() => {
+        const index = document.querySelector("#prototype-archive-index");
+        index?.scrollIntoView({ block: "start", behavior: "instant" });
+        index?.querySelector("input")?.focus({ preventScroll: true });
+      }}>Find a question <span aria-hidden="true">↓</span></button></div>
       <div className="prototype-archive-count content-panel"><span>{records.length}</span><p>Questions across {new Set(records.map((record) => record.editionNumber)).size} weekday editions</p><small>Popular ranks all-time team saves. Popular recently reflects distinct saves in the last 30 days.</small></div>
     </section>
     <section className="prototype-start module-layout" aria-labelledby="prototype-start-title">
