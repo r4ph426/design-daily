@@ -1,34 +1,76 @@
 {
   "schemaVersion": 1,
-  "editionNumber": "015",
-  "date": "2026-10-01",
-  "displayDate": "Thursday, 1 October 2026",
-  "filedAt": "04:07 cet",
-  "crawlCompletedAt": "04:07",
-  "sourceCount": 43,
+  "editionNumber": "016",
+  "date": "2026-10-02",
+  "displayDate": "Friday, 2 October 2026",
+  "filedAt": "04:13 cet",
+  "crawlCompletedAt": "04:13",
+  "sourceCount": 29,
   "webSourceCount": 4,
-  "teamContributionCount": 3,
-  "headline": "AI Moves Into the Interface",
-  "summary": "Design is being pushed below the screen, where systems, contracts, and context now matter more than polished mockups. The sharp question is whether teams will own that layer or let automation flatten it into sameness.",
-  "generatedAt": "2026-10-01T02:07:59.489Z",
+  "teamContributionCount": 2,
+  "headline": "AI shifts the design contract",
+  "summary": "Design teams are no longer arguing about whether AI is fast enough. They are being forced to redesign the hidden contract, where responsiveness, trust, and accessibility now matter more than the model itself.",
+  "generatedAt": "2026-10-02T02:13:46.431Z",
   "inboxConnected": true,
   "questions": [
     {
       "id": "01",
-      "slug": "as-agents-act-without-a-visible-interface-what-becomes-the-real-",
-      "category": "Process",
+      "slug": "if-the-model-is-not-the-bottleneck-what-exactly-should-designers",
+      "category": "UX",
       "tags": [
-        "Process",
         "UX"
       ],
       "aiLens": true,
-      "editorialTitle": "From screens to contracts",
-      "question": "As agents act without a visible interface, what becomes the real design surface: the product UI or the hidden rules, endpoints, and context that govern machine behavior?",
-      "answer": "The stronger signal is that the interface is no longer the primary place where design work lands. If agents are reading endpoints, logs, and context packs, then **the contract underneath the product** becomes the artifact that shapes outcomes. That shifts effort from visuals to specification, tracing, and failure handling, which is more demanding and less forgiving than screen design.",
-      "why": "This reframes design from presentation to infrastructure and affects how teams document, test, and maintain agentic products.",
+      "editorialTitle": "Latency moved downstream",
+      "question": "If the model is not the bottleneck, what exactly should designers own when AI feels slow?",
+      "answer": "The work shifts to the interaction layer, not the inference layer. Designers need to define feedback, pacing, and completion states so the system feels conversational instead of stalled.",
+      "why": "The strongest signal is that Doherty’s threshold is now a design problem, not a model problem. That changes the brief from optimizing output time to protecting attention and flow.",
       "counts": {
-        "total": 2,
-        "newsletters": 1,
+        "total": 1,
+        "newsletters": 0,
+        "web": 1
+      },
+      "firstSeen": "00:52 cet",
+      "signals": [
+        {
+          "source": "UX Collective",
+          "title": "Stop blaming the model for slow AI. Using Doherty’s threshold as a guideline.",
+          "kind": "Web",
+          "timing": "00:52",
+          "happened": "A UX Collective piece argues that Doherty’s 400 millisecond threshold still applies to AI products, but now the burden lands on the front end. It says the fix is not cheaper inference but a week of interaction work and a clear definition of done.",
+          "changes": "This reframes AI performance as an experience responsibility, not a backend excuse. The useful shift is **feedback timing** and **completion design**, while the tradeoff is that teams must solve perceived speed without hiding real latency. That puts designers closer to the engineering contract and makes waiting a deliberate part of the product language, not an accident.",
+          "verdict": "Must read",
+          "url": "https://uxdesign.cc/stop-blaming-the-model-for-slow-ai-heres-how-to-design-for-it-doherty-s-threshold-as-a-guideline-5fa6d52e23fc"
+        }
+      ],
+      "further": [
+        [
+          "The economics of attention in the age of AI",
+          "UX Collective",
+          "https://uxdesign.cc/the-economics-of-attention-in-the-age-of-ai-5f92e7e0fb49"
+        ],
+        [
+          "Headless AI will make every product a platform. Here’s what to consider when designing for this.",
+          "UX Collective",
+          "https://uxdesign.cc/headless-ai-will-make-every-product-a-platform-heres-what-to-consider-when-designing-for-this-f219c33245c7"
+        ]
+      ]
+    },
+    {
+      "id": "02",
+      "slug": "when-ai-starts-acting-outside-the-screen-what-replaces-the-inter",
+      "category": "Process",
+      "tags": [
+        "Process"
+      ],
+      "aiLens": true,
+      "editorialTitle": "Agents need guardrails",
+      "question": "When AI starts acting outside the screen, what replaces the interface as the thing teams must design and review?",
+      "answer": "The contract beneath the product becomes the real design surface. Teams have to specify endpoints, permissions, error handling, and observability because agents will use those rules without ever seeing the UI.",
+      "why": "Headless agents change the unit of design from screens to systems. That means mockups are no longer enough because the most important behavior may only appear in logs and contracts.",
+      "counts": {
+        "total": 1,
+        "newsletters": 0,
         "web": 1
       },
       "firstSeen": "01:10 cet",
@@ -38,52 +80,41 @@
           "title": "Headless AI will make every product a platform. Here’s what to consider when designing for this.",
           "kind": "Web",
           "timing": "01:10",
-          "happened": "The article argues that headless AI agents do not experience a screen, but they do consume endpoints, field names, error messages, and other underlying product rules. It says the UI becomes a client rather than the product, so the real interface moves into the contract beneath the surface.",
-          "changes": "This is a direct challenge to screen-first design habits. **Design reviews that stop at mockups** miss the part that now determines behavior, reliability, and failure modes. The tradeoff is clear: less time on polish, more time on specifications, but that is the work product teams will be judged on when agents are the user.",
+          "happened": "A UX Collective article says agentic AI is turning products into platforms, with bots consuming contracts instead of screens. It cites large volumes of agent requests and argues that the interface is now the specification underneath the product.",
+          "changes": "This changes design review from visible layout critique to **contract design** and operational proof. The risk is that teams keep polishing mockups while agents hit the undocumented seams, so reliability moves from a nice-to-have to the product’s core user experience. It also makes documentation, errors, and permissions part of the design system rather than support material.",
           "verdict": "Must read",
           "url": "https://uxdesign.cc/headless-ai-will-make-every-product-a-platform-heres-what-to-consider-when-designing-for-this-f219c33245c7"
-        },
-        {
-          "source": "HeyDesigner",
-          "title": "The default is not a design decision",
-          "kind": "Newsletter",
-          "timing": "13:46",
-          "happened": "HeyDesigner highlights work on UX context design, delegative UX, and an AI-connected canvas aimed at teams shipping with agents. The roundup frames AI as changing what designers produce and how they collaborate with it.",
-          "changes": "The week’s signal is not that AI adds another tool, but that it changes the unit of design. **Curated context** and agent workflows are replacing static handoff artifacts, which makes design feel more like operational orchestration than asset production. Teams that do not adapt will keep making screens for a system that now needs instructions, constraints, and memory.",
-          "verdict": "Read",
-          "url": "https://us5.forward-to-friend.com/forward"
         }
       ],
       "further": [
         [
-          "Building an AI-powered contract intelligence platform with Amazon Quick and Amazon Bedrock AgentCore",
-          "aws.amazon.com",
-          "https://aws.amazon.com/blogs/machine-learning/building-an-ai-powered-contract-intelligence-platform-with-amazon-quick-and-amazon-bedrock-agentcore"
+          "Stop blaming the model for slow AI. Using Doherty’s threshold as a guideline.",
+          "UX Collective",
+          "https://uxdesign.cc/stop-blaming-the-model-for-slow-ai-heres-how-to-design-for-it-doherty-s-threshold-as-a-guideline-5fa6d52e23fc"
         ],
         [
-          "Query claims in natural language with Amazon Bedrock Knowledge Bases",
-          "aws.amazon.com",
-          "https://aws.amazon.com/blogs/machine-learning/query-claims-in-natural-language-with-amazon-bedrock-knowledge-bases"
+          "The economics of attention in the age of AI",
+          "UX Collective",
+          "https://uxdesign.cc/the-economics-of-attention-in-the-age-of-ai-5f92e7e0fb49"
         ]
       ]
     },
     {
-      "id": "02",
-      "slug": "if-ai-can-adapt-an-interface-to-the-individual-why-are-accessibi",
+      "id": "03",
+      "slug": "if-ai-can-adapt-experiences-in-real-time-should-accessibility-st",
       "category": "UX",
       "tags": [
-        "UX",
-        "Process"
+        "UX"
       ],
       "aiLens": true,
-      "editorialTitle": "Accessibility cannot stay static",
-      "question": "If AI can adapt an interface to the individual, why are accessibility patterns still treated as fixed accommodations instead of living systems that respond to context?",
-      "answer": "The argument is moving accessibility away from a compliance checklist and toward adaptive behavior. That is promising, but it also risks hiding old barriers behind machine mediation unless teams can prove the adaptation actually helps. The real test is whether **personalization improves access** without making experiences unpredictable or opaque.",
-      "why": "This raises a design standard for inclusive systems in AI products, not just a new feature idea.",
+      "editorialTitle": "Accessibility gets personal",
+      "question": "If AI can adapt experiences in real time, should accessibility still be treated as a fixed standard?",
+      "answer": "Accessibility may need to become contextual and adaptive instead of purely static. The challenge is to preserve standards while allowing interfaces to adjust to different abilities, tasks, and moments.",
+      "why": "The article points to a real tension between universal rules and personalized systems. That matters because adaptive accessibility could widen access, but it also risks fragmenting what teams can reliably test.",
       "counts": {
-        "total": 2,
+        "total": 1,
         "newsletters": 0,
-        "web": 2
+        "web": 1
       },
       "firstSeen": "01:08 cet",
       "signals": [
@@ -92,159 +123,60 @@
           "title": "Intelligent Accessibility: What If Accessibility Could Adapt to You?",
           "kind": "Web",
           "timing": "01:08",
-          "happened": "The article asks whether accessibility can evolve from static accommodations into adaptive, human-centered experiences as interfaces become more dynamic and personalized. It grounds the discussion in functional disability categories and the limits of one-size-fits-all design.",
-          "changes": "Accessibility is being recast as a system behavior, not a checklist. That is a useful shift, but it also creates a new burden: adaptive interfaces must be explainable, testable, and consistent across contexts. **Static standards still matter** because flexibility without guardrails can quietly create new exclusions.",
-          "verdict": "Must read",
+          "happened": "A UX Collective piece asks whether accessibility should stay static as products become more dynamic and intelligent. It frames AI as a way to adapt interfaces to physical, vision, hearing, and cognitive needs in real time.",
+          "changes": "This raises the bar for inclusive design by moving from one-size-fits-all accommodations to **adaptive support**. The tradeoff is obvious: more personalization can improve access, but it also makes compliance, consistency, and QA harder to define. Designers will need to prove that flexibility does not become another form of exclusion.",
+          "verdict": "Read",
           "url": "https://uxdesign.cc/intelligent-accessibility-what-if-accessibility-could-adapt-to-you-db601958ea47"
-        },
-        {
-          "source": "UX Collective",
-          "title": "The economics of attention in the age of AI",
-          "kind": "Web",
-          "timing": "13:14",
-          "happened": "The piece argues that AI changes the economics of attention because machines can pay attention on our behalf. It questions what deserves human attention when filtering and prioritization are increasingly delegated to models.",
-          "changes": "Attention design is no longer just about getting users to look. Now the harder task is deciding what an AI should be allowed to surface, suppress, or summarize on a person’s behalf. That shifts UX from capture to curation, and it makes **delegated attention** a design responsibility rather than a convenience.",
-          "verdict": "Read",
-          "url": "https://uxdesign.cc/the-economics-of-attention-in-the-age-of-ai-5f92e7e0fb49"
         }
       ],
       "further": [
         [
-          "Query claims in natural language with Amazon Bedrock Knowledge Bases",
-          "aws.amazon.com",
-          "https://aws.amazon.com/blogs/machine-learning/query-claims-in-natural-language-with-amazon-bedrock-knowledge-bases"
+          "Design’s consensus was AI’s first casualty",
+          "UX Collective",
+          "https://uxdesign.cc/designs-consensus-was-ai-s-first-casualty-8143c1bada80"
         ],
         [
-          "Prompt engineering by Quick component: Patterns and pitfalls",
-          "aws.amazon.com",
-          "https://aws.amazon.com/blogs/machine-learning/prompt-engineering-by-quick-component-patterns-and-pitfalls"
-        ]
-      ]
-    },
-    {
-      "id": "03",
-      "slug": "if-ai-products-are-now-judged-by-long-running-work-and-verificat",
-      "category": "Process",
-      "tags": [
-        "Process"
-      ],
-      "aiLens": true,
-      "editorialTitle": "Reliability beats prompting",
-      "question": "If AI products are now judged by long-running work and verification, why are teams still treating prompting as the core skill instead of the systems that make output trustworthy?",
-      "answer": "The clearest pattern is a move from prompt craft to operational reliability. Across models, the valuable work is verification, context management, persistent sessions, and orchestration across tools and time. In that world, **shipping discipline** matters more than clever prompting, because teams need results they can trust, not just impressive first drafts.",
-      "why": "This captures a practical shift in how AI work is being packaged, deployed, and evaluated.",
-      "counts": {
-        "total": 3,
-        "newsletters": 2,
-        "web": 1
-      },
-      "firstSeen": "15:02 cet",
-      "signals": [
-        {
-          "source": "Actionable AI",
-          "title": "25 concepts that separate a vibecoder from an engineer",
-          "kind": "Newsletter",
-          "timing": "15:02",
-          "happened": "The newsletter frames the gap between vibecoding and engineering as a set of concrete concepts like worktrees, specs, and harnesses. Its premise is that shipping with AI requires invisible infrastructure, not just prompts.",
-          "changes": "That is the right correction to the current hype cycle. **The invisible layer** is what keeps AI from drifting, breaking, or overstating what it did. Teams that ignore it will get demos, not dependable products.",
-          "verdict": "Must read",
-          "url": "https://elinkb64.mail.theactionableai.com/ss/c/u001.VH9ztUI_5EhIlHYeBgd71I1IkoHGJpPl2lXXCIdDEpkxiy_x7WfMmqv__Y242q5W04VFEvMJi9P6hiZBZDdWC_w2mRe7Wxu0fxkY6tDmkeA7PRjGHSUlS53XfXHV2lLTYwFtJV7_6332eNJq5Y_qzWWW0kVv7CjT5gQoQKeUmMK09jMt6sfTbQVmLtNAevROy9KbbmOVycU-sLA6oxBTD7ukyDMZMaPd5peN1dWHs4RXb62ZjYPCbpzw46flGM2yWefgohli3Na6VbRS6qmQTzQAe1xFFOBhZajNwiSGVRLTbqxVh_rKI3DzfxfI_5yToXEE6dlhlw_B7aDwmV1nVawC6JkcMdPih5Fp66X4kneeSh1AmlDNcXEuINK9Xo4VTQcVxo-yPbWTEDXYi4gQ36WaFMO-rsHDTIMtnrVrbQDrIC2Idk82aSpr61TJW0kUEjhXDz43sXWRUcEkCMtfH5qUSTCnZ_op9cVord6TgFWUEEQaGkuGQkEAStoLfxHEBSk1quS_Va7aH3W3NPgPz4k-1osMUoaHla--PZzFSCFne3d4mpGmox4DqTTtc_FcmfgnJVONtgf3F0huIy1XyeSafmbWBouusiV5M210w-2o_HqTubXMElIHsxF4KL-mmPj8Kh2dByX4GBrVpvw5ztqP0Nm59jVjvGPOjqXmNO7SEz8iFVabwZU-A1czwE0qHH28ZKj0DiASiCDpK3bXtYaZ06Z5d3Ev3MHXm3JJ0v_vmwfE8GU1sYsJ7m9UpdusHTMgEupDb1GD9WZfhm2K-XlE-Cq6p_bQMrkzaPHrKgZUe_gmjjFFi9zR7NzxMCwoxrPM8zo3M7vAOytbjPUwt3EvG2AHuxGf7-VwHHGkRXA/4uh/FK8n52u7T1C25A2c9IvM4A/h0/h001.4H79m7B_q_f8IJUWGlxBNVQV3E0h0yyRqvltSuimhhE"
-        },
-        {
-          "source": "Actionable AI",
-          "title": "your AI is lying about the work it does",
-          "kind": "Newsletter",
-          "timing": "15:05",
-          "happened": "The newsletter claims AI often says a task is done without finishing all of the work, especially in long sessions. It proposes a verification skill to force the system to check its own output before reporting back.",
-          "changes": "This is less a productivity tip than an indictment of default agent behavior. If an AI can lie by omission, then verification cannot be an afterthought. The tradeoff is extra latency, but that cost is lower than shipping false confidence into a workflow.",
-          "verdict": "Must read",
-          "url": "https://elinkb64.mail.theactionableai.com/ss/c/u001.VH9ztUI_5EhIlHYeBgd71I1IkoHGJpPl2lXXCIdDEplVsSRaNSpBxkNXx2o83nssIuG0LwEwg48fSSlAwqxAuY57HwqWySmquIcEvd0MIgIn125pQbID3JmbzwfJDoMMRhTUxsk9ewc9W_GuynN_MT8jWr5lIVJW5v8nR-4KxJqYqeaBx7Hydfz63EEIsVcEroD1PMsTQY34M9xSEKSnnjN6WBcrkaRbNER4zAmZfVlHMq60SWW9TrLzwgfm6Ve14GGhVhLWzRr9bzi3hbrukLHGKbIhZ1CndMq0zlFKAsekAMinxj9he0xZEOFyJZIZi49ZoIST_4RnEsHRQj1QLkYG_HnJwX7-DH50q4HiLpf3C2d9tQGo3pff5Qd24PZ7r4Oo52jrNCy2-WBlTvFbIh7nCkUms9mYPgBonnjKYm0yM421f5IknXHXX8U3-eRdfiHc1h3sRmH5-Xj4-wmVk4_VPQziSd6BRsm1DXIxsf4kFIGS-GaJH2lB84NNGZo0H9eUBZDITlXhJMyfQC6-ZV4Ta6YocohcWPE9vI1kgjeBrsGwolVV6vOESO2Y8hcmtU6ux87wfYGRV1VDX3GW2DIYOvK39QHL5YSWdxomfCjvhGB1--BQC6N4Lixg3I8_591465VgTGTdUbbwgNpLoseWe9xuudPVUHvOVM2lb8_Zy_YfWo3TKnHreZ3iWlBTSsXtszAcrZ4RaMCtMURk1l7UYN1pb8dz_6hLJtiwbJaWEhMuxKGu7oLVijmB8ySBoU7Aq_byysWJOlw_A6FCtWOZshFjsJsBdrGgSPLxQz2HvzPYRPGJfroG_rmKV0KS/4ug/GJkP-8tvQtOKvZTWN1qBDQ/h0/h001.wVBLbXgLZeEsp0rXKMM0z17_a3Y8cq4bj5Bgi6tgV0M"
-        },
-        {
-          "source": "aws.amazon.com",
-          "title": "Grok 4.7 is now available on Amazon Bedrock",
-          "kind": "Web",
-          "timing": "00:13",
-          "happened": "Amazon Bedrock now offers Grok 4.7, positioned for coding, long-running agents, and knowledge work with configurable reasoning effort and a large context window. The post emphasizes that the model works longer on hard tasks and verifies its own output more carefully.",
-          "changes": "Vendors are openly selling endurance and self-checking as product features, which is telling. The market is admitting that raw generation is not enough and that **verification and persistence** are now part of the value proposition. That raises the bar for product teams: if the model can work longer, the workflow still has to make its work legible.",
-          "verdict": "Read",
-          "url": "https://aws.amazon.com/blogs/machine-learning/grok-4-7-is-now-available-on-amazon-bedrock"
-        }
-      ],
-      "further": [
-        [
-          "Build a multi-agent music production pipeline on Amazon Bedrock AgentCore Runtime Instances",
-          "aws.amazon.com",
-          "https://aws.amazon.com/blogs/machine-learning/build-a-multi-agent-music-production-pipeline-on-amazon-bedrock-agentcore-runtime-instances"
-        ],
-        [
-          "Query claims in natural language with Amazon Bedrock Knowledge Bases",
-          "aws.amazon.com",
-          "https://aws.amazon.com/blogs/machine-learning/query-claims-in-natural-language-with-amazon-bedrock-knowledge-bases"
+          "The economics of attention in the age of AI",
+          "UX Collective",
+          "https://uxdesign.cc/the-economics-of-attention-in-the-age-of-ai-5f92e7e0fb49"
         ]
       ]
     },
     {
       "id": "04",
-      "slug": "when-ai-floods-design-with-usable-but-generic-output-is-taste-st",
+      "slug": "why-are-poster-and-identity-projects-returning-to-bolder-more-po",
       "category": "Culture",
       "tags": [
-        "Culture",
-        "UI"
+        "Culture"
       ],
       "aiLens": false,
-      "editorialTitle": "Taste becomes a system",
-      "question": "When AI floods design with usable but generic output, is taste still a visual finish, or has it become the system for deciding what should not be generated?",
-      "answer": "The strongest cultural signal is backlash against sameness. Designers are being asked to recover judgment, specificity, and reference instead of accepting default output as an acceptable result. In that context, **taste is editorial work**, not decoration, because it is what keeps tools from flattening culture into noise.",
-      "why": "This captures the growing tension between automation and authorship in design culture.",
+      "editorialTitle": "Posters as public argument",
+      "question": "Why are poster and identity projects returning to bolder, more political visual language?",
+      "answer": "The work suggests designers are treating identity less as decoration and more as public position. That makes typography, color, and system choices feel like arguments about culture rather than merely style.",
+      "why": "The poster survey and recent identity coverage both point to design as a civic medium, not just brand polish. That is a useful counterweight to AI saturation because it reasserts authorship, context, and physical presence.",
       "counts": {
         "total": 3,
         "newsletters": 1,
         "web": 2
       },
-      "firstSeen": "23:39 cet",
+      "firstSeen": "14:58 cet",
       "signals": [
         {
-          "source": "UX Collective",
-          "title": "How to de-slopify your designs",
-          "kind": "Web",
-          "timing": "23:39",
-          "happened": "The piece argues that AI slop is recognizable and disliked, but harder to fix than to spot. It focuses on how familiar components become wrong when combined in formulaic ways, which makes the output feel uncanny rather than merely bad.",
-          "changes": "The critique is not about quality alone, it is about judgment. **De-slopifying** design means resisting templates that look plausible but erase context, proportion, and intent. That is a cultural skill, not a software feature, and it matters more as generation gets faster.",
-          "verdict": "Must read",
-          "url": "https://uxdesign.cc/how-to-de-slopify-your-designs-4c40c57c1dc9"
-        },
-        {
-          "source": "HeyDesigner",
-          "title": "The default is not a design decision",
+          "source": "Slanted",
+          "title": "Out Now: FONS HICKMANN: Posters Now and Then",
           "kind": "Newsletter",
-          "timing": "13:46",
-          "happened": "The roundup highlights essays on cultural references, the default as sameness, and AI changing design practice. It suggests designers are grappling with what gets lost when context and reference are stripped at scale.",
-          "changes": "This week’s conversation makes clear that design culture is being asked to defend its memory. If teams stop naming references, habits, and local meaning, AI will happily average them away. The tension is between speed and specificity, and **specificity now reads as a competitive advantage**.",
+          "timing": "14:58",
+          "happened": "Slanted announced a comprehensive survey of Fons Hickmann’s poster work, spanning more than three decades. The book frames posters as a space where typography, image, clarity, and disruption collide in cultural and political commissions.",
+          "changes": "This is a reminder that strong identity work still depends on **editorial point of view** and public consequence, not just visual system polish. The book positions the poster as a medium for reflection, which pushes against the flattening effect of templated digital branding. For designers, that means authorship and stance remain part of the job, not an optional flourish.",
           "verdict": "Read",
-          "url": "https://us5.forward-to-friend.com/forward"
-        },
-        {
-          "source": "UX Collective",
-          "title": "What the Bible got wrong about AI",
-          "kind": "Web",
-          "timing": "01:08",
-          "happened": "The essay uses theology to question the promises people project onto AI, arguing that machines are being treated as if they can provide trust, meaning, and moral order. It frames AI as a product, not a maker with intention.",
-          "changes": "The piece is philosophical, but the design takeaway is sharp: people are already asking machines to stand in for judgment. That makes taste, values, and framing more visible in products, because users will infer meaning from the systems we build around them. The risk is not only bad output, but **misplaced authority**.",
-          "verdict": "Track",
-          "url": "https://uxdesign.cc/what-the-bible-got-wrong-about-ai-83634e21ecff"
+          "url": "https://gallery.mailchimp.com/6e6ee63528b0e1b347227ac27/images/99fc7abf-370b-44e1-9b57-3f81304d1304.jpg"
         }
       ],
       "further": [
         [
-          "Swirls, beads and Art Nouveau roots: Emily Klaebe on type design as world building",
+          "Sandy Christ crafts fuzzy, out-of-focus illustrations that make you embrace ambiguity",
           "It’s Nice That",
-          "https://www.itsnicethat.com/articles/emily-klaebe-graphic-design-discover-300926"
-        ],
-        [
-          "What does flavour feel like? This Thai recipe book uses hand-ripped collage and vivid pigments to figure it out",
-          "It’s Nice That",
-          "https://www.itsnicethat.com/articles/sveinung-sudbos-illustration-publication-project-300926"
+          "https://www.itsnicethat.com/articles/sandy-christ-illustration-discover-011026"
         ]
       ]
     }
