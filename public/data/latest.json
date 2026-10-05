@@ -1,182 +1,200 @@
 {
   "schemaVersion": 1,
-  "editionNumber": "016",
-  "date": "2026-10-02",
-  "displayDate": "Friday, 2 October 2026",
-  "filedAt": "04:13 cet",
-  "crawlCompletedAt": "04:13",
-  "sourceCount": 29,
+  "editionNumber": "017",
+  "date": "2026-10-05",
+  "displayDate": "Monday, 5 October 2026",
+  "filedAt": "03:58 cet",
+  "crawlCompletedAt": "03:58",
+  "sourceCount": 6,
   "webSourceCount": 4,
-  "teamContributionCount": 2,
-  "headline": "AI shifts the design contract",
-  "summary": "Design teams are no longer arguing about whether AI is fast enough. They are being forced to redesign the hidden contract, where responsiveness, trust, and accessibility now matter more than the model itself.",
-  "generatedAt": "2026-10-02T02:13:46.431Z",
+  "teamContributionCount": 1,
+  "headline": "AI rewires design work",
+  "summary": "Design teams are no longer debating whether AI helps. The sharper question is whether it clarifies work, fragments attention, or quietly replaces judgment with convenience.",
+  "generatedAt": "2026-10-05T01:58:17.265Z",
   "inboxConnected": true,
   "questions": [
     {
       "id": "01",
-      "slug": "if-the-model-is-not-the-bottleneck-what-exactly-should-designers",
+      "slug": "what-gives-designers-the-right-to-intervene-on-behalf-of-others-",
       "category": "UX",
       "tags": [
-        "UX"
+        "UX",
+        "Culture"
       ],
       "aiLens": true,
-      "editorialTitle": "Latency moved downstream",
-      "question": "If the model is not the bottleneck, what exactly should designers own when AI feels slow?",
-      "answer": "The work shifts to the interaction layer, not the inference layer. Designers need to define feedback, pacing, and completion states so the system feels conversational instead of stalled.",
-      "why": "The strongest signal is that Doherty’s threshold is now a design problem, not a model problem. That changes the brief from optimizing output time to protecting attention and flow.",
+      "editorialTitle": "Right to intervene",
+      "question": "What gives designers the right to intervene on behalf of others when AI tools make it easier to generate answers faster than they can justify them?",
+      "answer": "The UX field is being pushed to defend its authority, not just its output. As AI lowers the cost of proposing solutions, teams have to prove they can still surface conflict, context, and harm instead of polishing a quick response.",
+      "why": "This matters because speed can disguise overreach. If designers cannot explain their right to intervene, AI becomes a multiplier for shallow certainty rather than a tool for better judgment.",
       "counts": {
-        "total": 1,
+        "total": 2,
         "newsletters": 0,
-        "web": 1
+        "web": 2
       },
-      "firstSeen": "00:52 cet",
+      "firstSeen": "13:09 cet",
       "signals": [
         {
           "source": "UX Collective",
-          "title": "Stop blaming the model for slow AI. Using Doherty’s threshold as a guideline.",
+          "title": "In/tension modeling: what gives us the right?",
           "kind": "Web",
-          "timing": "00:52",
-          "happened": "A UX Collective piece argues that Doherty’s 400 millisecond threshold still applies to AI products, but now the burden lands on the front end. It says the fix is not cheaper inference but a week of interaction work and a clear definition of done.",
-          "changes": "This reframes AI performance as an experience responsibility, not a backend excuse. The useful shift is **feedback timing** and **completion design**, while the tradeoff is that teams must solve perceived speed without hiding real latency. That puts designers closer to the engineering contract and makes waiting a deliberate part of the product language, not an accident.",
+          "timing": "13:09",
+          "happened": "UX Collective frames In/tension modeling as a way to confront the question of who gets to make interventions for others. The piece argues that design work often creates new problems even as it resolves old ones, and that conflicting perspectives deserve equal weight.",
+          "changes": "The practice is shifting from asking how to solve to asking whether solving is legitimate in the first place. That raises the bar for **authority** and makes **conflict** a required input instead of a problem to smooth over.",
           "verdict": "Must read",
-          "url": "https://uxdesign.cc/stop-blaming-the-model-for-slow-ai-heres-how-to-design-for-it-doherty-s-threshold-as-a-guideline-5fa6d52e23fc"
+          "url": "https://uxdesign.cc/in-tension-modeling-what-gives-us-the-right-01740248eb45"
+        },
+        {
+          "source": "UX Collective",
+          "title": "The feed I produce myself",
+          "kind": "Web",
+          "timing": "13:12",
+          "happened": "A UX Collective essay describes a workflow filled with AI agents that keep producing while the author writes. The writer says the constant availability of agents changes focus and makes it feel irresponsible not to use every idle minute.",
+          "changes": "AI is turning design work into a background production system, but that efficiency comes with a cost to whole-picture thinking. The real tradeoff is between **throughput** and the ability to notice when work is becoming fragmented, compulsive, or simply less coherent.",
+          "verdict": "Read",
+          "url": "https://uxdesign.cc/the-feed-i-produce-myself-11e4192f394c"
         }
       ],
       "further": [
         [
-          "The economics of attention in the age of AI",
-          "UX Collective",
-          "https://uxdesign.cc/the-economics-of-attention-in-the-age-of-ai-5f92e7e0fb49"
-        ],
-        [
-          "Headless AI will make every product a platform. Here’s what to consider when designing for this.",
-          "UX Collective",
-          "https://uxdesign.cc/headless-ai-will-make-every-product-a-platform-heres-what-to-consider-when-designing-for-this-f219c33245c7"
+          "Iconiq UI | Design System for Modern Interfaces",
+          "iconiqui.com",
+          "https://iconiqui.com"
         ]
       ]
     },
     {
       "id": "02",
-      "slug": "when-ai-starts-acting-outside-the-screen-what-replaces-the-inter",
+      "slug": "when-file-search-fails-and-ai-finds-the-document-in-seconds-are-",
       "category": "Process",
       "tags": [
-        "Process"
+        "Process",
+        "UX"
       ],
       "aiLens": true,
-      "editorialTitle": "Agents need guardrails",
-      "question": "When AI starts acting outside the screen, what replaces the interface as the thing teams must design and review?",
-      "answer": "The contract beneath the product becomes the real design surface. Teams have to specify endpoints, permissions, error handling, and observability because agents will use those rules without ever seeing the UI.",
-      "why": "Headless agents change the unit of design from screens to systems. That means mockups are no longer enough because the most important behavior may only appear in logs and contracts.",
+      "editorialTitle": "Search beyond folders",
+      "question": "When file search fails and AI finds the document in seconds, are teams fixing discovery or just papering over broken information architecture?",
+      "answer": "AI is exposing how brittle everyday workplace search already is. That makes the process question less about novelty and more about whether teams will repair the underlying retrieval system or keep relying on a smarter rescue layer.",
+      "why": "The editorial tension is between convenience and infrastructure. If AI becomes the only reliable way to find work, the process itself is already failing.",
       "counts": {
         "total": 1,
-        "newsletters": 0,
-        "web": 1
+        "newsletters": 1,
+        "web": 0
       },
-      "firstSeen": "01:10 cet",
+      "firstSeen": "15:01 cet",
       "signals": [
         {
-          "source": "UX Collective",
-          "title": "Headless AI will make every product a platform. Here’s what to consider when designing for this.",
-          "kind": "Web",
-          "timing": "01:10",
-          "happened": "A UX Collective article says agentic AI is turning products into platforms, with bots consuming contracts instead of screens. It cites large volumes of agent requests and argues that the interface is now the specification underneath the product.",
-          "changes": "This changes design review from visible layout critique to **contract design** and operational proof. The risk is that teams keep polishing mockups while agents hit the undocumented seams, so reliability moves from a nice-to-have to the product’s core user experience. It also makes documentation, errors, and permissions part of the design system rather than support material.",
+          "source": "Actionable AI",
+          "title": "stop digging for files",
+          "kind": "Newsletter",
+          "timing": "15:01",
+          "happened": "A newsletter argues that Finder often misses files and that Claude Code or Codex can locate them quickly from the terminal. The writer says AI found multiple copies of a document that search claimed did not exist, pointing to a brittle indexing system.",
+          "changes": "This is not just a smarter search trick. It is evidence that teams are tolerating **broken retrieval** and then celebrating AI as the fix, even when the underlying process still wastes time and trust.",
           "verdict": "Must read",
-          "url": "https://uxdesign.cc/headless-ai-will-make-every-product-a-platform-heres-what-to-consider-when-designing-for-this-f219c33245c7"
+          "url": "https://elinkb64.mail.theactionableai.com/ss/c/u001.VH9ztUI_5EhIlHYeBgd71I1IkoHGJpPl2lXXCIdDEpnuMP_tULjhLPaxeSLI_5YvV1cVvG7c21w7bnbmXGGb-rzpbcH5GDBesr2aq-8KB3oGAqJTgSZUKgCbKrYds63cCl7J2dCnfaEybKprzEReTiBQHqNbFMXJBpA5gX8Q5NjOGWG4R5g8Pe8P-uHDV1BMj-JkNt5KvuJAXbO0Sg4VoUcaO_dQ0ZG1zYm8BQfUCDwNyZDVRRQsbUjqF2qzREwB56YFnJvsMMA16aWIZPN8sDpIKRfmmi1Srt_AWqe7hC7j__QbL97Umx_pjkb3OJt5bPT_l099Bc9RkcV8iDf_bLivm9MfT7F-RJG80SQKw0rHxYQ9ReBUI-yuzmD3X2Gp1L6gz2D-rNHsBKBy1Md_n2WXloZ1KzHjGcG46k1IM6Eq1y8lvWGccYDK9vYlFn73xJPh_oB9zEQPULS5sIlMSRUJM3S5oYBIzMMJtW_6E8tvsji55wxjZn6x4erT3fycdPe9TuOTV97TBVWX_kvKutRVFeEcIXHIt6XidcciyHkbvVCo40wAXcFP-Wt_JR9OBoZAkRmjJbt1j0kOem0dx1874cGwQvh01gx0Z7sFa5mRXzOSwh1YmOsxJEnTdbXcU9yIKY1KrrI3T94Z_qlLAyFRUVYLByoP-qryoJSChWGlenZmAYwdFSqM14PHEXKJx1P7RHNA-G5MXCUWUB-EW4ks-zEwdK40HfhTm3HLjKjdd7tzokP4vH-o9uhEOK1SmG7I4mWIPdxOjPTciWHGfvLRBggwytdi59eNPZU1cPDm7ZP-S49OtTFrJA-jEq-kEh8uaxMwtgExa_6WCY3MU4o8uvalneFrKWYTWW0rzDQ/4ul/RWmz4CUzTXSak4YCsRMKxA/h0/h001.8ukowUWdCB4V8yP29CyBLvopgpGoLsl4jWeCT7GNMv8"
         }
       ],
       "further": [
         [
-          "Stop blaming the model for slow AI. Using Doherty’s threshold as a guideline.",
-          "UX Collective",
-          "https://uxdesign.cc/stop-blaming-the-model-for-slow-ai-heres-how-to-design-for-it-doherty-s-threshold-as-a-guideline-5fa6d52e23fc"
+          "Iconiq UI | Design System for Modern Interfaces",
+          "iconiqui.com",
+          "https://iconiqui.com"
         ],
         [
-          "The economics of attention in the age of AI",
-          "UX Collective",
-          "https://uxdesign.cc/the-economics-of-attention-in-the-age-of-ai-5f92e7e0fb49"
+          "time with people",
+          "Actionable AI",
+          "https://elinkb64.mail.theactionableai.com/ss/c/u001.VH9ztUI_5EhIlHYeBgd71I1IkoHGJpPl2lXXCIdDEpkgv2hJX1NCLXFVBGoSWBIe5pFzwqCNxPWVcj8dSd42oS8FfRpkWzduBggmyLcYQuSNwHJRMHVty__cNwRg2S15DGlwnUB12i8D77PsbxZjdbFRBUpWMi6j-iUOJLpmjrmSg087dteC6HFrp6dpuXyMLf0wkkXw4HEoiPfZyG0OCv6v3ClQ2eyFb6Q9LzuCUFLZ4DmaIwsBlm2tbUwIsVuiwPCTQxpJf5Fs9sYjMiIr4eQN0fpGw0UJdJIR4oYEPTHgqNsN3yY0aqIkTRLlePR5rbLfdC6F979eponrrAVZiTELgXa4EEGKeVIBzMuDZRfrgoM1FUHnJQqk0b5Y5-OJgdT9X_TTKxsgu0ILcdbtts2gXMu-OcLBR3yrQE0lgwdghdkYhC3pOEsIzOXwL8VnZDf4fKrFzW_XPb5oSJFDgdQGqmgZiCB6ul_AhJyth0gPH9HuLM-je-jmDEbc98L5S6eJc9a3VPL3tuyLyCnCjxOv3ACvjTWIbW5E_Z07qLyj0uhgFKCKN39emwMlXAW8sGvxEgCNGQnKNrc_UOgfCuqgcYGhNd9jiHaMbm97gxaLzN9V2BZkjqGmwha8i41R3C_WzOqWTGPGT-qoL_V1Cwj5LcaEIeN6YxUJpdMQqxNnk6qJh0QoN88mnMI97j171d5b23b5h2RK-ysVGv44FB_AFtnIma7WGhxY6quAvbuU1PZgEjsA0kI1LBL8KWtu_jdt8-uOpC5TFkAK5M5VceKLxpE7guyplxPgskn7oIAaa2cO8A5KMP2OpHxbXeT1c8cN_W1CcNmw4zw_FUfe55uTJCmt03g4hZ4q_0tE1gL45VQYNCa0_81nyz_DnbIZvwB62NPBTOSmmoASWLpPdA/4uk/gKEeJTPkSrOLxesCbq7yyg/h0/h001.-vF33u6nDa3B8FgG96GAc-ZyYL-BkU50l9CvcZ5boB4"
         ]
       ]
     },
     {
       "id": "03",
-      "slug": "if-ai-can-adapt-experiences-in-real-time-should-accessibility-st",
-      "category": "UX",
+      "slug": "if-a-design-system-ships-as-editable-source-instead-of-locked-pa",
+      "category": "UI",
       "tags": [
-        "UX"
+        "UI"
       ],
-      "aiLens": true,
-      "editorialTitle": "Accessibility gets personal",
-      "question": "If AI can adapt experiences in real time, should accessibility still be treated as a fixed standard?",
-      "answer": "Accessibility may need to become contextual and adaptive instead of purely static. The challenge is to preserve standards while allowing interfaces to adjust to different abilities, tasks, and moments.",
-      "why": "The article points to a real tension between universal rules and personalized systems. That matters because adaptive accessibility could widen access, but it also risks fragmenting what teams can reliably test.",
+      "aiLens": false,
+      "editorialTitle": "Editable by default",
+      "question": "If a design system ships as editable source instead of locked patterns, does that make interfaces more adaptable or simply easier to fork and fragment?",
+      "answer": "Open-source component libraries are moving toward source-level editability and motion-first primitives. That gives teams more control, but it also tests whether their UI discipline is strong enough to survive easy modification.",
+      "why": "This matters because the UI stack is becoming more permissive. More editability can accelerate product work, but it can also dilute consistency unless teams actively govern it.",
       "counts": {
         "total": 1,
         "newsletters": 0,
         "web": 1
       },
-      "firstSeen": "01:08 cet",
+      "firstSeen": "03:58 cet",
       "signals": [
         {
-          "source": "UX Collective",
-          "title": "Intelligent Accessibility: What If Accessibility Could Adapt to You?",
+          "source": "iconiqui.com",
+          "title": "Iconiq UI | Design System for Modern Interfaces",
           "kind": "Web",
-          "timing": "01:08",
-          "happened": "A UX Collective piece asks whether accessibility should stay static as products become more dynamic and intelligent. It frames AI as a way to adapt interfaces to physical, vision, hearing, and cognitive needs in real time.",
-          "changes": "This raises the bar for inclusive design by moving from one-size-fits-all accommodations to **adaptive support**. The tradeoff is obvious: more personalization can improve access, but it also makes compliance, consistency, and QA harder to define. Designers will need to prove that flexibility does not become another form of exclusion.",
+          "timing": "03:58",
+          "happened": "Iconiq UI presents itself as an open-source React component library for modern interfaces. It emphasizes motion-powered primitives, shadcn registry installs, and editable source files as the core of the system.",
+          "changes": "The UI conversation is moving toward systems that are **open by construction** instead of sealed design kits. That improves adaptability, but it also shifts the burden of coherence onto the teams using the library rather than the library itself.",
           "verdict": "Read",
-          "url": "https://uxdesign.cc/intelligent-accessibility-what-if-accessibility-could-adapt-to-you-db601958ea47"
+          "url": "https://iconiqui.com"
         }
       ],
       "further": [
         [
-          "Design’s consensus was AI’s first casualty",
+          "In/tension modeling: what gives us the right?",
           "UX Collective",
-          "https://uxdesign.cc/designs-consensus-was-ai-s-first-casualty-8143c1bada80"
-        ],
-        [
-          "The economics of attention in the age of AI",
-          "UX Collective",
-          "https://uxdesign.cc/the-economics-of-attention-in-the-age-of-ai-5f92e7e0fb49"
+          "https://uxdesign.cc/in-tension-modeling-what-gives-us-the-right-01740248eb45"
         ]
       ]
     },
     {
       "id": "04",
-      "slug": "why-are-poster-and-identity-projects-returning-to-bolder-more-po",
+      "slug": "as-ai-makes-solo-production-easier-will-design-culture-invest-mo",
       "category": "Culture",
       "tags": [
-        "Culture"
+        "Culture",
+        "UX"
       ],
-      "aiLens": false,
-      "editorialTitle": "Posters as public argument",
-      "question": "Why are poster and identity projects returning to bolder, more political visual language?",
-      "answer": "The work suggests designers are treating identity less as decoration and more as public position. That makes typography, color, and system choices feel like arguments about culture rather than merely style.",
-      "why": "The poster survey and recent identity coverage both point to design as a civic medium, not just brand polish. That is a useful counterweight to AI saturation because it reasserts authorship, context, and physical presence.",
+      "aiLens": true,
+      "editorialTitle": "People over remote solo",
+      "question": "As AI makes solo production easier, will design culture invest more in collaboration, or will it mistake more output for a healthier team?",
+      "answer": "The strongest signals point to a renewed hunger for shared work, not just distributed productivity. Teams are starting to notice that AI can increase volume while weakening the human contact and judgment that make the work livable.",
+      "why": "This is a culture story because productivity now competes with belonging. If teams optimize only for output, they risk building isolated designers with more tools and less support.",
       "counts": {
-        "total": 3,
+        "total": 2,
         "newsletters": 1,
-        "web": 2
+        "web": 1
       },
-      "firstSeen": "14:58 cet",
+      "firstSeen": "15:01 cet",
       "signals": [
         {
-          "source": "Slanted",
-          "title": "Out Now: FONS HICKMANN: Posters Now and Then",
+          "source": "Actionable AI",
+          "title": "time with people",
           "kind": "Newsletter",
-          "timing": "14:58",
-          "happened": "Slanted announced a comprehensive survey of Fons Hickmann’s poster work, spanning more than three decades. The book frames posters as a space where typography, image, clarity, and disruption collide in cultural and political commissions.",
-          "changes": "This is a reminder that strong identity work still depends on **editorial point of view** and public consequence, not just visual system polish. The book positions the poster as a medium for reflection, which pushes against the flattening effect of templated digital branding. For designers, that means authorship and stance remain part of the job, not an optional flourish.",
+          "timing": "15:01",
+          "happened": "An Actionable AI newsletter argues that working from home has been sold as freedom while often becoming isolating. The author says building an office and spending time with people improved momentum and made work feel more productive.",
+          "changes": "The culture signal is a backlash against lone productivity as an unquestioned good. Designers are rediscovering that **shared momentum** and informal feedback can matter more than abstract flexibility.",
           "verdict": "Read",
-          "url": "https://gallery.mailchimp.com/6e6ee63528b0e1b347227ac27/images/99fc7abf-370b-44e1-9b57-3f81304d1304.jpg"
+          "url": "https://elinkb64.mail.theactionableai.com/ss/c/u001.VH9ztUI_5EhIlHYeBgd71I1IkoHGJpPl2lXXCIdDEpkgv2hJX1NCLXFVBGoSWBIe5pFzwqCNxPWVcj8dSd42oS8FfRpkWzduBggmyLcYQuSNwHJRMHVty__cNwRg2S15DGlwnUB12i8D77PsbxZjdbFRBUpWMi6j-iUOJLpmjrmSg087dteC6HFrp6dpuXyMLf0wkkXw4HEoiPfZyG0OCv6v3ClQ2eyFb6Q9LzuCUFLZ4DmaIwsBlm2tbUwIsVuiwPCTQxpJf5Fs9sYjMiIr4eQN0fpGw0UJdJIR4oYEPTHgqNsN3yY0aqIkTRLlePR5rbLfdC6F979eponrrAVZiTELgXa4EEGKeVIBzMuDZRfrgoM1FUHnJQqk0b5Y5-OJgdT9X_TTKxsgu0ILcdbtts2gXMu-OcLBR3yrQE0lgwdghdkYhC3pOEsIzOXwL8VnZDf4fKrFzW_XPb5oSJFDgdQGqmgZiCB6ul_AhJyth0gPH9HuLM-je-jmDEbc98L5S6eJc9a3VPL3tuyLyCnCjxOv3ACvjTWIbW5E_Z07qLyj0uhgFKCKN39emwMlXAW8sGvxEgCNGQnKNrc_UOgfCuqgcYGhNd9jiHaMbm97gxaLzN9V2BZkjqGmwha8i41R3C_WzOqWTGPGT-qoL_V1Cwj5LcaEIeN6YxUJpdMQqxNnk6qJh0QoN88mnMI97j171d5b23b5h2RK-ysVGv44FB_AFtnIma7WGhxY6quAvbuU1PZgEjsA0kI1LBL8KWtu_jdt8-uOpC5TFkAK5M5VceKLxpE7guyplxPgskn7oIAaa2cO8A5KMP2OpHxbXeT1c8cN_W1CcNmw4zw_FUfe55uTJCmt03g4hZ4q_0tE1gL45VQYNCa0_81nyz_DnbIZvwB62NPBTOSmmoASWLpPdA/4uk/gKEeJTPkSrOLxesCbq7yyg/h0/h001.-vF33u6nDa3B8FgG96GAc-ZyYL-BkU50l9CvcZ5boB4"
+        },
+        {
+          "source": "UX Collective",
+          "title": "The feed I produce myself",
+          "kind": "Web",
+          "timing": "13:12",
+          "happened": "A UX Collective essay describes the emotional pressure of running multiple AI agents while writing and working. The author suggests that having machines always available creates a constant impulse to keep producing.",
+          "changes": "AI is not only changing output, it is changing the social shape of work by encouraging more isolated, self-optimizing behavior. That makes culture the corrective, because without it the team risks rewarding **endless activity** over meaningful connection.",
+          "verdict": "Track",
+          "url": "https://uxdesign.cc/the-feed-i-produce-myself-11e4192f394c"
         }
       ],
       "further": [
         [
-          "Sandy Christ crafts fuzzy, out-of-focus illustrations that make you embrace ambiguity",
-          "It’s Nice That",
-          "https://www.itsnicethat.com/articles/sandy-christ-illustration-discover-011026"
+          "time with people",
+          "Actionable AI",
+          "https://elinkb64.mail.theactionableai.com/ss/c/u001.VH9ztUI_5EhIlHYeBgd71I1IkoHGJpPl2lXXCIdDEpkgv2hJX1NCLXFVBGoSWBIe5pFzwqCNxPWVcj8dSd42oS8FfRpkWzduBggmyLcYQuSNwHJRMHVty__cNwRg2S15DGlwnUB12i8D77PsbxZjdbFRBUpWMi6j-iUOJLpmjrmSg087dteC6HFrp6dpuXyMLf0wkkXw4HEoiPfZyG0OCv6v3ClQ2eyFb6Q9LzuCUFLZ4DmaIwsBlm2tbUwIsVuiwPCTQxpJf5Fs9sYjMiIr4eQN0fpGw0UJdJIR4oYEPTHgqNsN3yY0aqIkTRLlePR5rbLfdC6F979eponrrAVZiTELgXa4EEGKeVIBzMuDZRfrgoM1FUHnJQqk0b5Y5-OJgdT9X_TTKxsgu0ILcdbtts2gXMu-OcLBR3yrQE0lgwdghdkYhC3pOEsIzOXwL8VnZDf4fKrFzW_XPb5oSJFDgdQGqmgZiCB6ul_AhJyth0gPH9HuLM-je-jmDEbc98L5S6eJc9a3VPL3tuyLyCnCjxOv3ACvjTWIbW5E_Z07qLyj0uhgFKCKN39emwMlXAW8sGvxEgCNGQnKNrc_UOgfCuqgcYGhNd9jiHaMbm97gxaLzN9V2BZkjqGmwha8i41R3C_WzOqWTGPGT-qoL_V1Cwj5LcaEIeN6YxUJpdMQqxNnk6qJh0QoN88mnMI97j171d5b23b5h2RK-ysVGv44FB_AFtnIma7WGhxY6quAvbuU1PZgEjsA0kI1LBL8KWtu_jdt8-uOpC5TFkAK5M5VceKLxpE7guyplxPgskn7oIAaa2cO8A5KMP2OpHxbXeT1c8cN_W1CcNmw4zw_FUfe55uTJCmt03g4hZ4q_0tE1gL45VQYNCa0_81nyz_DnbIZvwB62NPBTOSmmoASWLpPdA/4uk/gKEeJTPkSrOLxesCbq7yyg/h0/h001.-vF33u6nDa3B8FgG96GAc-ZyYL-BkU50l9CvcZ5boB4"
+        ],
+        [
+          "In/tension modeling: what gives us the right?",
+          "UX Collective",
+          "https://uxdesign.cc/in-tension-modeling-what-gives-us-the-right-01740248eb45"
         ]
       ]
     }

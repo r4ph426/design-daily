@@ -1,0 +1,184 @@
+{
+  "schemaVersion": 1,
+  "editionNumber": "016",
+  "date": "2026-10-02",
+  "displayDate": "Friday, 2 October 2026",
+  "filedAt": "04:13 cet",
+  "crawlCompletedAt": "04:13",
+  "sourceCount": 29,
+  "webSourceCount": 4,
+  "teamContributionCount": 2,
+  "headline": "AI shifts the design contract",
+  "summary": "Design teams are no longer arguing about whether AI is fast enough. They are being forced to redesign the hidden contract, where responsiveness, trust, and accessibility now matter more than the model itself.",
+  "generatedAt": "2026-10-02T02:13:46.431Z",
+  "inboxConnected": true,
+  "questions": [
+    {
+      "id": "01",
+      "slug": "if-the-model-is-not-the-bottleneck-what-exactly-should-designers",
+      "category": "UX",
+      "tags": [
+        "UX"
+      ],
+      "aiLens": true,
+      "editorialTitle": "Latency moved downstream",
+      "question": "If the model is not the bottleneck, what exactly should designers own when AI feels slow?",
+      "answer": "The work shifts to the interaction layer, not the inference layer. Designers need to define feedback, pacing, and completion states so the system feels conversational instead of stalled.",
+      "why": "The strongest signal is that Doherty’s threshold is now a design problem, not a model problem. That changes the brief from optimizing output time to protecting attention and flow.",
+      "counts": {
+        "total": 1,
+        "newsletters": 0,
+        "web": 1
+      },
+      "firstSeen": "00:52 cet",
+      "signals": [
+        {
+          "source": "UX Collective",
+          "title": "Stop blaming the model for slow AI. Using Doherty’s threshold as a guideline.",
+          "kind": "Web",
+          "timing": "00:52",
+          "happened": "A UX Collective piece argues that Doherty’s 400 millisecond threshold still applies to AI products, but now the burden lands on the front end. It says the fix is not cheaper inference but a week of interaction work and a clear definition of done.",
+          "changes": "This reframes AI performance as an experience responsibility, not a backend excuse. The useful shift is **feedback timing** and **completion design**, while the tradeoff is that teams must solve perceived speed without hiding real latency. That puts designers closer to the engineering contract and makes waiting a deliberate part of the product language, not an accident.",
+          "verdict": "Must read",
+          "url": "https://uxdesign.cc/stop-blaming-the-model-for-slow-ai-heres-how-to-design-for-it-doherty-s-threshold-as-a-guideline-5fa6d52e23fc"
+        }
+      ],
+      "further": [
+        [
+          "The economics of attention in the age of AI",
+          "UX Collective",
+          "https://uxdesign.cc/the-economics-of-attention-in-the-age-of-ai-5f92e7e0fb49"
+        ],
+        [
+          "Headless AI will make every product a platform. Here’s what to consider when designing for this.",
+          "UX Collective",
+          "https://uxdesign.cc/headless-ai-will-make-every-product-a-platform-heres-what-to-consider-when-designing-for-this-f219c33245c7"
+        ]
+      ]
+    },
+    {
+      "id": "02",
+      "slug": "when-ai-starts-acting-outside-the-screen-what-replaces-the-inter",
+      "category": "Process",
+      "tags": [
+        "Process"
+      ],
+      "aiLens": true,
+      "editorialTitle": "Agents need guardrails",
+      "question": "When AI starts acting outside the screen, what replaces the interface as the thing teams must design and review?",
+      "answer": "The contract beneath the product becomes the real design surface. Teams have to specify endpoints, permissions, error handling, and observability because agents will use those rules without ever seeing the UI.",
+      "why": "Headless agents change the unit of design from screens to systems. That means mockups are no longer enough because the most important behavior may only appear in logs and contracts.",
+      "counts": {
+        "total": 1,
+        "newsletters": 0,
+        "web": 1
+      },
+      "firstSeen": "01:10 cet",
+      "signals": [
+        {
+          "source": "UX Collective",
+          "title": "Headless AI will make every product a platform. Here’s what to consider when designing for this.",
+          "kind": "Web",
+          "timing": "01:10",
+          "happened": "A UX Collective article says agentic AI is turning products into platforms, with bots consuming contracts instead of screens. It cites large volumes of agent requests and argues that the interface is now the specification underneath the product.",
+          "changes": "This changes design review from visible layout critique to **contract design** and operational proof. The risk is that teams keep polishing mockups while agents hit the undocumented seams, so reliability moves from a nice-to-have to the product’s core user experience. It also makes documentation, errors, and permissions part of the design system rather than support material.",
+          "verdict": "Must read",
+          "url": "https://uxdesign.cc/headless-ai-will-make-every-product-a-platform-heres-what-to-consider-when-designing-for-this-f219c33245c7"
+        }
+      ],
+      "further": [
+        [
+          "Stop blaming the model for slow AI. Using Doherty’s threshold as a guideline.",
+          "UX Collective",
+          "https://uxdesign.cc/stop-blaming-the-model-for-slow-ai-heres-how-to-design-for-it-doherty-s-threshold-as-a-guideline-5fa6d52e23fc"
+        ],
+        [
+          "The economics of attention in the age of AI",
+          "UX Collective",
+          "https://uxdesign.cc/the-economics-of-attention-in-the-age-of-ai-5f92e7e0fb49"
+        ]
+      ]
+    },
+    {
+      "id": "03",
+      "slug": "if-ai-can-adapt-experiences-in-real-time-should-accessibility-st",
+      "category": "UX",
+      "tags": [
+        "UX"
+      ],
+      "aiLens": true,
+      "editorialTitle": "Accessibility gets personal",
+      "question": "If AI can adapt experiences in real time, should accessibility still be treated as a fixed standard?",
+      "answer": "Accessibility may need to become contextual and adaptive instead of purely static. The challenge is to preserve standards while allowing interfaces to adjust to different abilities, tasks, and moments.",
+      "why": "The article points to a real tension between universal rules and personalized systems. That matters because adaptive accessibility could widen access, but it also risks fragmenting what teams can reliably test.",
+      "counts": {
+        "total": 1,
+        "newsletters": 0,
+        "web": 1
+      },
+      "firstSeen": "01:08 cet",
+      "signals": [
+        {
+          "source": "UX Collective",
+          "title": "Intelligent Accessibility: What If Accessibility Could Adapt to You?",
+          "kind": "Web",
+          "timing": "01:08",
+          "happened": "A UX Collective piece asks whether accessibility should stay static as products become more dynamic and intelligent. It frames AI as a way to adapt interfaces to physical, vision, hearing, and cognitive needs in real time.",
+          "changes": "This raises the bar for inclusive design by moving from one-size-fits-all accommodations to **adaptive support**. The tradeoff is obvious: more personalization can improve access, but it also makes compliance, consistency, and QA harder to define. Designers will need to prove that flexibility does not become another form of exclusion.",
+          "verdict": "Read",
+          "url": "https://uxdesign.cc/intelligent-accessibility-what-if-accessibility-could-adapt-to-you-db601958ea47"
+        }
+      ],
+      "further": [
+        [
+          "Design’s consensus was AI’s first casualty",
+          "UX Collective",
+          "https://uxdesign.cc/designs-consensus-was-ai-s-first-casualty-8143c1bada80"
+        ],
+        [
+          "The economics of attention in the age of AI",
+          "UX Collective",
+          "https://uxdesign.cc/the-economics-of-attention-in-the-age-of-ai-5f92e7e0fb49"
+        ]
+      ]
+    },
+    {
+      "id": "04",
+      "slug": "why-are-poster-and-identity-projects-returning-to-bolder-more-po",
+      "category": "Culture",
+      "tags": [
+        "Culture"
+      ],
+      "aiLens": false,
+      "editorialTitle": "Posters as public argument",
+      "question": "Why are poster and identity projects returning to bolder, more political visual language?",
+      "answer": "The work suggests designers are treating identity less as decoration and more as public position. That makes typography, color, and system choices feel like arguments about culture rather than merely style.",
+      "why": "The poster survey and recent identity coverage both point to design as a civic medium, not just brand polish. That is a useful counterweight to AI saturation because it reasserts authorship, context, and physical presence.",
+      "counts": {
+        "total": 3,
+        "newsletters": 1,
+        "web": 2
+      },
+      "firstSeen": "14:58 cet",
+      "signals": [
+        {
+          "source": "Slanted",
+          "title": "Out Now: FONS HICKMANN: Posters Now and Then",
+          "kind": "Newsletter",
+          "timing": "14:58",
+          "happened": "Slanted announced a comprehensive survey of Fons Hickmann’s poster work, spanning more than three decades. The book frames posters as a space where typography, image, clarity, and disruption collide in cultural and political commissions.",
+          "changes": "This is a reminder that strong identity work still depends on **editorial point of view** and public consequence, not just visual system polish. The book positions the poster as a medium for reflection, which pushes against the flattening effect of templated digital branding. For designers, that means authorship and stance remain part of the job, not an optional flourish.",
+          "verdict": "Read",
+          "url": "https://gallery.mailchimp.com/6e6ee63528b0e1b347227ac27/images/99fc7abf-370b-44e1-9b57-3f81304d1304.jpg"
+        }
+      ],
+      "further": [
+        [
+          "Sandy Christ crafts fuzzy, out-of-focus illustrations that make you embrace ambiguity",
+          "It’s Nice That",
+          "https://www.itsnicethat.com/articles/sandy-christ-illustration-discover-011026"
+        ]
+      ]
+    }
+  ]
+}
