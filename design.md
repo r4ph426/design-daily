@@ -174,6 +174,8 @@ Lead with a short `Start here` area for foundational reading, then a dense `Ques
 
 Lead with the weekly point of view and tool intake. Follow with three current signals, then the persistent collection with search, type, practice, verdict, Worth trying, and Best practice retrieval.
 
+The opening Tool intake sits two square rows below its previous position and spans the rightmost three modules above 720px. Desktop starts it in row three; tablet moves it two rows below its previous position after the orientation panel. Its measured content determines the smallest fitting whole-module height, and the opening extends to contain it before the weekly section. Mobile retains the full-width stacked intake and shared 48px contribution controls.
+
 Toolbox classification uses two independent axes. `Type` describes what the object technically is: MCP, Skill, Agent, or Tool. `Practice` describes where it helps a designer: Taste, Drafting, UI sketches, Flows, Accessibility, Review, Creative exploration, or Pattern research. Keep the core UI, UX, Process, and Culture taxonomy as product-area metadata. Keep `Best practice` as an editorial verdict, not a practice label.
 
 The weekly Toolbox discovery job refreshes a private editorial candidate queue every Monday and can also be triggered manually in GitHub Actions. It searches configured GitHub topics and rechecks known product sources. Discovery never publishes or assigns a positive verdict automatically; a human reviews candidates in Codex before adding them to `data/toolbox.json`.

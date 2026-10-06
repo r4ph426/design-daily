@@ -124,7 +124,9 @@ export function useSquareLayouts(rootRef) {
         const intro = fit(layout, "intro", ":scope > .prototype-toolbox-title", 2);
         const orientation = fit(layout, "orientation", ":scope > .prototype-toolbox-orientation", width <= 1200 ? 1 : 2);
         const intake = fit(layout, "intake", ":scope > .prototype-toolbox-intake", 2);
-        write(layout, "--fit-opening", Math.max(intro, width <= 1200 ? orientation + intake : Math.max(orientation, intake)));
+        const intakeStart = width <= 1200 ? orientation + 3 : Math.max(3, orientation + 1);
+        write(layout, "--fit-intake-start", intakeStart);
+        write(layout, "--fit-opening", Math.max(intro, intakeStart - 1 + intake));
       });
       root.querySelectorAll(".prototype-start").forEach((layout) => {
         fit(layout, "heading", ":scope > .prototype-start-heading");
