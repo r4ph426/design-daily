@@ -268,3 +268,7 @@ Replace Today’s legacy archive teaser with a right-aligned, three-module Readi
 
 
 Today context and source alignment (6 October 2026): Editorial context and First seen now sit inside the left reading panel beneath the Why it matters answer. The separate Sources panel remains in columns 5–7 and shares the left panel’s bottom module boundary; its measured source-list height grows upward from that boundary. Preserve open modules above it and place expanded notes below both panels. Mobile follows the same semantic sequence in stacked flow. Coral answer and signal-note highlights use italics. The Reading trail introduction reads `Another perspective can change the question. Find more context in the archive.`
+
+The ending `Close source notes` action sits near the expanded panel’s bottom edge with a small 12px inset and its complete 48px target inside the panel. Center it horizontally beneath the Reading trail’s content width. Reserve the action’s 48px height, 12px bottom inset, and 16px separation beneath the Reading trail in the content measurement. Square-row rounding leaves spare space above this action, and the panel remains able to grow and shrink after resizing. Keep this placement on mobile as well.
+
+The ending close action reuses SecondaryButton with the same sage outline, padding, typography, 48px height, open-state surface, and trailing chevron as the source-list disclosure. Match the right-hand source column’s content width; use the available content width on mobile.

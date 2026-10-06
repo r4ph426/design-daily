@@ -113,7 +113,7 @@ function SignalDetails({ question, records, date, onClose }) {
         ))}</tbody>
       </table>
       <ReadingTrail question={question} records={records} date={date} />
-      <button className="signals-close" type="button" onClick={onClose}>Close source notes<CaretDown size={18} aria-hidden="true" /></button>
+      <SecondaryButton className="signals-close" aria-expanded={true} aria-controls={`prototype-details-${question.id}`} onClick={onClose}>Close source notes<CaretDown size={18} aria-hidden="true" /></SecondaryButton>
     </div>
   );
 }

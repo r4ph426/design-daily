@@ -12,7 +12,11 @@ function contentHeight(panel) {
     return css.display !== "none" && !["absolute", "fixed"].includes(css.position);
   });
   let height = 0;
-  if (panel.matches("p")) {
+  if (panel.matches(".signal-details")) {
+    // The close action sits at the snapped panel's bottom. Measure the notes'
+    // intrinsic content and reserved action padding, not their filled height.
+    height = contentHeight(panel.querySelector(":scope > .signal-table-wrap"));
+  } else if (panel.matches("p")) {
     const range = document.createRange();
     range.selectNodeContents(panel);
     height = range.getBoundingClientRect().height + Math.max(0, number(style.lineHeight) - number(style.fontSize));
