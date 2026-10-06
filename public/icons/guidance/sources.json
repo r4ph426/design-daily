@@ -1,0 +1,70 @@
+{
+  "commit": "52d750c9ce051e51cb181b7a78932120c48541d0",
+  "assets": [
+    {
+      "name": "clock",
+      "source": "https://raw.githubusercontent.com/webalys-hq/streamline-vectors/52d750c9ce051e51cb181b7a78932120c48541d0/guidance/ui/ui/clock.svg",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "name": "down-arrow",
+      "source": "https://raw.githubusercontent.com/webalys-hq/streamline-vectors/52d750c9ce051e51cb181b7a78932120c48541d0/guidance/arrows/arrows/down-arrow.svg",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "name": "image",
+      "source": "https://raw.githubusercontent.com/webalys-hq/streamline-vectors/52d750c9ce051e51cb181b7a78932120c48541d0/guidance/ui/ui/image.svg",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "name": "information-desk-symbol",
+      "source": "https://raw.githubusercontent.com/webalys-hq/streamline-vectors/52d750c9ce051e51cb181b7a78932120c48541d0/guidance/places/places/information-desk-symbol.svg",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "name": "left-arrow",
+      "source": "https://raw.githubusercontent.com/webalys-hq/streamline-vectors/52d750c9ce051e51cb181b7a78932120c48541d0/guidance/arrows/arrows/left-arrow.svg",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "name": "less-minus",
+      "source": "https://raw.githubusercontent.com/webalys-hq/streamline-vectors/52d750c9ce051e51cb181b7a78932120c48541d0/guidance/ui/ui/less-minus.svg",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "name": "more-add-plus",
+      "source": "https://raw.githubusercontent.com/webalys-hq/streamline-vectors/52d750c9ce051e51cb181b7a78932120c48541d0/guidance/ui/ui/more-add-plus.svg",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "name": "play",
+      "source": "https://raw.githubusercontent.com/webalys-hq/streamline-vectors/52d750c9ce051e51cb181b7a78932120c48541d0/guidance/ui/ui/play.svg",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "name": "remove-x-cross",
+      "source": "https://raw.githubusercontent.com/webalys-hq/streamline-vectors/52d750c9ce051e51cb181b7a78932120c48541d0/guidance/ui/ui/remove-x-cross.svg",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "name": "right-arrow",
+      "source": "https://raw.githubusercontent.com/webalys-hq/streamline-vectors/52d750c9ce051e51cb181b7a78932120c48541d0/guidance/arrows/arrows/right-arrow.svg",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "name": "search",
+      "source": "https://raw.githubusercontent.com/webalys-hq/streamline-vectors/52d750c9ce051e51cb181b7a78932120c48541d0/guidance/ui/ui/search.svg",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "name": "star",
+      "source": "https://raw.githubusercontent.com/webalys-hq/streamline-vectors/52d750c9ce051e51cb181b7a78932120c48541d0/guidance/ui/ui/star.svg",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "name": "up-right-arrow",
+      "source": "https://raw.githubusercontent.com/webalys-hq/streamline-vectors/52d750c9ce051e51cb181b7a78932120c48541d0/guidance/arrows/arrows/up-right-arrow.svg",
+      "license": "CC-BY-4.0"
+    }
+  ]
+}

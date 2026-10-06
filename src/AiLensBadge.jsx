@@ -1,4 +1,4 @@
-import { Robot } from "@phosphor-icons/react";
+import { Robot } from "./icons/index.jsx";
 
 export function AiLensBadge() {
   return (

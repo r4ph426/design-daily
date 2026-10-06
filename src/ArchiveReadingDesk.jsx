@@ -1,6 +1,6 @@
 import { safeExternalHref } from "../shared/public-url.mjs";
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
-import { ArrowLeft, ArrowRight, ArrowUpRight, BookmarkSimple, Check, LinkSimple, MagnifyingGlass, X } from "@phosphor-icons/react";
+import { ArrowLeft, ArrowRight, ArrowUpRight, BookmarkSimple, Check, LinkSimple, MagnifyingGlass, X } from "./icons/index.jsx";
 import { AiLensBadge } from "./AiLensBadge.jsx";
 import { HighlightedText } from "./HighlightedText.jsx";
 import { RECENT_POPULARITY, SKILL_LABELS } from "./archive.jsx";

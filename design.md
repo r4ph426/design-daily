@@ -274,3 +274,8 @@ Today context and source alignment (6 October 2026): Editorial context and First
 The ending `Close source notes` action sits near the expanded panel’s bottom edge with a small 12px inset and its complete 48px target inside the panel. Center it horizontally beneath the Reading trail’s content width. Reserve the action’s 48px height, 12px bottom inset, and 16px separation beneath the Reading trail in the content measurement. Square-row rounding leaves spare space above this action, and the panel remains able to grow and shrink after resizing. Keep this placement on mobile as well.
 
 The ending close action reuses SecondaryButton with the same sage outline, padding, typography, 48px height, open-state surface, and trailing chevron as the source-list disclosure. Match the right-hand source column’s content width; use the available content width on mobile.
+
+
+### Guidance icons · 6 October 2026
+
+Use the free original Guidance vectors by Streamline through `src/icons/index.jsx` for arrows, disclosure, search, clock, plus/minus, image, information, favourites, play and close. Phosphor remains for twelve roles without a direct Guidance equivalent, including bookmarks and the AI robot. Preserve geometry, existing sizes, semantic labels, control targets and shared colours. Thin strokes support large action cursors. Keep CC BY 4.0 attribution visible on Privacy and preserve original vectors and pinned provenance in `public/icons/guidance/`. No paid assets, external icon service or account connection is introduced.

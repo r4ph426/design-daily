@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { useSquareLayouts } from "./useSquareLayouts.js";
-import { ArrowRight } from "@phosphor-icons/react";
+import { ArrowRight } from "./icons/index.jsx";
 
 const sections = [
   ["reading", "Reading & saving"],
@@ -70,6 +70,7 @@ export function PrivacyPage() {
               <p className="meta-label">The public site</p>
               <h2 id="reading-title">Reading & saving</h2>
               <p>You can read Today, Archive, and Toolbox without signing in. This app does not add an analytics service. GitHub Pages hosts the site and logs visitors’ IP addresses for security. The Inter and Neue Reckless typefaces are served from this site.</p>
+              <p>Icons use <a href="https://streamlinehq.com/" target="_blank" rel="noreferrer">Guidance by Streamline</a> under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a>, with colour and stroke weight adapted for this interface. Some specialist symbols use Phosphor.</p>
               <p>Question bookmarks, tool bookmarks, open question panels, and a random article-submission identifier are stored in your browser’s local storage. They stay on this device unless you clear them. Your saved items are not sent to the publication workflow.</p>
             </div>
           </section>

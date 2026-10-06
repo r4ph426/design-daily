@@ -4,7 +4,7 @@ import {
   ArrowRight,
   BookmarkSimple,
   MagnifyingGlass,
-} from "@phosphor-icons/react";
+} from "./icons/index.jsx";
 import { AiLensBadge } from "./AiLensBadge.jsx";
 import { HighlightedText } from "./HighlightedText.jsx";
 import { CATEGORIES } from "./taxonomy.js";

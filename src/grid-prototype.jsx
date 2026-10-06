@@ -1,6 +1,6 @@
 import { safeExternalHref } from "../shared/public-url.mjs";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { BookmarkSimple, CaretDown, Clock } from "@phosphor-icons/react";
+import { BookmarkSimple, CaretDown, Clock } from "./icons/index.jsx";
 import { ArticleIntake } from "./App.jsx";
 import { AiLensBadge } from "./AiLensBadge.jsx";
 import { SiteFooter } from "./SiteFooter.jsx";

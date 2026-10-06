@@ -6,7 +6,7 @@ import {
   CaretDown,
   Check,
   Clock,
-} from "@phosphor-icons/react";
+} from "./icons/index.jsx";
 import { AiLensBadge } from "./AiLensBadge.jsx";
 import { HighlightedText } from "./HighlightedText.jsx";
 import { SecondaryButton } from "./SecondaryButton.jsx";

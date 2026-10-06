@@ -1,6 +1,6 @@
 import { safeExternalHref } from "../shared/public-url.mjs";
 import { useEffect, useMemo, useState } from "react";
-import { BookmarkSimple, MagnifyingGlass } from "@phosphor-icons/react";
+import { BookmarkSimple, MagnifyingGlass } from "./icons/index.jsx";
 import toolboxData from "../data/toolbox.json";
 import { RECENT_POPULARITY, SKILL_LABELS, questionRoute } from "./archive.jsx";
 import { AiLensBadge } from "./AiLensBadge.jsx";

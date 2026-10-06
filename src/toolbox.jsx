@@ -5,7 +5,7 @@ import {
   BookmarkSimple,
   Check,
   MagnifyingGlass,
-} from "@phosphor-icons/react";
+} from "./icons/index.jsx";
 import toolboxData from "../data/toolbox.json";
 
 const { weekLabel, weeklySignals, tools } = toolboxData;
