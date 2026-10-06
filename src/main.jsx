@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
 import { App } from "./App.jsx";
+import { DesignCursor } from "./DesignCursor.jsx";
 import { GridPrototype } from "./grid-prototype.jsx";
 import appStyles from "./styles.css?inline";
 import gridStyles from "./grid-prototype.css?inline";
@@ -22,7 +23,7 @@ function PublishedSite() {
     return () => window.removeEventListener("hashchange", update);
   }, []);
 
-  return <><style>{(grid ? gridStyles : appStyles) + squareStyles + mobileStyles}</style>{grid ? <GridPrototype /> : <App />}</>;
+  return <><DesignCursor /><style>{(grid ? gridStyles : appStyles) + squareStyles + mobileStyles}</style>{grid ? <GridPrototype /> : <App />}</>;
 }
 
 createRoot(document.getElementById("root")).render(

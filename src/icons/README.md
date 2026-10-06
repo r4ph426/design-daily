@@ -2,7 +2,7 @@
 
 Selected on 6 October 2026. Guidance by [Streamline](https://streamlinehq.com/) is free under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The visible credit lives on Privacy. Original SVGs and pinned source URLs live in `public/icons/guidance/`.
 
-Import named icons from `src/icons/index.jsx`. Fifteen roles use thirteen original Guidance vectors: arrows, disclosure, search, clock, plus/minus, image, information, favourite, play and close. External-link controls use the diagonal arrow. Publisher left/right filenames are reversed visually; our aliases follow their geometry.
+Import named icons from `src/icons/index.jsx`. Fourteen roles use twelve original Guidance vectors: arrows, disclosure, search, clock, plus/minus, image, information, favourite and play. Close uses an independently authored X made of two diagonal lines in the same shared wrapper, including the large detail cursor. External-link controls use the diagonal arrow. Publisher left/right filenames are reversed visually; our aliases follow their geometry.
 
 Twelve roles retain Phosphor because Guidance has no direct equivalent: bookmark, check, link, robot, more, zoom in/out, pan, shuffle, reset, pause and crosshair. Do not replace a role with an unrelated pictogram. The dependency remains for these fallbacks.
 

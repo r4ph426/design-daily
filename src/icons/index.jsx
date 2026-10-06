@@ -22,15 +22,18 @@ function shape([tag, attributes, children], key) {
   return React.createElement(tag, { ...attributes, key }, children.map(shape));
 }
 function icon(name) {
-  const original = guidanceAliases[name];
+  const original = name === "X" ? "simple-close" : guidanceAliases[name];
+  const geometry = name === "X"
+    ? [["path", { stroke: "currentColor", d: "M2 2L22 22M22 2L2 22" }, []]]
+    : guidanceShapes[original];
   const Component = forwardRef(function Icon({ size = 24, weight = "regular", color = "currentColor", mirrored = false, alt, style, children, ...props }, ref) {
     if (!original) {
       const Fallback = fallbacks[name];
       return <Fallback ref={ref} size={size} weight={weight} color={color} mirrored={mirrored} alt={alt} style={style} data-icon-library="phosphor" {...props}>{children}</Fallback>;
     }
-    return <svg ref={ref} xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" color={color} fill={weight === "fill" ? "currentColor" : "none"} strokeWidth={strokes[weight] ?? strokes.regular} aria-hidden={alt ? undefined : true} role={alt ? "img" : undefined} style={{ overflow: "visible", ...(mirrored ? { transform: "scaleX(-1)" } : {}), ...style }} data-icon-library="guidance" data-icon-name={name} {...props}>
+    return <svg ref={ref} xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" color={color} fill={weight === "fill" ? "currentColor" : "none"} strokeWidth={strokes[weight] ?? strokes.regular} aria-hidden={alt ? undefined : true} role={alt ? "img" : undefined} style={{ overflow: "visible", ...(mirrored ? { transform: "scaleX(-1)" } : {}), ...style }} data-icon-library={name === "X" ? "custom" : "guidance"} data-icon-name={name} {...props}>
       {alt && <title>{alt}</title>}
-      {guidanceShapes[original].map(shape)}
+      {geometry.map(shape)}
       {children}
     </svg>;
   });

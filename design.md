@@ -279,3 +279,11 @@ The ending close action reuses SecondaryButton with the same sage outline, paddi
 ### Guidance icons · 6 October 2026
 
 Use the free original Guidance vectors by Streamline through `src/icons/index.jsx` for arrows, disclosure, search, clock, plus/minus, image, information, favourites, play and close. Phosphor remains for twelve roles without a direct Guidance equivalent, including bookmarks and the AI robot. Preserve geometry, existing sizes, semantic labels, control targets and shared colours. Thin strokes support large action cursors. Keep CC BY 4.0 attribution visible on Privacy and preserve original vectors and pinned provenance in `public/icons/guidance/`. No paid assets, external icon service or account connection is introduced.
+
+
+### Global Tangity point · 6 October 2026
+
+Use one shared coral dot across every Design Daily route and the standalone prototype entry. The fine mouse pointer is 10px at rest and 24px over links and buttons, with immediate tracking and a 120ms size transition. Editable fields, disabled controls, drag and image inspection keep native or contextual cursors. Keyboard, touch, blur and route transitions hide the point; reduced motion removes its size animation. The cursor is noninteractive and hidden from assistive technology. No routing, capture or access changes are part of this release.
+
+
+Simple Close icon (6 October 2026): all Close actions use the same shared X made from two diagonal strokes. This replaces Guidance’s outlined cross everywhere, including reader controls, weekly archive, the small image-heading button and large hover cursor. Preserve each control’s size, ink, label and behaviour.

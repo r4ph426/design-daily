@@ -1,0 +1,8 @@
+.design-dot-cursor {position:fixed;inset:auto;left:0;top:0;margin:0;padding:0;border:0;width:0;height:0;overflow:visible;background:transparent;box-shadow:none;z-index:2147483647;pointer-events:none;visibility:hidden;}
+.design-dot-cursor.is-visible {visibility:visible;}
+.design-dot-cursor span {position:absolute;left:0;top:0;width:10px;height:10px;transform:translate(-50%,-50%);border-radius:50%;background:var(--coral);transition:width 120ms ease-out,height 120ms ease-out;}
+.design-dot-cursor.is-over-reference span {width:24px;height:24px;}
+@media(hover:hover) and (pointer:fine) {
+ body.has-design-dot-cursor,body.has-design-dot-cursor * {cursor:none!important;}
+}
+@media(prefers-reduced-motion:reduce) {.design-dot-cursor span {transition:none;}}

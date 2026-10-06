@@ -42,11 +42,6 @@
       "license": "CC-BY-4.0"
     },
     {
-      "name": "remove-x-cross",
-      "source": "https://raw.githubusercontent.com/webalys-hq/streamline-vectors/52d750c9ce051e51cb181b7a78932120c48541d0/guidance/ui/ui/remove-x-cross.svg",
-      "license": "CC-BY-4.0"
-    },
-    {
       "name": "right-arrow",
       "source": "https://raw.githubusercontent.com/webalys-hq/streamline-vectors/52d750c9ce051e51cb181b7a78932120c48541d0/guidance/arrows/arrows/right-arrow.svg",
       "license": "CC-BY-4.0"
