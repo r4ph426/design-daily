@@ -29,9 +29,10 @@ export function GridHeader({ date, route }) {
         <p className="prototype-descriptor">{descriptors[route]}</p>
       </div>
       <nav className="prototype-nav" aria-label="Primary">
-        {["today", "archive", "toolbox", "privacy"].map((name) => (
+        {["today", "archive", "toolbox"].map((name) => (
           <a key={name} className={route === name ? "active" : ""} aria-current={route === name ? "page" : undefined} href={name === "privacy" ? publishedHref("/privacy") : editorialHref(name === "today" ? "" : `/${name}`)}>{name[0].toUpperCase() + name.slice(1)}</a>
         ))}
+        <a className={`privacy-nav-link ${route === "privacy" ? "active" : ""}`} aria-current={route === "privacy" ? "page" : undefined} href={publishedHref("/privacy")}>Privacy</a>
       </nav>
     </header>
   );

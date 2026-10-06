@@ -98,10 +98,18 @@ export function useSquareLayouts(rootRef) {
         fit(layout, "intake", ":scope > .intake-cell", 2);
       });
       root.querySelectorAll(".editorial-spread").forEach((layout) => {
+        // Try spare title columns before allocating another square row.
+        const titlePanel = layout.querySelector(":scope > .editorial-heading");
+        const title = titlePanel.querySelector("h2");
+        for (let columns = 4; columns <= 7; columns += 1) {
+          write(layout, "--fit-heading-columns", columns);
+          if (title.getBoundingClientRect().height <= number(getComputedStyle(title).lineHeight) + 1) break;
+        }
         const heading = fit(layout, "heading", ":scope > .editorial-heading");
-        const support = fit(layout, "support", ":scope > .practice-panel, :scope > .source-panel");
         const note = fit(layout, "note", ":scope > .editorial-note");
-        write(layout, "--fit-spread", Math.max(heading + support, note));
+        const context = fit(layout, "context", ":scope > .practice-panel");
+        const sources = fit(layout, "sources", ":scope > .source-panel");
+        write(layout, "--fit-spread", heading + Math.max(note, context + sources));
         if (layout.classList.contains("is-open")) fit(layout, "details", ":scope > .signal-details > .signal-table-wrap");
       });
       root.querySelectorAll(".prototype-archive-opening").forEach((layout) => {

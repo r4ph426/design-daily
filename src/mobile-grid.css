@@ -110,7 +110,7 @@
   .desk-inline-reader .desk-answer { margin-top: 0; padding-top: 18px; border-top: 0; }
   .desk-inline-reader .desk-answer > p { font-size: var(--mobile-type-body); }
   .desk-inline-reader .desk-answer-actions { display: none; }
-  .desk-signal-disclosure { margin-top: 14px; border: 1px solid var(--gridline); padding: 0 12px; }
+  .desk-signal-disclosure { margin-top: 14px; }
   .desk-signal-disclosure summary { min-height: 44px; display: flex; align-items: center; cursor: pointer; font: 400 12px/1.4 var(--font-ui); }
   .desk-signal-disclosure summary::after { content: "+"; margin-left: auto; }
   .desk-signal-disclosure[open] summary::after { content: "−"; }
@@ -177,7 +177,7 @@
 }
 @media (max-width: 720px) {
   .editorial-heading h2 button, .prototype-weekly-card a, .privacy-index button { min-height: 44px; min-width: 44px; }
-  .desk-signal-disclosure summary { display: list-item; line-height: 44px; }
+  .desk-signal-disclosure summary { width: 100%; }
   .desk-signal-disclosure summary::marker { content: ""; }
   .desk-signal-disclosure summary::after { float: right; }
   .desk-result.is-selected .desk-question-toggle > span:first-child { min-width: 0; overflow-wrap: break-word; }

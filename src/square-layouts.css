@@ -8,13 +8,14 @@
   .intake-cell { grid-row: calc(var(--fit-hero, 2) + 2) / span var(--fit-intake, 2); }
 
   .editorial-spread, .editorial-spread.is-open {
-    grid-template-rows: repeat(var(--fit-spread, 3), var(--module-size));
+    grid-template-rows: repeat(var(--fit-spread, 4), var(--module-size));
     grid-auto-rows: var(--module-size);
   }
   .editorial-heading { grid-row: 1 / span var(--fit-heading, 1); }
-  .practice-panel, .source-panel { grid-row: calc(var(--fit-heading, 1) + 1) / span var(--fit-support, 2); }
-  .editorial-note { grid-row: 1 / span var(--fit-spread, 3); }
-  .signal-details { grid-row: calc(var(--fit-spread, 3) + 1) / span var(--fit-details, 2); overflow: visible; }
+  .editorial-note { grid-row: calc(var(--fit-heading, 1) + 1) / span var(--fit-note, 3); }
+  .practice-panel { grid-row: calc(var(--fit-heading, 1) + 1) / span var(--fit-context, 1); }
+  .source-panel { grid-row: calc(var(--fit-heading, 1) + var(--fit-context, 1) + 1) / span calc(var(--fit-spread, 4) - var(--fit-heading, 1) - var(--fit-context, 1)); }
+  .signal-details { grid-row: calc(var(--fit-spread, 4) + 1) / span var(--fit-details, 2); overflow: visible; }
   .signal-table-wrap { min-height: 0; display: flow-root; }
 
   .prototype-archive-opening, .prototype-toolbox-opening { grid-template-rows: repeat(var(--fit-opening, 3), var(--module-size)); }
@@ -46,7 +47,6 @@
 }
 
 @media (max-width: 1200px) and (min-width: 721px) {
-  .signal-details { grid-column: 1 / -1; }
   .prototype-toolbox-intake { grid-row: calc(var(--fit-orientation, 1) + 1) / span var(--fit-intake, 2); }
   .prototype-weekly { grid-template-rows: calc(var(--module-size) * var(--fit-heading, 1)) repeat(3, calc(var(--module-size) * var(--fit-weekly, 2))); }
   .prototype-weekly-slot-1 { grid-row: 2; }

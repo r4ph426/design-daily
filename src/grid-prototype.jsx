@@ -10,6 +10,7 @@ import { PrototypeArchive, PrototypeToolbox } from "./grid-prototype-routes.jsx"
 import { editorialHref, publishedHref } from "./editorial-routes.js";
 import { useSquareLayouts } from "./useSquareLayouts.js";
 import { HighlightedText } from "./HighlightedText.jsx";
+import { SecondaryButton } from "./SecondaryButton.jsx";
 import { ArchiveReadingDesk } from "./ArchiveReadingDesk.jsx";
 
 const readingMode = window.location.pathname.endsWith("grid-prototype.html") ? new URLSearchParams(window.location.search).get("reading") : "combined";
@@ -69,7 +70,7 @@ function SignalDetails({ question }) {
           </tr>
         ))}</tbody>
       </table>
-      <div className="question-trail"><p>Question trail</p><a href={editorialHref(`/archive?category=${encodeURIComponent(question.category)}`)}><span>Explore similar questions</span><small>More from {question.category} in the archive</small><span aria-hidden="true">↗</span></a></div>
+      <div className="question-trail"><p>Question archive</p><a href={editorialHref(`/archive?category=${encodeURIComponent(question.category)}`)}><span>Explore similar questions</span><small>More from {question.category} in the archive</small><span aria-hidden="true">↗</span></a></div>
     </div>
   );
 }
@@ -86,7 +87,7 @@ function EditorialSpread({ question, editorialTitle, isOpen, isSaved, onToggle, 
           <div className="editorial-tags" aria-label="Question categories">{categories.map((category) => <a key={category} href={editorialHref(`/archive?category=${encodeURIComponent(category)}`)}>{category} <span aria-hidden="true">↗</span></a>)}{question.aiLens && <AiLensBadge />}</div>
         </div>
       </div>
-      <div className="editorial-note content-panel" onClick={(event) => { if (!event.target.closest("button, a, input")) onToggle(); }}>
+      <div className="editorial-note content-panel">
         <div className="question-overline">
           <p className="section-kicker">The question</p>
           <button className={`bookmark-button ${isSaved ? "saved" : ""}`} type="button" aria-pressed={isSaved} onClick={onSave}>{isSaved ? "Bookmarked for me" : "Bookmark for me"}<BookmarkSimple size={17} weight={isSaved ? "fill" : "regular"} aria-hidden="true" /></button>
@@ -101,7 +102,7 @@ function EditorialSpread({ question, editorialTitle, isOpen, isSaved, onToggle, 
         <ol className="prototype-source-list">{question.signals.map((signal, signalIndex) => (
           <li key={`${question.id}-${signalIndex}`}><a href={signal.url} target="_blank" rel="noopener noreferrer"><span className="source-title">{signal.title}</span><span className="source-meta">{sourceDomain(signal)} · {signal.kind} · {signal.timing}</span><span className="source-external" aria-hidden="true">↗</span></a></li>
         ))}</ol>
-        <button className="signals-disclosure" type="button" aria-expanded={isOpen} aria-controls={detailId} onClick={onToggle}>{isOpen ? "Close sources" : "Open sources"} <span>{question.counts?.total || question.signals.length}</span><CaretDown size={16} aria-hidden="true" /></button>
+        <SecondaryButton className="signals-disclosure" aria-expanded={isOpen} aria-controls={detailId} onClick={onToggle}>{isOpen ? "Close sources" : "Open sources"} <span>{question.counts?.total || question.signals.length}</span><CaretDown size={18} weight="bold" aria-hidden="true" /></SecondaryButton>
       </div>
       <div className="signal-details" id={detailId} hidden={!isOpen}><SignalDetails question={question} /></div>
     </section>

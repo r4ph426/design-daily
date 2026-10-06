@@ -8,6 +8,7 @@ import {
 } from "@phosphor-icons/react";
 import { AiLensBadge } from "./AiLensBadge.jsx";
 import { HighlightedText } from "./HighlightedText.jsx";
+import { SecondaryButton } from "./SecondaryButton.jsx";
 import { validateEditionTaxonomy } from "./taxonomy.js";
 import {
   ArchivePage,
@@ -264,7 +265,7 @@ function SignalsTable({ question }) {
         </tbody>
       </table>
       <div className="question-trail">
-        <p className="meta-label">Question trail</p>
+        <p className="meta-label">Question archive</p>
         <a href={`#/archive?category=${encodeURIComponent(question.category)}`}>
           <span>Explore similar questions</span>
           <small>More from {question.category} in the archive</small>
@@ -312,7 +313,7 @@ function QuestionBlock({ question, isOpen, isSaved, onToggle, onSave }) {
         <p className="answer-label">Why it matters</p>
         <p className="answer-line"><HighlightedText text={question.answer} as="em" /></p>
         <div className="question-actions">
-          <button className="disclosure-button" type="button" aria-expanded={isOpen} aria-controls={`${question.slug}-details`} onClick={onToggle}><CaretDown size={16} /> Signals &amp; Sources <span>{question.counts.total}</span></button>
+          <SecondaryButton className="disclosure-button" aria-expanded={isOpen} aria-controls={`${question.slug}-details`} onClick={onToggle}><CaretDown size={16} /> Signals &amp; Sources <span>{question.counts.total}</span></SecondaryButton>
         </div>
       </div>
       <aside className="question-provenance">
@@ -424,7 +425,7 @@ function ArticleVerificationDialog({ url, token, error, isWorking, onToken, onEr
         )}
         {error && <p className="contribution-dialog-error" role="alert">{error}</p>}
         <div className="contribution-dialog-actions">
-          <button type="button" className="contribution-dialog-cancel" onClick={onClose} disabled={isWorking}>Cancel</button>
+          <SecondaryButton className="contribution-dialog-cancel" onClick={onClose} disabled={isWorking}>Cancel</SecondaryButton>
           <button type="button" className="contribution-submit" onClick={onConfirm} disabled={isWorking || (turnstileSiteKey && !token)}>{isWorking ? "Adding to crawl" : "Confirm contribution"}</button>
         </div>
       </div>

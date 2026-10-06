@@ -34,3 +34,11 @@
   .prototype-nav a { min-height: calc(48px - var(--grid-inset) * 2); }
   .prototype-nav a:last-child::after { display: none; }
 }
+
+/* Keep Privacy at the right edge of the shared seven-module header. */
+@media(min-width:721px) {
+ .prototype-nav {width:100%;grid-template-columns:repeat(14,minmax(0,1fr));}
+ .prototype-nav .privacy-nav-link {grid-column:14;}
+ .prototype-nav .privacy-nav-link::before {position:absolute;inset-block:calc(0px - var(--grid-inset));left:calc(-.5px - var(--grid-inset));width:1px;background:var(--gridline);content:"";}
+ .prototype-nav .privacy-nav-link::after {display:none;}
+}
