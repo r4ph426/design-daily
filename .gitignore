@@ -10,3 +10,5 @@ dist/
 !.env.example
 .auth/
 submission-worker/wrangler.toml
+
+.private/

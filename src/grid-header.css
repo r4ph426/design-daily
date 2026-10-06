@@ -42,3 +42,6 @@
  .prototype-nav .privacy-nav-link::before {position:absolute;inset-block:calc(0px - var(--grid-inset));left:calc(-.5px - var(--grid-inset));width:1px;background:var(--gridline);content:"";}
  .prototype-nav .privacy-nav-link::after {display:none;}
 }
+
+.prototype-nav .inspiration-nav-link {grid-column:4 / 7;}
+@media(max-width:720px){.prototype-nav {display:flex;overflow-x:auto;scrollbar-width:thin;}.prototype-nav a {flex:0 0 auto;min-width:80px;padding:0 16px;}.prototype-nav .inspiration-nav-link {min-width:180px;}.prototype-nav .privacy-nav-link {margin-left:auto;}}

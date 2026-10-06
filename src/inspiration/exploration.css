@@ -1,0 +1,194 @@
+/* The two visual studies share real records, a quiet shell and progressive context. */
+.inspiration-shell.is-exploring .inspiration-main { padding-inline:0; padding-top:0; background:var(--white); }
+.is-exploring :is(.inspiration-opening,.inspiration-status,.inspiration-tabs,.inspiration-filter,.inspiration-collection-line,.inspiration-info) { display:none; }
+.is-exploring.capture-is-open .inspiration-opening { position:fixed; z-index:45; top:130px; right:clamp(16px,6.25vw,100px); width:min(520px,calc(100% - 32px)); max-height:calc(100dvh - 146px); overflow:auto; display:block; border:1px solid var(--grid-strong); }
+.is-exploring.capture-is-open .inspiration-opening > div:first-child { display:none; }
+.is-exploring.capture-is-open .inspiration-capture-panel { outline:0; margin:0; padding:22px; }
+.exploration-launch { display:flex; align-items:center; gap:8px; padding:12px; font:400 12px var(--font-ui); }
+.inspiration-explorer { min-width:0; position:relative; overflow-anchor:none; font:400 12px/1.5 var(--font-ui); background:var(--white); color:var(--ink); }
+.exploration-toolbar { display:flex; align-items:center; gap:12px; min-height:58px; padding:6px clamp(14px,2.2vw,32px); border-block:1px solid var(--grid); }
+.exploration-toolbar h1 { font:500 12px/1.4 var(--font-ui); margin:0 auto 0 0; white-space:nowrap; }
+.exploration-toolbar nav, .exploration-dock nav { display:flex; }
+.inspiration-main .exploration-toolbar nav button { border-color:var(--grid); font-size:11px; }
+.exploration-search { position:relative; width:200px; flex-shrink:1; }
+.exploration-search > svg { position:absolute; left:12px; top:15px; }
+.inspiration-main .exploration-search input { padding-left:38px; height:44px; min-height:44px; font-size:12px; }
+.inspiration-main .exploration-capture { display:flex; align-items:center; gap:10px; white-space:nowrap; }
+.exploration-viewport { position:relative; height:max(240px,calc(100dvh - var(--explorer-top,180px) - var(--explorer-dock,60px))); overflow:hidden; touch-action:none; cursor:grab; outline-offset:-3px!important; }
+.exploration-viewport:active { cursor:grabbing; }
+.exploration-world { position:absolute; left:0; top:0; transform-origin:0 0; will-change:transform; }
+.mode-field .exploration-tile { position:absolute; }
+.exploration-tile { position:relative; overflow:hidden; background:var(--white); break-inside:avoid; }
+.inspiration-main .exploration-image { display:block; border:0; padding:0; width:100%; height:100%; min-height:0; line-height:0; text-align:left; overflow:hidden; cursor:pointer; }
+.exploration-image img { display:block; width:100%; height:100%; object-fit:cover; object-position:top; user-select:none; }
+.exploration-tile .exploration-caption { position:absolute; bottom:0; left:0; right:0; background:var(--white); display:flex; align-items:center; gap:8px; min-height:46px; padding-left:12px; opacity:0; pointer-events:none; transform:translateY(4px); border-top:1px solid var(--grid); transition:opacity 140ms,transform 140ms; }
+.exploration-caption > span { flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.inspiration-main .exploration-caption button { display:grid; place-items:center; padding:0; border:0; border-left:1px solid var(--grid); min-width:46px; height:46px; }
+.exploration-tile:is(:hover,:focus-within,.is-active) .exploration-caption { opacity:1; pointer-events:auto; transform:none; }
+.exploration-tile:focus-within { outline:2px solid var(--yellow); outline-offset:-2px; }
+.exploration-tile .exploration-image:focus-visible { outline-offset:-3px; }
+/* Zoom changes reference density, never the readable caption or action size. */
+.mode-field .exploration-caption { min-height:calc(46px / var(--field-scale,1)); padding-left:calc(12px / var(--field-scale,1)); gap:calc(8px / var(--field-scale,1)); font-size:calc(11px / var(--field-scale,1)); }
+.mode-field .exploration-caption > svg { width:calc(16px / var(--field-scale,1)); height:calc(16px / var(--field-scale,1)); }
+.inspiration-main .mode-field .exploration-caption button { min-width:calc(46px / var(--field-scale,1)); min-height:calc(46px / var(--field-scale,1)); height:calc(46px / var(--field-scale,1)); }
+.mode-field .exploration-caption button svg { width:calc(20px / var(--field-scale,1)); height:calc(20px / var(--field-scale,1)); }
+.mode-field .exploration-link :is(span,small) { font-size:calc(11px / var(--field-scale,1)); }
+.exploration-link { display:flex; flex-direction:column; justify-content:center; gap:16px; min-height:180px; height:100%; padding:24px; line-height:1.4; border:1px solid var(--grid); background:var(--surface-hover); }
+.exploration-link strong { font:400 25px/1.2 var(--font-editorial); overflow-wrap:anywhere; }
+.exploration-link span, .exploration-link small { font:400 11px/1.5 var(--font-ui); overflow-wrap:anywhere; }
+.exploration-wall { columns:5; column-gap:8px; padding:8px clamp(14px,2.2vw,32px) 14px; }
+.exploration-wall .exploration-tile { margin-bottom:8px; width:100%; }
+.exploration-wall .exploration-image { position:relative; height:auto; aspect-ratio:var(--preview-ratio,1); }
+.exploration-wall .exploration-image img, .exploration-wall .exploration-image > .exploration-link { position:absolute; inset:0; height:100%; min-height:0; object-fit:cover; }
+.exploration-dock { position:sticky; bottom:0; z-index:8; display:flex; flex-wrap:wrap; align-items:center; gap:16px; padding:6px clamp(14px,2.2vw,32px); min-height:58px; border-block:1px solid var(--grid); background:var(--white); }
+.exploration-dock p { display:flex; align-items:center; gap:14px; margin-right:auto; font-size:11px; }
+.inspiration-main .exploration-dock nav button { border-color:var(--grid); }
+.exploration-camera { display:flex; align-items:center; gap:4px; }
+.inspiration-main .exploration-camera button { display:grid; place-items:center; padding:0; width:44px; border-color:var(--grid); }
+.exploration-camera > span { text-align:center; min-width:44px; font-size:11px; font-variant-numeric:tabular-nums; }
+.exploration-hint { font-size:11px; margin-left:auto; }
+.exploration-empty { padding:28px; }
+.exploration-viewport > .exploration-empty { position:absolute; inset:0; display:grid; place-content:center; pointer-events:none; }
+.inspiration-detail.is-visual-detail[open] { display:grid; grid-template-columns:minmax(0,1.3fr) minmax(0,1fr); width:min(1120px,calc(100% - 32px)); }
+.exploration-detail-image { overflow:auto; max-height:calc(100dvh - 32px); background:var(--white); }
+.exploration-detail-image img { display:block; width:100%; height:auto; }
+.is-visual-detail .inspiration-detail-content { max-height:calc(100dvh - 32px); overflow:auto; border-left:1px solid var(--grid); }
+.is-visual-detail .inspiration-detail-content h2 { font-size:30px; }
+@media(max-width:1200px) {
+ .exploration-wall { columns:3; }
+ .exploration-toolbar { flex-wrap:wrap; gap:6px; }
+ .exploration-toolbar h1 { flex:1; }
+ .exploration-toolbar nav { order:4; }
+ .exploration-search { width:170px; }
+ .exploration-hint { display:none; }
+}
+@media(max-width:720px) {
+ .exploration-toolbar { padding:6px 12px; }
+ .exploration-toolbar h1 { width:calc(100% - 145px); flex:auto; }
+ .exploration-search { width:100%; order:3; }
+ .exploration-toolbar nav { order:4; width:100%; }
+ .exploration-toolbar nav button { flex:1; }
+ .exploration-wall { columns:2; padding-inline:8px; }
+ .exploration-dock { gap:4px; padding:6px 8px; }
+ .exploration-dock p { width:100%; padding-block:2px; }
+ .exploration-dock nav { margin-right:auto; }
+ .exploration-camera { gap:0; }
+ .exploration-camera > span { display:none; }
+ .inspiration-main .exploration-camera button { width:44px; }
+ .inspiration-main .exploration-dock nav button { padding-inline:10px; }
+ .inspiration-detail.is-visual-detail[open] { display:block; }
+ .exploration-detail-image { max-height:48dvh; }
+ .is-visual-detail .inspiration-detail-content { max-height:none; overflow:visible; border-left:0; }
+ .is-exploring.capture-is-open .inspiration-opening { top:114px; max-height:calc(100dvh - 130px); }
+}
+@media(prefers-reduced-motion:reduce) { .exploration-tile .exploration-caption { transition:none; } }
+
+/* The chosen field is an immersive viewport. Navigation floats above it. */
+.is-field-experience { --chrome-out:180ms; --chrome-in:560ms; --net-opacity:.3; }
+.is-field-experience .inspiration-main { min-height:100dvh; padding-bottom:0; }
+.is-field-experience .site-footer { display:none; }
+.is-field-experience > .prototype-header { position:fixed; left:0; right:0; top:0; z-index:60; }
+.is-field-experience .mode-field { height:100dvh; }
+.is-field-experience .exploration-viewport { position:fixed; inset:0; z-index:10; width:100%; height:100dvh; min-height:0; }
+.is-field-experience .exploration-toolbar { position:fixed; top:var(--field-header-height,115px); left:0; right:0; z-index:55; background:var(--white); }
+.is-field-experience .exploration-dock { position:fixed; left:0; right:0; bottom:0; z-index:55; }
+.is-field-experience.capture-is-open .inspiration-opening { z-index:85; }
+.field-net { position:fixed; inset:0; z-index:30; pointer-events:none; opacity:var(--net-opacity);
+  background-image:linear-gradient(to right,var(--paper) .5px,transparent .5px,transparent calc(100% - .5px),var(--paper) calc(100% - .5px)),linear-gradient(to bottom,var(--paper) .5px,transparent .5px,transparent calc(100% - .5px),var(--paper) calc(100% - .5px));
+  background-size:calc(var(--module-size) / 2) calc(var(--module-size) / 2); mix-blend-mode:difference;
+}
+.is-field-experience :is(.prototype-header,.exploration-toolbar,.exploration-dock,.field-net) { transition:opacity var(--chrome-in) cubic-bezier(.2,.7,.2,1),transform var(--chrome-in) cubic-bezier(.2,.7,.2,1); }
+.is-field-experience.is-wandering :is(.prototype-header,.exploration-toolbar,.exploration-dock,.field-net) { opacity:0; pointer-events:none; transition-duration:var(--chrome-out); }
+.is-wandering .exploration-tile .exploration-caption { opacity:0; pointer-events:none; }
+.motion-retreat { --chrome-out:260ms; --chrome-in:520ms; }
+.motion-retreat.is-wandering :is(.prototype-header,.exploration-toolbar) { transform:translateY(-14px); }
+.motion-retreat.is-wandering .exploration-dock { transform:translateY(14px); }
+.motion-cut { --chrome-out:0ms; --chrome-in:0ms; }
+.field-motion-control { display:flex; gap:8px; align-items:center; }
+.inspiration-main .field-motion-control select { width:auto; min-height:44px; height:44px; padding:8px; font-size:11px; }
+.inspiration-main .field-motion-control button { padding:0; width:44px; display:grid; place-items:center; }
+.is-field-experience .inspiration-error[role=alert] { position:fixed; z-index:85; top:180px; left:16px; right:16px; background:var(--white); }
+@media(max-width:720px) {
+ .field-net { background-size:var(--module-size) var(--module-size); }
+ .is-field-experience .exploration-dock { gap:6px; }
+ .field-motion-control { gap:6px; margin-left:auto; }
+ .field-motion-control label { display:none; }
+ .is-field-experience .exploration-camera { margin-left:auto; }
+}
+@media(prefers-reduced-motion:reduce) {
+ .is-field-experience :is(.prototype-header,.exploration-toolbar,.exploration-dock,.field-net) { transition:none; transform:none!important; }
+}
+
+/* Blended ink: the labels stay anchored while their white backing dissolves.
+   Backing lives outside each blend group so it cannot invert the imagery. */
+.motion-ink.is-field-experience { --chrome-out:220ms; --chrome-in:320ms; }
+.motion-ink :is(.field-header-plate,.field-toolbar-plate,.field-dock-plate) { position:fixed; left:0; right:0; background:var(--white); pointer-events:none; opacity:1; transition:opacity var(--chrome-in) ease; }
+.motion-ink .field-header-plate { top:0; height:var(--field-header-height,115px); z-index:59; }
+.motion-ink .field-toolbar-plate { top:var(--field-header-height,115px); height:var(--field-toolbar-height,58px); z-index:54; }
+.motion-ink .field-dock-plate { bottom:0; height:var(--field-dock-height,58px); z-index:54; }
+.motion-ink.is-wandering :is(.field-header-plate,.field-toolbar-plate,.field-dock-plate) { opacity:0; transition-duration:var(--chrome-out); }
+.motion-ink.is-field-experience :is(.prototype-header,.prototype-header-primary > *,.prototype-nav a,.exploration-toolbar,.exploration-dock) { background:transparent; }
+.motion-ink.is-field-experience :is(.prototype-header,.exploration-toolbar,.exploration-dock) { opacity:1; transform:none; pointer-events:auto; }
+.motion-ink:is(.is-wandering,.ink-is-blended) :is(.prototype-header,.exploration-toolbar,.exploration-dock) { mix-blend-mode:difference; color:var(--white); isolation:auto; }
+.motion-ink:is(.is-wandering,.ink-is-blended) :is(.prototype-header,.prototype-header-primary,.exploration-toolbar,.exploration-dock) { border-color:transparent; }
+.motion-ink:is(.is-wandering,.ink-is-blended) :is(.prototype-brand span,.prototype-brand small,.prototype-date,.prototype-descriptor,.prototype-nav a,.exploration-toolbar h1,.exploration-dock p,.exploration-toolbar button,.exploration-dock button,.exploration-toolbar input,.exploration-search) { color:var(--white); background:transparent; border-color:transparent; box-shadow:none; }
+.motion-ink:is(.is-wandering,.ink-is-blended) .prototype-nav a.active { background:transparent; box-shadow:none; }
+.motion-ink:is(.is-wandering,.ink-is-blended) .exploration-toolbar button[aria-pressed=true] { color:var(--white); background:transparent; text-decoration:underline; text-underline-offset:4px; }
+.motion-ink:is(.is-wandering,.ink-is-blended) .exploration-search { border-color:transparent; }
+.motion-ink:is(.is-wandering,.ink-is-blended) input::placeholder { color:var(--white); opacity:1; }
+.motion-ink.is-wandering :is(.prototype-header,.exploration-toolbar,.exploration-dock) { opacity:1; pointer-events:none; }
+.motion-ink.is-wandering :is(.prototype-header a,.exploration-toolbar button,.exploration-toolbar input,.exploration-dock button) { pointer-events:auto; }
+.inspiration-main .field-motion-control .field-preview-label { display:flex; align-items:center; gap:10px; width:auto; padding-inline:12px; }
+@supports not (mix-blend-mode:difference) {
+ .motion-ink.is-wandering :is(.field-header-plate,.field-toolbar-plate,.field-dock-plate) { opacity:1; }
+ .motion-ink:is(.is-wandering,.ink-is-blended) :is(.prototype-header,.exploration-toolbar,.exploration-dock,.prototype-header a,.prototype-header span,.prototype-header small,.prototype-header p,.exploration-toolbar button,.exploration-dock button,.exploration-toolbar input) { color:var(--ink); }
+}
+@media(prefers-reduced-motion:reduce) {
+ .motion-ink :is(.field-header-plate,.field-toolbar-plate,.field-dock-plate) { transition:none; }
+}
+/* Pseudo-elements cannot be selected inside :is(); clear the header's
+   perimeter paint explicitly, otherwise it becomes an inverted image band. */
+.motion-ink.is-field-experience .prototype-header::before { background:transparent; }
+.motion-ink:is(.is-wandering,.ink-is-blended) .prototype-header::before,
+.motion-ink:is(.is-wandering,.ink-is-blended) .prototype-header::after { border-color:transparent; }
+.motion-ink:is(.is-wandering,.ink-is-blended) .prototype-header-primary > *::after,
+.motion-ink:is(.is-wandering,.ink-is-blended) .prototype-nav a::after { background:transparent; }
+
+/* Preserve the horizontal navigation rail without painting a scrollbar over images. */
+.motion-ink:is(.is-wandering,.ink-is-blended) .prototype-nav { scrollbar-color:transparent transparent; }
+.motion-ink:is(.is-wandering,.ink-is-blended) .prototype-nav::-webkit-scrollbar,
+.motion-ink:is(.is-wandering,.ink-is-blended) .prototype-nav::-webkit-scrollbar-thumb,
+.motion-ink:is(.is-wandering,.ink-is-blended) .prototype-nav::-webkit-scrollbar-track { background:transparent; }
+
+/* The selected revision preserves the masthead cell while the frame dissolves. */
+.motion-brand.is-field-experience { --chrome-out:220ms; --chrome-in:400ms; --net-opacity:.1; }
+.motion-brand.is-field-experience .prototype-header,
+.motion-brand.is-field-experience.is-wandering .prototype-header { background:transparent; opacity:1; pointer-events:none; transition:none; }
+.motion-brand .prototype-header::before,
+.motion-brand .prototype-header::after,
+.motion-brand .prototype-header-primary,
+.motion-brand .prototype-header-primary > :not(.prototype-brand),
+.motion-brand .prototype-nav { transition:opacity var(--chrome-in) ease,border-color var(--chrome-in) ease; }
+.motion-brand .prototype-brand { pointer-events:auto; background:var(--white); }
+.motion-brand .prototype-brand::before { content:""; position:absolute; inset:calc(0px - var(--grid-inset)); border:1px solid var(--gridline); pointer-events:none; }
+.motion-brand .prototype-header-primary > :not(.prototype-brand),
+.motion-brand .prototype-nav { pointer-events:auto; }
+.motion-brand.is-wandering .prototype-header::before,
+.motion-brand.is-wandering .prototype-header::after,
+.motion-brand.is-wandering .prototype-header-primary > :not(.prototype-brand),
+.motion-brand.is-wandering .prototype-nav { opacity:0; pointer-events:none; transition-duration:var(--chrome-out); }
+.motion-brand.is-wandering .prototype-header-primary { background:transparent; border-color:transparent; }
+.motion-brand.is-wandering .prototype-brand { opacity:1; }
+@media(prefers-reduced-motion:reduce) {
+ .motion-brand .prototype-header::before,.motion-brand .prototype-header::after,
+ .motion-brand .prototype-header-primary,.motion-brand .prototype-header-primary > :not(.prototype-brand),
+ .motion-brand .prototype-nav { transition:none; }
+}
+
+/* The brand remains an opaque anchor, without a visible cell outline. */
+.motion-brand .prototype-brand { isolation:isolate; z-index:1; }
+.motion-brand .prototype-brand::before { inset:calc(0px - var(--grid-inset) - .5px); border:0; background:var(--white); z-index:-1; }
+.motion-brand .prototype-brand::after { display:none; }
+
+.abundance-notice { position:fixed; z-index:70; left:14px; bottom:calc(var(--field-dock-height,58px) + 12px); display:flex; flex-wrap:wrap; align-items:center; gap:8px; max-width:calc(100% - 28px); padding:6px 12px; background:var(--white); color:var(--ink); font:400 11px/1.4 var(--font-ui); }
+.inspiration-main .abundance-notice button { min-height:44px; font-size:11px; padding-inline:10px; }

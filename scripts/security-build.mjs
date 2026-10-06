@@ -18,7 +18,7 @@ export function securityBuildPlugin() {
           "script-src 'self' https://challenges.cloudflare.com",
           "style-src 'self' 'unsafe-inline'",
           "font-src 'self'",
-          "img-src 'self' data:",
+          "img-src 'self' data: https:",
           `connect-src 'self' ${endpoint.origin} https://challenges.cloudflare.com`,
           "frame-src https://challenges.cloudflare.com",
           "object-src 'none'",

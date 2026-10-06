@@ -89,3 +89,16 @@ Curated feeds are listed in `data/sources.json`. Each entry can include a homepa
 See [the 6 October 2026 security review](security-review-2026-10-06.md) for findings, fixes, rollout requirements, evidence, and remaining limits. `npm test` includes malicious URL, DNS/redirect, request-body, OAuth, and concurrent quota regressions. Both npm and pnpm lockfiles are maintained; audit both when updating dependencies. The scheduled publication workflow runs security regressions before accessing crawler credentials.
 
 Public crawls use DNS validation and socket pinning on each redirect, HTTP/HTTPS web ports only, bounded response bodies, and a total timeout. Public builds include a Content-Security-Policy allowing the configured HTTPS intake and Cloudflare Turnstile. The one-time Gmail setup helper uses state validation and S256 PKCE. No credentials are embedded in the site.
+
+
+## Private inspiration canvas
+
+Open `#/inspiration` for the weekly Image bands canvas. Captures live in IndexedDB in each browser, with no mandatory tags. Paste links or Chrome tab-share text, import bookmark HTML or a JSON backup, search/filter in Index, save crawler discoveries, and export JSON/CSV. Weeks follow Europe/Berlin and start on Monday. The visual detail supports source links, optional tags, keyboard navigation, zoom and touch inspection.
+
+GitHub Pages publishes the UI and empty initial collection, never the owner’s records or images. Public HTTPS preview URLs in a reviewed JSON backup are retained; private/local/unsafe image URLs are discarded. Static capture uses URL-derived metadata. Automatic page metadata, AI summaries and Raindrop/Savee/Pinterest API sync require the loopback-only local service: `npm run inspiration` (Node 24). Keep credentials in an ignored `.env`; keep `.private/` and `.auth/` out of Git. Local and public origins do not silently share databases. Provider adapters have fixture tests; publication does not establish new live account connections.
+
+Mobile: bookmark the capture URL, or install the PWA in Android Chrome and select What I came across in the share sheet. The service worker accepts shared URLs/text into a private draft; browser/platform installation is required. iOS and browsers without Share Target use copy/paste. Offline capture needs an online app visit first. Physical Android sharing remains unverified.
+
+Desktop: save the three files in `public/capture-extension/` to one folder, enable Chrome Developer mode and Load unpacked. Set the public app URL, then choose current page, selected tabs or all tabs in the window. No browser history or other app conversations are read.
+
+Validate with `npm run build`, `npm test` and `npm run test:inspiration`. Source configuration and account screens describe the local-service requirement rather than promise cloud sync.

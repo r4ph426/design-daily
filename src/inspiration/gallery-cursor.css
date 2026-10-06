@@ -1,0 +1,10 @@
+.gallery-dot-cursor {position:fixed;left:0;top:0;z-index:45;pointer-events:none;visibility:hidden;}
+.gallery-dot-cursor.is-visible {visibility:visible;}
+.gallery-dot-cursor span {position:absolute;left:0;top:0;width:10px;height:10px;transform:translate(-50%,-50%);border-radius:50%;background:var(--coral);transition:width 120ms ease-out,height 120ms ease-out;}
+.gallery-dot-cursor.is-over-reference span {width:24px;height:24px;}
+@media(hover:hover) and (pointer:fine){
+ .weekly-canvas.has-dot-cursor :is(.weekly-art-viewport,.weekly-wall,.weekly-blank),
+ .weekly-canvas.has-dot-cursor :is(.weekly-reference,.weekly-visual),
+ .weekly-canvas.has-dot-cursor :is(.weekly-reference,.weekly-visual) * {cursor:none;}
+}
+@media(prefers-reduced-motion:reduce){.gallery-dot-cursor span{transition:none;}}

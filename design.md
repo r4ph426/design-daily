@@ -287,3 +287,8 @@ Use one shared coral dot across every Design Daily route and the standalone prot
 
 
 Simple Close icon (6 October 2026): all Close actions use the same shared X made from two diagonal strokes. This replaces Guidance’s outlined cross everywhere, including reader controls, weekly archive, the small image-heading button and large hover cursor. Preserve each control’s size, ink, label and behaviour.
+
+
+### Inspiration canvas published · 6 October 2026
+
+The user authorised publishing What I came across to main. Use V2 Image bands by default, retain week pagination and earlier layouts, and expose the inspiration tab across the shared navigation with Privacy at the right. Keep personal records in private per-browser IndexedDB and never ship owner captures. Public capture/import/export and crawler-to-personal saving work without credentials; enrichment and provider sync remain local-service capabilities. Header, point cursor and simple line Close icons use the existing shared system.

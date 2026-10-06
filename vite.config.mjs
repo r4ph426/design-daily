@@ -1,5 +1,6 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import { inspirationVitePlugin } from "./scripts/inspiration/service.mjs";
 import { securityBuildPlugin } from "./scripts/security-build.mjs";
 
 export default defineConfig(({ mode }) => ({
@@ -20,5 +21,5 @@ export default defineConfig(({ mode }) => ({
       clientFiles: ["./src/main.jsx"],
     },
   },
-  plugins: [react(), securityBuildPlugin()],
+  plugins: [react(), inspirationVitePlugin(), securityBuildPlugin()],
 }));

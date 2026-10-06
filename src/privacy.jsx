@@ -71,6 +71,7 @@ export function PrivacyPage() {
               <h2 id="reading-title">Reading & saving</h2>
               <p>You can read Today, Archive, and Toolbox without signing in. This app does not add an analytics service. GitHub Pages hosts the site and logs visitors’ IP addresses for security. The Inter and Neue Reckless typefaces are served from this site.</p>
               <p>Icons use <a href="https://streamlinehq.com/" target="_blank" rel="noreferrer">Guidance by Streamline</a> under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a>, with colour and stroke weight adapted for this interface. Some specialist symbols use Phosphor.</p>
+              <p>What I came across stores your personal references, tags, notes and projects in this browser’s IndexedDB. They are not uploaded to GitHub or shared with other visitors. Each browser has its own collection; JSON or CSV export creates a backup. Remote previews contact the image provider without a referrer. A locally installed owner service can enrich and sync records on this computer; the public site cannot connect to that service or your private accounts.</p>
               <p>Question bookmarks, tool bookmarks, open question panels, and a random article-submission identifier are stored in your browser’s local storage. They stay on this device unless you clear them. Your saved items are not sent to the publication workflow.</p>
             </div>
           </section>

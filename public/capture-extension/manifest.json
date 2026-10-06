@@ -1,0 +1,8 @@
+{
+  "manifest_version": 3,
+  "name": "What I came across",
+  "version": "1.0.0",
+  "description": "Send current, selected or all window tabs to your private Design Daily capture draft.",
+  "permissions": ["tabs", "storage"],
+  "action": { "default_popup": "popup.html" }
+}

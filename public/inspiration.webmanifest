@@ -1,0 +1,33 @@
+{
+  "id": "./#inspiration",
+  "name": "What I came across",
+  "short_name": "Came across",
+  "description": "ra.re \u2014 Design Assets & Sources. Private inspiration capture inside Design Daily.",
+  "start_url": "./#/inspiration/capture",
+  "scope": "./",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "inspiration-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "inspiration-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "share_target": {
+    "action": "./inspiration-share",
+    "method": "POST",
+    "enctype": "application/x-www-form-urlencoded",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  }
+}
