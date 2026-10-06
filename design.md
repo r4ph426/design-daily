@@ -292,3 +292,7 @@ Simple Close icon (6 October 2026): all Close actions use the same shared X made
 ### Inspiration canvas published · 6 October 2026
 
 The user authorised publishing What I came across to main. Use V2 Image bands by default, retain week pagination and earlier layouts, and expose the inspiration tab across the shared navigation with Privacy at the right. Keep personal records in private per-browser IndexedDB and never ship owner captures. Public capture/import/export and crawler-to-personal saving work without credentials; enrichment and provider sync remain local-service capabilities. Header, point cursor and simple line Close icons use the existing shared system.
+
+### Today headline revision
+
+The approved opening revision gives the edition headline three square columns, the crawl perspective two, and the question overview two above 1200px. At tablet widths, retain the three-column headline, move the perspective below it across the left four modules, and give the question overview the right three modules. Generate headlines of 8 to 11 purposeful words with one meaningful coral italic phrase; use HighlightedText to render double-asterisk emphasis in both the edition headline and question titles. Keep comfortable display leading, intrinsic whole-module heights, the open row above intake, and the existing full-width mobile stack. The user approved publication to main on 6 October 2026.

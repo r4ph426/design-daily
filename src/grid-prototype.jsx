@@ -140,7 +140,7 @@ function EditorialSpread({ question, records, date, editorialTitle, isOpen, isSa
       <div className="editorial-heading content-panel">
         <span className="editorial-sequence" aria-hidden="true">{question.id}</span>
         <div className="editorial-heading-copy">
-          <h2 id={`prototype-title-${question.id}`}><button type="button" aria-expanded={isOpen} aria-controls={detailId} onClick={onToggle}>{editorialTitle}</button></h2>
+          <h2 id={`prototype-title-${question.id}`}><button type="button" aria-expanded={isOpen} aria-controls={detailId} onClick={onToggle}><HighlightedText text={editorialTitle} as="em" /></button></h2>
           <div className="editorial-tags" aria-label="Question categories">{categories.map((category) => <a key={category} href={editorialHref(`/archive?category=${encodeURIComponent(category)}`)}>{category} <span aria-hidden="true">↗</span></a>)}{question.aiLens && <AiLensBadge />}</div>
         </div>
       </div>
@@ -181,7 +181,7 @@ function TodayIntake() {
 
 function TodayOpening({ edition, questions, headline, summary, mobile }) {
   return <section className="opening" id="today" aria-label="Today’s edition overview">
-    <div className="opening-copy content-panel"><p className="eyebrow">Today <span>·</span> {questions.length} questions worth asking</p><h1>{headline}</h1></div>
+    <div className="opening-copy content-panel"><p className="eyebrow">Today <span>·</span> {questions.length} questions worth asking</p><h1><HighlightedText text={headline} as="em" /></h1></div>
     <div className="opening-summary content-panel"><p>{summary}</p><div className="crawl-line"><span><Clock size={15} aria-hidden="true" /> Last crawl {crawlDay(edition.date)} · {edition.crawlCompletedAt}</span><small>{edition.sourceCount} total sources · {edition.webSourceCount} web sources · {edition.teamContributionCount} team links</small></div></div>
     {!mobile && <TodayIntake />}
     <aside className="question-index content-panel" aria-label="Today’s four questions"><div className="question-index-content"><p className="section-kicker">The questions</p><ol>{questions.map((question, index) => (

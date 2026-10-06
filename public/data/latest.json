@@ -8,7 +8,7 @@
   "sourceCount": 18,
   "webSourceCount": 4,
   "teamContributionCount": 1,
-  "headline": "AI Reveals Design’s Blind Spots",
+  "headline": "AI is exposing **the blind spots** in design work.",
   "summary": "AI is no longer just a tool inside design work, it is exposing how shallow our prompts, judgments, and workflows already were. The sharper question now is whether teams use it to raise standards or simply automate their blind spots.",
   "generatedAt": "2026-10-06T02:57:06.925Z",
   "inboxConnected": true,
@@ -21,7 +21,7 @@
         "Culture"
       ],
       "aiLens": true,
-      "editorialTitle": "Prompts as self-portrait",
+      "editorialTitle": "Prompts as **self-portrait**",
       "question": "If prompts expose the thinker behind the task, what exactly are teams revealing about their own design culture when they ask AI for answers instead of structure?",
       "answer": "The strongest signal is the claim that prompting is a self-portrait, paired with the argument that organizations are outsourcing not just execution but context. That makes AI a mirror for missing documentation, weak assumptions, and vague briefs.",
       "why": "It frames AI as a diagnostic for process maturity, not a productivity gimmick.",
@@ -79,7 +79,7 @@
         "Culture"
       ],
       "aiLens": true,
-      "editorialTitle": "Taste under pressure",
+      "editorialTitle": "Taste **under pressure**",
       "question": "If taste is becoming the last human advantage, why are designers building a culture that makes taste harder to develop and easier to fake?",
       "answer": "The strongest signal argues that taste is being celebrated at the same time teams are de-risking the experimentation that builds it. AI is accelerating curation, but that may be shrinking the very judgment it claims to elevate.",
       "why": "It challenges the industry’s most comfortable myth about human differentiation.",
@@ -137,7 +137,7 @@
         "Process"
       ],
       "aiLens": true,
-      "editorialTitle": "Automation before strategy",
+      "editorialTitle": "Automation **before strategy**",
       "question": "When AI agents can find files, run interviews, and ship output in parallel, are teams fixing workflow friction or just multiplying unfinished thinking?",
       "answer": "The strongest signals show AI being used as a first-response layer for search, research, and production, but the accompanying commentary warns against choosing tools before identifying the bottleneck. That is a process story about diagnosis, not automation.",
       "why": "It separates operational convenience from actual design leverage.",
@@ -205,7 +205,7 @@
         "UI"
       ],
       "aiLens": false,
-      "editorialTitle": "Cards still mislead",
+      "editorialTitle": "Cards still **mislead**",
       "question": "If clean KPI cards can pass design review while hiding the truth, why do teams keep confusing visual polish with decision quality?",
       "answer": "The signal here is not a new component pattern but a reminder that dashboard clarity depends on details users never notice until they are wrong. That makes UI review look competent while still allowing misleading data to ship.",
       "why": "It argues that surface neatness is an unreliable proxy for honest interface design.",

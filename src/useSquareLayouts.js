@@ -97,7 +97,11 @@ export function useSquareLayouts(rootRef) {
         return rows;
       };
       root.querySelectorAll(".opening").forEach((layout) => {
-        fit(layout, "hero", ":scope > .opening-copy, :scope > .opening-summary", 2);
+        if (width <= 1200) {
+          const title = fit(layout, "title", ":scope > .opening-copy", 2);
+          const summary = fit(layout, "summary", ":scope > .opening-summary");
+          write(layout, "--fit-hero", title + summary);
+        } else fit(layout, "hero", ":scope > .opening-copy, :scope > .opening-summary", 2);
         fit(layout, "index", ":scope > .question-index", 2);
         fit(layout, "intake", ":scope > .intake-cell", 2);
       });
