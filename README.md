@@ -50,12 +50,12 @@ Optional repository variables:
 The static site never receives a GitHub token. `submission-worker/` contains the small server-side intake that validates URLs, applies rate limits, checks for duplicates, and creates the GitHub issue.
 
 1. Create a Cloudflare Turnstile widget for the Pages domain.
-2. Create a Workers KV namespace and bind it as `SUBMISSION_KV`.
-3. Copy `submission-worker/wrangler.toml.example` to `submission-worker/wrangler.toml` and add the KV namespace ID.
+2. Use the SQLite-backed `SubmissionRateLimit` Durable Object for atomic submission quotas.
+3. Copy `submission-worker/wrangler.toml.example` to `submission-worker/wrangler.toml`. Existing deployments must add its `SUBMISSION_RATE_LIMIT` binding and migration together with the new Worker code. Without the binding, intake returns 503 instead of accepting unmetered submissions. The former `SUBMISSION_KV` binding is no longer used; do not delete its namespace as part of the rollout.
 4. Add Worker secrets named `GITHUB_TOKEN` and `TURNSTILE_SECRET`. Use a fine-grained GitHub token with Issues read and write access only for this repository.
 5. Deploy the Worker. The production Worker URL and public Turnstile site key are included as safe frontend defaults; the optional GitHub Actions variables `ARTICLE_SUBMISSION_ENDPOINT` and `TURNSTILE_SITE_KEY` can override them.
 
-The Worker allows up to five links per browser per hour and 50 per network per day. It rejects URLs already queued or found in a completed crawl. After a successful edition is written, the crawler closes the processed issues so later duplicate checks can distinguish queued links from crawl history.
+The Worker allows up to five verified attempts per browser per UTC hour and 50 per network per UTC day, using transactional counters that remain correct under simultaneous requests. It requires server-side Turnstile verification for the requesting hostname; there is no production verification bypass. Local UI reviews use the existing browser-only mock. It rejects URLs already queued or found in a completed crawl. After a successful edition is written, the crawler closes the processed issues so later duplicate checks can distinguish queued links from crawl history. Active quota counters expire within two hours or two days; Cloudflare's recovery history can retain copies for up to 30 days.
 
 ### 4. Enable GitHub Pages
 
@@ -83,3 +83,9 @@ In local development, article submission uses a browser-only mock so the accepte
 ## Source configuration
 
 Curated feeds are listed in `data/sources.json`. Each entry can include a homepage URL, a direct feed URL, one of the three categories, and UI or UX tags. Open GitHub issues whose titles begin with `Shared article:` are also crawled on the next scheduled run.
+
+## Security verification
+
+See [the 6 October 2026 security review](security-review-2026-10-06.md) for findings, fixes, rollout requirements, evidence, and remaining limits. `npm test` includes malicious URL, DNS/redirect, request-body, OAuth, and concurrent quota regressions. Both npm and pnpm lockfiles are maintained; audit both when updating dependencies. The scheduled publication workflow runs security regressions before accessing crawler credentials.
+
+Public crawls use DNS validation and socket pinning on each redirect, HTTP/HTTPS web ports only, bounded response bodies, and a total timeout. Public builds include a Content-Security-Policy allowing the configured HTTPS intake and Cloudflare Turnstile. The one-time Gmail setup helper uses state validation and S256 PKCE. No credentials are embedded in the site.

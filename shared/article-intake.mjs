@@ -1,17 +1,12 @@
+import { publicHttpUrl } from "./public-url.mjs";
+
 const TRACKING_PARAMETER = /^(utm_|mc_|ref$|referrer$|source$|fbclid$|gclid$)/i;
 
 export function canonicalArticleUrl(rawUrl = "") {
   try {
     const value = rawUrl.trim();
     const candidate = /^[a-z][a-z\d+.-]*:\/\//i.test(value) ? value : `https://${value}`;
-    const parsed = new URL(candidate);
-    if (!/^https?:$/.test(parsed.protocol)) return "";
-    if (!parsed.hostname || (!parsed.hostname.includes(".") && !/^\[.*\]$/.test(parsed.hostname))) return "";
-    if (/^(localhost|.+\.localhost)$/i.test(parsed.hostname)) return "";
-    if (/^(127\.|0\.|10\.|192\.168\.|169\.254\.)/.test(parsed.hostname)) return "";
-    if (/^172\.(1[6-9]|2\d|3[01])\./.test(parsed.hostname)) return "";
-    const host = parsed.hostname.replace(/^\[|\]$/g, "");
-    if (host.includes(":") && (host === "::1" || host.startsWith("fd") || host.startsWith("fc") || host.startsWith("fe80:"))) return "";
+    const parsed = publicHttpUrl(candidate);
 
     parsed.hash = "";
     parsed.hostname = parsed.hostname.toLowerCase().replace(/^www\./, "");

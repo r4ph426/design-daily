@@ -1,6 +1,7 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import process from "node:process";
+import { fetchPublicText } from "./lib/public-fetch.mjs";
 import {
   dedupeCandidates,
   normalizeGitHubCandidate,
@@ -26,13 +27,8 @@ function pageMetadata(html, url) {
 
 async function checkKnownSource(url) {
   try {
-    const response = await fetch(url, {
-      headers: { "user-agent": userAgent, accept: "text/html,application/xhtml+xml" },
-      redirect: "follow",
-      signal: AbortSignal.timeout(20_000),
-    });
-    if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
-    return { url, status: "Available", finalUrl: response.url, ...pageMetadata(await response.text(), response.url) };
+    const response = await fetchPublicText(url);
+    return { url, status: "Available", finalUrl: response.url, ...pageMetadata(response.text, response.url) };
   } catch (error) {
     return { url, status: "Check failed", error: error.message };
   }

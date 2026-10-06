@@ -49,7 +49,7 @@ export function PrivacyPage() {
           <p><strong>Read without an account.</strong> Your bookmarks and reading state stay in this browser.</p>
           <p><strong>Shared links are public.</strong> A submitted URL becomes a GitHub issue for the next crawl.</p>
           <p><strong>Newsletters stay server-side.</strong> Published editions contain editorial synthesis and source references, not raw inbox messages.</p>
-          <span className="privacy-updated">Updated 30 September 2026</span>
+          <span className="privacy-updated">Updated 6 October 2026</span>
         </aside>
       </section>
 
@@ -104,7 +104,7 @@ export function PrivacyPage() {
               <div className="privacy-service-list">
                 <p><strong>GitHub</strong><span>Hosts the public site, versioned editions, public contribution issues, and scheduled crawl. OAuth and API credentials are held in GitHub Actions secrets.</span><a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noreferrer">GitHub privacy ↗</a></p>
                 <p><strong>Google</strong><span>Holds the dedicated newsletter inbox for the server-side crawl.</span><a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer">Google privacy ↗</a></p>
-                <p><strong>Cloudflare</strong><span>Runs article intake and Turnstile verification, with temporary rate-limit data in Workers KV.</span><a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noreferrer">Cloudflare privacy ↗</a></p>
+                <p><strong>Cloudflare</strong><span>Runs article intake and Turnstile verification, with temporary rate-limit counters in Durable Objects. Cloudflare may retain recovery copies for up to 30 days.</span><a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noreferrer">Cloudflare privacy ↗</a></p>
                 <p><strong>OpenAI</strong><span>Processes source material submitted by the server-side crawl for editorial synthesis.</span><a href="https://openai.com/policies/privacy-policy/" target="_blank" rel="noreferrer">OpenAI privacy ↗</a></p>
               </div>
               <p>Public GitHub issues and published editions remain available in the repository and its history unless the team removes them. The crawler reads newsletter messages during a run and does not commit raw message bodies to the repository. Each provider also applies its own retention practices.</p>

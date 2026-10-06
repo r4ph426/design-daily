@@ -1,3 +1,4 @@
+import { safeExternalHref } from "../shared/public-url.mjs";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { BookmarkSimple, CaretDown, Clock } from "@phosphor-icons/react";
 import { ArticleIntake } from "./App.jsx";
@@ -105,7 +106,7 @@ function SignalDetails({ question, records, date, onClose }) {
         <thead><tr><th>Source</th><th>What happened</th><th>What changes</th><th>Verdict</th></tr></thead>
         <tbody>{question.signals.map((signal, index) => (
           <tr key={`${question.id}-${index}`}>
-            <td data-label="Source"><a className="signal-source-title" href={signal.url} target="_blank" rel="noopener noreferrer">{signal.title} <span aria-hidden="true">↗</span></a><span className="signal-publisher">{signal.source}</span><span className="signal-source-meta">{signal.kind} · {signal.timing}</span></td>
+            <td data-label="Source"><a className="signal-source-title" href={safeExternalHref(signal.url)} target="_blank" rel="noopener noreferrer">{signal.title} <span aria-hidden="true">↗</span></a><span className="signal-publisher">{signal.source}</span><span className="signal-source-meta">{signal.kind} · {signal.timing}</span></td>
             <td data-label="What happened"><div className="signal-copy"><HighlightedText text={signal.happened} /></div></td>
             <td data-label="What changes"><div className="signal-copy"><HighlightedText text={signal.changes} /></div></td>
             <td data-label="Verdict"><span className={signal.verdict === "Must read" ? "must-read" : ""}>{signal.verdict}</span></td>
@@ -160,7 +161,7 @@ function EditorialSpread({ question, records, date, editorialTitle, isOpen, isSa
       <div className="source-panel content-panel">
         <p className="section-kicker">{question.signals.length === 1 ? "Source" : "Sources"} <span>·</span> {question.signals.length}</p>
         <ol className="prototype-source-list">{question.signals.map((signal, signalIndex) => (
-          <li key={`${question.id}-${signalIndex}`}><a href={signal.url} target="_blank" rel="noopener noreferrer"><span className="source-title">{signal.title}</span><span className="source-meta">{sourceDomain(signal)} · {signal.kind} · {signal.timing}</span><span className="source-external" aria-hidden="true">↗</span></a></li>
+          <li key={`${question.id}-${signalIndex}`}><a href={safeExternalHref(signal.url)} target="_blank" rel="noopener noreferrer"><span className="source-title">{signal.title}</span><span className="source-meta">{sourceDomain(signal)} · {signal.kind} · {signal.timing}</span><span className="source-external" aria-hidden="true">↗</span></a></li>
         ))}</ol>
         <SecondaryButton ref={disclosureRef} id={`prototype-disclosure-${question.id}`} className="signals-disclosure" aria-expanded={isOpen} aria-controls={detailId} onClick={onToggle}>{isOpen ? "Close source notes" : "Read source notes"}<CaretDown size={18} aria-hidden="true" /></SecondaryButton>
       </div>

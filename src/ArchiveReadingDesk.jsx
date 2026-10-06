@@ -1,3 +1,4 @@
+import { safeExternalHref } from "../shared/public-url.mjs";
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { ArrowLeft, ArrowRight, ArrowUpRight, BookmarkSimple, Check, LinkSimple, MagnifyingGlass, X } from "@phosphor-icons/react";
 import { AiLensBadge } from "./AiLensBadge.jsx";
@@ -349,7 +350,7 @@ export function ArchiveReadingDesk({ records, ready, bookmarks, onBookmark, with
           <section className="desk-signals" aria-labelledby="desk-signals-title">
             <h3 id="desk-signals-title">Signals &amp; Sources</h3>
             {(selected.signals || []).map((signal, index) => <article className="desk-signal" key={`${selected.key}:${index}`}>
-              <div className="desk-source-topline"><a className="desk-source-link" href={signal.url} target="_blank" rel="noopener noreferrer"><span>{signal.title}</span><ArrowUpRight size={16} aria-hidden="true" /></a>{signal.verdict === "Must read" && <span className="desk-source-verdict">Must read</span>}</div>
+              <div className="desk-source-topline"><a className="desk-source-link" href={safeExternalHref(signal.url)} target="_blank" rel="noopener noreferrer"><span>{signal.title}</span><ArrowUpRight size={16} aria-hidden="true" /></a>{signal.verdict === "Must read" && <span className="desk-source-verdict">Must read</span>}</div>
               <p className="desk-source-meta">{signal.source} · {sourceDomain(signal)} · {signal.kind} · {signal.timing}</p>
               {mobile ? <details className="desk-signal-disclosure"><summary className="secondary-button">Read signal notes</summary><div className="desk-signal-notes"><div><h4>What happened</h4><p><HighlightedText text={signal.happened} /></p></div><div><h4>What changes</h4><p><HighlightedText text={signal.changes} /></p></div></div></details> : <div className="desk-signal-notes"><div><h4>What happened</h4><p><HighlightedText text={signal.happened} /></p></div><div><h4>What changes</h4><p><HighlightedText text={signal.changes} /></p></div></div>}
             </article>)}

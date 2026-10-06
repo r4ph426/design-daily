@@ -15,6 +15,7 @@ import {
   scoreItem,
 } from "./lib/crawler.mjs";
 import { CATEGORIES, validateCategoryRecord } from "../src/taxonomy.js";
+import { fetchPublicText } from "./lib/public-fetch.mjs";
 
 const root = process.cwd();
 const sourcesPath = path.join(root, "data", "sources.json");
@@ -25,14 +26,8 @@ const dryRun = process.argv.includes("--dry-run");
 const lookbackHours = Number(process.env.CRAWL_LOOKBACK_HOURS || 72);
 const userAgent = "design-daily-crawler/0.1 (+https://github.com/r4ph426/design-daily)";
 
-async function fetchText(url, options = {}) {
-  const response = await fetch(url, {
-    ...options,
-    headers: { "user-agent": userAgent, accept: "application/rss+xml, application/atom+xml, application/xml, text/xml, text/html", ...options.headers },
-    signal: AbortSignal.timeout(20_000),
-  });
-  if (!response.ok) throw new Error(`${response.status} ${response.statusText} for ${url}`);
-  return response.text();
+async function fetchText(url) {
+  return (await fetchPublicText(url)).text;
 }
 
 function pageToItem(html, source, now = new Date()) {

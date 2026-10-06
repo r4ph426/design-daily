@@ -1,3 +1,4 @@
+import { safeExternalHref } from "../shared/public-url.mjs";
 import { useEffect, useMemo, useState } from "react";
 import { BookmarkSimple, MagnifyingGlass } from "@phosphor-icons/react";
 import toolboxData from "../data/toolbox.json";
@@ -93,14 +94,14 @@ export function PrototypeArchive({ records, ready, bookmarks, onBookmark, initia
 }
 
 function WeeklyDiscovery({ signal }) {
-  return <article className="prototype-weekly-card content-panel"><span className="prototype-weekly-number">{signal.id}</span><div><h3>{signal.title}</h3><p className="prototype-weekly-verdict">{signal.verdict}</p><p>{signal.summary}</p><a href={signal.url} target="_blank" rel="noopener noreferrer">{signal.source} <span aria-hidden="true">↗</span></a></div></article>;
+  return <article className="prototype-weekly-card content-panel"><span className="prototype-weekly-number">{signal.id}</span><div><h3>{signal.title}</h3><p className="prototype-weekly-verdict">{signal.verdict}</p><p>{signal.summary}</p><a href={safeExternalHref(signal.url)} target="_blank" rel="noopener noreferrer">{signal.source} <span aria-hidden="true">↗</span></a></div></article>;
 }
 
 function PrototypeToolRow({ tool, saved, onBookmark }) {
   return <article className="prototype-tool-row module-layout">
     <div className="prototype-tool-number content-panel"><span>{tool.id}</span><small>{tool.type}</small></div>
-    <div className="prototype-tool-description content-panel"><h3><a href={tool.url} target="_blank" rel="noopener noreferrer">{tool.title} <span aria-hidden="true">↗</span></a></h3><p>{tool.recommendation}</p><small>{tool.practices.join(" · ")}</small></div>
-    <div className="prototype-tool-evidence content-panel"><p className="eyebrow">Our verdict</p><strong className={tool.verdict === "Best practice" ? "is-best" : ""}>{tool.verdict}</strong><small>{tool.confidence} confidence · Reviewed {tool.reviewed}</small><a href={tool.url} target="_blank" rel="noopener noreferrer">{tool.source} <span aria-hidden="true">↗</span></a></div>
+    <div className="prototype-tool-description content-panel"><h3><a href={safeExternalHref(tool.url)} target="_blank" rel="noopener noreferrer">{tool.title} <span aria-hidden="true">↗</span></a></h3><p>{tool.recommendation}</p><small>{tool.practices.join(" · ")}</small></div>
+    <div className="prototype-tool-evidence content-panel"><p className="eyebrow">Our verdict</p><strong className={tool.verdict === "Best practice" ? "is-best" : ""}>{tool.verdict}</strong><small>{tool.confidence} confidence · Reviewed {tool.reviewed}</small><a href={safeExternalHref(tool.url)} target="_blank" rel="noopener noreferrer">{tool.source} <span aria-hidden="true">↗</span></a></div>
     <div className="prototype-tool-meta content-panel"><span>{tool.categories.join(" · ")}</span><span>{tool.access} · {tool.setup}</span><button type="button" aria-pressed={saved} onClick={onBookmark}>{saved ? "Bookmarked" : "Bookmark tool"}<BookmarkSimple size={17} weight={saved ? "fill" : "regular"} aria-hidden="true" /></button></div>
   </article>;
 }

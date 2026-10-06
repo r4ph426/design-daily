@@ -1,4 +1,5 @@
 import { createHash } from "node:crypto";
+import { publicHttpUrl } from "../../shared/public-url.mjs";
 import { validateCategoryRecord } from "../../src/taxonomy.js";
 
 const DESIGN_TERMS = [
@@ -38,7 +39,7 @@ export function decodeEntities(value = "") {
     .replace(/&gt;/gi, ">")
     .replace(/&quot;/gi, '"')
     .replace(/&#39;|&apos;/gi, "'")
-    .replace(/&#(\d+);/g, (_, code) => String.fromCodePoint(Number(code)));
+    .replace(/&#(\d+);/g, (_, code) => Number(code) <= 0x10ffff ? String.fromCodePoint(Number(code)) : "");
 }
 
 export function htmlToText(value = "") {
@@ -58,7 +59,7 @@ export function decodeBase64Url(value = "") {
 
 export function canonicalUrl(rawUrl = "") {
   try {
-    const parsed = new URL(rawUrl);
+    const parsed = publicHttpUrl(rawUrl);
     parsed.hash = "";
     for (const key of [...parsed.searchParams.keys()]) {
       if (/^(utm_|mc_|ref$|referrer$|source$)/i.test(key)) parsed.searchParams.delete(key);
@@ -154,7 +155,7 @@ function firstUsefulUrl(value = "") {
   const links = [...new Set([...anchorLinks, ...rawLinks])];
   for (const link of links) {
     try {
-      const parsed = new URL(decodeEntities(link));
+      const parsed = publicHttpUrl(decodeEntities(link));
       if (!/^https?:$/.test(parsed.protocol) || isDocumentInfrastructureUrl(parsed)) continue;
       if (/(unsubscribe|preferences|tracking|pixel|list-manage|mailchi\.mp|click\.convertkit|email\.mail|trk\.)/i.test(`${parsed.hostname}${parsed.pathname}`)) continue;
       parsed.search = "";

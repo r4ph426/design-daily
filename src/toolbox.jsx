@@ -1,3 +1,4 @@
+import { safeExternalHref } from "../shared/public-url.mjs";
 import { useMemo, useState } from "react";
 import {
   ArrowUpRight,
@@ -63,7 +64,7 @@ function WeeklySignal({ signal }) {
         <h3>{signal.title}</h3>
         <p className={signal.verdict === "Useful now" ? "toolbox-highlight" : "weekly-verdict"}>{signal.verdict}</p>
         <p className="weekly-summary">{signal.summary}</p>
-        <a href={signal.url} target="_blank" rel="noopener noreferrer">Source: {signal.source} <ArrowUpRight size={14} /></a>
+        <a href={safeExternalHref(signal.url)} target="_blank" rel="noopener noreferrer">Source: {signal.source} <ArrowUpRight size={14} /></a>
       </div>
     </article>
   );
@@ -85,7 +86,7 @@ function ToolRow({ tool, saved, onSave }) {
         <div><dt>Our verdict</dt><dd className={tool.verdict === "Useful now" ? "toolbox-highlight" : ""}>{tool.verdict}</dd></div>
         <div><dt>Confidence</dt><dd>{tool.confidence}</dd></div>
         <div><dt>Last reviewed</dt><dd>{tool.reviewed}</dd></div>
-        <div><dt>Source</dt><dd><a href={tool.url} target="_blank" rel="noopener noreferrer">{tool.source} <ArrowUpRight size={13} /></a></dd></div>
+        <div><dt>Source</dt><dd><a href={safeExternalHref(tool.url)} target="_blank" rel="noopener noreferrer">{tool.source} <ArrowUpRight size={13} /></a></dd></div>
         <div><dt>Access</dt><dd>{tool.access}</dd></div>
         <div><dt>Setup time</dt><dd>{tool.setup}</dd></div>
       </dl>

@@ -2,12 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import worker from "../submission-worker/index.js";
 import { canonicalArticleUrl, nextCrawlInfo } from "../shared/article-intake.mjs";
-
-class MemoryKv {
-  values = new Map();
-  async get(key) { return this.values.get(key) ?? null; }
-  async put(key, value) { this.values.set(key, value); }
-}
+import { memoryRateLimit } from "./helpers/submission-env.mjs";
 
 function request(body, ip = "203.0.113.8") {
   return new Request("https://intake.example.com/submit", {
@@ -17,13 +12,15 @@ function request(body, ip = "203.0.113.8") {
       origin: "http://localhost:5173",
       "cf-connecting-ip": ip,
     },
-    body: JSON.stringify(body),
+    body: JSON.stringify({ turnstileToken: "fixture-token", ...body }),
   });
 }
 
 function envWithIssues(issues = []) {
   const calls = [];
   const mockFetch = async (url, options = {}) => {
+    assert.equal(options.redirect, "manual", "Workers support manual redirect rejection, not redirect:error");
+    if (String(url).includes("/siteverify")) return Response.json({ success: true, hostname: "localhost" });
     calls.push({ url: String(url), options });
     if (String(url).includes("/issues?")) {
       const page = Number(new URL(url).searchParams.get("page") || 1);
@@ -35,9 +32,9 @@ function envWithIssues(issues = []) {
   };
   return {
     ALLOWED_ORIGINS: "http://localhost:5173",
-    ALLOW_UNVERIFIED_SUBMISSIONS: "true",
+    TURNSTILE_SECRET: "test-secret",
     GITHUB_TOKEN: "test-token",
-    SUBMISSION_KV: new MemoryKv(),
+    SUBMISSION_RATE_LIMIT: memoryRateLimit(),
     FETCH: mockFetch,
     calls,
   };
@@ -115,10 +112,60 @@ test("worker accepts a scheme-less URL and blocks the sixth hourly request", asy
 
 test("worker refuses unverified requests without creating an issue", async () => {
   const env = envWithIssues();
-  delete env.ALLOW_UNVERIFIED_SUBMISSIONS;
-  const response = await worker.fetch(request({ url: "www.example.com/story", clientId: "client-verify" }), env);
+  const response = await worker.fetch(request({ url: "www.example.com/story", clientId: "client-verify", turnstileToken: "" }), env);
   assert.equal(response.status, 400);
   assert.equal((await response.json()).status, "verification_required");
+  assert.equal(env.calls.length, 0);
+});
+
+test("worker enforces quotas under concurrency and after rotating browser IDs", async () => {
+  const env = envWithIssues();
+  const responses = await Promise.all(Array.from({ length: 12 }, (_, index) => worker.fetch(request({ url: `https://example.com/${index}`, clientId: "same-client" }), env)));
+  assert.equal(responses.filter((response) => response.status === 201).length, 5);
+  assert.equal(responses.filter((response) => response.status === 429).length, 7);
+  assert.equal(env.calls.filter((call) => call.options.method === "POST").length, 5);
+  const network = envWithIssues();
+  const rotated = await Promise.all(Array.from({ length: 60 }, (_, index) => worker.fetch(request({ url: `https://example.com/${index}`, clientId: `client-${index}` }), network)));
+  assert.equal(rotated.filter((response) => response.status === 201).length, 50);
+  assert.equal(rotated.filter((response) => response.status === 429).length, 10);
+});
+
+test("worker rejects malformed, mistyped and oversized bodies before external calls", async () => {
+  const env = envWithIssues();
+  for (const body of ["null", "[]", "1", "{", '{"url":42}', '{"url":"https://example.com","turnstileToken":{}}']) {
+    const response = await worker.fetch(new Request("https://intake.example.com", { method: "POST", headers: { origin: "http://localhost:5173", "content-type": "application/json" }, body }), env);
+    assert.equal(response.status, 400, body);
+  }
+  const oversized = await worker.fetch(request({ url: "https://example.com", website: "x".repeat(17000) }), env);
+  assert.equal(oversized.status, 413);
+  const wrongType = request({ url: "https://example.com" });
+  wrongType.headers.set("content-type", "text/plain");
+  assert.equal((await worker.fetch(wrongType, env)).status, 415);
+  assert.equal(env.calls.length, 0);
+});
+
+test("worker fails closed on verification hostname mismatch and upstream failures", async () => {
+  const env = envWithIssues();
+  env.FETCH = async () => Response.json({ success: true, hostname: "untrusted.example" });
+  assert.equal((await worker.fetch(request({ url: "https://example.com" }), env)).status, 400);
+  env.FETCH = async () => { throw new Error("Upstream unavailable with secret material"); };
+  const failed = await worker.fetch(request({ url: "https://example.com" }), env);
+  assert.equal(failed.status, 503);
+  assert.doesNotMatch(await failed.text(), /secret material/);
+  env.ALLOW_UNVERIFIED_SUBMISSIONS = "true";
+  assert.equal((await worker.fetch(request({ url: "https://example.com", turnstileToken: "" }), env)).status, 400);
+});
+
+test("worker rejects foreign origins and missing atomic quota binding", async () => {
+  const env = envWithIssues();
+  const foreign = request({ url: "https://example.com" });
+  foreign.headers.set("origin", "https://untrusted.example");
+  assert.equal((await worker.fetch(foreign, env)).status, 403);
+  delete env.SUBMISSION_RATE_LIMIT;
+  const failed = await worker.fetch(request({ url: "https://example.com" }), env);
+  assert.equal(failed.status, 503);
+  assert.equal(failed.headers.get("cache-control"), "no-store");
+  assert.equal(failed.headers.get("x-content-type-options"), "nosniff");
   assert.equal(env.calls.length, 0);
 });
 

@@ -1,5 +1,6 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import { securityBuildPlugin } from "./scripts/security-build.mjs";
 
 export default defineConfig(({ mode }) => ({
   base: mode === "pages" ? "/design-daily/" : "/",
@@ -19,5 +20,5 @@ export default defineConfig(({ mode }) => ({
       clientFiles: ["./src/main.jsx"],
     },
   },
-  plugins: [react()],
+  plugins: [react(), securityBuildPlugin()],
 }));

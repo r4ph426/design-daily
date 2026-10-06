@@ -1,3 +1,4 @@
+import { safeExternalHref } from "../shared/public-url.mjs";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   ArrowRight,
@@ -253,7 +254,7 @@ function SignalsTable({ question }) {
           {question.signals.map((signal, index) => (
             <tr key={`${question.id}-${signal.source}-${index}`}>
               <td data-label="Source">
-                {signal.url ? <a className="source-article-title" href={signal.url} target="_blank" rel="noopener noreferrer">{signal.title || signal.happened}</a> : <span className="source-article-title">{signal.title || signal.happened}</span>}
+                {signal.url ? <a className="source-article-title" href={safeExternalHref(signal.url)} target="_blank" rel="noopener noreferrer">{signal.title || signal.happened}</a> : <span className="source-article-title">{signal.title || signal.happened}</span>}
                 <span className="source-publisher">{signal.source}</span>
                 <span className="provenance">{sourceKindLabel(signal.kind)} · {formatMetadata(signal.timing)}</span>
               </td>
@@ -286,7 +287,7 @@ function SourceList({ question }) {
     <ol className="source-list" aria-label={`Sources for ${question.question}`}>
       {question.signals.map((signal, index) => (
         <li key={`${question.id}-${signal.url || signal.source}-${index}`}>
-          <a href={signal.url || "#top"} target={signal.url ? "_blank" : undefined} rel={signal.url ? "noopener noreferrer" : undefined}>
+          <a href={safeExternalHref(signal.url)} target={signal.url ? "_blank" : undefined} rel={signal.url ? "noopener noreferrer" : undefined}>
             <span className="source-list-title">{signal.title || signal.happened}</span>
             <span className="source-list-meta">{sourceDomain(signal)} · {sourceKindLabel(signal.kind)} · {formatMetadata(signal.timing)}</span>
             {signal.url && <span className="source-list-external" aria-hidden="true">↗</span>}

@@ -3,12 +3,16 @@ main = "index.js"
 compatibility_date = "2026-09-21"
 
 [vars]
-ALLOWED_ORIGINS = "https://r4ph426.github.io,http://localhost:5173"
+ALLOWED_ORIGINS = "https://r4ph426.github.io"
 GITHUB_REPOSITORY = "r4ph426/design-daily"
 
-# Create this namespace before deployment, then replace the placeholder.
-[[kv_namespaces]]
-binding = "SUBMISSION_KV"
-id = "replace-with-kv-namespace-id"
+# Deploy the binding and migration together with the new Worker code.
+[[durable_objects.bindings]]
+name = "SUBMISSION_RATE_LIMIT"
+class_name = "SubmissionRateLimit"
+
+[[migrations]]
+tag = "v1-submission-rate-limit"
+new_sqlite_classes = ["SubmissionRateLimit"]
 
 # Store GITHUB_TOKEN and TURNSTILE_SECRET with `wrangler secret put`.

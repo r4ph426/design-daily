@@ -1,0 +1,5 @@
+minimumReleaseAgeExclude:
+  - vite@6.4.4
+
+overrides:
+  source-map-js: ^1.2.2

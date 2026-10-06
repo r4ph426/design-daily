@@ -43,6 +43,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Test crawler and security boundaries
+        run: node --test tests/crawler.test.mjs tests/article-intake.test.mjs tests/security.test.mjs
+
       - name: Crawl Gmail and the web
         if: github.event_name != 'push'
         env:
@@ -65,9 +68,6 @@ jobs:
             git commit -m "Publish daily edition"
             git push
           fi
-
-      - name: Test the crawler
-        run: pnpm run test:crawler
 
       - name: Build the GitHub Pages site
         env:
