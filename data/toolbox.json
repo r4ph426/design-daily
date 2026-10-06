@@ -1,29 +1,29 @@
 {
-  "weekLabel": "Week 40 · 28 Sep 2026",
+  "weekLabel": "Week 41 · Reviewed 6 Oct 2026",
   "weeklySignals": [
     {
       "id": "01",
-      "title": "Canva MCP",
+      "title": "Figma Motion",
       "verdict": "Worth trying",
-      "summary": "Canva’s official remote server brings design creation, editing, brand assets, export, and comments into AI workflows.",
-      "source": "canva.dev/docs/apps/mcp",
-      "url": "https://www.canva.dev/docs/apps/mcp/"
+      "summary": "The 30 September update adds reusable animation styles and Lottie export. Try one component animation to check the handoff; Motion remains in open beta.",
+      "source": "figma.com/release-notes",
+      "url": "https://www.figma.com/release-notes/"
     },
     {
       "id": "02",
-      "title": "Pinterest MCP",
-      "verdict": "Watching",
-      "summary": "Pinterest has announced an official MCP for Pins, Boards, trends, audience insights, and advertising workflows.",
-      "source": "developers.pinterest.com",
-      "url": "https://developers.pinterest.com/about-pinterest-mcp/"
+      "title": "Framer Skills",
+      "verdict": "Worth trying",
+      "summary": "Released 22 September, newly reviewed for our collection: reusable instructions for design systems, copy, and CMS work. Test whether one skill keeps a second page consistent.",
+      "source": "framer.com/updates/skills",
+      "url": "https://www.framer.com/updates/skills"
     },
     {
       "id": "03",
-      "title": "Seenry Skills",
-      "verdict": "Worth trying",
-      "summary": "A connected skill set for reference research, design direction, motion, assets, branding, decks, and rendered review.",
-      "source": "github.com/ayangabryl/seenry-skills",
-      "url": "https://github.com/ayangabryl/seenry-skills"
+      "title": "Iconiq UI",
+      "verdict": "Watching",
+      "summary": "Shared by the team on 2 October: editable components with restrained motion and a shadcn MCP connection. Documentation reviewed; keyboard behavior and reduced motion still need hands-on checks.",
+      "source": "iconiqui.com",
+      "url": "https://iconiqui.com/"
     }
   ],
   "tools": [
@@ -33,15 +33,15 @@
       "type": "MCP",
       "categories": ["UI", "Process"],
       "practices": ["Drafting", "UI sketches", "Review"],
-      "description": "Connects Figma to AI tools through a permissioned interface for reading designs, extracting context, and supporting implementation work.",
+      "description": "Figma’s official MCP reads design context and can create or update native frames, components, variables, and auto layout through supported clients and Figma skills.",
       "verdict": "Useful now",
       "confidence": "High",
-      "reviewed": "28 Sep 2026",
-      "source": "github.com/figma/mcp-server-guide",
-      "url": "https://github.com/figma/mcp-server-guide",
+      "reviewed": "6 Oct 2026",
+      "source": "developers.figma.com",
+      "url": "https://developers.figma.com/docs/figma-mcp-server/",
       "access": "Figma account",
       "setup": "10–15 minutes",
-      "recommendation": "Already useful for design-to-code handoffs and structured design context. Keep file permissions narrow and verify changes in Figma."
+      "recommendation": "Use it to connect design context with implementation and editable canvas work. The remote server has the broadest feature set; verify generated changes against the actual components and layout."
     },
     {
       "id": "02",
@@ -260,12 +260,12 @@
       "description": "Pinterest’s announced official MCP is intended to search Pins, explore and manage Boards, follow trends, and surface audience and advertising insights.",
       "verdict": "Watching",
       "confidence": "High",
-      "reviewed": "28 Sep 2026",
+      "reviewed": "6 Oct 2026",
       "source": "developers.pinterest.com/about-pinterest-mcp",
       "url": "https://developers.pinterest.com/about-pinterest-mcp/",
-      "access": "Launch waitlist",
-      "setup": "Not yet public",
-      "recommendation": "Potentially valuable for taste and trend research, but Pinterest still presents it as an upcoming launch. Re-evaluate when public access and personal-board permissions are documented."
+      "access": "Public availability unconfirmed",
+      "setup": "Access check required",
+      "recommendation": "The official page shows an endpoint and scoped authorization but still invites launch sign-ups. Keep watching until access and personal-board permissions are confirmed in a working account."
     },
     {
       "id": "16",
@@ -330,6 +330,54 @@
       "access": "Open source",
       "setup": "5–10 minutes",
       "recommendation": "Try it on a user journey or service flow and compare the resulting diagram with the team’s existing documentation. Review generated structure and labels before sharing."
+    },
+    {
+      "id": "20",
+      "title": "Figma Motion",
+      "type": "Tool",
+      "categories": ["UI", "Process"],
+      "practices": ["Creative exploration", "Drafting", "Review"],
+      "description": "A timeline inside Figma Design for editable keyframe animation, reusable motion styles, and supported Lottie exports. The 30 September release extends its open beta.",
+      "verdict": "Worth trying",
+      "confidence": "Medium",
+      "reviewed": "6 Oct 2026",
+      "source": "figma.com/release-notes",
+      "url": "https://www.figma.com/release-notes/",
+      "access": "Open beta; file edit access",
+      "setup": "Built into Figma Design",
+      "recommendation": "Test one component animation and its exported result before moving a motion system. Reusable styles could reduce repeated setup; beta behavior and export fidelity still need a team trial."
+    },
+    {
+      "id": "21",
+      "title": "Framer Skills",
+      "type": "Skill",
+      "categories": ["UI", "Process"],
+      "practices": ["Drafting", "UI sketches", "Review"],
+      "description": "Project-level instructions for the Framer agent covering design systems, writing style, and CMS workflows. Skills can reference project pages, components, and styles and travel with a remix.",
+      "verdict": "Worth trying",
+      "confidence": "Medium",
+      "reviewed": "6 Oct 2026",
+      "source": "framer.com/updates/skills",
+      "url": "https://www.framer.com/updates/skills",
+      "access": "Framer project and agent access",
+      "setup": "Create with /skills in Framer",
+      "recommendation": "Capture one agreed design or content rule, then check whether the agent applies it consistently to a second page. Source-reviewed; the team still needs to test how reliably those rules hold."
+    },
+    {
+      "id": "22",
+      "title": "Iconiq UI",
+      "type": "Tool",
+      "categories": ["UI", "Process"],
+      "practices": ["UI sketches", "Drafting", "Creative exploration"],
+      "description": "An open-source UI collection delivered as editable local components through the shadcn registry, with an optional connection through shadcn MCP.",
+      "verdict": "Watching",
+      "confidence": "Medium",
+      "reviewed": "6 Oct 2026",
+      "source": "iconiqui.com",
+      "url": "https://iconiqui.com/",
+      "access": "Open source; shadcn setup",
+      "setup": "Project registry configuration",
+      "recommendation": "A team-submitted lead for restrained component motion. Check keyboard behavior, reduced motion, and design-system fit in a small prototype before recommending it for product work."
     }
   ]
 }
