@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 1,
+  "editionNumber": "017",
+  "date": "2026-10-05",
+  "displayDate": "Monday, 5 October 2026",
+  "filedAt": "03:58 cet",
+  "crawlCompletedAt": "03:58",
+  "sourceCount": 6,
+  "webSourceCount": 4,
+  "teamContributionCount": 1,
+  "headline": "AI rewires design work",
+  "summary": "Design teams are no longer debating whether AI helps. The sharper question is whether it clarifies work, fragments attention, or quietly replaces judgment with convenience.",
+  "generatedAt": "2026-10-05T01:58:17.265Z",
+  "inboxConnected": true,
+  "questions": [
+    {
+      "id": "01",
+      "slug": "what-gives-designers-the-right-to-intervene-on-behalf-of-others-",
+      "category": "UX",
+      "tags": [
+        "UX",
+        "Culture"
+      ],
+      "aiLens": true,
+      "editorialTitle": "Right to intervene",
+      "question": "What gives designers the right to intervene on behalf of others when AI tools make it easier to generate answers faster than they can justify them?",
+      "answer": "The UX field is being pushed to defend its authority, not just its output. As AI lowers the cost of proposing solutions, teams have to prove they can still surface conflict, context, and harm instead of polishing a quick response.",
+      "why": "This matters because speed can disguise overreach. If designers cannot explain their right to intervene, AI becomes a multiplier for shallow certainty rather than a tool for better judgment.",
+      "counts": {
+        "total": 2,
+        "newsletters": 0,
+        "web": 2
+      },
+      "firstSeen": "13:09 cet",
+      "signals": [
+        {
+          "source": "UX Collective",
+          "title": "In/tension modeling: what gives us the right?",
+          "kind": "Web",
+          "timing": "13:09",
+          "happened": "UX Collective frames In/tension modeling as a way to confront the question of who gets to make interventions for others. The piece argues that design work often creates new problems even as it resolves old ones, and that conflicting perspectives deserve equal weight.",
+          "changes": "The practice is shifting from asking how to solve to asking whether solving is legitimate in the first place. That raises the bar for **authority** and makes **conflict** a required input instead of a problem to smooth over.",
+          "verdict": "Must read",
+          "url": "https://uxdesign.cc/in-tension-modeling-what-gives-us-the-right-01740248eb45"
+        },
+        {
+          "source": "UX Collective",
+          "title": "The feed I produce myself",
+          "kind": "Web",
+          "timing": "13:12",
+          "happened": "A UX Collective essay describes a workflow filled with AI agents that keep producing while the author writes. The writer says the constant availability of agents changes focus and makes it feel irresponsible not to use every idle minute.",
+          "changes": "AI is turning design work into a background production system, but that efficiency comes with a cost to whole-picture thinking. The real tradeoff is between **throughput** and the ability to notice when work is becoming fragmented, compulsive, or simply less coherent.",
+          "verdict": "Read",
+          "url": "https://uxdesign.cc/the-feed-i-produce-myself-11e4192f394c"
+        }
+      ],
+      "further": [
+        [
+          "Iconiq UI | Design System for Modern Interfaces",
+          "iconiqui.com",
+          "https://iconiqui.com"
+        ]
+      ]
+    },
+    {
+      "id": "02",
+      "slug": "when-file-search-fails-and-ai-finds-the-document-in-seconds-are-",
+      "category": "Process",
+      "tags": [
+        "Process",
+        "UX"
+      ],
+      "aiLens": true,
+      "editorialTitle": "Search beyond folders",
+      "question": "When file search fails and AI finds the document in seconds, are teams fixing discovery or just papering over broken information architecture?",
+      "answer": "AI is exposing how brittle everyday workplace search already is. That makes the process question less about novelty and more about whether teams will repair the underlying retrieval system or keep relying on a smarter rescue layer.",
+      "why": "The editorial tension is between convenience and infrastructure. If AI becomes the only reliable way to find work, the process itself is already failing.",
+      "counts": {
+        "total": 1,
+        "newsletters": 1,
+        "web": 0
+      },
+      "firstSeen": "15:01 cet",
+      "signals": [
+        {
+          "source": "Actionable AI",
+          "title": "stop digging for files",
+          "kind": "Newsletter",
+          "timing": "15:01",
+          "happened": "A newsletter argues that Finder often misses files and that Claude Code or Codex can locate them quickly from the terminal. The writer says AI found multiple copies of a document that search claimed did not exist, pointing to a brittle indexing system.",
+          "changes": "This is not just a smarter search trick. It is evidence that teams are tolerating **broken retrieval** and then celebrating AI as the fix, even when the underlying process still wastes time and trust.",
+          "verdict": "Must read",
+          "url": "https://elinkb64.mail.theactionableai.com/ss/c/u001.VH9ztUI_5EhIlHYeBgd71I1IkoHGJpPl2lXXCIdDEpnuMP_tULjhLPaxeSLI_5YvV1cVvG7c21w7bnbmXGGb-rzpbcH5GDBesr2aq-8KB3oGAqJTgSZUKgCbKrYds63cCl7J2dCnfaEybKprzEReTiBQHqNbFMXJBpA5gX8Q5NjOGWG4R5g8Pe8P-uHDV1BMj-JkNt5KvuJAXbO0Sg4VoUcaO_dQ0ZG1zYm8BQfUCDwNyZDVRRQsbUjqF2qzREwB56YFnJvsMMA16aWIZPN8sDpIKRfmmi1Srt_AWqe7hC7j__QbL97Umx_pjkb3OJt5bPT_l099Bc9RkcV8iDf_bLivm9MfT7F-RJG80SQKw0rHxYQ9ReBUI-yuzmD3X2Gp1L6gz2D-rNHsBKBy1Md_n2WXloZ1KzHjGcG46k1IM6Eq1y8lvWGccYDK9vYlFn73xJPh_oB9zEQPULS5sIlMSRUJM3S5oYBIzMMJtW_6E8tvsji55wxjZn6x4erT3fycdPe9TuOTV97TBVWX_kvKutRVFeEcIXHIt6XidcciyHkbvVCo40wAXcFP-Wt_JR9OBoZAkRmjJbt1j0kOem0dx1874cGwQvh01gx0Z7sFa5mRXzOSwh1YmOsxJEnTdbXcU9yIKY1KrrI3T94Z_qlLAyFRUVYLByoP-qryoJSChWGlenZmAYwdFSqM14PHEXKJx1P7RHNA-G5MXCUWUB-EW4ks-zEwdK40HfhTm3HLjKjdd7tzokP4vH-o9uhEOK1SmG7I4mWIPdxOjPTciWHGfvLRBggwytdi59eNPZU1cPDm7ZP-S49OtTFrJA-jEq-kEh8uaxMwtgExa_6WCY3MU4o8uvalneFrKWYTWW0rzDQ/4ul/RWmz4CUzTXSak4YCsRMKxA/h0/h001.8ukowUWdCB4V8yP29CyBLvopgpGoLsl4jWeCT7GNMv8"
+        }
+      ],
+      "further": [
+        [
+          "Iconiq UI | Design System for Modern Interfaces",
+          "iconiqui.com",
+          "https://iconiqui.com"
+        ],
+        [
+          "time with people",
+          "Actionable AI",
+          "https://elinkb64.mail.theactionableai.com/ss/c/u001.VH9ztUI_5EhIlHYeBgd71I1IkoHGJpPl2lXXCIdDEpkgv2hJX1NCLXFVBGoSWBIe5pFzwqCNxPWVcj8dSd42oS8FfRpkWzduBggmyLcYQuSNwHJRMHVty__cNwRg2S15DGlwnUB12i8D77PsbxZjdbFRBUpWMi6j-iUOJLpmjrmSg087dteC6HFrp6dpuXyMLf0wkkXw4HEoiPfZyG0OCv6v3ClQ2eyFb6Q9LzuCUFLZ4DmaIwsBlm2tbUwIsVuiwPCTQxpJf5Fs9sYjMiIr4eQN0fpGw0UJdJIR4oYEPTHgqNsN3yY0aqIkTRLlePR5rbLfdC6F979eponrrAVZiTELgXa4EEGKeVIBzMuDZRfrgoM1FUHnJQqk0b5Y5-OJgdT9X_TTKxsgu0ILcdbtts2gXMu-OcLBR3yrQE0lgwdghdkYhC3pOEsIzOXwL8VnZDf4fKrFzW_XPb5oSJFDgdQGqmgZiCB6ul_AhJyth0gPH9HuLM-je-jmDEbc98L5S6eJc9a3VPL3tuyLyCnCjxOv3ACvjTWIbW5E_Z07qLyj0uhgFKCKN39emwMlXAW8sGvxEgCNGQnKNrc_UOgfCuqgcYGhNd9jiHaMbm97gxaLzN9V2BZkjqGmwha8i41R3C_WzOqWTGPGT-qoL_V1Cwj5LcaEIeN6YxUJpdMQqxNnk6qJh0QoN88mnMI97j171d5b23b5h2RK-ysVGv44FB_AFtnIma7WGhxY6quAvbuU1PZgEjsA0kI1LBL8KWtu_jdt8-uOpC5TFkAK5M5VceKLxpE7guyplxPgskn7oIAaa2cO8A5KMP2OpHxbXeT1c8cN_W1CcNmw4zw_FUfe55uTJCmt03g4hZ4q_0tE1gL45VQYNCa0_81nyz_DnbIZvwB62NPBTOSmmoASWLpPdA/4uk/gKEeJTPkSrOLxesCbq7yyg/h0/h001.-vF33u6nDa3B8FgG96GAc-ZyYL-BkU50l9CvcZ5boB4"
+        ]
+      ]
+    },
+    {
+      "id": "03",
+      "slug": "if-a-design-system-ships-as-editable-source-instead-of-locked-pa",
+      "category": "UI",
+      "tags": [
+        "UI"
+      ],
+      "aiLens": false,
+      "editorialTitle": "Editable by default",
+      "question": "If a design system ships as editable source instead of locked patterns, does that make interfaces more adaptable or simply easier to fork and fragment?",
+      "answer": "Open-source component libraries are moving toward source-level editability and motion-first primitives. That gives teams more control, but it also tests whether their UI discipline is strong enough to survive easy modification.",
+      "why": "This matters because the UI stack is becoming more permissive. More editability can accelerate product work, but it can also dilute consistency unless teams actively govern it.",
+      "counts": {
+        "total": 1,
+        "newsletters": 0,
+        "web": 1
+      },
+      "firstSeen": "03:58 cet",
+      "signals": [
+        {
+          "source": "iconiqui.com",
+          "title": "Iconiq UI | Design System for Modern Interfaces",
+          "kind": "Web",
+          "timing": "03:58",
+          "happened": "Iconiq UI presents itself as an open-source React component library for modern interfaces. It emphasizes motion-powered primitives, shadcn registry installs, and editable source files as the core of the system.",
+          "changes": "The UI conversation is moving toward systems that are **open by construction** instead of sealed design kits. That improves adaptability, but it also shifts the burden of coherence onto the teams using the library rather than the library itself.",
+          "verdict": "Read",
+          "url": "https://iconiqui.com"
+        }
+      ],
+      "further": [
+        [
+          "In/tension modeling: what gives us the right?",
+          "UX Collective",
+          "https://uxdesign.cc/in-tension-modeling-what-gives-us-the-right-01740248eb45"
+        ]
+      ]
+    },
+    {
+      "id": "04",
+      "slug": "as-ai-makes-solo-production-easier-will-design-culture-invest-mo",
+      "category": "Culture",
+      "tags": [
+        "Culture",
+        "UX"
+      ],
+      "aiLens": true,
+      "editorialTitle": "People over remote solo",
+      "question": "As AI makes solo production easier, will design culture invest more in collaboration, or will it mistake more output for a healthier team?",
+      "answer": "The strongest signals point to a renewed hunger for shared work, not just distributed productivity. Teams are starting to notice that AI can increase volume while weakening the human contact and judgment that make the work livable.",
+      "why": "This is a culture story because productivity now competes with belonging. If teams optimize only for output, they risk building isolated designers with more tools and less support.",
+      "counts": {
+        "total": 2,
+        "newsletters": 1,
+        "web": 1
+      },
+      "firstSeen": "15:01 cet",
+      "signals": [
+        {
+          "source": "Actionable AI",
+          "title": "time with people",
+          "kind": "Newsletter",
+          "timing": "15:01",
+          "happened": "An Actionable AI newsletter argues that working from home has been sold as freedom while often becoming isolating. The author says building an office and spending time with people improved momentum and made work feel more productive.",
+          "changes": "The culture signal is a backlash against lone productivity as an unquestioned good. Designers are rediscovering that **shared momentum** and informal feedback can matter more than abstract flexibility.",
+          "verdict": "Read",
+          "url": "https://elinkb64.mail.theactionableai.com/ss/c/u001.VH9ztUI_5EhIlHYeBgd71I1IkoHGJpPl2lXXCIdDEpkgv2hJX1NCLXFVBGoSWBIe5pFzwqCNxPWVcj8dSd42oS8FfRpkWzduBggmyLcYQuSNwHJRMHVty__cNwRg2S15DGlwnUB12i8D77PsbxZjdbFRBUpWMi6j-iUOJLpmjrmSg087dteC6HFrp6dpuXyMLf0wkkXw4HEoiPfZyG0OCv6v3ClQ2eyFb6Q9LzuCUFLZ4DmaIwsBlm2tbUwIsVuiwPCTQxpJf5Fs9sYjMiIr4eQN0fpGw0UJdJIR4oYEPTHgqNsN3yY0aqIkTRLlePR5rbLfdC6F979eponrrAVZiTELgXa4EEGKeVIBzMuDZRfrgoM1FUHnJQqk0b5Y5-OJgdT9X_TTKxsgu0ILcdbtts2gXMu-OcLBR3yrQE0lgwdghdkYhC3pOEsIzOXwL8VnZDf4fKrFzW_XPb5oSJFDgdQGqmgZiCB6ul_AhJyth0gPH9HuLM-je-jmDEbc98L5S6eJc9a3VPL3tuyLyCnCjxOv3ACvjTWIbW5E_Z07qLyj0uhgFKCKN39emwMlXAW8sGvxEgCNGQnKNrc_UOgfCuqgcYGhNd9jiHaMbm97gxaLzN9V2BZkjqGmwha8i41R3C_WzOqWTGPGT-qoL_V1Cwj5LcaEIeN6YxUJpdMQqxNnk6qJh0QoN88mnMI97j171d5b23b5h2RK-ysVGv44FB_AFtnIma7WGhxY6quAvbuU1PZgEjsA0kI1LBL8KWtu_jdt8-uOpC5TFkAK5M5VceKLxpE7guyplxPgskn7oIAaa2cO8A5KMP2OpHxbXeT1c8cN_W1CcNmw4zw_FUfe55uTJCmt03g4hZ4q_0tE1gL45VQYNCa0_81nyz_DnbIZvwB62NPBTOSmmoASWLpPdA/4uk/gKEeJTPkSrOLxesCbq7yyg/h0/h001.-vF33u6nDa3B8FgG96GAc-ZyYL-BkU50l9CvcZ5boB4"
+        },
+        {
+          "source": "UX Collective",
+          "title": "The feed I produce myself",
+          "kind": "Web",
+          "timing": "13:12",
+          "happened": "A UX Collective essay describes the emotional pressure of running multiple AI agents while writing and working. The author suggests that having machines always available creates a constant impulse to keep producing.",
+          "changes": "AI is not only changing output, it is changing the social shape of work by encouraging more isolated, self-optimizing behavior. That makes culture the corrective, because without it the team risks rewarding **endless activity** over meaningful connection.",
+          "verdict": "Track",
+          "url": "https://uxdesign.cc/the-feed-i-produce-myself-11e4192f394c"
+        }
+      ],
+      "further": [
+        [
+          "time with people",
+          "Actionable AI",
+          "https://elinkb64.mail.theactionableai.com/ss/c/u001.VH9ztUI_5EhIlHYeBgd71I1IkoHGJpPl2lXXCIdDEpkgv2hJX1NCLXFVBGoSWBIe5pFzwqCNxPWVcj8dSd42oS8FfRpkWzduBggmyLcYQuSNwHJRMHVty__cNwRg2S15DGlwnUB12i8D77PsbxZjdbFRBUpWMi6j-iUOJLpmjrmSg087dteC6HFrp6dpuXyMLf0wkkXw4HEoiPfZyG0OCv6v3ClQ2eyFb6Q9LzuCUFLZ4DmaIwsBlm2tbUwIsVuiwPCTQxpJf5Fs9sYjMiIr4eQN0fpGw0UJdJIR4oYEPTHgqNsN3yY0aqIkTRLlePR5rbLfdC6F979eponrrAVZiTELgXa4EEGKeVIBzMuDZRfrgoM1FUHnJQqk0b5Y5-OJgdT9X_TTKxsgu0ILcdbtts2gXMu-OcLBR3yrQE0lgwdghdkYhC3pOEsIzOXwL8VnZDf4fKrFzW_XPb5oSJFDgdQGqmgZiCB6ul_AhJyth0gPH9HuLM-je-jmDEbc98L5S6eJc9a3VPL3tuyLyCnCjxOv3ACvjTWIbW5E_Z07qLyj0uhgFKCKN39emwMlXAW8sGvxEgCNGQnKNrc_UOgfCuqgcYGhNd9jiHaMbm97gxaLzN9V2BZkjqGmwha8i41R3C_WzOqWTGPGT-qoL_V1Cwj5LcaEIeN6YxUJpdMQqxNnk6qJh0QoN88mnMI97j171d5b23b5h2RK-ysVGv44FB_AFtnIma7WGhxY6quAvbuU1PZgEjsA0kI1LBL8KWtu_jdt8-uOpC5TFkAK5M5VceKLxpE7guyplxPgskn7oIAaa2cO8A5KMP2OpHxbXeT1c8cN_W1CcNmw4zw_FUfe55uTJCmt03g4hZ4q_0tE1gL45VQYNCa0_81nyz_DnbIZvwB62NPBTOSmmoASWLpPdA/4uk/gKEeJTPkSrOLxesCbq7yyg/h0/h001.-vF33u6nDa3B8FgG96GAc-ZyYL-BkU50l9CvcZ5boB4"
+        ],
+        [
+          "In/tension modeling: what gives us the right?",
+          "UX Collective",
+          "https://uxdesign.cc/in-tension-modeling-what-gives-us-the-right-01740248eb45"
+        ]
+      ]
+    }
+  ]
+}

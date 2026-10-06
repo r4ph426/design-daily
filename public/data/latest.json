@@ -1,200 +1,252 @@
 {
   "schemaVersion": 1,
-  "editionNumber": "017",
-  "date": "2026-10-05",
-  "displayDate": "Monday, 5 October 2026",
-  "filedAt": "03:58 cet",
-  "crawlCompletedAt": "03:58",
-  "sourceCount": 6,
+  "editionNumber": "018",
+  "date": "2026-10-06",
+  "displayDate": "Tuesday, 6 October 2026",
+  "filedAt": "04:57 cet",
+  "crawlCompletedAt": "04:57",
+  "sourceCount": 18,
   "webSourceCount": 4,
   "teamContributionCount": 1,
-  "headline": "AI rewires design work",
-  "summary": "Design teams are no longer debating whether AI helps. The sharper question is whether it clarifies work, fragments attention, or quietly replaces judgment with convenience.",
-  "generatedAt": "2026-10-05T01:58:17.265Z",
+  "headline": "AI Reveals Design’s Blind Spots",
+  "summary": "AI is no longer just a tool inside design work, it is exposing how shallow our prompts, judgments, and workflows already were. The sharper question now is whether teams use it to raise standards or simply automate their blind spots.",
+  "generatedAt": "2026-10-06T02:57:06.925Z",
   "inboxConnected": true,
   "questions": [
     {
       "id": "01",
-      "slug": "what-gives-designers-the-right-to-intervene-on-behalf-of-others-",
-      "category": "UX",
+      "slug": "if-prompts-expose-the-thinker-behind-the-task-what-exactly-are-t",
+      "category": "Culture",
       "tags": [
-        "UX",
         "Culture"
       ],
       "aiLens": true,
-      "editorialTitle": "Right to intervene",
-      "question": "What gives designers the right to intervene on behalf of others when AI tools make it easier to generate answers faster than they can justify them?",
-      "answer": "The UX field is being pushed to defend its authority, not just its output. As AI lowers the cost of proposing solutions, teams have to prove they can still surface conflict, context, and harm instead of polishing a quick response.",
-      "why": "This matters because speed can disguise overreach. If designers cannot explain their right to intervene, AI becomes a multiplier for shallow certainty rather than a tool for better judgment.",
+      "editorialTitle": "Prompts as self-portrait",
+      "question": "If prompts expose the thinker behind the task, what exactly are teams revealing about their own design culture when they ask AI for answers instead of structure?",
+      "answer": "The strongest signal is the claim that prompting is a self-portrait, paired with the argument that organizations are outsourcing not just execution but context. That makes AI a mirror for missing documentation, weak assumptions, and vague briefs.",
+      "why": "It frames AI as a diagnostic for process maturity, not a productivity gimmick.",
       "counts": {
-        "total": 2,
-        "newsletters": 0,
+        "total": 3,
+        "newsletters": 1,
         "web": 2
       },
-      "firstSeen": "13:09 cet",
+      "firstSeen": "13:01 cet",
       "signals": [
         {
           "source": "UX Collective",
-          "title": "In/tension modeling: what gives us the right?",
+          "title": "Prompt as self-portrait, De-slopifying your designs, The strategic designer",
           "kind": "Web",
-          "timing": "13:09",
-          "happened": "UX Collective frames In/tension modeling as a way to confront the question of who gets to make interventions for others. The piece argues that design work often creates new problems even as it resolves old ones, and that conflicting perspectives deserve equal weight.",
-          "changes": "The practice is shifting from asking how to solve to asking whether solving is legitimate in the first place. That raises the bar for **authority** and makes **conflict** a required input instead of a problem to smooth over.",
+          "timing": "13:01",
+          "happened": "UX Collective’s weekly issue centers on an essay arguing that every prompt reveals the prompt writer’s clarity, references, and hidden assumptions. The same issue groups that idea with pieces on design beyond the prompt and adaptive accessibility, suggesting AI is becoming a lens for broader design practice.",
+          "changes": "This shifts prompting from a narrow input task to a critique of design literacy. The uncomfortable part is that **bad prompts are often just bad organizations** showing through, which means AI can expose missing context faster than teams are willing to fix it.",
           "verdict": "Must read",
-          "url": "https://uxdesign.cc/in-tension-modeling-what-gives-us-the-right-01740248eb45"
+          "url": "https://uxdesign.cc/prompt-as-self-portrait-de-slopifying-your-designs-the-strategic-designer-cf8162f43284"
         },
         {
           "source": "UX Collective",
-          "title": "The feed I produce myself",
-          "kind": "Web",
-          "timing": "13:12",
-          "happened": "A UX Collective essay describes a workflow filled with AI agents that keep producing while the author writes. The writer says the constant availability of agents changes focus and makes it feel irresponsible not to use every idle minute.",
-          "changes": "AI is turning design work into a background production system, but that efficiency comes with a cost to whole-picture thinking. The real tradeoff is between **throughput** and the ability to notice when work is becoming fragmented, compulsive, or simply less coherent.",
+          "title": "Prompting as self-portrait",
+          "kind": "Newsletter",
+          "timing": "13:05",
+          "happened": "The newsletter archive repeats the prompt-as-self-portrait framing and ties it to the publication’s design audience. It presents the idea as an editorial throughline rather than a one-off opinion.",
+          "changes": "Repeating the frame matters because it signals the topic is not novelty but discipline. The tension is whether designers will treat prompting as **a craft to improve** or as a shortcut that lets weak thinking pass as fluency.",
           "verdict": "Read",
-          "url": "https://uxdesign.cc/the-feed-i-produce-myself-11e4192f394c"
+          "url": "https://newsletter.uxdesign.cc/archive"
         }
       ],
       "further": [
         [
-          "Iconiq UI | Design System for Modern Interfaces",
-          "iconiqui.com",
-          "https://iconiqui.com"
+          "The feed I produce myself",
+          "UX Collective",
+          "https://uxdesign.cc/the-feed-i-produce-myself-11e4192f394c"
+        ],
+        [
+          "AI skill atrophy: Are we forgetting how to think?",
+          "UX Collective",
+          "https://uxdesign.cc/ai-skill-atrophy-cognitive-offloading-1afbf92eb496"
+        ],
+        [
+          "The building was there first",
+          "UX Collective",
+          "https://uxdesign.cc/the-building-was-there-first-26c6c4e49ba8"
         ]
       ]
     },
     {
       "id": "02",
-      "slug": "when-file-search-fails-and-ai-finds-the-document-in-seconds-are-",
-      "category": "Process",
-      "tags": [
-        "Process",
-        "UX"
-      ],
-      "aiLens": true,
-      "editorialTitle": "Search beyond folders",
-      "question": "When file search fails and AI finds the document in seconds, are teams fixing discovery or just papering over broken information architecture?",
-      "answer": "AI is exposing how brittle everyday workplace search already is. That makes the process question less about novelty and more about whether teams will repair the underlying retrieval system or keep relying on a smarter rescue layer.",
-      "why": "The editorial tension is between convenience and infrastructure. If AI becomes the only reliable way to find work, the process itself is already failing.",
-      "counts": {
-        "total": 1,
-        "newsletters": 1,
-        "web": 0
-      },
-      "firstSeen": "15:01 cet",
-      "signals": [
-        {
-          "source": "Actionable AI",
-          "title": "stop digging for files",
-          "kind": "Newsletter",
-          "timing": "15:01",
-          "happened": "A newsletter argues that Finder often misses files and that Claude Code or Codex can locate them quickly from the terminal. The writer says AI found multiple copies of a document that search claimed did not exist, pointing to a brittle indexing system.",
-          "changes": "This is not just a smarter search trick. It is evidence that teams are tolerating **broken retrieval** and then celebrating AI as the fix, even when the underlying process still wastes time and trust.",
-          "verdict": "Must read",
-          "url": "https://elinkb64.mail.theactionableai.com/ss/c/u001.VH9ztUI_5EhIlHYeBgd71I1IkoHGJpPl2lXXCIdDEpnuMP_tULjhLPaxeSLI_5YvV1cVvG7c21w7bnbmXGGb-rzpbcH5GDBesr2aq-8KB3oGAqJTgSZUKgCbKrYds63cCl7J2dCnfaEybKprzEReTiBQHqNbFMXJBpA5gX8Q5NjOGWG4R5g8Pe8P-uHDV1BMj-JkNt5KvuJAXbO0Sg4VoUcaO_dQ0ZG1zYm8BQfUCDwNyZDVRRQsbUjqF2qzREwB56YFnJvsMMA16aWIZPN8sDpIKRfmmi1Srt_AWqe7hC7j__QbL97Umx_pjkb3OJt5bPT_l099Bc9RkcV8iDf_bLivm9MfT7F-RJG80SQKw0rHxYQ9ReBUI-yuzmD3X2Gp1L6gz2D-rNHsBKBy1Md_n2WXloZ1KzHjGcG46k1IM6Eq1y8lvWGccYDK9vYlFn73xJPh_oB9zEQPULS5sIlMSRUJM3S5oYBIzMMJtW_6E8tvsji55wxjZn6x4erT3fycdPe9TuOTV97TBVWX_kvKutRVFeEcIXHIt6XidcciyHkbvVCo40wAXcFP-Wt_JR9OBoZAkRmjJbt1j0kOem0dx1874cGwQvh01gx0Z7sFa5mRXzOSwh1YmOsxJEnTdbXcU9yIKY1KrrI3T94Z_qlLAyFRUVYLByoP-qryoJSChWGlenZmAYwdFSqM14PHEXKJx1P7RHNA-G5MXCUWUB-EW4ks-zEwdK40HfhTm3HLjKjdd7tzokP4vH-o9uhEOK1SmG7I4mWIPdxOjPTciWHGfvLRBggwytdi59eNPZU1cPDm7ZP-S49OtTFrJA-jEq-kEh8uaxMwtgExa_6WCY3MU4o8uvalneFrKWYTWW0rzDQ/4ul/RWmz4CUzTXSak4YCsRMKxA/h0/h001.8ukowUWdCB4V8yP29CyBLvopgpGoLsl4jWeCT7GNMv8"
-        }
-      ],
-      "further": [
-        [
-          "Iconiq UI | Design System for Modern Interfaces",
-          "iconiqui.com",
-          "https://iconiqui.com"
-        ],
-        [
-          "time with people",
-          "Actionable AI",
-          "https://elinkb64.mail.theactionableai.com/ss/c/u001.VH9ztUI_5EhIlHYeBgd71I1IkoHGJpPl2lXXCIdDEpkgv2hJX1NCLXFVBGoSWBIe5pFzwqCNxPWVcj8dSd42oS8FfRpkWzduBggmyLcYQuSNwHJRMHVty__cNwRg2S15DGlwnUB12i8D77PsbxZjdbFRBUpWMi6j-iUOJLpmjrmSg087dteC6HFrp6dpuXyMLf0wkkXw4HEoiPfZyG0OCv6v3ClQ2eyFb6Q9LzuCUFLZ4DmaIwsBlm2tbUwIsVuiwPCTQxpJf5Fs9sYjMiIr4eQN0fpGw0UJdJIR4oYEPTHgqNsN3yY0aqIkTRLlePR5rbLfdC6F979eponrrAVZiTELgXa4EEGKeVIBzMuDZRfrgoM1FUHnJQqk0b5Y5-OJgdT9X_TTKxsgu0ILcdbtts2gXMu-OcLBR3yrQE0lgwdghdkYhC3pOEsIzOXwL8VnZDf4fKrFzW_XPb5oSJFDgdQGqmgZiCB6ul_AhJyth0gPH9HuLM-je-jmDEbc98L5S6eJc9a3VPL3tuyLyCnCjxOv3ACvjTWIbW5E_Z07qLyj0uhgFKCKN39emwMlXAW8sGvxEgCNGQnKNrc_UOgfCuqgcYGhNd9jiHaMbm97gxaLzN9V2BZkjqGmwha8i41R3C_WzOqWTGPGT-qoL_V1Cwj5LcaEIeN6YxUJpdMQqxNnk6qJh0QoN88mnMI97j171d5b23b5h2RK-ysVGv44FB_AFtnIma7WGhxY6quAvbuU1PZgEjsA0kI1LBL8KWtu_jdt8-uOpC5TFkAK5M5VceKLxpE7guyplxPgskn7oIAaa2cO8A5KMP2OpHxbXeT1c8cN_W1CcNmw4zw_FUfe55uTJCmt03g4hZ4q_0tE1gL45VQYNCa0_81nyz_DnbIZvwB62NPBTOSmmoASWLpPdA/4uk/gKEeJTPkSrOLxesCbq7yyg/h0/h001.-vF33u6nDa3B8FgG96GAc-ZyYL-BkU50l9CvcZ5boB4"
-        ]
-      ]
-    },
-    {
-      "id": "03",
-      "slug": "if-a-design-system-ships-as-editable-source-instead-of-locked-pa",
-      "category": "UI",
-      "tags": [
-        "UI"
-      ],
-      "aiLens": false,
-      "editorialTitle": "Editable by default",
-      "question": "If a design system ships as editable source instead of locked patterns, does that make interfaces more adaptable or simply easier to fork and fragment?",
-      "answer": "Open-source component libraries are moving toward source-level editability and motion-first primitives. That gives teams more control, but it also tests whether their UI discipline is strong enough to survive easy modification.",
-      "why": "This matters because the UI stack is becoming more permissive. More editability can accelerate product work, but it can also dilute consistency unless teams actively govern it.",
-      "counts": {
-        "total": 1,
-        "newsletters": 0,
-        "web": 1
-      },
-      "firstSeen": "03:58 cet",
-      "signals": [
-        {
-          "source": "iconiqui.com",
-          "title": "Iconiq UI | Design System for Modern Interfaces",
-          "kind": "Web",
-          "timing": "03:58",
-          "happened": "Iconiq UI presents itself as an open-source React component library for modern interfaces. It emphasizes motion-powered primitives, shadcn registry installs, and editable source files as the core of the system.",
-          "changes": "The UI conversation is moving toward systems that are **open by construction** instead of sealed design kits. That improves adaptability, but it also shifts the burden of coherence onto the teams using the library rather than the library itself.",
-          "verdict": "Read",
-          "url": "https://iconiqui.com"
-        }
-      ],
-      "further": [
-        [
-          "In/tension modeling: what gives us the right?",
-          "UX Collective",
-          "https://uxdesign.cc/in-tension-modeling-what-gives-us-the-right-01740248eb45"
-        ]
-      ]
-    },
-    {
-      "id": "04",
-      "slug": "as-ai-makes-solo-production-easier-will-design-culture-invest-mo",
+      "slug": "if-taste-is-becoming-the-last-human-advantage-why-are-designers-",
       "category": "Culture",
       "tags": [
-        "Culture",
-        "UX"
+        "Culture"
       ],
       "aiLens": true,
-      "editorialTitle": "People over remote solo",
-      "question": "As AI makes solo production easier, will design culture invest more in collaboration, or will it mistake more output for a healthier team?",
-      "answer": "The strongest signals point to a renewed hunger for shared work, not just distributed productivity. Teams are starting to notice that AI can increase volume while weakening the human contact and judgment that make the work livable.",
-      "why": "This is a culture story because productivity now competes with belonging. If teams optimize only for output, they risk building isolated designers with more tools and less support.",
+      "editorialTitle": "Taste under pressure",
+      "question": "If taste is becoming the last human advantage, why are designers building a culture that makes taste harder to develop and easier to fake?",
+      "answer": "The strongest signal argues that taste is being celebrated at the same time teams are de-risking the experimentation that builds it. AI is accelerating curation, but that may be shrinking the very judgment it claims to elevate.",
+      "why": "It challenges the industry’s most comfortable myth about human differentiation.",
       "counts": {
         "total": 2,
         "newsletters": 1,
         "web": 1
       },
-      "firstSeen": "15:01 cet",
+      "firstSeen": "23:59 cet",
       "signals": [
         {
-          "source": "Actionable AI",
-          "title": "time with people",
-          "kind": "Newsletter",
-          "timing": "15:01",
-          "happened": "An Actionable AI newsletter argues that working from home has been sold as freedom while often becoming isolating. The author says building an office and spending time with people improved momentum and made work feel more productive.",
-          "changes": "The culture signal is a backlash against lone productivity as an unquestioned good. Designers are rediscovering that **shared momentum** and informal feedback can matter more than abstract flexibility.",
-          "verdict": "Read",
-          "url": "https://elinkb64.mail.theactionableai.com/ss/c/u001.VH9ztUI_5EhIlHYeBgd71I1IkoHGJpPl2lXXCIdDEpkgv2hJX1NCLXFVBGoSWBIe5pFzwqCNxPWVcj8dSd42oS8FfRpkWzduBggmyLcYQuSNwHJRMHVty__cNwRg2S15DGlwnUB12i8D77PsbxZjdbFRBUpWMi6j-iUOJLpmjrmSg087dteC6HFrp6dpuXyMLf0wkkXw4HEoiPfZyG0OCv6v3ClQ2eyFb6Q9LzuCUFLZ4DmaIwsBlm2tbUwIsVuiwPCTQxpJf5Fs9sYjMiIr4eQN0fpGw0UJdJIR4oYEPTHgqNsN3yY0aqIkTRLlePR5rbLfdC6F979eponrrAVZiTELgXa4EEGKeVIBzMuDZRfrgoM1FUHnJQqk0b5Y5-OJgdT9X_TTKxsgu0ILcdbtts2gXMu-OcLBR3yrQE0lgwdghdkYhC3pOEsIzOXwL8VnZDf4fKrFzW_XPb5oSJFDgdQGqmgZiCB6ul_AhJyth0gPH9HuLM-je-jmDEbc98L5S6eJc9a3VPL3tuyLyCnCjxOv3ACvjTWIbW5E_Z07qLyj0uhgFKCKN39emwMlXAW8sGvxEgCNGQnKNrc_UOgfCuqgcYGhNd9jiHaMbm97gxaLzN9V2BZkjqGmwha8i41R3C_WzOqWTGPGT-qoL_V1Cwj5LcaEIeN6YxUJpdMQqxNnk6qJh0QoN88mnMI97j171d5b23b5h2RK-ysVGv44FB_AFtnIma7WGhxY6quAvbuU1PZgEjsA0kI1LBL8KWtu_jdt8-uOpC5TFkAK5M5VceKLxpE7guyplxPgskn7oIAaa2cO8A5KMP2OpHxbXeT1c8cN_W1CcNmw4zw_FUfe55uTJCmt03g4hZ4q_0tE1gL45VQYNCa0_81nyz_DnbIZvwB62NPBTOSmmoASWLpPdA/4uk/gKEeJTPkSrOLxesCbq7yyg/h0/h001.-vF33u6nDa3B8FgG96GAc-ZyYL-BkU50l9CvcZ5boB4"
+          "source": "UX Collective",
+          "title": "The taste paradox: why the skill everyone says matters is the one we’ve stopped building",
+          "kind": "Web",
+          "timing": "23:59",
+          "happened": "An essay in UX Collective argues that taste is treated as a premium skill while the conditions that produce it are disappearing. It criticizes the drift toward curation over creation and warns that safer work is hollowing out judgment.",
+          "changes": "This is less nostalgia than a warning that the profession is quietly training itself to prefer polish over risk. If design keeps optimizing for **low-friction approval**, then taste becomes a label teams apply after the fact, not a capability they actively build.",
+          "verdict": "Must read",
+          "url": "https://uxdesign.cc/the-taste-paradox-why-the-skill-everyone-says-matters-is-the-one-weve-stopped-building-32d1523f1f95"
         },
         {
-          "source": "UX Collective",
-          "title": "The feed I produce myself",
-          "kind": "Web",
-          "timing": "13:12",
-          "happened": "A UX Collective essay describes the emotional pressure of running multiple AI agents while writing and working. The author suggests that having machines always available creates a constant impulse to keep producing.",
-          "changes": "AI is not only changing output, it is changing the social shape of work by encouraging more isolated, self-optimizing behavior. That makes culture the corrective, because without it the team risks rewarding **endless activity** over meaningful connection.",
-          "verdict": "Track",
-          "url": "https://uxdesign.cc/the-feed-i-produce-myself-11e4192f394c"
+          "source": "It's Nice That",
+          "title": "The Weekly Edit",
+          "kind": "Newsletter",
+          "timing": "09:02",
+          "happened": "It’s Nice That’s weekly roundup foregrounds highly styled editorial and identity work, including emerging creatives, brand refreshes, and visually distinctive projects. The issue spotlights work where aesthetic distinctiveness is still the headline value.",
+          "changes": "That visual abundance is a useful counterpoint because it shows taste is still culturally rewarded even as teams claim to struggle with it. The tension is that **looking tasteful is not the same as developing taste**, and the gap between those two is where the industry is getting sloppy.",
+          "verdict": "Read",
+          "url": "https://mcusercontent.com/9992e052462653409c504c67d/images/5f22728d-de6e-486c-a26d-45f7667ce34a.png"
         }
       ],
       "further": [
         [
-          "time with people",
-          "Actionable AI",
-          "https://elinkb64.mail.theactionableai.com/ss/c/u001.VH9ztUI_5EhIlHYeBgd71I1IkoHGJpPl2lXXCIdDEpkgv2hJX1NCLXFVBGoSWBIe5pFzwqCNxPWVcj8dSd42oS8FfRpkWzduBggmyLcYQuSNwHJRMHVty__cNwRg2S15DGlwnUB12i8D77PsbxZjdbFRBUpWMi6j-iUOJLpmjrmSg087dteC6HFrp6dpuXyMLf0wkkXw4HEoiPfZyG0OCv6v3ClQ2eyFb6Q9LzuCUFLZ4DmaIwsBlm2tbUwIsVuiwPCTQxpJf5Fs9sYjMiIr4eQN0fpGw0UJdJIR4oYEPTHgqNsN3yY0aqIkTRLlePR5rbLfdC6F979eponrrAVZiTELgXa4EEGKeVIBzMuDZRfrgoM1FUHnJQqk0b5Y5-OJgdT9X_TTKxsgu0ILcdbtts2gXMu-OcLBR3yrQE0lgwdghdkYhC3pOEsIzOXwL8VnZDf4fKrFzW_XPb5oSJFDgdQGqmgZiCB6ul_AhJyth0gPH9HuLM-je-jmDEbc98L5S6eJc9a3VPL3tuyLyCnCjxOv3ACvjTWIbW5E_Z07qLyj0uhgFKCKN39emwMlXAW8sGvxEgCNGQnKNrc_UOgfCuqgcYGhNd9jiHaMbm97gxaLzN9V2BZkjqGmwha8i41R3C_WzOqWTGPGT-qoL_V1Cwj5LcaEIeN6YxUJpdMQqxNnk6qJh0QoN88mnMI97j171d5b23b5h2RK-ysVGv44FB_AFtnIma7WGhxY6quAvbuU1PZgEjsA0kI1LBL8KWtu_jdt8-uOpC5TFkAK5M5VceKLxpE7guyplxPgskn7oIAaa2cO8A5KMP2OpHxbXeT1c8cN_W1CcNmw4zw_FUfe55uTJCmt03g4hZ4q_0tE1gL45VQYNCa0_81nyz_DnbIZvwB62NPBTOSmmoASWLpPdA/4uk/gKEeJTPkSrOLxesCbq7yyg/h0/h001.-vF33u6nDa3B8FgG96GAc-ZyYL-BkU50l9CvcZ5boB4"
+          "The feed I produce myself",
+          "UX Collective",
+          "https://uxdesign.cc/the-feed-i-produce-myself-11e4192f394c"
         ],
         [
-          "In/tension modeling: what gives us the right?",
+          "Tobie Tse’s hand-stitched works turns crochet and lace into delicate animations",
+          "It’s Nice That",
+          "https://www.itsnicethat.com/articles/tobie-tse-animation-discover-051026"
+        ],
+        [
+          "Nick Haymes’ new photobook is a sprawling testament to the blood, tears and joy of growing up",
+          "It’s Nice That",
+          "https://www.itsnicethat.com/features/nick-haymes-chronograph-photography-spotlight-051026"
+        ]
+      ]
+    },
+    {
+      "id": "03",
+      "slug": "when-ai-agents-can-find-files-run-interviews-and-ship-output-in-",
+      "category": "Process",
+      "tags": [
+        "Process"
+      ],
+      "aiLens": true,
+      "editorialTitle": "Automation before strategy",
+      "question": "When AI agents can find files, run interviews, and ship output in parallel, are teams fixing workflow friction or just multiplying unfinished thinking?",
+      "answer": "The strongest signals show AI being used as a first-response layer for search, research, and production, but the accompanying commentary warns against choosing tools before identifying the bottleneck. That is a process story about diagnosis, not automation.",
+      "why": "It separates operational convenience from actual design leverage.",
+      "counts": {
+        "total": 3,
+        "newsletters": 2,
+        "web": 1
+      },
+      "firstSeen": "15:01 cet",
+      "signals": [
+        {
+          "source": "Actionable AI",
+          "title": "wrong first question",
+          "kind": "Newsletter",
+          "timing": "15:01",
+          "happened": "Actionable AI argues that the wrong question is which AI agent to build and instead recommends a bottleneck interview before choosing a tool. The newsletter frames tool selection as the failure point when teams start with hype instead of the real constraint.",
+          "changes": "The practical change here is a move from tool shopping to problem framing, which is overdue. The risk is that teams skip that discipline and end up with **more automation, not more value**, because they solved a visible annoyance rather than the actual constraint.",
+          "verdict": "Must read",
+          "url": "https://elinkb64.mail.theactionableai.com/ss/c/u001.VH9ztUI_5EhIlHYeBgd71I1IkoHGJpPl2lXXCIdDEplTF8gsm66bzNb4hiqVag8yZAtHK5eZETnh4ydkcyjXi53Jq_i9w-KFZgDsmDPfiT8UBo8UC3zAOXY9kFG7RBFyhYClBD_N6rMBntjcQoqwhb5CH6Dbtf-TjjWsxBD5DXPNKqyBRuPAs6gdGBaFIRmg1YRIlNBJ1gjWIb1g0DmVlc_QFy6dT0IC31m_Gzjht8ROkPKp1te66APZPtDCsOB_xklYdbPnFzq4P16BS-uSKvOFoyR61xptsW_nxsY4rYRM_0kgQ5WNyvh0DYqLYsTeJpJMpn3l3Afqm10g_AIodchFbpE9itH5ogRE7c9Vbmx7l97Tpeh2zOwg6yiGhRydw9y1h6qDNhDw81YKViOL_JjNwsA_66p-huf2ifIGfOUPjdBHAH8AQX6dHPAL9GfnT3loUWv4mnCJ8E7iF3xYBEYcdtv7QY_LNlnpW6iG_XkIVCu6hqzQ5FOyOn8KtqOlT4lT6vp1v_HSC61ZYophplnd54BqKozRzLs8azSQZKKtYXq5MR9VkTEtGzENjTs76_xZuMU2CHfO1jayGsGfZOmOd2LKELeUzFP49bGejn2n1jGrokT_f_bzPhDN7tzDJImGmHsuM_vfn_fj5vbm5391hJyOYiHKXSfJ6RrwOmTB2rhvd9QcVOr5K0mG0qx6_A4KOXRxGMnL53m84IJeImEi9YT7rL6O2XIG2B8yX8Ml_ouZ6SXqQwBmIJHL0XQ6teFd2Mne44anL7B0qr6QYkpbpdrsq2X8Ag66qP-ckjBv4tiHNkms3cm9-S83iva51eVEttY6qoTTqTnoGWaC1b3qiCjm8uTMzSNX6gpoBG0yIxWyZmDyZnNJfR-V8IF_v3GSp6v6l8hgc1fV0UMeiA/4um/JgpW3UY5SqO7lkQ_E2SUpw/h0/h001.O9owuqnSt2e5JawMjXtTPt5NWjvd8RlXasNkEE3DV9Y"
+        },
+        {
+          "source": "Actionable AI",
+          "title": "stop digging for files",
+          "kind": "Newsletter",
+          "timing": "15:01",
+          "happened": "Another Actionable AI issue claims AI can find files faster than Finder, even locating copies the operating system misses. It positions agents as an immediate replacement for brittle manual search.",
+          "changes": "This is a useful demonstration, but it also shows how quickly convenience gets mistaken for strategy. A faster search tool matters, yet the real question is whether teams will use **AI as retrieval** or as an excuse to avoid fixing broken information architecture.",
+          "verdict": "Track",
+          "url": "https://elinkb64.mail.theactionableai.com/ss/c/u001.VH9ztUI_5EhIlHYeBgd71I1IkoHGJpPl2lXXCIdDEpnuMP_tULjhLPaxeSLI_5YvV1cVvG7c21w7bnbmXGGb-rzpbcH5GDBesr2aq-8KB3oGAqJTgSZUKgCbKrYds63cCl7J2dCnfaEybKprzEReTiBQHqNbFMXJBpA5gX8Q5NjOGWG4R5g8Pe8P-uHDV1BMj-JkNt5KvuJAXbO0Sg4VoUcaO_dQ0ZG1zYm8BQfUCDwNyZDVRRQsbUjqF2qzREwB56YFnJvsMMA16aWIZPN8sDpIKRfmmi1Srt_AWqe7hC7j__QbL97Umx_pjkb3OJt5bPT_l099Bc9RkcV8iDf_bLivm9MfT7F-RJG80SQKw0rHxYQ9ReBUI-yuzmD3X2Gp1L6gz2D-rNHsBKBy1Md_n2WXloZ1KzHjGcG46k1IM6Eq1y8lvWGccYDK9vYlFn73xJPh_oB9zEQPULS5sIlMSRUJM3S5oYBIzMMJtW_6E8tvsji55wxjZn6x4erT3fycdPe9TuOTV97TBVWX_kvKutRVFeEcIXHIt6XidcciyHkbvVCo40wAXcFP-Wt_JR9OBoZAkRmjJbt1j0kOem0dx1874cGwQvh01gx0Z7sFa5mRXzOSwh1YmOsxJEnTdbXcU9yIKY1KrrI3T94Z_qlLAyFRUVYLByoP-qryoJSChWGlenZmAYwdFSqM14PHEXKJx1P7RHNA-G5MXCUWUB-EW4ks-zEwdK40HfhTm3HLjKjdd7tzokP4vH-o9uhEOK1SmG7I4mWIPdxOjPTciWHGfvLRBggwytdi59eNPZU1cPDm7ZP-S49OtTFrJA-jEq-kEh8uaxMwtgExa_6WCY3MU4o8uvalneFrKWYTWW0rzDQ/4ul/RWmz4CUzTXSak4YCsRMKxA/h0/h001.8ukowUWdCB4V8yP29CyBLvopgpGoLsl4jWeCT7GNMv8"
+        },
+        {
+          "source": "UX Collective",
+          "title": "AI skill atrophy: Are we forgetting how to think?",
+          "kind": "Web",
+          "timing": "00:00",
+          "happened": "UX Collective publishes an essay warning about skill atrophy from cognitive offloading to AI. The piece treats dependency as a hidden cost, not a neutral efficiency gain.",
+          "changes": "That warning should reset the conversation around every “helpful” agent. If the workflow gets faster while the thinking gets thinner, then teams are optimizing a path that leaves **less design judgment** behind each time they use it.",
+          "verdict": "Read",
+          "url": "https://uxdesign.cc/ai-skill-atrophy-cognitive-offloading-1afbf92eb496"
+        }
+      ],
+      "further": [
+        [
+          "Prompt as self-portrait, De-slopifying your designs, The strategic designer",
           "UX Collective",
-          "https://uxdesign.cc/in-tension-modeling-what-gives-us-the-right-01740248eb45"
+          "https://uxdesign.cc/prompt-as-self-portrait-de-slopifying-your-designs-the-strategic-designer-cf8162f43284"
+        ],
+        [
+          "The feed I produce myself",
+          "UX Collective",
+          "https://uxdesign.cc/the-feed-i-produce-myself-11e4192f394c"
+        ],
+        [
+          "Connect multiple GitHub organizations to Figma",
+          "Figma Release Notes",
+          "https://www.figma.com/release-notes/?title=connect-multiple-github-organizations-to-figma"
+        ]
+      ]
+    },
+    {
+      "id": "04",
+      "slug": "if-clean-kpi-cards-can-pass-design-review-while-hiding-the-truth",
+      "category": "UI",
+      "tags": [
+        "UI"
+      ],
+      "aiLens": false,
+      "editorialTitle": "Cards still mislead",
+      "question": "If clean KPI cards can pass design review while hiding the truth, why do teams keep confusing visual polish with decision quality?",
+      "answer": "The signal here is not a new component pattern but a reminder that dashboard clarity depends on details users never notice until they are wrong. That makes UI review look competent while still allowing misleading data to ship.",
+      "why": "It argues that surface neatness is an unreliable proxy for honest interface design.",
+      "counts": {
+        "total": 2,
+        "newsletters": 1,
+        "web": 1
+      },
+      "firstSeen": "16:02 cet",
+      "signals": [
+        {
+          "source": "UX Movement",
+          "title": "8 Design Details You’re Missing on KPI Cards",
+          "kind": "Newsletter",
+          "timing": "16:02",
+          "happened": "UX Movement says KPI card type is only half the problem and that the hidden details inside cards can still mislead users. It notes that these mistakes are easy to miss because they look polished during review.",
+          "changes": "This is a pointed reminder that interface cleanliness can hide analytical ambiguity. The real failure is not aesthetic, it is **decision theater**, where polished numbers make bad data feel trustworthy enough to ship.",
+          "verdict": "Must read",
+          "url": "https://uxmovement.substack.com/archive"
+        },
+        {
+          "source": "Figma Release Notes",
+          "title": "Connect multiple GitHub organizations to Figma",
+          "kind": "Web",
+          "timing": "02:00",
+          "happened": "Figma’s release notes add support for connecting multiple GitHub organizations to one Figma plan. The change is administrative rather than visual, but it affects how design and code collaboration is organized.",
+          "changes": "The update suggests Figma is still tightening the bridge between design systems and engineering reality. That is helpful, but it also reinforces a tradeoff: **better integration** can reduce friction without solving whether teams are making the right interface decisions in the first place.",
+          "verdict": "Track",
+          "url": "https://www.figma.com/release-notes/?title=connect-multiple-github-organizations-to-figma"
+        }
+      ],
+      "further": [
+        [
+          "8 Design Details You’re Missing on KPI Cards",
+          "UX Movement",
+          "https://uxmovement.substack.com/archive"
+        ],
+        [
+          "Xsolla (the biggest gaming company you’ve never heard of) gets a retro-futuristic identity from Pentagram partners",
+          "It’s Nice That",
+          "https://www.itsnicethat.com/articles/luke-powell-judy-hudson-powell-xsolla-pentagram-graphic-design-project-051026"
         ]
       ]
     }
