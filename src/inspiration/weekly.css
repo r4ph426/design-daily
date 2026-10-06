@@ -6,7 +6,7 @@
 .weekly-canvas {min-height:calc(100svh - var(--prototype-header-height,112px));display:flex;flex-direction:column;}
 .inspiration-main .weekly-toolbar {display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 30px;min-height:76px;}
 .weekly-title {display:flex;align-items:center;gap:30px;min-width:0;}
-.weekly-title h1 {margin:0;font:400 42px/1.15 var(--font-editorial);letter-spacing:-.03em;white-space:nowrap;}
+.weekly-title h1 {margin:0;color:var(--coral);font:400 42px/1.15 var(--font-editorial);letter-spacing:-.03em;white-space:nowrap;}
 .weekly-title h1:focus {outline:none;}
 .weekly-title p {font:400 16px/1.5 var(--font-ui);white-space:nowrap;margin:0;}
 .weekly-actions {display:flex;align-items:center;gap:4px;}
