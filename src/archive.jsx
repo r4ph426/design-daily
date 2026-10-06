@@ -171,7 +171,7 @@ function BookmarkButton({ record, saved, onBookmark, longLabel = false }) {
       aria-pressed={saved}
       onClick={() => onBookmark(record.key)}
     >
-      <span>{longLabel ? (saved ? "Bookmarked for me" : "Bookmark question for me") : (saved ? "Saved" : "Save")}</span>
+      <span>{longLabel ? (saved ? "Bookmarked" : "Bookmark") : (saved ? "Saved" : "Save")}</span>
       <BookmarkSimple size={18} weight={saved ? "fill" : "regular"} />
     </button>
   );

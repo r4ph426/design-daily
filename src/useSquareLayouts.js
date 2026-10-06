@@ -107,9 +107,8 @@ export function useSquareLayouts(rootRef) {
         }
         const heading = fit(layout, "heading", ":scope > .editorial-heading");
         const note = fit(layout, "note", ":scope > .editorial-note");
-        const context = fit(layout, "context", ":scope > .practice-panel");
         const sources = fit(layout, "sources", ":scope > .source-panel");
-        write(layout, "--fit-spread", heading + Math.max(note, context + sources));
+        write(layout, "--fit-spread", heading + Math.max(note, sources));
         if (layout.classList.contains("is-open")) fit(layout, "details", ":scope > .signal-details > .signal-table-wrap");
       });
       root.querySelectorAll(".prototype-archive-opening").forEach((layout) => {

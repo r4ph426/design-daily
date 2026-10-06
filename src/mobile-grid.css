@@ -37,7 +37,7 @@
   .editorial-heading h2 { font-size: clamp(24px, 6.5vw, 36px); line-height: 1.15; }
   .editorial-note h3 { font-size: var(--mobile-type-question); line-height: 1.32; }
   .answer-copy { font-size: var(--mobile-type-body); line-height: 1.4; }
-  .practice-panel > p:nth-child(2) { font-size: var(--mobile-type-body); line-height: 1.38; }
+  .editorial-context > p:nth-child(2) { font-size: var(--mobile-type-body); line-height: 1.38; }
   .source-title { font-size: var(--mobile-type-body); line-height: 1.32; }
   .question-overline { flex-wrap: wrap; gap: 4px; }
   .bookmark-button { min-width: 44px; }

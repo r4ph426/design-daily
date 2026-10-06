@@ -344,7 +344,7 @@ export function ArchiveReadingDesk({ records, ready, bookmarks, onBookmark, with
           <section className="desk-answer" aria-labelledby="desk-answer-title">
             <h3 id="desk-answer-title">Why it matters</h3>
             <p><HighlightedText text={selected.answer ?? selected.answerText} as="em" /></p>
-            <div className="desk-answer-actions"><button className="desk-text-control" type="button" aria-pressed={Boolean(bookmarks[selected.key])} onClick={() => onBookmark(selected.key)}><BookmarkSimple size={18} weight={bookmarks[selected.key] ? "fill" : "regular"} aria-hidden="true" />{bookmarks[selected.key] ? "Bookmarked for me" : "Bookmark for me"}</button><span>{selected.popularity.allTimeSaves} team saves</span></div>
+            <div className="desk-answer-actions"><button className="desk-text-control" type="button" aria-pressed={Boolean(bookmarks[selected.key])} onClick={() => onBookmark(selected.key)}><BookmarkSimple size={18} weight={bookmarks[selected.key] ? "fill" : "regular"} aria-hidden="true" />{bookmarks[selected.key] ? "Bookmarked" : "Bookmark"}</button><span>{selected.popularity.allTimeSaves} team saves</span></div>
           </section>
           <section className="desk-signals" aria-labelledby="desk-signals-title">
             <h3 id="desk-signals-title">Signals &amp; Sources</h3>

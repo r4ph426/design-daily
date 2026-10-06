@@ -319,7 +319,7 @@ function QuestionBlock({ question, isOpen, isSaved, onToggle, onSave }) {
       <aside className="question-provenance">
         <div className="provenance-head"><span>{pluralize(question.counts.total, "Source")}</span><span>{pluralize(question.counts.web, "Web source")} · {pluralize(question.counts.newsletters, "Newsletter")}</span><span>First seen {formatMetadata(question.firstSeen || "Today")}</span></div>
         <SourceList question={question} />
-        <button className={`save-button ${isSaved ? "saved" : ""}`} type="button" aria-pressed={isSaved} onClick={onSave}><span>{isSaved ? "Bookmarked for me" : "Bookmark question for me"}</span><BookmarkSimple size={17} weight={isSaved ? "fill" : "regular"} /></button>
+        <button className={`save-button ${isSaved ? "saved" : ""}`} type="button" aria-pressed={isSaved} onClick={onSave}><span>{isSaved ? "Bookmarked" : "Bookmark"}</span><BookmarkSimple size={17} weight={isSaved ? "fill" : "regular"} /></button>
       </aside>
       <div className="question-details" id={`${question.slug}-details`} hidden={!isOpen}>
         <SignalsTable question={question} />

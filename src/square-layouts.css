@@ -12,9 +12,8 @@
     grid-auto-rows: var(--module-size);
   }
   .editorial-heading { grid-row: 1 / span var(--fit-heading, 1); }
-  .editorial-note { grid-row: calc(var(--fit-heading, 1) + 1) / span var(--fit-note, 3); }
-  .practice-panel { grid-row: calc(var(--fit-heading, 1) + 1) / span var(--fit-context, 1); }
-  .source-panel { grid-row: calc(var(--fit-heading, 1) + var(--fit-context, 1) + 1) / span calc(var(--fit-spread, 4) - var(--fit-heading, 1) - var(--fit-context, 1)); }
+  .editorial-note { grid-row: calc(var(--fit-heading, 1) + 1) / span calc(var(--fit-spread, 4) - var(--fit-heading, 1)); }
+  .source-panel { grid-row: calc(var(--fit-spread, 4) - var(--fit-sources, 2) + 1) / span var(--fit-sources, 2); }
   .signal-details { grid-row: calc(var(--fit-spread, 4) + 1) / span var(--fit-details, 2); overflow: visible; }
   .signal-table-wrap { min-height: 0; display: flow-root; }
 

@@ -55,7 +55,49 @@ function prototypeRoute() {
   return { name: path === "toolbox" ? "toolbox" : "today", category: "All" };
 }
 
-function SignalDetails({ question }) {
+const trailStopWords = new Set("design designers designer teams team work first their than that what when should would there does with from more have into just still being before after they them which these those about while really most exactly where doing make been will also only same using used strongest signal signals question questions now".split(" "));
+function trailWords(record) {
+  const text = `${record.question} ${record.answerText || record.answer || ""} ${record.editorialTitle || ""}`;
+  return new Set((text.toLowerCase().match(/[a-z]{4,}/g) || []).filter((word) => !trailStopWords.has(word)));
+}
+
+function ReadingTrail({ question, records, date }) {
+  const current = records.find((record) => record.dateISO === date && record.slug === question.slug);
+  const skills = current?.skillLabels || [];
+  const words = trailWords(current || question);
+  const candidates = records.map((record) => ({ record, words: trailWords(record) }));
+  const wordFrequency = new Map();
+  for (const entry of candidates) for (const word of entry.words) wordFrequency.set(word, (wordFrequency.get(word) || 0) + 1);
+  const seen = new Set([question.question.trim().toLowerCase()]);
+  const related = candidates
+    .filter(({ record }) => record.dateISO < date && record.slug !== question.slug)
+    .map((entry) => ({ ...entry, sharedSkills: entry.record.skillLabels.filter((skill) => skills.includes(skill)), overlap: [...entry.words].filter((word) => words.has(word)) }))
+    .filter((entry) => entry.record.category === question.category || entry.overlap.length >= 3)
+    .map((entry) => ({ ...entry, score: entry.overlap.reduce((score, word) => score + Math.log2(1 + records.length / wordFrequency.get(word)), 0) + entry.sharedSkills.length + Number(entry.record.category === question.category) * 2 }))
+    .filter((entry) => entry.score > 0)
+    .sort((a, b) => b.score - a.score || b.record.dateISO.localeCompare(a.record.dateISO))
+    .filter(({ record }) => {
+      const text = record.question.trim().toLowerCase();
+      if (seen.has(text)) return false;
+      seen.add(text);
+      return true;
+    }).slice(0, 2);
+  return <section className="reading-trail" aria-labelledby={`reading-trail-${question.id}`}>
+    <p className="reading-trail-eyebrow">Reading trail</p>
+    <h3 id={`reading-trail-${question.id}`}>Follow this thread</h3>
+    <p className="reading-trail-intro">Another perspective can change the question. Find more context in the archive.</p>
+    {related.length > 0 && <ol>{related.map(({ record }) => <li key={record.key}>
+      <a href={editorialHref(`/questions/${encodeURIComponent(record.dateISO)}/${encodeURIComponent(record.slug)}`)}>
+        <span className="reading-trail-meta">{record.category} · {record.archiveReference}</span>
+        <span className="reading-trail-question">{record.question}</span>
+        <span className="reading-trail-arrow" aria-hidden="true">↗</span>
+      </a>
+    </li>)}</ol>}
+    <a className="reading-trail-browse" href={editorialHref(`/archive?category=${encodeURIComponent(question.category)}`)}>Continue in the {question.category} archive<span aria-hidden="true">↗</span></a>
+  </section>;
+}
+
+function SignalDetails({ question, records, date, onClose }) {
   return (
     <div className="signal-table-wrap">
       <table className="signal-table">
@@ -70,16 +112,30 @@ function SignalDetails({ question }) {
           </tr>
         ))}</tbody>
       </table>
-      <div className="question-trail"><p>Question archive</p><a href={editorialHref(`/archive?category=${encodeURIComponent(question.category)}`)}><span>Explore similar questions</span><small>More from {question.category} in the archive</small><span aria-hidden="true">↗</span></a></div>
+      <ReadingTrail question={question} records={records} date={date} />
+      <button className="signals-close" type="button" onClick={onClose}>Close source notes<CaretDown size={18} aria-hidden="true" /></button>
     </div>
   );
 }
 
-function EditorialSpread({ question, editorialTitle, isOpen, isSaved, onToggle, onSave }) {
+function EditorialSpread({ question, records, date, editorialTitle, isOpen, isSaved, onToggle, onSave }) {
   const detailId = `prototype-details-${question.id}`;
+  const disclosureRef = useRef(null);
+  const closeNotes = () => {
+    if (!isOpen) return;
+    onToggle();
+    // Return readers to the control after collapsing content they were reading.
+    requestAnimationFrame(() => disclosureRef.current?.focus());
+  };
   const categories = [question.category, ...(question.tags || []).filter((tag) => tag !== question.category)];
   return (
-    <section className={`editorial-spread ${isOpen ? "is-open" : ""} ${question.signals.length > 1 ? "has-multiple-signals" : ""}`} id={`prototype-question-${question.id}`} aria-labelledby={`prototype-title-${question.id}`}>
+    <section className={`editorial-spread ${isOpen ? "is-open" : ""} ${question.signals.length > 1 ? "has-multiple-signals" : ""}`} id={`prototype-question-${question.id}`} aria-labelledby={`prototype-title-${question.id}`} onKeyDown={(event) => {
+      if (event.key === "Escape" && isOpen) {
+        event.preventDefault();
+        event.stopPropagation();
+        closeNotes();
+      }
+    }}>
       <div className="editorial-heading content-panel">
         <span className="editorial-sequence" aria-hidden="true">{question.id}</span>
         <div className="editorial-heading-copy">
@@ -90,21 +146,25 @@ function EditorialSpread({ question, editorialTitle, isOpen, isSaved, onToggle, 
       <div className="editorial-note content-panel">
         <div className="question-overline">
           <p className="section-kicker">The question</p>
-          <button className={`bookmark-button ${isSaved ? "saved" : ""}`} type="button" aria-pressed={isSaved} onClick={onSave}>{isSaved ? "Bookmarked for me" : "Bookmark for me"}<BookmarkSimple size={17} weight={isSaved ? "fill" : "regular"} aria-hidden="true" /></button>
+          <button className={`bookmark-button ${isSaved ? "saved" : ""}`} type="button" aria-pressed={isSaved} onClick={onSave}>{isSaved ? "Bookmarked" : "Bookmark"}<BookmarkSimple size={17} weight={isSaved ? "fill" : "regular"} aria-hidden="true" /></button>
         </div>
         <h3>{question.question}</h3>
         <p className="section-kicker why-label">Why it matters</p>
         <p className="answer-copy"><HighlightedText text={question.answer} as="em" /></p>
+        <section className="editorial-context" aria-labelledby={`editorial-context-${question.id}`}>
+          <p className="section-kicker" id={`editorial-context-${question.id}`}>Editorial context</p>
+          <p>{question.why}</p>
+          <small>First seen {String(question.firstSeen || "").replace(/\bcet\b/i, "CET")}</small>
+        </section>
       </div>
-      <div className="practice-panel content-panel"><p className="section-kicker">Editorial context</p><p>{question.why}</p><small>First seen {String(question.firstSeen || "").replace(/\bcet\b/i, "CET")}</small></div>
       <div className="source-panel content-panel">
         <p className="section-kicker">{question.signals.length === 1 ? "Source" : "Sources"} <span>·</span> {question.signals.length}</p>
         <ol className="prototype-source-list">{question.signals.map((signal, signalIndex) => (
           <li key={`${question.id}-${signalIndex}`}><a href={signal.url} target="_blank" rel="noopener noreferrer"><span className="source-title">{signal.title}</span><span className="source-meta">{sourceDomain(signal)} · {signal.kind} · {signal.timing}</span><span className="source-external" aria-hidden="true">↗</span></a></li>
         ))}</ol>
-        <SecondaryButton className="signals-disclosure" aria-expanded={isOpen} aria-controls={detailId} onClick={onToggle}>{isOpen ? "Close sources" : "Open sources"} <span>{question.counts?.total || question.signals.length}</span><CaretDown size={18} weight="bold" aria-hidden="true" /></SecondaryButton>
+        <SecondaryButton ref={disclosureRef} id={`prototype-disclosure-${question.id}`} className="signals-disclosure" aria-expanded={isOpen} aria-controls={detailId} onClick={onToggle}>{isOpen ? "Close source notes" : "Read source notes"}<CaretDown size={18} aria-hidden="true" /></SecondaryButton>
       </div>
-      <div className="signal-details" id={detailId} hidden={!isOpen}><SignalDetails question={question} /></div>
+      <div className="signal-details" id={detailId} role="region" aria-labelledby={`prototype-disclosure-${question.id}`} hidden={!isOpen}><SignalDetails question={question} records={records} date={date} onClose={closeNotes} /></div>
     </section>
   );
 }
@@ -161,16 +221,23 @@ export function GridPrototype() {
 
   useEffect(() => {
     const updateRoute = () => {
-      if (window.location.hash && window.location.hash !== "#" && !window.location.hash.startsWith("#/")) return;
+      const questionAnchor = /^#prototype-question-\d+$/.test(window.location.hash);
+      if (window.location.hash && window.location.hash !== "#" && !window.location.hash.startsWith("#/") && !questionAnchor) return;
       const next = prototypeRoute();
       setRoute((current) => {
-        if (current.name !== next.name) window.scrollTo({ top: 0, behavior: "instant" });
+        if (current.name !== next.name && !questionAnchor) window.scrollTo({ top: 0, behavior: "instant" });
         return next;
       });
     };
     window.addEventListener("hashchange", updateRoute);
     return () => window.removeEventListener("hashchange", updateRoute);
   }, []);
+
+  useEffect(() => {
+    if (route.name !== "today" || !/^#prototype-question-\d+$/.test(window.location.hash)) return;
+    const frame = requestAnimationFrame(() => document.getElementById(window.location.hash.slice(1))?.scrollIntoView({ block: "start", behavior: "instant" }));
+    return () => cancelAnimationFrame(frame);
+  }, [route.name]);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -205,7 +272,7 @@ export function GridPrototype() {
     : <>Today’s design questions, <em>in focus.</em></>);
 
   return (
-    <div ref={shellRef} className={`prototype-shell ${route.name === "toolbox" ? "is-toolbox" : ""}`}>
+    <div ref={shellRef} className={`prototype-shell ${route.name === "toolbox" ? "is-toolbox" : route.name === "today" ? "is-today" : ""}`}>
       <a className="prototype-skip" href={route.name === "today" ? "#prototype-question-01" : route.name === "archive" ? "#prototype-archive-index" : "#prototype-our-toolbox-title"} onClick={readingDesk && route.name === "archive" ? (event) => {
         event.preventDefault();
         const target = document.querySelector("#desk-question-title") || document.querySelector("#prototype-archive-index");
@@ -229,7 +296,7 @@ export function GridPrototype() {
           {questions.map((question) => {
             const savedKey = `${edition.date}:${question.slug}`;
             const editorialTitle = question.editorialTitle || editorialTitles[question.slug] || question.question;
-            return <EditorialSpread key={question.id} question={question} editorialTitle={editorialTitle} isOpen={Boolean(openQuestions[question.id])} isSaved={Boolean(savedQuestions[savedKey])} onToggle={() => setOpenQuestions((state) => ({ ...state, [question.id]: !state[question.id] }))} onSave={() => setSavedQuestions((state) => ({ ...state, [savedKey]: !state[savedKey] }))} />;
+            return <EditorialSpread key={question.id} question={question} records={archiveRecords} date={edition.date} editorialTitle={editorialTitle} isOpen={Boolean(openQuestions[question.id])} isSaved={Boolean(savedQuestions[savedKey])} onToggle={() => setOpenQuestions((state) => ({ ...state, [question.id]: !state[question.id] }))} onSave={() => setSavedQuestions((state) => ({ ...state, [savedKey]: !state[savedKey] }))} />;
           })}
           {mobile && <section className="today-contribution" aria-label="Contribute an article"><TodayIntake /></section>}
           </>}
