@@ -1,14 +1,16 @@
 import {useEffect,useLayoutEffect,useMemo,useRef,useState} from 'react';
-import {ArrowsOutCardinal,Crosshair,ImageSquare} from '../icons/index.jsx';
+import {ArrowsOutCardinal,Crosshair,ImageSquare,Play} from '../icons/index.jsx';
 import {weeklyBands,weeklyGallery} from './weeklyLayouts.js';
 import './weekly-variants.css';
 
 function Reference({tile,onOpen,suppressClick}) {
   const {item}=tile;
+  const video=item.video||item.providerRefs?.find(p=>p.video)?.video;
   const [failed,setFailed]=useState(false);
   useEffect(()=>setFailed(false),[item.image]);
-  return <button className={`weekly-reference ${item.image&&!failed?'has-preview':'without-preview'}`} data-reference={item.id} aria-label={`Open ${item.title}`} style={{left:tile.x,top:tile.y,width:tile.width,height:tile.height}} onClick={event=>{if(suppressClick?.current&&event.detail!==0){event.preventDefault();return;}onOpen(item,event);}}>
-    {item.image&&!failed?<img key={item.image} src={item.image} alt="" loading="lazy" draggable={false} referrerPolicy="no-referrer" onError={()=>setFailed(true)}/>:<span className="weekly-reference-missing"><ImageSquare size={24}/><strong>{item.title}</strong><small>Preview unavailable · Open reference</small></span>}
+  return <button className={`weekly-reference ${(item.image||video)&&!failed?'has-preview':'without-preview'}`} data-reference={item.id} aria-label={`Open ${item.title}`} style={{left:tile.x,top:tile.y,width:tile.width,height:tile.height}} onClick={event=>{if(suppressClick?.current&&event.detail!==0){event.preventDefault();return;}onOpen(item,event);}}>
+    {item.image&&!failed?<img key={item.image} src={item.image} alt="" loading="lazy" draggable={false} referrerPolicy="no-referrer" onError={()=>setFailed(true)}/>:video&&!failed?<video src={video} muted playsInline loop preload="metadata" aria-label={item.title} onLoadedData={event=>{event.currentTarget.currentTime=Math.min(1,event.currentTarget.duration/3)||0;}} onPointerEnter={event=>{if(!matchMedia("(prefers-reduced-motion: reduce)").matches)void event.currentTarget.play().catch(()=>{});}} onPointerLeave={event=>event.currentTarget.pause()} onError={()=>setFailed(true)}/>:<span className="weekly-reference-missing"><ImageSquare size={24}/><strong>{item.title}</strong><small>Preview unavailable · Open reference</small></span>}
+    {video&&!failed&&<span className="weekly-video-label" aria-hidden="true"><Play size={13}/>Video</span>}
     <span className="weekly-reference-caption"><strong>{item.title}</strong><small>{item.domain} ↗</small></span>
   </button>;
 }

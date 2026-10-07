@@ -14,8 +14,8 @@
 .image-focus-plane {display:grid;place-items:center;}
 .image-focus-frame {flex:none;transform-origin:top left;opacity:0;}
 .image-focus-frame.is-loaded {opacity:1;}
-.image-focus-frame img {display:block;width:100%;height:100%;object-fit:contain;cursor:zoom-in;user-select:none;}
-.is-zoomed .image-focus-frame img {cursor:grab;}
+.image-focus-frame :is(img,video) {display:block;width:100%;height:100%;object-fit:contain;cursor:zoom-in;user-select:none;}
+.is-zoomed .image-focus-frame :is(img,video) {cursor:grab;}
 .image-focus-loading {position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:12px;pointer-events:none;}
 .image-focus-unavailable {display:grid;gap:14px;text-align:center;}
 .image-focus-unavailable a {display:flex;justify-content:center;align-items:center;gap:8px;min-height:44px;text-decoration:underline;text-underline-offset:4px;}
@@ -72,4 +72,6 @@
 }
 @media(prefers-reduced-motion:reduce){.image-focus-cursor-mark svg{transition:none;}}
 
-.image-focus-scroll.is-dragging,.image-focus-stage .image-focus-scroll.is-dragging .image-focus-frame img {cursor:grabbing;}
+.image-focus-scroll.is-dragging,.image-focus-stage .image-focus-scroll.is-dragging .image-focus-frame :is(img,video) {cursor:grabbing;}
+
+.image-focus-frame video {cursor:auto;}

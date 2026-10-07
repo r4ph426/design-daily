@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
 import { App } from "./App.jsx";
 import { DesignCursor } from "./DesignCursor.jsx";
+import { PublicInspiration } from "./inspiration/PublicInspiration.jsx";
+import { canUseLocalService } from "./inspiration/api.js";
 import { Inspiration } from "./inspiration/Inspiration.jsx";
 import { GridPrototype } from "./grid-prototype.jsx";
 import appStyles from "./styles.css?inline";
@@ -30,7 +32,7 @@ function PublishedSite() {
     return () => window.removeEventListener("hashchange", update);
   }, []);
 
-  return <><DesignCursor /><style>{(grid || inspiration ? gridStyles : appStyles) + squareStyles + mobileStyles}</style>{inspiration ? <Inspiration /> : grid ? <GridPrototype /> : <App />}</>;
+  return <><DesignCursor /><style>{(grid || inspiration ? gridStyles : appStyles) + squareStyles + mobileStyles}</style>{inspiration ? (canUseLocalService() && new URLSearchParams(location.hash.split("?")[1]||"").get("audience")!=="public" ? <Inspiration /> : <PublicInspiration />) : grid ? <GridPrototype /> : <App />}</>;
 }
 
 createRoot(document.getElementById("root")).render(

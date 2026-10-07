@@ -72,8 +72,6 @@
 @media(prefers-reduced-motion:reduce){.weekly-visual .weekly-caption {transition:none;transform:none;}}
 
 /* Keep the selected private destination visible within the shared masthead. */
-@media(min-width:721px){.inspiration-shell .prototype-nav .inspiration-nav-link {grid-column:4 / span 4;}}
-@media(max-width:720px){.inspiration-shell .prototype-nav {display:flex;overflow-x:auto;scrollbar-width:none;}.inspiration-shell .prototype-nav a {flex:0 0 88px;}.inspiration-shell .prototype-nav .inspiration-nav-link {flex-basis:180px;}}
 
 .weekly-related {display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 30px 12px;font:400 12px/1.5 var(--font-ui);}
 .inspiration-main .weekly-related button {display:flex;align-items:center;gap:8px;border:0;text-decoration:underline;text-underline-offset:4px;}
