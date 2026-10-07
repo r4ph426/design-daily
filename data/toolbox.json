@@ -1,8 +1,16 @@
 {
-  "weekLabel": "Week 41 · Reviewed 6 Oct 2026",
+  "weekLabel": "Week 41 · Reviewed 7 Oct 2026",
   "weeklySignals": [
     {
       "id": "01",
+      "title": "Figma agent",
+      "verdict": "Worth trying",
+      "summary": "Generally available since 6 October, with library guidelines, file search, and custom skills. It now uses AI credits. Test one library-backed edit and inspect the result before adopting it.",
+      "source": "figma.com/release-notes",
+      "url": "https://www.figma.com/release-notes/"
+    },
+    {
+      "id": "02",
       "title": "Figma Motion",
       "verdict": "Worth trying",
       "summary": "The 30 September update adds reusable animation styles and Lottie export. Try one component animation to check the handoff; Motion remains in open beta.",
@@ -10,20 +18,12 @@
       "url": "https://www.figma.com/release-notes/"
     },
     {
-      "id": "02",
+      "id": "03",
       "title": "Framer Skills",
       "verdict": "Worth trying",
       "summary": "Released 22 September, newly reviewed for our collection: reusable instructions for design systems, copy, and CMS work. Test whether one skill keeps a second page consistent.",
       "source": "framer.com/updates/skills",
       "url": "https://www.framer.com/updates/skills"
-    },
-    {
-      "id": "03",
-      "title": "Iconiq UI",
-      "verdict": "Watching",
-      "summary": "Shared by the team on 2 October: editable components with restrained motion and a shadcn MCP connection. Documentation reviewed; keyboard behavior and reduced motion still need hands-on checks.",
-      "source": "iconiqui.com",
-      "url": "https://iconiqui.com/"
     }
   ],
   "tools": [
@@ -31,8 +31,15 @@
       "id": "01",
       "title": "Figma MCP",
       "type": "MCP",
-      "categories": ["UI", "Process"],
-      "practices": ["Drafting", "UI sketches", "Review"],
+      "categories": [
+        "UI",
+        "Process"
+      ],
+      "practices": [
+        "Drafting",
+        "UI sketches",
+        "Review"
+      ],
       "description": "Figma’s official MCP reads design context and can create or update native frames, components, variables, and auto layout through supported clients and Figma skills.",
       "verdict": "Useful now",
       "confidence": "High",
@@ -47,8 +54,15 @@
       "id": "02",
       "title": "Playwright MCP",
       "type": "MCP",
-      "categories": ["UI", "Process"],
-      "practices": ["Review", "Accessibility", "Flows"],
+      "categories": [
+        "UI",
+        "Process"
+      ],
+      "practices": [
+        "Review",
+        "Accessibility",
+        "Flows"
+      ],
       "description": "Lets an AI agent inspect and operate browser interfaces through structured accessibility data for repeatable product checks and walkthroughs.",
       "verdict": "Best practice",
       "confidence": "High",
@@ -63,8 +77,16 @@
       "id": "03",
       "title": "Apple Design Skill",
       "type": "Skill",
-      "categories": ["UI", "UX", "Process"],
-      "practices": ["Review", "Accessibility", "UI sketches"],
+      "categories": [
+        "UI",
+        "UX",
+        "Process"
+      ],
+      "practices": [
+        "Review",
+        "Accessibility",
+        "UI sketches"
+      ],
       "description": "A reusable skill for checking Apple-platform interface work against platform design guidance and implementation conventions.",
       "verdict": "Worth trying",
       "confidence": "Medium",
@@ -79,8 +101,15 @@
       "id": "04",
       "title": "Emil Kowalski’s skills",
       "type": "Skill",
-      "categories": ["UI", "Process"],
-      "practices": ["Drafting", "Review", "Creative exploration"],
+      "categories": [
+        "UI",
+        "Process"
+      ],
+      "practices": [
+        "Drafting",
+        "Review",
+        "Creative exploration"
+      ],
       "description": "A compact collection of design-engineering skills focused on motion, interface detail, and more intentional frontend execution.",
       "verdict": "Worth trying",
       "confidence": "Medium",
@@ -95,8 +124,15 @@
       "id": "05",
       "title": "Scroll Craft",
       "type": "Skill",
-      "categories": ["UI", "Process"],
-      "practices": ["Drafting", "Creative exploration", "Review"],
+      "categories": [
+        "UI",
+        "Process"
+      ],
+      "practices": [
+        "Drafting",
+        "Creative exploration",
+        "Review"
+      ],
       "description": "A skill for planning and refining scroll-driven experiences, including pacing, transitions, and implementation choices.",
       "verdict": "Worth trying",
       "confidence": "Medium",
@@ -111,8 +147,15 @@
       "id": "06",
       "title": "Mobbin MCP",
       "type": "MCP",
-      "categories": ["UI", "UX"],
-      "practices": ["Pattern research", "Flows", "UI sketches"],
+      "categories": [
+        "UI",
+        "UX"
+      ],
+      "practices": [
+        "Pattern research",
+        "Flows",
+        "UI sketches"
+      ],
       "description": "Connects AI workflows to Mobbin’s library of real product screens and flows for faster pattern research and comparison.",
       "verdict": "Worth trying",
       "confidence": "Medium",
@@ -127,8 +170,16 @@
       "id": "07",
       "title": "Savee MCP",
       "type": "MCP",
-      "categories": ["UI", "Culture", "Process"],
-      "practices": ["Taste", "Creative exploration", "Pattern research"],
+      "categories": [
+        "UI",
+        "Culture",
+        "Process"
+      ],
+      "practices": [
+        "Taste",
+        "Creative exploration",
+        "Pattern research"
+      ],
       "description": "Searches Savee’s curated reference library and can retrieve personal saves, boards, and feed items inside supported AI clients.",
       "verdict": "Worth trying",
       "confidence": "Medium",
@@ -143,8 +194,17 @@
       "id": "08",
       "title": "ScreensDesign MCP",
       "type": "MCP",
-      "categories": ["UI", "UX", "Process"],
-      "practices": ["Pattern research", "Flows", "UI sketches", "Review"],
+      "categories": [
+        "UI",
+        "UX",
+        "Process"
+      ],
+      "practices": [
+        "Pattern research",
+        "Flows",
+        "UI sketches",
+        "Review"
+      ],
       "description": "Provides read-only access to real mobile screens, full recordings, paywalls, onboarding, and user flows from a large app library.",
       "verdict": "Worth trying",
       "confidence": "Medium",
@@ -159,8 +219,15 @@
       "id": "09",
       "title": "Cosmos",
       "type": "Tool",
-      "categories": ["UI", "Culture"],
-      "practices": ["Taste", "Creative exploration", "Pattern research"],
+      "categories": [
+        "UI",
+        "Culture"
+      ],
+      "practices": [
+        "Taste",
+        "Creative exploration",
+        "Pattern research"
+      ],
       "description": "A visual discovery and collecting tool for organizing references, exploring related imagery, and building a durable taste library.",
       "verdict": "Useful now",
       "confidence": "High",
@@ -175,8 +242,15 @@
       "id": "10",
       "title": "Ploy",
       "type": "Tool",
-      "categories": ["UI", "Process"],
-      "practices": ["Drafting", "UI sketches", "Creative exploration"],
+      "categories": [
+        "UI",
+        "Process"
+      ],
+      "practices": [
+        "Drafting",
+        "UI sketches",
+        "Creative exploration"
+      ],
       "description": "An AI website builder for drafting marketing pages from an existing site and brand system, with reusable sections and components.",
       "verdict": "Watching",
       "confidence": "Medium",
@@ -191,8 +265,14 @@
       "id": "11",
       "title": "Raylight",
       "type": "Tool",
-      "categories": ["UI", "Process"],
-      "practices": ["Drafting", "Creative exploration"],
+      "categories": [
+        "UI",
+        "Process"
+      ],
+      "practices": [
+        "Drafting",
+        "Creative exploration"
+      ],
       "description": "A motion-design editor for turning product interfaces into polished launch and product videos with help from AI coding tools.",
       "verdict": "Worth trying",
       "confidence": "Medium",
@@ -207,8 +287,14 @@
       "id": "12",
       "title": "Geometric",
       "type": "Tool",
-      "categories": ["UI", "Culture"],
-      "practices": ["Taste", "Creative exploration"],
+      "categories": [
+        "UI",
+        "Culture"
+      ],
+      "practices": [
+        "Taste",
+        "Creative exploration"
+      ],
       "description": "A browser-based image and motion art tool for transforming source material through configurable geometric and visual effects.",
       "verdict": "Worth trying",
       "confidence": "Medium",
@@ -223,8 +309,16 @@
       "id": "13",
       "title": "Canva MCP",
       "type": "MCP",
-      "categories": ["UI", "Process"],
-      "practices": ["Drafting", "UI sketches", "Creative exploration", "Review"],
+      "categories": [
+        "UI",
+        "Process"
+      ],
+      "practices": [
+        "Drafting",
+        "UI sketches",
+        "Creative exploration",
+        "Review"
+      ],
       "description": "Canva’s official remote MCP supports design generation and editing, design-library search, brand and asset management, export, and collaborative comments.",
       "verdict": "Worth trying",
       "confidence": "High",
@@ -239,8 +333,15 @@
       "id": "14",
       "title": "Canva Skills",
       "type": "Skill",
-      "categories": ["UI", "Process"],
-      "practices": ["Drafting", "Creative exploration", "Review"],
+      "categories": [
+        "UI",
+        "Process"
+      ],
+      "practices": [
+        "Drafting",
+        "Creative exploration",
+        "Review"
+      ],
       "description": "Canva’s official skills package adds reusable creative workflows on top of the Canva Connector for Codex, Claude, and Cursor.",
       "verdict": "Worth trying",
       "confidence": "High",
@@ -255,8 +356,16 @@
       "id": "15",
       "title": "Pinterest MCP",
       "type": "MCP",
-      "categories": ["UI", "Culture", "Process"],
-      "practices": ["Taste", "Pattern research", "Creative exploration"],
+      "categories": [
+        "UI",
+        "Culture",
+        "Process"
+      ],
+      "practices": [
+        "Taste",
+        "Pattern research",
+        "Creative exploration"
+      ],
       "description": "Pinterest’s announced official MCP is intended to search Pins, explore and manage Boards, follow trends, and surface audience and advertising insights.",
       "verdict": "Watching",
       "confidence": "High",
@@ -271,8 +380,17 @@
       "id": "16",
       "title": "UI Design Agent Kit",
       "type": "Agent",
-      "categories": ["UI", "UX", "Process"],
-      "practices": ["Drafting", "UI sketches", "Review", "Accessibility"],
+      "categories": [
+        "UI",
+        "UX",
+        "Process"
+      ],
+      "practices": [
+        "Drafting",
+        "UI sketches",
+        "Review",
+        "Accessibility"
+      ],
       "description": "A project-level UI agent workflow that turns plain-language briefs into a design contract, implementation plan, browser checks, and recorded delivery evidence.",
       "verdict": "Watching",
       "confidence": "Medium",
@@ -287,8 +405,19 @@
       "id": "17",
       "title": "Seenry Skills",
       "type": "Skill",
-      "categories": ["UI", "UX", "Process", "Culture"],
-      "practices": ["Taste", "Pattern research", "UI sketches", "Review", "Creative exploration"],
+      "categories": [
+        "UI",
+        "UX",
+        "Process",
+        "Culture"
+      ],
+      "practices": [
+        "Taste",
+        "Pattern research",
+        "UI sketches",
+        "Review",
+        "Creative exploration"
+      ],
       "description": "A five-skill design workflow covering reference research, design direction, motion, assets, branding, presentations, implementation, and rendered review.",
       "verdict": "Worth trying",
       "confidence": "Medium",
@@ -303,8 +432,14 @@
       "id": "18",
       "title": "Dembrandt",
       "type": "MCP",
-      "categories": ["UI", "Process"],
-      "practices": ["Review", "Pattern research"],
+      "categories": [
+        "UI",
+        "Process"
+      ],
+      "practices": [
+        "Review",
+        "Pattern research"
+      ],
       "description": "An MCP and CLI that extracts design tokens, typography, spacing, components, and accessibility findings from live websites.",
       "verdict": "Worth trying",
       "confidence": "Medium",
@@ -319,8 +454,14 @@
       "id": "19",
       "title": "Diagram Design",
       "type": "Skill",
-      "categories": ["UX", "Process"],
-      "practices": ["Flows", "UI sketches"],
+      "categories": [
+        "UX",
+        "Process"
+      ],
+      "practices": [
+        "Flows",
+        "UI sketches"
+      ],
       "description": "A Codex-compatible design skill for producing structured, editable diagrams, including user journeys and flow diagrams.",
       "verdict": "Worth trying",
       "confidence": "Medium",
@@ -335,12 +476,19 @@
       "id": "20",
       "title": "Figma Motion",
       "type": "Tool",
-      "categories": ["UI", "Process"],
-      "practices": ["Creative exploration", "Drafting", "Review"],
+      "categories": [
+        "UI",
+        "Process"
+      ],
+      "practices": [
+        "Creative exploration",
+        "Drafting",
+        "Review"
+      ],
       "description": "A timeline inside Figma Design for editable keyframe animation, reusable motion styles, and supported Lottie exports. The 30 September release extends its open beta.",
       "verdict": "Worth trying",
       "confidence": "Medium",
-      "reviewed": "6 Oct 2026",
+      "reviewed": "7 Oct 2026",
       "source": "figma.com/release-notes",
       "url": "https://www.figma.com/release-notes/",
       "access": "Open beta; file edit access",
@@ -351,12 +499,19 @@
       "id": "21",
       "title": "Framer Skills",
       "type": "Skill",
-      "categories": ["UI", "Process"],
-      "practices": ["Drafting", "UI sketches", "Review"],
+      "categories": [
+        "UI",
+        "Process"
+      ],
+      "practices": [
+        "Drafting",
+        "UI sketches",
+        "Review"
+      ],
       "description": "Project-level instructions for the Framer agent covering design systems, writing style, and CMS workflows. Skills can reference project pages, components, and styles and travel with a remix.",
       "verdict": "Worth trying",
       "confidence": "Medium",
-      "reviewed": "6 Oct 2026",
+      "reviewed": "7 Oct 2026",
       "source": "framer.com/updates/skills",
       "url": "https://www.framer.com/updates/skills",
       "access": "Framer project and agent access",
@@ -367,17 +522,47 @@
       "id": "22",
       "title": "Iconiq UI",
       "type": "Tool",
-      "categories": ["UI", "Process"],
-      "practices": ["UI sketches", "Drafting", "Creative exploration"],
+      "categories": [
+        "UI",
+        "Process"
+      ],
+      "practices": [
+        "UI sketches",
+        "Drafting",
+        "Creative exploration"
+      ],
       "description": "An open-source UI collection delivered as editable local components through the shadcn registry, with an optional connection through shadcn MCP.",
       "verdict": "Watching",
       "confidence": "Medium",
-      "reviewed": "6 Oct 2026",
+      "reviewed": "7 Oct 2026",
       "source": "iconiqui.com",
       "url": "https://iconiqui.com/",
       "access": "Open source; shadcn setup",
       "setup": "Project registry configuration",
       "recommendation": "A team-submitted lead for restrained component motion. Check keyboard behavior, reduced motion, and design-system fit in a small prototype before recommending it for product work."
+    },
+    {
+      "id": "23",
+      "title": "Figma agent",
+      "type": "Agent",
+      "categories": [
+        "UI",
+        "Process"
+      ],
+      "practices": [
+        "Drafting",
+        "UI sketches",
+        "Review"
+      ],
+      "description": "An agent inside Figma Design for generating and editing layouts, applying connected libraries, and getting design feedback. The 6 October release adds library guidelines and file search.",
+      "verdict": "Worth trying",
+      "confidence": "Medium",
+      "reviewed": "7 Oct 2026",
+      "source": "help.figma.com",
+      "url": "https://help.figma.com/hc/en-us/articles/37998629035799-Work-with-the-Figma-agent-in-design-files",
+      "access": "All plans; AI credits; editing depends on seat and file access",
+      "setup": "Open Agents in a Figma Design file",
+      "recommendation": "Connect a library and try one bounded layout edit, then inspect component use and hierarchy. Source-reviewed, not yet team-tested. Prototyping interactions and asset export are not supported; keep credit usage visible."
     }
   ]
 }
