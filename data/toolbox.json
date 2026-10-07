@@ -1,29 +1,29 @@
 {
-  "weekLabel": "Week 41 · Reviewed 7 Oct 2026",
+  "weekLabel": "Week 41 · Source-reviewed 7 Oct 2026",
   "weeklySignals": [
     {
-      "id": "01",
+      "title": "Canva MCP",
+      "verdict": "Worth trying",
+      "summary": "Use it when you need AI-assisted design creation or edits inside Canva, and check permissions plus brand fidelity on one small workflow first.",
+      "source": "canva.dev/docs/apps/mcp",
+      "url": "https://www.canva.dev/docs/apps/mcp/",
+      "id": "01"
+    },
+    {
       "title": "Figma agent",
       "verdict": "Worth trying",
-      "summary": "Generally available since 6 October, with library guidelines, file search, and custom skills. It now uses AI credits. Test one library-backed edit and inspect the result before adopting it.",
-      "source": "figma.com/release-notes",
-      "url": "https://www.figma.com/release-notes/"
+      "summary": "Try one bounded layout edit with a connected library, then verify component use, hierarchy, and access scope.",
+      "source": "help.figma.com",
+      "url": "https://help.figma.com/hc/en-us/articles/37998629035799-Work-with-the-Figma-agent-in-design-files",
+      "id": "02"
     },
     {
-      "id": "02",
-      "title": "Figma Motion",
-      "verdict": "Worth trying",
-      "summary": "The 30 September update adds reusable animation styles and Lottie export. Try one component animation to check the handoff; Motion remains in open beta.",
-      "source": "figma.com/release-notes",
-      "url": "https://www.figma.com/release-notes/"
-    },
-    {
-      "id": "03",
-      "title": "Framer Skills",
-      "verdict": "Worth trying",
-      "summary": "Released 22 September, newly reviewed for our collection: reusable instructions for design systems, copy, and CMS work. Test whether one skill keeps a second page consistent.",
-      "source": "framer.com/updates/skills",
-      "url": "https://www.framer.com/updates/skills"
+      "title": "Scenario Agent Skills",
+      "verdict": "Watching",
+      "summary": "Source-reviewed; not yet team-tested. Use it for one small branded asset task, such as a single image or 3D concept, before expanding to a wider production workflow.",
+      "source": "github.com",
+      "url": "https://github.com/scenario-labs/skills",
+      "id": "03"
     }
   ],
   "tools": [
@@ -273,15 +273,15 @@
         "Drafting",
         "Creative exploration"
       ],
-      "description": "A motion-design editor for turning product interfaces into polished launch and product videos with help from AI coding tools.",
+      "description": "A motion-design editor for turning product interfaces into polished launch and product videos with AI-assisted canvas edits.",
       "verdict": "Worth trying",
       "confidence": "Medium",
-      "reviewed": "28 Sep 2026",
+      "reviewed": "7 Oct 2026",
       "source": "raylight.app",
       "url": "https://www.raylight.app/",
       "access": "Web app",
       "setup": "Under 10 minutes",
-      "recommendation": "Worth testing where designers already have product UI but need clearer motion narratives. Keep the motion subordinate to the product story."
+      "recommendation": "Try it on a single product shot or hero video before moving larger motion narratives into production."
     },
     {
       "id": "12",
@@ -322,12 +322,12 @@
       "description": "Canva’s official remote MCP supports design generation and editing, design-library search, brand and asset management, export, and collaborative comments.",
       "verdict": "Worth trying",
       "confidence": "High",
-      "reviewed": "28 Sep 2026",
+      "reviewed": "7 Oct 2026",
       "source": "canva.dev/docs/apps/mcp",
       "url": "https://www.canva.dev/docs/apps/mcp/",
       "access": "Canva account",
       "setup": "5–10 minutes",
-      "recommendation": "The official surface is unusually broad and could shorten common production workflows. Test brand fidelity, edit precision, and permission boundaries before making it a default."
+      "recommendation": "Use it when you need AI-assisted design creation or edits inside Canva, and check permissions plus brand fidelity on one small workflow first."
     },
     {
       "id": "14",
@@ -418,15 +418,15 @@
         "Review",
         "Creative exploration"
       ],
-      "description": "A five-skill design workflow covering reference research, design direction, motion, assets, branding, presentations, implementation, and rendered review.",
+      "description": "A five-skill design workflow that researches real screens, measures references, explores compositions, and verifies work with evidence from seenry MCP.",
       "verdict": "Worth trying",
       "confidence": "Medium",
-      "reviewed": "28 Sep 2026",
+      "reviewed": "7 Oct 2026",
       "source": "github.com/ayangabryl/seenry-skills",
       "url": "https://github.com/ayangabryl/seenry-skills",
       "access": "Open source",
       "setup": "10–20 minutes",
-      "recommendation": "The package connects reference evidence to actual design decisions and verification. Start with one skill because the full suite introduces a substantial workflow of its own."
+      "recommendation": "Start with one skill, such as reference research or review, before adopting the full workflow."
     },
     {
       "id": "18",
@@ -443,12 +443,12 @@
       "description": "An MCP and CLI that extracts design tokens, typography, spacing, components, and accessibility findings from live websites.",
       "verdict": "Worth trying",
       "confidence": "Medium",
-      "reviewed": "30 Sep 2026",
+      "reviewed": "7 Oct 2026",
       "source": "github.com/dembrandt/dembrandt",
       "url": "https://github.com/dembrandt/dembrandt",
       "access": "Open source",
       "setup": "10–15 minutes",
-      "recommendation": "Try it on a small set of reference sites to speed up design-system comparison. Check the extracted tokens and accessibility findings against the live pages before using them as evidence."
+      "recommendation": "Run it against a few reference sites to compare tokens and accessibility findings before using them as evidence."
     },
     {
       "id": "19",
@@ -465,12 +465,12 @@
       "description": "A Codex-compatible design skill for producing structured, editable diagrams, including user journeys and flow diagrams.",
       "verdict": "Worth trying",
       "confidence": "Medium",
-      "reviewed": "30 Sep 2026",
+      "reviewed": "7 Oct 2026",
       "source": "github.com/cathrynlavery/diagram-design",
       "url": "https://github.com/cathrynlavery/diagram-design",
       "access": "Open source",
       "setup": "5–10 minutes",
-      "recommendation": "Try it on a user journey or service flow and compare the resulting diagram with the team’s existing documentation. Review generated structure and labels before sharing."
+      "recommendation": "Apply it to one user journey or service flow, then compare the structure and labels against your current documentation."
     },
     {
       "id": "20",
@@ -554,7 +554,7 @@
         "UI sketches",
         "Review"
       ],
-      "description": "An agent inside Figma Design for generating and editing layouts, applying connected libraries, and getting design feedback. The 6 October release adds library guidelines and file search.",
+      "description": "An agent inside Figma Design for generating and editing layouts, applying connected libraries, and getting design feedback.",
       "verdict": "Worth trying",
       "confidence": "Medium",
       "reviewed": "7 Oct 2026",
@@ -562,7 +562,53 @@
       "url": "https://help.figma.com/hc/en-us/articles/37998629035799-Work-with-the-Figma-agent-in-design-files",
       "access": "All plans; AI credits; editing depends on seat and file access",
       "setup": "Open Agents in a Figma Design file",
-      "recommendation": "Connect a library and try one bounded layout edit, then inspect component use and hierarchy. Source-reviewed, not yet team-tested. Prototyping interactions and asset export are not supported; keep credit usage visible."
+      "recommendation": "Try one bounded layout edit with a connected library, then verify component use, hierarchy, and access scope."
+    },
+    {
+      "id": "auto-4c4e9e4faa27",
+      "title": "Scenario Agent Skills",
+      "type": "Skill",
+      "categories": [
+        "UI",
+        "UX",
+        "Process"
+      ],
+      "practices": [
+        "Drafting",
+        "Creative exploration",
+        "Review"
+      ],
+      "description": "A set of agent skills for producing images, video, audio, textures, skyboxes, and 3D assets through the Scenario MCP, with separate expert tools for Blender, Maya, ZBrush, Unreal, and Unity.",
+      "recommendation": "Source-reviewed; not yet team-tested. Use it for one small branded asset task, such as a single image or 3D concept, before expanding to a wider production workflow.",
+      "access": "Scenario account",
+      "setup": "Not stated; check whether the MCP or local DCC tool path fits your workflow",
+      "verdict": "Watching",
+      "confidence": "Medium",
+      "reviewed": "7 Oct 2026",
+      "source": "github.com",
+      "url": "https://github.com/scenario-labs/skills"
+    },
+    {
+      "id": "auto-9b42d03fff7e",
+      "title": "Agentic QA boilerplate",
+      "type": "Tool",
+      "categories": [
+        "UI",
+        "Process"
+      ],
+      "practices": [
+        "Review",
+        "Flows"
+      ],
+      "description": "A Playwright-based QA workflow that covers shift-left planning, in-sprint testing, KATA automation, regression, and go or no-go review.",
+      "recommendation": "Source-reviewed; not yet team-tested. Use it for one bounded QA flow, then confirm the handoff and review steps fit your team’s test process.",
+      "access": "Open source",
+      "setup": "Not stated; install and run the project setup for the chosen agent stack",
+      "verdict": "Watching",
+      "confidence": "Medium",
+      "reviewed": "7 Oct 2026",
+      "source": "github.com",
+      "url": "https://github.com/upex-galaxy/agentic-qa-boilerplate"
     }
   ]
 }

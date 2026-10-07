@@ -1,0 +1,167 @@
+{
+  "date": "2026-10-07",
+  "changes": [
+    {
+      "kind": "changed",
+      "id": "13",
+      "title": "Canva MCP",
+      "url": "https://www.canva.dev/docs/apps/mcp/",
+      "fields": [
+        {
+          "field": "recommendation",
+          "before": "The official surface is unusually broad and could shorten common production workflows. Test brand fidelity, edit precision, and permission boundaries before making it a default.",
+          "after": "Use it when you need AI-assisted design creation or edits inside Canva, and check permissions plus brand fidelity on one small workflow first."
+        }
+      ],
+      "evidence": "it&#x27;s built on the Canva MCP server. The Canva MCP server enables AI assistants to seamlessly interact with Canva&#x27;s design capabilities. By exposing Canva&#x27;s capabilities (including design creation and editing, asset and brand management, library search, export, and commenting) as MCP-compatible tools, you can give your users access"
+    },
+    {
+      "kind": "changed",
+      "id": "23",
+      "title": "Figma agent",
+      "url": "https://help.figma.com/hc/en-us/articles/37998629035799-Work-with-the-Figma-agent-in-design-files",
+      "fields": [
+        {
+          "field": "description",
+          "before": "An agent inside Figma Design for generating and editing layouts, applying connected libraries, and getting design feedback. The 6 October release adds library guidelines and file search.",
+          "after": "An agent inside Figma Design for generating and editing layouts, applying connected libraries, and getting design feedback."
+        },
+        {
+          "field": "recommendation",
+          "before": "Connect a library and try one bounded layout edit, then inspect component use and hierarchy. Source-reviewed, not yet team-tested. Prototyping interactions and asset export are not supported; keep credit usage visible.",
+          "after": "Try one bounded layout edit with a connected library, then verify component use, hierarchy, and access scope."
+        }
+      ],
+      "evidence": "Explore Work with the Figma agent in design files Who can use this feature Available on all plans In Figma Design, you can collaborate with an agent to generate and remix designs, automate busywork, and get design feedback. To get started, select any layer on the canvas and click Agents to open the on-canvas prompt box, or use the keyboard"
+    },
+    {
+      "kind": "new",
+      "id": "auto-4c4e9e4faa27",
+      "title": "Scenario Agent Skills",
+      "url": "https://github.com/scenario-labs/skills",
+      "entry": {
+        "id": "auto-4c4e9e4faa27",
+        "title": "Scenario Agent Skills",
+        "type": "Skill",
+        "categories": [
+          "UI",
+          "UX",
+          "Process"
+        ],
+        "practices": [
+          "Drafting",
+          "Creative exploration",
+          "Review"
+        ],
+        "description": "A set of agent skills for producing images, video, audio, textures, skyboxes, and 3D assets through the Scenario MCP, with separate expert tools for Blender, Maya, ZBrush, Unreal, and Unity.",
+        "recommendation": "Source-reviewed; not yet team-tested. Use it for one small branded asset task, such as a single image or 3D concept, before expanding to a wider production workflow.",
+        "access": "Scenario account",
+        "setup": "Not stated; check whether the MCP or local DCC tool path fits your workflow",
+        "verdict": "Watching",
+        "confidence": "Medium",
+        "reviewed": "7 Oct 2026",
+        "source": "github.com",
+        "url": "https://github.com/scenario-labs/skills"
+      },
+      "evidence": "Scenario MCP server, and each family folder's README records how it was built and how far it was verified. Skills follow the Agent Skills format. Install Everything for Scenario. All 66 Scenario skills, without the expert tools: the default for working through the Scenario MCP. # Every Scenario skill, without the expert tools npx skills add"
+    },
+    {
+      "kind": "changed",
+      "id": "19",
+      "title": "Diagram Design",
+      "url": "https://github.com/cathrynlavery/diagram-design",
+      "fields": [
+        {
+          "field": "recommendation",
+          "before": "Try it on a user journey or service flow and compare the resulting diagram with the team’s existing documentation. Review generated structure and labels before sharing.",
+          "after": "Apply it to one user journey or service flow, then compare the structure and labels against your current documentation."
+        }
+      ],
+      "evidence": "Code of conduct Contributing MIT license Security More items New in 2.0 — the Loop: flywheels with a shared-memory hub. The dashed lines are the write-backs. New in 2.3: semantic system patterns and optional accessible motion, while static output stays the default. New in 2.5.10: ten more layout grammars — Sankey, fishbone, Wardley map, kanban,"
+    },
+    {
+      "kind": "changed",
+      "id": "18",
+      "title": "Dembrandt",
+      "url": "https://github.com/dembrandt/dembrandt",
+      "fields": [
+        {
+          "field": "recommendation",
+          "before": "Try it on a small set of reference sites to speed up design-system comparison. Check the extracted tokens and accessibility findings against the live pages before using them as evidence.",
+          "after": "Run it against a few reference sites to compare tokens and accessibility findings before using them as evidence."
+        }
+      ],
+      "evidence": "Code of conduct Contributing MIT license Security More items Dembrandt. Extract any website's design system in one command. Enforce it in CI. Logo, colors, typography, spacing, borders, shadows, motion, components. W3C design tokens in seconds. Install npm install -g dembrandt dembrandt install-browser # one-time: fetches the matching Chromium"
+    },
+    {
+      "kind": "changed",
+      "id": "17",
+      "title": "Seenry Skills",
+      "url": "https://github.com/ayangabryl/seenry-skills",
+      "fields": [
+        {
+          "field": "description",
+          "before": "A five-skill design workflow covering reference research, design direction, motion, assets, branding, presentations, implementation, and rendered review.",
+          "after": "A five-skill design workflow that researches real screens, measures references, explores compositions, and verifies work with evidence from seenry MCP."
+        },
+        {
+          "field": "recommendation",
+          "before": "The package connects reference evidence to actual design decisions and verification. Start with one skill because the full suite introduces a substantial workflow of its own.",
+          "after": "Start with one skill, such as reference research or review, before adopting the full workflow."
+        }
+      ],
+      "evidence": "explainers studied from real references, rendered frame by frame, with designed sound and sourced claims What makes it different It looks before it designs. With Seenry MCP the agent searches a library of more than 100,000 captured app screens and nearly 2,000 websites, matched by category (\"analytics hero\", \"payments pricing\") as well as by name."
+    },
+    {
+      "kind": "new",
+      "id": "auto-9b42d03fff7e",
+      "title": "Agentic QA boilerplate",
+      "url": "https://github.com/upex-galaxy/agentic-qa-boilerplate",
+      "entry": {
+        "id": "auto-9b42d03fff7e",
+        "title": "Agentic QA boilerplate",
+        "type": "Tool",
+        "categories": [
+          "UI",
+          "Process"
+        ],
+        "practices": [
+          "Review",
+          "Flows"
+        ],
+        "description": "A Playwright-based QA workflow that covers shift-left planning, in-sprint testing, KATA automation, regression, and go or no-go review.",
+        "recommendation": "Source-reviewed; not yet team-tested. Use it for one bounded QA flow, then confirm the handoff and review steps fit your team’s test process.",
+        "access": "Open source",
+        "setup": "Not stated; install and run the project setup for the chosen agent stack",
+        "verdict": "Watching",
+        "confidence": "Medium",
+        "reviewed": "7 Oct 2026",
+        "source": "github.com",
+        "url": "https://github.com/upex-galaxy/agentic-qa-boilerplate"
+      },
+      "evidence": "shipping real test cases — every phase has a skill. You decide what to verify. Get started in one command \"> bunx create-agentic-qa@latest your-repo-name > One command. Downloads · scrubs git history · renames the project · runs bun install · launches the interactive installer. Prerequisites Before running bunx create-agentic-qa@latest or bun"
+    },
+    {
+      "kind": "changed",
+      "id": "11",
+      "title": "Raylight",
+      "url": "https://www.raylight.app/",
+      "fields": [
+        {
+          "field": "description",
+          "before": "A motion-design editor for turning product interfaces into polished launch and product videos with help from AI coding tools.",
+          "after": "A motion-design editor for turning product interfaces into polished launch and product videos with AI-assisted canvas edits."
+        },
+        {
+          "field": "recommendation",
+          "before": "Worth testing where designers already have product UI but need clearer motion narratives. Keep the motion subordinate to the product story.",
+          "after": "Try it on a single product shot or hero video before moving larger motion narratives into production."
+        }
+      ],
+      "evidence": "image MCP server Tell your AI what to change and watch it happen on your canvas. Works with Claude, Codex, Cursor, and Antigravity. Raylight connected get_shot_details: Launch video, shot 2 > Make the headline slide up and add a slow push-in apply_edits 2 animations added render_stills checked 3 frames Done. The headline slides up and the camera"
+    }
+  ],
+  "warnings": [
+    "Could not verify source: Figma Motion"
+  ]
+}
