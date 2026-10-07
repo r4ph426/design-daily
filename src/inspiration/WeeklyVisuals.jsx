@@ -47,7 +47,7 @@ export function WeeklyVisuals({items,variant,weekKey,query,onOpen}) {
   }
   function end(){gesture.current=null;setDragging(false);}
   const tiles=gallery?layout.tiles:layout.rows?.flatMap(row=>row.tiles)||[];
-  return <div className={`weekly-visual-experience variant-${variant}`}>
+  return <div className={`weekly-visual-experience weekly-surface content-panel variant-${variant}`}>
     <div ref={viewport} className={`weekly-art-viewport ${dragging?'is-dragging':''}`} role="region" aria-label={gallery?'Gallery wall, scroll or drag to explore':'Image bands, scroll to explore'} tabIndex={gallery?0:undefined} onPointerDown={begin} onPointerMove={move} onPointerUp={end} onPointerCancel={end} onLostPointerCapture={end}>
       <div className="weekly-art-composition" style={{height:layout.height}}>{tiles.map(tile=><Reference key={tile.item.id} tile={tile} onOpen={onOpen} suppressClick={suppressClick}/>)}</div>
     </div>

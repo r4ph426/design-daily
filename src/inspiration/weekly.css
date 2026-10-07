@@ -1,5 +1,6 @@
 /* Weekly references grow around a fixed central capture. */
-.inspiration-shell.is-weekly-experience .inspiration-main {padding:0;background:var(--white);background-image:none;}
+.inspiration-shell.is-weekly-experience .inspiration-main {padding-block:0;background-color:var(--white);}
+.inspiration-shell.is-weekly-experience {--gridline:color-mix(in srgb,var(--ink) 17%,transparent);}
 .is-weekly-experience.motion-brand .prototype-brand::before {content:none;}
 .is-weekly-experience.motion-brand .prototype-brand::after {display:block;}
 .is-weekly-experience .prototype-header-primary .prototype-brand:focus-visible {outline:2px solid var(--yellow);outline-offset:3px;}
@@ -79,3 +80,40 @@
 
 .has-related-tag .weekly-title {min-width:0;}
 .has-related-tag .weekly-title h1 {font-size:clamp(24px,3vw,40px);max-width:16ch;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+
+/* Reuse Toolbox's inset surfaces, content padding and intrinsic square rows. */
+.inspiration-main .weekly-canvas {min-height:0;}
+.inspiration-main .weekly-canvas .weekly-surface {
+ margin:var(--grid-inset);
+ padding:clamp(15px,1.65vw,30px);
+ min-width:0;
+ min-height:0;
+ height:calc(var(--module-size) * var(--fit-weekly-rows,1) - var(--grid-inset) * 2);
+ flex:none;
+ background:var(--white);
+}
+.inspiration-main .weekly-canvas .weekly-toolbar {
+ display:grid;
+ grid-template-columns:repeat(7,minmax(0,1fr));
+ align-items:start;
+ gap:0;
+ padding:0;
+ min-height:0;
+}
+.weekly-toolbar > .weekly-title {grid-column:1 / 4;flex-wrap:wrap;gap:8px 24px;align-content:center;}
+.weekly-toolbar > .weekly-actions {grid-column:5 / 7;flex-wrap:wrap;justify-content:center;align-content:center;gap:4px;margin-left:var(--grid-inset);}
+.weekly-toolbar > .weekly-search-control {grid-column:7;display:grid;place-items:center;}
+.inspiration-main .weekly-search-control button {display:grid;place-items:center;border:0;}
+.inspiration-main .weekly-canvas .weekly-visual-experience {display:flex;flex-direction:column;justify-content:center;align-items:center;}
+.weekly-visual-experience > .weekly-art-viewport {width:100%;flex:none;}
+.weekly-canvas .weekly-visual-experience .weekly-art-composition {margin-block:0;}
+.inspiration-main .weekly-canvas .weekly-page-navigation {align-items:center;}
+.inspiration-main .weekly-canvas .weekly-bottom {display:flex;align-items:center;}
+.weekly-bottom .weekly-status {width:100%;padding-top:0;}
+@media(max-width:720px) {
+ .inspiration-main .weekly-canvas .weekly-surface {height:calc(var(--module-size) * var(--fit-mobile-rows,1) - var(--grid-inset) * 2);padding:18px;}
+ .weekly-title {flex-wrap:wrap;gap:8px 16px;}
+ .weekly-toolbar > .weekly-title {grid-column:1 / -1;grid-row:1;}
+ .weekly-toolbar > .weekly-actions {grid-column:1 / 6;grid-row:2;width:auto;}
+ .weekly-toolbar > .weekly-search-control {grid-column:6 / 8;grid-row:2;}
+}

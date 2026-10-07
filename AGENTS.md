@@ -158,3 +158,13 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 
 - The Toolbox change log uses the white Toolbox visual language: coral `design / daily` masthead, `by ra.re design`, editorial Neue Reckless headings, Inter body, thin neutral rules and square source/action links. Italic email entry numbers use the shared coral token. New entries precede before/after changes. Keep original evidence, access/setup, verdicts and source failures visible.
 - Render HTML with presentation tables and inline styles, using literal values resolved from `public/tokens.css`. Self-hosted brand fonts are optional; use generic serif/sans-serif fallbacks when an email client blocks webfonts. Never require images, scripts, CSS Grid or remote fonts to read the message. Maintain a text rendering for inspection and the existing once-per-Berlin-day delivery guard. Preview generation must not send email.
+
+## Inspiration grid release
+
+- On 7 October 2026 the user requested restoring What I came across's body to the same seven-module content width and half-module side gutters as Toolbox. Keep weekly navigation, search, capture, visual bands, gallery and status inside that shared content field; do not restore the previous full-width weekly body. The user approved publication to main on 7 October 2026.
+- Use the currently published inspiration feed for this width review, through `#/inspiration?audience=public`, so its content and post count match the live page. Do not populate the review with the larger private import collection.
+- Restore the visible shared `square-field.css` raster on What I came across's weekly body, including continuous side rules aligned with GridHeader. Reuse Toolbox's neutral rule tone and module size; do not suppress the body's grid background. Publication was approved on 7 October 2026.
+- On 7 October 2026 the user requested keeping Toolbox's footer and adopting its shared structure wherever possible on What I came across. Reuse the light SiteFooter in the public weekly page, shared content-panel padding and 0.75px insets, and useSquareLayouts for intrinsic whole-module weekly sections. Preserve the selected image bands, published feed, and existing browsing/detail behavior.
+- Keep the weekly title/date, week navigation and search trigger in separate inset grid panels. Above 720px, put the title in columns 1–3, leave column 4 open, navigation in columns 5–6 and search in column 7. Mobile stacks the title above separate navigation/search cells. Center the image-band composition horizontally and vertically inside its measured panel.
+
+- The user approved committing and pushing these reviewed inspiration layout changes on 7 October 2026.

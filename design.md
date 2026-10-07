@@ -308,3 +308,7 @@ Use exactly the same desktop tab geometry on every route; remove Inspiration-spe
 
 - The Toolbox change log uses the white Toolbox visual language: coral `design / daily` masthead, `by ra.re design`, editorial Neue Reckless headings, Inter body, thin neutral rules and square source/action links. Italic email entry numbers use the shared coral token. New entries precede before/after changes. Keep original evidence, access/setup, verdicts and source failures visible.
 - Render HTML with presentation tables and inline styles, using literal values resolved from `public/tokens.css`. Self-hosted brand fonts are optional; use generic serif/sans-serif fallbacks when an email client blocks webfonts. Never require images, scripts, CSS Grid or remote fonts to read the message. Maintain a text rendering for inspection and the existing once-per-Berlin-day delivery guard. Preview generation must not send email.
+
+### Inspiration grid alignment · 7 October 2026
+
+The reviewed weekly page adopts Toolbox’s seven-module body width, half-module side gutters, visible shared square raster, neutral rule tone, 0.75px inset content panels and light SiteFooter. Weekly surfaces use useSquareLayouts to fit whole module rows. Title/date occupies columns 1–3, column 4 remains open, navigation occupies 5–6 and search occupies 7; mobile stacks the title above separate navigation and search cells. Center the image bands on both axes. Preserve the published feed and existing week navigation, search and image details. The user approved publication to main on 7 October 2026.

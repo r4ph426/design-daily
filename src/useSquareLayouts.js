@@ -96,6 +96,7 @@ export function useSquareLayouts(rootRef) {
         layout.dataset.squareMeasured = "";
         return rows;
       };
+      root.querySelectorAll('.weekly-surface').forEach((panel) => fit(panel, 'weekly-rows', null));
       root.querySelectorAll(".opening").forEach((layout) => {
         if (width <= 1200) {
           const title = fit(layout, "title", ":scope > .opening-copy", 2);
