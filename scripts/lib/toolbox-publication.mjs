@@ -52,14 +52,44 @@ export function toolboxEmail(log,{status='published',commit='',runUrl=''}={}){
   return {subject:`design / daily · ${heading} · ${log.date}`,text:lines.join('\n')};
 }
 
-export async function sendToolboxEmail(message,env=process.env,request=fetch){
-  const {RESEND_API_KEY,TOOLBOX_EMAIL_FROM,TOOLBOX_EMAIL_TO}=env;
-  if(!RESEND_API_KEY||!TOOLBOX_EMAIL_FROM||!TOOLBOX_EMAIL_TO)throw new Error('Configure RESEND_API_KEY, TOOLBOX_EMAIL_FROM and TOOLBOX_EMAIL_TO repository secrets to deliver the Toolbox log.');
-  const to=TOOLBOX_EMAIL_TO.split(',').map(s=>s.trim()).filter(Boolean);
-  if(!to.length||to.length>10||to.some(s=>!/^\S+@\S+\.\S+$/.test(s))||/[\r\n]/.test(TOOLBOX_EMAIL_FROM))throw new Error('Invalid Toolbox email configuration.');
-  const key=createHash('sha256').update(JSON.stringify({to,...message})).digest('hex');
-  const response=await request('https://api.resend.com/emails',{method:'POST',headers:{authorization:`Bearer ${RESEND_API_KEY}`,'content-type':'application/json','Idempotency-Key':`toolbox-${key}`},body:JSON.stringify({from:TOOLBOX_EMAIL_FROM,to,...message}),signal:AbortSignal.timeout(20000)});
-  if(!response.ok)throw new Error(`Toolbox email delivery failed (HTTP ${response.status}). Check the sender domain and repository secrets.`);
-  const result=await response.json();if(!result.id)throw new Error('Email provider did not confirm acceptance.');
+export async function sendToolboxEmail(message,env=process.env,request=fetch,onSending=async()=>{}){
+  const {BREVO_API_KEY,TOOLBOX_EMAIL_FROM,TOOLBOX_EMAIL_TO}=env;
+  if(!BREVO_API_KEY||!TOOLBOX_EMAIL_FROM||!TOOLBOX_EMAIL_TO)throw new Error('Configure BREVO_API_KEY, TOOLBOX_EMAIL_FROM and TOOLBOX_EMAIL_TO repository secrets to deliver the Toolbox log.');
+  const address=/^[^\s<>@,]+@[^\s<>@,]+\.[^\s<>@,]+$/;
+  const to=[...new Set(TOOLBOX_EMAIL_TO.split(',').map(s=>s.trim()).filter(Boolean))];
+  if(!address.test(TOOLBOX_EMAIL_FROM)||!to.length||to.length>10||to.some(s=>!address.test(s))||/\s/.test(BREVO_API_KEY))throw new Error('Invalid Toolbox email configuration.');
+  const key=createHash('sha256').update(JSON.stringify({from:TOOLBOX_EMAIL_FROM,to,...message})).digest('hex');
+  await onSending(); // Persist before the first POST; a failed checkpoint prevents sending.
+  let response;
+  try{
+    response=await request('https://api.brevo.com/v3/smtp/email',{method:'POST',redirect:'error',headers:{'api-key':BREVO_API_KEY,'content-type':'application/json',accept:'application/json'},body:JSON.stringify({sender:{email:TOOLBOX_EMAIL_FROM,name:'design / daily'},replyTo:{email:TOOLBOX_EMAIL_FROM},to:to.map(email=>({email})),subject:message.subject,textContent:message.text,tags:['design-daily-toolbox'],headers:{'Idempotency-Key':`toolbox-${key}`}}),signal:AbortSignal.timeout(20000)});
+  }catch{throw Object.assign(new Error('Brevo acceptance is uncertain. Check transactional logs before retrying.'),{ambiguous:true});}
+  if(response.status!==201){
+    const rejected=[400,401,402,403,404,405,413,415,422,429].includes(response.status);
+    throw Object.assign(new Error(rejected?`Brevo rejected the Toolbox email (HTTP ${response.status}). Check sender verification, API key and account quota.`:`Brevo acceptance is uncertain (HTTP ${response.status}). Check transactional logs before retrying.`),{ambiguous:!rejected});
+  }
+  let result;
+  try{result=await response.json();}catch{}
+  if(typeof result?.messageId!=='string'||!/^<?[A-Za-z0-9_.+\-]{1,160}@[A-Za-z0-9.-]{1,90}>?$/.test(result.messageId))throw Object.assign(new Error('Brevo acceptance is uncertain (invalid acknowledgement). Check transactional logs before retrying.'),{ambiguous:true});
   return true;
+}
+
+export async function deliverToolboxDaily(message,{day,state={},persist,env=process.env,request=fetch}){
+  if(!/^\d{4}-\d{2}-\d{2}$/.test(day)||typeof persist!=='function')throw new Error('A dated durable delivery store is required.');
+  if(!state||Array.isArray(state)||typeof state!=='object'||Object.entries(state).some(([date,record])=>!/^\d{4}-\d{2}-\d{2}$/.test(date)||!record||!['sending','uncertain','rejected','accepted'].includes(record.status)))throw new Error('Invalid Toolbox delivery state. Inspect it before retrying.');
+  const previous=state[day];
+  if(previous?.status==='accepted')return 'already-accepted';
+  if(['sending','uncertain'].includes(previous?.status))throw new Error('Prior Toolbox delivery is uncertain. Check Brevo transactional logs and reconcile the delivery state before retrying.');
+  let checkpointed=false;
+  try{
+    await sendToolboxEmail(message,env,request,async()=>{
+      await persist({...state,[day]:{status:'sending'}});
+      checkpointed=true;
+    });
+  }catch(error){
+    if(checkpointed)await persist({...state,[day]:{status:error.ambiguous?'uncertain':'rejected'}});
+    throw error;
+  }
+  await persist({...state,[day]:{status:'accepted'}});
+  return 'accepted';
 }

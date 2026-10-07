@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {applyToolboxReview,toolboxEmail,sendToolboxEmail} from '../scripts/lib/toolbox-publication.mjs';
+import {applyToolboxReview,toolboxEmail,sendToolboxEmail,deliverToolboxDaily} from '../scripts/lib/toolbox-publication.mjs';
 
 const tool={id:'01',title:'Test skill',type:'Skill',categories:['UI'],practices:['Review'],description:'Design checks.',recommendation:'Inspect one screen.',access:'Open source',setup:'Install the skill',verdict:'Best practice',confidence:'High',reviewed:'28 Sep 2026',source:'example.com',url:'https://example.com/skill'};
 const before={weekLabel:'Week 40',weeklySignals:[{id:'01',title:tool.title,url:tool.url,summary:tool.recommendation,verdict:tool.verdict,source:tool.source}],tools:[tool]};
@@ -34,11 +34,55 @@ test('email includes source, before/after and correction links; no-change and fa
  assert.match(toolboxEmail({date:'today',changes:[]},{status:'failed'}).subject,/failed/);
 });
 test('email delivers to both configured recipients with stable idempotency and never leaks provider errors',async()=>{
- const env={RESEND_API_KEY:'secret-fixture',TOOLBOX_EMAIL_FROM:'Toolbox <sender@example.com>',TOOLBOX_EMAIL_TO:'one@example.com,two@example.com'},calls=[];
- const request=async(url,init)=>{calls.push({url,init});return {ok:true,json:async()=>({id:'email-fixture'})};};
+ const env={BREVO_API_KEY:'secret-fixture',TOOLBOX_EMAIL_FROM:'sender@example.com',TOOLBOX_EMAIL_TO:'one@example.com,two@example.com'},calls=[];
+ const request=async(url,init)=>{calls.push({url,init});return {status:201,json:async()=>({messageId:'fixture@brevo.test'})};};
  const message={subject:'Monday update',text:'Change log'};
  await sendToolboxEmail(message,env,request);await sendToolboxEmail(message,env,request);
- assert.deepEqual(JSON.parse(calls[0].init.body).to,['one@example.com','two@example.com']);assert.equal(calls[0].init.headers['Idempotency-Key'],calls[1].init.headers['Idempotency-Key']);
+ assert.deepEqual(JSON.parse(calls[0].init.body).to,[{email:'one@example.com'},{email:'two@example.com'}]);assert.equal(JSON.parse(calls[0].init.body).headers['Idempotency-Key'],JSON.parse(calls[1].init.body).headers['Idempotency-Key']);
  await assert.rejects(sendToolboxEmail(message,{},request),/repository secrets/);
- await assert.rejects(sendToolboxEmail(message,env,async()=>({ok:false,status:403,text:async()=>env.RESEND_API_KEY})),e=>!e.message.includes(env.RESEND_API_KEY)&&/403/.test(e.message));
+ await assert.rejects(sendToolboxEmail(message,env,async()=>({ok:false,status:403,text:async()=>env.BREVO_API_KEY})),e=>!e.message.includes(env.BREVO_API_KEY)&&/403/.test(e.message));
+});
+const emailEnv={BREVO_API_KEY:'secret-fixture',TOOLBOX_EMAIL_FROM:'hello@example.com',TOOLBOX_EMAIL_TO:'one@example.com,two@example.com'};
+const emailMessage={subject:'Monday update',text:'Verified changes'};
+test('Brevo payload uses verified sender, reply address, two recipients and blocks redirects',async()=>{
+ await sendToolboxEmail(emailMessage,emailEnv,async(url,init)=>{
+  assert.equal(url,'https://api.brevo.com/v3/smtp/email');assert.equal(init.redirect,'error');assert.equal(init.headers['api-key'],'secret-fixture');
+  const body=JSON.parse(init.body);assert.equal(body.sender.email,emailEnv.TOOLBOX_EMAIL_FROM);assert.equal(body.replyTo.email,emailEnv.TOOLBOX_EMAIL_FROM);assert.equal(body.textContent,emailMessage.text);assert.ok(!init.body.includes('secret-fixture'));
+  return {status:201,json:async()=>({messageId:'fixture@brevo.test'})};
+ });
+});
+test('daily guard persists before POST and prevents changed-content duplicates on reruns',async()=>{
+ let state={},calls=0;const order=[];
+ const persist=async s=>{state=s;order.push(s['2026-10-12'].status);};
+ const request=async()=>{calls++;order.push('post');return {status:201,json:async()=>({messageId:'fixture@brevo.test'})};};
+ const options=()=>({day:'2026-10-12',state,persist,request,env:emailEnv});
+ assert.equal(await deliverToolboxDaily(emailMessage,options()),'accepted');
+ assert.deepEqual(order,['sending','post','accepted']);
+ assert.equal(await deliverToolboxDaily({...emailMessage,text:'changed'},options()),'already-accepted');assert.equal(calls,1);
+ assert.equal(await deliverToolboxDaily(emailMessage,{...options(),day:'2026-10-13'}),'accepted');assert.equal(calls,2);
+ assert.ok(!JSON.stringify(state).includes('@'));
+});
+test('uncertain API outcomes block retries and never expose errors containing secrets',async()=>{
+ for(const request of [async()=>{throw new Error(emailEnv.BREVO_API_KEY);},async()=>({status:503}),async()=>({status:302}),async()=>({status:201,json:async()=>({})}),async()=>({status:201,json:async()=>{throw new Error('private');}})]){
+  let state={};const persist=async s=>{state=s;};const options=()=>({day:'2026-10-12',state,persist,request,env:emailEnv});
+  await assert.rejects(deliverToolboxDaily(emailMessage,options()),e=>e.ambiguous&&!e.message.includes(emailEnv.BREVO_API_KEY));
+  assert.equal(state['2026-10-12'].status,'uncertain');
+  await assert.rejects(deliverToolboxDaily(emailMessage,options()),/reconcile/);
+ }
+});
+test('failed checkpoints prevent POST; accepted-send checkpoint failure remains blocked',async()=>{
+ let calls=0,state={};const request=async()=>{calls++;return {status:201,json:async()=>({messageId:'fixture@brevo.test'})};};
+ await assert.rejects(deliverToolboxDaily(emailMessage,{day:'2026-10-12',env:emailEnv,request,persist:async()=>{throw new Error('git failure');}}),/git failure/);assert.equal(calls,0);
+ const persist=async s=>{if(s['2026-10-12'].status==='accepted')throw new Error('git failure');state=s;};
+ await assert.rejects(deliverToolboxDaily(emailMessage,{day:'2026-10-12',env:emailEnv,request,persist}),/git failure/);assert.equal(state['2026-10-12'].status,'sending');
+ await assert.rejects(deliverToolboxDaily(emailMessage,{day:'2026-10-12',state,env:emailEnv,request,persist}),/reconcile/);assert.equal(calls,1);
+});
+test('explicit Brevo rejection allows retry but missing/invalid configuration never POSTs',async()=>{
+ let state={},calls=0;const persist=async s=>{state=s;};const options=()=>({day:'2026-10-12',state,persist,env:emailEnv});
+ await assert.rejects(deliverToolboxDaily(emailMessage,{...options(),request:async()=>{calls++;return {status:403};}}),/403/);assert.equal(state['2026-10-12'].status,'rejected');
+ await deliverToolboxDaily(emailMessage,{...options(),request:async()=>{calls++;return {status:201,json:async()=>({messageId:'fixture@brevo.test'})};}});assert.equal(calls,2);
+ for(const env of [{},{...emailEnv,TOOLBOX_EMAIL_FROM:'name <hello@example.com>'},{...emailEnv,TOOLBOX_EMAIL_TO:'one@example.com\nprivate'}])await assert.rejects(sendToolboxEmail(emailMessage,env,async()=>{throw new Error('must not POST');}),/configuration|repository secrets/);
+});
+test('malformed durable state fails closed',async()=>{
+ for(const state of [null,[],{bad:{status:'accepted'}},{'2026-10-12':{status:'unknown'}}])await assert.rejects(deliverToolboxDaily(emailMessage,{day:'2026-10-12',state,persist:async()=>{throw new Error('must not persist');},env:emailEnv}),/Invalid Toolbox delivery state/);
 });

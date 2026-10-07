@@ -109,9 +109,10 @@ jobs:
       - name: Email the Toolbox update log
         if: always()
         env:
-          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
-          TOOLBOX_EMAIL_FROM: ${{ secrets.TOOLBOX_EMAIL_FROM }}
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+          TOOLBOX_EMAIL_FROM: ${{ secrets.TOOLBOX_EMAIL_FROM || vars.TOOLBOX_EMAIL_FROM || 'hello@ra-re.agency' }}
           TOOLBOX_EMAIL_TO: ${{ secrets.TOOLBOX_EMAIL_TO }}
+          TOOLBOX_EMAIL_PERSIST_GIT: 'true'
           TOOLBOX_RUN_STATUS: ${{ job.status != 'success' && 'failed' || ((steps.review.outputs.changed == 'true' || steps.review.outputs.replay == 'true') && 'published' || 'unchanged') }}
           TOOLBOX_COMMIT: ${{ steps.commit.outputs.sha }}
           TOOLBOX_RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}

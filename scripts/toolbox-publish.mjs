@@ -1,11 +1,26 @@
-import {mkdir,readFile,writeFile,appendFile} from 'node:fs/promises';
+import {execFileSync} from 'node:child_process';
+import {mkdir,readFile,writeFile,appendFile,rename} from 'node:fs/promises';
 import {fetchPublicText} from './lib/public-fetch.mjs';
 import {htmlToText,extractResponseText} from './lib/crawler.mjs';
 import {canonicalToolUrl,PRACTICES} from './lib/toolbox.mjs';
-import {applyToolboxReview,toolboxEmail,sendToolboxEmail} from './lib/toolbox-publication.mjs';
+import {applyToolboxReview,toolboxEmail,deliverToolboxDaily} from './lib/toolbox-publication.mjs';
 
 const logPath='.private/toolbox-update.json';
 const historyPath='data/toolbox-update-log.json';
+const deliveryPath='data/toolbox-email-state.json';
+async function persistDelivery(state){
+  await writeFile(deliveryPath+'.tmp',JSON.stringify(state,null,2)+'\n',{mode:0o600});
+  await rename(deliveryPath+'.tmp',deliveryPath);
+  if(process.env.TOOLBOX_EMAIL_PERSIST_GIT==='true'){
+    try{
+      execFileSync('git',['config','user.name','design-daily bot'],{stdio:'pipe'});
+      execFileSync('git',['config','user.email','design-daily-bot@users.noreply.github.com'],{stdio:'pipe'});
+      execFileSync('git',['add','--',deliveryPath],{stdio:'pipe'});
+      execFileSync('git',['commit','--only','-m','Record Toolbox email delivery','--',deliveryPath],{stdio:'pipe'});
+      execFileSync('git',['push','origin','HEAD:refs/heads/main'],{stdio:'pipe'});
+    }catch{throw new Error('Could not persist Toolbox delivery checkpoint to GitHub. Inspect delivery state before retrying.');}
+  }
+}
 const read=async p=>JSON.parse(await readFile(p,'utf8'));
 const date=()=>new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Berlin',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
 async function review(){
@@ -56,8 +71,10 @@ async function main(){
   await mkdir('.private',{recursive:true,mode:0o700});
   if(process.argv.includes('--notify')){
     const log=await read(logPath).catch(async()=>await read(historyPath).then(previous=>previous.date===date()?previous:Promise.reject()).catch(()=>({date:date(),changes:[],warnings:['The refresh stopped before a valid source review was completed. Check the linked workflow.']})));
-    await sendToolboxEmail(toolboxEmail(log,{status:process.env.TOOLBOX_RUN_STATUS||'failed',commit:process.env.TOOLBOX_COMMIT||'',runUrl:process.env.TOOLBOX_RUN_URL||''}));
-    console.log('Toolbox change log accepted by the email provider.');return;
+    // Fail on a corrupt state file instead of silently losing duplicate protection.
+    const state=await read(deliveryPath).catch(error=>{if(error.code==='ENOENT')return {};throw new Error('Invalid Toolbox delivery state. Inspect it before retrying.');});
+    const outcome=await deliverToolboxDaily(toolboxEmail(log,{status:process.env.TOOLBOX_RUN_STATUS||'failed',commit:process.env.TOOLBOX_COMMIT||'',runUrl:process.env.TOOLBOX_RUN_URL||''}),{day:date(),state,persist:persistDelivery});
+    console.log(outcome==='accepted'?'Toolbox change log accepted by Brevo.':'Toolbox email already accepted today; skipping duplicate.');return;
   }
   await review();
 }
