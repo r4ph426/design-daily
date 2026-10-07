@@ -68,10 +68,12 @@
 .image-focus-cursor span {position:absolute;left:-70px;top:78px;width:140px;font:400 11px/1.5 var(--font-ui);}
 .image-focus-cursor[data-disabled=true] {opacity:.4;}
 @media(hover:hover) and (pointer:fine){
- .image-focus-stage.has-action-cursor,.image-focus-stage.has-action-cursor :is(.image-focus-plane,.image-focus-frame img) {cursor:none;}
+ .image-focus-stage.has-action-cursor,.image-focus-stage.has-action-cursor :is(.image-focus-plane,.image-focus-frame img,.image-focus-frame video) {cursor:none;}
 }
 @media(prefers-reduced-motion:reduce){.image-focus-cursor-mark svg{transition:none;}}
 
 .image-focus-scroll.is-dragging,.image-focus-stage .image-focus-scroll.is-dragging .image-focus-frame :is(img,video) {cursor:grabbing;}
 
 .image-focus-frame video {cursor:auto;}
+
+.image-focus-stage.has-action-cursor.over-video-controls .image-focus-frame video {cursor:auto;}

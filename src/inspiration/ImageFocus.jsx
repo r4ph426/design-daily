@@ -1,6 +1,6 @@
 import {useEffect,useLayoutEffect,useRef,useState} from 'react';
 import {ArrowLeft,ArrowRight,ArrowSquareOut,X,Plus,Info,MagnifyingGlassPlus,MagnifyingGlassMinus} from '../icons/index.jsx';
-import {fitImage,referenceSource,tidyTags} from './focus.js';
+import {fitImage,referenceSource,tidyTags,videoControlZone} from './focus.js';
 import './image-focus.css';
 
 const reduced=()=>matchMedia('(prefers-reduced-motion:reduce)').matches;
@@ -18,7 +18,7 @@ export function ImageFocus({item,sequence,origin,onClose,onStep,onRelated,onPatc
   const source=referenceSource(item),tags=item.tags||[],index=sequence.findIndex(i=>i.id===item.id);
   const fitted=fitImage(size.width,size.height,Math.max(1,area.width-(area.width>720?96:24)),Math.max(1,area.height-32));
   const canPrevious=index>0,canNext=index>=0&&index<sequence.length-1;
-  const cursorEnabled=finePointer&&!!item.image&&!failed&&!editing&&!information&&zoom<=restingZoom.current*1.01;
+  const cursorEnabled=finePointer&&!!(item.image||video)&&!failed&&!editing&&!information&&zoom<=restingZoom.current*1.01;
   const clampZoom=value=>Math.min(Math.max(4,restingZoom.current*2),Math.max(1,value));
   function step(direction){if(working.current||closing.current)return;if(direction<0&&!canPrevious||direction>0&&!canNext)return;onStep(sequence[index+direction]);}
 
@@ -29,11 +29,13 @@ export function ImageFocus({item,sequence,origin,onClose,onStep,onRelated,onPatc
     return()=>media.removeEventListener('change',changed);
   },[]);
   useEffect(()=>{if(!cursorEnabled||saving)hideCursor();else if(pointer.current)showCursor(pointer.current);},[cursorEnabled,saving,item.id]);
+  function overVideoControls(event){return videoControlZone(event,stage.current?.querySelector("video")?.getBoundingClientRect());}
   function hideCursor(){cursor.current?.classList.remove('is-visible');}
   function cursorZone(x){const view=stage.current.getBoundingClientRect(),position=(x-view.left)/view.width;return position<1/3?'previous':position>2/3?'next':'close';}
   function showCursor(event){
     pointer.current={clientX:event.clientX,clientY:event.clientY,pointerType:event.pointerType};
-    if(!cursorEnabled||event.pointerType!=='mouse'||saving||closing.current||event.buttons||points.current.size||event.target?.closest('a,button,input,textarea,select')){hideCursor();return;}
+    stage.current?.classList.toggle("over-video-controls",overVideoControls(event));
+    if(!cursorEnabled||event.pointerType!=='mouse'||saving||closing.current||event.buttons||points.current.size||overVideoControls(event)||event.target?.closest('a,button,input,textarea,select')){hideCursor();return;}
     const view=stage.current.getBoundingClientRect();if(event.clientX<view.left||event.clientX>view.right||event.clientY<view.top||event.clientY>view.bottom){hideCursor();return;}
     const zone=cursorZone(event.clientX),disabled=zone==='previous'&&!canPrevious||zone==='next'&&!canNext;
     const node=cursor.current;if(!node)return;
@@ -43,8 +45,8 @@ export function ImageFocus({item,sequence,origin,onClose,onStep,onRelated,onPatc
     node.classList.add('is-visible');
   }
   function stageClick(event){
-    if(!cursorEnabled||pointer.current?.pointerType!=='mouse'||event.detail===0||event.target.closest('a,button,input,textarea,select'))return;
-    event.stopPropagation();if(skipClick.current||working.current||closing.current)return;
+    if(!cursorEnabled||pointer.current?.pointerType!=='mouse'||event.detail===0||overVideoControls(event)||event.target.closest('a,button,input,textarea,select'))return;
+    event.preventDefault();event.stopPropagation();if(skipClick.current||working.current||closing.current)return;
     const zone=cursorZone(event.clientX);
     if(zone==='close'){hideCursor();void leave();}else step(zone==='previous'?-1:1);
   }
@@ -121,12 +123,12 @@ export function ImageFocus({item,sequence,origin,onClose,onStep,onRelated,onPatc
   async function restoreTags(){const previous=undo;if(!previous||working.current)return;working.current=true;setSaving(true);try{if(await onPatch(item,{tags:previous})){setUndo(null);setFeedback('Change undone');}}finally{working.current=false;setSaving(false);}}
   function cancel(event){event.preventDefault();if(editing)resetPanel(setEditing,tagButton);else if(information)resetPanel(setInformation,infoButton);else void leave();}
   function key(event){
-    if(event.target.closest('input,textarea,select,[contenteditable=true]')||editing||information)return;
+    if(event.target.closest('video,input,textarea,select,[contenteditable=true]')||editing||information)return;
     if(event.key==='ArrowLeft'){event.preventDefault();step(-1);}if(event.key==='ArrowRight'){event.preventDefault();step(1);}
   }
   function distance(){const [a,b]=[...points.current.values()];return a&&b?Math.hypot(a.x-b.x,a.y-b.y):0;}
   function down(event){
-    if(event.button!==0)return;hideCursor();if(zoom>1)scroll.current.classList.add('is-dragging');skipClick.current=false;points.current.set(event.pointerId,{x:event.clientX,y:event.clientY});
+    if(event.button!==0)return;skipClick.current=false;if(event.target.closest("video"))return;hideCursor();if(zoom>1)scroll.current.classList.add('is-dragging');points.current.set(event.pointerId,{x:event.clientX,y:event.clientY});
     if(points.current.size===1)gesture.current={x:event.clientX,y:event.clientY,lastX:event.clientX,lastY:event.clientY,moved:false,pinched:false};
     if(points.current.size===2){gesture.current.pinched=true;pinch.current={distance:distance(),zoom};}
   }

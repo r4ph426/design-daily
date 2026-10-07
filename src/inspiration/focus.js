@@ -18,3 +18,9 @@ export function fitImage(width,height,availableWidth,availableHeight) {
   const ratio=Math.min(availableWidth/width,availableHeight/height);
   return {width:Math.max(1,width*ratio),height:Math.max(1,height*ratio)};
 }
+
+// Native video controls occupy the bottom of the player. Leave that region
+// to the browser rather than intercepting play, seeking or fullscreen clicks.
+export function videoControlZone(point,bounds){
+  return !!bounds&&point.clientX>=bounds.left&&point.clientX<=bounds.right&&point.clientY>=Math.max(bounds.top,bounds.bottom-64)&&point.clientY<=bounds.bottom;
+}
