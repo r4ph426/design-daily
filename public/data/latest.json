@@ -1,194 +1,182 @@
 {
   "schemaVersion": 1,
-  "editionNumber": "018",
-  "date": "2026-10-06",
-  "displayDate": "Tuesday, 6 October 2026",
-  "filedAt": "04:57 cet",
-  "crawlCompletedAt": "04:57",
-  "sourceCount": 18,
+  "editionNumber": "019",
+  "date": "2026-10-07",
+  "displayDate": "Wednesday, 7 October 2026",
+  "filedAt": "04:21 cet",
+  "crawlCompletedAt": "04:21",
+  "sourceCount": 27,
   "webSourceCount": 4,
-  "teamContributionCount": 1,
-  "headline": "AI is exposing **the blind spots** in design work.",
-  "summary": "AI is no longer just a tool inside design work, it is exposing how shallow our prompts, judgments, and workflows already were. The sharper question now is whether teams use it to raise standards or simply automate their blind spots.",
-  "generatedAt": "2026-10-06T02:57:06.925Z",
+  "teamContributionCount": 2,
+  "headline": "**Design** loses its bottleneck as AI and taste collide",
+  "summary": "Design teams are no longer waiting on code; they are now bottlenecked by judgment, governance, and the ability to keep work legible as AI speeds everything up. The sharper edge is not automation itself, but whether designers can still recommend, critique, and ",
+  "generatedAt": "2026-10-07T02:21:42.777Z",
   "inboxConnected": true,
   "questions": [
     {
       "id": "01",
-      "slug": "if-prompts-expose-the-thinker-behind-the-task-what-exactly-are-t",
-      "category": "Culture",
+      "slug": "if-engineering-is-no-longer-the-main-constraint-what-becomes-the",
+      "category": "Process",
       "tags": [
-        "Culture"
+        "Process",
+        "UX"
       ],
       "aiLens": true,
-      "editorialTitle": "Prompts as **self-portrait**",
-      "question": "If prompts expose the thinker behind the task, what exactly are teams revealing about their own design culture when they ask AI for answers instead of structure?",
-      "answer": "The strongest signal is the claim that prompting is a self-portrait, paired with the argument that organizations are outsourcing not just execution but context. That makes AI a mirror for missing documentation, weak assumptions, and vague briefs.",
-      "why": "It frames AI as a diagnostic for process maturity, not a productivity gimmick.",
+      "editorialTitle": "When **code** stops mattering",
+      "question": "If engineering is no longer the main constraint, what becomes the designer’s real leverage inside product teams?",
+      "answer": "Design leverage shifts from producing screens to shaping decisions, standards, and constraints before implementation. The new risk is not that design moves too slowly, but that teams mistake faster output for better product direction.",
+      "why": "Anthropic’s design team is explicitly adapting to a widening velocity gap between eng and design, which reframes the old workflow around code scarcity. That makes process quality more important than throughput, because **velocity without judgment** only multiplies the wrong choices.",
       "counts": {
-        "total": 3,
+        "total": 1,
         "newsletters": 1,
-        "web": 2
+        "web": 0
       },
-      "firstSeen": "13:01 cet",
+      "firstSeen": "16:52 cet",
       "signals": [
         {
-          "source": "UX Collective",
-          "title": "Prompt as self-portrait, De-slopifying your designs, The strategic designer",
-          "kind": "Web",
-          "timing": "13:01",
-          "happened": "UX Collective’s weekly issue centers on an essay arguing that every prompt reveals the prompt writer’s clarity, references, and hidden assumptions. The same issue groups that idea with pieces on design beyond the prompt and adaptive accessibility, suggesting AI is becoming a lens for broader design practice.",
-          "changes": "This shifts prompting from a narrow input task to a critique of design literacy. The uncomfortable part is that **bad prompts are often just bad organizations** showing through, which means AI can expose missing context faster than teams are willing to fix it.",
-          "verdict": "Must read",
-          "url": "https://uxdesign.cc/prompt-as-self-portrait-de-slopifying-your-designs-the-strategic-designer-cf8162f43284"
-        },
-        {
-          "source": "UX Collective",
-          "title": "Prompting as self-portrait",
+          "source": "Designer Fund",
+          "title": "When code is no longer the constraint: Inside Anthropic’s design team",
           "kind": "Newsletter",
-          "timing": "13:05",
-          "happened": "The newsletter archive repeats the prompt-as-self-portrait framing and ties it to the publication’s design audience. It presents the idea as an editorial throughline rather than a one-off opinion.",
-          "changes": "Repeating the frame matters because it signals the topic is not novelty but discipline. The tension is whether designers will treat prompting as **a craft to improve** or as a shortcut that lets weak thinking pass as fluency.",
-          "verdict": "Read",
-          "url": "https://newsletter.uxdesign.cc/archive"
+          "timing": "16:52",
+          "happened": "Anthropic’s design team is responding to a widening velocity gap between engineering and design. The source frames a software world where engineering bandwidth is no longer the ultimate bottleneck.",
+          "changes": "This is a structural shift for product teams: **code is no longer the constraint**, so design must move upstream into framing, prioritization, and decision-making. The tradeoff is uncomfortable because speed can hide weak judgment, and teams that celebrate output may miss the harder work of choosing what deserves to be built. That makes design less about delivery support and more about steering the product.",
+          "verdict": "Must read",
+          "url": "https://designerfund.substack.com/archive"
         }
       ],
       "further": [
         [
-          "The feed I produce myself",
+          "Why designers need to stop reporting and start recommending at work",
           "UX Collective",
-          "https://uxdesign.cc/the-feed-i-produce-myself-11e4192f394c"
+          "https://uxdesign.cc/why-designers-need-to-stop-reporting-and-start-recommending-at-work-6fa861f58097"
         ],
         [
-          "AI skill atrophy: Are we forgetting how to think?",
-          "UX Collective",
-          "https://uxdesign.cc/ai-skill-atrophy-cognitive-offloading-1afbf92eb496"
-        ],
-        [
-          "The building was there first",
-          "UX Collective",
-          "https://uxdesign.cc/the-building-was-there-first-26c6c4e49ba8"
+          "The Figma agent is generally available",
+          "Figma Release Notes",
+          "https://www.figma.com/release-notes/?title=the-figma-agent-is-generally-available"
         ]
       ]
     },
     {
       "id": "02",
-      "slug": "if-taste-is-becoming-the-last-human-advantage-why-are-designers-",
-      "category": "Culture",
+      "slug": "what-happens-when-prompting-becomes-a-proxy-for-product-thinking",
+      "category": "Process",
       "tags": [
-        "Culture"
+        "Process",
+        "UX"
       ],
       "aiLens": true,
-      "editorialTitle": "Taste **under pressure**",
-      "question": "If taste is becoming the last human advantage, why are designers building a culture that makes taste harder to develop and easier to fake?",
-      "answer": "The strongest signal argues that taste is being celebrated at the same time teams are de-risking the experimentation that builds it. AI is accelerating curation, but that may be shrinking the very judgment it claims to elevate.",
-      "why": "It challenges the industry’s most comfortable myth about human differentiation.",
+      "editorialTitle": "**Prompts** expose the thinker",
+      "question": "What happens when prompting becomes a proxy for product thinking rather than a shortcut around it?",
+      "answer": "Prompt quality is now revealing the strength of the team behind it, not just the model in front of it. Designers who treat prompts as thinking tools, not output hacks, will get more useful systems and fewer glossy mistakes.",
+      "why": "The strongest signals argue that prompting reflects the clarity, assumptions, and omissions inside a team’s own thinking. That turns AI work into a critique of organizational knowledge, not just interface polish.",
       "counts": {
-        "total": 2,
+        "total": 3,
         "newsletters": 1,
-        "web": 1
+        "web": 2
       },
-      "firstSeen": "23:59 cet",
+      "firstSeen": "13:05 cet",
       "signals": [
         {
           "source": "UX Collective",
-          "title": "The taste paradox: why the skill everyone says matters is the one we’ve stopped building",
+          "title": "Prompting as self-portrait",
+          "kind": "Newsletter",
+          "timing": "13:05",
+          "happened": "The source argues that every prompt reveals the clarity of the writer’s thinking, their references, and the questions they failed to ask. It treats prompting as a mirror of team knowledge and assumptions.",
+          "changes": "That pushes design work away from prompt theatrics and toward **making thinking explicit**. The tension is that faster prompt use can produce more output while also exposing how thin the underlying reasoning is. Designers should read prompts as evidence, because weak prompts usually mean weak product judgment.",
+          "verdict": "Must read",
+          "url": "https://newsletter.uxdesign.cc/archive"
+        },
+        {
+          "source": "UX Collective",
+          "title": "Prompt as self-portrait, De-slopifying your designs, The strategic designer",
           "kind": "Web",
-          "timing": "23:59",
-          "happened": "An essay in UX Collective argues that taste is treated as a premium skill while the conditions that produce it are disappearing. It criticizes the drift toward curation over creation and warns that safer work is hollowing out judgment.",
-          "changes": "This is less nostalgia than a warning that the profession is quietly training itself to prefer polish over risk. If design keeps optimizing for **low-friction approval**, then taste becomes a label teams apply after the fact, not a capability they actively build.",
-          "verdict": "Must read",
-          "url": "https://uxdesign.cc/the-taste-paradox-why-the-skill-everyone-says-matters-is-the-one-weve-stopped-building-32d1523f1f95"
-        },
-        {
-          "source": "It's Nice That",
-          "title": "The Weekly Edit",
-          "kind": "Newsletter",
-          "timing": "09:02",
-          "happened": "It’s Nice That’s weekly roundup foregrounds highly styled editorial and identity work, including emerging creatives, brand refreshes, and visually distinctive projects. The issue spotlights work where aesthetic distinctiveness is still the headline value.",
-          "changes": "That visual abundance is a useful counterpoint because it shows taste is still culturally rewarded even as teams claim to struggle with it. The tension is that **looking tasteful is not the same as developing taste**, and the gap between those two is where the industry is getting sloppy.",
+          "timing": "13:01",
+          "happened": "UX Collective’s curated issue centers prompting as self-portrait and links it to deeper editorial themes about attention, accessibility, and the larger context beyond the UI. It positions AI-era design as a matter of interpretation, not just generation.",
+          "changes": "This widens the job of design from interface production to **context building**. The tradeoff is that AI can accelerate surface-level work while leaving teams underprepared for the harder question of what they are actually optimizing for. Design leadership now has to defend taste, intent, and scope at the same time.",
           "verdict": "Read",
-          "url": "https://mcusercontent.com/9992e052462653409c504c67d/images/5f22728d-de6e-486c-a26d-45f7667ce34a.png"
-        }
-      ],
-      "further": [
-        [
-          "The feed I produce myself",
-          "UX Collective",
-          "https://uxdesign.cc/the-feed-i-produce-myself-11e4192f394c"
-        ],
-        [
-          "Tobie Tse’s hand-stitched works turns crochet and lace into delicate animations",
-          "It’s Nice That",
-          "https://www.itsnicethat.com/articles/tobie-tse-animation-discover-051026"
-        ],
-        [
-          "Nick Haymes’ new photobook is a sprawling testament to the blood, tears and joy of growing up",
-          "It’s Nice That",
-          "https://www.itsnicethat.com/features/nick-haymes-chronograph-photography-spotlight-051026"
-        ]
-      ]
-    },
-    {
-      "id": "03",
-      "slug": "when-ai-agents-can-find-files-run-interviews-and-ship-output-in-",
-      "category": "Process",
-      "tags": [
-        "Process"
-      ],
-      "aiLens": true,
-      "editorialTitle": "Automation **before strategy**",
-      "question": "When AI agents can find files, run interviews, and ship output in parallel, are teams fixing workflow friction or just multiplying unfinished thinking?",
-      "answer": "The strongest signals show AI being used as a first-response layer for search, research, and production, but the accompanying commentary warns against choosing tools before identifying the bottleneck. That is a process story about diagnosis, not automation.",
-      "why": "It separates operational convenience from actual design leverage.",
-      "counts": {
-        "total": 3,
-        "newsletters": 2,
-        "web": 1
-      },
-      "firstSeen": "15:01 cet",
-      "signals": [
-        {
-          "source": "Actionable AI",
-          "title": "wrong first question",
-          "kind": "Newsletter",
-          "timing": "15:01",
-          "happened": "Actionable AI argues that the wrong question is which AI agent to build and instead recommends a bottleneck interview before choosing a tool. The newsletter frames tool selection as the failure point when teams start with hype instead of the real constraint.",
-          "changes": "The practical change here is a move from tool shopping to problem framing, which is overdue. The risk is that teams skip that discipline and end up with **more automation, not more value**, because they solved a visible annoyance rather than the actual constraint.",
-          "verdict": "Must read",
-          "url": "https://elinkb64.mail.theactionableai.com/ss/c/u001.VH9ztUI_5EhIlHYeBgd71I1IkoHGJpPl2lXXCIdDEplTF8gsm66bzNb4hiqVag8yZAtHK5eZETnh4ydkcyjXi53Jq_i9w-KFZgDsmDPfiT8UBo8UC3zAOXY9kFG7RBFyhYClBD_N6rMBntjcQoqwhb5CH6Dbtf-TjjWsxBD5DXPNKqyBRuPAs6gdGBaFIRmg1YRIlNBJ1gjWIb1g0DmVlc_QFy6dT0IC31m_Gzjht8ROkPKp1te66APZPtDCsOB_xklYdbPnFzq4P16BS-uSKvOFoyR61xptsW_nxsY4rYRM_0kgQ5WNyvh0DYqLYsTeJpJMpn3l3Afqm10g_AIodchFbpE9itH5ogRE7c9Vbmx7l97Tpeh2zOwg6yiGhRydw9y1h6qDNhDw81YKViOL_JjNwsA_66p-huf2ifIGfOUPjdBHAH8AQX6dHPAL9GfnT3loUWv4mnCJ8E7iF3xYBEYcdtv7QY_LNlnpW6iG_XkIVCu6hqzQ5FOyOn8KtqOlT4lT6vp1v_HSC61ZYophplnd54BqKozRzLs8azSQZKKtYXq5MR9VkTEtGzENjTs76_xZuMU2CHfO1jayGsGfZOmOd2LKELeUzFP49bGejn2n1jGrokT_f_bzPhDN7tzDJImGmHsuM_vfn_fj5vbm5391hJyOYiHKXSfJ6RrwOmTB2rhvd9QcVOr5K0mG0qx6_A4KOXRxGMnL53m84IJeImEi9YT7rL6O2XIG2B8yX8Ml_ouZ6SXqQwBmIJHL0XQ6teFd2Mne44anL7B0qr6QYkpbpdrsq2X8Ag66qP-ckjBv4tiHNkms3cm9-S83iva51eVEttY6qoTTqTnoGWaC1b3qiCjm8uTMzSNX6gpoBG0yIxWyZmDyZnNJfR-V8IF_v3GSp6v6l8hgc1fV0UMeiA/4um/JgpW3UY5SqO7lkQ_E2SUpw/h0/h001.O9owuqnSt2e5JawMjXtTPt5NWjvd8RlXasNkEE3DV9Y"
-        },
-        {
-          "source": "Actionable AI",
-          "title": "stop digging for files",
-          "kind": "Newsletter",
-          "timing": "15:01",
-          "happened": "Another Actionable AI issue claims AI can find files faster than Finder, even locating copies the operating system misses. It positions agents as an immediate replacement for brittle manual search.",
-          "changes": "This is a useful demonstration, but it also shows how quickly convenience gets mistaken for strategy. A faster search tool matters, yet the real question is whether teams will use **AI as retrieval** or as an excuse to avoid fixing broken information architecture.",
-          "verdict": "Track",
-          "url": "https://elinkb64.mail.theactionableai.com/ss/c/u001.VH9ztUI_5EhIlHYeBgd71I1IkoHGJpPl2lXXCIdDEpnuMP_tULjhLPaxeSLI_5YvV1cVvG7c21w7bnbmXGGb-rzpbcH5GDBesr2aq-8KB3oGAqJTgSZUKgCbKrYds63cCl7J2dCnfaEybKprzEReTiBQHqNbFMXJBpA5gX8Q5NjOGWG4R5g8Pe8P-uHDV1BMj-JkNt5KvuJAXbO0Sg4VoUcaO_dQ0ZG1zYm8BQfUCDwNyZDVRRQsbUjqF2qzREwB56YFnJvsMMA16aWIZPN8sDpIKRfmmi1Srt_AWqe7hC7j__QbL97Umx_pjkb3OJt5bPT_l099Bc9RkcV8iDf_bLivm9MfT7F-RJG80SQKw0rHxYQ9ReBUI-yuzmD3X2Gp1L6gz2D-rNHsBKBy1Md_n2WXloZ1KzHjGcG46k1IM6Eq1y8lvWGccYDK9vYlFn73xJPh_oB9zEQPULS5sIlMSRUJM3S5oYBIzMMJtW_6E8tvsji55wxjZn6x4erT3fycdPe9TuOTV97TBVWX_kvKutRVFeEcIXHIt6XidcciyHkbvVCo40wAXcFP-Wt_JR9OBoZAkRmjJbt1j0kOem0dx1874cGwQvh01gx0Z7sFa5mRXzOSwh1YmOsxJEnTdbXcU9yIKY1KrrI3T94Z_qlLAyFRUVYLByoP-qryoJSChWGlenZmAYwdFSqM14PHEXKJx1P7RHNA-G5MXCUWUB-EW4ks-zEwdK40HfhTm3HLjKjdd7tzokP4vH-o9uhEOK1SmG7I4mWIPdxOjPTciWHGfvLRBggwytdi59eNPZU1cPDm7ZP-S49OtTFrJA-jEq-kEh8uaxMwtgExa_6WCY3MU4o8uvalneFrKWYTWW0rzDQ/4ul/RWmz4CUzTXSak4YCsRMKxA/h0/h001.8ukowUWdCB4V8yP29CyBLvopgpGoLsl4jWeCT7GNMv8"
+          "url": "https://uxdesign.cc/prompt-as-self-portrait-de-slopifying-your-designs-the-strategic-designer-cf8162f43284"
         },
         {
           "source": "UX Collective",
           "title": "AI skill atrophy: Are we forgetting how to think?",
           "kind": "Web",
           "timing": "00:00",
-          "happened": "UX Collective publishes an essay warning about skill atrophy from cognitive offloading to AI. The piece treats dependency as a hidden cost, not a neutral efficiency gain.",
-          "changes": "That warning should reset the conversation around every “helpful” agent. If the workflow gets faster while the thinking gets thinner, then teams are optimizing a path that leaves **less design judgment** behind each time they use it.",
-          "verdict": "Read",
+          "happened": "UX Collective published a piece warning about AI skill atrophy and the hidden cost of outsourcing thinking to models. The article frames cognitive offloading as a design and learning problem.",
+          "changes": "This is the clearest warning in the batch: **automation can erode judgment** if teams let it replace the mental steps that make design good. The consequence is not just weaker craft, but a slower loss of the ability to spot errors, make tradeoffs, and explain decisions. Designers need systems that support thinking, not systems that flatten it.",
+          "verdict": "Must read",
           "url": "https://uxdesign.cc/ai-skill-atrophy-cognitive-offloading-1afbf92eb496"
         }
       ],
       "further": [
         [
-          "Prompt as self-portrait, De-slopifying your designs, The strategic designer",
+          "The taste paradox: why the skill everyone says matters is the one we’ve stopped building",
           "UX Collective",
-          "https://uxdesign.cc/prompt-as-self-portrait-de-slopifying-your-designs-the-strategic-designer-cf8162f43284"
+          "https://uxdesign.cc/the-taste-paradox-why-the-skill-everyone-says-matters-is-the-one-weve-stopped-building-32d1523f1f95"
         ],
         [
-          "The feed I produce myself",
+          "Why designers need to stop reporting and start recommending at work",
           "UX Collective",
-          "https://uxdesign.cc/the-feed-i-produce-myself-11e4192f394c"
+          "https://uxdesign.cc/why-designers-need-to-stop-reporting-and-start-recommending-at-work-6fa861f58097"
+        ]
+      ]
+    },
+    {
+      "id": "03",
+      "slug": "when-ai-agents-can-act-suggest-and-ask-inside-product-flows-what",
+      "category": "UI",
+      "tags": [
+        "UI",
+        "UX"
+      ],
+      "aiLens": true,
+      "editorialTitle": "**Agents** are becoming interface",
+      "question": "When AI agents can act, suggest, and ask inside product flows, what should the interface now guarantee?",
+      "answer": "The interface has to do more than present options; it must preserve trust, reversibility, and clarity about what the system is doing. Cute or convenient agents may reduce friction, but they also raise the cost of getting opacity wrong.",
+      "why": "Figma’s agent and the broader wave of decision models both show that UI is no longer a static surface. As agents enter core workflows, interface design becomes a contract about control, confidence, and correction.",
+      "counts": {
+        "total": 3,
+        "newsletters": 0,
+        "web": 3
+      },
+      "firstSeen": "02:00 cet",
+      "signals": [
+        {
+          "source": "Figma Release Notes",
+          "title": "The Figma agent is generally available",
+          "kind": "Web",
+          "timing": "02:00",
+          "happened": "Figma made its agent generally available with better latency, multiplayer performance, improved access to Figma context, and new tools to guide use of design libraries. The release moves the agent from novelty into the everyday UI toolchain.",
+          "changes": "This is not just a feature update; it makes the agent part of the **core design surface**. The tradeoff is that convenience now comes with more responsibility to keep system behavior legible, especially when the agent is acting inside shared workflows. Better performance matters, but only if teams can still see and control what the agent is doing.",
+          "verdict": "Must read",
+          "url": "https://www.figma.com/release-notes/?title=the-figma-agent-is-generally-available"
+        },
+        {
+          "source": "UX Collective",
+          "title": "Jev: How to use it for better, faster, and cheaper user decisions in UX",
+          "kind": "Web",
+          "timing": "01:35",
+          "happened": "UX Collective argues that the Jev classifier can power faster, cheaper user decisions by returning a choice, score, or yes-or-no at keystroke speed. It also notes quick adoption and strong demand after launch.",
+          "changes": "The signal is that interfaces are becoming **decision engines**, not just presentation layers. That can reduce friction and cost, but it also invites overconfidence in model outputs and can hide the judgment callers are outsourcing. Designers will need clearer failure states and stronger feedback loops if they want these systems to remain trustworthy.",
+          "verdict": "Read",
+          "url": "https://uxdesign.cc/jev-how-to-use-it-for-better-faster-and-cheaper-user-decisions-in-ux-0e9907d2b6f7"
+        },
+        {
+          "source": "UX Collective",
+          "title": "Is Meta’s new AI agent easier to trust because it’s cute?",
+          "kind": "Web",
+          "timing": "00:00",
+          "happened": "UX Collective asked whether Meta’s new AI agent feels easier to trust because it is cute, noting the avatar and keyring gadget. The piece points to a trust problem wrapped in friendly branding.",
+          "changes": "This shows how quickly AI products are leaning on **surface charm** to borrow credibility. That strategy may help adoption, but it risks disguising power, data access, and uncertainty behind friendly visuals. Designers should be skeptical of delight that exists mainly to lower resistance.",
+          "verdict": "Track",
+          "url": "https://uxdesign.cc/is-metas-new-ai-agent-easier-to-trust-because-it-s-cute-c8de13aefc6f"
+        }
+      ],
+      "further": [
+        [
+          "8 Design Details You’re Missing on KPI Cards",
+          "UX Movement",
+          "https://uxmovement.substack.com/archive"
         ],
         [
           "Connect multiple GitHub organizations to Figma",
@@ -199,16 +187,17 @@
     },
     {
       "id": "04",
-      "slug": "if-clean-kpi-cards-can-pass-design-review-while-hiding-the-truth",
-      "category": "UI",
+      "slug": "why-are-dashboards-still-misleading-users-even-when-the-kpi-card",
+      "category": "UX",
       "tags": [
-        "UI"
+        "UX",
+        "Process"
       ],
       "aiLens": false,
-      "editorialTitle": "Cards still **mislead**",
-      "question": "If clean KPI cards can pass design review while hiding the truth, why do teams keep confusing visual polish with decision quality?",
-      "answer": "The signal here is not a new component pattern but a reminder that dashboard clarity depends on details users never notice until they are wrong. That makes UI review look competent while still allowing misleading data to ship.",
-      "why": "It argues that surface neatness is an unreliable proxy for honest interface design.",
+      "editorialTitle": "**Metrics** need sharper cards",
+      "question": "Why are dashboards still misleading users even when the KPI card looks polished?",
+      "answer": "Because polished cards can still compress context, hide uncertainty, and make weak data feel authoritative. The real UX problem is not decoration, it is how much meaning the card can carry without lying by omission.",
+      "why": "UX Movement’s critique of KPI cards and the broader obsession with metrics both point to the same failure: visual clarity can mask conceptual confusion. Designers need to treat dashboard components as argumentation, not ornament.",
       "counts": {
         "total": 2,
         "newsletters": 1,
@@ -221,32 +210,32 @@
           "title": "8 Design Details You’re Missing on KPI Cards",
           "kind": "Newsletter",
           "timing": "16:02",
-          "happened": "UX Movement says KPI card type is only half the problem and that the hidden details inside cards can still mislead users. It notes that these mistakes are easy to miss because they look polished during review.",
-          "changes": "This is a pointed reminder that interface cleanliness can hide analytical ambiguity. The real failure is not aesthetic, it is **decision theater**, where polished numbers make bad data feel trustworthy enough to ship.",
+          "happened": "UX Movement says the right KPI card type solves only half the problem, because details inside the card still mislead users. It argues that apparently clean visuals can pass review while still hiding errors.",
+          "changes": "This is a warning against **polish as false confidence**. The tradeoff is that teams may optimize for clean presentation and lose the friction that would have revealed uncertainty, bad baselines, or misleading deltas. KPI design has to be more rigorous about evidence, not prettier about numbers.",
           "verdict": "Must read",
           "url": "https://uxmovement.substack.com/archive"
         },
         {
-          "source": "Figma Release Notes",
-          "title": "Connect multiple GitHub organizations to Figma",
+          "source": "UX Collective",
+          "title": "How apps know us better than we do and influence our decisions",
           "kind": "Web",
-          "timing": "02:00",
-          "happened": "Figma’s release notes add support for connecting multiple GitHub organizations to one Figma plan. The change is administrative rather than visual, but it affects how design and code collaboration is organized.",
-          "changes": "The update suggests Figma is still tightening the bridge between design systems and engineering reality. That is helpful, but it also reinforces a tradeoff: **better integration** can reduce friction without solving whether teams are making the right interface decisions in the first place.",
-          "verdict": "Track",
-          "url": "https://www.figma.com/release-notes/?title=connect-multiple-github-organizations-to-figma"
+          "timing": "01:34",
+          "happened": "UX Collective describes a world where apps, streaks, scores, and dashboards shape how people understand themselves. It shows how metrics become a lens for identity as much as performance.",
+          "changes": "That means dashboard UX is never neutral, because **numbers change behavior** and self-perception at the same time. The consequence is that designers can unintentionally turn useful feedback into anxious surveillance. Good metric design should make uncertainty visible instead of pretending measurement is the same as truth.",
+          "verdict": "Read",
+          "url": "https://uxdesign.cc/how-apps-know-us-better-than-we-do-and-influence-our-decisions-f7a5182be6f1"
         }
       ],
       "further": [
         [
-          "8 Design Details You’re Missing on KPI Cards",
-          "UX Movement",
-          "https://uxmovement.substack.com/archive"
+          "Why designers need to stop reporting and start recommending at work",
+          "UX Collective",
+          "https://uxdesign.cc/why-designers-need-to-stop-reporting-and-start-recommending-at-work-6fa861f58097"
         ],
         [
-          "Xsolla (the biggest gaming company you’ve never heard of) gets a retro-futuristic identity from Pentagram partners",
-          "It’s Nice That",
-          "https://www.itsnicethat.com/articles/luke-powell-judy-hudson-powell-xsolla-pentagram-graphic-design-project-051026"
+          "The taste paradox: why the skill everyone says matters is the one we’ve stopped building",
+          "UX Collective",
+          "https://uxdesign.cc/the-taste-paradox-why-the-skill-everyone-says-matters-is-the-one-weve-stopped-building-32d1523f1f95"
         ]
       ]
     }
