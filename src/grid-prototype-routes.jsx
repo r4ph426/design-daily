@@ -125,7 +125,7 @@ export function PrototypeToolbox() {
   return <div className="prototype-route prototype-toolbox">
     <section className="prototype-toolbox-opening module-layout" aria-labelledby="prototype-toolbox-title">
       <div className="prototype-toolbox-title content-panel"><p className="eyebrow">Toolbox</p><h1 id="prototype-toolbox-title">Tools worth bringing <em>into the work.</em></h1></div>
-      <div className="prototype-toolbox-orientation content-panel"><p>A weekly editorial guide to tools we can actually use. Every recommendation is sourced and reviewed by the team.</p></div>
+      <div className="prototype-toolbox-orientation content-panel"><p>A weekly editorial guide to tools we can actually use. Source-reviewed leads stay distinct from tools tested by the team.</p></div>
       <div className="prototype-toolbox-intake content-panel"><ArticleIntake context="tool" /></div>
     </section>
 

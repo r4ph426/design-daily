@@ -1,4 +1,4 @@
-name: Refresh toolbox candidates
+name: Refresh and publish Toolbox
 
 on:
   schedule:
@@ -7,15 +7,21 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: design-daily-toolbox
+  group: design-daily-pages
   cancel-in-progress: false
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 jobs:
   discover:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Check out the repository
         uses: actions/checkout@v6
@@ -39,15 +45,74 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: pnpm run crawl:toolbox
 
+      - name: Review verified sources and update the published collection
+        id: review
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-5.4-mini' }}
+        run: node scripts/toolbox-publish.mjs
+
       - name: Validate the curated toolbox
         run: pnpm run test:toolbox
 
-      - name: Save candidates for editorial review
+      # Pushes using GITHUB_TOKEN do not trigger another push workflow.
+      - name: Test before publication
+        if: (steps.review.outputs.changed == 'true' || steps.review.outputs.replay == 'true')
+        run: node --test tests/crawler.test.mjs tests/article-intake.test.mjs tests/security.test.mjs tests/toolbox*.test.mjs tests/inspiration*.test.mjs
+
+      - name: Build the GitHub Pages site
+        if: (steps.review.outputs.changed == 'true' || steps.review.outputs.replay == 'true')
+        env:
+          VITE_ARTICLE_SUBMISSION_ENDPOINT: ${{ vars.ARTICLE_SUBMISSION_ENDPOINT }}
+          VITE_TURNSTILE_SITE_KEY: ${{ vars.TURNSTILE_SITE_KEY }}
+        run: pnpm run build:pages
+
+      - name: Save reviewed Toolbox and discovery candidates
+        id: commit
         run: |
           git config user.name "design-daily bot"
           git config user.email "design-daily-bot@users.noreply.github.com"
-          git add data/toolbox-candidates.json
+          git add data/toolbox-candidates.json data/toolbox.json
+          if test -f data/toolbox-update-log.json; then git add data/toolbox-update-log.json; fi
           if ! git diff --cached --quiet; then
-            git commit -m "Refresh toolbox candidates"
+            git commit -m "Refresh Monday Toolbox"
             git push
           fi
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+
+      - name: Configure GitHub Pages
+        if: (steps.review.outputs.changed == 'true' || steps.review.outputs.replay == 'true')
+        uses: actions/configure-pages@v5
+
+      - name: Upload the Pages artifact
+        if: (steps.review.outputs.changed == 'true' || steps.review.outputs.replay == 'true')
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist/client
+
+      - name: Deploy Toolbox
+        if: (steps.review.outputs.changed == 'true' || steps.review.outputs.replay == 'true')
+        id: deployment
+        uses: actions/deploy-pages@v5
+
+      - name: Retain the update log for inspection
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: toolbox-update-log
+          path: .private/toolbox-update.json
+          include-hidden-files: true
+          if-no-files-found: ignore
+          retention-days: 30
+
+      - name: Email the Toolbox update log
+        if: always()
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          TOOLBOX_EMAIL_FROM: ${{ secrets.TOOLBOX_EMAIL_FROM }}
+          TOOLBOX_EMAIL_TO: ${{ secrets.TOOLBOX_EMAIL_TO }}
+          TOOLBOX_RUN_STATUS: ${{ job.status != 'success' && 'failed' || ((steps.review.outputs.changed == 'true' || steps.review.outputs.replay == 'true') && 'published' || 'unchanged') }}
+          TOOLBOX_COMMIT: ${{ steps.commit.outputs.sha }}
+          TOOLBOX_RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: node scripts/toolbox-publish.mjs --notify

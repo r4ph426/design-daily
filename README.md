@@ -100,3 +100,20 @@ Loopback origins retain the private capture/import/export and account workspace;
 To publish a reviewed selection, run Node 24 `scripts/inspiration/publish.mjs` with `--database` (private SQLite path), `--approved` (a private JSON array of explicitly approved local IDs), `--week` (Monday YYYY-MM-DD), and `--output public/data/inspiration.json`. The exporter opens SQLite read-only, strips private fields, uses stable public Savee IDs and retains earlier published weeks. Review and push only the approved public snapshot and code. Never publish the approval file or raw account export.
 
 The mobile shared header keeps Today and Archive visible; Toolbox, What I came across and Privacy are in the ellipsis menu. All desktop routes use identical tab widths.
+
+
+## Automatic Monday Toolbox publication
+
+The Monday workflow runs at 04:37 Europe/Berlin. It discovers candidates, fetches original sources with the existing bounded public transport, and uses the configured OpenAI model for a source review. At most three new entries enter per run, always as `Watching` and explicitly not team-tested. Existing IDs, source URLs, verdicts and confidence stay intact; only verified description, recommendation, access and setup changes are eligible. Unavailable sources retain their existing entries. Missing evidence or invalid structured output blocks publication. Empty reviews do not change the displayed review date.
+
+After tests and a Pages build pass, the workflow commits the reviewed collection to main and deploys Pages directly. The ordinary push workflow cannot be relied on because pushes using `GITHUB_TOKEN` do not trigger it. Both publication workflows share a concurrency group. `data/toolbox-update-log.json` retains the latest before/after log for delivery retries; it is editor data and is not imported by the frontend or copied to public assets. A workflow artifact retains each run's log for 30 days. Private inspiration data is excluded.
+
+Email requires three repository secrets under Settings → Secrets and variables → Actions:
+
+- `RESEND_API_KEY`: a sending key from Resend.
+- `TOOLBOX_EMAIL_FROM`: an address on a verified sending domain, optionally `design / daily <address@domain>`.
+- `TOOLBOX_EMAIL_TO`: comma-separated recipients.
+
+The existing Gmail token is read-only and is not used for sending. Never put these secrets in `VITE_` variables, Git, or public assets. The email includes additions, changed fields with before/after values, source passages, skipped source checks, the live page, commit and workflow links, and correction instructions. No-change runs send a short confirmation; failed runs report failure if delivery is configured. A missing or rejected sending configuration makes the workflow visibly fail rather than claiming email delivery. Provider acceptance is not proof of inbox delivery. Re-running a successful publication can replay its persisted log; deterministic email idempotency keys avoid duplicate sends for an identical message within the provider's idempotency window.
+
+Run the workflow manually from Actions → Refresh and publish Toolbox → Run workflow after configuring email to test the complete publication and delivery path. Local checks: `node --test tests/toolbox*.test.mjs`, `node scripts/toolbox-crawl.mjs --dry-run`. Automatic source reviews are fallible; corrections should be made in `data/toolbox.json`, or the linked publication commit can be reverted.
