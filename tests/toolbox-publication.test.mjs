@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {applyToolboxReview,toolboxEmail,sendToolboxEmail,deliverToolboxDaily} from '../scripts/lib/toolbox-publication.mjs';
+import {applyToolboxReview,toolboxEmail,sendToolboxEmail,deliverToolboxDaily,sourcePassages,resolveToolboxEvidence} from '../scripts/lib/toolbox-publication.mjs';
 
 const tool={id:'01',title:'Test skill',type:'Skill',categories:['UI'],practices:['Review'],description:'Design checks.',recommendation:'Inspect one screen.',access:'Open source',setup:'Install the skill',verdict:'Best practice',confidence:'High',reviewed:'28 Sep 2026',source:'example.com',url:'https://example.com/skill'};
 const before={weekLabel:'Week 40',weeklySignals:[{id:'01',title:tool.title,url:tool.url,summary:tool.recommendation,verdict:tool.verdict,source:tool.source}],tools:[tool]};
@@ -85,4 +85,15 @@ test('explicit Brevo rejection allows retry but missing/invalid configuration ne
 });
 test('malformed durable state fails closed',async()=>{
  for(const state of [null,[],{bad:{status:'accepted'}},{'2026-10-12':{status:'unknown'}}])await assert.rejects(deliverToolboxDaily(emailMessage,{day:'2026-10-12',state,persist:async()=>{throw new Error('must not persist');},env:emailEnv}),/Invalid Toolbox delivery state/);
+});
+
+test('generated reviews select exact original passages by source-scoped IDs',()=>{
+ const text=('Original source description with meaningful evidence. ').repeat(150);
+ const passages=sourcePassages(text);assert.ok(passages.length>1);
+ assert.ok(passages.every(p=>p.text.length>=20&&p.text.length<=350&&text.includes(p.text)));
+ const source={id:'source-a',text,passages};
+ const result=resolveToolboxEvidence({proposals:[{sourceId:source.id,evidenceId:passages[1].id,evidence:'invented quotation'}]},[source]);
+ assert.equal(result.proposals[0].evidence,passages[1].text);
+ for(const p of [{sourceId:'unknown',evidenceId:passages[0].id},{sourceId:source.id,evidenceId:'invented'}])assert.throws(()=>resolveToolboxEvidence({proposals:[p]},[source]),/verified source passage/);
+ assert.deepEqual(resolveToolboxEvidence({proposals:[]},[source]),{proposals:[]});
 });

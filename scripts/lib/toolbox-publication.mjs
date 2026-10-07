@@ -2,6 +2,28 @@ import {createHash} from 'node:crypto';
 import {canonicalToolUrl,validateToolboxData} from './toolbox.mjs';
 
 const editable=['description','recommendation','access','setup'];
+// Passage text comes from fetched source data, never from generated quotations.
+export function sourcePassages(text){
+  const passages=[];
+  for(let start=0;start<text.length;){
+    let end=Math.min(start+350,text.length);
+    if(end<text.length){const space=text.lastIndexOf(' ',end);if(space>start+150)end=space;}
+    const passage=text.slice(start,end).trim();
+    if(passage.length>=20)passages.push({id:`passage-${passages.length}`,text:passage});
+    start=end;
+  }
+  return passages;
+}
+export function resolveToolboxEvidence(review,sources){
+  if(!Array.isArray(review?.proposals)||review.proposals.length>10)throw new Error('Invalid Toolbox review batch.');
+  return {proposals:review.proposals.map(proposal=>{
+    const source=sources.find(s=>s.id===proposal.sourceId);
+    const passage=source?.passages?.find(p=>p.id===proposal.evidenceId);
+    if(!passage||!source.text.includes(passage.text))throw new Error('Review lacks a verified source passage.');
+    return {...proposal,evidence:passage.text};
+  })};
+}
+
 export function applyToolboxReview(before,review,sources,now=new Date()) {
   validateToolboxData(before);
   if(!Array.isArray(review.proposals)||review.proposals.length>10)throw new Error('Invalid Toolbox review batch.');
