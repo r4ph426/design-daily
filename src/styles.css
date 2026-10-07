@@ -520,7 +520,7 @@ input:focus-visible { outline: 2px solid var(--yellow); outline-offset: 3px; }
 .toolbox-tool-row:hover, .toolbox-tool-row:focus-within { background: var(--surface-hover); }
 .toolbox-tool-row > * { min-width: 0; padding: 10px 16px; border-right: 1px solid var(--grid); }
 .toolbox-tool-row > *:last-child { border-right: 0; }
-.toolbox-tool-id > span { display: block; font-size: 46px; }
+.toolbox-tool-id > span { color: var(--coral); display: block; font-size: 46px; }
 .toolbox-tool-id small { display: block; margin-top: 8px; color: var(--text-muted); font-size: var(--t-meta); line-height: 1.3; }
 .toolbox-tool-id small + small { margin-top: 3px; }
 .toolbox-tool-copy h3 { margin: 0; font-size: 29px; line-height: 1; letter-spacing: -.02em; }

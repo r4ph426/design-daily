@@ -70,11 +70,11 @@ function WeeklySignal({ signal }) {
   );
 }
 
-function ToolRow({ tool, saved, onSave }) {
+function ToolRow({ tool, number, saved, onSave }) {
   return (
     <article className="toolbox-tool-row">
       <div className="toolbox-tool-id">
-        <span>{tool.id}</span>
+        <span>{number}</span>
         <small>{tool.type}</small>
         <small>{tool.practices.join(" · ")}</small>
       </div>
@@ -182,7 +182,7 @@ export function ToolboxPage() {
         </div>
         <p className="toolbox-results" aria-live="polite">{visibleTools.length} {visibleTools.length === 1 ? "tool" : "tools"}</p>
         <div className="toolbox-tool-list">
-          {visibleTools.map((tool) => <ToolRow key={tool.id} tool={tool} saved={Boolean(savedTools[tool.id])} onSave={() => toggleSave(tool.id)} />)}
+          {visibleTools.map((tool) => <ToolRow key={tool.id} tool={tool} number={String(tools.indexOf(tool) + 1).padStart(2, "0")} saved={Boolean(savedTools[tool.id])} onSave={() => toggleSave(tool.id)} />)}
           {!visibleTools.length && <div className="toolbox-empty"><h3>No tools match yet.</h3><p>Try a broader search or clear one of the filters.</p><button type="button" onClick={() => { setQuery(""); setType("All types"); setPractice("All practices"); setVerdict("All verdicts"); }}>Clear filters</button></div>}
         </div>
       </section>

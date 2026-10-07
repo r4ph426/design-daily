@@ -97,9 +97,9 @@ function WeeklyDiscovery({ signal }) {
   return <article className="prototype-weekly-card content-panel"><span className="prototype-weekly-number">{signal.id}</span><div><h3>{signal.title}</h3><p className="prototype-weekly-verdict">{signal.verdict}</p><p>{signal.summary}</p><a href={safeExternalHref(signal.url)} target="_blank" rel="noopener noreferrer">{signal.source} <span aria-hidden="true">↗</span></a></div></article>;
 }
 
-function PrototypeToolRow({ tool, saved, onBookmark }) {
+function PrototypeToolRow({ tool, number, saved, onBookmark }) {
   return <article className="prototype-tool-row module-layout">
-    <div className="prototype-tool-number content-panel"><span>{tool.id}</span><small>{tool.type}</small></div>
+    <div className="prototype-tool-number content-panel"><span>{number}</span><small>{tool.type}</small></div>
     <div className="prototype-tool-description content-panel"><h3><a href={safeExternalHref(tool.url)} target="_blank" rel="noopener noreferrer">{tool.title} <span aria-hidden="true">↗</span></a></h3><p>{tool.recommendation}</p><small>{tool.practices.join(" · ")}</small></div>
     <div className="prototype-tool-evidence content-panel"><p className="eyebrow">Our verdict</p><strong className={tool.verdict === "Best practice" ? "is-best" : ""}>{tool.verdict}</strong><small>{tool.confidence} confidence · Reviewed {tool.reviewed}</small><a href={safeExternalHref(tool.url)} target="_blank" rel="noopener noreferrer">{tool.source} <span aria-hidden="true">↗</span></a></div>
     <div className="prototype-tool-meta content-panel"><span>{tool.categories.join(" · ")}</span><span>{tool.access} · {tool.setup}</span><button type="button" aria-pressed={saved} onClick={onBookmark}>{saved ? "Bookmarked" : "Bookmark tool"}<BookmarkSimple size={17} weight={saved ? "fill" : "regular"} aria-hidden="true" /></button></div>
@@ -135,7 +135,7 @@ export function PrototypeToolbox() {
     </section>
 
     <section className="prototype-toolbox-index" aria-labelledby="prototype-our-toolbox-title">
-      <div className="prototype-toolbox-index-heading module-layout"><div className="content-panel"><p className="eyebrow">Persistent collection</p><h2 id="prototype-our-toolbox-title">Our toolbox</h2></div><div className="prototype-toolbox-count content-panel" role="status" aria-live="polite"><span>{visible.length}</span><p>{visible.length === 1 ? "tool" : "tools"}</p></div><p className="content-panel">A maintained collection of tools we use, recommend, or are actively testing.</p></div>
+      <div className="prototype-toolbox-index-heading module-layout"><div className="content-panel"><p className="eyebrow">Persistent collection</p><h2 id="prototype-our-toolbox-title">Our toolbox</h2></div><div className="prototype-toolbox-count content-panel" role="status" aria-live="polite"><span>{visible.length}</span><p className="prototype-toolbox-count-label">{visible.length === 1 ? "tool" : "tools"}</p><p className="prototype-toolbox-count-description">A maintained collection of tools we use, recommend, or are actively testing.</p></div></div>
       <div className="prototype-toolbox-controls module-layout">
         <label className="prototype-search content-panel"><MagnifyingGlass size={19} aria-hidden="true" /><span className="visually-hidden">Search tools</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search tools, use cases, or keywords" /></label>
         <div className="prototype-tool-type content-panel" role="group" aria-label="Tool type">{toolTypes.map((item) => <button key={item} type="button" className={type === item ? "selected" : ""} aria-pressed={type === item} onClick={() => setType(item)}>{item}</button>)}</div>
@@ -143,7 +143,7 @@ export function PrototypeToolbox() {
         <label className="prototype-select prototype-tool-verdict content-panel"><span>Verdict</span><select value={verdict} onChange={(event) => setVerdict(event.target.value)}>{verdicts.map((item) => <option key={item}>{item}</option>)}</select></label>
         <ClearFilters active={query || type !== "All types" || practice !== "All practices" || verdict !== "All verdicts"} onClear={clearFilters} />
       </div>
-      <div className={`prototype-tool-list ${visible.length % 2 ? "has-odd-row" : ""}`}>{visible.map((tool) => <PrototypeToolRow key={tool.id} tool={tool} saved={Boolean(saved[tool.id])} onBookmark={() => toggleSave(tool.id)} />)}</div>
+      <div className={`prototype-tool-list ${visible.length % 2 ? "has-odd-row" : ""}`}>{visible.map((tool) => <PrototypeToolRow key={tool.id} tool={tool} number={String(toolboxData.tools.indexOf(tool) + 1).padStart(2, "0")} saved={Boolean(saved[tool.id])} onBookmark={() => toggleSave(tool.id)} />)}</div>
       {!visible.length && <div className="prototype-empty content-panel"><h3>No tools match yet.</h3><p>Try a broader search or clear one of the filters.</p><button type="button" onClick={clearFilters}>Show all tools</button></div>}
     </section>
   </div>;

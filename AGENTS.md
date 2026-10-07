@@ -168,3 +168,5 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - Keep the weekly title/date, week navigation and search trigger in separate inset grid panels. Above 720px, put the title in columns 1–3, leave column 4 open, navigation in columns 5–6 and search in column 7. Mobile stacks the title above separate navigation/search cells. Center the image-band composition horizontally and vertically inside its measured panel.
 
 - The user approved committing and pushing these reviewed inspiration layout changes on 7 October 2026.
+
+- On 8 October 2026, use shared coral for Toolbox row numerals. Make the filtered collection count an oversized Neue Reckless Light Italic coral numeral with an editorial tools label, a combined four-module desktop/tablet panel containing the numeral, tools label and collection description in that order, and higher alignment, following the Archive count reference. Keep numbers independent of internal IDs. The user approved committing and publishing this refinement to main on 8 October 2026.
