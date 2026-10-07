@@ -1,3 +1,4 @@
+import {renderToolboxEmail} from './toolbox-email.mjs';
 import {createHash} from 'node:crypto';
 import {canonicalToolUrl,validateToolboxData} from './toolbox.mjs';
 
@@ -71,7 +72,7 @@ export function applyToolboxReview(before,review,sources,now=new Date()) {
 export function toolboxEmail(log,{status='published',commit='',runUrl=''}={}){
   const heading=status==='failed'?'Toolbox refresh failed':status==='unchanged'?'Toolbox: no published changes':'Toolbox update';
   const lines=[`${heading} · ${log.date}`,'',status==='published'?'The changes below were published automatically.':status==='unchanged'?'The review found no material changes to publish.':'Publication or delivery needs attention.','',...log.changes.flatMap(c=>[`${c.kind==='new'?'NEW':'CHANGED'}: ${c.title}`,c.url,...(c.fields||[]).flatMap(f=>[`${f.field}:`,`Before: ${f.before}`,`After: ${f.after}`]),...(c.entry?[`Verdict: ${c.entry.verdict}`,c.entry.recommendation]:[]),`Source passage: ${c.evidence}`,'']),...(log.warnings||[]).map(w=>`CHECK: ${w}`),'New entries are source-reviewed, not team-tested. Existing editorial verdicts were preserved.','',`Live Toolbox: https://r4ph426.github.io/design-daily/#/toolbox`,...(commit?[`Commit: https://github.com/r4ph426/design-daily/commit/${commit}`]:[]),...(runUrl?[`Run: ${runUrl}`]:[]),'Reply with the tool name and correction, or revert the linked commit.'];
-  return {subject:`design / daily · ${heading} · ${log.date}`,text:lines.join('\n')};
+  return {subject:`design / daily · ${heading} · ${log.date}`,text:lines.join('\n'),html:renderToolboxEmail(log,{status,commit,runUrl})};
 }
 
 export async function sendToolboxEmail(message,env=process.env,request=fetch,onSending=async()=>{}){
@@ -84,7 +85,7 @@ export async function sendToolboxEmail(message,env=process.env,request=fetch,onS
   await onSending(); // Persist before the first POST; a failed checkpoint prevents sending.
   let response;
   try{
-    response=await request('https://api.brevo.com/v3/smtp/email',{method:'POST',redirect:'error',headers:{'api-key':BREVO_API_KEY,'content-type':'application/json',accept:'application/json'},body:JSON.stringify({sender:{email:TOOLBOX_EMAIL_FROM,name:'design / daily'},replyTo:{email:TOOLBOX_EMAIL_FROM},to:to.map(email=>({email})),subject:message.subject,textContent:message.text,tags:['design-daily-toolbox'],headers:{'Idempotency-Key':`toolbox-${key}`}}),signal:AbortSignal.timeout(20000)});
+    response=await request('https://api.brevo.com/v3/smtp/email',{method:'POST',redirect:'error',headers:{'api-key':BREVO_API_KEY,'content-type':'application/json',accept:'application/json'},body:JSON.stringify({sender:{email:TOOLBOX_EMAIL_FROM,name:'design / daily'},replyTo:{email:TOOLBOX_EMAIL_FROM},to:to.map(email=>({email})),subject:message.subject,...(message.html?{htmlContent:message.html}:{textContent:message.text}),tags:['design-daily-toolbox'],headers:{'Idempotency-Key':`toolbox-${key}`}}),signal:AbortSignal.timeout(20000)});
   }catch{throw Object.assign(new Error('Brevo acceptance is uncertain. Check transactional logs before retrying.'),{ambiguous:true});}
   if(response.status!==201){
     const rejected=[400,401,402,403,404,405,413,415,422,429].includes(response.status);
