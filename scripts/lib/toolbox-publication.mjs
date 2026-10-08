@@ -1,4 +1,5 @@
 import {renderToolboxEmail} from './toolbox-email.mjs';
+import {recentToolboxFindings, toolboxFindingWindow} from '../../shared/toolbox-findings.mjs';
 import {createHash} from 'node:crypto';
 import {canonicalToolUrl,validateToolboxData} from './toolbox.mjs';
 
@@ -58,13 +59,15 @@ export function applyToolboxReview(before,review,sources,now=new Date()) {
   }
   validateToolboxData(after);
   if(changes.length){
-    const d=new Date(new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Berlin',year:'numeric',month:'2-digit',day:'2-digit'}).format(now)+'T12:00:00Z');
-    d.setUTCDate(d.getUTCDate()+4-(d.getUTCDay()||7));
-    const week=Math.ceil((((d-new Date(Date.UTC(d.getUTCFullYear(),0,1)))/86400000)+1)/7);
-    after.weekLabel=`Week ${week} · Source-reviewed ${reviewed}`;
-    const picks=changes.map(c=>after.tools.find(t=>t.id===c.id));
-    const remaining=before.weeklySignals.filter(s=>!picks.some(t=>t.title===s.title));
-    after.weeklySignals=[...picks.map(t=>({title:t.title,verdict:t.verdict,summary:t.recommendation,source:t.source,url:t.url})),...remaining].slice(0,3).map((s,i)=>({...s,id:String(i+1).padStart(2,'0')}));
+    const {end, label} = toolboxFindingWindow(now);
+    after.findings = structuredClone(before.findings || before.weeklySignals);
+    // Rewording or re-reviewing an existing tool never creates a new finding.
+    for (const change of changes.filter(change => change.kind === 'new')) {
+      const tool = after.tools.find(tool => tool.id === change.id);
+      after.findings.push({title:tool.title,verdict:tool.verdict,summary:tool.recommendation,source:tool.source,url:tool.url,foundOn:end});
+    }
+    after.weekLabel = `Last 7 days · ${label}`;
+    after.weeklySignals = recentToolboxFindings(after, now);
   }
   return {after,changes,warnings};
 }

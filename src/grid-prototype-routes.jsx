@@ -1,6 +1,7 @@
 import { safeExternalHref } from "../shared/public-url.mjs";
 import { useEffect, useMemo, useState } from "react";
 import { BookmarkSimple, MagnifyingGlass } from "./icons/index.jsx";
+import { recentToolboxFindings, toolboxFindingWindow } from "../shared/toolbox-findings.mjs";
 import toolboxData from "../data/toolbox.json";
 import { RECENT_POPULARITY, SKILL_LABELS, questionRoute } from "./archive.jsx";
 import { AiLensBadge } from "./AiLensBadge.jsx";
@@ -94,7 +95,7 @@ export function PrototypeArchive({ records, ready, bookmarks, onBookmark, initia
 }
 
 function WeeklyDiscovery({ signal }) {
-  return <article className="prototype-weekly-card content-panel"><span className="prototype-weekly-number">{signal.id}</span><div><h3>{signal.title}</h3><p className="prototype-weekly-verdict">{signal.verdict}</p><p>{signal.summary}</p><a href={safeExternalHref(signal.url)} target="_blank" rel="noopener noreferrer">{signal.source} <span aria-hidden="true">↗</span></a></div></article>;
+  return <article className="prototype-weekly-card content-panel"><span className="prototype-weekly-number">{signal.id}</span><div><h3>{signal.title}</h3><p className="prototype-weekly-verdict">{signal.verdict}</p><p className="prototype-finding-date">Found {new Intl.DateTimeFormat("en-GB", {day:"numeric",month:"short",year:"numeric",timeZone:"UTC"}).format(new Date(`${signal.foundOn}T12:00:00Z`))}</p><p>{signal.summary}</p><a href={safeExternalHref(signal.url)} target="_blank" rel="noopener noreferrer">{signal.source} <span aria-hidden="true">↗</span></a></div></article>;
 }
 
 function PrototypeToolRow({ tool, number, saved, onBookmark }) {
@@ -107,6 +108,8 @@ function PrototypeToolRow({ tool, number, saved, onBookmark }) {
 }
 
 export function PrototypeToolbox() {
+  const findings = recentToolboxFindings(toolboxData);
+  const findingWindow = toolboxFindingWindow();
   const [query, setQuery] = useState("");
   const [type, setType] = useState("All types");
   const [practice, setPractice] = useState("All practices");
@@ -130,8 +133,9 @@ export function PrototypeToolbox() {
     </section>
 
     <section className="prototype-weekly module-layout" aria-labelledby="prototype-weekly-title">
-      <div className="prototype-weekly-heading content-panel"><p className="eyebrow">New this week · {toolboxData.weekLabel}</p><h2 id="prototype-weekly-title">What’s sparking our interest</h2></div>
-      {toolboxData.weeklySignals.map((signal, index) => <div className={`prototype-weekly-slot prototype-weekly-slot-${index + 1}`} key={signal.id}><WeeklyDiscovery signal={signal} /></div>)}
+      <div className="prototype-weekly-heading content-panel"><p className="eyebrow">Findings · Last 7 days · {findingWindow.label}</p><h2 id="prototype-weekly-title">What caught our attention</h2></div>
+      {!findings.length && <div className="prototype-weekly-slot prototype-weekly-slot-1"><div className="prototype-weekly-card content-panel"><p>No new findings in the last seven days. Explore our maintained toolbox below.</p></div></div>}
+      {findings.map((signal, index) => <div className={`prototype-weekly-slot prototype-weekly-slot-${index + 1}`} key={signal.id}><WeeklyDiscovery signal={signal} /></div>)}
     </section>
 
     <section className="prototype-toolbox-index" aria-labelledby="prototype-our-toolbox-title">

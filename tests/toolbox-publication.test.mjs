@@ -11,7 +11,7 @@ const now=new Date('2026-10-12T03:00:00Z');
 test('automatic updates preserve editorial verdicts, IDs and URLs and record before/after fields',()=>{
  const r=applyToolboxReview(before,{proposals:[{...proposal,verdict:'Useful now',id:'hacked',url:'https://attacker.example'}]},sources,now);
  assert.equal(r.after.tools[0].verdict,'Best practice');assert.equal(r.after.tools[0].id,'01');assert.equal(r.after.tools[0].url,tool.url);
- assert.equal(r.changes[0].fields[0].before,tool.description);assert.equal(r.changes[0].fields[0].after,proposal.description);assert.match(r.after.weekLabel,/Week 42/);
+ assert.equal(r.changes[0].fields[0].before,tool.description);assert.equal(r.changes[0].fields[0].after,proposal.description);assert.match(r.after.weekLabel,/Last 7 days/);
  assert.deepEqual(before.tools[0],tool);
 });
 test('new entries default to Watching, use stable identities and do not duplicate on re-review',()=>{
@@ -97,3 +97,18 @@ test('generated reviews select exact original passages by source-scoped IDs',()=
  for(const p of [{sourceId:'unknown',evidenceId:passages[0].id},{sourceId:source.id,evidenceId:'invented'}])assert.throws(()=>resolveToolboxEvidence({proposals:[p]},[source]),/verified source passage/);
  assert.deepEqual(resolveToolboxEvidence({proposals:[]},[source]),{proposals:[]});
 });
+
+ test('collection copy updates preserve the dated editorial findings without refreshing discovery dates',()=>{
+  const input={...before,findings:[{...before.weeklySignals[0],foundOn:'2026-10-09'}]};
+  const result=applyToolboxReview(input,{proposals:[proposal]},sources,now);
+  assert.deepEqual(result.after.findings,input.findings);
+  assert.equal(result.after.weeklySignals[0].foundOn,'2026-10-09');
+ });
+ test('new discoveries get their own date and do not duplicate on re-review',()=>{
+  const p={...proposal,sourceId:'source-2',title:'New skill'};
+  const result=applyToolboxReview(before,{proposals:[p]},sources,now);
+  assert.equal(result.after.findings.at(-1).foundOn,'2026-10-12');
+  const again=applyToolboxReview(result.after,{proposals:[{...p,description:'Changed description.'}]},sources,new Date('2026-10-13T12:00:00Z'));
+  assert.equal(again.after.findings.length,result.after.findings.length);
+  assert.equal(again.after.findings.at(-1).foundOn,'2026-10-12');
+ });

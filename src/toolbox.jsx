@@ -6,9 +6,10 @@ import {
   Check,
   MagnifyingGlass,
 } from "./icons/index.jsx";
+import { recentToolboxFindings, toolboxFindingWindow } from "../shared/toolbox-findings.mjs";
 import toolboxData from "../data/toolbox.json";
 
-const { weekLabel, weeklySignals, tools } = toolboxData;
+const { tools } = toolboxData;
 const toolTypes = ["All types", "MCP", "Skill", "Agent", "Tool"];
 const practices = ["All practices", "Taste", "Drafting", "UI sketches", "Flows", "Accessibility", "Review", "Creative exploration", "Pattern research"];
 const verdicts = ["All verdicts", "Useful now", "Worth trying", "Best practice", "Watching"];
@@ -103,6 +104,8 @@ function ToolRow({ tool, number, saved, onSave }) {
 }
 
 export function ToolboxPage() {
+  const weeklySignals = recentToolboxFindings(toolboxData);
+  const weekLabel = toolboxFindingWindow().label;
   const [query, setQuery] = useState("");
   const [type, setType] = useState("All types");
   const [practice, setPractice] = useState("All practices");
@@ -145,10 +148,11 @@ export function ToolboxPage() {
 
       <section className="toolbox-weekly" id="toolbox-weekly" aria-labelledby="weekly-title">
         <header className="toolbox-weekly-heading">
-          <div><p className="toolbox-eyebrow">New this week</p><h2 id="weekly-title">What’s new and sparking our interest</h2></div>
+          <div><p className="toolbox-eyebrow">Findings · Last 7 days</p><h2 id="weekly-title">What caught our attention</h2></div>
           <p>{weekLabel}</p>
         </header>
         <div className="weekly-signal-grid">
+          {!weeklySignals.length && <p>No new findings in the last seven days. Explore our maintained toolbox below.</p>}
           {weeklySignals.map((signal) => <WeeklySignal key={signal.id} signal={signal} />)}
         </div>
       </section>

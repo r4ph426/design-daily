@@ -1,29 +1,32 @@
 {
-  "weekLabel": "Week 41 · Source-reviewed 7 Oct 2026",
+  "weekLabel": "Last 7 days · 2 Oct 2026 – 8 Oct 2026",
   "weeklySignals": [
     {
-      "title": "Canva MCP",
-      "verdict": "Worth trying",
-      "summary": "Use it when you need AI-assisted design creation or edits inside Canva, and check permissions plus brand fidelity on one small workflow first.",
-      "source": "canva.dev/docs/apps/mcp",
-      "url": "https://www.canva.dev/docs/apps/mcp/",
-      "id": "01"
-    },
-    {
+      "id": "01",
       "title": "Figma agent",
       "verdict": "Worth trying",
-      "summary": "Try one bounded layout edit with a connected library, then verify component use, hierarchy, and access scope.",
-      "source": "help.figma.com",
-      "url": "https://help.figma.com/hc/en-us/articles/37998629035799-Work-with-the-Figma-agent-in-design-files",
-      "id": "02"
+      "summary": "Generally available since 6 October, with library guidelines, file search, and custom skills. It now uses AI credits. Test one library-backed edit and inspect the result before adopting it.",
+      "source": "figma.com/release-notes",
+      "url": "https://www.figma.com/release-notes/",
+      "foundOn": "2026-10-07"
     },
     {
-      "title": "Scenario Agent Skills",
-      "verdict": "Watching",
-      "summary": "Source-reviewed; not yet team-tested. Use it for one small branded asset task, such as a single image or 3D concept, before expanding to a wider production workflow.",
-      "source": "github.com",
-      "url": "https://github.com/scenario-labs/skills",
-      "id": "03"
+      "id": "02",
+      "title": "Figma Motion",
+      "verdict": "Worth trying",
+      "summary": "The 30 September update adds reusable animation styles and Lottie export. Try one component animation to check the handoff; Motion remains in open beta.",
+      "source": "figma.com/release-notes",
+      "url": "https://www.figma.com/release-notes/",
+      "foundOn": "2026-10-07"
+    },
+    {
+      "id": "03",
+      "title": "Framer Skills",
+      "verdict": "Worth trying",
+      "summary": "Released 22 September, newly reviewed for our collection: reusable instructions for design systems, copy, and CMS work. Test whether one skill keeps a second page consistent.",
+      "source": "framer.com/updates/skills",
+      "url": "https://www.framer.com/updates/skills",
+      "foundOn": "2026-10-07"
     }
   ],
   "tools": [
@@ -609,6 +612,53 @@
       "reviewed": "7 Oct 2026",
       "source": "github.com",
       "url": "https://github.com/upex-galaxy/agentic-qa-boilerplate"
+    }
+  ],
+  "findings": [
+    {
+      "id": "01",
+      "title": "Figma agent",
+      "verdict": "Worth trying",
+      "summary": "Generally available since 6 October, with library guidelines, file search, and custom skills. It now uses AI credits. Test one library-backed edit and inspect the result before adopting it.",
+      "source": "figma.com/release-notes",
+      "url": "https://www.figma.com/release-notes/",
+      "foundOn": "2026-10-07"
+    },
+    {
+      "id": "02",
+      "title": "Figma Motion",
+      "verdict": "Worth trying",
+      "summary": "The 30 September update adds reusable animation styles and Lottie export. Try one component animation to check the handoff; Motion remains in open beta.",
+      "source": "figma.com/release-notes",
+      "url": "https://www.figma.com/release-notes/",
+      "foundOn": "2026-10-07"
+    },
+    {
+      "id": "03",
+      "title": "Framer Skills",
+      "verdict": "Worth trying",
+      "summary": "Released 22 September, newly reviewed for our collection: reusable instructions for design systems, copy, and CMS work. Test whether one skill keeps a second page consistent.",
+      "source": "framer.com/updates/skills",
+      "url": "https://www.framer.com/updates/skills",
+      "foundOn": "2026-10-07"
+    },
+    {
+      "title": "Canva MCP",
+      "verdict": "Worth trying",
+      "summary": "Use it when you need AI-assisted design creation or edits inside Canva, and check permissions plus brand fidelity on one small workflow first.",
+      "source": "canva.dev/docs/apps/mcp",
+      "url": "https://www.canva.dev/docs/apps/mcp/",
+      "id": "01",
+      "foundOn": "2026-10-07"
+    },
+    {
+      "title": "Scenario Agent Skills",
+      "verdict": "Watching",
+      "summary": "Source-reviewed; not yet team-tested. Use it for one small branded asset task, such as a single image or 3D concept, before expanding to a wider production workflow.",
+      "source": "github.com",
+      "url": "https://github.com/scenario-labs/skills",
+      "id": "03",
+      "foundOn": "2026-10-07"
     }
   ]
 }
