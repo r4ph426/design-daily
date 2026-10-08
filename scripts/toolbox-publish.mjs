@@ -25,8 +25,9 @@ const read=async p=>JSON.parse(await readFile(p,'utf8'));
 const date=()=>new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Berlin',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
 async function review(){
   if(!process.env.OPENAI_API_KEY)throw new Error('OPENAI_API_KEY is required for Toolbox source review.');
-  const before=await read('data/toolbox.json'),queue=await read('data/toolbox-candidates.json');
-  const candidates=(queue.candidates||[]).slice(0,12),records=[...before.tools,...candidates];
+  const before=await read('data/toolbox.json'),queue=await read('data/toolbox-candidates.json'),config=await read('data/toolbox-discovery.json');
+  const excluded=new Set((config.excludedUrls||[]).map(canonicalToolUrl));
+  const candidates=(queue.candidates||[]).filter(candidate=>!excluded.has(canonicalToolUrl(candidate.url))).slice(0,12),records=[...before.tools,...candidates];
   const unique=[...new Map(records.map(r=>[canonicalToolUrl(r.url),r])).values()];
   const warnings=(queue.discoveryErrors||[]).map(e=>`Discovery unavailable: ${e.source}`),sources=[];
   // Every URL is checked with the existing DNS-pinned bounded public transport.
@@ -73,8 +74,9 @@ async function main(){
     const log=await read(logPath).catch(async()=>await read(historyPath).then(previous=>previous.date===date()?previous:Promise.reject()).catch(()=>({date:date(),changes:[],warnings:['The refresh stopped before a valid source review was completed. Check the linked workflow.']})));
     // Fail on a corrupt state file instead of silently losing duplicate protection.
     const state=await read(deliveryPath).catch(error=>{if(error.code==='ENOENT')return {};throw new Error('Invalid Toolbox delivery state. Inspect it before retrying.');});
-    const outcome=await deliverToolboxDaily(toolboxEmail(log,{status:process.env.TOOLBOX_RUN_STATUS||'failed',commit:process.env.TOOLBOX_COMMIT||'',runUrl:process.env.TOOLBOX_RUN_URL||''}),{day:date(),state,persist:persistDelivery});
-    console.log(outcome==='accepted'?'Toolbox change log accepted by Brevo.':'Toolbox email already accepted today; skipping duplicate.');return;
+    const reportStatus=process.env.TOOLBOX_RUN_STATUS||'failed';
+    const outcome=await deliverToolboxDaily(toolboxEmail(log,{status:reportStatus,commit:process.env.TOOLBOX_COMMIT||'',runUrl:process.env.TOOLBOX_RUN_URL||''}),{day:date(),deliveryKind:reportStatus,state,persist:persistDelivery});
+    console.log(outcome==='accepted'?'Toolbox change log accepted by Brevo.':'Toolbox email for this outcome already accepted today; skipping duplicate.');return;
   }
   await review();
 }

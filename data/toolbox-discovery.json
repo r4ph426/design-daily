@@ -31,6 +31,9 @@
     "https://github.com/muzimu217/ui-design-agent-kit",
     "https://github.com/ayangabryl/seenry-skills"
   ],
+  "excludedUrls": [
+    "https://github.com/upex-galaxy/agentic-qa-boilerplate"
+  ],
   "githubQueries": [
     { "label": "Design MCPs", "query": "mcp design ux ui in:name,description,readme" },
     { "label": "Designer skills", "query": "agent skill design in:name,description,readme" },

@@ -199,41 +199,6 @@
       "editorialStatus": "Needs review"
     },
     {
-      "id": "github:upex-galaxy/agentic-qa-boilerplate",
-      "name": "agentic-qa-boilerplate",
-      "fullName": "upex-galaxy/agentic-qa-boilerplate",
-      "description": "Agentic QA boilerplate built on Playwright + KATA + TypeScript. Multi-agent skills following the agentskills.io spec, orchestrating the full QA lifecycle: shift-left planning, in-sprint testing, TMS documentation with ROI scoring, KATA automation, and regression with GO/NO-GO. Works across Claude Code, Opencode, etc.",
-      "url": "https://github.com/upex-galaxy/agentic-qa-boilerplate",
-      "source": "GitHub search",
-      "discoveredThrough": "Design MCPs",
-      "topics": [
-        "agent-skills",
-        "agentic-workflow",
-        "agentskills",
-        "ai-agents",
-        "boilerplate",
-        "claude-code",
-        "jira-xray",
-        "playwright",
-        "qa-automation",
-        "quality-engineering",
-        "regression-testing",
-        "shift-left-test",
-        "test-architecture",
-        "typescript"
-      ],
-      "stars": 26,
-      "updatedAt": "2026-10-05T09:32:30Z",
-      "suggestedType": "Skill",
-      "suggestedPractices": [
-        "Flows",
-        "Review",
-        "Drafting"
-      ],
-      "relevanceScore": 39,
-      "editorialStatus": "Needs review"
-    },
-    {
       "id": "github:linny006/skills-tracker",
       "name": "skills-tracker",
       "fullName": "linny006/skills-tracker",

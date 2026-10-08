@@ -69,7 +69,7 @@ async function main() {
     })),
     Promise.all(config.knownSources.map(checkKnownSource)),
   ]);
-  const knownUrls = [...config.knownSources, ...toolbox.tools.map((tool) => tool.url)];
+  const knownUrls = [...config.knownSources, ...(config.excludedUrls ?? []), ...toolbox.tools.map((tool) => tool.url)];
   const previous = await readJson(outputPath).catch(() => ({ candidates: [] }));
   const candidates = dedupeCandidates([...searchGroups.flat(), ...(previous.candidates ?? [])], knownUrls).slice(0, 40);
   const output = {

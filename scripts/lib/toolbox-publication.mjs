@@ -100,22 +100,24 @@ export async function sendToolboxEmail(message,env=process.env,request=fetch,onS
   return true;
 }
 
-export async function deliverToolboxDaily(message,{day,state={},persist,env=process.env,request=fetch}){
+export async function deliverToolboxDaily(message,{day,deliveryKind='daily',state={},persist,env=process.env,request=fetch}){
   if(!/^\d{4}-\d{2}-\d{2}$/.test(day)||typeof persist!=='function')throw new Error('A dated durable delivery store is required.');
-  if(!state||Array.isArray(state)||typeof state!=='object'||Object.entries(state).some(([date,record])=>!/^\d{4}-\d{2}-\d{2}$/.test(date)||!record||!['sending','uncertain','rejected','accepted'].includes(record.status)))throw new Error('Invalid Toolbox delivery state. Inspect it before retrying.');
-  const previous=state[day];
+  if(!['daily','published','unchanged','failed'].includes(deliveryKind))throw new Error('Invalid Toolbox delivery kind.');
+  if(!state||Array.isArray(state)||typeof state!=='object'||Object.entries(state).some(([key,record])=>!/^\d{4}-\d{2}-\d{2}(?::(?:published|unchanged|failed))?$/.test(key)||!record||!['sending','uncertain','rejected','accepted'].includes(record.status)))throw new Error('Invalid Toolbox delivery state. Inspect it before retrying.');
+  const key=deliveryKind==='daily'?day:`${day}:${deliveryKind}`;
+  const previous=state[key];
   if(previous?.status==='accepted')return 'already-accepted';
   if(['sending','uncertain'].includes(previous?.status))throw new Error('Prior Toolbox delivery is uncertain. Check Brevo transactional logs and reconcile the delivery state before retrying.');
   let checkpointed=false;
   try{
     await sendToolboxEmail(message,env,request,async()=>{
-      await persist({...state,[day]:{status:'sending'}});
+      await persist({...state,[key]:{status:'sending'}});
       checkpointed=true;
     });
   }catch(error){
-    if(checkpointed)await persist({...state,[day]:{status:error.ambiguous?'uncertain':'rejected'}});
+    if(checkpointed)await persist({...state,[key]:{status:error.ambiguous?'uncertain':'rejected'}});
     throw error;
   }
-  await persist({...state,[day]:{status:'accepted'}});
+  await persist({...state,[key]:{status:'accepted'}});
   return 'accepted';
 }

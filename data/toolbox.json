@@ -421,7 +421,7 @@
         "Review",
         "Creative exploration"
       ],
-      "description": "A five-skill design workflow that researches real screens, measures references, explores compositions, and verifies work with evidence from seenry MCP.",
+      "description": "An eight-skill design collection for research, composition, assets, motion, mobile UI, branding, decks, and video. Optional Seenry MCP adds captured-screen evidence.",
       "verdict": "Worth trying",
       "confidence": "Medium",
       "reviewed": "7 Oct 2026",
@@ -590,28 +590,6 @@
       "reviewed": "7 Oct 2026",
       "source": "github.com",
       "url": "https://github.com/scenario-labs/skills"
-    },
-    {
-      "id": "auto-9b42d03fff7e",
-      "title": "Agentic QA boilerplate",
-      "type": "Tool",
-      "categories": [
-        "UI",
-        "Process"
-      ],
-      "practices": [
-        "Review",
-        "Flows"
-      ],
-      "description": "A Playwright-based QA workflow that covers shift-left planning, in-sprint testing, KATA automation, regression, and go or no-go review.",
-      "recommendation": "Source-reviewed; not yet team-tested. Use it for one bounded QA flow, then confirm the handoff and review steps fit your team’s test process.",
-      "access": "Open source",
-      "setup": "Not stated; install and run the project setup for the chosen agent stack",
-      "verdict": "Watching",
-      "confidence": "Medium",
-      "reviewed": "7 Oct 2026",
-      "source": "github.com",
-      "url": "https://github.com/upex-galaxy/agentic-qa-boilerplate"
     }
   ],
   "findings": [
