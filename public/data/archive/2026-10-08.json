@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "editionNumber": "020",
+  "date": "2026-10-08",
+  "displayDate": "Thursday, 8 October 2026",
+  "filedAt": "04:41 cet",
+  "crawlCompletedAt": "04:41",
+  "sourceCount": 27,
+  "webSourceCount": 4,
+  "teamContributionCount": 1,
+  "headline": "AI **authority** redefines design teams and product judgment",
+  "summary": "Design teams are no longer debating whether AI can help, but where its influence becomes a decision. The sharper risk is ceding framing, not just execution, while libraries and agents quietly expand their authority.",
+  "generatedAt": "2026-10-08T02:41:39.638Z",
+  "inboxConnected": true,
+  "questions": [
+    {
+      "id": "01",
+      "slug": "when-ai-can-cluster-feedback-propose-experiments-and-shape-the-f",
+      "category": "Process",
+      "tags": [
+        "Process"
+      ],
+      "aiLens": true,
+      "editorialTitle": "Who owns **the boundary**",
+      "question": "When AI can cluster feedback, propose experiments, and shape the frame, what should teams refuse to delegate?",
+      "answer": "Teams should treat AI as expandable only where choices are reversible and inspectable, not where the recommendation itself becomes the decision. The real governance work is defining when analysis becomes authority, then keeping consequential commitments human-owned.",
+      "why": "This matters because delegation is already slipping from analysis into agenda setting. The strongest product teams will protect decision rights before the model normalizes them.",
+      "counts": {
+        "total": 1,
+        "newsletters": 0,
+        "web": 1
+      },
+      "firstSeen": "21:54 cet",
+      "signals": [
+        {
+          "source": "UX Collective",
+          "title": "Bounded delegation: How much authority should AI have?",
+          "kind": "Web",
+          "timing": "21:54",
+          "happened": "A UX Collective essay argues for bounded delegation, distinguishing what AI can produce from what the organization should let it decide. The example shows a model clustering customer comments, naming a dominant theme, and nudging the team toward pricing experiments before humans fully evaluate the frame.",
+          "changes": "The practical shift is from asking whether AI is useful to asking whether it is allowed to set the problem. That means **authority limits** become a design requirement, especially when recommendations can quietly narrow options and pre-commit the roadmap.",
+          "verdict": "Must read",
+          "url": "https://uxdesign.cc/bounded-delegation-how-much-authority-should-ai-have-823a58fb4192"
+        }
+      ],
+      "further": []
+    },
+    {
+      "id": "02",
+      "slug": "what-changes-in-interface-design-when-figma-s-agent-is-stable-en",
+      "category": "UI",
+      "tags": [
+        "UI"
+      ],
+      "aiLens": true,
+      "editorialTitle": "**Agents** enter the library",
+      "question": "What changes in interface design when Figma’s agent is stable enough to ship and read library context better?",
+      "answer": "The immediate change is less novelty and more operational confidence: teams can rely on the agent for faster, more contextual assistance inside the design system. But that also raises the bar for library hygiene, because the agent now exposes weak structure instead of covering it up.",
+      "why": "This is a concrete workflow shift, not just another AI feature. Better agent performance makes design systems feel more executable, which can expose messy foundations faster.",
+      "counts": {
+        "total": 2,
+        "newsletters": 0,
+        "web": 2
+      },
+      "firstSeen": "02:00 cet",
+      "signals": [
+        {
+          "source": "Figma Release Notes",
+          "title": "The Figma agent is generally available",
+          "kind": "Web",
+          "timing": "02:00",
+          "happened": "Figma says its agent is now generally available, with improved latency, better multiplayer performance, stronger access to Figma context, and new tools for guiding library use. The release moves the feature from beta novelty into a mainstream part of the design workflow.",
+          "changes": "This is less about a smarter helper and more about a tighter loop between design systems and execution. As the agent becomes faster and more context-aware, teams will feel pressure to make libraries cleaner and more governed, because **sloppy structure** becomes immediately visible.",
+          "verdict": "Must read",
+          "url": "https://www.figma.com/release-notes/?title=the-figma-agent-is-generally-available"
+        },
+        {
+          "source": "help.figma.com",
+          "title": "Add guidelines files to a design library &ndash; Figma Learn - Help Center",
+          "kind": "Web",
+          "timing": "04:41",
+          "happened": "Figma also published guidance for adding guidelines files to a design library. The documentation indicates the platform is pushing teams to formalize conventions inside shared libraries rather than leaving them scattered across files.",
+          "changes": "The move suggests Figma is turning guidance into a first-class library artifact, not an afterthought. That matters because **shared rules** only help if the system can surface them where work happens, which reduces drift but also increases reliance on library discipline.",
+          "verdict": "Read",
+          "url": "https://help.figma.com/hc/en-us/articles/43509372175511-Add-guidelines-files-to-a-design-library"
+        }
+      ],
+      "further": []
+    },
+    {
+      "id": "03",
+      "slug": "if-agents-can-tap-through-phones-and-apps-on-our-behalf-where-do",
+      "category": "UX",
+      "tags": [
+        "UX"
+      ],
+      "aiLens": true,
+      "editorialTitle": "Designing for **undo**",
+      "question": "If agents can tap through phones and apps on our behalf, where do users recover control?",
+      "answer": "The UX problem is no longer only task completion but reversibility: users need to interrupt, inspect, and unwind agent actions without trusting the system blindly. Interfaces that automate opaque taps will feel powerful until they fail in ways users cannot easily see or reverse.",
+      "why": "This matters because automation is moving into personal devices and consumer workflows that were designed around direct manipulation. Control, transparency, and recovery are becoming core interaction requirements.",
+      "counts": {
+        "total": 1,
+        "newsletters": 1,
+        "web": 0
+      },
+      "firstSeen": "15:01 cet",
+      "signals": [
+        {
+          "source": "Actionable AI",
+          "title": "phone on autopilot",
+          "kind": "Newsletter",
+          "timing": "15:01",
+          "happened": "A newsletter describes a developer using Claude with iPhone Mirroring so the agent can read the phone screen and tap through apps without an API. The setup effectively extends computer-use automation into a device category that had been largely closed to outside tools.",
+          "changes": "This breaks the assumption that mobile workflows remain manually driven and visually obvious. Once an agent can operate a phone through a mirrored window, the interface must answer for **accountable action** and clear recovery, not just convenience.",
+          "verdict": "Must read",
+          "url": "https://elinkb64.mail.theactionableai.com/ss/c/u001.VH9ztUI_5EhIlHYeBgd71I1IkoHGJpPl2lXXCIdDEpnSL1Oqly0Sa-dl3OhK59omd3hw0GHoRqqmj0BH6SJSc9xsGIDtQ9CkBbjFzlZoaOYap94w28ALgKSEjM7VPZYxBP_QI3b7E-Hor07BWjSCopifXrQGOdhHvJ0QD-tFh9C-HnbCOdVfqFtrRuE_w_Rz5jGw8NTJX3zaCUJ_Znf0mhzT22MpdfaeyI3XIv5jqZoO31ujz6wEGxRMhSJi-RQdnJZtYprVftXJPy7qs-fgSj1X_yf5RZ6rERvQsQetr7KXgO4iB2Cwxjf9jHECrnQxg7LjhwcFiHq0Wbb1xKdoyum9P8cQwTdyi0TQ16VIh8Y9J-fwgDREAFS4nWolO2kPcjOV2-GArRPVHbf9KMxKdnAf43u6E1tfZuOGAMLejtbVynAKM37yxbs7Xmqi02Rox0F2dceVD1N7_eHiQmap390U2IDQZf9uXAYtpwUa65-St8CSaZGBA0rNfwIMI0ZhvVdO3t-pMQT4KFaacSFfXp5l4JjDNhd_crMj3l0DT9ltm9lPRJ3SvLAp3s0CAKNDw0uGMRHw4eN3OomLK8pIPfL-CCGAeRz97ceLQSR3rxeffhHijiCh_m0FaSQmrijeqm2aoMilXK4ME9deeIez14NFWrrKIY8EMV0BhF2pBj532jeeDlZOylRy0g9Bqf6CQ8lgF6VBcHNmatObXzwp_mkgqSRxMTG1J4OjV1tNWv52RyGZf1Gw_3w_0iuLkH_noj-VVeR5KhjpbbxuMLCuhlXoLBy_4sT93WHicRggE_k9NFMRbmlSV1p1NoMMp0r9gOm0QJmR_cW0e1EFNF7sZEF6ahY9RW2kPli6VR7oOyjU68lPWd6x2atnauhAopFx/4uo/O0qhRBViQpadOcs7xXtKlA/h0/h001.aPc5ks1Qoo9rwKYsKRrqrjOglbBFSNOPlB-HYgYUemg"
+        }
+      ],
+      "further": [
+        [
+          "The Figma agent is generally available",
+          "Figma Release Notes",
+          "https://www.figma.com/release-notes/?title=the-figma-agent-is-generally-available"
+        ]
+      ]
+    },
+    {
+      "id": "04",
+      "slug": "are-designers-losing-the-muscle-to-judge-work-when-ai-and-curati",
+      "category": "Culture",
+      "tags": [
+        "Culture"
+      ],
+      "aiLens": true,
+      "editorialTitle": "When **taste** goes missing",
+      "question": "Are designers losing the muscle to judge work when AI and curation lower the cost of making?",
+      "answer": "The risk is not that taste disappears, but that teams stop practicing the judgment required to build it. If design becomes mostly selection and prompt refinement, the discipline can get safer while becoming less distinctive.",
+      "why": "This is a cultural warning about capability atrophy, not nostalgia. The field may end up optimizing output volume while quietly weakening the sensibility that gives work edge and originality.",
+      "counts": {
+        "total": 3,
+        "newsletters": 0,
+        "web": 3
+      },
+      "firstSeen": "23:59 cet",
+      "signals": [
+        {
+          "source": "UX Collective",
+          "title": "The taste paradox: why the skill everyone says matters is the one we’ve stopped building",
+          "kind": "Web",
+          "timing": "23:59",
+          "happened": "A UX Collective essay argues that taste is becoming harder to develop just as the industry keeps calling it the last human advantage. The piece connects that decline to a broader shift from creation toward curation.",
+          "changes": "The tension is that AI makes it easier to ship more while making it easier to practice less. That tradeoff can produce polished sameness unless teams deliberately protect **judgment-building** work instead of outsourcing it away.",
+          "verdict": "Read",
+          "url": "https://uxdesign.cc/the-taste-paradox-why-the-skill-everyone-says-matters-is-the-one-weve-stopped-building-32d1523f1f95"
+        },
+        {
+          "source": "UX Collective",
+          "title": "AI skill atrophy: Are we forgetting how to think?",
+          "kind": "Web",
+          "timing": "00:00",
+          "happened": "Another UX Collective piece frames AI skill atrophy as the hidden cost of cognitive offloading. It warns that relying on tools to think for us can erode the very reasoning designers need most.",
+          "changes": "This turns AI adoption into a competence-management problem, not just a productivity win. Teams that over-delegate thinking may gain speed while losing the ability to question outputs, which is a dangerous bargain.",
+          "verdict": "Track",
+          "url": "https://uxdesign.cc/ai-skill-atrophy-cognitive-offloading-1afbf92eb496"
+        },
+        {
+          "source": "UX Collective",
+          "title": "Prompt as self-portrait, De-slopifying your designs, The strategic designer",
+          "kind": "Web",
+          "timing": "13:01",
+          "happened": "A UX Collective newsletter argues that prompts reveal the clarity, references, and assumptions behind the person writing them. The surrounding editor’s picks also push designers toward de-slopifying work and thinking beyond the prompt.",
+          "changes": "The implication is that prompts are not neutral commands but traces of organizational taste and memory. That makes **prompt quality** a cultural mirror, exposing whether a team still knows how to think before it asks the model to think for it.",
+          "verdict": "Track",
+          "url": "https://uxdesign.cc/prompt-as-self-portrait-de-slopifying-your-designs-the-strategic-designer-cf8162f43284"
+        }
+      ],
+      "further": [
+        [
+          "Why designers need to stop reporting and start recommending at work",
+          "UX Collective",
+          "https://uxdesign.cc/why-designers-need-to-stop-reporting-and-start-recommending-at-work-6fa861f58097"
+        ]
+      ]
+    }
+  ]
+}
