@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-07T21:30:03.929Z",
+  "generatedAt": "2026-10-12T09:40:37.618Z",
   "editorialStatus": "Candidate queue only. Review in Codex before adding to the published toolbox.",
   "practices": [
     "Taste",
@@ -158,6 +158,88 @@
   ],
   "candidates": [
     {
+      "id": "github:kaydenplayZ/agent-skills-guide",
+      "name": "agent-skills-guide",
+      "fullName": "kaydenplayZ/agent-skills-guide",
+      "description": "🤖 Create and enhance Agent Skills with this guide, drawing from official sources and community insights for effective project implementation.",
+      "url": "https://github.com/kaydenplayZ/agent-skills-guide",
+      "source": "GitHub search",
+      "discoveredThrough": "Designer skills",
+      "topics": [
+        "agent-development-kit",
+        "agent-framework",
+        "agentic-ai",
+        "agentic-workflow",
+        "agentskills",
+        "ai-agent",
+        "ai-agent-tools",
+        "ai-agents",
+        "claude",
+        "claude-code",
+        "claude-code-communication",
+        "claude-code-guide",
+        "claude-commands",
+        "claude-desktop",
+        "claude-skills",
+        "claude-skills-creator",
+        "code",
+        "skills",
+        "skills-system",
+        "vscode-extension"
+      ],
+      "stars": 0,
+      "updatedAt": "2026-10-12T09:40:22Z",
+      "suggestedType": "Skill",
+      "suggestedPractices": [
+        "Flows",
+        "Drafting"
+      ],
+      "relevanceScore": 54,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:nexu-io/open-design",
+      "name": "open-design",
+      "fullName": "nexu-io/open-design",
+      "description": "🎨 Best DeepSeek Harness Design Plugin. The open-source Claude Design alternative. 🖥️ Local-first desktop app. 🖼️ Your coding agent becomes the design engine: prototypes, landing pages, dashboards, slides, images & video — real files, HTML/PDF/PPTX/MP4 export. 🤖 Claude Code / Codex / Cursor / DeepSeek Harness / OpenCode & 20+ CLIs via BYOK.",
+      "url": "https://github.com/nexu-io/open-design",
+      "source": "GitHub search",
+      "discoveredThrough": "Taste and art direction",
+      "topics": [
+        "agent-skills",
+        "ai-design",
+        "byok",
+        "claude-code-for-design",
+        "claude-design",
+        "codex-design",
+        "coding-agents",
+        "cursor-design",
+        "deepseek",
+        "deepseek-harness",
+        "design-systems",
+        "desktop-app",
+        "dsh",
+        "dsh-plugin",
+        "figma-alternative",
+        "hermes-agent",
+        "local-first",
+        "prototyping",
+        "ui-generator",
+        "vibe-coding"
+      ],
+      "stars": 100659,
+      "updatedAt": "2026-10-12T09:39:18Z",
+      "suggestedType": "Skill",
+      "suggestedPractices": [
+        "Flows",
+        "UI sketches",
+        "Drafting",
+        "Creative exploration"
+      ],
+      "relevanceScore": 48,
+      "editorialStatus": "Needs review"
+    },
+    {
       "id": "github:selfishprimate/mossaique",
       "name": "mossaique",
       "fullName": "selfishprimate/mossaique",
@@ -238,6 +320,112 @@
       "editorialStatus": "Needs review"
     },
     {
+      "id": "github:Alpha-Park/awesome-ai-agent-skills",
+      "name": "awesome-ai-agent-skills",
+      "fullName": "Alpha-Park/awesome-ai-agent-skills",
+      "description": "Categorized index of 718 public GenPark AI agent skills, with tested Python packages and MCP integrations.",
+      "url": "https://github.com/Alpha-Park/awesome-ai-agent-skills",
+      "source": "GitHub search",
+      "discoveredThrough": "Interface review",
+      "topics": [
+        "agent-skills",
+        "ai-agent",
+        "ai-agents",
+        "awesome",
+        "awesome-list",
+        "claude-desktop",
+        "cursor",
+        "genpark",
+        "mcp",
+        "mcp-servers",
+        "model-context-protocol",
+        "python",
+        "zero-dependency"
+      ],
+      "stars": 8,
+      "updatedAt": "2026-10-12T09:39:28Z",
+      "suggestedType": "MCP",
+      "suggestedPractices": [
+        "Review"
+      ],
+      "relevanceScore": 33,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:alphaparkinc/awesome-ai-agent-skills",
+      "name": "awesome-ai-agent-skills",
+      "fullName": "alphaparkinc/awesome-ai-agent-skills",
+      "description": "Categorized index of 718 public GenPark AI agent skills, with tested Python packages and MCP integrations.",
+      "url": "https://github.com/alphaparkinc/awesome-ai-agent-skills",
+      "source": "GitHub search",
+      "discoveredThrough": "Interface review",
+      "topics": [
+        "agent-skills",
+        "ai-agent",
+        "ai-agents",
+        "awesome",
+        "awesome-list",
+        "claude-desktop",
+        "cursor",
+        "genpark",
+        "mcp",
+        "mcp-servers",
+        "model-context-protocol",
+        "python",
+        "zero-dependency"
+      ],
+      "stars": 7,
+      "updatedAt": "2026-10-12T09:39:24Z",
+      "suggestedType": "MCP",
+      "suggestedPractices": [
+        "Review"
+      ],
+      "relevanceScore": 33,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:richawo/Design-components-for-AI-agents",
+      "name": "Design-components-for-AI-agents",
+      "fullName": "richawo/Design-components-for-AI-agents",
+      "description": "Animated React, Tailwind CSS and React Native components for AI coding agents. Source code, design prompts and JSON briefs, with a shadcn registry, CLI and MCP for Claude Code, Cursor and Codex.",
+      "url": "https://github.com/richawo/Design-components-for-AI-agents",
+      "source": "GitHub search",
+      "discoveredThrough": "Interface review",
+      "topics": [
+        "ai-agents",
+        "animation",
+        "claude-code",
+        "codex",
+        "component-library",
+        "cursor",
+        "design",
+        "design-prompts",
+        "design-system",
+        "json-prompts",
+        "mcp-server",
+        "model-context-protocol",
+        "react",
+        "react-components",
+        "react-native",
+        "shadcn-ui",
+        "tailwindcss",
+        "typescript",
+        "ui-components",
+        "webgl"
+      ],
+      "stars": 1,
+      "updatedAt": "2026-10-12T09:40:14Z",
+      "suggestedType": "MCP",
+      "suggestedPractices": [
+        "Pattern research",
+        "UI sketches",
+        "Drafting",
+        "Creative exploration"
+      ],
+      "relevanceScore": 30,
+      "editorialStatus": "Needs review"
+    },
+    {
       "id": "github:VoltAgent/awesome-openclaw-skills",
       "name": "awesome-openclaw-skills",
       "fullName": "VoltAgent/awesome-openclaw-skills",
@@ -301,46 +489,6 @@
       "updatedAt": "2026-10-05T09:33:47Z",
       "suggestedType": "MCP",
       "suggestedPractices": [
-        "Creative exploration"
-      ],
-      "relevanceScore": 27,
-      "editorialStatus": "Needs review"
-    },
-    {
-      "id": "github:scenario-labs/skills",
-      "name": "skills",
-      "fullName": "scenario-labs/skills",
-      "description": "Get production-ready images, video, audio, and 3D from any AI agent: skills that pick the right model, price before spending, and keep characters and brands consistent through the Scenario MCP, plus expert teams that drive Blender, Maya, ZBrush, Unreal, and Unity.",
-      "url": "https://github.com/scenario-labs/skills",
-      "source": "GitHub search",
-      "discoveredThrough": "Inspiration MCPs",
-      "topics": [
-        "3d-generation",
-        "agent-skills",
-        "blender",
-        "claude-code",
-        "claude-skills",
-        "codex",
-        "game-assets",
-        "game-development",
-        "gamedev",
-        "generative-ai",
-        "image-generation",
-        "maya",
-        "mcp",
-        "model-context-protocol",
-        "scenario",
-        "skills-sh",
-        "unity",
-        "unreal-engine",
-        "video-generation",
-        "zbrush"
-      ],
-      "stars": 676,
-      "updatedAt": "2026-09-28T18:30:35Z",
-      "suggestedType": "MCP",
-      "suggestedPractices": [
-        "Drafting",
         "Creative exploration"
       ],
       "relevanceScore": 27,
@@ -423,38 +571,6 @@
       "editorialStatus": "Needs review"
     },
     {
-      "id": "github:pjdurden/claude-skills-live",
-      "name": "claude-skills-live",
-      "fullName": "pjdurden/claude-skills-live",
-      "description": "Curated, continuously verified index of Claude Code and Agent Skills tooling. Every entry re-checked daily; anything archived, deleted or 90 days quiet is flagged and delisted.",
-      "url": "https://github.com/pjdurden/claude-skills-live",
-      "source": "GitHub search",
-      "discoveredThrough": "Taste and art direction",
-      "topics": [
-        "agent-skills",
-        "ai-agents",
-        "anthropic",
-        "awesome-list",
-        "claude",
-        "claude-code",
-        "claude-code-plugin",
-        "claude-skills",
-        "codex",
-        "developer-tools",
-        "mcp",
-        "skills"
-      ],
-      "stars": 2,
-      "updatedAt": "2026-10-07T21:19:13Z",
-      "suggestedType": "MCP",
-      "suggestedPractices": [
-        "Taste",
-        "Drafting"
-      ],
-      "relevanceScore": 27,
-      "editorialStatus": "Needs review"
-    },
-    {
       "id": "github:martin-francois/symphony-trello",
       "name": "symphony-trello",
       "fullName": "martin-francois/symphony-trello",
@@ -485,10 +601,42 @@
         "workflow-automation"
       ],
       "stars": 2,
-      "updatedAt": "2026-10-05T09:33:34Z",
+      "updatedAt": "2026-10-12T09:38:57Z",
       "suggestedType": "Agent",
       "suggestedPractices": [
         "Flows",
+        "Drafting"
+      ],
+      "relevanceScore": 27,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:pjdurden/claude-skills-live",
+      "name": "claude-skills-live",
+      "fullName": "pjdurden/claude-skills-live",
+      "description": "Curated, continuously verified index of Claude Code and Agent Skills tooling. Every entry re-checked daily; anything archived, deleted or 90 days quiet is flagged and delisted.",
+      "url": "https://github.com/pjdurden/claude-skills-live",
+      "source": "GitHub search",
+      "discoveredThrough": "Taste and art direction",
+      "topics": [
+        "agent-skills",
+        "ai-agents",
+        "anthropic",
+        "awesome-list",
+        "claude",
+        "claude-code",
+        "claude-code-plugin",
+        "claude-skills",
+        "codex",
+        "developer-tools",
+        "mcp",
+        "skills"
+      ],
+      "stars": 2,
+      "updatedAt": "2026-10-07T21:19:13Z",
+      "suggestedType": "MCP",
+      "suggestedPractices": [
+        "Taste",
         "Drafting"
       ],
       "relevanceScore": 27,
@@ -637,6 +785,34 @@
       "editorialStatus": "Needs review"
     },
     {
+      "id": "github:the911fund/skill-of-skills",
+      "name": "skill-of-skills",
+      "fullName": "the911fund/skill-of-skills",
+      "description": "The autonomous discovery engine for AI coding tools. Indexes skills, plugins, MCP servers, agents, and integrations across Claude Code, Codex, Gemini CLI, and more.",
+      "url": "https://github.com/the911fund/skill-of-skills",
+      "source": "GitHub search",
+      "discoveredThrough": "Taste and art direction",
+      "topics": [
+        "ai-tools",
+        "automation",
+        "claude-code",
+        "discovery-engine",
+        "mcp-servers",
+        "n8n",
+        "open-source",
+        "plugins",
+        "skills"
+      ],
+      "stars": 64,
+      "updatedAt": "2026-10-12T09:25:08Z",
+      "suggestedType": "MCP",
+      "suggestedPractices": [
+        "Drafting"
+      ],
+      "relevanceScore": 21,
+      "editorialStatus": "Needs review"
+    },
+    {
       "id": "github:karthikrshet/Career-Agents",
       "name": "Career-Agents",
       "fullName": "karthikrshet/Career-Agents",
@@ -707,6 +883,31 @@
       "editorialStatus": "Needs review"
     },
     {
+      "id": "github:bulutarkan/mac-mcp",
+      "name": "mac-mcp",
+      "fullName": "bulutarkan/mac-mcp",
+      "description": "Talk to your AI agent and let it work on your Mac. Open source MCP control for browser, files, apps, shell, and agents.",
+      "url": "https://github.com/bulutarkan/mac-mcp",
+      "source": "GitHub search",
+      "discoveredThrough": "Design MCPs",
+      "topics": [
+        "ai-agent",
+        "ai-tools",
+        "computer-use",
+        "harness-execution-layer",
+        "harness-framework",
+        "mcp-server"
+      ],
+      "stars": 81,
+      "updatedAt": "2026-10-12T09:37:46Z",
+      "suggestedType": "MCP",
+      "suggestedPractices": [
+        "Creative exploration"
+      ],
+      "relevanceScore": 18,
+      "editorialStatus": "Needs review"
+    },
+    {
       "id": "github:seancrecord/scvd-general-store-repo",
       "name": "scvd-general-store-repo",
       "fullName": "seancrecord/scvd-general-store-repo",
@@ -771,6 +972,55 @@
       "editorialStatus": "Needs review"
     },
     {
+      "id": "github:dresar/SKILL-IA-AGENT",
+      "name": "SKILL-IA-AGENT",
+      "fullName": "dresar/SKILL-IA-AGENT",
+      "description": "SKILL UIAI - Open Source AI Agent Skill Discovery Platform with Truthful Showcases, Neon PostgreSQL & Auth, and Model Context Protocol (MCP) Server",
+      "url": "https://github.com/dresar/SKILL-IA-AGENT",
+      "source": "GitHub search",
+      "discoveredThrough": "Design MCPs",
+      "topics": [],
+      "stars": 0,
+      "updatedAt": "2026-10-12T09:39:16Z",
+      "suggestedType": "MCP",
+      "suggestedPractices": [
+        "Creative exploration"
+      ],
+      "relevanceScore": 18,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:Schengii/AI-Softwareentwickler-Team",
+      "name": "AI-Softwareentwickler-Team",
+      "fullName": "Schengii/AI-Softwareentwickler-Team",
+      "description": "🤖 Multi-agent AI dev team in Python: turns a feature request into a planned, coded and tested project. LLM agents for planning, backend, frontend, QA & security; a verifier runs real tests and loops failures back. FastAPI dashboard, MCP server, pytest, CI.",
+      "url": "https://github.com/Schengii/AI-Softwareentwickler-Team",
+      "source": "GitHub search",
+      "discoveredThrough": "Design MCPs",
+      "topics": [
+        "ai-agents",
+        "claude-code",
+        "code-generation",
+        "fastapi",
+        "gemini-api",
+        "github-actions",
+        "llm",
+        "mcp-server",
+        "multi-agent",
+        "pytest",
+        "python"
+      ],
+      "stars": 0,
+      "updatedAt": "2026-10-12T09:37:44Z",
+      "suggestedType": "MCP",
+      "suggestedPractices": [
+        "Review",
+        "Drafting"
+      ],
+      "relevanceScore": 18,
+      "editorialStatus": "Needs review"
+    },
+    {
       "id": "github:RubenVanDerVeen/skills",
       "name": "skills",
       "fullName": "RubenVanDerVeen/skills",
@@ -829,6 +1079,32 @@
       "editorialStatus": "Needs review"
     },
     {
+      "id": "github:toolsdk-ai/toolsdk-mcp-registry",
+      "name": "toolsdk-mcp-registry",
+      "fullName": "toolsdk-ai/toolsdk-mcp-registry",
+      "description": "MCPSDK.dev(ToolSDK.ai)'s Awesome MCP Servers and Packages Registry and Database with Structured JSON configurations. Supports OAuth2.1, DCR...",
+      "url": "https://github.com/toolsdk-ai/toolsdk-mcp-registry",
+      "source": "GitHub search",
+      "discoveredThrough": "Design MCPs",
+      "topics": [
+        "ai",
+        "ai-agent",
+        "ai-tools",
+        "awesome",
+        "awesome-list",
+        "awesome-lists",
+        "mcp"
+      ],
+      "stars": 195,
+      "updatedAt": "2026-10-12T09:38:59Z",
+      "suggestedType": "MCP",
+      "suggestedPractices": [
+        "Creative exploration"
+      ],
+      "relevanceScore": 15,
+      "editorialStatus": "Needs review"
+    },
+    {
       "id": "github:LiaScript/skills",
       "name": "skills",
       "fullName": "LiaScript/skills",
@@ -866,6 +1142,36 @@
       "suggestedType": "Skill",
       "suggestedPractices": [
         "Flows",
+        "Drafting"
+      ],
+      "relevanceScore": 12,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:pandazki/pneuma-skills",
+      "name": "pneuma-skills",
+      "fullName": "pandazki/pneuma-skills",
+      "description": "Co-creation infrastructure for humans and code agents — visual environment, skills, continuous learning, and distribution.",
+      "url": "https://github.com/pandazki/pneuma-skills",
+      "source": "GitHub search",
+      "discoveredThrough": "Taste and art direction",
+      "topics": [
+        "ai-agents",
+        "ai-coding-assistant",
+        "ai-tools",
+        "bun",
+        "claude",
+        "claude-code",
+        "co-creation",
+        "developer-tools",
+        "llm",
+        "presentations"
+      ],
+      "stars": 161,
+      "updatedAt": "2026-10-12T09:35:09Z",
+      "suggestedType": "Skill",
+      "suggestedPractices": [
+        "Taste",
         "Drafting"
       ],
       "relevanceScore": 12,
@@ -914,6 +1220,45 @@
       "suggestedType": "Skill",
       "suggestedPractices": [
         "Creative exploration"
+      ],
+      "relevanceScore": 12,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:The-Geek-Freaks/NEOTH",
+      "name": "NEOTH",
+      "fullName": "The-Geek-Freaks/NEOTH",
+      "description": "Local-first personal AI daemon in Rust — five-tier memory, consent-gated tools, WASM plugin sandbox, multi-provider LLM routing, channels, GUI, signed audit logs, and Babel-Index collapse prediction on its own runtime.",
+      "url": "https://github.com/The-Geek-Freaks/NEOTH",
+      "source": "GitHub search",
+      "discoveredThrough": "Interface review",
+      "topics": [
+        "agent-memory",
+        "ai-agent",
+        "ai-assistant",
+        "ai-memory",
+        "audit-log",
+        "cli",
+        "coding-agent",
+        "jarvis",
+        "llm",
+        "local-ai",
+        "local-first",
+        "mcp",
+        "personal-ai",
+        "personal-assistant",
+        "privacy",
+        "rag",
+        "rust",
+        "self-hosted",
+        "sovereign-ai",
+        "wasm-plugins"
+      ],
+      "stars": 6,
+      "updatedAt": "2026-10-12T09:39:59Z",
+      "suggestedType": "MCP",
+      "suggestedPractices": [
+        "Review"
       ],
       "relevanceScore": 12,
       "editorialStatus": "Needs review"
@@ -1043,270 +1388,6 @@
       ],
       "stars": 1149,
       "updatedAt": "2026-09-28T19:23:33Z",
-      "suggestedType": "Agent",
-      "suggestedPractices": [
-        "Drafting"
-      ],
-      "relevanceScore": 9,
-      "editorialStatus": "Needs review"
-    },
-    {
-      "id": "github:nightly-labs/openbot",
-      "name": "openbot",
-      "fullName": "nightly-labs/openbot",
-      "description": "A local-first desktop workspace for persistent AI teammates. Run Codex, Claude, and Grok with dedicated workspaces, task queues, file sharing, browser control, and agent-to-agent collaboration.",
-      "url": "https://github.com/nightly-labs/openbot",
-      "source": "GitHub search",
-      "discoveredThrough": "Interface review",
-      "topics": [
-        "ai-agents",
-        "bun",
-        "codex",
-        "electron",
-        "local-first",
-        "macos",
-        "solidjs",
-        "typescript"
-      ],
-      "stars": 351,
-      "updatedAt": "2026-10-05T09:32:51Z",
-      "suggestedType": "Agent",
-      "suggestedPractices": [
-        "Drafting"
-      ],
-      "relevanceScore": 9,
-      "editorialStatus": "Needs review"
-    },
-    {
-      "id": "github:atomantic/PortOS",
-      "name": "PortOS",
-      "fullName": "atomantic/PortOS",
-      "description": "Self-hosted, Self-Improving, Federated Everything App — dev management, agent orchestration, persistent mind, digital twin, second brain, and creative pipeline from a single dashboard over Tailscale to port the user into the OS",
-      "url": "https://github.com/atomantic/PortOS",
-      "source": "GitHub search",
-      "discoveredThrough": "Designer skills",
-      "topics": [
-        "ai-agents",
-        "dashboard",
-        "developer-tools",
-        "digital-twin",
-        "expressjs",
-        "pm2",
-        "quantified-self",
-        "react",
-        "second-brain",
-        "self-hosted",
-        "tailscale",
-        "threejs"
-      ],
-      "stars": 42,
-      "updatedAt": "2026-09-28T19:28:13Z",
-      "suggestedType": "Agent",
-      "suggestedPractices": [
-        "Creative exploration"
-      ],
-      "relevanceScore": 9,
-      "editorialStatus": "Needs review"
-    },
-    {
-      "id": "github:lolly-tools/lolly",
-      "name": "lolly",
-      "fullName": "lolly-tools/lolly",
-      "description": "Lolly generates production-ready assets - QR codes, charts, graphics, PDFs and more - from simple inputs. Constraint-first, template-driven, works offline.",
-      "url": "https://github.com/lolly-tools/lolly",
-      "source": "GitHub search",
-      "discoveredThrough": "Taste and art direction",
-      "topics": [
-        "cmyk",
-        "content-creation",
-        "content-credentials",
-        "creative",
-        "creative-coding",
-        "design-tools",
-        "edge-computing",
-        "generative-art",
-        "self-hosted",
-        "svg"
-      ],
-      "stars": 11,
-      "updatedAt": "2026-09-28T19:23:17Z",
-      "suggestedType": "Tool",
-      "suggestedPractices": [
-        "Drafting",
-        "Creative exploration"
-      ],
-      "relevanceScore": 9,
-      "editorialStatus": "Needs review"
-    },
-    {
-      "id": "github:olosegres/charness",
-      "name": "charness",
-      "fullName": "olosegres/charness",
-      "description": "OpenCode and Claude Code coding agents in Telegram: run on your own machine or VPS, drive by voice or text from your phone. One topic per project, like terminal tabs. Self-hosted, no open ports.",
-      "url": "https://github.com/olosegres/charness",
-      "source": "GitHub search",
-      "discoveredThrough": "Design MCPs",
-      "topics": [
-        "ai-agent",
-        "claude-code",
-        "cloud",
-        "cloud-harness",
-        "cloudharness",
-        "coding-agent",
-        "developer-tools",
-        "harness",
-        "openclaw-alternative",
-        "opencode",
-        "remote-development",
-        "self-hosted",
-        "telegram",
-        "telegram-bot",
-        "typescript",
-        "vibe-coding",
-        "voice"
-      ],
-      "stars": 8,
-      "updatedAt": "2026-10-07T21:27:49Z",
-      "suggestedType": "Agent",
-      "suggestedPractices": [
-        "Drafting"
-      ],
-      "relevanceScore": 9,
-      "editorialStatus": "Needs review"
-    },
-    {
-      "id": "github:ms2sato/agent-console",
-      "name": "agent-console",
-      "fullName": "ms2sato/agent-console",
-      "description": "Web console for managing multiple AI coding agents across git worktrees",
-      "url": "https://github.com/ms2sato/agent-console",
-      "source": "GitHub search",
-      "discoveredThrough": "Design MCPs",
-      "topics": [
-        "ai",
-        "ai-agents",
-        "cli",
-        "webapp",
-        "worktree"
-      ],
-      "stars": 3,
-      "updatedAt": "2026-10-07T21:28:12Z",
-      "suggestedType": "Agent",
-      "suggestedPractices": [
-        "Creative exploration"
-      ],
-      "relevanceScore": 9,
-      "editorialStatus": "Needs review"
-    },
-    {
-      "id": "github:tanle-mtr/dsh-plogin-plugin-recommender",
-      "name": "dsh-plogin-plugin-recommender",
-      "fullName": "tanle-mtr/dsh-plogin-plugin-recommender",
-      "description": "The most comprehensive AI-curated list of DeepSeek Harness (DSH) plugins - 190+ plugins, 12 categories, updated hourly by AI.",
-      "url": "https://github.com/tanle-mtr/dsh-plogin-plugin-recommender",
-      "source": "GitHub search",
-      "discoveredThrough": "Inspiration MCPs",
-      "topics": [
-        "ai-agents",
-        "awesome-list",
-        "coding-agents",
-        "deepseek",
-        "deepseek-harness",
-        "dsh-plugin",
-        "mcp",
-        "plugin"
-      ],
-      "stars": 2,
-      "updatedAt": "2026-10-05T08:42:54Z",
-      "suggestedType": "MCP",
-      "suggestedPractices": [
-        "Taste"
-      ],
-      "relevanceScore": 9,
-      "editorialStatus": "Needs review"
-    },
-    {
-      "id": "github:justinfowler925/shine",
-      "name": "shine",
-      "fullName": "justinfowler925/shine",
-      "description": "UX system agents can't deviate from — cite real templates, build with installed kits, prove usability and pixels.",
-      "url": "https://github.com/justinfowler925/shine",
-      "source": "GitHub search",
-      "discoveredThrough": "Design MCPs",
-      "topics": [
-        "ai-agents",
-        "codex",
-        "cursor",
-        "design-system",
-        "shadcn",
-        "ux"
-      ],
-      "stars": 0,
-      "updatedAt": "2026-10-07T21:27:04Z",
-      "suggestedType": "Agent",
-      "suggestedPractices": [
-        "Drafting"
-      ],
-      "relevanceScore": 9,
-      "editorialStatus": "Needs review"
-    },
-    {
-      "id": "github:regents-ai/ash-template",
-      "name": "ash-template",
-      "fullName": "regents-ai/ash-template",
-      "description": "The Regent product template: design system, codebase structure and agent skills every Regent site derives from",
-      "url": "https://github.com/regents-ai/ash-template",
-      "source": "GitHub search",
-      "discoveredThrough": "Designer skills",
-      "topics": [],
-      "stars": 0,
-      "updatedAt": "2026-10-07T21:30:00Z",
-      "suggestedType": "Skill",
-      "suggestedPractices": [
-        "Drafting"
-      ],
-      "relevanceScore": 9,
-      "editorialStatus": "Needs review"
-    },
-    {
-      "id": "github:upex-galaxy/agentic-dev-boilerplate",
-      "name": "agentic-dev-boilerplate",
-      "fullName": "upex-galaxy/agentic-dev-boilerplate",
-      "description": "AI-driven dev boilerplate for Next.js + Supabase apps. Claude Code skills, gentle-ai integration, ticket-driven workflow.",
-      "url": "https://github.com/upex-galaxy/agentic-dev-boilerplate",
-      "source": "GitHub search",
-      "discoveredThrough": "Design MCPs",
-      "topics": [],
-      "stars": 0,
-      "updatedAt": "2026-10-05T09:32:40Z",
-      "suggestedType": "Skill",
-      "suggestedPractices": [
-        "Flows",
-        "Drafting"
-      ],
-      "relevanceScore": 9,
-      "editorialStatus": "Needs review"
-    },
-    {
-      "id": "github:Aivyx-Agent/aivyx-coder",
-      "name": "aivyx-coder",
-      "fullName": "Aivyx-Agent/aivyx-coder",
-      "description": "A terminal (TUI) coding agent for local LLMs only (Ollama, vLLM, llama.cpp) -- never calls a cloud API",
-      "url": "https://github.com/Aivyx-Agent/aivyx-coder",
-      "source": "GitHub search",
-      "discoveredThrough": "Design MCPs",
-      "topics": [
-        "ai-agent",
-        "coding-agent",
-        "llm",
-        "local-first",
-        "ollama",
-        "rust",
-        "terminal",
-        "tui"
-      ],
-      "stars": 0,
-      "updatedAt": "2026-10-05T09:30:14Z",
       "suggestedType": "Agent",
       "suggestedPractices": [
         "Drafting"

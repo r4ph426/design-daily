@@ -1,5 +1,5 @@
 {
-  "weekLabel": "Last 7 days · 2 Oct 2026 – 8 Oct 2026",
+  "weekLabel": "Last 7 days · 6 Oct 2026 – 12 Oct 2026",
   "weeklySignals": [
     {
       "id": "01",
@@ -69,12 +69,12 @@
       "description": "Lets an AI agent inspect and operate browser interfaces through structured accessibility data for repeatable product checks and walkthroughs.",
       "verdict": "Best practice",
       "confidence": "High",
-      "reviewed": "28 Sep 2026",
+      "reviewed": "12 Oct 2026",
       "source": "github.com/microsoft/playwright-mcp",
       "url": "https://github.com/microsoft/playwright-mcp",
       "access": "Open source",
       "setup": "10–20 minutes",
-      "recommendation": "A dependable bridge between product intent and browser evidence. Make automated actions observable and keep sensitive sessions out of tests."
+      "recommendation": "Use it for a small repeatable browser check or flow review, then keep sensitive sessions out of test runs."
     },
     {
       "id": "03",
@@ -93,12 +93,12 @@
       "description": "A reusable skill for checking Apple-platform interface work against platform design guidance and implementation conventions.",
       "verdict": "Worth trying",
       "confidence": "Medium",
-      "reviewed": "28 Sep 2026",
+      "reviewed": "12 Oct 2026",
       "source": "github.com/dickwu/apple-design-skill",
       "url": "https://github.com/dickwu/apple-design-skill",
       "access": "Open source",
       "setup": "5–10 minutes",
-      "recommendation": "Useful as a platform-specific review lens. Treat its output as critique support and confirm important decisions against current Apple guidance."
+      "recommendation": "Use it as a platform-specific review lens, then confirm important decisions against current Apple guidance."
     },
     {
       "id": "04",
@@ -139,12 +139,12 @@
       "description": "A skill for planning and refining scroll-driven experiences, including pacing, transitions, and implementation choices.",
       "verdict": "Worth trying",
       "confidence": "Medium",
-      "reviewed": "28 Sep 2026",
+      "reviewed": "12 Oct 2026",
       "source": "github.com/nateherkai/scroll-craft",
       "url": "https://github.com/nateherkai/scroll-craft",
       "access": "Open source",
       "setup": "5–10 minutes",
-      "recommendation": "A focused prompt layer for a difficult interaction pattern. Test for reduced motion, input diversity, and performance before treating a result as finished."
+      "recommendation": "Try it on one scroll-heavy page concept first, then check reduced motion and performance before shipping."
     },
     {
       "id": "06",
@@ -325,12 +325,12 @@
       "description": "Canva’s official remote MCP supports design generation and editing, design-library search, brand and asset management, export, and collaborative comments.",
       "verdict": "Worth trying",
       "confidence": "High",
-      "reviewed": "7 Oct 2026",
+      "reviewed": "12 Oct 2026",
       "source": "canva.dev/docs/apps/mcp",
       "url": "https://www.canva.dev/docs/apps/mcp/",
       "access": "Canva account",
       "setup": "5–10 minutes",
-      "recommendation": "Use it when you need AI-assisted design creation or edits inside Canva, and check permissions plus brand fidelity on one small workflow first."
+      "recommendation": "Use it for one small design-edit workflow first, then verify permissions and brand fidelity before broader rollout."
     },
     {
       "id": "14",
@@ -348,12 +348,12 @@
       "description": "Canva’s official skills package adds reusable creative workflows on top of the Canva Connector for Codex, Claude, and Cursor.",
       "verdict": "Worth trying",
       "confidence": "High",
-      "reviewed": "28 Sep 2026",
+      "reviewed": "12 Oct 2026",
       "source": "github.com/canva-sdks/canva-skills",
       "url": "https://github.com/canva-sdks/canva-skills",
       "access": "Open source + Canva account",
       "setup": "10–15 minutes",
-      "recommendation": "A credible official workflow layer rather than an unverified prompt pack. Review the active skill subset and keep Canva authentication scoped to the intended team account."
+      "recommendation": "Try one supported skill on a single Canva workflow, then check whether the output stays consistent with your team account and library setup."
     },
     {
       "id": "15",
@@ -514,12 +514,12 @@
       "description": "Project-level instructions for the Framer agent covering design systems, writing style, and CMS workflows. Skills can reference project pages, components, and styles and travel with a remix.",
       "verdict": "Worth trying",
       "confidence": "Medium",
-      "reviewed": "7 Oct 2026",
+      "reviewed": "12 Oct 2026",
       "source": "framer.com/updates/skills",
       "url": "https://www.framer.com/updates/skills",
       "access": "Framer project and agent access",
       "setup": "Create with /skills in Framer",
-      "recommendation": "Capture one agreed design or content rule, then check whether the agent applies it consistently to a second page. Source-reviewed; the team still needs to test how reliably those rules hold."
+      "recommendation": "Capture one agreed rule in a Framer project and test whether it is applied consistently on a second page."
     },
     {
       "id": "22",
