@@ -1,0 +1,178 @@
+{
+  "schemaVersion": 1,
+  "editionNumber": "022",
+  "date": "2026-10-12",
+  "displayDate": "Monday, 12 October 2026",
+  "filedAt": "04:22 cet",
+  "crawlCompletedAt": "04:22",
+  "sourceCount": 5,
+  "webSourceCount": 4,
+  "teamContributionCount": 1,
+  "headline": "**Agent sprawl** forces designers to own control, trust, and safety",
+  "summary": "AI tooling is no longer a novelty layer on design workflows. The sharper question is whether teams can make agent activity legible, governable, and safe before speed turns into liability.",
+  "generatedAt": "2026-10-12T02:22:12.253Z",
+  "inboxConnected": true,
+  "questions": [
+    {
+      "id": "01",
+      "slug": "when-multiple-agents-are-running-what-interface-tells-designers-",
+      "category": "Process",
+      "tags": [
+        "Process",
+        "UX"
+      ],
+      "aiLens": true,
+      "editorialTitle": "The **agent** bottleneck",
+      "question": "When multiple agents are running, what interface tells designers which one needs attention without turning coordination into another full-time task?",
+      "answer": "A useful control surface should make agent state visible at a glance, then jump straight to the right session or action. The real design problem is not monitoring, but preventing the human from becoming the routing layer for every interruption.",
+      "why": "The source argues that once teams run more than one agent, the bottleneck shifts to the user who must guess where attention is needed. That makes coordination UI a core workflow problem, not an optional productivity extra.",
+      "counts": {
+        "total": 1,
+        "newsletters": 1,
+        "web": 0
+      },
+      "firstSeen": "15:00 cet",
+      "signals": [
+        {
+          "source": "Actionable AI",
+          "title": "stop babysitting agents",
+          "kind": "Newsletter",
+          "timing": "15:00",
+          "happened": "A newsletter introduced a notch-based tool that tracks multiple AI agents as colored lights and expands on hover to show status. It also lets the user click through to the exact session when an agent needs attention.",
+          "changes": "This reframes agent management as a **status-visibility** problem instead of a chat problem. The tradeoff is clear: designers can reduce cognitive load, but only if the control panel stays lighter than the work it is trying to coordinate. The strongest signal is that AI output now needs a human-readable operating layer, not just better prompts.",
+          "verdict": "Must read",
+          "url": "https://elinkb64.mail.theactionableai.com/ss/c/u001.VH9ztUI_5EhIlHYeBgd71I1IkoHGJpPl2lXXCIdDEpmE-GIln-GekW4D3UUN1OYqXjK3rH_Afe7bSryZV5zGumbl7uPKE6HQuIZ7D4VimxBjdHMXVcNYr1cBjFcRs04b3KHbdeTmVA2xL55FpFWjTq0Bi6oiH0xkHJSwFA_25OV1ot7hvglqEX2QJa32BkBZg6mHFKsF7ZSK13dCFs1jHbd6WVOjDS2-5DWBWXtCyqZ-JZiLny_F6EtunYwlIAbjPYXOJ8waQkwhNauWyVq1Xo-3SWEetDqS1MCV8_pLPWlDvu3T6pTN0mWWfEZPeuvvu8FEo3jnnALfvNmBJ2Ui8w3AJX2QmKYXrYqo78BPjlg1k0lMJa67ZwJpDIYRwYoolDPoKqqOYC-oz4SWWoTqocSt5PhkwmOHORdBSSriQJemTqv-YzeZ-xx83_oqi48ft4m_Fomel68B44jZqsME1ZPX8Flqn8U2Fc0amW4aWvB0jkXPkX0-bkxDMV_byeE-8Y3M3XQtvypMXTOkBGFU3YQteMlVZ9WER2nnTnNKUzXqRF4ZJ6U47YWbLyxPVNDhqamB9z4ue5lM_P2WJ3lM_fEowQiWfr0EJzMpn_HhDuk4aP5yP6-Y33y2D4yJJTwHLEW0HnJ_DNFWtCT090PTbWQ5VIyJeYV8yArUaIUczXfIw58rUtVHrz8-REgiVUqE0cSetW30-TqfpGiXLy9VsQKORkxWknj3VLDzvVghwLZsdOnM4EMyZew5lzob8hANSEIUfPyKg1lBruQNbc-PqXC4ouNWHG8gPqgJEXfoKZCuMQrt_l1FBrZ-CoNJt9inoAz44j9FoS5dLfjuh8kt-Q/4us/05f7o8t2RIKzu9tSeEtGgQ/h0/h001.E68_iBCYmkPLCKuhk3Yd7tej-5ALbQLkJgyG021qrgM"
+        }
+      ],
+      "further": [
+        [
+          "Use verified partner MCP connectors with the Figma agent and Figma Make &ndash; Figma Learn - Help Center",
+          "help.figma.com",
+          "https://help.figma.com/hc/en-us/articles/35440096186007-Use-verified-partner-MCP-connectors-with-the-Figma-agent-and-Figma-Make"
+        ]
+      ]
+    },
+    {
+      "id": "02",
+      "slug": "what-should-design-and-product-teams-verify-before-shipping-ai-b",
+      "category": "Process",
+      "tags": [
+        "Process",
+        "UX"
+      ],
+      "aiLens": true,
+      "editorialTitle": "Lock **before launch**",
+      "question": "What should design and product teams verify before shipping AI-built tools so speed does not mask basic security failures?",
+      "answer": "Teams need a prelaunch checklist that treats security as part of the product experience, not a postscript. The danger is that AI-built speed makes dangerous defaults feel harmless until users or attackers expose them.",
+      "why": "The source is explicit that small configuration errors can leak data, expose keys, and trigger real legal and financial harm. That pushes security review into the center of the design process for AI-assisted products.",
+      "counts": {
+        "total": 1,
+        "newsletters": 1,
+        "web": 0
+      },
+      "firstSeen": "15:00 cet",
+      "signals": [
+        {
+          "source": "Actionable AI",
+          "title": "lock the doors",
+          "kind": "Newsletter",
+          "timing": "15:00",
+          "happened": "A checklist newsletter warned that AI-built apps can ship with exposed databases, stolen keys, and other simple but severe failures. It singled out fixes like row level security and front-end key removal as quick actions teams can take immediately.",
+          "changes": "This is a blunt reminder that **launch velocity** is not a substitute for product readiness. The tradeoff is uncomfortable: the easier AI makes building, the easier it becomes to ship hidden risk unless designers insist on guardrails and review habits. Security is now a UX responsibility because unsafe defaults shape what users can lose.",
+          "verdict": "Must read",
+          "url": "https://elinkb64.mail.theactionableai.com/ss/c/u001.VH9ztUI_5EhIlHYeBgd71I1IkoHGJpPl2lXXCIdDEpnO9OmYy93bteS2WLGo-GVsLU4NlVWGfYvzKfvkjOO1E8ArE3qBisGs-4jA2GQOLSP3GQcngGpVhAWoksnd_OjN3HSo7WhtZjXsQGIPrv6Av6CGmtxkDqSoRJHJEA40JLLAiAgNRjZdn0vXb-yZeVat-8k6vxA9tB0is0bzlkNgUVSCh6xo2r8ItUpEXTxRdJZ9P9zkQlczHGX97u3DEGcC4by2ODGQrYjLb06Pxh52Lj4yC5AWPsU_O_svmiEyIH22JcHIvGK1PtL9AO8DOwJm5ueObyuNJHQ4RDq7S8QCDluANRvtt86TmA4YiAbQoDwy-yBkH2Mw-hNmx5idUoqq9CxeNwwqG84IJfw4DTm8yHEgQpPiCtZP__ONu5p6pUtDjUWw5sJ82DwnMCopoUqxTENPWgVkVh9S54NxARzcVp6cY0KibWd7QBFrn4mYcSyrymt72vMVOg_xavsKxndLWt44sPY9-8nETZzFpNyjjBTEA3A_uHrLZ7GmlBJwrAoIx-BhoYf4dcal5kl-W_VZcUMcX9spr6xMnQW5tTJ5car6kyO_3GHUbfAXN6KZgDfQX6pLCzsD4FQzC73DcxIEnESCg9fYvmgyKuVnUe99DwaDX8e8EYxKMfGrI8Pg58qQ0nn6Pl25H7lmYADzzhGXWNy36ToGjVSZcA4Kv8hj6Y72IZgb5Am9iyTYKpSHNNxR3DyzgXROGSgu6OefdSKemvelHfxZH3GEQs-NPNxD-dsLeAj1oxnywSy7cNKV4R0/4ur/J-nYtYDfRJqjnuDLMfhAWg/h0/h001.3y8biXoKkmwOoTgmktzSRabXmdjtzaRc5TeLpqBOZpY"
+        }
+      ],
+      "further": [
+        [
+          "stop babysitting agents",
+          "Actionable AI",
+          "https://elinkb64.mail.theactionableai.com/ss/c/u001.VH9ztUI_5EhIlHYeBgd71I1IkoHGJpPl2lXXCIdDEpmE-GIln-GekW4D3UUN1OYqXjK3rH_Afe7bSryZV5zGumbl7uPKE6HQuIZ7D4VimxBjdHMXVcNYr1cBjFcRs04b3KHbdeTmVA2xL55FpFWjTq0Bi6oiH0xkHJSwFA_25OV1ot7hvglqEX2QJa32BkBZg6mHFKsF7ZSK13dCFs1jHbd6WVOjDS2-5DWBWXtCyqZ-JZiLny_F6EtunYwlIAbjPYXOJ8waQkwhNauWyVq1Xo-3SWEetDqS1MCV8_pLPWlDvu3T6pTN0mWWfEZPeuvvu8FEo3jnnALfvNmBJ2Ui8w3AJX2QmKYXrYqo78BPjlg1k0lMJa67ZwJpDIYRwYoolDPoKqqOYC-oz4SWWoTqocSt5PhkwmOHORdBSSriQJemTqv-YzeZ-xx83_oqi48ft4m_Fomel68B44jZqsME1ZPX8Flqn8U2Fc0amW4aWvB0jkXPkX0-bkxDMV_byeE-8Y3M3XQtvypMXTOkBGFU3YQteMlVZ9WER2nnTnNKUzXqRF4ZJ6U47YWbLyxPVNDhqamB9z4ue5lM_P2WJ3lM_fEowQiWfr0EJzMpn_HhDuk4aP5yP6-Y33y2D4yJJTwHLEW0HnJ_DNFWtCT090PTbWQ5VIyJeYV8yArUaIUczXfIw58rUtVHrz8-REgiVUqE0cSetW30-TqfpGiXLy9VsQKORkxWknj3VLDzvVghwLZsdOnM4EMyZew5lzob8hANSEIUfPyKg1lBruQNbc-PqXC4ouNWHG8gPqgJEXfoKZCuMQrt_l1FBrZ-CoNJt9inoAz44j9FoS5dLfjuh8kt-Q/4us/05f7o8t2RIKzu9tSeEtGgQ/h0/h001.E68_iBCYmkPLCKuhk3Yd7tej-5ALbQLkJgyG021qrgM"
+        ],
+        [
+          "Use verified partner MCP connectors with the Figma agent and Figma Make &ndash; Figma Learn - Help Center",
+          "help.figma.com",
+          "https://help.figma.com/hc/en-us/articles/35440096186007-Use-verified-partner-MCP-connectors-with-the-Figma-agent-and-Figma-Make"
+        ]
+      ]
+    },
+    {
+      "id": "03",
+      "slug": "how-do-designers-create-useful-interfaces-for-ideas-that-do-not-",
+      "category": "UX",
+      "tags": [
+        "UX",
+        "Process"
+      ],
+      "aiLens": false,
+      "editorialTitle": "Designing for **preexistence**",
+      "question": "How do designers create useful interfaces for ideas that do not yet exist, without forcing premature specificity?",
+      "answer": "The best answer is to design for the behavior and constraints around an idea rather than the final thing itself. That means building metaphors, placeholders, and structures that can absorb ambiguity without pretending certainty.",
+      "why": "The source frames design as an exercise in handling absence, not just polishing a known product. That matters because early concepts often need interfaces that reveal potential while leaving room for the idea to change.",
+      "counts": {
+        "total": 1,
+        "newsletters": 0,
+        "web": 1
+      },
+      "firstSeen": "22:32 cet",
+      "signals": [
+        {
+          "source": "UX Collective",
+          "title": "Designing for an idea before it exists",
+          "kind": "Web",
+          "timing": "22:32",
+          "happened": "An essay argued for designing around ideas before they fully exist, using metaphors and incomplete structures as working material. It focused on the useful parts that do not quite fit, especially when a concept is still undefined.",
+          "changes": "This pushes design practice away from polished certainty and toward **productive ambiguity**. The tension is useful but risky: too much structure can freeze a concept, while too little makes it impossible to test. Designers should treat prototypes as questions, not commitments.",
+          "verdict": "Read",
+          "url": "https://uxdesign.cc/designing-for-an-idea-before-it-exists-ecd8cb19999a"
+        }
+      ],
+      "further": [
+        [
+          "The Weekend With I can’t afford this but maybe she can",
+          "It’s Nice That",
+          "https://www.itsnicethat.com/features/the-weekend-with-i-cant-afford-this-but-maybe-she-can-091026"
+        ]
+      ]
+    },
+    {
+      "id": "04",
+      "slug": "how-are-design-culture-and-aspiration-changing-when-premium-aest",
+      "category": "Culture",
+      "tags": [
+        "Culture",
+        "UX"
+      ],
+      "aiLens": false,
+      "editorialTitle": "Taste **meets access**",
+      "question": "How are design culture and aspiration changing when premium aesthetics collide with who can actually afford to participate?",
+      "answer": "The cultural signal is that design taste remains aspirational, but access is uneven and increasingly visible. That gap shapes what gets admired, copied, and excluded.",
+      "why": "The source points to a style-driven cultural feature about founders and objects of desire, which speaks to the social side of design consumption rather than product mechanics. It is useful as a read on taste, status, and inclusion.",
+      "counts": {
+        "total": 1,
+        "newsletters": 0,
+        "web": 1
+      },
+      "firstSeen": "11:00 cet",
+      "signals": [
+        {
+          "source": "It’s Nice That",
+          "title": "The Weekend With I can’t afford this but maybe she can",
+          "kind": "Web",
+          "timing": "11:00",
+          "happened": "A culture piece spotlighted founders and objects tied to premium taste, presenting them as weekend design inspiration. The framing is less about utility than about aspiration and the social meaning of style.",
+          "changes": "This keeps design culture tied to **status signals** rather than function alone. The consequence for teams is that aesthetic decisions can reinforce who feels invited, seen, or priced out. Designers should read these cues critically instead of treating taste as neutral.",
+          "verdict": "Track",
+          "url": "https://www.itsnicethat.com/features/the-weekend-with-i-cant-afford-this-but-maybe-she-can-091026"
+        }
+      ],
+      "further": [
+        [
+          "Designing for an idea before it exists",
+          "UX Collective",
+          "https://uxdesign.cc/designing-for-an-idea-before-it-exists-ecd8cb19999a"
+        ]
+      ]
+    }
+  ]
+}
