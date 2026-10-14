@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 1,
+  "editionNumber": "023",
+  "date": "2026-10-13",
+  "displayDate": "Tuesday, 13 October 2026",
+  "filedAt": "05:31 cet",
+  "crawlCompletedAt": "05:31",
+  "sourceCount": 18,
+  "webSourceCount": 4,
+  "teamContributionCount": 1,
+  "headline": "AI **craft** is speeding up interfaces while weakening judgment",
+  "summary": "Design teams are getting faster at generating screens, but the evidence says the real bottleneck has moved to structure, process, and trust. The next advantage is not more output, it is tighter editorial control over what machines are allowed to shape.",
+  "generatedAt": "2026-10-13T03:31:37.787Z",
+  "inboxConnected": true,
+  "questions": [
+    {
+      "id": "01",
+      "slug": "when-ai-can-generate-polished-interfaces-instantly-what-parts-of",
+      "category": "UX",
+      "tags": [
+        "UX"
+      ],
+      "aiLens": true,
+      "editorialTitle": "**Fast UI** or real UX",
+      "question": "When AI can generate polished interfaces instantly, what parts of UX still require human judgment before a screen ships?",
+      "answer": "Speed is now cheap, but coherence is not. AI-generated UI can compress production time, yet it does not prove the interaction is understandable, useful, or grounded in user needs.",
+      "why": "UX Collective's framing separates visual output from experience design, which is the core tension for product teams deciding where AI belongs. It pushes designers to defend research, flow, and decision-making instead of mistaking volume for quality.",
+      "counts": {
+        "total": 1,
+        "newsletters": 1,
+        "web": 0
+      },
+      "firstSeen": "12:04 cet",
+      "signals": [
+        {
+          "source": "UX Collective",
+          "title": "AI-generated UI is fast design, not UX",
+          "kind": "Newsletter",
+          "timing": "12:04",
+          "happened": "A UX Collective issue argues that AI-generated UI is fast design, not UX, and frames the problem through the loss of craft in builder-grade environments. The issue pairs that essay with a broader set of pieces questioning synthetic users, AI invasive design, and how apps influence decisions.",
+          "changes": "The practical shift is that teams can now produce interface surfaces quickly, but **speed alone** no longer counts as design progress. The harder work moves to research, sequencing, and editorial restraint, because polished output without judgment risks becoming **thin interface theater**.",
+          "verdict": "Must read",
+          "url": "https://newsletter.uxdesign.cc/archive"
+        }
+      ],
+      "further": [
+        [
+          "AI-generated UI, What the AI era owes you, Amazing Glass, Jev for UX",
+          "UX Collective",
+          "https://uxdesign.cc/ai-generated-ui-what-the-ai-era-owes-you-amazing-glass-jev-for-ux-22f8393c4cc6"
+        ],
+        [
+          "AI is hollowing out the middle of design, leaving an hourglass behind",
+          "UX Collective",
+          "https://uxdesign.cc/ai-is-hollowing-out-the-middle-of-design-leaving-an-hourglass-behind-b7069db250fd"
+        ]
+      ]
+    },
+    {
+      "id": "02",
+      "slug": "if-ai-removes-the-grinding-middle-of-design-work-what-gets-bette",
+      "category": "Process",
+      "tags": [
+        "Process"
+      ],
+      "aiLens": true,
+      "editorialTitle": "**Middle work** gets hollowed",
+      "question": "If AI removes the grinding middle of design work, what gets better and what quietly disappears?",
+      "answer": "The middle is where translation, iteration, and coordination usually live. If AI compresses that layer, teams may gain throughput while losing the slow work that turns intent into a usable product.",
+      "why": "The strongest process signal is not a specific tool but a structural change in how design labor is distributed. That has direct implications for handoff quality, review depth, and the size of the gap between concept and finished work.",
+      "counts": {
+        "total": 1,
+        "newsletters": 0,
+        "web": 1
+      },
+      "firstSeen": "22:17 cet",
+      "signals": [
+        {
+          "source": "UX Collective",
+          "title": "AI is hollowing out the middle of design, leaving an hourglass behind",
+          "kind": "Web",
+          "timing": "22:17",
+          "happened": "UX Collective highlights a piece arguing that AI is hollowing out the middle of design and leaving an hourglass shape behind. The framing suggests design work is expanding at the top with more coordination and shrinking at the bottom where making actually happens.",
+          "changes": "That compression can raise output, but it also strips away the **translation layer** where teams test assumptions and catch bad decisions early. The tradeoff is visible: fewer hours spent in the messy middle may mean **less shared understanding** and weaker products at release.",
+          "verdict": "Must read",
+          "url": "https://uxdesign.cc/ai-is-hollowing-out-the-middle-of-design-leaving-an-hourglass-behind-b7069db250fd"
+        }
+      ],
+      "further": [
+        [
+          "AI-generated UI is fast design, not UX",
+          "UX Collective",
+          "https://newsletter.uxdesign.cc/archive"
+        ]
+      ]
+    },
+    {
+      "id": "03",
+      "slug": "when-ai-agents-can-read-and-act-through-product-infrastructure-w",
+      "category": "Process",
+      "tags": [
+        "Process"
+      ],
+      "aiLens": true,
+      "editorialTitle": "**Agent access** needs rules",
+      "question": "When AI agents can read and act through product infrastructure, who gets to define trust and access boundaries?",
+      "answer": "The access model is changing from human-only actions to machine-mediated ones. That means permissions, semantics, and auditability are becoming product design decisions, not just backend concerns.",
+      "why": "Google's OAuth notice makes the policy concrete: agentic traffic will be distinguished from traditional app traffic, and only marked clients will reach Workspace MCP servers. Designers need to understand the product surface of that rule change because it affects account flows, trust cues, and admin clarity.",
+      "counts": {
+        "total": 1,
+        "newsletters": 1,
+        "web": 0
+      },
+      "firstSeen": "00:10 cet",
+      "signals": [
+        {
+          "source": "Google Cloud",
+          "title": "[Action Required] Mark AI agent OAuth clients as agentic for Google Workspace MCP by Nov 11, 2026",
+          "kind": "Newsletter",
+          "timing": "00:10",
+          "happened": "Google Cloud says OAuth clients will need an agentic setting so Workspace administrators can distinguish AI agent traffic from ordinary app traffic. Only clients marked as agentic will be allowed to call Workspace MCP servers across Gmail, Drive, Calendar, and other Workspace apps.",
+          "changes": "This turns access control into a visible product boundary instead of an invisible implementation detail. The consequence is more clarity for admins, but also **new friction** for teams shipping agent experiences, because trust now depends on explicit classification and policy compliance.",
+          "verdict": "Must read",
+          "url": "https://services.google.com/fh/files/emails/new_logo.png"
+        }
+      ],
+      "further": [
+        [
+          "Secret agent bot: accessibility matters for the agents even if you can’t see them",
+          "UX Collective",
+          "https://uxdesign.cc/secret-agent-bot-accessibility-matters-for-the-agents-even-if-you-cant-see-them-2f53a5670ec9"
+        ]
+      ]
+    },
+    {
+      "id": "04",
+      "slug": "if-agents-read-the-accessibility-tree-does-accessibility-stop-be",
+      "category": "UX",
+      "tags": [
+        "UX",
+        "Culture"
+      ],
+      "aiLens": true,
+      "editorialTitle": "**Invisible users** reshape accessibility",
+      "question": "If agents read the accessibility tree, does accessibility stop being a compliance task and become core UX infrastructure?",
+      "answer": "Yes, because the audience is no longer only people using assistive tech. Structure that once served a narrow obligation now determines whether both humans and machines can read the page at all.",
+      "why": "This signal links long-standing accessibility practice to a new class of user, which raises the stakes for semantic structure and labeling. It matters because design systems that ignore structure may now fail not just users, but the agents acting on their behalf.",
+      "counts": {
+        "total": 1,
+        "newsletters": 0,
+        "web": 1
+      },
+      "firstSeen": "22:19 cet",
+      "signals": [
+        {
+          "source": "UX Collective",
+          "title": "Secret agent bot: accessibility matters for the agents even if you can’t see them",
+          "kind": "Web",
+          "timing": "22:19",
+          "happened": "A UX Collective essay argues that accessibility matters for AI agents because they read the accessibility tree rather than the visual surface. The piece says semantic structure now affects whether systems like ChatGPT, Claude, Gemini, Grok, and Perplexity can read a page at all.",
+          "changes": "Accessibility shifts from a narrow inclusion practice to **shared infrastructure** for both humans and agents. That raises the design bar: teams that treat headings, labels, and structure as optional decoration will now ship pages that are harder to use and harder for machines to interpret.",
+          "verdict": "Read",
+          "url": "https://uxdesign.cc/secret-agent-bot-accessibility-matters-for-the-agents-even-if-you-cant-see-them-2f53a5670ec9"
+        }
+      ],
+      "further": [
+        [
+          "AI-generated UI, What the AI era owes you, Amazing Glass, Jev for UX",
+          "UX Collective",
+          "https://uxdesign.cc/ai-generated-ui-what-the-ai-era-owes-you-amazing-glass-jev-for-ux-22f8393c4cc6"
+        ]
+      ]
+    }
+  ]
+}
