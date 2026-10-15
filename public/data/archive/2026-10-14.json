@@ -1,0 +1,234 @@
+{
+  "schemaVersion": 1,
+  "editionNumber": "024",
+  "date": "2026-10-14",
+  "displayDate": "Wednesday, 14 October 2026",
+  "filedAt": "03:53 cet",
+  "crawlCompletedAt": "03:53",
+  "sourceCount": 31,
+  "webSourceCount": 4,
+  "teamContributionCount": 0,
+  "headline": "**AI sameness** raises the price of judgment, research, and craft",
+  "summary": "Design teams are no longer competing on output volume but on the discipline to choose, test, and explain. The sharper edge is not faster generation, but stronger evidence and more visible intent.",
+  "generatedAt": "2026-10-14T01:53:44.027Z",
+  "inboxConnected": true,
+  "questions": [
+    {
+      "id": "01",
+      "slug": "if-newer-models-perform-better-with-less-instruction-which-parts",
+      "category": "Process",
+      "tags": [
+        "Process"
+      ],
+      "aiLens": true,
+      "editorialTitle": "When **rules** become drag",
+      "question": "If newer models perform better with less instruction, which parts of our design and agent workflows should be deleted instead of refined?",
+      "answer": "Treat instructions, skills, and hooks as liabilities unless they still change outcomes. The signal is not to abandon structure, but to strip away rituals that only compensated for weaker models.",
+      "why": "Actionable AI argues that older Claude rules now slow stronger models, and Anthropic reportedly cut about 80% of Claude Code’s system prompt. Google Cloud also introduced an agentic OAuth flag, showing that agent workflows are becoming more explicit and more governable.",
+      "counts": {
+        "total": 2,
+        "newsletters": 2,
+        "web": 0
+      },
+      "firstSeen": "15:01 cet",
+      "signals": [
+        {
+          "source": "Actionable AI",
+          "title": "delete your rules",
+          "kind": "Newsletter",
+          "timing": "15:01",
+          "happened": "The newsletter argues that Claude setups get worse when teams keep adding rules written for older models. It cites Anthropic engineers removing about 80% of Claude Code’s system prompt and recommends periodic instruction audits.",
+          "changes": "Design process is shifting from **accumulating safeguards** to deleting stale ones. That favors leaner agent setups, but it also forces teams to prove each rule still earns its place instead of hiding model weakness behind bureaucracy.",
+          "verdict": "Must read",
+          "url": "https://elinkb64.mail.theactionableai.com/ss/c/u001.VH9ztUI_5EhIlHYeBgd71I1IkoHGJpPl2lXXCIdDEpm9lITuOex92b0ItxsAN2qmO71eHntsGMilBNtgJIZ4LZATHptQAGxVQUTuGJtQaBUtLMpUqvv-gGzg2-MakShVb4pcEnjH7T-rjx94CZBL-C062l9es6bjQwNH8vgm3UMH_iZO6HSyi6ZRpI4sHN1QpDYFBEns_l_dJto5dEdiTEsynxFmoXIYrw3kSOuhFqwttQt52w2OnbiGJA1EGjZLKoTXuj6CzYWPJS3cUQ0GrWPwLuO5MCe7XK8jF7K81ZNMyrVVD6ftdolMBSdLICimuwM16c8RruKz1SGseTxU15urmvB9p7GVKP5H3ujx7_adgU48U46GiyBo9McO76pbThV0wye5QFhscabJf0116DqLlPsEJHdXwYDWXknqPRCn5tT2TUjrljTZP0Izm0hdtCkyuA2MqafA6d6er9ItwITQHYviy7POH-fKHRTtGlXCFCSNAIDk56vQtyYYwHmm0EwgOFmFMBUJ02YOkwtIqmgojVww_SrqYyiR_SBqdKiNGMxCc8vUsP8PIwtRBE2w5-SHlakp36fFDB9lvGmKdVTCLBPQ2FKObKkW5fvpIvUjbQtmkKMZrz2c6m9IcVoDr9Uvtjwu047vAtq5SxW-aun-vS7l-pM2Tj18NwwXe4oCkpX6EbrRizu4pCueSlaVSM5YKbX3Sowp5XtasEi0vVvq3fP04IPrds2N88TSCHExSpC0-u1M-8lNTq3z0Q_5736xkQ85vcjL4y9oGovNw01iNaWKwfdcM-6IBNcUMKGQrht5rmF6qP0JlPPgwKIX1BpbEYXc7yIDVee9NAGBRz7-W5F-PXi0wzkKiemZ3zA/4ut/6eOXrzphT6-0yCE3oyy0Iw/h0/h001.e-ZaVdMD8sWGSpYnmWDyAifdqKYTyG564hw5JzuMUAc"
+        },
+        {
+          "source": "Google Cloud",
+          "title": "[Action Required] Mark AI agent OAuth clients as agentic for Google Workspace MCP by Nov 11, 2026",
+          "kind": "Newsletter",
+          "timing": "00:10",
+          "happened": "Google Cloud announced an agentic OAuth setting for Workspace clients before MCP servers roll out. Only clients marked as agentic will be able to call Workspace MCP servers, while ordinary REST apps can stay unchanged.",
+          "changes": "Platform process is moving toward **hard separation** between human apps and agent traffic. That adds clarity for governance, but it also creates a new classification burden that product teams cannot ignore when they connect agents to core workflows.",
+          "verdict": "Track",
+          "url": "https://services.google.com/fh/files/emails/new_logo.png"
+        }
+      ],
+      "further": [
+        [
+          "ten tools only",
+          "Actionable AI",
+          "https://elinkb64.mail.theactionableai.com/ss/c/u001.VH9ztUI_5EhIlHYeBgd71I1IkoHGJpPl2lXXCIdDEpnrBssrANGPwsvv2UWZTaVPkaWcreyLxyJk2yVVwAV0gDpTtr6zVrWdzY1vmmA9jTLjiReOb_qNxvasVoVQYjUMLC3XfZM9abDOC0X4HQyNU9-l7ErcjEcLJHASBV3ZzCup-T_6HEZ_GjHdX2gSADAKgkz_YXVE6JxfF9C_tfigzyFB0MdbiDM2KFybt3Mso77RxJOn5V4b-vdVsHwNV3X39hNTfmsRMPOzePOjxqprxsA-TKKTXzKTh_5PBC5lkkrdgkmHHwap6mECAhyheRdFeqekinu3WpC_2XV0MDyKYTnQcWSg6wZhccGOK-m3ggu_xxmQ-DyhGhv4BwCLRfklZcuUjV8D2NhdaWrj_2duUMLII6j_-8zgdveM7EpuS-mJcz5Cruvvvk4NvVPeGvqeaLl70nYiRgMb_dn_z-_MJ6RCx0B2jM0bNBJfJZiNJndafzhD5gNBh_dY-tIYrfBZnaRQHQ10Bvq8tzNtVfnY9kGO53aZSchKMFf_TEd1IVLLkop_2oogSsnABe0hjLyT7rpx3RSXSBbKZuW4xHdJ4n41rHDpIm-gV8HVDjekHP-_u3evsuIhMFKlWVRAbYkLmQNMx3qyxMwJBiyVvZzequTGV65n06C7-5iZAV7LAz7b3cyhW50G3X3P07UesnScib8GIGM8ktIGE5RYZqfs_OfU5pe6wBvy-zfWWOMMQvEPFbz8gm4SOd5jLJO5_gXEHsmRBUPE3BLzIh42ryXoEMY5boxeh7c92upyjOtlzjJD6NqmnY7fyEPVjUcWaoXPPWfhlLhZa7R_brgG8RMU_g/4uu/tUFY8xBJQuW6Cu_5W1Vu-A/h0/h001.WsBjPiIUSlSxEfirtIC-B9KF_TFPbZAAaxzMdUV5IF8"
+        ]
+      ]
+    },
+    {
+      "id": "02",
+      "slug": "when-ai-assistants-read-the-accessibility-tree-does-accessible-m",
+      "category": "UX",
+      "tags": [
+        "UX"
+      ],
+      "aiLens": true,
+      "editorialTitle": "**Accessible** structure now serves agents",
+      "question": "When AI assistants read the accessibility tree, does accessible markup stop being a compliance layer and become core product infrastructure?",
+      "answer": "Yes, because the invisible structure now affects whether both people and agents can understand the page. Accessibility stops being a side ethic and becomes part of the product’s machine readability.",
+      "why": "UX Collective says agents read the accessibility tree rather than the visual surface. That changes the value of semantic structure from screen-reader support into a broader prerequisite for AI retrieval and interaction.",
+      "counts": {
+        "total": 1,
+        "newsletters": 0,
+        "web": 1
+      },
+      "firstSeen": "22:19 cet",
+      "signals": [
+        {
+          "source": "UX Collective",
+          "title": "Secret agent bot: accessibility matters for the agents even if you can’t see them",
+          "kind": "Web",
+          "timing": "22:19",
+          "happened": "The piece argues that agents do not see the interface the way humans do. They read the accessibility tree, so labels, structure, and semantic hierarchy determine whether systems like ChatGPT or Claude can understand a page at all.",
+          "changes": "Accessibility becomes **shared infrastructure**, not a special-case accommodation. The tradeoff is that teams must now optimize for machine comprehension without letting structure flatten the visual or interaction design that humans still rely on.",
+          "verdict": "Must read",
+          "url": "https://uxdesign.cc/secret-agent-bot-accessibility-matters-for-the-agents-even-if-you-cant-see-them-2f53a5670ec9"
+        }
+      ],
+      "further": [
+        [
+          "AI-generated UI is fast design, not UX",
+          "UX Collective",
+          "https://newsletter.uxdesign.cc/archive"
+        ]
+      ]
+    },
+    {
+      "id": "03",
+      "slug": "if-ai-can-generate-competent-screens-instantly-what-work-remains",
+      "category": "UX",
+      "tags": [
+        "UX"
+      ],
+      "aiLens": true,
+      "editorialTitle": "**Fast** UI is not UX",
+      "question": "If AI can generate competent screens instantly, what work remains unmistakably UX rather than just output?",
+      "answer": "Validation, iteration, and judgment remain the differentiators. Fast generation may supply the interface, but it does not supply the reasoning that makes it fit the user’s task.",
+      "why": "UX Collective frames AI-generated UI as speed without UX, while another article argues taste is not a methodology. Together they push designers away from screen production and toward evidence-backed decisions.",
+      "counts": {
+        "total": 3,
+        "newsletters": 1,
+        "web": 2
+      },
+      "firstSeen": "12:04 cet",
+      "signals": [
+        {
+          "source": "UX Collective",
+          "title": "AI-generated UI is fast design, not UX",
+          "kind": "Newsletter",
+          "timing": "12:04",
+          "happened": "The newsletter says AI-generated UI is fast design, not UX. It contrasts competent output with the slower work of craft, critique, and editorial judgment.",
+          "changes": "The boundary is moving from **making screens** to shaping decisions. That raises the bar for UX teams, because the easy part is increasingly cheap while the hard part is proving the experience deserves to exist at all.",
+          "verdict": "Must read",
+          "url": "https://newsletter.uxdesign.cc/archive"
+        },
+        {
+          "source": "UX Collective",
+          "title": "Taste is not a design methodology",
+          "kind": "Web",
+          "timing": "00:27",
+          "happened": "The essay rejects taste as a standalone design methodology and argues for judgment grounded in facts. It pushes back on the idea that confidence alone can replace research and data.",
+          "changes": "The design argument is turning against **taste as authority**. That matters because AI can generate plenty of plausible options, but only disciplined evidence can tell teams which one should ship.",
+          "verdict": "Read",
+          "url": "https://uxdesign.cc/taste-is-not-a-design-methodology-e02b37aea148"
+        },
+        {
+          "source": "UX Collective",
+          "title": "The synth everyone owned and few could program: a lesson for AI design",
+          "kind": "Web",
+          "timing": "11:03",
+          "happened": "The piece compares AI era design to the DX7, where quality presets made professional sound widely available. It argues that abundance makes work feel average unless a visible decision distinguishes it.",
+          "changes": "AI is making quality cheap, which means differentiation now depends on **visible decisions** rather than raw polish. The risk is a world full of competent sameness, where product teams mistake preset quality for true product judgment.",
+          "verdict": "Read",
+          "url": "https://uxdesign.cc/the-synth-everyone-owned-and-few-could-program-a-lesson-for-ai-design-6f618ec2aea0"
+        }
+      ],
+      "further": [
+        [
+          "AI is hollowing out the middle of design, leaving an hourglass behind",
+          "UX Collective",
+          "https://uxdesign.cc/ai-is-hollowing-out-the-middle-of-design-leaving-an-hourglass-behind-b7069db250fd"
+        ],
+        [
+          "How to talk about a design that looks worse on paper",
+          "UX Collective",
+          "https://uxdesign.cc/how-to-talk-about-a-design-that-looks-worse-on-paper-da73da6d7b57"
+        ]
+      ]
+    },
+    {
+      "id": "04",
+      "slug": "why-are-designers-and-artists-leaning-harder-into-imperfection-h",
+      "category": "Culture",
+      "tags": [
+        "Culture"
+      ],
+      "aiLens": false,
+      "editorialTitle": "**Craft** is back in view",
+      "question": "Why are designers and artists leaning harder into imperfection, handwriting, and process visibility just as AI promises frictionless output?",
+      "answer": "Because visible process has become a signal of authorship and care. In a market flooded with synthetic polish, craft now carries both distinction and trust.",
+      "why": "The strongest cultural signals praise imperfection, handwork, and process visibility across branding, type, illustration, and art. That suggests audiences are starting to read friction as evidence of human judgment rather than inefficiency.",
+      "counts": {
+        "total": 6,
+        "newsletters": 1,
+        "web": 5
+      },
+      "firstSeen": "09:02 cet",
+      "signals": [
+        {
+          "source": "It's Nice That",
+          "title": "The Weekly Edit",
+          "kind": "Newsletter",
+          "timing": "09:02",
+          "happened": "It’s Nice That’s roundup emphasizes work built around imperfection, strong selfhood, and the freedom to be bad at something. The curation favors projects that feel personal rather than optimized.",
+          "changes": "Culture is rewarding **unfinished honesty** over sterilized perfection. That gives designers room to be more expressive, but it also warns that polish alone no longer reads as originality.",
+          "verdict": "Read",
+          "url": "https://mcusercontent.com/9992e052462653409c504c67d/images/5f22728d-de6e-486c-a26d-45f7667ce34a.png"
+        },
+        {
+          "source": "It’s Nice That",
+          "title": "“Less bank, more life”: Barkas gives Nigerian digital bank Kuda an identity with the pace of Lagos",
+          "kind": "Web",
+          "timing": "10:00",
+          "happened": "Barkas’ identity for Kuda uses chunky geometry, a custom Naira sign, and hand-drawn illustrations to move the bank beyond its challenger era. The work ties brand pace to Lagos rather than generic fintech minimalism.",
+          "changes": "Brand systems are leaning into **local texture** to escape sameness. The tradeoff is that distinctiveness now depends on specificity, which is harder to scale but far harder to confuse with template branding.",
+          "verdict": "Read",
+          "url": "https://www.itsnicethat.com/articles/barkas-kuda-graphic-design-project-131026"
+        },
+        {
+          "source": "It’s Nice That",
+          "title": "Cuts, imperfections and accidents: Artist Pierre Guignard likes to “leave traces of the process visible”",
+          "kind": "Web",
+          "timing": "10:00",
+          "happened": "Pierre Guignard describes leaving cuts, imperfections, and accidents visible in his work. The result is figurative art that foregrounds process instead of hiding it.",
+          "changes": "Process visibility is becoming part of the aesthetic, not a backstage detail. That strengthens authorship, but it also challenges designers to decide how much roughness communicates care before it just looks unresolved.",
+          "verdict": "Track",
+          "url": "https://www.itsnicethat.com/articles/pierre-guignard-art-discover-131026"
+        }
+      ],
+      "further": [
+        [
+          "David Rudnick on the “borderline impossible” process of designing a bespoke blackletter typeface for Arsenal",
+          "It’s Nice That",
+          "https://www.itsnicethat.com/features/david-rudnick-johnnie-campbell-arsenal-rocastle-typeface-graphic-design-spotlight-121026"
+        ],
+        [
+          "Joanna Blémont didn’t get to a 2,000 frame animation without doing a few “bad drawings” first",
+          "It’s Nice That",
+          "https://www.itsnicethat.com/articles/nicer-tuesdays-london-september-joanna-blemont-131026"
+        ],
+        [
+          "Magic, made by hand: inside the world-first exhibition revealing how Jim Henson’s puppets came to life",
+          "It’s Nice That",
+          "https://www.itsnicethat.com/features/make-believe-magic-jim-henson-company-exhibition-creative-industry-121026"
+        ]
+      ]
+    }
+  ]
+}
