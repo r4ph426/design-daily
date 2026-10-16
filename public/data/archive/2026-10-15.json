@@ -1,0 +1,190 @@
+{
+  "schemaVersion": 1,
+  "editionNumber": "025",
+  "date": "2026-10-15",
+  "displayDate": "Thursday, 15 October 2026",
+  "filedAt": "03:27 cet",
+  "crawlCompletedAt": "03:27",
+  "sourceCount": 30,
+  "webSourceCount": 4,
+  "teamContributionCount": 1,
+  "headline": "**AI’s** false ease pushes design back toward judgment, proof",
+  "summary": "Design leaders are being forced to justify taste with numbers while AI flattens the work that looked easy to automate. The next advantage is not speed alone but choosing what deserves to stay visible, measurable, and human.",
+  "generatedAt": "2026-10-15T01:27:04.409Z",
+  "inboxConnected": true,
+  "questions": [
+    {
+      "id": "01",
+      "slug": "if-design-has-to-earn-capital-like-engineering-or-marketing-what",
+      "category": "Process",
+      "tags": [
+        "Process"
+      ],
+      "aiLens": false,
+      "editorialTitle": "**Proof** over presentations",
+      "question": "If design has to earn capital like engineering or marketing, what evidence actually changes a CFO’s mind?",
+      "answer": "Design teams should stop selling aspiration and start selling payback, retention, conversion, and avoided cost. That shifts the conversation from branding to investment discipline, which is uncomfortable but overdue.",
+      "why": "The strongest signal is that design still loses status when leaders cannot quantify its return. This reframes process around business proof instead of internal storytelling, which directly affects how design gets funded and prioritized.",
+      "counts": {
+        "total": 1,
+        "newsletters": 0,
+        "web": 1
+      },
+      "firstSeen": "00:09 cet",
+      "signals": [
+        {
+          "source": "UX Collective",
+          "title": "What I told the CFO when he asked why design matters",
+          "kind": "Web",
+          "timing": "00:09",
+          "happened": "A UX Collective essay argues that design leaders should answer CFOs in the language of investment. The author says the field has remained a secondary contributor because it still leans on creative self-description instead of financial evidence.",
+          "changes": "The practical change is a stricter standard for design work: **payback period** and return on investment now sit next to craft as core measures. That is healthy pressure, but it also narrows which kinds of design wins get recognized, favoring outcomes that finance can model over harder-to-measure quality.",
+          "verdict": "Must read",
+          "url": "https://uxdesign.cc/what-i-told-the-cfo-when-he-asked-why-design-matters-ceadb07c929e"
+        }
+      ],
+      "further": [
+        [
+          "How to talk about a design that looks worse on paper",
+          "UX Collective",
+          "https://uxdesign.cc/how-to-talk-about-a-design-that-looks-worse-on-paper-da73da6d7b57"
+        ],
+        [
+          "How getting good at your job can stop you getting better",
+          "UX Collective",
+          "https://uxdesign.cc/how-getting-good-at-your-job-can-stop-you-getting-better-023b6e7637ec"
+        ]
+      ]
+    },
+    {
+      "id": "02",
+      "slug": "if-buyers-want-ai-embedded-inside-existing-platforms-who-still-n",
+      "category": "UX",
+      "tags": [
+        "UX"
+      ],
+      "aiLens": true,
+      "editorialTitle": "**Invisible** AI loses the app",
+      "question": "If buyers want AI embedded inside existing platforms, who still needs a standalone AI app?",
+      "answer": "Probably fewer teams than the current market assumes. The product challenge is no longer launching a clever wrapper, but proving that AI belongs inside a workflow people already trust and revisit.",
+      "why": "This is the clearest market signal in the set: standalone AI apps convert fast and retain poorly. It changes UX strategy from novelty-driven onboarding to durable utility inside existing surfaces.",
+      "counts": {
+        "total": 1,
+        "newsletters": 0,
+        "web": 1
+      },
+      "firstSeen": "00:09 cet",
+      "signals": [
+        {
+          "source": "UX Collective",
+          "title": "Nobody wants your AI app",
+          "kind": "Web",
+          "timing": "00:09",
+          "happened": "A UX Collective piece says standalone AI apps are a bad bet because users try them, get a quick wow, and stop opening them. It cites RevenueCat data showing AI apps convert faster than regular apps but churn much faster over a year.",
+          "changes": "The consequence for UX is brutal: **first-session delight** is not enough if the product cannot survive habitual use. AI should disappear into the user's existing platform and control model, but that creates a tension between invisibility and the need to prove distinct value.",
+          "verdict": "Must read",
+          "url": "https://uxdesign.cc/nobody-wants-your-ai-app-cff8629064a4"
+        }
+      ],
+      "further": [
+        [
+          "Gemini 4 Argon is rolling out in Figma Make",
+          "Figma Release Notes",
+          "https://www.figma.com/release-notes/?title=gemini-4-argon-is-rolling-out-in-figma-make"
+        ],
+        [
+          "Secret agent bot: accessibility matters for the agents even if you can’t see them",
+          "UX Collective",
+          "https://uxdesign.cc/secret-agent-bot-accessibility-matters-for-the-agents-even-if-you-cant-see-them-2f53a5670ec9"
+        ]
+      ]
+    },
+    {
+      "id": "03",
+      "slug": "when-ai-makes-competent-screens-cheap-is-taste-the-last-defensib",
+      "category": "UX",
+      "tags": [
+        "UX"
+      ],
+      "aiLens": true,
+      "editorialTitle": "**Judgment** beats generic output",
+      "question": "When AI makes competent screens cheap, is taste the last defensible design skill?",
+      "answer": "Taste matters, but only when it is backed by evidence and the courage to choose. Otherwise it becomes a stylish excuse for arbitrary decisions in systems that already produce average work at scale.",
+      "why": "The signal matters because multiple sources argue that AI has made sameness cheap while raising the value of selection and critique. For design teams, that means methodology has to defend judgment without turning into vibes.",
+      "counts": {
+        "total": 1,
+        "newsletters": 0,
+        "web": 1
+      },
+      "firstSeen": "00:27 cet",
+      "signals": [
+        {
+          "source": "UX Collective",
+          "title": "Taste is not a design methodology",
+          "kind": "Web",
+          "timing": "00:27",
+          "happened": "A UX Collective essay pushes back on the idea that taste alone can be a design method. It argues that good products come from judgment built on facts, plus the agency to use them when the room prefers opinions.",
+          "changes": "The shift is not from research to taste, but toward **taste with receipts**. That is a sharper bar for design critique, and it rejects AI-era sameness without pretending instinct can replace process or evidence.",
+          "verdict": "Read",
+          "url": "https://uxdesign.cc/taste-is-not-a-design-methodology-e02b37aea148"
+        }
+      ],
+      "further": [
+        [
+          "How getting good at your job can stop you getting better",
+          "UX Collective",
+          "https://uxdesign.cc/how-getting-good-at-your-job-can-stop-you-getting-better-023b6e7637ec"
+        ],
+        [
+          "How to talk about a design that looks worse on paper",
+          "UX Collective",
+          "https://uxdesign.cc/how-to-talk-about-a-design-that-looks-worse-on-paper-da73da6d7b57"
+        ]
+      ]
+    },
+    {
+      "id": "04",
+      "slug": "if-agents-read-structure-instead-of-surfaces-is-accessibility-fi",
+      "category": "Process",
+      "tags": [
+        "Process",
+        "UX"
+      ],
+      "aiLens": true,
+      "editorialTitle": "**Structure** now serves agents",
+      "question": "If agents read structure instead of surfaces, is accessibility finally a product requirement, not a compliance chore?",
+      "answer": "Yes, but for a less noble reason than teams like to tell themselves. The accessibility tree now affects whether AI systems can parse, use, and act on a page, so semantic clarity has become operational infrastructure.",
+      "why": "The signal extends accessibility from moral obligation to system compatibility. That raises the design stakes because sloppy structure now breaks both assistive tech and agentic AI.",
+      "counts": {
+        "total": 2,
+        "newsletters": 0,
+        "web": 2
+      },
+      "firstSeen": "22:19 cet",
+      "signals": [
+        {
+          "source": "UX Collective",
+          "title": "Secret agent bot: accessibility matters for the agents even if you can’t see them",
+          "kind": "Web",
+          "timing": "22:19",
+          "happened": "A UX Collective article argues that the accessibility tree is no longer just for screen readers. It says agents from ChatGPT, Claude, Gemini, Grok, and Perplexity can only understand pages through the structured layer underneath the visual surface.",
+          "changes": "The implication is that accessibility is now tied to **machine readability**, not just user dignity. That strengthens the business case for semantic markup, but it also exposes teams that have treated accessible structure as optional polish rather than core architecture.",
+          "verdict": "Must read",
+          "url": "https://uxdesign.cc/secret-agent-bot-accessibility-matters-for-the-agents-even-if-you-cant-see-them-2f53a5670ec9"
+        }
+      ],
+      "further": [
+        [
+          "UX Design Tips for Better Confirmation Dialogs",
+          "UX Movement",
+          "https://uxmovement.substack.com/archive"
+        ],
+        [
+          "Gemini 4 Argon is rolling out in Figma Make",
+          "Figma Release Notes",
+          "https://www.figma.com/release-notes/?title=gemini-4-argon-is-rolling-out-in-figma-make"
+        ]
+      ]
+    }
+  ]
+}
