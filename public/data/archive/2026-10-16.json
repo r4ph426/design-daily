@@ -1,0 +1,199 @@
+{
+  "schemaVersion": 1,
+  "editionNumber": "026",
+  "date": "2026-10-16",
+  "displayDate": "Friday, 16 October 2026",
+  "filedAt": "03:19 cet",
+  "crawlCompletedAt": "03:19",
+  "sourceCount": 27,
+  "webSourceCount": 4,
+  "teamContributionCount": 0,
+  "headline": "**AI-built** products are forcing design toward proof, not polish",
+  "summary": "Design teams are being judged less by visual finish than by whether their systems hold up in production, across org boundaries, and under business scrutiny. AI is accelerating the shift, but the real test is still judgment, evidence, and accountability.",
+  "generatedAt": "2026-10-16T01:19:02.134Z",
+  "inboxConnected": true,
+  "questions": [
+    {
+      "id": "01",
+      "slug": "if-the-workshop-was-really-about-shipping-not-ai-what-should-des",
+      "category": "Process",
+      "tags": [
+        "Process"
+      ],
+      "aiLens": true,
+      "editorialTitle": "**AI** was the brief all along",
+      "question": "If the workshop was really about shipping, not AI, what should design teams stop pretending to teach and start operationalizing instead?",
+      "answer": "The workshop signal suggests AI is becoming the cover story for a much older gap: teams still need practical production literacy, not more novelty about tools. Designers should treat AI training as a proxy for workflows, constraints, and handoff quality, or they will keep teaching surface skills that collapse at release.",
+      "why": "The clearest value in the workshop is its correction to hype. It reframes AI education as a delivery problem, which matters more to product teams than another course on prompts.",
+      "counts": {
+        "total": 1,
+        "newsletters": 0,
+        "web": 1
+      },
+      "firstSeen": "00:08 cet",
+      "signals": [
+        {
+          "source": "UX Collective",
+          "title": "I ran a 7-week AI workshop for designers (that wasn’t really about AI)",
+          "kind": "Web",
+          "timing": "00:08",
+          "happened": "A 7-week workshop for designers was billed as AI-focused, but the author says it was really about what designers need to know about shipping to production and what people want from online learning. The framing argues that practical delivery concerns mattered more than the topic label.",
+          "changes": "This is a useful rejection of **AI as curriculum theater**. If the real lesson is production readiness, then design education should spend less time on tools and more time on the handoffs, constraints, and failure points that decide whether work survives contact with engineering.",
+          "verdict": "Must read",
+          "url": "https://uxdesign.cc/i-ran-a-7-week-ai-workshop-for-designers-that-wasnt-really-about-ai-804035e7b328"
+        }
+      ],
+      "further": [
+        [
+          "The AI experience doesn’t care about your org chart",
+          "UX Collective",
+          "https://uxdesign.cc/the-ai-experience-doesnt-care-about-your-org-chart-5ed595c7b373"
+        ],
+        [
+          "Human in the loop means making sure the human is not out of the loop",
+          "UX Collective",
+          "https://uxdesign.cc/designing-for-ai-human-in-the-loop-means-making-sure-the-human-is-not-out-of-the-loop-e38826309c91"
+        ]
+      ]
+    },
+    {
+      "id": "02",
+      "slug": "when-ai-answers-without-understanding-business-context-what-shou",
+      "category": "UX",
+      "tags": [
+        "UX"
+      ],
+      "aiLens": true,
+      "editorialTitle": "**Context** now outranks org charts",
+      "question": "When AI answers without understanding business context, what should UX own that content strategy and operations used to keep separate?",
+      "answer": "The new failure mode is not bad retrieval alone but wrong meaning, where a plausible answer masks a process exception or status mismatch. UX now has to connect language, data, and business rules, because an assistant that skips those links creates confidence without control.",
+      "why": "This source shows the core UX problem in enterprise AI: the assistant can sound right while being operationally wrong. That makes context design a product requirement, not a nice-to-have.",
+      "counts": {
+        "total": 1,
+        "newsletters": 0,
+        "web": 1
+      },
+      "firstSeen": "00:00 cet",
+      "signals": [
+        {
+          "source": "UX Collective",
+          "title": "The AI experience doesn’t care about your org chart",
+          "kind": "Web",
+          "timing": "00:00",
+          "happened": "The article describes an enterprise case where an AI assistant explains an invoice as ready for payment even though a discrepancy blocks it. It argues that content design, enterprise content strategy, knowledge management, and model behavior now collide in one experience.",
+          "changes": "The design risk is bigger than a bad answer. When **status, policy, and meaning diverge** across systems, UX has to design for reconciliation, not just presentation, or the assistant becomes a polished liar in front of the business.",
+          "verdict": "Must read",
+          "url": "https://uxdesign.cc/the-ai-experience-doesnt-care-about-your-org-chart-5ed595c7b373"
+        }
+      ],
+      "further": [
+        [
+          "Human in the loop means making sure the human is not out of the loop",
+          "UX Collective",
+          "https://uxdesign.cc/designing-for-ai-human-in-the-loop-means-making-sure-the-human-is-not-out-of-the-loop-e38826309c91"
+        ],
+        [
+          "Nobody wants your AI app",
+          "UX Collective",
+          "https://uxdesign.cc/nobody-wants-your-ai-app-cff8629064a4"
+        ]
+      ]
+    },
+    {
+      "id": "03",
+      "slug": "if-agents-act-before-users-ask-what-does-accountable-oversight-l",
+      "category": "Process",
+      "tags": [
+        "Process"
+      ],
+      "aiLens": true,
+      "editorialTitle": "**Human** approval is not enough",
+      "question": "If agents act before users ask, what does accountable oversight look like after the confirm dialog becomes a formality?",
+      "answer": "The article argues that a human click does not solve the accountability problem when the least informed person is asked to bless work they did not initiate. Design teams need new intervention points, clearer ownership, and better timing, or the loop stays human in name only.",
+      "why": "This is one of the strongest process signals because it names the real design trap: approval interfaces can conceal, not distribute, responsibility. That changes how teams should think about control, timing, and liability.",
+      "counts": {
+        "total": 1,
+        "newsletters": 0,
+        "web": 1
+      },
+      "firstSeen": "00:09 cet",
+      "signals": [
+        {
+          "source": "UX Collective",
+          "title": "Human in the loop means making sure the human is not out of the loop",
+          "kind": "Web",
+          "timing": "00:09",
+          "happened": "The piece says agents now triage inboxes, update records, and send messages before a user explicitly asks. It warns that standard confirm dialogs often place responsibility on the least informed person rather than on the system that acted.",
+          "changes": "This pushes process design past the comforting fiction of a **single approval click**. If the human is only there to ratify what already happened, then the loop is decorative, and teams should redesign who decides, when they decide, and what can still be stopped.",
+          "verdict": "Must read",
+          "url": "https://uxdesign.cc/designing-for-ai-human-in-the-loop-means-making-sure-the-human-is-not-out-of-the-loop-e38826309c91"
+        }
+      ],
+      "further": [
+        [
+          "The AI experience doesn’t care about your org chart",
+          "UX Collective",
+          "https://uxdesign.cc/the-ai-experience-doesnt-care-about-your-org-chart-5ed595c7b373"
+        ],
+        [
+          "I ran a 7-week AI workshop for designers (that wasn’t really about AI)",
+          "UX Collective",
+          "https://uxdesign.cc/i-ran-a-7-week-ai-workshop-for-designers-that-wasnt-really-about-ai-804035e7b328"
+        ]
+      ]
+    },
+    {
+      "id": "04",
+      "slug": "as-ai-makes-competent-output-cheap-how-should-design-leaders-def",
+      "category": "Culture",
+      "tags": [
+        "Culture"
+      ],
+      "aiLens": false,
+      "editorialTitle": "**Taste** is getting audited",
+      "question": "As AI makes competent output cheap, how should design leaders defend judgment without turning taste into a superstition?",
+      "answer": "The strongest counterpoint in the cultural coverage is that taste alone is not a methodology and cannot replace evidence, business goals, or accountability. Design teams should value judgment, but only when it is visible, testable, and tied to outcomes that others can challenge.",
+      "why": "This frames a real cultural correction inside design. It rejects the lazy claim that taste is enough, while still preserving the role of discernment in a world full of generic AI output.",
+      "counts": {
+        "total": 2,
+        "newsletters": 0,
+        "web": 2
+      },
+      "firstSeen": "00:27 cet",
+      "signals": [
+        {
+          "source": "UX Collective",
+          "title": "Taste is not a design methodology",
+          "kind": "Web",
+          "timing": "00:27",
+          "happened": "The article argues that good products come from judgment built on facts, not from taste treated as a standalone method. It frames AI-generated sameness as the backdrop for a renewed obsession with taste.",
+          "changes": "The useful tension here is that **taste needs proof**. Once AI makes acceptable screens cheap, design cannot hide behind vibe alone, because judgment without evidence becomes a private preference instead of a product discipline.",
+          "verdict": "Read",
+          "url": "https://uxdesign.cc/taste-is-not-a-design-methodology-e02b37aea148"
+        },
+        {
+          "source": "UX Collective",
+          "title": "What I told the CFO when he asked why design matters",
+          "kind": "Web",
+          "timing": "00:09",
+          "happened": "The author recounts a CFO asking whether design investment would outperform engineering or marketing, then argues design leaders must speak in business terms. The piece pushes quantification of design outcomes and payback.",
+          "changes": "This sharpens the cultural shift from self-image to accountability. If design wants strategic power, it has to justify itself like any other investment, which means **numbers over mystique** even when the work still depends on judgment.",
+          "verdict": "Read",
+          "url": "https://uxdesign.cc/what-i-told-the-cfo-when-he-asked-why-design-matters-ceadb07c929e"
+        }
+      ],
+      "further": [
+        [
+          "The synth everyone owned and few could program: a lesson for AI design",
+          "UX Collective",
+          "https://uxdesign.cc/the-synth-everyone-owned-and-few-could-program-a-lesson-for-ai-design-6f618ec2aea0"
+        ],
+        [
+          "How to talk about a design that looks worse on paper",
+          "UX Collective",
+          "https://uxdesign.cc/how-to-talk-about-a-design-that-looks-worse-on-paper-da73da6d7b57"
+        ]
+      ]
+    }
+  ]
+}
