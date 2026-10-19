@@ -1,32 +1,23 @@
 {
-  "weekLabel": "Last 7 days · 6 Oct 2026 – 12 Oct 2026",
+  "weekLabel": "Last 7 days · 13 Oct 2026 – 19 Oct 2026",
   "weeklySignals": [
     {
-      "id": "01",
-      "title": "Figma agent",
-      "verdict": "Worth trying",
-      "summary": "Generally available since 6 October, with library guidelines, file search, and custom skills. It now uses AI credits. Test one library-backed edit and inspect the result before adopting it.",
-      "source": "figma.com/release-notes",
-      "url": "https://www.figma.com/release-notes/",
-      "foundOn": "2026-10-07"
+      "title": "agent-skills",
+      "verdict": "Watching",
+      "summary": "Source-reviewed; not yet team-tested. Try it on one design-spec-to-UI loop, then compare the rendered result with the original spec and accessibility requirements.",
+      "source": "github.com",
+      "url": "https://github.com/sorawit-w/agent-skills",
+      "foundOn": "2026-10-19",
+      "id": "01"
     },
     {
-      "id": "02",
-      "title": "Figma Motion",
-      "verdict": "Worth trying",
-      "summary": "The 30 September update adds reusable animation styles and Lottie export. Try one component animation to check the handoff; Motion remains in open beta.",
-      "source": "figma.com/release-notes",
-      "url": "https://www.figma.com/release-notes/",
-      "foundOn": "2026-10-07"
-    },
-    {
-      "id": "03",
-      "title": "Framer Skills",
-      "verdict": "Worth trying",
-      "summary": "Released 22 September, newly reviewed for our collection: reusable instructions for design systems, copy, and CMS work. Test whether one skill keeps a second page consistent.",
-      "source": "framer.com/updates/skills",
-      "url": "https://www.framer.com/updates/skills",
-      "foundOn": "2026-10-07"
+      "title": "Design-components-for-AI-agents",
+      "verdict": "Watching",
+      "summary": "Source-reviewed; not yet team-tested. Use one component as a starting point for a single screen or interaction, then verify it fits your stack and motion rules.",
+      "source": "github.com",
+      "url": "https://github.com/richawo/Design-components-for-AI-agents",
+      "foundOn": "2026-10-19",
+      "id": "02"
     }
   ],
   "tools": [
@@ -159,15 +150,15 @@
         "Flows",
         "UI sketches"
       ],
-      "description": "Connects AI workflows to Mobbin’s library of real product screens and flows for faster pattern research and comparison.",
+      "description": "Connects AI workflows to Mobbin’s library of real product screens and flows for pattern research and comparison.",
       "verdict": "Worth trying",
       "confidence": "Medium",
-      "reviewed": "28 Sep 2026",
+      "reviewed": "19 Oct 2026",
       "source": "mobbin.com/mcp",
       "url": "https://mobbin.com/mcp",
       "access": "Mobbin account",
       "setup": "5–10 minutes",
-      "recommendation": "Helpful for grounding early exploration in shipped products. Use references to understand patterns, not to converge on copied solutions."
+      "recommendation": "Use it to compare one key flow against shipped products, then adapt the pattern instead of copying it directly."
     },
     {
       "id": "07",
@@ -183,15 +174,15 @@
         "Creative exploration",
         "Pattern research"
       ],
-      "description": "Searches Savee’s curated reference library and can retrieve personal saves, boards, and feed items inside supported AI clients.",
+      "description": "Searches Savee’s curated reference library and can retrieve personal saves, boards, feed items, and image content in supported clients.",
       "verdict": "Worth trying",
       "confidence": "Medium",
-      "reviewed": "28 Sep 2026",
+      "reviewed": "19 Oct 2026",
       "source": "savee.com/mcp",
       "url": "https://savee.com/mcp/",
       "access": "Paid Savee plan",
       "setup": "About 5 minutes",
-      "recommendation": "Promising for bringing a team’s visual references closer to ideation. Keep generated output distinct from the source material and retain links to references."
+      "recommendation": "Use it to ground one art-direction pass in existing saves, then keep the output distinct from the reference material."
     },
     {
       "id": "08",
@@ -582,14 +573,61 @@
         "Review"
       ],
       "description": "A set of agent skills for producing images, video, audio, textures, skyboxes, and 3D assets through the Scenario MCP, with separate expert tools for Blender, Maya, ZBrush, Unreal, and Unity.",
-      "recommendation": "Source-reviewed; not yet team-tested. Use it for one small branded asset task, such as a single image or 3D concept, before expanding to a wider production workflow.",
+      "recommendation": "Use it for one small branded asset task, such as a single image or 3D concept, before expanding to a wider production workflow.",
       "access": "Scenario account",
       "setup": "Not stated; check whether the MCP or local DCC tool path fits your workflow",
       "verdict": "Watching",
       "confidence": "Medium",
-      "reviewed": "7 Oct 2026",
+      "reviewed": "19 Oct 2026",
       "source": "github.com",
       "url": "https://github.com/scenario-labs/skills"
+    },
+    {
+      "id": "auto-b301c14c7521",
+      "title": "agent-skills",
+      "type": "Skill",
+      "categories": [
+        "UI",
+        "UX",
+        "Process"
+      ],
+      "practices": [
+        "Review",
+        "Accessibility",
+        "Flows"
+      ],
+      "description": "Includes screenwright, which builds a UI from a design spec, then renders it, audits accessibility, and fixes what does not match.",
+      "recommendation": "Source-reviewed; not yet team-tested. Try it on one design-spec-to-UI loop, then compare the rendered result with the original spec and accessibility requirements.",
+      "access": "Open source",
+      "setup": "Install via the plugin path or skills CLI; details depend on your host",
+      "verdict": "Watching",
+      "confidence": "Medium",
+      "reviewed": "19 Oct 2026",
+      "source": "github.com",
+      "url": "https://github.com/sorawit-w/agent-skills"
+    },
+    {
+      "id": "auto-33b8e3ab06b7",
+      "title": "Design-components-for-AI-agents",
+      "type": "Tool",
+      "categories": [
+        "UI",
+        "Process"
+      ],
+      "practices": [
+        "Drafting",
+        "UI sketches",
+        "Creative exploration"
+      ],
+      "description": "Provides animated React, Tailwind CSS, and React Native components for AI agents, with source code, design briefs, and JSON prompts for the same interface.",
+      "recommendation": "Source-reviewed; not yet team-tested. Use one component as a starting point for a single screen or interaction, then verify it fits your stack and motion rules.",
+      "access": "Open source",
+      "setup": "Project install or registry setup; host details vary",
+      "verdict": "Watching",
+      "confidence": "Medium",
+      "reviewed": "19 Oct 2026",
+      "source": "github.com",
+      "url": "https://github.com/richawo/Design-components-for-AI-agents"
     }
   ],
   "findings": [
@@ -637,6 +675,22 @@
       "url": "https://github.com/scenario-labs/skills",
       "id": "03",
       "foundOn": "2026-10-07"
+    },
+    {
+      "title": "agent-skills",
+      "verdict": "Watching",
+      "summary": "Source-reviewed; not yet team-tested. Try it on one design-spec-to-UI loop, then compare the rendered result with the original spec and accessibility requirements.",
+      "source": "github.com",
+      "url": "https://github.com/sorawit-w/agent-skills",
+      "foundOn": "2026-10-19"
+    },
+    {
+      "title": "Design-components-for-AI-agents",
+      "verdict": "Watching",
+      "summary": "Source-reviewed; not yet team-tested. Use one component as a starting point for a single screen or interaction, then verify it fits your stack and motion rules.",
+      "source": "github.com",
+      "url": "https://github.com/richawo/Design-components-for-AI-agents",
+      "foundOn": "2026-10-19"
     }
   ]
 }

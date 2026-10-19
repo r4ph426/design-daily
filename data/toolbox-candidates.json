@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-12T09:40:37.618Z",
+  "generatedAt": "2026-10-19T08:03:02.569Z",
   "editorialStatus": "Candidate queue only. Review in Codex before adding to the published toolbox.",
   "practices": [
     "Taste",
@@ -34,7 +34,7 @@
       "status": "Available",
       "finalUrl": "https://developers.figma.com/docs/figma-mcp-server/",
       "title": "Introduction | Developer Docs",
-      "description": "The Figma MCP server brings Figma directly into your workflow by providing important design information and context to AI agents generating code from Figma design files, and by enabling agents to write native Figma content back to the canvas."
+      "description": "The Figma MCP server brings Figma into your AI workflow. It gives AI agents the design context they need to generate code from your Figma files, and lets agents write native Figma content back to the canvas."
     },
     {
       "url": "https://www.framer.com/updates/skills",
@@ -281,6 +281,36 @@
       "editorialStatus": "Needs review"
     },
     {
+      "id": "github:sorawit-w/agent-skills",
+      "name": "agent-skills",
+      "fullName": "sorawit-w/agent-skills",
+      "description": "Agent-agnostic skills for coding agents, verified on Claude Code, Codex, and Copilot. Includes screenwright, which builds a UI from a design spec, then renders it, audits accessibility, and fixes what does not match.",
+      "url": "https://github.com/sorawit-w/agent-skills",
+      "source": "GitHub search",
+      "discoveredThrough": "Design MCPs",
+      "topics": [
+        "accessibility",
+        "agent-skills",
+        "ai-agents",
+        "claude-code",
+        "codex",
+        "design-to-code",
+        "developer-tools",
+        "mcp"
+      ],
+      "stars": 2,
+      "updatedAt": "2026-10-19T08:00:16Z",
+      "suggestedType": "MCP",
+      "suggestedPractices": [
+        "Accessibility",
+        "Review",
+        "Pattern research",
+        "UI sketches"
+      ],
+      "relevanceScore": 39,
+      "editorialStatus": "Needs review"
+    },
+    {
       "id": "github:linny006/skills-tracker",
       "name": "skills-tracker",
       "fullName": "linny006/skills-tracker",
@@ -447,8 +477,8 @@
         "openclaw",
         "openclaw-skills"
       ],
-      "stars": 52955,
-      "updatedAt": "2026-10-05T09:04:39Z",
+      "stars": 53202,
+      "updatedAt": "2026-10-19T07:23:12Z",
       "suggestedType": "Skill",
       "suggestedPractices": [
         "Creative exploration"
@@ -883,6 +913,86 @@
       "editorialStatus": "Needs review"
     },
     {
+      "id": "github:pathrule/patterns",
+      "name": "patterns",
+      "fullName": "pathrule/patterns",
+      "description": "Curated, path-scoped knowledge packages for AI coding agents (Claude Code, Cursor, Codex, Copilot, Windsurf, and any MCP client): ready-to-use bundles of memories, rules, and skills. First-party and free.",
+      "url": "https://github.com/pathrule/patterns",
+      "source": "GitHub search",
+      "discoveredThrough": "Design MCPs",
+      "topics": [
+        "agent-skills",
+        "ai",
+        "ai-agents",
+        "ai-coding",
+        "awesome-list",
+        "claude-code",
+        "codex",
+        "coding-assistant",
+        "context-engineering",
+        "cursor",
+        "developer-tools",
+        "github-copilot",
+        "knowledge-base",
+        "llm",
+        "mcp",
+        "model-context-protocol",
+        "patterns",
+        "prompt-engineering",
+        "typescript",
+        "windsurf"
+      ],
+      "stars": 0,
+      "updatedAt": "2026-10-19T08:02:21Z",
+      "suggestedType": "MCP",
+      "suggestedPractices": [
+        "Taste",
+        "Pattern research",
+        "Drafting",
+        "Creative exploration"
+      ],
+      "relevanceScore": 21,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:mg-studio-india/video-editing-skill",
+      "name": "video-editing-skill",
+      "fullName": "mg-studio-india/video-editing-skill",
+      "description": "Turn raw creator footage into polished, broadcast-grade Instagram Reels, YouTube Shorts, and long-form videos with autonomous coding agents. Automated paper cuts, dynamic kinetic captions, tactile sound design, and color grading.",
+      "url": "https://github.com/mg-studio-india/video-editing-skill",
+      "source": "GitHub search",
+      "discoveredThrough": "Creative tooling",
+      "topics": [
+        "ai-agent",
+        "ai-agents",
+        "antigravity",
+        "audio-mastering",
+        "automated-editing",
+        "claude",
+        "claude-code",
+        "ffmepg",
+        "hyperframes",
+        "instagram-reels",
+        "motion-graphics",
+        "sound-design",
+        "video-editing",
+        "video-effects",
+        "video-encoding",
+        "video-pipeline",
+        "whisper-cpp",
+        "youtube-shorts"
+      ],
+      "stars": 0,
+      "updatedAt": "2026-10-19T08:02:30Z",
+      "suggestedType": "Skill",
+      "suggestedPractices": [
+        "Drafting",
+        "Creative exploration"
+      ],
+      "relevanceScore": 21,
+      "editorialStatus": "Needs review"
+    },
+    {
       "id": "github:bulutarkan/mac-mcp",
       "name": "mac-mcp",
       "fullName": "bulutarkan/mac-mcp",
@@ -903,6 +1013,77 @@
       "suggestedType": "MCP",
       "suggestedPractices": [
         "Creative exploration"
+      ],
+      "relevanceScore": 18,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:OutSystems/outsystems-mcp",
+      "name": "outsystems-mcp",
+      "fullName": "OutSystems/outsystems-mcp",
+      "description": "Plugins for the OutSystems remote MCP.",
+      "url": "https://github.com/OutSystems/outsystems-mcp",
+      "source": "GitHub search",
+      "discoveredThrough": "Designer skills",
+      "topics": [
+        "agentic-ai",
+        "ai-agents",
+        "ai-assistants",
+        "claude-code",
+        "claude-code-plugin",
+        "kiro",
+        "kiro-power",
+        "low-code",
+        "mcp",
+        "mcp-server",
+        "model-context-protocol",
+        "oml",
+        "outsystems"
+      ],
+      "stars": 41,
+      "updatedAt": "2026-10-19T08:02:52Z",
+      "suggestedType": "MCP",
+      "suggestedPractices": [
+        "Drafting"
+      ],
+      "relevanceScore": 18,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:retospect/precis-mcp",
+      "name": "precis-mcp",
+      "fullName": "retospect/precis-mcp",
+      "description": "MCP server giving LLM agents a seven-verb API over papers, documents, code, state, patents, and cached web/Wolfram/YouTube tool calls",
+      "url": "https://github.com/retospect/precis-mcp",
+      "source": "GitHub search",
+      "discoveredThrough": "Design MCPs",
+      "topics": [
+        "ai-agent",
+        "claude",
+        "context-management",
+        "cursor",
+        "llm",
+        "markdown",
+        "mcp",
+        "mcp-server",
+        "model-context-protocol",
+        "patents",
+        "perplexity",
+        "pgvector",
+        "progressive-disclosure",
+        "python",
+        "scientific-papers",
+        "semantic-search",
+        "spaced-repetition",
+        "token-optimization",
+        "wolfram-alpha",
+        "youtube-transcripts"
+      ],
+      "stars": 7,
+      "updatedAt": "2026-10-19T08:01:21Z",
+      "suggestedType": "MCP",
+      "suggestedPractices": [
+        "Drafting"
       ],
       "relevanceScore": 18,
       "editorialStatus": "Needs review"
@@ -942,6 +1123,24 @@
       "suggestedType": "MCP",
       "suggestedPractices": [
         "Review"
+      ],
+      "relevanceScore": 18,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:igs-paddyyang-tw/ark-agent-skills",
+      "name": "ark-agent-skills",
+      "fullName": "igs-paddyyang-tw/ark-agent-skills",
+      "description": "Ark Agent 知識圖書館的館藏庫 — 把「知識×腳本×助理樣板」做成全隊可複用的 Skill 資產：一個人做過的工作沉澱成 Skill，下一個人直接借用。含建 agent 與跑任務的完整工具鏈。",
+      "url": "https://github.com/igs-paddyyang-tw/ark-agent-skills",
+      "source": "GitHub search",
+      "discoveredThrough": "Designer skills",
+      "topics": [],
+      "stars": 1,
+      "updatedAt": "2026-10-19T08:02:54Z",
+      "suggestedType": "Skill",
+      "suggestedPractices": [
+        "Creative exploration"
       ],
       "relevanceScore": 18,
       "editorialStatus": "Needs review"
@@ -1039,6 +1238,36 @@
       "editorialStatus": "Needs review"
     },
     {
+      "id": "github:jau123/MeiGen-AI-Design-MCP",
+      "name": "MeiGen-AI-Design-MCP",
+      "fullName": "jau123/MeiGen-AI-Design-MCP",
+      "description": "Discover inspiration and create images and videos with the latest AI models. Works with ChatGPT, Claude, Cursor, and other MCP clients.",
+      "url": "https://github.com/jau123/MeiGen-AI-Design-MCP",
+      "source": "GitHub search",
+      "discoveredThrough": "Inspiration MCPs",
+      "topics": [
+        "ai-image-generation",
+        "chatgpt",
+        "claude",
+        "codex",
+        "mcp",
+        "mcp-server",
+        "openclaw",
+        "seedance"
+      ],
+      "stars": 1788,
+      "updatedAt": "2026-10-19T07:51:43Z",
+      "suggestedType": "MCP",
+      "suggestedPractices": [
+        "Review",
+        "Taste",
+        "Drafting",
+        "Creative exploration"
+      ],
+      "relevanceScore": 15,
+      "editorialStatus": "Needs review"
+    },
+    {
       "id": "github:marcusquinn/aidevops",
       "name": "aidevops",
       "fullName": "marcusquinn/aidevops",
@@ -1097,6 +1326,59 @@
       ],
       "stars": 195,
       "updatedAt": "2026-10-12T09:38:59Z",
+      "suggestedType": "MCP",
+      "suggestedPractices": [
+        "Creative exploration"
+      ],
+      "relevanceScore": 15,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:SUDARSHANCHAUDHARI/OrbiAgents",
+      "name": "OrbiAgents",
+      "fullName": "SUDARSHANCHAUDHARI/OrbiAgents",
+      "description": "OrbiAgents — Multi-agent AI orchestration platform",
+      "url": "https://github.com/SUDARSHANCHAUDHARI/OrbiAgents",
+      "source": "GitHub search",
+      "discoveredThrough": "Interface review",
+      "topics": [
+        "ai-agents",
+        "automation",
+        "llm",
+        "multi-agent",
+        "typescript"
+      ],
+      "stars": 1,
+      "updatedAt": "2026-10-19T08:01:05Z",
+      "suggestedType": "Agent",
+      "suggestedPractices": [
+        "Creative exploration"
+      ],
+      "relevanceScore": 15,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:Furkiozknn/nvidia-nim-mcp",
+      "name": "nvidia-nim-mcp",
+      "fullName": "Furkiozknn/nvidia-nim-mcp",
+      "description": "MCP server for NVIDIA NIM's free tier (image, vision, translation, chat, safety, embeddings) falling back to Groq, Mistral, Gemini or Cerebras when a model is rate-limited or retired. · NVIDIA NIM ücretsiz katmanı için MCP sunucusu; model sınıra takılınca Groq, Mistral, Gemini ya da Cerebras'a geçer.",
+      "url": "https://github.com/Furkiozknn/nvidia-nim-mcp",
+      "source": "GitHub search",
+      "discoveredThrough": "Creative tooling",
+      "topics": [
+        "fallback",
+        "free-tier",
+        "gemini",
+        "groq",
+        "image-generation",
+        "mcp",
+        "mcp-server",
+        "model-context-protocol",
+        "nvidia-nim",
+        "python"
+      ],
+      "stars": 1,
+      "updatedAt": "2026-10-19T08:02:18Z",
       "suggestedType": "MCP",
       "suggestedPractices": [
         "Creative exploration"
@@ -1175,224 +1457,6 @@
         "Drafting"
       ],
       "relevanceScore": 12,
-      "editorialStatus": "Needs review"
-    },
-    {
-      "id": "github:doodledood/manifest-dev",
-      "name": "manifest-dev",
-      "fullName": "doodledood/manifest-dev",
-      "description": "Skills for agentic coding CLIs: output you can ship with minimal review, on work you can tell was worth doing.",
-      "url": "https://github.com/doodledood/manifest-dev",
-      "source": "GitHub search",
-      "discoveredThrough": "Creative tooling",
-      "topics": [
-        "agentic-coding",
-        "ai-agents",
-        "claude",
-        "claude-code",
-        "claude-code-plugin",
-        "codex",
-        "loop-engineering",
-        "opencode",
-        "pi"
-      ],
-      "stars": 73,
-      "updatedAt": "2026-10-05T09:32:41Z",
-      "suggestedType": "Skill",
-      "suggestedPractices": [
-        "Review",
-        "Drafting"
-      ],
-      "relevanceScore": 12,
-      "editorialStatus": "Needs review"
-    },
-    {
-      "id": "github:MichelKerkmeester/skilled-agent-harness_spec-driven-loops",
-      "name": "skilled-agent-harness_spec-driven-loops",
-      "fullName": "MichelKerkmeester/skilled-agent-harness_spec-driven-loops",
-      "description": "AI-assisted coding setup that helps you spend less time re-explaining context, and more time shipping with better output. Includes a custom spec kit, memory, agent and skill framework.",
-      "url": "https://github.com/MichelKerkmeester/skilled-agent-harness_spec-driven-loops",
-      "source": "GitHub search",
-      "discoveredThrough": "Taste and art direction",
-      "topics": [],
-      "stars": 36,
-      "updatedAt": "2026-10-05T09:33:26Z",
-      "suggestedType": "Skill",
-      "suggestedPractices": [
-        "Creative exploration"
-      ],
-      "relevanceScore": 12,
-      "editorialStatus": "Needs review"
-    },
-    {
-      "id": "github:The-Geek-Freaks/NEOTH",
-      "name": "NEOTH",
-      "fullName": "The-Geek-Freaks/NEOTH",
-      "description": "Local-first personal AI daemon in Rust — five-tier memory, consent-gated tools, WASM plugin sandbox, multi-provider LLM routing, channels, GUI, signed audit logs, and Babel-Index collapse prediction on its own runtime.",
-      "url": "https://github.com/The-Geek-Freaks/NEOTH",
-      "source": "GitHub search",
-      "discoveredThrough": "Interface review",
-      "topics": [
-        "agent-memory",
-        "ai-agent",
-        "ai-assistant",
-        "ai-memory",
-        "audit-log",
-        "cli",
-        "coding-agent",
-        "jarvis",
-        "llm",
-        "local-ai",
-        "local-first",
-        "mcp",
-        "personal-ai",
-        "personal-assistant",
-        "privacy",
-        "rag",
-        "rust",
-        "self-hosted",
-        "sovereign-ai",
-        "wasm-plugins"
-      ],
-      "stars": 6,
-      "updatedAt": "2026-10-12T09:39:59Z",
-      "suggestedType": "MCP",
-      "suggestedPractices": [
-        "Review"
-      ],
-      "relevanceScore": 12,
-      "editorialStatus": "Needs review"
-    },
-    {
-      "id": "github:emanueledenaro/claude-skills",
-      "name": "claude-skills",
-      "fullName": "emanueledenaro/claude-skills",
-      "description": "Claude Code skills for coordinating delegated work: model choice, smart multi-agent workflows and a coordinator method",
-      "url": "https://github.com/emanueledenaro/claude-skills",
-      "source": "GitHub search",
-      "discoveredThrough": "Designer skills",
-      "topics": [],
-      "stars": 0,
-      "updatedAt": "2026-10-07T21:29:18Z",
-      "suggestedType": "Skill",
-      "suggestedPractices": [
-        "Flows",
-        "Drafting",
-        "Creative exploration"
-      ],
-      "relevanceScore": 12,
-      "editorialStatus": "Needs review"
-    },
-    {
-      "id": "github:full-aigc-skills/artcraft-skills",
-      "name": "artcraft-skills",
-      "fullName": "full-aigc-skills/artcraft-skills",
-      "description": "Artcraft independent Agent Skills, pinned CLI installation and editable native workflows (development release).",
-      "url": "https://github.com/full-aigc-skills/artcraft-skills",
-      "source": "GitHub search",
-      "discoveredThrough": "Designer skills",
-      "topics": [],
-      "stars": 0,
-      "updatedAt": "2026-10-07T21:29:54Z",
-      "suggestedType": "Skill",
-      "suggestedPractices": [
-        "Flows",
-        "Creative exploration"
-      ],
-      "relevanceScore": 12,
-      "editorialStatus": "Needs review"
-    },
-    {
-      "id": "github:manak-debug/claude-skills",
-      "name": "claude-skills",
-      "fullName": "manak-debug/claude-skills",
-      "description": "Personal backup: awesome-claude-skills + Remotion skills",
-      "url": "https://github.com/manak-debug/claude-skills",
-      "source": "GitHub search",
-      "discoveredThrough": "Inspiration MCPs",
-      "topics": [],
-      "stars": 0,
-      "updatedAt": "2026-09-28T18:49:25Z",
-      "suggestedType": "Skill",
-      "suggestedPractices": [
-        "Creative exploration"
-      ],
-      "relevanceScore": 12,
-      "editorialStatus": "Needs review"
-    },
-    {
-      "id": "github:utkarshcse2026/claude-code",
-      "name": "claude-code",
-      "fullName": "utkarshcse2026/claude-code",
-      "description": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
-      "url": "https://github.com/utkarshcse2026/claude-code",
-      "source": "GitHub search",
-      "discoveredThrough": "Designer skills",
-      "topics": [
-        "claude",
-        "claude-ai",
-        "claude-code",
-        "claude-code-skill",
-        "claude-desktop",
-        "claude-leak",
-        "claude-skills",
-        "cluade-code-leaked"
-      ],
-      "stars": 0,
-      "updatedAt": "2026-09-28T19:23:57Z",
-      "suggestedType": "Skill",
-      "suggestedPractices": [
-        "Flows",
-        "Drafting"
-      ],
-      "relevanceScore": 12,
-      "editorialStatus": "Needs review"
-    },
-    {
-      "id": "github:Dicklesworthstone/pi_agent_rust",
-      "name": "pi_agent_rust",
-      "fullName": "Dicklesworthstone/pi_agent_rust",
-      "description": "High-performance AI coding agent CLI written in Rust with zero unsafe code",
-      "url": "https://github.com/Dicklesworthstone/pi_agent_rust",
-      "source": "GitHub search",
-      "discoveredThrough": "Design MCPs",
-      "topics": [
-        "ai-agents",
-        "cli",
-        "developer-tools",
-        "rust"
-      ],
-      "stars": 1851,
-      "updatedAt": "2026-10-07T21:27:14Z",
-      "suggestedType": "Agent",
-      "suggestedPractices": [
-        "Drafting"
-      ],
-      "relevanceScore": 9,
-      "editorialStatus": "Needs review"
-    },
-    {
-      "id": "github:Dicklesworthstone/coding_agent_session_search",
-      "name": "coding_agent_session_search",
-      "fullName": "Dicklesworthstone/coding_agent_session_search",
-      "description": "Unified TUI and CLI to index and search your local coding agent session history across 11+ providers (Codex, Claude, Gemini, Cursor, Aider, etc.)",
-      "url": "https://github.com/Dicklesworthstone/coding_agent_session_search",
-      "source": "GitHub search",
-      "discoveredThrough": "Interface review",
-      "topics": [
-        "ai-agents",
-        "developer-tools",
-        "rust",
-        "search",
-        "tui"
-      ],
-      "stars": 1149,
-      "updatedAt": "2026-09-28T19:23:33Z",
-      "suggestedType": "Agent",
-      "suggestedPractices": [
-        "Drafting"
-      ],
-      "relevanceScore": 9,
       "editorialStatus": "Needs review"
     }
   ]

@@ -1,89 +1,118 @@
 {
-  "date": "2026-10-12",
+  "date": "2026-10-19",
   "changes": [
     {
       "kind": "changed",
-      "id": "13",
-      "title": "Canva MCP",
-      "url": "https://www.canva.dev/docs/apps/mcp/",
+      "id": "auto-4c4e9e4faa27",
+      "title": "Scenario Agent Skills",
+      "url": "https://github.com/scenario-labs/skills",
       "fields": [
         {
           "field": "recommendation",
-          "before": "Use it when you need AI-assisted design creation or edits inside Canva, and check permissions plus brand fidelity on one small workflow first.",
-          "after": "Use it for one small design-edit workflow first, then verify permissions and brand fidelity before broader rollout."
+          "before": "Source-reviewed; not yet team-tested. Use it for one small branded asset task, such as a single image or 3D concept, before expanding to a wider production workflow.",
+          "after": "Use it for one small branded asset task, such as a single image or 3D concept, before expanding to a wider production workflow."
         }
       ],
-      "evidence": "to Canva&#x27;s design capabilities through natural language, directly from the AI tools they already use. What&#x27;s MCP? The Model Context Protocol (MCP) ⁠ (opens in a new tab or window) is a standardized interface that allows AI agents to interact with data sources and tools. Canva provides a remote MCP server that gives your AI assistant"
+      "evidence": "skill, without the expert tools npx skills add scenario-labs/skills --skill scenario scenario-inspiration scenario-image scenario-multi-reference scenario-product-shots scenario-brand-kit scenario-image-editing scenario-text-overlay scenario-storyboards scenario-game-assets scenario-sprite-animation scenario-side-view-game-kit"
+    },
+    {
+      "kind": "new",
+      "id": "auto-b301c14c7521",
+      "title": "agent-skills",
+      "url": "https://github.com/sorawit-w/agent-skills",
+      "entry": {
+        "id": "auto-b301c14c7521",
+        "title": "agent-skills",
+        "type": "Skill",
+        "categories": [
+          "UI",
+          "UX",
+          "Process"
+        ],
+        "practices": [
+          "Review",
+          "Accessibility",
+          "Flows"
+        ],
+        "description": "Includes screenwright, which builds a UI from a design spec, then renders it, audits accessibility, and fixes what does not match.",
+        "recommendation": "Source-reviewed; not yet team-tested. Try it on one design-spec-to-UI loop, then compare the rendered result with the original spec and accessibility requirements.",
+        "access": "Open source",
+        "setup": "Install via the plugin path or skills CLI; details depend on your host",
+        "verdict": "Watching",
+        "confidence": "Medium",
+        "reviewed": "19 Oct 2026",
+        "source": "github.com",
+        "url": "https://github.com/sorawit-w/agent-skills"
+      },
+      "evidence": ", which builds a UI from a design spec, then renders it, audits accessibility, and fixes what does not match. TL;DR What this is — a single Claude Code plugin that installs a curated, growing shelf of specialized skills in one go. Who it's for — anyone on Claude Code or Cowork who wants auto-triggering expertise for a specific job. Start here to"
+    },
+    {
+      "kind": "new",
+      "id": "auto-33b8e3ab06b7",
+      "title": "Design-components-for-AI-agents",
+      "url": "https://github.com/richawo/Design-components-for-AI-agents",
+      "entry": {
+        "id": "auto-33b8e3ab06b7",
+        "title": "Design-components-for-AI-agents",
+        "type": "Tool",
+        "categories": [
+          "UI",
+          "Process"
+        ],
+        "practices": [
+          "Drafting",
+          "UI sketches",
+          "Creative exploration"
+        ],
+        "description": "Provides animated React, Tailwind CSS, and React Native components for AI agents, with source code, design briefs, and JSON prompts for the same interface.",
+        "recommendation": "Source-reviewed; not yet team-tested. Use one component as a starting point for a single screen or interaction, then verify it fits your stack and motion rules.",
+        "access": "Open source",
+        "setup": "Project install or registry setup; host details vary",
+        "verdict": "Watching",
+        "confidence": "Medium",
+        "reviewed": "19 Oct 2026",
+        "source": "github.com",
+        "url": "https://github.com/richawo/Design-components-for-AI-agents"
+      },
+      "evidence": "build. Install the React or React Native source, paste the design brief, or pass the JSON prompt to your agent. Each describes the same interface. Motion with a purpose. Chart ranges morph, replies stream, navigation moves on springs, and loading resolves into a result. Preview the behaviour before using it. Your code, your stack. Free components"
     },
     {
       "kind": "changed",
-      "id": "14",
-      "title": "Canva Skills",
-      "url": "https://github.com/canva-sdks/canva-skills",
+      "id": "07",
+      "title": "Savee MCP",
+      "url": "https://savee.com/mcp/",
       "fields": [
         {
+          "field": "description",
+          "before": "Searches Savee’s curated reference library and can retrieve personal saves, boards, and feed items inside supported AI clients.",
+          "after": "Searches Savee’s curated reference library and can retrieve personal saves, boards, feed items, and image content in supported clients."
+        },
+        {
           "field": "recommendation",
-          "before": "A credible official workflow layer rather than an unverified prompt pack. Review the active skill subset and keep Canva authentication scoped to the intended team account.",
-          "after": "Try one supported skill on a single Canva workflow, then check whether the output stays consistent with your team account and library setup."
+          "before": "Promising for bringing a team’s visual references closer to ideation. Keep generated output distinct from the source material and retain links to references.",
+          "after": "Use it to ground one art-direction pass in existing saves, then keep the output distinct from the reference material."
         }
       ],
-      "evidence": "config, not a marketplace Each host entrypoint folder has a small README with setup notes for that host. Active Plugin Skills These skills are exposed by every supported host through the shared plugins/canva/skills/ directory. resize-for-social-media Resize designs for multiple social media platforms (Facebook, Instagram, LinkedIn) in one"
+      "evidence": "https://mcp.savee.com/mcp Copy 4 Let your client discover the sign-in Your client finds the OAuth flow on its own, no manual configuration needed. Older clients on the HTTP+SSE transport can connect through mcp-remote . Protocol details in the docs . 5 Authorize in your browser Your browser opens savee.com. The consent screen lists exactly what"
     },
     {
       "kind": "changed",
-      "id": "21",
-      "title": "Framer Skills",
-      "url": "https://www.framer.com/updates/skills",
+      "id": "06",
+      "title": "Mobbin MCP",
+      "url": "https://mobbin.com/mcp",
       "fields": [
         {
-          "field": "recommendation",
-          "before": "Capture one agreed design or content rule, then check whether the agent applies it consistently to a second page. Source-reviewed; the team still needs to test how reliably those rules hold.",
-          "after": "Capture one agreed rule in a Framer project and test whether it is applied consistently on a second page."
-        }
-      ],
-      "evidence": "tasks. Reference @pages , @components , and @styles in your project to help the agent follow your design direction, while you keep control of the result on the canvas. To get started, use /skills to ask the agent to create or update a skill. After a conversation where you’ve refined a page or a piece of copy, ask the agent to capture the decisions"
-    },
-    {
-      "kind": "changed",
-      "id": "02",
-      "title": "Playwright MCP",
-      "url": "https://github.com/microsoft/playwright-mcp",
-      "fields": [
+          "field": "description",
+          "before": "Connects AI workflows to Mobbin’s library of real product screens and flows for faster pattern research and comparison.",
+          "after": "Connects AI workflows to Mobbin’s library of real product screens and flows for pattern research and comparison."
+        },
         {
           "field": "recommendation",
-          "before": "A dependable bridge between product intent and browser evidence. Make automated actions observable and keep sensitive sessions out of tests.",
-          "after": "Use it for a small repeatable browser check or flow review, then keep sensitive sessions out of test runs."
+          "before": "Helpful for grounding early exploration in shipped products. Use references to understand patterns, not to converge on copied solutions.",
+          "after": "Use it to compare one key flow against shipped products, then adapt the pattern instead of copying it directly."
         }
       ],
-      "evidence": "navigation README Code of conduct Contributing Apache-2.0 license Security More items Playwright MCP A Model Context Protocol (MCP) server that provides browser automation capabilities using Playwright . This server enables LLMs to interact with web pages through structured accessibility snapshots, bypassing the need for screenshots or"
-    },
-    {
-      "kind": "changed",
-      "id": "03",
-      "title": "Apple Design Skill",
-      "url": "https://github.com/dickwu/apple-design-skill",
-      "fields": [
-        {
-          "field": "recommendation",
-          "before": "Useful as a platform-specific review lens. Treat its output as critique support and confirm important decisions against current Apple guidance.",
-          "after": "Use it as a platform-specific review lens, then confirm important decisions against current Apple guidance."
-        }
-      ],
-      "evidence": "AGENTS.md README.md README.md SKILL.md SKILL.md View all files Repository files navigation README More items Apple Design Skill An AI design reviewer grounded in Apple's Human Interface Guidelines, packaged as an agent skill. It audits and improves mobile and desktop UI, including layouts for the two-display iPhone Duo, against 123 HIG pages"
-    },
-    {
-      "kind": "changed",
-      "id": "05",
-      "title": "Scroll Craft",
-      "url": "https://github.com/nateherkai/scroll-craft",
-      "fields": [
-        {
-          "field": "recommendation",
-          "before": "A focused prompt layer for a difficult interaction pattern. Test for reduced motion, input diversity, and performance before treating a result as finished.",
-          "after": "Try it on one scroll-heavy page concept first, then check reduced motion and performance before shipping."
-        }
-      ],
-      "evidence": "walkthrough of several approved sites, showing their layered heroes, pointer response, and scroll transitions. website-examples.mp4 Plan independent depth planes, contact anchors, and opening/midpoint/exit states. Use authentic brand assets and verified product details before generating imagery. Choose photographic compositing or real 3D rendering"
+      "evidence": "from shipped products. Used Mobbin MCP integration Got 43 paywalls. Pulling the strongest for synthesis. Revolut Bundled value framing Third-party perks reframe the price as services received. Personalization signal \"Best for you\" implies algorithmic match, not arbitrary push. Price in the CTA Removes the last hesitation at click. Physical product"
     }
   ],
   "warnings": [
