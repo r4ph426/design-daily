@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "editionNumber": "027",
+  "date": "2026-10-19",
+  "displayDate": "Monday, 19 October 2026",
+  "filedAt": "03:14 cet",
+  "crawlCompletedAt": "03:14",
+  "sourceCount": 7,
+  "webSourceCount": 4,
+  "teamContributionCount": 2,
+  "headline": "**Craft** survives as AI pushes design toward shipped material",
+  "summary": "The sharpest shift is away from polished mockups and toward work that survives contact with code, data, and clients. AI can accelerate production, but only if designers keep control of the material and the decision order.",
+  "generatedAt": "2026-10-19T01:14:02.096Z",
+  "inboxConnected": true,
+  "questions": [
+    {
+      "id": "01",
+      "slug": "is-ai-helping-teams-work-faster-or-just-making-small-jobs-harder",
+      "category": "Process",
+      "tags": [
+        "Process",
+        "UX"
+      ],
+      "aiLens": true,
+      "editorialTitle": "**Simple** before clever",
+      "question": "Is AI helping teams work faster, or just making small jobs harder to finish?",
+      "answer": "The strongest signal says AI is still too eager to invent process when the task only needs restraint. Designers who want speed now need guardrails that force **the simple version** before the tool spins up a six-phase plan.",
+      "why": "This matters because process inflation wastes time, obscures priorities, and breaks momentum on routine work. The editorial tension is not whether AI can think, but whether teams can keep it from overthinking.",
+      "counts": {
+        "total": 1,
+        "newsletters": 1,
+        "web": 0
+      },
+      "firstSeen": "15:00 cet",
+      "signals": [
+        {
+          "source": "Actionable AI",
+          "title": "the simple version",
+          "kind": "Newsletter",
+          "timing": "15:00",
+          "happened": "A newsletter argues that Claude and ChatGPT routinely turn simple requests into overbuilt multi-step plans. It proposes a reusable skill that makes the model stay close to the simplest workable solution.",
+          "changes": "The practical change is not more prompting theater but a tighter operating rule for AI-assisted work. If the tool is trained to sound smart rather than be right, designers need **guardrails** that privilege completion over impressive-looking complexity. That shifts the burden back to process design, where the team decides when enough structure is enough.",
+          "verdict": "Must read",
+          "url": "https://elinkb64.mail.theactionableai.com/ss/c/u001.VH9ztUI_5EhIlHYeBgd71I1IkoHGJpPl2lXXCIdDEpm9lITuOex92b0ItxsAN2qmIHi4M1weimB_9nwJ1ne0U5yuqxECaOGCkStfKBQAp_T3h-uXG2GnxBVxMHLbA9ZnH_wif-aQETypUuXqiGvOsnf4DBvAshdahMXtJO-pwUZhqV5I-B6PPbIFDRxuSHK_83VsDGarCTcCfLs8IOSEi0aeC2mXSVbzC9UZ0GDloQ-1qvmnt7xHSt14ZL_3FPUeh-nTmiFviewbFd6Qw0WafGBrJmvOtGKDaY_HWzcgCrH1jmP8SP-gXVL94ZiZFE4Z6pSp-ioxqwOFGDkFcn0dP2x0UmUu4rpFEMC3IwKr5n9KBPscCNFTcmZ_aaBrqKohHPeenI5H3vkP-RfrtjGynMINytnIoWMppbGW_Wr2feuJWe0PuqbUroEA2RaT5Rq1l_hyZsqZvF2j1S5pFcJullCkcfEHTIssQkKZZQrfSIgbwywsjIuMqGsFqLpJO6A6HQwsFHeFZsif6zm3KLtLOtMZnB3lQdI8gMcPsjDtPNmzNNiRZiN6OYWC7NHyV5Hvc-IvMP-x7BwQ-Gl0Jnfq-i9GfEnr4_icZ3CBCUTKfJJOyGFE3kR-awh1GGT68WzMxYsIoNzJ3avgxcpomDXJWvUVQ3x-1TPVlmrvDAOfQIfGtv4RvXraTFvQKX6OPckGh8TOTH6zc1qQ490h1YDjgHTpjjaV9_EnUj6sGHvBaDWPUoPL9H8qujZLHSh25tvZ/4uz/V2TFs8zBRkOtsRSzntx9aQ/h0/h001.d9agEnS3w9DLD8HRucN4D6jNZc5hzTgtAVgzbjWe7MU"
+        }
+      ],
+      "further": [
+        [
+          "what to learn",
+          "Actionable AI",
+          "https://elinkb64.mail.theactionableai.com/ss/c/u001.VH9ztUI_5EhIlHYeBgd71I1IkoHGJpPl2lXXCIdDEpltZK6BeDyvI4RFnF3bWgaZZ6Vi7KNP40wE3Bd3hZDk6cZEpSoGZ2uCG1Mr-60hviowE_l0KdBqoBDJZY-yMDbj5AinyyfVAc6lsQJv6W5ybPPNv1YkVAEe3xUuIHGCzRo5jVu-Sm4KcMZnH_sZgj34gRASXQyetwbUYL5l0KmHLGZgJCKFR156wOrY4XpIP_tlnWbATD2Fzrwb2P4zFwGXAMby4J5UFlagSAzPC3B57I3kJmXo-xaf-O_VWoSy1ajQnot-o9wIyjUBos7BXTTaLmTRq8h6U4E3RGh4eabQ_FM0ibZge_m5lHZZTc4X1TZ96Glr2P7FWdTbfJVseY1PsHwbMEN3fHRXgOpa6o5nnXcX0BR5vSaK4aqBojTv7AZi_9CrDFVGrdaunB-2QSToeQjsRzU_u8Kebss9PVD2CC1HXJX7VdDUa52fbHnmf1OB-TmlOV1a8zCtJpYAxIblCABAnaHhpM64DFMlM5-m2cIrKYkaJ8BeXCVBkZqZWULB5NyCWFd4LP6X4Kb7gmdq8jUROaGf3oxgfYv5PHH5eSROV_0qPvxiOShP9sHB8TJ1DdT9EjscovggucxdP7wuZNn2YVbXGay6y_immO-pSOeMObl2LGwCnzm6NIQ7t8gb6_oX8VfcTWP6afJ9CUVypo1dKjEbMf2-T064waIgWX7CyouNOgi8nAfqLX2yUNGua9uwBPhVs13WoKjujhydRnYEXKt88fkyQbjalxx8ot95xb-Eyux5EoQQQt_Y-hEMknSl67RvlR9AyjCZXrb_61JKHJ6fm6YiymKn93kDbA/4uy/T1OsJ6OuQfimaOM_uRyZNA/h0/h001.qCeAdwT_Pgb0sSsVVB3yAWtbUrqRKa4tZFXPTtQGYUg"
+        ]
+      ]
+    },
+    {
+      "id": "02",
+      "slug": "what-happens-when-designers-stop-making-pictures-of-interfaces-a",
+      "category": "UX",
+      "tags": [
+        "UX",
+        "Process"
+      ],
+      "aiLens": true,
+      "editorialTitle": "Design in **real material**",
+      "question": "What happens when designers stop making pictures of interfaces and start designing in the thing they ship?",
+      "answer": "The signal is a rebuke to mockup-first habits. When AI handles more of the cutting, designers have less excuse to stay abstract and more reason to work directly with code, data, and production constraints.",
+      "why": "This matters because fidelity without feasibility creates handoff fiction. The tension is between aesthetic control and the discipline of designing against what software can actually do.",
+      "counts": {
+        "total": 1,
+        "newsletters": 0,
+        "web": 1
+      },
+      "firstSeen": "14:11 cet",
+      "signals": [
+        {
+          "source": "UX Collective",
+          "title": "Design in the material you ship",
+          "kind": "Web",
+          "timing": "14:11",
+          "happened": "A UX Collective essay argues that digital designers have always had a material, and that material is code. It says AI now absorbs more of the mechanical cutting, which makes the old habit of designing in pictures increasingly inadequate.",
+          "changes": "The consequence is a move away from interface as illustration and toward interface as built artifact. That is a healthy correction, but it also narrows the room for fantasy work that cannot survive implementation. Teams that ignore this will keep producing elegant screens that collapse in the browser, while teams that embrace it will negotiate more directly with constraints and shipping reality.",
+          "verdict": "Must read",
+          "url": "https://uxdesign.cc/design-in-the-material-you-ship-7adf198388ee"
+        }
+      ],
+      "further": [
+        [
+          "How to build a brand foundation with AI without losing your craft",
+          "UX Collective",
+          "https://uxdesign.cc/how-to-build-a-brand-foundation-with-ai-without-losing-your-craft-d616b05cb838"
+        ]
+      ]
+    },
+    {
+      "id": "03",
+      "slug": "can-teams-avoid-ai-confusion-by-learning-the-stack-in-the-right-",
+      "category": "Process",
+      "tags": [
+        "Process",
+        "UX"
+      ],
+      "aiLens": true,
+      "editorialTitle": "Learning **AI** in order",
+      "question": "Can teams avoid AI confusion by learning the stack in the right sequence?",
+      "answer": "The clearest practical advice is to stop treating AI as one skill and start teaching it as a layered workflow. That means moving from fundamentals to prompting, then to memory, projects, APIs, and tool calls in a deliberate order.",
+      "why": "This matters because scattered learning produces shallow adoption and bad expectations. The editorial tension is between curiosity and operational readiness, especially when teams want results without understanding the plumbing.",
+      "counts": {
+        "total": 1,
+        "newsletters": 1,
+        "web": 0
+      },
+      "firstSeen": "15:00 cet",
+      "signals": [
+        {
+          "source": "Actionable AI",
+          "title": "what to learn",
+          "kind": "Newsletter",
+          "timing": "15:00",
+          "happened": "A newsletter curates 28 free resources into five buckets and recommends a specific order for learning AI. It maps those stages to Claude features, from courses and prompting to projects, skills, APIs, and structured outputs.",
+          "changes": "The change is a more disciplined adoption path that treats AI as infrastructure, not inspiration. That helps teams avoid random dabbling, but it also exposes how much of the current excitement depends on understanding the **underlying stack**. For designers, the lesson is that better AI use comes from sequence and systems thinking, not from collecting prompts.",
+          "verdict": "Read",
+          "url": "https://elinkb64.mail.theactionableai.com/ss/c/u001.VH9ztUI_5EhIlHYeBgd71I1IkoHGJpPl2lXXCIdDEpltZK6BeDyvI4RFnF3bWgaZZ6Vi7KNP40wE3Bd3hZDk6cZEpSoGZ2uCG1Mr-60hviowE_l0KdBqoBDJZY-yMDbj5AinyyfVAc6lsQJv6W5ybPPNv1YkVAEe3xUuIHGCzRo5jVu-Sm4KcMZnH_sZgj34gRASXQyetwbUYL5l0KmHLGZgJCKFR156wOrY4XpIP_tlnWbATD2Fzrwb2P4zFwGXAMby4J5UFlagSAzPC3B57I3kJmXo-xaf-O_VWoSy1ajQnot-o9wIyjUBos7BXTTaLmTRq8h6U4E3RGh4eabQ_FM0ibZge_m5lHZZTc4X1TZ96Glr2P7FWdTbfJVseY1PsHwbMEN3fHRXgOpa6o5nnXcX0BR5vSaK4aqBojTv7AZi_9CrDFVGrdaunB-2QSToeQjsRzU_u8Kebss9PVD2CC1HXJX7VdDUa52fbHnmf1OB-TmlOV1a8zCtJpYAxIblCABAnaHhpM64DFMlM5-m2cIrKYkaJ8BeXCVBkZqZWULB5NyCWFd4LP6X4Kb7gmdq8jUROaGf3oxgfYv5PHH5eSROV_0qPvxiOShP9sHB8TJ1DdT9EjscovggucxdP7wuZNn2YVbXGay6y_immO-pSOeMObl2LGwCnzm6NIQ7t8gb6_oX8VfcTWP6afJ9CUVypo1dKjEbMf2-T064waIgWX7CyouNOgi8nAfqLX2yUNGua9uwBPhVs13WoKjujhydRnYEXKt88fkyQbjalxx8ot95xb-Eyux5EoQQQt_Y-hEMknSl67RvlR9AyjCZXrb_61JKHJ6fm6YiymKn93kDbA/4uy/T1OsJ6OuQfimaOM_uRyZNA/h0/h001.qCeAdwT_Pgb0sSsVVB3yAWtbUrqRKa4tZFXPTtQGYUg"
+        }
+      ],
+      "further": [
+        [
+          "the simple version",
+          "Actionable AI",
+          "https://elinkb64.mail.theactionableai.com/ss/c/u001.VH9ztUI_5EhIlHYeBgd71I1IkoHGJpPl2lXXCIdDEpm9lITuOex92b0ItxsAN2qmIHi4M1weimB_9nwJ1ne0U5yuqxECaOGCkStfKBQAp_T3h-uXG2GnxBVxMHLbA9ZnH_wif-aQETypUuXqiGvOsnf4DBvAshdahMXtJO-pwUZhqV5I-B6PPbIFDRxuSHK_83VsDGarCTcCfLs8IOSEi0aeC2mXSVbzC9UZ0GDloQ-1qvmnt7xHSt14ZL_3FPUeh-nTmiFviewbFd6Qw0WafGBrJmvOtGKDaY_HWzcgCrH1jmP8SP-gXVL94ZiZFE4Z6pSp-ioxqwOFGDkFcn0dP2x0UmUu4rpFEMC3IwKr5n9KBPscCNFTcmZ_aaBrqKohHPeenI5H3vkP-RfrtjGynMINytnIoWMppbGW_Wr2feuJWe0PuqbUroEA2RaT5Rq1l_hyZsqZvF2j1S5pFcJullCkcfEHTIssQkKZZQrfSIgbwywsjIuMqGsFqLpJO6A6HQwsFHeFZsif6zm3KLtLOtMZnB3lQdI8gMcPsjDtPNmzNNiRZiN6OYWC7NHyV5Hvc-IvMP-x7BwQ-Gl0Jnfq-i9GfEnr4_icZ3CBCUTKfJJOyGFE3kR-awh1GGT68WzMxYsIoNzJ3avgxcpomDXJWvUVQ3x-1TPVlmrvDAOfQIfGtv4RvXraTFvQKX6OPckGh8TOTH6zc1qQ490h1YDjgHTpjjaV9_EnUj6sGHvBaDWPUoPL9H8qujZLHSh25tvZ/4uz/V2TFs8zBRkOtsRSzntx9aQ/h0/h001.d9agEnS3w9DLD8HRucN4D6jNZc5hzTgtAVgzbjWe7MU"
+        ]
+      ]
+    },
+    {
+      "id": "04",
+      "slug": "what-does-long-term-engagement-look-like-when-novelty-wears-off",
+      "category": "Culture",
+      "tags": [
+        "Culture",
+        "UX"
+      ],
+      "aiLens": false,
+      "editorialTitle": "Keeping **people** coming back",
+      "question": "What does long-term engagement look like when novelty wears off?",
+      "answer": "The recurring theme is that retention depends less on one clever gimmick than on rituals, counters, and social cues that make return visits feel natural. Designers should read that as a warning against overvaluing launch moments and underdesigning endurance.",
+      "why": "This matters because many products still optimize for attention spikes instead of sustained habits. The tension is between initial delight and the slower work of building reasons to return.",
+      "counts": {
+        "total": 1,
+        "newsletters": 0,
+        "web": 1
+      },
+      "firstSeen": "14:11 cet",
+      "signals": [
+        {
+          "source": "UX Collective",
+          "title": "A thousand days of stale popcorn",
+          "kind": "Web",
+          "timing": "14:11",
+          "happened": "A UX Collective piece frames habit formation through examples like a gym, a radio broadcast, and a streak counter. It asks how products keep people going after novelty fades.",
+          "changes": "The implication is that retention is a design system, not a single feature. That pushes teams to build **repeatable cues** and social reinforcement instead of chasing one-off engagement tricks. It is a useful corrective because it values endurance over spectacle, even if that makes the product less immediately shiny.",
+          "verdict": "Track",
+          "url": "https://uxdesign.cc/a-thousand-days-of-stale-popcorn-54f62d06c42b"
+        }
+      ],
+      "further": [
+        [
+          "Nicer Tuesdays LA: Get tickets for Debbie Millman, Micaiah Carter and Bijou Karman in November!",
+          "It’s Nice That",
+          "https://www.itsnicethat.com/articles/nicer-tuesdays-november-la-launch-161026"
+        ]
+      ]
+    }
+  ]
+}
