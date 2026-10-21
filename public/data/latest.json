@@ -1,97 +1,63 @@
 {
   "schemaVersion": 1,
-  "editionNumber": "028",
-  "date": "2026-10-20",
-  "displayDate": "Tuesday, 20 October 2026",
-  "filedAt": "03:48 cet",
-  "crawlCompletedAt": "03:48",
-  "sourceCount": 21,
+  "editionNumber": "029",
+  "date": "2026-10-21",
+  "displayDate": "Wednesday, 21 October 2026",
+  "filedAt": "03:32 cet",
+  "crawlCompletedAt": "03:32",
+  "sourceCount": 31,
   "webSourceCount": 4,
   "teamContributionCount": 0,
-  "headline": "**Attention** becomes the bottleneck as design absorbs AI work",
-  "summary": "The real design problem is no longer making output faster, but deciding what deserves a human’s eyes. Teams that ignore the reading tax will trade speed for coherence, and lose both.",
-  "generatedAt": "2026-10-20T01:48:19.246Z",
+  "headline": "AI turns **design judgment** into the new bottleneck",
+  "summary": "The sharpest shift is not better automation but the growing cost of deciding what deserves human attention. Designers who treat AI output as a throughput problem will miss the real work of shaping judgment, constraints, and trust.",
+  "generatedAt": "2026-10-21T01:32:43.783Z",
   "inboxConnected": true,
   "questions": [
     {
       "id": "01",
-      "slug": "if-agents-can-produce-six-hours-of-work-for-every-human-hour-how",
+      "slug": "if-one-agent-with-a-playbook-is-replacing-piles-of-brittle-autom",
       "category": "Process",
       "tags": [
         "Process"
       ],
       "aiLens": true,
-      "editorialTitle": "**Attention** or throughput",
-      "question": "If agents can produce six hours of work for every human hour, how should design teams decide what gets reviewed, summarized, or discarded before it floods the workflow?",
-      "answer": "Design teams need a review layer, not just more output. The new leverage is in filtering, routing, and escalating the few things that need judgment, because **throughput without selection** becomes a tax on every other role.",
-      "why": "Anthropic's study shows agent output scaling far beyond human review capacity, making attention management a process problem rather than a productivity win.",
+      "editorialTitle": "Can playbooks beat **agent sprawl**?",
+      "question": "If one agent with a playbook is replacing piles of brittle automations, what should design teams standardize first so AI creates less maintenance, not more of it?",
+      "answer": "Standardize the work before you automate the work. The strongest signals argue for a single operating playbook, grounded in manual practice, approved assets, and explicit context files, because scattered agents create hidden upkeep and fragile outputs. That shifts design process toward reusable instructions and governance, not clever prompts.",
+      "why": "The source signals show teams abandoning multi-agent setups because they break, while Anthropic-style playbooks and context files reduce drift and rework. For designers, the process question is no longer how to prototype faster, but how to make AI dependable enough to ship.",
       "counts": {
-        "total": 1,
-        "newsletters": 0,
-        "web": 1
-      },
-      "firstSeen": "23:39 cet",
-      "signals": [
-        {
-          "source": "UX Collective",
-          "title": "Human attention is the new old bottleneck. We have to design for it even more.",
-          "kind": "Web",
-          "timing": "23:39",
-          "happened": "Anthropic researchers published a study of how its own agents changed work. By August 2026, employee-directed agents were logging six hours for every human hour worked, while agent sessions spent about 80% of their time idle waiting for human input.",
-          "changes": "The practical change is that review has become the scarce resource, not generation. Design operations now need explicit triage rules for **what deserves attention** and what can be safely ignored, or the team will drown in output that feels productive but is mostly delay.",
-          "verdict": "Must read",
-          "url": "https://uxdesign.cc/anthropic-october-2026-study-human-attention-is-the-new-old-bottleneck-d7bc4642668a"
-        }
-      ],
-      "further": [
-        [
-          "fix the playbook",
-          "Actionable AI",
-          "https://elinkb64.mail.theactionableai.com/ss/c/u001.VH9ztUI_5EhIlHYeBgd71I1IkoHGJpPl2lXXCIdDEpmE-GIln-GekW4D3UUN1OYqIBn0M59a_zGGW0mFHMJgpreA949Kna875eVdgMOSRhsbBtJlpvgo-TTM-CN9-fn-5hNugxfsc-JA0njnjRH7CJC_MxCxHmrJpwsv6iPRV4sV0UVEDws0I4ekTy84yJu3pRdqS6IR8FPtFNEGvL1g1PnBFd1MaTbe5AmbCEgSQTEsEuCOK0idol3MelsrKBgfQj_lPs9fYBwpqIP-84FczEaAbYy63LaKxDx-cIwovo4V3syDVs4vSuDRRBDiT6avF2icnWveGx0Zi9wqI_MYzS1fRFvN6pPcRMKkbAGS5IMnMIstUlahOjLUxfdOGL82wKK5VQ---22RYf3Wt-waOiOlJ8KvLXi25EPES2L_dpTrCyzl0YLK9SvIswqDQ18wKCgneAawSEw4q64teRKJrZqoTKkYKTL55Uwnyp_-B6PXdxyddJdt7Hl-CVESNoh52y5BuIFGFWQo2pkcM69t-LJ4x7V4TfXMDIYINe_5riNBDn97FjHizS4GmUkcsJaI2xtHSVxDtJx_QDBi4jzMacl-lWxY1eflFchABmwgVgEXp27hSo09hiS8I6mcwMr-KOmZHN4PcIBZZuklai6RR8kdCedIfFO_q-sx3vG8QINMH3ajRsjOTYdgSj7KHd1SgEOqBBdp4TYDfGmljbMaBo46HM0NLYfMtWyC8cl6yifMrUpFVJIJVJ8aWKhl6N3u1v6bh2dsyk1ZxarVwfdH-ACDE_XfRR2IwlQcd24t0596HGFs59kQqIVGcv4Qp_JOV3NuEr-jVI0ymGVLRY7gIA/4v0/SctrMv0BQNiJR2uj8ngINQ/h0/h001.m5T8XfIXe5kDxfgukAKkzm3OB3TARTZWuGCPhQnZqWo"
-        ],
-        [
-          "the simple version",
-          "Actionable AI",
-          "https://elinkb64.mail.theactionableai.com/ss/c/u001.VH9ztUI_5EhIlHYeBgd71I1IkoHGJpPl2lXXCIdDEpm9lITuOex92b0ItxsAN2qmIHi4M1weimB_9nwJ1ne0U5yuqxECaOGCkStfKBQAp_T3h-uXG2GnxBVxMHLbA9ZnH_wif-aQETypUuXqiGvOsnf4DBvAshdahMXtJO-pwUZhqV5I-B6PPbIFDRxuSHK_83VsDGarCTcCfLs8IOSEi0aeC2mXSVbzC9UZ0GDloQ-1qvmnt7xHSt14ZL_3FPUeh-nTmiFviewbFd6Qw0WafGBrJmvOtGKDaY_HWzcgCrH1jmP8SP-gXVL94ZiZFE4Z6pSp-ioxqwOFGDkFcn0dP2x0UmUu4rpFEMC3IwKr5n9KBPscCNFTcmZ_aaBrqKohHPeenI5H3vkP-RfrtjGynMINytnIoWMppbGW_Wr2feuJWe0PuqbUroEA2RaT5Rq1l_hyZsqZvF2j1S5pFcJullCkcfEHTIssQkKZZQrfSIgbwywsjIuMqGsFqLpJO6A6HQwsFHeFZsif6zm3KLtLOtMZnB3lQdI8gMcPsjDtPNmzNNiRZiN6OYWC7NHyV5Hvc-IvMP-x7BwQ-Gl0Jnfq-i9GfEnr4_icZ3CBCUTKfJJOyGFE3kR-awh1GGT68WzMxYsIoNzJ3avgxcpomDXJWvUVQ3x-1TPVlmrvDAOfQIfGtv4RvXraTFvQKX6OPckGh8TOTH6zc1qQ490h1YDjgHTpjjaV9_EnUj6sGHvBaDWPUoPL9H8qujZLHSh25tvZ/4uz/V2TFs8zBRkOtsRSzntx9aQ/h0/h001.d9agEnS3w9DLD8HRucN4D6jNZc5hzTgtAVgzbjWe7MU"
-        ]
-      ]
-    },
-    {
-      "id": "02",
-      "slug": "when-ai-adoption-spreads-across-tools-and-channels-why-are-desig",
-      "category": "Process",
-      "tags": [
-        "Process",
-        "UX"
-      ],
-      "aiLens": true,
-      "editorialTitle": "**Coherence** is the product",
-      "question": "When AI adoption spreads across tools and channels, why are design teams suddenly being told they own coherence instead of individual screens?",
-      "answer": "Because users experience the suite, not the artifact. The job shifts toward making systems feel continuous across touchpoints, while resisting the temptation to let every AI feature invent its own voice and behavior.",
-      "why": "The newsletter signals a growing expectation that design is responsible for end-to-end consistency as AI multiplies interfaces and workflows.",
-      "counts": {
-        "total": 1,
-        "newsletters": 1,
+        "total": 2,
+        "newsletters": 2,
         "web": 0
       },
-      "firstSeen": "14:31 cet",
+      "firstSeen": "15:01 cet",
       "signals": [
         {
-          "source": "Kenny Chen",
-          "title": "UX Design Weekly: Messing up AI Adoption, Design owns Coherence, The Designer's Constitution",
+          "source": "Actionable AI",
+          "title": "why automations die",
           "kind": "Newsletter",
-          "timing": "14:31",
-          "happened": "UX Design Weekly highlighted an argument that design owns coherence, meaning the person on the other end experiences the whole suite across channels, not isolated components. It also pointed to AI adoption guidance, synthetic users research, and tools that push designers closer to coding agents.",
-          "changes": "This reframes design from screen production to system stewardship. The tension is that **coherence** now matters more than novelty, but teams may still chase isolated AI wins that fragment the experience and make the product feel stitched together instead of intentional.",
+          "timing": "15:01",
+          "happened": "A newsletter on AI operations argues that automations die when teams skip key setup steps. It frames repeated failure as a result of process mistakes rather than tool choice.",
+          "changes": "The practical shift is away from scattered automations and toward **manual rehearsal first**, so teams can expose missing steps before encoding them. That is a harsher but healthier standard, because it treats automation as a consequence of understanding, not a shortcut around it. The tradeoff is speed up front in exchange for fewer hidden failures later.",
+          "verdict": "Must read",
+          "url": "https://elinkb64.mail.theactionableai.com/ss/c/u001.VH9ztUI_5EhIlHYeBgd71I1IkoHGJpPl2lXXCIdDEpnuMP_tULjhLPaxeSLI_5Yveic2fFvm7JVw0dOVinQY3rnB72E_ChG6XY_oarvk_5vBqZvNyTRLJ-OKI27OOAZVx3bh9X_7QJG_xQF_jj89sENrm2nl-Lk86XZdeVkqjhSdrMLHzKrJcKELjGFyfJ0Sf_sT7vNbNNSYqcU8MhcYhGh0t4T73wce5tP-Ql9PxIDwz74rslmwdn2zTSxaMPJYK4ChOU8ZF-2oaFiZyxMBD1R7Sbt5BGbS807Od490TaKm_BrCzJ76ltjYN0EHUba0uGfn58Y84vejFvQJLZGVVzh1OvCV8RWv2zwSzy26lU2nKcv_E7pU8Jg6ZI0hjy41am0lwrXpCZgJLVkv8MJXyU01HlEul6RK6rlbCNv2clNr3oxCUpRla7JaAMp7AaCTrzFtUmVd3FvqcZzahrUyTdaDrY8oF2UKnlDp-2aiLg6RkFgktFxkTJtmAJoLJkjGwlXw5ML4wyw5tA4V2kJ0c1eZZUAqNAzNxAOWcqmRTrX3M3sJ8eFQnKtvfAGF1kk5Jvoq9qei0AaNEVuMb_jMBtj7A_dPduyBQsIS0WylCTMgDoKcTiPTHM85tUgWT02sEcZV-uOq6ZppCHyZp4UvsKAjny9PSkdExakPqSjLzYlcKJQlzwdG8ZhE269RvALS943DilexTNROfOMyhRvB6DjvcEBvSUsy1AN7ZdlDhQ_N0TcVgXo_ZD31s72N1aBEFuihGD0cyp9wfb1bgr5mhuARW60cx_zVd0oHoLHMF0gzdQL-Jhr3qIR66ASUboDjbzLTCZiETDSIu3PjmtPV7WjTfoNpREia33lXO2fwYbTQvms5UodK-W6S4LKTe33Q/4v1/9HZIvzCZTZ6n0oMj8i9h-g/h0/h001.qFz-O8vXpTwilXwt8j4rfPkliDWKhDWRKg1uj9I2ETc"
+        },
+        {
+          "source": "Actionable AI",
+          "title": "the one email a week where I sell you something",
+          "kind": "Newsletter",
+          "timing": "01:01",
+          "happened": "A productized AI newsletter is selling a setup that connects email, calendar, drive, and automation so AI can do work instead of chatting about it. It emphasizes that the system only works when the surrounding tools and inputs are wired together.",
+          "changes": "The tension here is that AI value now depends on the surrounding **tooling stack**, not just the model. That makes design more operational, because teams must specify inputs, permissions, and handoff rules before they can claim real leverage. The upside is useful automation; the risk is buying complexity disguised as convenience.",
           "verdict": "Read",
-          "url": "https://fonts.googleapis.com"
+          "url": "https://elinkb64.mail.theactionableai.com/ss/c/u001.VH9ztUI_5EhIlHYeBgd71I1IkoHGJpPl2lXXCIdDEpm9lITuOex92b0ItxsAN2qm0Fej7Ia6jbgvAYnOkKRK_fGPSMS83StIGRv6MukNCRtMw-EmBMAk7zSZ1YQRSZTVvBvotsKeyyIfbaO-04Kodvr8oQ5RVCfL4GpU569ZSJ7yVWcI04nVOVc3TAO90C-FdfnMUiJzwcTFtq8GaSLEx3hNDiw0LaHERKEdSTovnvSeCVQvI52DClA26hdqMjd9ztdQjqRICzqGHfMoZr95lKiQ50Sg-vJdvTOaCfOMmtCqv8eGDQX5542xPpuFe8BzXbMOw2aKFnWuvZuQyNv28tcBytz5zZbk1MnbLYZ_Lun4RfA_4BuxTtLty4gsbvqva1HQWTeDOWsFH8DwyomeZJv9a0v0yTi8uoW48tFCeXz2YMN9sRp-iAGv0Xe-QOckN7pXerqRABcGIUDDck10YG-zG6F1z9rM_pGQGfe40aJG-Y3V7q8Adtv9Im2YUEYz-OVrelWKUXynAE1NYbJ2WGzU4LbK65MeLIqcP3nXlJ6sxym-B84DhfNG38QtqcrydHSbK_VlEklZFBG4bVJD4hBaBERSPwvhicBYHPSvxQfv0ybeT3t7c6V6ElGgAktwxgbuTKeSAS1P-UqSh48wBCBwRLCwe0Xa6Mh0rnwEGNTTMCouAPAYKvJBNqU47nUy1jFwo3WQypuDq_94JYy8M3OuO1QdzhDmSu0NHnNBd7BqM0L6NTKD-oAhhLYMn-9HIL_dJE-f1h25-VSOte46XBzUshx3V1gf_vpk53uxI8zYRh6S9i8sanzSirae33ZWVDtn9TpgVXlta9bq_JttVQ/4v1/r-E06nrYQTO_djrPfxRb0A/h0/h001.50r1zUQdIM_xoxInAS0m5dBxijaBfiBDruXFOkbLg_0"
         }
       ],
       "further": [
         [
-          "How to build a brand foundation with AI without losing your craft",
+          "Human attention is the new old bottleneck. We have to design for it even more.",
           "UX Collective",
-          "https://uxdesign.cc/how-to-build-a-brand-foundation-with-ai-without-losing-your-craft-d616b05cb838"
+          "https://uxdesign.cc/anthropic-october-2026-study-human-attention-is-the-new-old-bottleneck-d7bc4642668a"
         ],
         [
           "Design in the material you ship",
@@ -101,34 +67,159 @@
       ]
     },
     {
-      "id": "03",
-      "slug": "if-interfaces-increasingly-shape-how-people-understand-themselve",
+      "id": "02",
+      "slug": "if-synthetic-research-can-match-the-average-user-what-does-that-",
       "category": "UX",
       "tags": [
-        "UX",
-        "Culture"
+        "UX"
       ],
-      "aiLens": false,
-      "editorialTitle": "Designing **personality**",
-      "question": "If interfaces increasingly shape how people understand themselves, what responsibilities do designers have when products stop feeling like neutral tools?",
-      "answer": "Designers are already authoring tone, identity, and behavior whether they admit it or not. The harder task is to make that influence legible and accountable, instead of hiding personality work behind the old interface vocabulary.",
-      "why": "The piece argues that apps now shape self-perception, which expands UX responsibility beyond navigation and usability into identity formation.",
+      "aiLens": true,
+      "editorialTitle": "Will **research** survive synthetic averages?",
+      "question": "If synthetic research can match the average user, what does that change about how designers recruit, interpret, and defend human research when the edge cases matter most?",
+      "answer": "It should push research toward exceptions, failures, and bad days. When AI can approximate the center of the bell curve, human interviews become most valuable where behavior breaks, context warps, and the product fails under stress.",
+      "why": "The new threshold is not whether AI can summarize people, but whether design teams still know what only humans can reveal. That makes the research mandate narrower and sharper: use AI for the average, protect human research for the painful edge cases.",
       "counts": {
-        "total": 1,
+        "total": 2,
         "newsletters": 0,
-        "web": 1
+        "web": 2
       },
-      "firstSeen": "13:12 cet",
+      "firstSeen": "23:30 cet",
       "signals": [
         {
           "source": "UX Collective",
-          "title": "UX designers are not designing interfaces, they design personalities",
+          "title": "Let AI have the average user: Why User Research should focus on bad days",
           "kind": "Web",
-          "timing": "13:12",
-          "happened": "The article argues that UX designers are not simply designing interfaces, but personalities, because apps now shape how people understand themselves. It traces this shift from the early web's demand for an online presence to today's more intimate product relationships.",
-          "changes": "That is a serious expansion of the job, not a poetic flourish. Designers are no longer just arranging controls and content, they are helping define the **behavioral tone** of products, which raises the stakes for manipulation, trust, and long-term user self-image.",
+          "timing": "23:30",
+          "happened": "A UX Collective piece reports that synthetic research captures common responses well. The author argues that the remaining value of user research sits in the bad days, not the average case.",
+          "changes": "That changes research priorities from broad coverage to **failure-mode hunting**. If AI can reproduce the mean, then interviews should focus on friction, frustration, and context that models flatten away. The tradeoff is less statistical comfort and more reliance on interpretation, but the payoff is more actionable product insight.",
           "verdict": "Must read",
-          "url": "https://uxdesign.cc/ux-designers-are-not-designing-interfaces-they-design-personalities-d94d874bb43d"
+          "url": "https://uxdesign.cc/let-ai-have-the-average-user-why-user-research-should-focus-on-bad-days-e7bba55f855f"
+        },
+        {
+          "source": "UX Collective",
+          "title": "AI doesn’t care about your job title",
+          "kind": "Web",
+          "timing": "23:29",
+          "happened": "Another UX Collective article argues that AI exposure runs through tasks rather than job titles. It proposes measuring risk by the weekly work people actually do, not by the role name on the badge.",
+          "changes": "This reframes research and design roles as activity portfolios, not fixed titles. The consequence is that researchers may need to defend the value of specific human tasks instead of the prestige of the discipline itself. That is uncomfortable, but it is more honest about where AI is already compressing work.",
+          "verdict": "Read",
+          "url": "https://uxdesign.cc/ai-doesnt-care-about-your-job-title-c08dd4fdf8d8"
+        }
+      ],
+      "further": [
+        [
+          "Human attention is the new old bottleneck. We have to design for it even more.",
+          "UX Collective",
+          "https://uxdesign.cc/anthropic-october-2026-study-human-attention-is-the-new-old-bottleneck-d7bc4642668a"
+        ]
+      ]
+    },
+    {
+      "id": "03",
+      "slug": "when-agents-generate-far-more-output-than-humans-can-read-how-sh",
+      "category": "UX",
+      "tags": [
+        "UX"
+      ],
+      "aiLens": true,
+      "editorialTitle": "Can teams afford **attention debt**?",
+      "question": "When agents generate far more output than humans can read, how should product teams design review loops, alerts, and interfaces so attention becomes a managed resource instead of a silent tax?",
+      "answer": "They should design for filtration, not just generation. The new UX problem is deciding what gets read, what gets escalated, and what gets safely ignored before the human reviewer drowns in output.",
+      "why": "The strongest signals describe a world where AI multiplies work faster than people can inspect it. That makes attention management a product requirement, not a personal productivity issue.",
+      "counts": {
+        "total": 3,
+        "newsletters": 1,
+        "web": 2
+      },
+      "firstSeen": "23:39 cet",
+      "signals": [
+        {
+          "source": "UX Collective",
+          "title": "Human attention is the new old bottleneck. We have to design for it even more.",
+          "kind": "Web",
+          "timing": "23:39",
+          "happened": "An Anthropic-based analysis says agents are logging about six hours for every human hour. It warns that reading all the output would take more than half the workweek for some employees.",
+          "changes": "This is the clearest evidence that AI can create a **reading tax** as quickly as it creates throughput. Design teams now need judgment systems that rank, collapse, and summarize output before it reaches people. Otherwise the interface becomes a queue for attention debt rather than a tool for work.",
+          "verdict": "Must read",
+          "url": "https://uxdesign.cc/anthropic-october-2026-study-human-attention-is-the-new-old-bottleneck-d7bc4642668a"
+        },
+        {
+          "source": "UX Collective",
+          "title": "Design in the material you ship",
+          "kind": "Web",
+          "timing": "14:11",
+          "happened": "A UX Collective essay argues that designers should work in the material they ship, with code as the real medium. It says AI now does the cutting, which changes what designers need to understand.",
+          "changes": "The implication is that attention management should be built into the shipped system, not added as an afterthought in mockups. If AI handles execution, designers must focus on constraints, data shape, and what the interface can safely reveal. The tradeoff is less visual control in exchange for more honest product behavior.",
+          "verdict": "Read",
+          "url": "https://uxdesign.cc/design-in-the-material-you-ship-7adf198388ee"
+        },
+        {
+          "source": "UX Movement",
+          "title": "The Optimal UI Layout for Cards and Dialogs",
+          "kind": "Newsletter",
+          "timing": "17:21",
+          "happened": "UX Movement published guidance on card and dialog layout to improve scanning efficiency. It warns that weak structure makes titles, metadata, and actions compete for attention.",
+          "changes": "Even in non-AI interfaces, the lesson is the same: **hierarchy is a filter**. When screens are poorly structured, people waste attention just figuring out what matters, which becomes more expensive as AI systems add more surface area. Good layout is no longer cosmetic, it is a throughput safeguard.",
+          "verdict": "Read",
+          "url": "https://uxmovement.substack.com/archive"
+        }
+      ],
+      "further": [
+        [
+          "Taste is not a design methodology",
+          "HeyDesigner",
+          "https://us5.forward-to-friend.com/forward"
+        ]
+      ]
+    },
+    {
+      "id": "04",
+      "slug": "as-design-systems-zines-and-brand-refreshes-borrow-from-handmade",
+      "category": "Culture",
+      "tags": [
+        "Culture"
+      ],
+      "aiLens": false,
+      "editorialTitle": "Why **craft** still sells belief",
+      "question": "As design systems, zines, and brand refreshes borrow from handmade methods, what is actually being preserved: craft itself, or the trust that craft signals to clients and audiences?",
+      "answer": "Mostly trust. The current craft revival is less about nostalgia than about using visible authorship, texture, and process to prove judgment in a market flooded with generic polish.",
+      "why": "The culture signals show studios and designers leaning into self-publishing, bespoke type, and hand-made references to stand out. That suggests craft now functions as a credibility system, not just an aesthetic preference.",
+      "counts": {
+        "total": 3,
+        "newsletters": 0,
+        "web": 3
+      },
+      "firstSeen": "13:00 cet",
+      "signals": [
+        {
+          "source": "It’s Nice That",
+          "title": "Why self-publishing pays off: No Ideas studio on the journey behind building their own imprint",
+          "kind": "Web",
+          "timing": "13:00",
+          "happened": "It’s Nice That covered No Ideas studio building its own imprint and self-publishing books and zines. The studio says taking that risk helped it find its audience and win larger projects.",
+          "changes": "The signal is that self-publishing is no longer a side hobby, but a **business-development engine** for design studios. That changes the cultural role of publishing from distribution to proof of taste and ambition. The upside is stronger authorship; the downside is that more designers may feel pressure to become media brands.",
+          "verdict": "Read",
+          "url": "https://www.itsnicethat.com/articles/nicer-tuesdays-new-york-september-no-ideas-201026"
+        },
+        {
+          "source": "It’s Nice That",
+          "title": "Carolina Incerti’s A Book for Making Books is designed to be torn apart and remade",
+          "kind": "Web",
+          "timing": "10:00",
+          "happened": "A designer’s book project was made to be torn apart and remade into multiple templates. The format turns publication into an interactive toolkit rather than a finished object.",
+          "changes": "This pushes craft toward participation, where the artifact is valued for **use and remixability**, not permanence. It reflects a broader move in design culture toward works that teach through handling, not just display. The tension is that playfulness can deepen engagement, but it can also reduce the authority of the finished form.",
+          "verdict": "Track",
+          "url": "https://www.itsnicethat.com/articles/carolina-incerti-a-book-for-making-books-publication-project-201026"
+        },
+        {
+          "source": "It’s Nice That",
+          "title": "Fulham F.C gets a brand refresh built on hand-rendered lettering found on the walls of its stadium",
+          "kind": "Web",
+          "timing": "10:00",
+          "happened": "A football club rebrand drew on hand-rendered lettering found on the walls of the stadium. The resulting type system translates local heritage into something scalable and functional.",
+          "changes": "This shows how brands are mining local material for authenticity while still demanding system-level consistency. The design challenge is to preserve **place-based texture** without freezing it into sentimental decoration. That balance matters because audiences can now tell when heritage is being used as surface styling rather than structure.",
+          "verdict": "Track",
+          "url": "https://www.itsnicethat.com/articles/music-f37-foundry-fulham-football-club-refresh-graphic-design-project-191026"
         }
       ],
       "further": [
@@ -138,63 +229,9 @@
           "https://www.itsnicethat.com/articles/adobe-99u-creative-industry-sponsored-content-191026"
         ],
         [
-          "“You’ve already proof-tested the answer for years”",
-          "It’s Nice That",
-          "https://www.itsnicethat.com/articles/creative-career-condundrums-if-you-could-jobs-advice-191026"
-        ]
-      ]
-    },
-    {
-      "id": "04",
-      "slug": "as-ai-lowers-the-cost-of-making-visual-systems-does-craft-become",
-      "category": "UI",
-      "tags": [
-        "UI",
-        "Culture"
-      ],
-      "aiLens": false,
-      "editorialTitle": "**Craft** under automation",
-      "question": "As AI lowers the cost of making visual systems, does craft become a differentiator or just a nostalgia premium?",
-      "answer": "Craft only matters if it changes the product people ship and use. The strongest work will pair automation with taste, keeping visual judgment visible instead of pretending the machine can replace it.",
-      "why": "The week's design and branding coverage suggests a counter-movement toward bespoke type, hand-rendered identity, and craft as a meaningful design signal in an automated landscape.",
-      "counts": {
-        "total": 3,
-        "newsletters": 0,
-        "web": 3
-      },
-      "firstSeen": "10:00 cet",
-      "signals": [
-        {
-          "source": "It’s Nice That",
-          "title": "Fulham F.C gets a brand refresh built on hand-rendered lettering found on the walls of its stadium",
-          "kind": "Web",
-          "timing": "10:00",
-          "happened": "Fulham F.C. launched a brand refresh built on hand-rendered lettering found on the walls of its stadium. The identity was translated into a functioning type system, showing that heritage can be operationalized rather than merely quoted.",
-          "changes": "This is not craft as decoration, but craft as structure. The tradeoff is clear: **manual authorship** creates stronger local meaning, yet it takes more effort to turn that specificity into a system that can actually scale across touchpoints.",
-          "verdict": "Read",
-          "url": "https://www.itsnicethat.com/articles/music-f37-foundry-fulham-football-club-refresh-graphic-design-project-191026"
-        },
-        {
-          "source": "It’s Nice That",
-          "title": "When anyone can make anything, personal taste and craftsmanship matters more than ever",
-          "kind": "Web",
-          "timing": "10:00",
-          "happened": "It’s Nice That reported a 99U discussion arguing that when anyone can make anything, personal taste and craftsmanship matter more than ever. The framing treats AI adoption as a question of intentionality, not just speed.",
-          "changes": "The signal is a correction to the flattening effects of generative tools. If everyone can generate acceptable assets, then **taste and restraint** become the real differentiators, and design teams will be judged less on volume than on whether their choices still feel human.",
-          "verdict": "Track",
-          "url": "https://www.itsnicethat.com/articles/adobe-99u-creative-industry-sponsored-content-191026"
-        }
-      ],
-      "further": [
-        [
-          "SourceType’s Dictionary of the Illegible explores what happens when typography stops making sense",
-          "It’s Nice That",
-          "https://www.itsnicethat.com/features/sourcetype-laurenz-brunner-dictionary-of-the-illegible-graphic-design-publication-spotlight-191026"
-        ],
-        [
-          "Nik Arthur’s ultimate creative partner is the natural world in his organic animations for A24 and J. Cole",
-          "It’s Nice That",
-          "https://www.itsnicethat.com/articles/nik-arthur-animation-discover-191026"
+          "The Weekly Edit",
+          "It's Nice That",
+          "https://mcusercontent.com/9992e052462653409c504c67d/images/5f22728d-de6e-486c-a26d-45f7667ce34a.png"
         ]
       ]
     }
