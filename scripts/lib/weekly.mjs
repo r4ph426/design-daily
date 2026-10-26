@@ -29,7 +29,7 @@ export function passages(text) {
 }
 const str={type:'string'}, arr={type:'array',items:str};
 const signalProperties={sourceId:str,passageId:str,happened:str,changes:str,verdict:{type:'string',enum:['Must read','Read','Track']},role:{type:'string',enum:['Supports','Challenges','Context']}};
-const questionProperties={existingId:str,editorialTitle:str,question:str,answer:str,why:str,category:{type:'string',enum:['UI','UX','Process','Culture']},tags:arr,aiLens:{type:'boolean'},change:{type:'string',enum:['New','Unchanged','Evidence added','Answer revised','Correction']},changeReason:str,uncertainty:str,signals:{type:'array',minItems:1,maxItems:12,items:{type:'object',additionalProperties:false,required:Object.keys(signalProperties),properties:signalProperties}}};
+const questionProperties={existingId:str,editorialTitle:str,question:str,answer:str,why:str,category:{type:'string',enum:['UI','UX','Process','Culture']},tags:{type:'array',items:{type:'string',enum:['UI','UX','Process','Culture']}},aiLens:{type:'boolean'},change:{type:'string',enum:['New','Unchanged','Evidence added','Answer revised','Correction']},changeReason:str,uncertainty:str,signals:{type:'array',minItems:1,maxItems:12,items:{type:'object',additionalProperties:false,required:Object.keys(signalProperties),properties:signalProperties}}};
 export const weeklySchema={type:'object',additionalProperties:false,required:['headline','summary','questions'],properties:{headline:str,summary:str,questions:{type:'array',maxItems:4,items:{type:'object',additionalProperties:false,required:Object.keys(questionProperties),properties:questionProperties}}}};
 
 export function applyWeeklyReview(previous, review, sources, now=new Date()) {

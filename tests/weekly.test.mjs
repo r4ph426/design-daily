@@ -3,7 +3,7 @@ import {searchCandidates} from '../scripts/lib/weekly-research.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
-import {applyWeeklyReview,articleText,mergeInventory,passages,weekWindow} from '../scripts/lib/weekly.mjs';
+import {applyWeeklyReview,articleText,mergeInventory,passages,weekWindow,weeklySchema} from '../scripts/lib/weekly.mjs';
 import {weeklyEmail} from '../scripts/lib/weekly-email.mjs';
 import {deliverToolboxDaily} from '../scripts/lib/toolbox-publication.mjs';
 const monday=new Date('2026-10-26T10:00:00Z'),tuesday=new Date('2026-10-27T10:00:00Z');
@@ -87,4 +87,8 @@ test('mail preflight checks the configured active sender without sending or expo
  const result=await checkWeeklyMail(env,async(url,init)=>{count++;assert.equal(url,'https://api.brevo.com/v3/senders');assert.equal(init.method,undefined);return {ok:true,json:async()=>({senders:[{email:'sender@example.com',active:true}]})};});
  assert.equal(result.ready,true);assert.equal(result.recipientCount,1);assert.equal(count,1);assert.ok(!JSON.stringify(result).includes('@'));
  await assert.rejects(()=>checkWeeklyMail({...env,TOOLBOX_EMAIL_TO:''}),/configuration/);
+});
+
+test('generation schema constrains category tags to the same four-value vocabulary',()=>{
+ assert.deepEqual(weeklySchema.properties.questions.items.properties.tags.items.enum,['UI','UX','Process','Culture']);
 });
