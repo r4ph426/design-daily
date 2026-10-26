@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-19T08:03:02.569Z",
+  "generatedAt": "2026-10-26T09:18:46.534Z",
   "editorialStatus": "Candidate queue only. Review in Codex before adding to the published toolbox.",
   "practices": [
     "Taste",
@@ -111,7 +111,7 @@
       "status": "Available",
       "finalUrl": "https://www.raylight.app/",
       "title": "Raylight: Build beautiful product videos in minutes",
-      "description": "Raylight turns your screenshots, shapes, and footage into cinematic product videos in minutes. No motion design skills required. Start free."
+      "description": "Build launch-ready product demos in minutes with video, motion graphics, and sound, on a 3D canvas. Every change your AI makes stays editable by you. Start free."
     },
     {
       "url": "https://geometric-art.com/en/pro",
@@ -281,33 +281,73 @@
       "editorialStatus": "Needs review"
     },
     {
-      "id": "github:sorawit-w/agent-skills",
-      "name": "agent-skills",
-      "fullName": "sorawit-w/agent-skills",
-      "description": "Agent-agnostic skills for coding agents, verified on Claude Code, Codex, and Copilot. Includes screenwright, which builds a UI from a design spec, then renders it, audits accessibility, and fixes what does not match.",
-      "url": "https://github.com/sorawit-w/agent-skills",
+      "id": "github:schudarin/chudarin-design-skills",
+      "name": "chudarin-design-skills",
+      "fullName": "schudarin/chudarin-design-skills",
+      "description": "A design agent for Figma. A plugin for Claude Code: seven skills so the agent works in your file from your components and variables, makes presentations, and writes text that doesn't read as generated.",
+      "url": "https://github.com/schudarin/chudarin-design-skills",
       "source": "GitHub search",
       "discoveredThrough": "Design MCPs",
       "topics": [
-        "accessibility",
         "agent-skills",
-        "ai-agents",
         "claude-code",
+        "claude-skills",
         "codex",
-        "design-to-code",
-        "developer-tools",
-        "mcp"
+        "design-systems",
+        "design-tokens",
+        "figma",
+        "figma-api",
+        "figma-plugin-api",
+        "mcp",
+        "presentations"
       ],
-      "stars": 2,
-      "updatedAt": "2026-10-19T08:00:16Z",
+      "stars": 4,
+      "updatedAt": "2026-10-26T09:17:03Z",
       "suggestedType": "MCP",
       "suggestedPractices": [
-        "Accessibility",
-        "Review",
-        "Pattern research",
-        "UI sketches"
+        "UI sketches",
+        "Drafting"
       ],
-      "relevanceScore": 39,
+      "relevanceScore": 48,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:hesreallyhim/awesome-claude-code",
+      "name": "awesome-claude-code",
+      "fullName": "hesreallyhim/awesome-claude-code",
+      "description": "A hand-picked collection of the finest of resources for the most awesome of agents, Claude Code, the undisputed champion of coding companions, from the unstoppable team at Anthropic PBC (no affiliation). A delectable showcase of top tier skills, ambidextrous agents, scintillating status lines, top notch developer tooling, and also we have plugins",
+      "url": "https://github.com/hesreallyhim/awesome-claude-code",
+      "source": "GitHub search",
+      "discoveredThrough": "Design MCPs",
+      "topics": [
+        "agent-skills",
+        "agentic-code",
+        "agentic-coding",
+        "ai-workflow-optimization",
+        "ai-workflows",
+        "anthropic",
+        "anthropic-claude",
+        "awesome",
+        "awesome-claude-code",
+        "awesome-list",
+        "awesome-lists",
+        "awesome-resources",
+        "claude",
+        "claude-code",
+        "coding-agent",
+        "coding-agents",
+        "coding-assistant",
+        "coding-assistants",
+        "llm"
+      ],
+      "stars": 56565,
+      "updatedAt": "2026-10-26T09:18:18Z",
+      "suggestedType": "Skill",
+      "suggestedPractices": [
+        "Flows",
+        "Drafting"
+      ],
+      "relevanceScore": 33,
       "editorialStatus": "Needs review"
     },
     {
@@ -414,41 +454,39 @@
       "editorialStatus": "Needs review"
     },
     {
-      "id": "github:richawo/Design-components-for-AI-agents",
-      "name": "Design-components-for-AI-agents",
-      "fullName": "richawo/Design-components-for-AI-agents",
-      "description": "Animated React, Tailwind CSS and React Native components for AI coding agents. Source code, design prompts and JSON briefs, with a shadcn registry, CLI and MCP for Claude Code, Cursor and Codex.",
-      "url": "https://github.com/richawo/Design-components-for-AI-agents",
+      "id": "github:Sibhimanyu/rasanai",
+      "name": "rasanai",
+      "fullName": "Sibhimanyu/rasanai",
+      "description": "AI video director for Claude Code: pick one of three complete films and Claude designs, animates and renders it. Launch films, explainers, reels from your footage, motion graphics. Built on HyperFrames. Formerly Rasa Director.",
+      "url": "https://github.com/Sibhimanyu/rasanai",
       "source": "GitHub search",
-      "discoveredThrough": "Interface review",
+      "discoveredThrough": "Designer skills",
       "topics": [
-        "ai-agents",
+        "agent-skills",
+        "ai-video",
+        "ai-video-generator",
         "animation",
+        "anthropic",
+        "claude",
         "claude-code",
-        "codex",
-        "component-library",
-        "cursor",
-        "design",
-        "design-prompts",
-        "design-system",
-        "json-prompts",
-        "mcp-server",
-        "model-context-protocol",
-        "react",
-        "react-components",
-        "react-native",
-        "shadcn-ui",
-        "tailwindcss",
-        "typescript",
-        "ui-components",
-        "webgl"
+        "claude-code-skill",
+        "claude-skill",
+        "creative-direction",
+        "explainer-video",
+        "gsap",
+        "hyperframes",
+        "kinetic-typography",
+        "launch-video",
+        "motion-design",
+        "motion-graphics",
+        "product-video",
+        "video-editing",
+        "video-generation"
       ],
-      "stars": 1,
-      "updatedAt": "2026-10-12T09:40:14Z",
-      "suggestedType": "MCP",
+      "stars": 0,
+      "updatedAt": "2026-10-26T09:18:33Z",
+      "suggestedType": "Skill",
       "suggestedPractices": [
-        "Pattern research",
-        "UI sketches",
         "Drafting",
         "Creative exploration"
       ],
@@ -601,6 +639,75 @@
       "editorialStatus": "Needs review"
     },
     {
+      "id": "github:findscripter/everything-skills",
+      "name": "everything-skills",
+      "fullName": "findscripter/everything-skills",
+      "description": "A curated, cross-referenced encyclopedia of 1100+ open-source agent skills (native languages kept) and 1600+ indexed skill repos. Install as a Claude Code marketplace plugin.",
+      "url": "https://github.com/findscripter/everything-skills",
+      "source": "GitHub search",
+      "discoveredThrough": "Inspiration MCPs",
+      "topics": [
+        "agent-skills",
+        "ai-agents",
+        "chinese",
+        "claude-code",
+        "llm",
+        "mcp",
+        "prompt-engineering",
+        "skills"
+      ],
+      "stars": 5,
+      "updatedAt": "2026-10-26T05:34:53Z",
+      "suggestedType": "MCP",
+      "suggestedPractices": [
+        "Taste",
+        "Drafting"
+      ],
+      "relevanceScore": 27,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:TheOnlyFusionCube/claude-motion",
+      "name": "claude-motion",
+      "fullName": "TheOnlyFusionCube/claude-motion",
+      "description": "Launch-quality motion films in code for AI agents: deterministic DOM + Three.js runtime, original score, and frame-exact MP4 export for Claude Code & Codex.",
+      "url": "https://github.com/TheOnlyFusionCube/claude-motion",
+      "source": "GitHub search",
+      "discoveredThrough": "Taste and art direction",
+      "topics": [
+        "agent-skill",
+        "ai-video",
+        "animation",
+        "audio-synthesis",
+        "canvas",
+        "claude-code",
+        "code-to-video",
+        "creative-coding",
+        "deterministic-rendering",
+        "developer-tools",
+        "explainer-video",
+        "motion-design",
+        "motion-graphics",
+        "mp4-export",
+        "playwright",
+        "product-demo",
+        "programmatic-video",
+        "threejs",
+        "video-generation",
+        "webgl"
+      ],
+      "stars": 3,
+      "updatedAt": "2026-10-26T09:17:13Z",
+      "suggestedType": "Skill",
+      "suggestedPractices": [
+        "Review",
+        "Drafting",
+        "Creative exploration"
+      ],
+      "relevanceScore": 27,
+      "editorialStatus": "Needs review"
+    },
+    {
       "id": "github:martin-francois/symphony-trello",
       "name": "symphony-trello",
       "fullName": "martin-francois/symphony-trello",
@@ -747,6 +854,42 @@
         "Flows",
         "Review",
         "Taste",
+        "Drafting"
+      ],
+      "relevanceScore": 24,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:ezra-y/awesome-claude-ui-armory",
+      "name": "awesome-claude-ui-armory",
+      "fullName": "ezra-y/awesome-claude-ui-armory",
+      "description": "Curated index of frontend/UI skills for Claude Code & AI agents — a UI armory (links only).",
+      "url": "https://github.com/ezra-y/awesome-claude-ui-armory",
+      "source": "GitHub search",
+      "discoveredThrough": "Taste and art direction",
+      "topics": [
+        "agent-skill",
+        "awesome-list",
+        "claude-code",
+        "claude-code-skill",
+        "claude-skill",
+        "curated",
+        "design",
+        "design-system",
+        "frontend",
+        "react",
+        "shadcn",
+        "swiftui",
+        "tailwind",
+        "ui",
+        "ux"
+      ],
+      "stars": 2,
+      "updatedAt": "2026-10-26T09:05:25Z",
+      "suggestedType": "Skill",
+      "suggestedPractices": [
+        "Taste",
+        "UI sketches",
         "Drafting"
       ],
       "relevanceScore": 24,
@@ -1128,6 +1271,25 @@
       "editorialStatus": "Needs review"
     },
     {
+      "id": "github:jthorare/agentic-workflow",
+      "name": "agentic-workflow",
+      "fullName": "jthorare/agentic-workflow",
+      "description": "Portable Claude Code workflow toolkit: skills, config, repo bootstrapper, and MCP bridge for multi-agent communication",
+      "url": "https://github.com/jthorare/agentic-workflow",
+      "source": "GitHub search",
+      "discoveredThrough": "Design MCPs",
+      "topics": [],
+      "stars": 1,
+      "updatedAt": "2026-10-26T09:17:11Z",
+      "suggestedType": "MCP",
+      "suggestedPractices": [
+        "Flows",
+        "Drafting"
+      ],
+      "relevanceScore": 18,
+      "editorialStatus": "Needs review"
+    },
+    {
       "id": "github:igs-paddyyang-tw/ark-agent-skills",
       "name": "ark-agent-skills",
       "fullName": "igs-paddyyang-tw/ark-agent-skills",
@@ -1331,132 +1493,6 @@
         "Creative exploration"
       ],
       "relevanceScore": 15,
-      "editorialStatus": "Needs review"
-    },
-    {
-      "id": "github:SUDARSHANCHAUDHARI/OrbiAgents",
-      "name": "OrbiAgents",
-      "fullName": "SUDARSHANCHAUDHARI/OrbiAgents",
-      "description": "OrbiAgents — Multi-agent AI orchestration platform",
-      "url": "https://github.com/SUDARSHANCHAUDHARI/OrbiAgents",
-      "source": "GitHub search",
-      "discoveredThrough": "Interface review",
-      "topics": [
-        "ai-agents",
-        "automation",
-        "llm",
-        "multi-agent",
-        "typescript"
-      ],
-      "stars": 1,
-      "updatedAt": "2026-10-19T08:01:05Z",
-      "suggestedType": "Agent",
-      "suggestedPractices": [
-        "Creative exploration"
-      ],
-      "relevanceScore": 15,
-      "editorialStatus": "Needs review"
-    },
-    {
-      "id": "github:Furkiozknn/nvidia-nim-mcp",
-      "name": "nvidia-nim-mcp",
-      "fullName": "Furkiozknn/nvidia-nim-mcp",
-      "description": "MCP server for NVIDIA NIM's free tier (image, vision, translation, chat, safety, embeddings) falling back to Groq, Mistral, Gemini or Cerebras when a model is rate-limited or retired. · NVIDIA NIM ücretsiz katmanı için MCP sunucusu; model sınıra takılınca Groq, Mistral, Gemini ya da Cerebras'a geçer.",
-      "url": "https://github.com/Furkiozknn/nvidia-nim-mcp",
-      "source": "GitHub search",
-      "discoveredThrough": "Creative tooling",
-      "topics": [
-        "fallback",
-        "free-tier",
-        "gemini",
-        "groq",
-        "image-generation",
-        "mcp",
-        "mcp-server",
-        "model-context-protocol",
-        "nvidia-nim",
-        "python"
-      ],
-      "stars": 1,
-      "updatedAt": "2026-10-19T08:02:18Z",
-      "suggestedType": "MCP",
-      "suggestedPractices": [
-        "Creative exploration"
-      ],
-      "relevanceScore": 15,
-      "editorialStatus": "Needs review"
-    },
-    {
-      "id": "github:LiaScript/skills",
-      "name": "skills",
-      "fullName": "LiaScript/skills",
-      "description": "Collection of useful skills when working with LiaScript",
-      "url": "https://github.com/LiaScript/skills",
-      "source": "GitHub search",
-      "discoveredThrough": "Taste and art direction",
-      "topics": [
-        "ai",
-        "ai-agents",
-        "liascript",
-        "skill",
-        "skills"
-      ],
-      "stars": 0,
-      "updatedAt": "2026-10-07T21:22:34Z",
-      "suggestedType": "Skill",
-      "suggestedPractices": [
-        "Creative exploration"
-      ],
-      "relevanceScore": 15,
-      "editorialStatus": "Needs review"
-    },
-    {
-      "id": "github:daymade/claude-code-skills",
-      "name": "claude-code-skills",
-      "fullName": "daymade/claude-code-skills",
-      "description": "Professional Claude Code skills marketplace featuring production-ready skills for enhanced development workflows.",
-      "url": "https://github.com/daymade/claude-code-skills",
-      "source": "GitHub search",
-      "discoveredThrough": "Taste and art direction",
-      "topics": [],
-      "stars": 1442,
-      "updatedAt": "2026-10-05T09:18:18Z",
-      "suggestedType": "Skill",
-      "suggestedPractices": [
-        "Flows",
-        "Drafting"
-      ],
-      "relevanceScore": 12,
-      "editorialStatus": "Needs review"
-    },
-    {
-      "id": "github:pandazki/pneuma-skills",
-      "name": "pneuma-skills",
-      "fullName": "pandazki/pneuma-skills",
-      "description": "Co-creation infrastructure for humans and code agents — visual environment, skills, continuous learning, and distribution.",
-      "url": "https://github.com/pandazki/pneuma-skills",
-      "source": "GitHub search",
-      "discoveredThrough": "Taste and art direction",
-      "topics": [
-        "ai-agents",
-        "ai-coding-assistant",
-        "ai-tools",
-        "bun",
-        "claude",
-        "claude-code",
-        "co-creation",
-        "developer-tools",
-        "llm",
-        "presentations"
-      ],
-      "stars": 161,
-      "updatedAt": "2026-10-12T09:35:09Z",
-      "suggestedType": "Skill",
-      "suggestedPractices": [
-        "Taste",
-        "Drafting"
-      ],
-      "relevanceScore": 12,
       "editorialStatus": "Needs review"
     }
   ]

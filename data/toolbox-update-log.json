@@ -1,28 +1,74 @@
 {
-  "date": "2026-10-19",
+  "date": "2026-10-26",
   "changes": [
     {
       "kind": "changed",
-      "id": "auto-4c4e9e4faa27",
-      "title": "Scenario Agent Skills",
-      "url": "https://github.com/scenario-labs/skills",
+      "id": "13",
+      "title": "Canva MCP",
+      "url": "https://www.canva.dev/docs/apps/mcp/",
       "fields": [
         {
-          "field": "recommendation",
-          "before": "Source-reviewed; not yet team-tested. Use it for one small branded asset task, such as a single image or 3D concept, before expanding to a wider production workflow.",
-          "after": "Use it for one small branded asset task, such as a single image or 3D concept, before expanding to a wider production workflow."
+          "field": "description",
+          "before": "Canva’s official remote MCP supports design generation and editing, design-library search, brand and asset management, export, and collaborative comments.",
+          "after": "Canva’s official remote MCP supports design creation and editing, asset and brand management, library search, export, and commenting."
         }
       ],
-      "evidence": "skill, without the expert tools npx skills add scenario-labs/skills --skill scenario scenario-inspiration scenario-image scenario-multi-reference scenario-product-shots scenario-brand-kit scenario-image-editing scenario-text-overlay scenario-storyboards scenario-game-assets scenario-sprite-animation scenario-side-view-game-kit"
+      "evidence": "it&#x27;s built on the Canva MCP server. The Canva MCP server enables AI assistants to seamlessly interact with Canva&#x27;s design capabilities. By exposing Canva&#x27;s capabilities (including design creation and editing, asset and brand management, library search, export, and commenting) as MCP-compatible tools, you can give your users access"
     },
     {
       "kind": "new",
+      "id": "auto-d8ff876dfb1e",
+      "title": "OpenDesign",
+      "url": "https://github.com/nexu-io/open-design",
+      "entry": {
+        "id": "auto-d8ff876dfb1e",
+        "title": "OpenDesign",
+        "type": "Agent",
+        "categories": [
+          "UI",
+          "UX",
+          "Process"
+        ],
+        "practices": [
+          "Drafting",
+          "UI sketches",
+          "Review",
+          "Creative exploration"
+        ],
+        "description": "A collaborative AI design workspace where teams start from a brief, create prototypes with an agent, share feedback, and refine in the same project.",
+        "recommendation": "Source-reviewed; not yet team-tested. Pilot it on one team prototype loop and confirm the workflow fits your review and handoff process before adopting it broadly.",
+        "access": "Open source; plan details unspecified",
+        "setup": "Not stated; local-first workspace and cloud options are mentioned",
+        "verdict": "Watching",
+        "confidence": "Medium",
+        "reviewed": "26 Oct 2026",
+        "source": "github.com",
+        "url": "https://github.com/nexu-io/open-design"
+      },
+      "evidence": "Code, DSH, OpenCode, and more. Website · Download · OpenDesign Cloud · Discord · Follow @OpenDesignHQ English · Español · Português · Deutsch · Français · 简体中文 · 繁體中文 · 한국어 · 日本語 · العربية · Русский · Українська · Türkçe · ภาษาไทย What is OpenDesign OpenDesign is the 1st collaborative AI design agent workspace . Start with a brief, then use your"
+    },
+    {
+      "kind": "changed",
       "id": "auto-b301c14c7521",
       "title": "agent-skills",
       "url": "https://github.com/sorawit-w/agent-skills",
+      "fields": [
+        {
+          "field": "recommendation",
+          "before": "Source-reviewed; not yet team-tested. Try it on one design-spec-to-UI loop, then compare the rendered result with the original spec and accessibility requirements.",
+          "after": "Try it on one design-spec-to-UI loop, then compare the rendered result with the original spec and accessibility requirements."
+        }
+      ],
+      "evidence": ", which builds a UI from a design spec, then renders it, audits accessibility, and fixes what does not match. TL;DR What this is — a single Claude Code plugin that installs a curated, growing shelf of specialized skills in one go. Who it's for — anyone on Claude Code or Cowork who wants auto-triggering expertise for a specific job. Start here to"
+    },
+    {
+      "kind": "new",
+      "id": "auto-692d56bda4f0",
+      "title": "chudarin-design-skills",
+      "url": "https://github.com/schudarin/chudarin-design-skills",
       "entry": {
-        "id": "auto-b301c14c7521",
-        "title": "agent-skills",
+        "id": "auto-692d56bda4f0",
+        "title": "chudarin-design-skills",
         "type": "Skill",
         "categories": [
           "UI",
@@ -30,89 +76,35 @@
           "Process"
         ],
         "practices": [
-          "Review",
-          "Accessibility",
-          "Flows"
-        ],
-        "description": "Includes screenwright, which builds a UI from a design spec, then renders it, audits accessibility, and fixes what does not match.",
-        "recommendation": "Source-reviewed; not yet team-tested. Try it on one design-spec-to-UI loop, then compare the rendered result with the original spec and accessibility requirements.",
-        "access": "Open source",
-        "setup": "Install via the plugin path or skills CLI; details depend on your host",
-        "verdict": "Watching",
-        "confidence": "Medium",
-        "reviewed": "19 Oct 2026",
-        "source": "github.com",
-        "url": "https://github.com/sorawit-w/agent-skills"
-      },
-      "evidence": ", which builds a UI from a design spec, then renders it, audits accessibility, and fixes what does not match. TL;DR What this is — a single Claude Code plugin that installs a curated, growing shelf of specialized skills in one go. Who it's for — anyone on Claude Code or Cowork who wants auto-triggering expertise for a specific job. Start here to"
-    },
-    {
-      "kind": "new",
-      "id": "auto-33b8e3ab06b7",
-      "title": "Design-components-for-AI-agents",
-      "url": "https://github.com/richawo/Design-components-for-AI-agents",
-      "entry": {
-        "id": "auto-33b8e3ab06b7",
-        "title": "Design-components-for-AI-agents",
-        "type": "Tool",
-        "categories": [
-          "UI",
-          "Process"
-        ],
-        "practices": [
           "Drafting",
           "UI sketches",
-          "Creative exploration"
+          "Review"
         ],
-        "description": "Provides animated React, Tailwind CSS, and React Native components for AI agents, with source code, design briefs, and JSON prompts for the same interface.",
-        "recommendation": "Source-reviewed; not yet team-tested. Use one component as a starting point for a single screen or interaction, then verify it fits your stack and motion rules.",
-        "access": "Open source",
-        "setup": "Project install or registry setup; host details vary",
+        "description": "A Figma-focused design agent skill set that works from components and variables, plans flows, builds screens, fixes bindings, and makes presentations.",
+        "recommendation": "Source-reviewed; not yet team-tested. Use it on one Figma file with existing components and variables, then check whether binding fixes and screen edits stay targeted.",
+        "access": "Figma and Claude Code",
+        "setup": "Not stated; plugin and Figma file access are implied",
         "verdict": "Watching",
         "confidence": "Medium",
-        "reviewed": "19 Oct 2026",
+        "reviewed": "26 Oct 2026",
         "source": "github.com",
-        "url": "https://github.com/richawo/Design-components-for-AI-agents"
+        "url": "https://github.com/schudarin/chudarin-design-skills"
       },
-      "evidence": "build. Install the React or React Native source, paste the design brief, or pass the JSON prompt to your agent. Each describes the same interface. Motion with a purpose. Chart ranges morph, replies stream, navigation moves on springs, and loading resolves into a result. Preview the behaviour before using it. Your code, your stack. Free components"
+      "evidence": "works in your file, from your components and variables. Plans flows, builds screens, finds design system debt, fixes bindings, makes presentations, and writes text that doesn't read as generated. Agents can write into Figma now. Left to themselves they design badly and break the file quietly: a variable that never bound, a component set that"
     },
     {
       "kind": "changed",
-      "id": "07",
-      "title": "Savee MCP",
-      "url": "https://savee.com/mcp/",
+      "id": "01",
+      "title": "Figma MCP",
+      "url": "https://developers.figma.com/docs/figma-mcp-server/",
       "fields": [
         {
           "field": "description",
-          "before": "Searches Savee’s curated reference library and can retrieve personal saves, boards, and feed items inside supported AI clients.",
-          "after": "Searches Savee’s curated reference library and can retrieve personal saves, boards, feed items, and image content in supported clients."
-        },
-        {
-          "field": "recommendation",
-          "before": "Promising for bringing a team’s visual references closer to ideation. Keep generated output distinct from the source material and retain links to references.",
-          "after": "Use it to ground one art-direction pass in existing saves, then keep the output distinct from the reference material."
+          "before": "Figma’s official MCP reads design context and can create or update native frames, components, variables, and auto layout through supported clients and Figma skills.",
+          "after": "Figma’s official MCP reads design context and can create or update native frames, components, variables, auto layout, and specs through supported clients and skills."
         }
       ],
-      "evidence": "https://mcp.savee.com/mcp Copy 4 Let your client discover the sign-in Your client finds the OAuth flow on its own, no manual configuration needed. Older clients on the HTTP+SSE transport can connect through mcp-remote . Protocol details in the docs . 5 Authorize in your browser Your browser opens savee.com. The consent screen lists exactly what"
-    },
-    {
-      "kind": "changed",
-      "id": "06",
-      "title": "Mobbin MCP",
-      "url": "https://mobbin.com/mcp",
-      "fields": [
-        {
-          "field": "description",
-          "before": "Connects AI workflows to Mobbin’s library of real product screens and flows for faster pattern research and comparison.",
-          "after": "Connects AI workflows to Mobbin’s library of real product screens and flows for pattern research and comparison."
-        },
-        {
-          "field": "recommendation",
-          "before": "Helpful for grounding early exploration in shipped products. Use references to understand patterns, not to converge on copied solutions.",
-          "after": "Use it to compare one key flow against shipped products, then adapt the pattern instead of copying it directly."
-        }
-      ],
-      "evidence": "from shipped products. Used Mobbin MCP integration Got 43 paywalls. Pulling the strongest for synthesis. Revolut Bundled value framing Third-party perks reframe the price as services received. Personalization signal \"Best for you\" implies algorithmic match, not arbitrary push. Price in the CTA Removes the last hesitation at click. Physical product"
+      "evidence": "(paid plans) . note The MCP server and Figma Agent can access fonts uploaded to your account. Learn how to add a font to Figma. Set up the MCP server ​ You can connect to the Figma MCP server in two ways: Remote MCP server (recommended) : Connects directly to Figma’s hosted endpoint at https://mcp.figma.com/mcp , without the Figma desktop app. The"
     }
   ],
   "warnings": [

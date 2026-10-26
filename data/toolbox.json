@@ -1,22 +1,22 @@
 {
-  "weekLabel": "Last 7 days · 13 Oct 2026 – 19 Oct 2026",
+  "weekLabel": "Last 7 days · 20 Oct 2026 – 26 Oct 2026",
   "weeklySignals": [
     {
-      "title": "agent-skills",
+      "title": "OpenDesign",
       "verdict": "Watching",
-      "summary": "Source-reviewed; not yet team-tested. Try it on one design-spec-to-UI loop, then compare the rendered result with the original spec and accessibility requirements.",
+      "summary": "Source-reviewed; not yet team-tested. Pilot it on one team prototype loop and confirm the workflow fits your review and handoff process before adopting it broadly.",
       "source": "github.com",
-      "url": "https://github.com/sorawit-w/agent-skills",
-      "foundOn": "2026-10-19",
+      "url": "https://github.com/nexu-io/open-design",
+      "foundOn": "2026-10-26",
       "id": "01"
     },
     {
-      "title": "Design-components-for-AI-agents",
+      "title": "chudarin-design-skills",
       "verdict": "Watching",
-      "summary": "Source-reviewed; not yet team-tested. Use one component as a starting point for a single screen or interaction, then verify it fits your stack and motion rules.",
+      "summary": "Source-reviewed; not yet team-tested. Use it on one Figma file with existing components and variables, then check whether binding fixes and screen edits stay targeted.",
       "source": "github.com",
-      "url": "https://github.com/richawo/Design-components-for-AI-agents",
-      "foundOn": "2026-10-19",
+      "url": "https://github.com/schudarin/chudarin-design-skills",
+      "foundOn": "2026-10-26",
       "id": "02"
     }
   ],
@@ -34,10 +34,10 @@
         "UI sketches",
         "Review"
       ],
-      "description": "Figma’s official MCP reads design context and can create or update native frames, components, variables, and auto layout through supported clients and Figma skills.",
+      "description": "Figma’s official MCP reads design context and can create or update native frames, components, variables, auto layout, and specs through supported clients and skills.",
       "verdict": "Useful now",
       "confidence": "High",
-      "reviewed": "6 Oct 2026",
+      "reviewed": "26 Oct 2026",
       "source": "developers.figma.com",
       "url": "https://developers.figma.com/docs/figma-mcp-server/",
       "access": "Figma account",
@@ -313,10 +313,10 @@
         "Creative exploration",
         "Review"
       ],
-      "description": "Canva’s official remote MCP supports design generation and editing, design-library search, brand and asset management, export, and collaborative comments.",
+      "description": "Canva’s official remote MCP supports design creation and editing, asset and brand management, library search, export, and commenting.",
       "verdict": "Worth trying",
       "confidence": "High",
-      "reviewed": "12 Oct 2026",
+      "reviewed": "26 Oct 2026",
       "source": "canva.dev/docs/apps/mcp",
       "url": "https://www.canva.dev/docs/apps/mcp/",
       "access": "Canva account",
@@ -597,12 +597,12 @@
         "Flows"
       ],
       "description": "Includes screenwright, which builds a UI from a design spec, then renders it, audits accessibility, and fixes what does not match.",
-      "recommendation": "Source-reviewed; not yet team-tested. Try it on one design-spec-to-UI loop, then compare the rendered result with the original spec and accessibility requirements.",
+      "recommendation": "Try it on one design-spec-to-UI loop, then compare the rendered result with the original spec and accessibility requirements.",
       "access": "Open source",
       "setup": "Install via the plugin path or skills CLI; details depend on your host",
       "verdict": "Watching",
       "confidence": "Medium",
-      "reviewed": "19 Oct 2026",
+      "reviewed": "26 Oct 2026",
       "source": "github.com",
       "url": "https://github.com/sorawit-w/agent-skills"
     },
@@ -628,6 +628,55 @@
       "reviewed": "19 Oct 2026",
       "source": "github.com",
       "url": "https://github.com/richawo/Design-components-for-AI-agents"
+    },
+    {
+      "id": "auto-d8ff876dfb1e",
+      "title": "OpenDesign",
+      "type": "Agent",
+      "categories": [
+        "UI",
+        "UX",
+        "Process"
+      ],
+      "practices": [
+        "Drafting",
+        "UI sketches",
+        "Review",
+        "Creative exploration"
+      ],
+      "description": "A collaborative AI design workspace where teams start from a brief, create prototypes with an agent, share feedback, and refine in the same project.",
+      "recommendation": "Source-reviewed; not yet team-tested. Pilot it on one team prototype loop and confirm the workflow fits your review and handoff process before adopting it broadly.",
+      "access": "Open source; plan details unspecified",
+      "setup": "Not stated; local-first workspace and cloud options are mentioned",
+      "verdict": "Watching",
+      "confidence": "Medium",
+      "reviewed": "26 Oct 2026",
+      "source": "github.com",
+      "url": "https://github.com/nexu-io/open-design"
+    },
+    {
+      "id": "auto-692d56bda4f0",
+      "title": "chudarin-design-skills",
+      "type": "Skill",
+      "categories": [
+        "UI",
+        "UX",
+        "Process"
+      ],
+      "practices": [
+        "Drafting",
+        "UI sketches",
+        "Review"
+      ],
+      "description": "A Figma-focused design agent skill set that works from components and variables, plans flows, builds screens, fixes bindings, and makes presentations.",
+      "recommendation": "Source-reviewed; not yet team-tested. Use it on one Figma file with existing components and variables, then check whether binding fixes and screen edits stay targeted.",
+      "access": "Figma and Claude Code",
+      "setup": "Not stated; plugin and Figma file access are implied",
+      "verdict": "Watching",
+      "confidence": "Medium",
+      "reviewed": "26 Oct 2026",
+      "source": "github.com",
+      "url": "https://github.com/schudarin/chudarin-design-skills"
     }
   ],
   "findings": [
@@ -691,6 +740,22 @@
       "source": "github.com",
       "url": "https://github.com/richawo/Design-components-for-AI-agents",
       "foundOn": "2026-10-19"
+    },
+    {
+      "title": "OpenDesign",
+      "verdict": "Watching",
+      "summary": "Source-reviewed; not yet team-tested. Pilot it on one team prototype loop and confirm the workflow fits your review and handoff process before adopting it broadly.",
+      "source": "github.com",
+      "url": "https://github.com/nexu-io/open-design",
+      "foundOn": "2026-10-26"
+    },
+    {
+      "title": "chudarin-design-skills",
+      "verdict": "Watching",
+      "summary": "Source-reviewed; not yet team-tested. Use it on one Figma file with existing components and variables, then check whether binding fixes and screen edits stay targeted.",
+      "source": "github.com",
+      "url": "https://github.com/schudarin/chudarin-design-skills",
+      "foundOn": "2026-10-26"
     }
   ]
 }
