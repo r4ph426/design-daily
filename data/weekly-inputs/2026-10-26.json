@@ -1,0 +1,236 @@
+[
+  {
+    "id": "bacaa2ac1eb948b6",
+    "url": "https://developers.openai.com/api/docs/guides/agent-builder",
+    "title": "Agent Builder | OpenAI API",
+    "source": "developers.openai.com",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-10-26T11:11:07.426Z"
+  },
+  {
+    "id": "1cc01032705b3456",
+    "url": "https://developers.openai.com/cookbook/articles/chatgpt-agents-sales-meeting-prep",
+    "title": "Building workspace agents in ChatGPT to complete repeatable, end-to-end work",
+    "source": "developers.openai.com",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-10-26T11:11:07.426Z"
+  },
+  {
+    "id": "3253ccbf7d74fa86",
+    "url": "https://research.google/pubs/guide-a-benchmark-for-user-context-understanding-and-assistance-in-gui-workflow-videos",
+    "title": "GUIDE: A Benchmark for User Context Understanding and Assistance in GUI Workflow Videos",
+    "source": "research.google",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-10-26T11:11:07.426Z"
+  },
+  {
+    "id": "9437e759a4071268",
+    "url": "https://research.google/pubs/take-it-leave-it-or-fix-it-measuring-productivity-and-trust-in-human-ai-collaboration",
+    "title": "Take it, Leave it, or Fix it: Measuring Productivity and Trust in Human-AI Collaboration",
+    "source": "research.google",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-10-26T11:11:07.426Z"
+  },
+  {
+    "id": "90099be782f7f47b",
+    "url": "https://research.google/pubs/zoom-in-zoom-out-reframe-domain-experts-strategies-for-addressing-non-experts-complex-questions",
+    "title": "Zoom in, Zoom out, Reframe: Domain Experts’ Strategies for Addressing Non-Experts’ Complex Questions",
+    "source": "research.google",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-10-26T11:11:07.426Z"
+  },
+  {
+    "id": "e54f537a6bc2ef5c",
+    "url": "https://research.google/pubs/how-tech-workers-contend-with-hazards-of-humanlikeness-in-generative-ai",
+    "title": "How Tech Workers Contend with Hazards of Humanlikeness in Generative AI",
+    "source": "research.google",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-10-26T11:11:07.426Z"
+  },
+  {
+    "id": "7516481b7fb444d5",
+    "url": "https://research.google/blog/convapparel-measuring-and-bridging-the-realism-gap-in-user-simulators",
+    "title": "ConvApparel: Measuring and bridging the realism gap in user simulators",
+    "source": "research.google",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-10-26T11:11:07.426Z"
+  },
+  {
+    "id": "5074a1d339635b7b",
+    "url": "https://www.w3.org/2026/07/wot-wg-2026.html",
+    "title": "Web of Things Working Group Charter",
+    "source": "w3.org",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-10-26T11:11:07.426Z"
+  },
+  {
+    "id": "b5b120a0c6af3f4b",
+    "url": "https://www.itsnicethat.com/features/more-of-the-same-creative-routines-in-depth-everyday-edition-140526",
+    "title": "More of the same: how creative rituals can help you break free from the idea echo chamber",
+    "source": "itsnicethat.com",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-10-26T11:11:07.426Z"
+  },
+  {
+    "id": "40b16980f7bd0090",
+    "url": "https://www.itsnicethat.com/articles/elizabeth-goodspeed-whats-in-a-name-categorising-aesthetics-creative-industry-190526",
+    "title": "“What aesthetic is this?” Elizabeth Goodspeed on the push to categorise visual culture",
+    "source": "itsnicethat.com",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-10-26T11:11:07.426Z"
+  },
+  {
+    "id": "b2883b3091947176",
+    "url": "https://arxiv.org/abs/2605.20731",
+    "title": "[2605.20731] TASTE: A Designer-Annotated Multi-Dimensional Preference Dataset for AI-Generated Graphic Design",
+    "source": "arxiv.org",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-10-26T11:11:07.426Z"
+  },
+  {
+    "id": "9d61b1cadcefc19f",
+    "url": "https://www.itsnicethat.com/features/braulio-amado-graphic-design-spotlight-261026",
+    "title": "Mistakes, chaos and meditation: inside the mind of Bráulio Amado",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-10-26T09:00:00.000Z",
+    "firstCollectedAt": "2026-10-26T11:11:07.426Z"
+  },
+  {
+    "id": "71b885096a92e77b",
+    "url": "https://www.itsnicethat.com/articles/studio-hono-temper-branding-project-261026",
+    "title": "Hono’s label branding for Temper cider animates the last rally of the 2008 Wimbledon final",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-10-26T09:00:00.000Z",
+    "firstCollectedAt": "2026-10-26T11:11:07.426Z"
+  },
+  {
+    "id": "3bfe944882d04a80",
+    "url": "https://www.itsnicethat.com/articles/creative-career-condundrums-if-you-could-jobs-advice-261026",
+    "title": "“You deserve a chance to try and find a role that challenges you”",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-10-26T09:00:00.000Z",
+    "firstCollectedAt": "2026-10-26T11:11:07.426Z"
+  },
+  {
+    "id": "65a053f49ae49761",
+    "url": "https://www.itsnicethat.com/articles/madeline-rupard-2002-forrester-subaru-art-discover-261026",
+    "title": "Madeline Rupard finds the sublime in the mundane landscapes of western America",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-10-26T09:00:00.000Z",
+    "firstCollectedAt": "2026-10-26T11:11:07.426Z"
+  },
+  {
+    "id": "909e8284e7c46945",
+    "url": "https://www.itsnicethat.com/articles/nicer-tuesdays-new-york-september-arsh-raziuddin-231026",
+    "title": "Design as a unifying language: Arsh Raziuddin on how her World Cup identity united NYC",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-10-23T08:00:00.000Z",
+    "firstCollectedAt": "2026-10-26T11:11:07.426Z"
+  },
+  {
+    "id": "0229430823d46097",
+    "url": "https://www.itsnicethat.com/features/the-weekend-with-jasmine-dowling-231026",
+    "title": "The Weekend With Jasmine Dowling",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-10-23T08:00:00.000Z",
+    "firstCollectedAt": "2026-10-26T11:11:07.426Z"
+  },
+  {
+    "id": "c290e124ae1a2604",
+    "url": "https://www.itsnicethat.com/articles/foto-foto-photography-publication-sponsored-content-221026",
+    "title": "Foto Foto is the design-focused brand bringing back the physical photo album",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-10-22T13:00:00.000Z",
+    "firstCollectedAt": "2026-10-26T11:11:07.426Z"
+  },
+  {
+    "id": "51735be588389603",
+    "url": "https://www.itsnicethat.com/articles/nicer-tuesdays-new-york-september-mona-chalabi-221026",
+    "title": "Mona Chalabi on making sense of the unmeasurable",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-10-22T13:00:00.000Z",
+    "firstCollectedAt": "2026-10-26T11:11:07.426Z"
+  },
+  {
+    "id": "86953d2dfae5cfa7",
+    "url": "https://www.itsnicethat.com/articles/hanka-van-der-voet-all-work-is-womens-work-publishing-project-221026",
+    "title": "All Work is Women’s Work recovers the forgotten history of Amsterdam’s seamstresses",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-10-22T08:00:00.000Z",
+    "firstCollectedAt": "2026-10-26T11:11:07.426Z"
+  },
+  {
+    "id": "18c26df968fe2c5c",
+    "url": "https://www.itsnicethat.com/articles/somesuch-editions-book-trailers-film-publication-project-201026",
+    "title": "The era of the book trailer: why Somesuch Editions are promoting novels like films",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-10-21T08:00:00.000Z",
+    "firstCollectedAt": "2026-10-26T11:11:07.426Z"
+  },
+  {
+    "id": "26d8d0e04caba452",
+    "url": "https://www.itsnicethat.com/articles/tbf-day-job-graphic-design-project-211026",
+    "title": "The brand for Lance Oppenheim’s production company has chaos built in",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-10-21T08:00:00.000Z",
+    "firstCollectedAt": "2026-10-26T11:11:07.426Z"
+  },
+  {
+    "id": "75d3d562f74bedd1",
+    "url": "https://www.itsnicethat.com/features/affinity-and-cavalry-free-form-brand-partnership-211026",
+    "title": "Affinity and Cavalry give creatives somewhere to create freely… and for free",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-10-21T08:00:00.000Z",
+    "firstCollectedAt": "2026-10-26T11:11:07.426Z"
+  },
+  {
+    "id": "197db01c945a90f2",
+    "url": "https://www.smashingmagazine.com/2026/10/embracing-playful-imperfection-css-random-function",
+    "title": "Embracing Playful Imperfection With The CSS random() Function — Smashing Magazine",
+    "source": "smashingmagazine.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-10-20T10:00:00.000Z",
+    "firstCollectedAt": "2026-10-26T11:11:07.426Z"
+  },
+  {
+    "id": "fbab9ffb88476e2e",
+    "url": "https://www.w3.org/blog/2026/web-of-things-working-group-recharter-new-momentum-for-iot-interoperability",
+    "title": "Web of Things Working Group recharter: New momentum for IoT interoperability | 2026 | Blog | W3C",
+    "source": "w3.org",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-10-21T09:05:00.000Z",
+    "firstCollectedAt": "2026-10-26T11:11:07.426Z"
+  },
+  {
+    "id": "adcf2dfed0b64068",
+    "url": "https://www.w3.org/blog/2026/improved-thread-navigation-in-w3c-mailing-list-archives",
+    "title": "Improved thread navigation in W3C's mailing list archives | 2026 | Blog | W3C",
+    "source": "w3.org",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-10-19T09:03:00.000Z",
+    "firstCollectedAt": "2026-10-26T11:11:07.426Z"
+  }
+]
