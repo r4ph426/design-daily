@@ -329,3 +329,5 @@ The reviewed weekly page adopts Toolbox’s seven-module body width, half-module
 - Keep the established visual system and shared components for the operational release. The larger changes to opening density, contribution placement and Archive orientation require their own reviewable UX prototype.
 
 - The user selected a 5–9 minute weekday reading experience, between a quick update and a long newspaper read. Support orientation, current answers and optional deeper source notes without inflating weak content.
+
+- On 26 October 2026 the user explicitly approved publishing the reviewed three-question editorial correction: remove the peripheral IoT charter question from the weekly selection, qualify workflow and culture claims, and add dated METR research together with its later methodological limitations. Preserve the question URLs and dated correction history.

@@ -232,5 +232,23 @@
     "sourceKind": "web crawl",
     "publishedAt": "2026-10-19T09:03:00.000Z",
     "firstCollectedAt": "2026-10-26T11:11:07.426Z"
+  },
+  {
+    "id": "596ebdd94b57eb3b",
+    "url": "https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study",
+    "title": "Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity",
+    "source": "metr.org",
+    "sourceKind": "web research",
+    "publishedAt": "2025-07-10T00:00:00Z",
+    "firstCollectedAt": "2026-10-26T11:17:24.533589Z"
+  },
+  {
+    "id": "e47ecbbcc03e514c",
+    "url": "https://metr.org/blog/2026-02-24-uplift-update",
+    "title": "We are Changing our Developer Productivity Experiment Design",
+    "source": "metr.org",
+    "sourceKind": "web research",
+    "publishedAt": "2026-02-24T00:00:00Z",
+    "firstCollectedAt": "2026-10-26T11:17:24.533589Z"
   }
 ]

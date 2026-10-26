@@ -1,7 +1,7 @@
 import {HighlightedText} from './HighlightedText.jsx';
 export function WeeklyHistory({question}) {
   if(!question.history?.length)return null;
-  return <section className="reading-trail" aria-label="Question development history">
+  return <section className="reading-trail weekly-history" aria-label="Question development history">
     <p className="reading-trail-eyebrow">This week</p>
     <h3>How the answer developed</h3>
     <ol>{[...question.history].reverse().map((update,index)=><li key={`${update.at}-${index}`}>

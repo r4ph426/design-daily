@@ -6,8 +6,8 @@
   "date": "2026-10-26",
   "editionNumber": "032",
   "displayDate": "Week of 2026-10-26",
-  "headline": "**Workflow** beats chat, while **taste** and structure resist sameness",
-  "summary": "This week points to a split between AI as a visible chat layer and AI as a workflow system, with the stronger evidence favoring workflow design, permissions, and evaluation over interface novelty. The culture pieces also keep circling back to taste, constraint, and deliberate imperfection as the counterweight to automated sameness.",
+  "headline": "This week, design judgment needs **evidence, structure and attention**",
+  "summary": "Three developing questions connect workflow design, useful AI assistance and creative judgment. We are collecting stronger evidence through the week; older research is marked as context, and a peripheral standards question has been set aside.",
   "questions": [
     {
       "id": "01",
@@ -21,17 +21,17 @@
       "aiLens": true,
       "editorialTitle": "**Workflow over chat**",
       "question": "What does a graph-shaped workflow change about how design and product teams should structure AI work?",
-      "answer": "The evidence suggests AI work is moving from single-turn assistance toward explicit workflows with nodes, typed edges, permissions, and evaluation. That changes design from inventing a better prompt box to shaping dependencies, handoffs, and failure points across the whole system. It also makes governance part of the interface, since connectors, sharing, and versioning determine what the agent can actually do. The tradeoff is that this adds setup and operational complexity, but it is the only path in the sources that looks durable for production use.",
-      "why": "This affects whether I design a conversation pattern or a system architecture, and what I need to prototype first.",
-      "uncertainty": "What remains unknown is how often teams can absorb this complexity without losing adoption, and which parts belong in product UI versus platform tooling. Stronger evidence would be comparative studies of workflow-based agents in real products, especially with onboarding, error recovery, and maintenance costs.",
+      "answer": "For a workflow-based agent, prototype the dependencies, handoffs and recovery paths as carefully as the conversation. The two OpenAI guides describe connected steps, tool access, permissions and deployment, which make those design decisions inspectable. They establish how one vendor structures this kind of system. They do not establish that graph-shaped orchestration is universally better, or that teams are adopting it successfully. Start with a small, testable workflow, explicit approval boundaries and a visible path back from failure. Its value still needs to be demonstrated against the simpler process it would replace.",
+      "why": "This changes the prototype brief: include how work moves between steps, who can act, and what happens when a step fails. A polished conversation alone cannot test those decisions.",
+      "uncertainty": "Both sources are vendor documentation from OpenAI and serve as background context, not independent evidence of a new industry-wide shift. We still need a concrete deployment or comparative study showing a benefit for design teams. The unrelated W3C archive-navigation example has been removed.",
       "counts": {
-        "total": 3,
-        "web": 3,
+        "total": 2,
+        "web": 2,
         "newsletters": 0
       },
-      "publisherCount": 2,
+      "publisherCount": 1,
       "firstSeen": "2026-10-26",
-      "lastUpdatedAt": "2026-10-26T11:11:07.426Z",
+      "lastUpdatedAt": "2026-10-26T11:17:24.533589Z",
       "signals": [
         {
           "source": "developers.openai.com",
@@ -62,21 +62,6 @@
           "verdict": "Must read",
           "role": "Supports",
           "evidence": "Because our agent can access external tools, it’s important to understand the permissions it has to take actions on these tools, and how those permissions change as we share our agent for other teammates to use."
-        },
-        {
-          "source": "w3.org",
-          "title": "Improved thread navigation in W3C's mailing list archives | 2026 | Blog | W3C",
-          "kind": "Web",
-          "timing": "2026-10-19",
-          "publishedAt": "2026-10-19T09:03:00.000Z",
-          "firstCollectedAt": "2026-10-26T11:11:07.426Z",
-          "sourceId": "adcf2dfed0b64068",
-          "url": "https://www.w3.org/blog/2026/improved-thread-navigation-in-w3c-mailing-list-archives",
-          "happened": "W3C improved thread navigation without changing the underlying archive model.",
-          "changes": "The archive update keeps static HTML and stable permalinks while adding a thread panel and flattened view option. That is a useful context signal that better structure can improve usability without discarding the existing system.",
-          "verdict": "Read",
-          "role": "Context",
-          "evidence": "The goals of this implementation are to: provide a convenient way to navigate within threads without requiring changes to hypermail or compromising its features (fast, static HTML; clean, stable URLs) allow users to set "
         }
       ],
       "further": [],
@@ -91,6 +76,17 @@
             "bacaa2ac1eb948b6",
             "1cc01032705b3456",
             "adcf2dfed0b64068"
+          ]
+        },
+        {
+          "at": "2026-10-26T11:17:24.533589Z",
+          "kind": "Correction",
+          "reason": "Editorial review removed an unrelated source and narrowed the claim to what the vendor documentation establishes.",
+          "before": "The evidence suggests AI work is moving from single-turn assistance toward explicit workflows with nodes, typed edges, permissions, and evaluation. That changes design from inventing a better prompt box to shaping dependencies, handoffs, and failure points across the whole system. It also makes governance part of the interface, since connectors, sharing, and versioning determine what the agent can actually do. The tradeoff is that this adds setup and operational complexity, but it is the only path in the sources that looks durable for production use.",
+          "after": "For a workflow-based agent, prototype the dependencies, handoffs and recovery paths as carefully as the conversation. The two OpenAI guides describe connected steps, tool access, permissions and deployment, which make those design decisions inspectable. They establish how one vendor structures this kind of system. They do not establish that graph-shaped orchestration is universally better, or that teams are adopting it successfully. Start with a small, testable workflow, explicit approval boundaries and a visible path back from failure. Its value still needs to be demonstrated against the simpler process it would replace.",
+          "sourceIds": [
+            "bacaa2ac1eb948b6",
+            "1cc01032705b3456"
           ]
         }
       ]
@@ -107,62 +103,77 @@
       "aiLens": true,
       "editorialTitle": "**Human-aware help**",
       "question": "How should teams decide when conversational AI helps expert users and when it just gets in the way?",
-      "answer": "The answer is to treat user expertise as the starting point, not the chat interface. One study shows AI can improve novices on some solve tasks, but effects vary by expertise and question type, and the risks include complacency and overreliance. Another benchmark argues agents need to perceive behavior, infer intent, and decide when to help rather than always intervening. For expert workflows, the right move is often less mediation, not more, especially when speed and precision matter more than explanation.",
-      "why": "This tells me when to add AI assistance and when to keep the expert in direct control.",
-      "uncertainty": "What remains unclear is where the boundary sits between useful assistance and unnecessary friction across different expert domains. Evidence that would change the answer would be task-level studies comparing direct manipulation, chat, and adaptive help for expert users.",
+      "answer": "Evaluate the task, the user and the current tool together. Earlier studies show why a universal answer fails: a 2024 Bard study found effects varied by expertise and task, while METR found a slowdown for experienced developers in a specific early-2025 setting. METR’s 2026 follow-up then reported signs of improvement alongside serious measurement limitations. These are background findings, not this week’s discoveries. Compare real task outcomes, including verification and recovery effort, before choosing conversational assistance over direct control. Neither expertise alone nor a favorable benchmark tells us which interface will help in the current product.",
+      "why": "When reviewing an AI feature, ask for a task-level comparison with the existing workflow. Measure total effort and outcome quality, including checking or correcting the system.",
+      "uncertainty": "The studies concern particular tools, populations and tasks, and the later METR estimates have selection limitations. They do not settle the value of conversational interfaces for design professionals. We need current comparisons in the actual workflow.",
       "counts": {
-        "total": 3,
-        "web": 3,
+        "total": 4,
+        "web": 4,
         "newsletters": 0
       },
-      "publisherCount": 1,
+      "publisherCount": 2,
       "firstSeen": "2026-10-26",
-      "lastUpdatedAt": "2026-10-26T11:11:07.426Z",
+      "lastUpdatedAt": "2026-10-26T11:17:24.533589Z",
       "signals": [
         {
           "source": "research.google",
           "title": "Take it, Leave it, or Fix it: Measuring Productivity and Trust in Human-AI Collaboration",
           "kind": "Web",
-          "timing": "Date unavailable",
+          "timing": "2024 · Background",
           "publishedAt": null,
           "firstCollectedAt": "2026-10-26T11:11:07.426Z",
           "sourceId": "9437e759a4071268",
           "url": "https://research.google/pubs/take-it-leave-it-or-fix-it-measuring-productivity-and-trust-in-human-ai-collaboration",
-          "happened": "Conversational AI effects vary by expertise and task type.",
-          "changes": "The study reports differences by user expertise and by solve versus search questions, with novice gains on some tasks and other effects left mixed. It also names automation complacency and rising reliance, which means AI help is not uniformly beneficial.",
+          "happened": "A 2024 study examined software engineers using Bard on programming-exam tasks. It found effects depended on expertise and task type, with novice gains on some solve tasks.",
+          "changes": "This is evidence for evaluating assistance by task and user group. It cannot establish the effects of current tools across all expert workflows.",
           "verdict": "Must read",
-          "role": "Supports",
+          "role": "Context",
           "evidence": "Effects on performance, efficiency, satisfaction, and trust vary depending on user expertise, question type (open-ended \"solve\" questions vs."
         },
         {
           "source": "research.google",
           "title": "GUIDE: A Benchmark for User Context Understanding and Assistance in GUI Workflow Videos",
           "kind": "Web",
-          "timing": "Date unavailable",
+          "timing": "2026 · Background",
           "publishedAt": null,
           "firstCollectedAt": "2026-10-26T11:11:07.426Z",
           "sourceId": "3253ccbf7d74fa86",
           "url": "https://research.google/pubs/guide-a-benchmark-for-user-context-understanding-and-assistance-in-gui-workflow-videos",
-          "happened": "Google frames useful agents as user-aware collaborators.",
-          "changes": "The benchmark says agents must understand what users are doing and why, then evaluate behavior state, intent, and help prediction. That supports designing assistance that is selective and context-sensitive rather than always-on.",
+          "happened": "GUIDE evaluates whether agents can interpret behavior, intent and help needs in complex software. Its demonstrations come from novice users.",
+          "changes": "The benchmark makes context-sensitive assistance a testable design concern. It does not itself establish productivity gains for experts.",
           "verdict": "Must read",
-          "role": "Supports",
+          "role": "Context",
           "evidence": "To move beyond automation and toward collaboration, GUI agents must understand what users are doing and why."
         },
         {
-          "source": "research.google",
-          "title": "Zoom in, Zoom out, Reframe: Domain Experts’ Strategies for Addressing Non-Experts’ Complex Questions",
+          "source": "metr.org",
+          "title": "Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity",
           "kind": "Web",
-          "timing": "Date unavailable",
-          "publishedAt": null,
-          "firstCollectedAt": "2026-10-26T11:11:07.426Z",
-          "sourceId": "90099be782f7f47b",
-          "url": "https://research.google/pubs/zoom-in-zoom-out-reframe-domain-experts-strategies-for-addressing-non-experts-complex-questions",
-          "happened": "Experts use zoom, zoom out, and reframing strategies.",
-          "changes": "The paper finds experts clarify broad requests, widen narrow ones, and reframe unstated needs. That suggests AI should support expert reasoning patterns instead of flattening them into a generic prompt-response loop.",
+          "url": "https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study",
+          "publishedAt": "2025-07-10T00:00:00Z",
+          "timing": "2025-07-10 · Background",
+          "firstCollectedAt": "2026-10-26T11:17:24.533589Z",
+          "sourceId": "596ebdd94b57eb3b",
+          "happened": "METR studied experienced developers completing real tasks with early-2025 tools. In that setting, AI access increased completion time.",
+          "changes": "The finding challenges automatic productivity assumptions for familiar, demanding work. It is a historical result in a specific setting, not a claim about all current AI assistance.",
           "verdict": "Read",
           "role": "Context",
-          "evidence": "Experts zoom in to clarify details of a broad information request, zoom out to address overly narrow questions or assumptions, and reframe when the underlying need is unstated or poorly represented."
+          "evidence": "When developers are allowed to use AI tools, they take 19% longer to complete issues"
+        },
+        {
+          "source": "metr.org",
+          "title": "We are Changing our Developer Productivity Experiment Design",
+          "kind": "Web",
+          "url": "https://metr.org/blog/2026-02-24-uplift-update",
+          "publishedAt": "2026-02-24T00:00:00Z",
+          "timing": "2026-02-24 · Background",
+          "firstCollectedAt": "2026-10-26T11:17:24.533589Z",
+          "sourceId": "e47ecbbcc03e514c",
+          "happened": "METR later reported signs that newer tools could speed up work. It also explained that participant and task selection made the size of that effect difficult to estimate reliably.",
+          "changes": "The follow-up challenges a fixed story that AI slows experts down. A useful evaluation must account for changing tools, task selection and perceived versus measured benefit.",
+          "verdict": "Read",
+          "role": "Challenges",
+          "evidence": "our data is only very weak evidence for the size of this increase."
         }
       ],
       "further": [],
@@ -178,6 +189,19 @@
             "3253ccbf7d74fa86",
             "90099be782f7f47b"
           ]
+        },
+        {
+          "at": "2026-10-26T11:17:24.533589Z",
+          "kind": "Answer revised",
+          "reason": "Independent background research and its later methodological update replace the broad claim that experts generally need less mediation. Evaluate the current task, tool and user together.",
+          "before": "The answer is to treat user expertise as the starting point, not the chat interface. One study shows AI can improve novices on some solve tasks, but effects vary by expertise and question type, and the risks include complacency and overreliance. Another benchmark argues agents need to perceive behavior, infer intent, and decide when to help rather than always intervening. For expert workflows, the right move is often less mediation, not more, especially when speed and precision matter more than explanation.",
+          "after": "Evaluate the task, the user and the current tool together. Earlier studies show why a universal answer fails: a 2024 Bard study found effects varied by expertise and task, while METR found a slowdown for experienced developers in a specific early-2025 setting. METR’s 2026 follow-up then reported signs of improvement alongside serious measurement limitations. These are background findings, not this week’s discoveries. Compare real task outcomes, including verification and recovery effort, before choosing conversational assistance over direct control. Neither expertise alone nor a favorable benchmark tells us which interface will help in the current product.",
+          "sourceIds": [
+            "9437e759a4071268",
+            "3253ccbf7d74fa86",
+            "596ebdd94b57eb3b",
+            "e47ecbbcc03e514c"
+          ]
         }
       ]
     },
@@ -191,11 +215,11 @@
         "Process"
       ],
       "aiLens": false,
-      "editorialTitle": "**Taste under pressure**",
-      "question": "What do the culture pieces suggest about taste, constraint, and creative identity right now?",
-      "answer": "They suggest that originality is being defended through ritual, constraint, and close attention to materials rather than through faster generation. Several pieces argue that taste still comes from repeated practice, not from feed-driven novelty, while others show designers using accidents, limits, and even mundane leftovers as a source of form. The broader pattern is less about anti-AI nostalgia than about protecting judgment from flattening forces. In practical terms, that means creative direction has to be built into process, not appended at the end.",
-      "why": "This affects how I brief teams, evaluate ideas, and defend exploratory work under time pressure.",
-      "uncertainty": "What remains unknown is whether this is a durable shift or just a familiar reaction to a noisy AI cycle. Stronger evidence would be a wider mix of cultural and studio practices showing whether constraint-led making persists after the current moment.",
+      "editorialTitle": "Practising **attention and taste**",
+      "question": "How can deliberate observation and creative constraints strengthen design judgment?",
+      "answer": "Bráulio Amado’s interview offers a concrete practice: notice overlooked surroundings, work with constraints and use accidents as material. Two earlier opinion pieces provide context about creative routines and the limits of aesthetic labels. Together they suggest an exercise worth trying, rather than evidence of a general cultural turn: build a small observation or making ritual into a project, then examine whether it produces more specific decisions. For a design team, the value would be visible in the work and its rationale. The pieces do not prove that constraint-led practice produces better outcomes.",
+      "why": "This offers a creative-direction experiment: protect some time for observation and making, then assess whether it changes the specificity of the ideas. Avoid treating a recognizable aesthetic as evidence of good judgment.",
+      "uncertainty": "All three pieces come from one publication and are interviews or opinion, not comparative studies. The earlier essays are background context. We need independent studio examples and outcomes before treating the approach as a wider shift.",
       "counts": {
         "total": 3,
         "web": 3,
@@ -203,13 +227,13 @@
       },
       "publisherCount": 1,
       "firstSeen": "2026-10-26",
-      "lastUpdatedAt": "2026-10-26T11:11:07.426Z",
+      "lastUpdatedAt": "2026-10-26T11:17:24.533589Z",
       "signals": [
         {
           "source": "itsnicethat.com",
           "title": "More of the same: how creative rituals can help you break free from the idea echo chamber",
           "kind": "Web",
-          "timing": "Date unavailable",
+          "timing": "14 May 2026 · Background",
           "publishedAt": null,
           "firstCollectedAt": "2026-10-26T11:11:07.426Z",
           "sourceId": "b5b120a0c6af3f4b",
@@ -217,7 +241,7 @@
           "happened": "Creative rituals are framed as a defense of taste and intention.",
           "changes": "The piece argues that rituals reconnect makers to their own interests and help them resist algorithmic sameness. It repeatedly ties originality to steadiness, reflection, and time, which is useful but still opinion-led.",
           "verdict": "Read",
-          "role": "Supports",
+          "role": "Context",
           "evidence": "I’d argue yes because a creative ritual puts you back in touch with what interests you, away from what you’re told you should be into."
         },
         {
@@ -239,7 +263,7 @@
           "source": "itsnicethat.com",
           "title": "“What aesthetic is this?” Elizabeth Goodspeed on the push to categorise visual culture",
           "kind": "Web",
-          "timing": "Date unavailable",
+          "timing": "19 May 2026 · Background",
           "publishedAt": null,
           "firstCollectedAt": "2026-10-26T11:11:07.426Z",
           "sourceId": "40b16980f7bd0090",
@@ -264,7 +288,59 @@
             "9d61b1cadcefc19f",
             "40b16980f7bd0090"
           ]
+        },
+        {
+          "at": "2026-10-26T11:17:24.533589Z",
+          "kind": "Correction",
+          "reason": "Editorial review narrowed the question to a concrete practice and removed the unsupported implication of a broad cultural shift. Earlier essays are explicitly background.",
+          "before": "They suggest that originality is being defended through ritual, constraint, and close attention to materials rather than through faster generation. Several pieces argue that taste still comes from repeated practice, not from feed-driven novelty, while others show designers using accidents, limits, and even mundane leftovers as a source of form. The broader pattern is less about anti-AI nostalgia than about protecting judgment from flattening forces. In practical terms, that means creative direction has to be built into process, not appended at the end.",
+          "after": "Bráulio Amado’s interview offers a concrete practice: notice overlooked surroundings, work with constraints and use accidents as material. Two earlier opinion pieces provide context about creative routines and the limits of aesthetic labels. Together they suggest an exercise worth trying, rather than evidence of a general cultural turn: build a small observation or making ritual into a project, then examine whether it produces more specific decisions. For a design team, the value would be visible in the work and its rationale. The pieces do not prove that constraint-led practice produces better outcomes.",
+          "sourceIds": [
+            "b5b120a0c6af3f4b",
+            "9d61b1cadcefc19f",
+            "40b16980f7bd0090"
+          ]
         }
+      ]
+    }
+  ],
+  "retiredQuestions": [
+    {
+      "id": "01",
+      "slug": "why-are-so-many-products-shipping-the-same-ai-panel-and-why-does",
+      "category": "UX",
+      "tags": [
+        "UX"
+      ],
+      "aiLens": true,
+      "editorialTitle": "The **sparkle** off switch",
+      "question": "Why are so many products shipping the same AI panel, and why does that sameness matter for UX?",
+      "answer": "Because vendors are treating AI as a visible feature layer instead of a workflow improvement, the interface keeps asking users to notice the tool rather than finish the task. That creates a recurring off-switch problem and makes the product feel decorative, not useful.",
+      "why": "This question captures the strongest recurring signal across the AI pieces: the interface pattern is repeating faster than the value case. It matters because users are now being trained to distrust AI affordances before they understand them.",
+      "counts": {
+        "total": 1,
+        "newsletters": 0,
+        "web": 1
+      },
+      "firstSeen": "13:33 cet",
+      "signals": [
+        {
+          "source": "UX Collective",
+          "title": "Nobody asked for the sparkle button",
+          "kind": "Web",
+          "timing": "13:33",
+          "happened": "The piece argues that products are shipping the same docked chat panel with prompt suggestions and a sparkle icon, even when users never asked for it. It says people are now actively looking for the off switch after each update.",
+          "changes": "This turns AI from a capability into a **UI tax**. The problem is not that the model lacks power, but that repeated, generic presentation makes the feature feel imposed and replaceable rather than helpful.",
+          "verdict": "Must read",
+          "url": "https://uxdesign.cc/nobody-asked-for-the-sparkle-button-ae54ab5065c6"
+        }
+      ],
+      "further": [
+        [
+          "Where to draw the line before AI reaches professional users",
+          "UX Collective",
+          "https://uxdesign.cc/where-to-draw-the-line-before-ai-reaches-professional-users-09d61f61b2b5"
+        ]
       ]
     },
     {
@@ -338,55 +414,16 @@
       ]
     }
   ],
-  "retiredQuestions": [
-    {
-      "id": "01",
-      "slug": "why-are-so-many-products-shipping-the-same-ai-panel-and-why-does",
-      "category": "UX",
-      "tags": [
-        "UX"
-      ],
-      "aiLens": true,
-      "editorialTitle": "The **sparkle** off switch",
-      "question": "Why are so many products shipping the same AI panel, and why does that sameness matter for UX?",
-      "answer": "Because vendors are treating AI as a visible feature layer instead of a workflow improvement, the interface keeps asking users to notice the tool rather than finish the task. That creates a recurring off-switch problem and makes the product feel decorative, not useful.",
-      "why": "This question captures the strongest recurring signal across the AI pieces: the interface pattern is repeating faster than the value case. It matters because users are now being trained to distrust AI affordances before they understand them.",
-      "counts": {
-        "total": 1,
-        "newsletters": 0,
-        "web": 1
-      },
-      "firstSeen": "13:33 cet",
-      "signals": [
-        {
-          "source": "UX Collective",
-          "title": "Nobody asked for the sparkle button",
-          "kind": "Web",
-          "timing": "13:33",
-          "happened": "The piece argues that products are shipping the same docked chat panel with prompt suggestions and a sparkle icon, even when users never asked for it. It says people are now actively looking for the off switch after each update.",
-          "changes": "This turns AI from a capability into a **UI tax**. The problem is not that the model lacks power, but that repeated, generic presentation makes the feature feel imposed and replaceable rather than helpful.",
-          "verdict": "Must read",
-          "url": "https://uxdesign.cc/nobody-asked-for-the-sparkle-button-ae54ab5065c6"
-        }
-      ],
-      "further": [
-        [
-          "Where to draw the line before AI reaches professional users",
-          "UX Collective",
-          "https://uxdesign.cc/where-to-draw-the-line-before-ai-reaches-professional-users-09d61f61b2b5"
-        ]
-      ]
-    }
-  ],
-  "generatedAt": "2026-10-26T11:11:07.426Z",
-  "lastCollectedAt": "2026-10-26T11:11:07.426Z",
-  "crawlCompletedAt": "12:11",
+  "generatedAt": "2026-10-26T11:17:24.533589Z",
+  "lastCollectedAt": "2026-10-26T11:17:24.533589Z",
+  "crawlCompletedAt": "12:17",
   "finalizedAt": null,
-  "revision": "c963bec09ecc",
-  "sourceCount": 26,
+  "revision": "468e37bf57b7",
+  "sourceCount": 28,
   "webSourceCount": 7,
   "teamContributionCount": 0,
   "sourceWarnings": [
     "36 candidate pages could not provide enough inspectable public article text. They were not used as new evidence."
-  ]
+  ],
+  "editorReviewedAt": "2026-10-26T11:17:24.533589Z"
 }
