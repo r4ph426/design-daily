@@ -42,7 +42,7 @@ function ArchiveResult({ record, saved, onBookmark }) {
       </div>
       <div className="prototype-archive-meta content-panel">
         <p>{record.editionLabel} · {record.dateLabel}</p>
-        <p>{sourceCount(record)} · {record.popularity.allTimeSaves} team saves</p>
+        <p>{sourceCount(record)}{Number.isInteger(record.popularity.allTimeSaves) && ` · ${record.popularity.allTimeSaves} team saves`}</p>
         {popularRecently && <p className="prototype-recent">Popular recently · {record.popularity.recent30DaySaves} in 30 days</p>}
         <button type="button" aria-pressed={saved} onClick={() => onBookmark(record.key)}>{saved ? "Bookmarked" : "Bookmark"}<BookmarkSimple size={17} weight={saved ? "fill" : "regular"} aria-hidden="true" /></button>
       </div>

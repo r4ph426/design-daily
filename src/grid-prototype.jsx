@@ -1,3 +1,4 @@
+import {WeeklyHistory} from "./WeeklyHistory.jsx";
 import { safeExternalHref } from "../shared/public-url.mjs";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { BookmarkSimple, CaretDown, Clock } from "./icons/index.jsx";
@@ -101,12 +102,13 @@ function ReadingTrail({ question, records, date }) {
 function SignalDetails({ question, records, date, onClose }) {
   return (
     <div className="signal-table-wrap">
+      <WeeklyHistory question={question}/>
       <table className="signal-table">
         <caption>Signals for {question.question}</caption>
         <thead><tr><th>Source</th><th>What happened</th><th>What changes</th><th>Verdict</th></tr></thead>
         <tbody>{question.signals.map((signal, index) => (
           <tr key={`${question.id}-${index}`}>
-            <td data-label="Source"><a className="signal-source-title" href={safeExternalHref(signal.url)} target="_blank" rel="noopener noreferrer">{signal.title} <span aria-hidden="true">↗</span></a><span className="signal-publisher">{signal.source}</span><span className="signal-source-meta">{signal.kind} · {signal.timing}</span></td>
+            <td data-label="Source"><a className="signal-source-title" href={safeExternalHref(signal.url)} target="_blank" rel="noopener noreferrer">{signal.title} <span aria-hidden="true">↗</span></a><span className="signal-publisher">{signal.source}</span><span className="signal-source-meta">{signal.kind} · {signal.timing}{signal.role ? ` · ${signal.role}` : ""}</span></td>
             <td data-label="What happened"><div className="signal-copy"><HighlightedText text={signal.happened} /></div></td>
             <td data-label="What changes"><div className="signal-copy"><HighlightedText text={signal.changes} /></div></td>
             <td data-label="Verdict"><span className={signal.verdict === "Must read" ? "must-read" : ""}>{signal.verdict}</span></td>
@@ -150,16 +152,17 @@ function EditorialSpread({ question, records, date, editorialTitle, isOpen, isSa
           <button className={`bookmark-button ${isSaved ? "saved" : ""}`} type="button" aria-pressed={isSaved} onClick={onSave}>{isSaved ? "Bookmarked" : "Bookmark"}<BookmarkSimple size={17} weight={isSaved ? "fill" : "regular"} aria-hidden="true" /></button>
         </div>
         <h3>{question.question}</h3>
-        <p className="section-kicker why-label">Why it matters</p>
+        <p className="section-kicker why-label">Current answer</p>
         <p className="answer-copy"><HighlightedText text={question.answer} as="em" /></p>
         <section className="editorial-context" aria-labelledby={`editorial-context-${question.id}`}>
-          <p className="section-kicker" id={`editorial-context-${question.id}`}>Editorial context</p>
+          <p className="section-kicker" id={`editorial-context-${question.id}`}>Why it matters</p>
           <p>{question.why}</p>
+          {question.uncertainty && <p><strong>Still open: </strong>{question.uncertainty}</p>}
           <small>First seen {String(question.firstSeen || "").replace(/\bcet\b/i, "CET")}</small>
         </section>
       </div>
       <div className="source-panel content-panel">
-        <p className="section-kicker">{question.signals.length === 1 ? "Source" : "Sources"} <span>·</span> {question.signals.length}</p>
+        <p className="section-kicker">{question.signals.length === 1 ? "Source" : "Sources"} <span>·</span> {question.signals.length}{question.publisherCount ? ` · ${question.publisherCount} ${question.publisherCount === 1 ? "publisher" : "publishers"}` : ""}</p>
         <ol className="prototype-source-list">{question.signals.map((signal, signalIndex) => (
           <li key={`${question.id}-${signalIndex}`}><a href={safeExternalHref(signal.url)} target="_blank" rel="noopener noreferrer"><span className="source-title">{signal.title}</span><span className="source-meta">{sourceDomain(signal)} · {signal.kind} · {signal.timing}</span><span className="source-external" aria-hidden="true">↗</span></a></li>
         ))}</ol>
@@ -180,13 +183,13 @@ function TodayIntake() {
 }
 
 function TodayOpening({ edition, questions, headline, summary, mobile }) {
-  return <section className="opening" id="today" aria-label="Today’s edition overview">
-    <div className="opening-copy content-panel"><p className="eyebrow">Today <span>·</span> {questions.length} questions worth asking</p><h1><HighlightedText text={headline} as="em" /></h1></div>
-    <div className="opening-summary content-panel"><p>{summary}</p><div className="crawl-line"><span><Clock size={15} aria-hidden="true" /> Last crawl {crawlDay(edition.date)} · {edition.crawlCompletedAt}</span><small>{edition.sourceCount} total sources · {edition.webSourceCount} web sources · {edition.teamContributionCount} team links</small></div></div>
+  return <section className="opening" id="today" aria-label="Current edition overview">
+    <div className="opening-copy content-panel"><p className="eyebrow">{edition.cadence === "weekly" ? "This week" : "Today"} <span>·</span> {questions.length} questions worth following</p><h1><HighlightedText text={headline} as="em" /></h1></div>
+    <div className="opening-summary content-panel"><p>{summary}</p><div className="crawl-line"><span><Clock size={15} aria-hidden="true" /> Last collected {crawlDay(edition.lastCollectedAt?.slice(0,10) || edition.date)} · {edition.crawlCompletedAt}</span><small>{edition.sourceCount} {edition.cadence === "weekly" ? "verified articles" : "collected items"} · {edition.webSourceCount} configured feeds · {edition.teamContributionCount} contributed links</small></div></div>
     {!mobile && <TodayIntake />}
-    <aside className="question-index content-panel" aria-label="Today’s four questions"><div className="question-index-content"><p className="section-kicker">The questions</p><ol>{questions.map((question, index) => (
+    <aside className="question-index content-panel" aria-label="The edition’s questions"><div className="question-index-content"><p className="section-kicker">The questions</p><ol>{questions.map((question, index) => (
       <li key={question.id}><span className="question-number">Q{index + 1}</span><span className="question-entry"><a href={`#prototype-question-${question.id}`}>{question.question}<span aria-hidden="true">&nbsp;↘</span></a><small>{[question.category, ...(question.tags || []).filter((tag) => tag !== question.category)].join(" · ")}</small></span></li>
-    ))}</ol><p className="index-note">Edition {edition.editionNumber} · {formatDate(edition.date)}</p></div></aside>
+    ))}</ol>{questions.length === 0 && <p>Collecting evidence. No question has met the editorial threshold yet.</p>}<p className="index-note">Edition {edition.editionNumber} · {edition.cadence === "weekly" ? `${formatDate(edition.weekStart, true)} to ${formatDate(edition.weekEnd, true)}` : formatDate(edition.date)}</p></div></aside>
   </section>;
 }
 
@@ -267,14 +270,14 @@ export function GridPrototype() {
   if (!edition) return <main className="grid-prototype prototype-loading"><p>{loadError ? "Today’s edition is unavailable. Refresh to try again." : "Loading today’s edition…"}</p></main>;
 
   const questions = edition.questions || [];
-  const summary = edition.summary?.match(/[^.!?]+[.!?]+(?=\s|$)/g)?.[0]?.trim() || edition.summary;
+  const summary = edition.summary;
   const headline = edition.headline || (edition.summary?.startsWith("AI is no longer just speeding design")
     ? <>Design must <em>prove its work.</em></>
     : <>Today’s design questions, <em>in focus.</em></>);
 
   return (
     <div ref={shellRef} className={`prototype-shell ${route.name === "toolbox" ? "is-toolbox" : route.name === "today" ? "is-today" : ""}`}>
-      <a className="prototype-skip" href={route.name === "today" ? "#prototype-question-01" : route.name === "archive" ? "#prototype-archive-index" : "#prototype-our-toolbox-title"} onClick={readingDesk && route.name === "archive" ? (event) => {
+      <a className="prototype-skip" href={route.name === "today" ? (questions.length ? `#prototype-question-${questions[0].id}` : "#today") : route.name === "archive" ? "#prototype-archive-index" : "#prototype-our-toolbox-title"} onClick={readingDesk && route.name === "archive" ? (event) => {
         event.preventDefault();
         const target = document.querySelector("#desk-question-title") || document.querySelector("#prototype-archive-index");
         target?.focus({ preventScroll: true });
@@ -284,7 +287,7 @@ export function GridPrototype() {
           window.scrollTo({ top: Math.max(0, desk.getBoundingClientRect().top + window.scrollY - headerHeight), behavior: "instant" });
         }
       } : undefined}>Skip to main content</a>
-      <GridHeader date={edition.date} route={route.name} />
+      <GridHeader date={edition.lastCollectedAt?.slice(0,10) || edition.date} route={route.name} />
       <main className="grid-prototype" aria-label={`design / daily ${route.name}`}>
         <div className="grid-content">
           {route.name === "archive" && (readingDesk

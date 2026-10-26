@@ -88,7 +88,7 @@ export async function sendToolboxEmail(message,env=process.env,request=fetch,onS
   await onSending(); // Persist before the first POST; a failed checkpoint prevents sending.
   let response;
   try{
-    response=await request('https://api.brevo.com/v3/smtp/email',{method:'POST',redirect:'error',headers:{'api-key':BREVO_API_KEY,'content-type':'application/json',accept:'application/json'},body:JSON.stringify({sender:{email:TOOLBOX_EMAIL_FROM,name:'design / daily'},replyTo:{email:TOOLBOX_EMAIL_FROM},to:to.map(email=>({email})),subject:message.subject,...(message.html?{htmlContent:message.html}:{textContent:message.text}),tags:['design-daily-toolbox'],headers:{'Idempotency-Key':`toolbox-${key}`}}),signal:AbortSignal.timeout(20000)});
+    response=await request('https://api.brevo.com/v3/smtp/email',{method:'POST',redirect:'error',headers:{'api-key':BREVO_API_KEY,'content-type':'application/json',accept:'application/json'},body:JSON.stringify({sender:{email:TOOLBOX_EMAIL_FROM,name:'design / daily'},replyTo:{email:TOOLBOX_EMAIL_FROM},to:to.map(email=>({email})),subject:message.subject,...(message.html?{htmlContent:message.html}:{textContent:message.text}),tags:[message.kind==='weekly'?'design-daily-weekly':'design-daily-toolbox'],headers:{'Idempotency-Key':`toolbox-${key}`}}),signal:AbortSignal.timeout(20000)});
   }catch{throw Object.assign(new Error('Brevo acceptance is uncertain. Check transactional logs before retrying.'),{ambiguous:true});}
   if(response.status!==201){
     const rejected=[400,401,402,403,404,405,413,415,422,429].includes(response.status);

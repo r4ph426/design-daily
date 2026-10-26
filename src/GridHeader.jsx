@@ -16,7 +16,7 @@ function headerDate(date, compact = false) {
 }
 
 const descriptors = {
-  today: "A daily editorial source of truth for design teams",
+  today: "A weekly edition, developing through the week",
   archive: "A searchable record of questions shaping design",
   toolbox: "An editorial guide to tools for design teams",
   privacy: "",
@@ -37,7 +37,7 @@ export function GridHeader({ date, route, hidden = false, quiet = false, onRevea
     return()=>{document.removeEventListener('pointerdown',outside);document.removeEventListener('keydown',key);};
   },[moreOpen]);
   const destinations=[
-    {name:'today',label:'Today',href:editorialHref()},
+    {name:'today',label:'This week',href:editorialHref()},
     {name:'archive',label:'Archive',href:editorialHref('/archive')},
     {name:'toolbox',label:'Toolbox',href:editorialHref('/toolbox')},
     {name:'inspiration',label:'What I came across',href:`${import.meta.env.BASE_URL}#/inspiration`},

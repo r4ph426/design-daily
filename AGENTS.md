@@ -172,3 +172,16 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - On 8 October 2026, use shared coral for Toolbox row numerals. Make the filtered collection count an oversized Neue Reckless Light Italic coral numeral with an editorial tools label, a combined four-module desktop/tablet panel containing the numeral, tools label and collection description in that order, and higher alignment, following the Archive count reference. Keep numbers independent of internal IDs. The user approved committing and publishing this refinement to main on 8 October 2026.
 
 - Toolbox opening shows up to three dated findings from today and the preceding six Berlin calendar days. Keep discovery dates separate from review dates, preserve editorial order for same-day findings, exclude expired/future/undated findings, and never promote copy edits or repeat reviews into discoveries. New collection entries may enter the findings history; substantive updates to existing tools require an explicit dated editorial finding. Do not pad the opening with old tools. The user approved committing and publishing this revision to main on 8 October 2026.
+
+
+## Weekly personal newspaper direction, 26 October 2026
+
+- The primary audience is Raphael using design / daily as a personal daily newsletter/newspaper alternative. This supersedes the previous team-of-20 assumption as the main product use case.
+- Replace forced daily editions with one developing weekly edition. Collect signals through the weekdays and update existing questions when evidence adds meaningful context or changes the answer. Preserve dated answer history, evidence and stable question/thread identities.
+- Choose by importance, up to four questions, without category quotas or weak filler. Prefer independent sources and original evidence; explicitly qualify a developing question based on one source. Distinguish supporting, challenging and background evidence.
+- The user explicitly authorized putting weekly publishing and Friday email into operation now, while the larger UX is refined separately. The first email is Friday, 30 October 2026, using the same recipient as Toolbox. The user selected Friday morning; 08:00 Europe/Berlin is the implementation default communicated in this chat.
+- Friday mail summarizes what happened, the important questions, the current answers and how their context developed during the week. Include open questions and actual collection cutoff; never invent a resolution or claim inbox delivery from provider acceptance.
+- Missing popularity data must never be replaced with generated team-save or recent-popularity numbers. Personal bookmarks and editorial importance remain separate.
+- Keep the established visual system and shared components for the operational release. The larger changes to opening density, contribution placement and Archive orientation require their own reviewable UX prototype.
+
+- The user selected a 5–9 minute weekday reading experience, between a quick update and a long newspaper read. Support orientation, current answers and optional deeper source notes without inflating weak content.

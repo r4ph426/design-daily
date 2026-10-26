@@ -54,7 +54,7 @@ function discoverFeedUrl(html, pageUrl) {
   try { return new URL(match[1], pageUrl).toString(); } catch { return ""; }
 }
 
-async function crawlSource(source) {
+export async function crawlSource(source) {
   if (source.feedUrl) {
     try {
       const feedItems = parseFeed(await fetchText(source.feedUrl), source);
@@ -98,11 +98,17 @@ async function gmailJson(pathname, accessToken) {
   return response.json();
 }
 
-async function readNewsletterInbox() {
+export async function readNewsletterInbox() {
   const accessToken = await getGoogleAccessToken();
   const query = encodeURIComponent(process.env.GMAIL_QUERY || "newer_than:2d -in:spam -in:trash");
-  const listing = await gmailJson(`messages?q=${query}&maxResults=100`, accessToken);
-  const messages = listing.messages ?? [];
+  const messages = [];
+  let pageToken = "";
+  do {
+    const listing = await gmailJson(`messages?q=${query}&maxResults=100${pageToken ? `&pageToken=${encodeURIComponent(pageToken)}` : ""}`, accessToken);
+    messages.push(...(listing.messages ?? []));
+    pageToken = listing.nextPageToken || "";
+    if (pageToken && messages.length >= 500) throw new Error("Newsletter discovery exceeded its bounded page limit.");
+  } while (pageToken);
   const output = [];
   for (let index = 0; index < messages.length; index += 8) {
     const batch = messages.slice(index, index + 8);
@@ -117,7 +123,7 @@ function extractIssueUrl(issue) {
   return match ? canonicalUrl(match[0]) : "";
 }
 
-async function readSharedArticles() {
+export async function readSharedArticles() {
   const repository = process.env.GITHUB_REPOSITORY || "r4ph426/design-daily";
   const headers = { accept: "application/vnd.github+json", "user-agent": userAgent };
   if (process.env.GITHUB_TOKEN) headers.authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
@@ -143,7 +149,7 @@ async function readSharedArticles() {
   }
 }
 
-async function markSharedArticlesProcessed(sharedArticles) {
+export async function markSharedArticlesProcessed(sharedArticles) {
   const issueNumbers = sharedArticles.map((article) => article.issueNumber).filter(Boolean);
   if (!issueNumbers.length || !process.env.GITHUB_TOKEN) return;
   const repository = process.env.GITHUB_REPOSITORY || "r4ph426/design-daily";
@@ -278,7 +284,7 @@ async function readJson(filePath, fallback) {
   try { return JSON.parse(await readFile(filePath, "utf8")); } catch { return fallback; }
 }
 
-async function writeEdition(edition) {
+export async function writeEdition(edition) {
   await mkdir(archivePath, { recursive: true });
   const previous = await readJson(latestPath, null);
   if (previous?.date && previous.date !== edition.date) {

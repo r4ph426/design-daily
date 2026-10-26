@@ -64,15 +64,6 @@ function sourceCountLabel(record) {
   return `${count} ${count === 1 ? "source" : "sources"}`;
 }
 
-function stableNumber(value, minimum, maximum) {
-  let hash = 2166136261;
-  for (const character of value) {
-    hash ^= character.charCodeAt(0);
-    hash = Math.imul(hash, 16777619);
-  }
-  return minimum + (Math.abs(hash) % (maximum - minimum + 1));
-}
-
 function inferSkillLabels(question) {
   const declared = Array.isArray(question.skillLabels)
     ? question.skillLabels.filter((label) => skillNames.has(label))
@@ -101,11 +92,11 @@ export function questionRoute(record) {
 }
 
 export function normalizeArchiveDays(archiveDays) {
-  return archiveDays.flatMap((day) => day.questions.map((question, index) => {
+  return archiveDays.flatMap((day) => [...day.questions, ...(day.retiredQuestions || [])].filter((question,index,all)=>all.findIndex(q=>q.slug===question.slug)===index).map((question, index) => {
     const slug = question.slug || `question-${index + 1}`;
     const key = `${day.dateISO}:${slug}`;
-    const allTimeSaves = question.popularity?.allTimeSaves ?? stableNumber(key, 4, 38);
-    const recent30DaySaves = question.popularity?.recent30DaySaves ?? stableNumber(`${key}:recent`, 0, 5);
+    const allTimeSaves = question.popularity?.allTimeSaves ?? null;
+    const recent30DaySaves = question.popularity?.recent30DaySaves ?? null;
     return {
       ...question,
       answerText: textFromNode(question.answer).replaceAll("**", ""),
@@ -150,6 +141,7 @@ export function readHashRoute() {
 }
 
 function Popularity({ record, detailed = false }) {
+  if (!Number.isInteger(record.popularity.allTimeSaves)) return null;
   const recent = record.popularity.recent30DaySaves >= RECENT_POPULARITY.minimumSaves;
   return (
     <div className="archive-popularity">

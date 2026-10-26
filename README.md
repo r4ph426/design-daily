@@ -1,6 +1,6 @@
 # design / daily
 
-`design / daily` is a shared daily read for a UX and UI design team. It combines a dedicated newsletter-only Gmail inbox with selected web feeds, ranks the newest material, and publishes four cited editorial questions each morning.
+`design / daily` is a personal newspaper alternative for an experienced designer. One weekly edition develops through weekday evidence collection, with up to four important questions and a Friday morning email. Importance and independent evidence take priority over volume and category coverage.
 
 ## Publication architecture
 
@@ -119,3 +119,20 @@ The existing Gmail token is read-only and is not used for sending. Never put the
 Run the workflow manually from Actions → Refresh and publish Toolbox → Run workflow after configuring email to test the complete publication and delivery path. Local checks: `node --test tests/toolbox*.test.mjs`, `node scripts/toolbox-crawl.mjs --dry-run`. Automatic source reviews are fallible; corrections should be made in `data/toolbox.json`, or the linked publication commit can be reverted.
 
 Preview email states without sending: `node scripts/toolbox-email-preview.mjs`. Open `.private/toolbox-email-preview/index.html` locally; this directory remains private and is not deployed.
+
+
+## Weekly editorial operation (26 October 2026)
+
+The publication workflow now calls `scripts/weekly-crawl.mjs`, rather than generating four fresh questions daily. Collection runs on weekdays at 01:17 Europe/Berlin, plus Friday at 07:17 before the 08:00 summary. A push bootstraps the current week only when a weekly edition does not yet exist. GitHub scheduling may be delayed; these are scheduled times, not inbox delivery guarantees.
+
+`public/data/latest.json` remains compatible with the existing reader and now carries weekly dates, stable thread identities, evidence limits and dated history. Weekly snapshots live in `public/data/weeks/`. The editor-only `data/weekly-inputs/` inventory stores verified public destinations and metadata, never inbox bodies, Gmail IDs, recipient addresses or unresolved newsletter tracking URLs. Each run refetches inspectable public article text with the existing bounded DNS-pinned transport. Feed/homepage summaries alone cannot establish a new question. Source outages retain earlier evidence; they do not silently erase citations. A ten-day discovery lookback allows weekend and delayed signals to be considered, with actual publication dates retained. Older material must be identified as context.
+
+Questions are selected by importance, up to four, without a category quota. A single important original source may start a developing question, with explicit limits; multiple articles from one publisher must not be treated as corroborating consensus. Answer changes require a new cited source or an explicit correction. Existing question slugs and thread IDs persist, omitted questions remain available as archived records, and no-change runs do not append fictional development events. Model-generated interpretations remain fallible; validated passage IDs establish provenance, not semantic correctness.
+
+`Send the Friday weekly summary` runs at 08:00 Europe/Berlin on Fridays, beginning 30 October 2026. It reuses the existing `BREVO_API_KEY`, `TOOLBOX_EMAIL_FROM` and `TOOLBOX_EMAIL_TO` secrets in the github-pages environment. It freezes the exact weekly snapshot, reports its collection cutoff and source limitations, and sends current answers, their recorded evolution, work implications, unanswered points and every cited article. Fewer than four questions are explained rather than padded. Preview without sending: `node scripts/weekly-email.mjs`.
+
+The independent `data/weekly-email-state.json` delivery ledger uses the week-start date as its key. A checkpoint is pushed before the provider request and after acknowledgement. Accepted weeks are never resent automatically; sending/uncertain states require reconciliation against Brevo transactional logs. Provider acceptance does not prove inbox delivery. The mail workflow cannot send outside Friday or without a durable Git checkpoint. It retains the exact preview as a workflow artifact for 14 days. Toolbox publication and its Monday email remain a separate workflow.
+
+Checks: `node --test tests/weekly.test.mjs`, crawler/security regressions, and the production build. The larger UX review is recorded in the review artifacts; the existing visual composition is preserved for a separate redesign decision.
+
+Targeted research uses at most three web-search calls to investigate evidence gaps and independent counterarguments. Only actual tool citation annotations become candidate URLs. Each article is fetched separately through the bounded public transport before synthesis; generated URLs and search snippets cannot become reporting. Research failure is disclosed and never replaces evidence with fabricated context. Publication dates missing from original metadata remain unknown. The weekday reading target is 5–9 minutes, with deeper source notes optional.

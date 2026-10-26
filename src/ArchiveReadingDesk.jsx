@@ -1,3 +1,4 @@
+import {WeeklyHistory} from "./WeeklyHistory.jsx";
 import { safeExternalHref } from "../shared/public-url.mjs";
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { ArrowLeft, ArrowRight, ArrowUpRight, BookmarkSimple, Check, LinkSimple, MagnifyingGlass, X } from "./icons/index.jsx";
@@ -343,9 +344,9 @@ export function ArchiveReadingDesk({ records, ready, bookmarks, onBookmark, with
             <div className="desk-skills">{selected.skillLabels.map((label) => <span key={label}>{label}</span>)}</div>
           </header>
           <section className="desk-answer" aria-labelledby="desk-answer-title">
-            <h3 id="desk-answer-title">Why it matters</h3>
+            <h3 id="desk-answer-title">Current answer</h3>
             <p><HighlightedText text={selected.answer ?? selected.answerText} as="em" /></p>
-            <div className="desk-answer-actions"><button className="desk-text-control" type="button" aria-pressed={Boolean(bookmarks[selected.key])} onClick={() => onBookmark(selected.key)}><BookmarkSimple size={18} weight={bookmarks[selected.key] ? "fill" : "regular"} aria-hidden="true" />{bookmarks[selected.key] ? "Bookmarked" : "Bookmark"}</button><span>{selected.popularity.allTimeSaves} team saves</span></div>
+            {selected.why && <><h3>Why it matters</h3><p>{selected.why}</p></>}{selected.uncertainty && <><h3>Still open</h3><p>{selected.uncertainty}</p></>}<WeeklyHistory question={selected}/><div className="desk-answer-actions"><button className="desk-text-control" type="button" aria-pressed={Boolean(bookmarks[selected.key])} onClick={() => onBookmark(selected.key)}><BookmarkSimple size={18} weight={bookmarks[selected.key] ? "fill" : "regular"} aria-hidden="true" />{bookmarks[selected.key] ? "Bookmarked" : "Bookmark"}</button>{Number.isInteger(selected.popularity.allTimeSaves) && <span>{selected.popularity.allTimeSaves} team saves</span>}</div>
           </section>
           <section className="desk-signals" aria-labelledby="desk-signals-title">
             <h3 id="desk-signals-title">Signals &amp; Sources</h3>
@@ -391,7 +392,7 @@ export function ArchiveReadingDesk({ records, ready, bookmarks, onBookmark, with
             <div className="desk-result-copy">
               <h2>{mobile ? <button className="desk-question-toggle" type="button" aria-expanded={record.key === selectedKey} aria-controls={`inline-${record.key}`} onClick={(event) => openQuestion(event, record, true)}><span>{record.question}</span><span aria-hidden="true">{record.key === selectedKey ? "−" : "+"}</span></button> : <a href={hashFor(route, record)} aria-current={record.key === selectedKey ? "true" : undefined} onClick={(event) => openQuestion(event, record, true)}><span>{record.question}</span><ArrowRight size={16} aria-hidden="true" /></a>}</h2>
               <p>{record.editionLabel} · {record.dateLabel}</p>
-              <div className="desk-result-meta"><span>{record.signals?.length || 0} {record.signals?.length === 1 ? "source" : "sources"} · {record.popularity.allTimeSaves} team saves</span><button type="button" aria-label={`${bookmarks[record.key] ? "Remove bookmark for" : "Bookmark"} ${record.archiveReference}`} aria-pressed={Boolean(bookmarks[record.key])} onClick={() => onBookmark(record.key)}><BookmarkSimple size={18} weight={bookmarks[record.key] ? "fill" : "regular"} aria-hidden="true" /></button></div>
+              <div className="desk-result-meta"><span>{record.signals?.length || 0} {record.signals?.length === 1 ? "source" : "sources"}{Number.isInteger(record.popularity.allTimeSaves) && ` · ${record.popularity.allTimeSaves} team saves`}</span><button type="button" aria-label={`${bookmarks[record.key] ? "Remove bookmark for" : "Bookmark"} ${record.archiveReference}`} aria-pressed={Boolean(bookmarks[record.key])} onClick={() => onBookmark(record.key)}><BookmarkSimple size={18} weight={bookmarks[record.key] ? "fill" : "regular"} aria-hidden="true" /></button></div>
               {record.popularity.recent30DaySaves >= RECENT_POPULARITY.minimumSaves && <small className="desk-recent">Popular recently · {record.popularity.recent30DaySaves} in 30 days</small>}
             </div>
             {mobile && <div className="desk-inline-reader" id={`inline-${record.key}`} hidden={record.key !== selectedKey}>{record.key === selectedKey && reader}</div>}

@@ -4,7 +4,9 @@
     "url": "https://www.figma.com/release-notes/",
     "feedUrl": "https://www.figma.com/release-notes/feed/atom.xml",
     "category": "Process",
-    "tags": ["UI"]
+    "tags": [
+      "UI"
+    ]
   },
   {
     "name": "UX Collective",
@@ -18,13 +20,44 @@
     "url": "https://alistapart.com/",
     "feedUrl": "https://alistapart.com/main/feed/",
     "category": "Process",
-    "tags": ["UI"]
+    "tags": [
+      "UI"
+    ]
   },
   {
     "name": "It’s Nice That",
     "url": "https://www.itsnicethat.com/",
     "feedUrl": "https://www.itsnicethat.com/articles.atom",
     "category": "Culture",
-    "tags": ["Culture"]
+    "tags": [
+      "Culture"
+    ]
+  },
+  {
+    "name": "Smashing Magazine",
+    "url": "https://www.smashingmagazine.com/",
+    "feedUrl": "https://www.smashingmagazine.com/feed/",
+    "category": "UI",
+    "tags": [
+      "UX"
+    ]
+  },
+  {
+    "name": "GOV.UK Design Notes",
+    "url": "https://designnotes.blog.gov.uk/",
+    "feedUrl": "https://designnotes.blog.gov.uk/feed/",
+    "category": "UX",
+    "tags": [
+      "Process"
+    ]
+  },
+  {
+    "name": "W3C",
+    "url": "https://www.w3.org/blog/",
+    "feedUrl": "https://www.w3.org/blog/feed/",
+    "category": "UI",
+    "tags": [
+      "Process"
+    ]
   }
 ]

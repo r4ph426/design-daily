@@ -118,6 +118,7 @@ export function parseFeed(xml, source, now = new Date()) {
       excerpt: htmlToText(description).slice(0, 1800),
       url: canonicalUrl(linkFromEntry(block)),
       publishedAt: normalizeDate(published, fallbackDate),
+      dateKnown: Number.isFinite(Date.parse(htmlToText(published))),
     };
     return { ...item, id: itemId(item) };
   }).filter((item) => item.title && item.url);

@@ -1,0 +1,52 @@
+name: Send the Friday weekly summary
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/weekly-email.yml'
+      - 'scripts/weekly-email.mjs'
+      - 'scripts/lib/weekly*.mjs'
+  schedule:
+    - cron: "0 8 * * 5"
+      timezone: "Europe/Berlin"
+  workflow_dispatch:
+concurrency:
+  group: design-daily-pages
+  cancel-in-progress: false
+permissions:
+  contents: write
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment: github-pages
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+      - name: Test the weekly review and mail boundaries
+        run: node --test tests/weekly*.test.mjs
+      - name: Verify the existing sending configuration without sending
+        env:
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+          TOOLBOX_EMAIL_FROM: ${{ secrets.TOOLBOX_EMAIL_FROM || vars.TOOLBOX_EMAIL_FROM || 'hello@ra-re.agency' }}
+          TOOLBOX_EMAIL_TO: ${{ secrets.TOOLBOX_EMAIL_TO }}
+        run: node scripts/weekly-email.mjs --check
+      - name: Send the frozen weekly summary
+        if: github.event_name != 'push'
+        env:
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+          TOOLBOX_EMAIL_FROM: ${{ secrets.TOOLBOX_EMAIL_FROM || vars.TOOLBOX_EMAIL_FROM || 'hello@ra-re.agency' }}
+          TOOLBOX_EMAIL_TO: ${{ secrets.TOOLBOX_EMAIL_TO }}
+          WEEKLY_EMAIL_PERSIST_GIT: 'true'
+        run: node scripts/weekly-email.mjs --send
+      - name: Retain the exact email for inspection
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: weekly-email-preview
+          path: .private/weekly-email/
+          include-hidden-files: true
+          if-no-files-found: ignore
+          retention-days: 14

@@ -1,4 +1,4 @@
-name: Publish design daily
+name: Collect and publish the weekly edition
 
 on:
   push:
@@ -6,6 +6,8 @@ on:
   schedule:
     # Leave room for delayed Actions scheduling so the edition lands before 08:00.
     - cron: "17 1 * * 1-5"
+      timezone: "Europe/Berlin"
+    - cron: "17 7 * * 5"
       timezone: "Europe/Berlin"
   workflow_dispatch:
 
@@ -44,28 +46,26 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Test crawler and security boundaries
-        run: node --test tests/crawler.test.mjs tests/article-intake.test.mjs tests/security.test.mjs tests/inspiration*.test.mjs
+        run: node --test tests/crawler.test.mjs tests/article-intake.test.mjs tests/security.test.mjs tests/weekly*.test.mjs tests/inspiration*.test.mjs
 
-      - name: Crawl Gmail and the web
-        if: github.event_name != 'push'
+      - name: Collect evidence and update the weekly questions
         env:
           GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
           GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
           GOOGLE_REFRESH_TOKEN: ${{ secrets.GOOGLE_REFRESH_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-5.4-mini' }}
-          GMAIL_QUERY: ${{ vars.GMAIL_QUERY || 'newer_than:2d -in:spam -in:trash' }}
+          GMAIL_QUERY: ${{ vars.GMAIL_QUERY || 'newer_than:7d -in:spam -in:trash' }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: pnpm run crawl
+        run: node scripts/weekly-crawl.mjs ${{ github.event_name == 'push' && '--bootstrap-only' || '' }}
 
       - name: Save the generated edition
-        if: github.event_name != 'push'
         run: |
           git config user.name "design-daily bot"
           git config user.email "design-daily-bot@users.noreply.github.com"
-          git add public/data
+          git add public/data data/weekly-inputs
           if ! git diff --cached --quiet; then
-            git commit -m "Publish daily edition"
+            git commit -m "Update the weekly edition"
             git push
           fi
 
