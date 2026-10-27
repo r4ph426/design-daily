@@ -30,7 +30,7 @@ jobs:
   build-and-publish:
     runs-on: ubuntu-latest
     environment:
-      name: github-pages
+      name: ${{ inputs.validate_only && 'weekly-review-validation' || 'github-pages' }}
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Check out the repository
