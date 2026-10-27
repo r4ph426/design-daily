@@ -93,16 +93,16 @@ test('generation schema constrains category tags to the same four-value vocabula
  assert.deepEqual(weeklySchema.properties.questions.items.properties.tags.items.enum,['UI','UX','Process','Culture']);
 });
 
-test('invalid unchanged review is repaired with feedback before publication',async()=>{
+test('invalid answer-change declaration is repaired with feedback before publication',async()=>{
  const {reviewWithRetry}=await import('../scripts/lib/weekly-review.mjs');
  const first=initial(),snapshot=structuredClone(first),feedback=[],warnings=[];
- const invalid={...proposal(),existingId:'01',change:'Unchanged',answer:'An unsupported stylistic rewrite.'};
+ const invalid={...proposal(),existingId:'01',change:'Evidence added',answer:'An unsupported stylistic rewrite.'};
  const repaired={...proposal(),existingId:'01',change:'Unchanged',changeReason:''};
  const next=await reviewWithRetry(first,[source],tuesday,async repair=>{
    feedback.push(repair);return JSON.stringify(review(feedback.length===1?invalid:repaired));
  },{warn:message=>warnings.push(message)});
  assert.equal(feedback.length,2);assert.equal(feedback[0],null);
- assert.match(feedback[1].validationError,/Question 01; changed fields: answer; new evidence: false/);
+ assert.match(feedback[1].validationError,/Changed answers must be explicitly identified/);
  assert.deepEqual(feedback[1].rejectedReview,review(invalid));
  assert.equal(next.questions[0].answer,first.questions[0].answer);
  assert.equal(next.revision,first.revision);assert.deepEqual(first,snapshot);
@@ -112,7 +112,7 @@ test('invalid unchanged review is repaired with feedback before publication',asy
 test('repair can add verified evidence with an explicit dated answer revision',async()=>{
  const {reviewWithRetry}=await import('../scripts/lib/weekly-review.mjs');
  const first=initial(),other=makeSource('b','two.example');let calls=0;
- const p={...proposal(),existingId:'01',change:'Unchanged',answer:'The answer is now narrower.',signals:[...proposal().signals,{...proposal().signals[0],sourceId:'b'}]};
+ const p={...proposal(),existingId:'01',change:'Evidence added',answer:'The answer is now narrower.',signals:[...proposal().signals,{...proposal().signals[0],sourceId:'b'}]};
  const next=await reviewWithRetry(first,[source,other],tuesday,async()=>{
    calls++;return JSON.stringify(review(calls===1?p:{...p,change:'Answer revised',changeReason:'Independent evidence narrows the conclusion.'}));
  },{warn:()=>{}});
@@ -171,12 +171,34 @@ test('unchanged text with additional citations is deterministically recorded as 
  assert.equal(q.publisherCount,2);assert.equal(q.history.length,2);assert.equal(q.lastUpdatedAt,tuesday.toISOString());
 });
 
-test('evidence classification does not bypass passage validation or unchanged text checks',async()=>{
+test('normalization does not bypass passage validation or undeclared answer revisions',async()=>{
  const {reviewWithRetry}=await import('../scripts/lib/weekly-review.mjs');
  const first=initial(),other=makeSource('b','two.example');
  for(const mode of ['invalid-passage','text-drift']){
    const p={...proposal(),existingId:'01',change:'Unchanged',signals:[...proposal().signals,{...proposal().signals[0],sourceId:'b'}]};
-   if(mode==='invalid-passage')p.signals[1].passageId='invented';else p.answer='An unsupported rewrite.';
-   await assert.rejects(()=>reviewWithRetry(first,[source,other],tuesday,async()=>JSON.stringify(review(p)),{warn:()=>{}}),mode==='invalid-passage'?/verified source passage/:/unchanged question cannot silently change/);
+   if(mode==='invalid-passage')p.signals[1].passageId='invented';else {p.answer='An unsupported rewrite.';p.change='Evidence added';}
+   await assert.rejects(()=>reviewWithRetry(first,[source,other],tuesday,async()=>JSON.stringify(review(p)),{warn:()=>{}}),mode==='invalid-passage'?/verified source passage/:/Changed answers must be explicitly identified/);
  }
+});
+
+test('unchanged operation retains stored text and existing notes despite model drift',async()=>{
+ const {reviewWithRetry}=await import('../scripts/lib/weekly-review.mjs');
+ const first=initial(),p={...proposal(),existingId:'01',change:'Unchanged',uncertainty:'A newly rewritten uncertainty.',answer:'A stylistic answer rewrite.'};
+ p.signals[0].happened='Rewritten source note.';
+ const next=await reviewWithRetry(first,[source],tuesday,async()=>JSON.stringify(review(p)),{warn:()=>{}});
+ assert.equal(next.questions[0].uncertainty,first.questions[0].uncertainty);
+ assert.equal(next.questions[0].answer,first.questions[0].answer);
+ assert.equal(next.questions[0].signals[0].happened,first.questions[0].signals[0].happened);
+ assert.equal(next.questions[0].history.length,first.questions[0].history.length);
+ assert.equal(next.questions[0].lastUpdatedAt,first.questions[0].lastUpdatedAt);
+ assert.equal(next.revision,first.revision);
+});
+
+test('valid repeated citations count once while an invalid repeated passage still fails closed',async()=>{
+ const {reviewWithRetry}=await import('../scripts/lib/weekly-review.mjs');
+ const p=proposal();p.signals.push({...p.signals[0],happened:'Duplicate note.'});
+ const next=await reviewWithRetry(null,[source],monday,async()=>JSON.stringify(review(p)),{warn:()=>{}});
+ assert.equal(next.questions[0].signals.length,1);assert.equal(next.questions[0].counts.total,1);
+ p.signals[1].passageId='invented';
+ await assert.rejects(()=>reviewWithRetry(null,[source],monday,async()=>JSON.stringify(review(p)),{warn:()=>{}}),/verified source passage/);
 });

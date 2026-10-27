@@ -8,6 +8,7 @@ import {articleText,mergeInventory,passages,publisher,weeklySchemaForSources,wee
 
 const read=async(file,fallback)=>{try{return JSON.parse(await readFile(file,'utf8'));}catch(error){if(error.code==='ENOENT')return fallback;throw error;}};
 async function main(){
+  const dryRun=process.argv.includes('--dry-run');
   const now=new Date(),window=weekWindow(now),latest=await read('public/data/latest.json',null);
   if(process.argv.includes('--bootstrap-only')&&latest?.cadence==='weekly')return;
   if([0,6].includes(window.weekday))return;
@@ -48,6 +49,7 @@ async function main(){
   const unavailable=selected.length-verified.length;
   if(unavailable)warnings.push(`${unavailable} candidate pages could not provide enough inspectable public article text. They were not used as new evidence.`);
   if(!verified.length)throw new Error('No inspectable public articles were available. Keeping the existing edition.');
+  let generationAttempt=0;
   const edition=await reviewWithRetry(existing||latest,verified,now,async repair=>{
     const response=await fetch('https://api.openai.com/v1/responses',{
       method:'POST',headers:{authorization:`Bearer ${process.env.OPENAI_API_KEY}`,'content-type':'application/json'},
@@ -68,6 +70,10 @@ async function main(){
     if(!response.ok)throw new Error(`Weekly review failed (HTTP ${response.status}); previous edition retained.`);
     const output=extractResponseText(await response.json());
     if(!output)throw new Error('Weekly review returned no usable output.');
+    if(dryRun){
+      await mkdir('.private/weekly-review',{recursive:true});
+      await writeFile(`.private/weekly-review/attempt-${++generationAttempt}.json`,output+'\n');
+    }
     return output;
   });
   if(!existing&&latest?.date===window.start){
@@ -75,6 +81,12 @@ async function main(){
     edition.retiredQuestions=latest.questions.filter(q=>!edition.questions.some(active=>active.slug===q.slug));
   }
   edition.sourceCount=verified.length;edition.webSourceCount=configured.length;edition.teamContributionCount=shared.length;edition.sourceWarnings=warnings;
+  if(dryRun){
+    await mkdir('.private/weekly-review',{recursive:true});
+    await writeFile('.private/weekly-review/edition.json',JSON.stringify(edition,null,2)+'\n');
+    console.log(`Validation succeeded: weekly edition ${edition.editionNumber}, ${edition.questions.length} questions, ${verified.length} verified articles. No published files, submissions or deployment changed.`);
+    return;
+  }
   const safeInventory=mergeInventory([],verified,now); // Never persist newsletter redirect URLs or inbox text.
   await mkdir('data/weekly-inputs',{recursive:true});await mkdir('public/data/weeks',{recursive:true});
   await writeFile(inventoryFile,JSON.stringify(safeInventory,null,2)+'\n');
