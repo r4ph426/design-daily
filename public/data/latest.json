@@ -6,8 +6,8 @@
   "date": "2026-10-26",
   "editionNumber": "032",
   "displayDate": "Week of 2026-10-26",
-  "headline": "This week, design judgment needs **evidence, structure and attention**",
-  "summary": "Three developing questions connect workflow design, useful AI assistance and creative judgment. We are collecting stronger evidence through the week; older research is marked as context, and a peripheral standards question has been set aside.",
+  "headline": "This week: **safer icons, stranger systems** and tighter taste",
+  "summary": "The week holds two solid product questions and one lighter culture signal. The strongest evidence still points to AI work as workflow and permissions, plus a reminder that small UI choices can create real confusion, while the culture coverage stays best treated as a useful practice prompt rather than a broad trend.",
   "questions": [
     {
       "id": "01",
@@ -46,7 +46,7 @@
           "changes": "The guide describes workflows as combinations of agents, tools, and control-flow logic, then shows nodes, typed edges, and versioned deployment. It also pushes evaluation, preview, and connector permissions into the build process, which makes the system design concrete.",
           "verdict": "Must read",
           "role": "Supports",
-          "evidence": "Agents and workflows To build useful agents, you create workflows for them."
+          "evidence": "A workflow is a combination of agents, tools, and control-flow logic."
         },
         {
           "source": "developers.openai.com",
@@ -107,19 +107,19 @@
       "why": "When reviewing an AI feature, ask for a task-level comparison with the existing workflow. Measure total effort and outcome quality, including checking or correcting the system.",
       "uncertainty": "The studies concern particular tools, populations and tasks, and the later METR estimates have selection limitations. They do not settle the value of conversational interfaces for design professionals. We need current comparisons in the actual workflow.",
       "counts": {
-        "total": 4,
-        "web": 4,
+        "total": 5,
+        "web": 5,
         "newsletters": 0
       },
       "publisherCount": 2,
       "firstSeen": "2026-10-26",
-      "lastUpdatedAt": "2026-10-26T11:17:24.533589Z",
+      "lastUpdatedAt": "2026-10-27T08:28:52.831Z",
       "signals": [
         {
           "source": "research.google",
           "title": "Take it, Leave it, or Fix it: Measuring Productivity and Trust in Human-AI Collaboration",
           "kind": "Web",
-          "timing": "2024 · Background",
+          "timing": "Date unavailable",
           "publishedAt": null,
           "firstCollectedAt": "2026-10-26T11:11:07.426Z",
           "sourceId": "9437e759a4071268",
@@ -134,7 +134,7 @@
           "source": "research.google",
           "title": "GUIDE: A Benchmark for User Context Understanding and Assistance in GUI Workflow Videos",
           "kind": "Web",
-          "timing": "2026 · Background",
+          "timing": "Date unavailable",
           "publishedAt": null,
           "firstCollectedAt": "2026-10-26T11:11:07.426Z",
           "sourceId": "3253ccbf7d74fa86",
@@ -143,7 +143,22 @@
           "changes": "The benchmark makes context-sensitive assistance a testable design concern. It does not itself establish productivity gains for experts.",
           "verdict": "Must read",
           "role": "Context",
-          "evidence": "To move beyond automation and toward collaboration, GUI agents must understand what users are doing and why."
+          "evidence": "We introduce GUIDE (GUI Understanding, Intent, and Help Decision Evaluation), a benchmark that evaluates AI models on their ability to perceive user behavior, infer intent, and provide assistance in open-ended GUI tasks."
+        },
+        {
+          "source": "research.google",
+          "title": "How Tech Workers Contend with Hazards of Humanlikeness in Generative AI",
+          "kind": "Web",
+          "timing": "Date unavailable",
+          "publishedAt": null,
+          "firstCollectedAt": "2026-10-26T11:11:07.426Z",
+          "sourceId": "e54f537a6bc2ef5c",
+          "url": "https://research.google/pubs/how-tech-workers-contend-with-hazards-of-humanlikeness-in-generative-ai",
+          "happened": "Workers reported an unsettled knowledge environment around humanlike AI.",
+          "changes": "This supports caution about overtrust and assumptions of helpfulness.",
+          "verdict": "Read",
+          "role": "Context",
+          "evidence": "Our findings reveal an unsettled knowledge environment surrounding humanlike generative AI, where workers’ varying perspectives illuminate a range of potential risks for individuals, knowledge work fields, and society."
         },
         {
           "source": "metr.org",
@@ -202,6 +217,20 @@
             "596ebdd94b57eb3b",
             "e47ecbbcc03e514c"
           ]
+        },
+        {
+          "at": "2026-10-27T08:28:52.831Z",
+          "kind": "Evidence added",
+          "reason": "Answer retained verbatim. Added verified citations: https://research.google/pubs/how-tech-workers-contend-with-hazards-of-humanlikeness-in-generative-ai.",
+          "before": "Evaluate the task, the user and the current tool together. Earlier studies show why a universal answer fails: a 2024 Bard study found effects varied by expertise and task, while METR found a slowdown for experienced developers in a specific early-2025 setting. METR’s 2026 follow-up then reported signs of improvement alongside serious measurement limitations. These are background findings, not this week’s discoveries. Compare real task outcomes, including verification and recovery effort, before choosing conversational assistance over direct control. Neither expertise alone nor a favorable benchmark tells us which interface will help in the current product.",
+          "after": "Evaluate the task, the user and the current tool together. Earlier studies show why a universal answer fails: a 2024 Bard study found effects varied by expertise and task, while METR found a slowdown for experienced developers in a specific early-2025 setting. METR’s 2026 follow-up then reported signs of improvement alongside serious measurement limitations. These are background findings, not this week’s discoveries. Compare real task outcomes, including verification and recovery effort, before choosing conversational assistance over direct control. Neither expertise alone nor a favorable benchmark tells us which interface will help in the current product.",
+          "sourceIds": [
+            "9437e759a4071268",
+            "3253ccbf7d74fa86",
+            "e54f537a6bc2ef5c",
+            "596ebdd94b57eb3b",
+            "e47ecbbcc03e514c"
+          ]
         }
       ]
     },
@@ -231,21 +260,6 @@
       "signals": [
         {
           "source": "itsnicethat.com",
-          "title": "More of the same: how creative rituals can help you break free from the idea echo chamber",
-          "kind": "Web",
-          "timing": "14 May 2026 · Background",
-          "publishedAt": null,
-          "firstCollectedAt": "2026-10-26T11:11:07.426Z",
-          "sourceId": "b5b120a0c6af3f4b",
-          "url": "https://www.itsnicethat.com/features/more-of-the-same-creative-routines-in-depth-everyday-edition-140526",
-          "happened": "Creative rituals are framed as a defense of taste and intention.",
-          "changes": "The piece argues that rituals reconnect makers to their own interests and help them resist algorithmic sameness. It repeatedly ties originality to steadiness, reflection, and time, which is useful but still opinion-led.",
-          "verdict": "Read",
-          "role": "Context",
-          "evidence": "I’d argue yes because a creative ritual puts you back in touch with what interests you, away from what you’re told you should be into."
-        },
-        {
-          "source": "itsnicethat.com",
           "title": "Mistakes, chaos and meditation: inside the mind of Bráulio Amado",
           "kind": "Web",
           "timing": "2026-10-26",
@@ -258,6 +272,21 @@
           "verdict": "Must read",
           "role": "Supports",
           "evidence": "Around us there’s architecture, there’s ads, there’s all this stuff that’s so designed… so this practice of looking at the damaged and mundane things that I would usually ignore was like a meditation, in a way, to avoid "
+        },
+        {
+          "source": "itsnicethat.com",
+          "title": "More of the same: how creative rituals can help you break free from the idea echo chamber",
+          "kind": "Web",
+          "timing": "Date unavailable",
+          "publishedAt": null,
+          "firstCollectedAt": "2026-10-26T11:11:07.426Z",
+          "sourceId": "b5b120a0c6af3f4b",
+          "url": "https://www.itsnicethat.com/features/more-of-the-same-creative-routines-in-depth-everyday-edition-140526",
+          "happened": "Creative rituals are framed as a defense of taste and intention.",
+          "changes": "The piece argues that rituals reconnect makers to their own interests and help them resist algorithmic sameness. It repeatedly ties originality to steadiness, reflection, and time, which is useful but still opinion-led.",
+          "verdict": "Read",
+          "role": "Context",
+          "evidence": "Which is why creative rituals feel less like a luxury and more like a kind of defence against the slow erosion of taste, attention, and intention."
         },
         {
           "source": "itsnicethat.com",
@@ -414,16 +443,15 @@
       ]
     }
   ],
-  "generatedAt": "2026-10-26T11:17:24.533589Z",
-  "lastCollectedAt": "2026-10-26T11:17:24.533589Z",
-  "crawlCompletedAt": "12:17",
+  "generatedAt": "2026-10-27T08:28:52.831Z",
+  "lastCollectedAt": "2026-10-27T08:28:52.831Z",
+  "crawlCompletedAt": "09:28",
   "finalizedAt": null,
-  "revision": "468e37bf57b7",
-  "sourceCount": 28,
+  "revision": "813923f44e4f",
+  "sourceCount": 17,
   "webSourceCount": 7,
   "teamContributionCount": 0,
   "sourceWarnings": [
-    "36 candidate pages could not provide enough inspectable public article text. They were not used as new evidence."
-  ],
-  "editorReviewedAt": "2026-10-26T11:17:24.533589Z"
+    "47 candidate pages could not provide enough inspectable public article text. They were not used as new evidence."
+  ]
 }
