@@ -156,3 +156,27 @@ test('citation validation identifies unknown sources and mismatched passage IDs 
  p.signals[0].sourceId='a';p.signals[0].passageId='p99';
  assert.throws(()=>applyWeeklyReview(null,review(p),[source],monday),/passageId "p99".*valid passage IDs: p0/);
 });
+
+test('unchanged text with additional citations is deterministically recorded as evidence added',async()=>{
+ const {reviewWithRetry}=await import('../scripts/lib/weekly-review.mjs');
+ const first=initial(),snapshot=structuredClone(first),other=makeSource('b','two.example');let calls=0;
+ const p={...proposal(),existingId:'01',change:'Unchanged',changeReason:'Nothing changed.',signals:[...proposal().signals,{...proposal().signals[0],sourceId:'b'}]};
+ const input=review(p),inputSnapshot=structuredClone(input);
+ const next=await reviewWithRetry(first,[source,other],tuesday,async()=>{calls++;return JSON.stringify(input);},{warn:()=>{}});
+ assert.equal(calls,1);assert.deepEqual(first,snapshot);assert.deepEqual(input,inputSnapshot);
+ const q=next.questions[0],event=q.history.at(-1);
+ for(const key of ['answer','question','why','uncertainty','editorialTitle'])assert.equal(q[key],first.questions[0][key]);
+ assert.equal(event.kind,'Evidence added');assert.equal(event.before,event.after);
+ assert.ok(event.reason.includes(other.url));assert.ok(!event.reason.includes('Nothing changed'));
+ assert.equal(q.publisherCount,2);assert.equal(q.history.length,2);assert.equal(q.lastUpdatedAt,tuesday.toISOString());
+});
+
+test('evidence classification does not bypass passage validation or unchanged text checks',async()=>{
+ const {reviewWithRetry}=await import('../scripts/lib/weekly-review.mjs');
+ const first=initial(),other=makeSource('b','two.example');
+ for(const mode of ['invalid-passage','text-drift']){
+   const p={...proposal(),existingId:'01',change:'Unchanged',signals:[...proposal().signals,{...proposal().signals[0],sourceId:'b'}]};
+   if(mode==='invalid-passage')p.signals[1].passageId='invented';else p.answer='An unsupported rewrite.';
+   await assert.rejects(()=>reviewWithRetry(first,[source,other],tuesday,async()=>JSON.stringify(review(p)),{warn:()=>{}}),mode==='invalid-passage'?/verified source passage/:/unchanged question cannot silently change/);
+ }
+});
