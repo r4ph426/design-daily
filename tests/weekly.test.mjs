@@ -92,3 +92,52 @@ test('mail preflight checks the configured active sender without sending or expo
 test('generation schema constrains category tags to the same four-value vocabulary',()=>{
  assert.deepEqual(weeklySchema.properties.questions.items.properties.tags.items.enum,['UI','UX','Process','Culture']);
 });
+
+test('invalid unchanged review is repaired with feedback before publication',async()=>{
+ const {reviewWithRetry}=await import('../scripts/lib/weekly-review.mjs');
+ const first=initial(),snapshot=structuredClone(first),feedback=[],warnings=[];
+ const invalid={...proposal(),existingId:'01',change:'Unchanged',answer:'An unsupported stylistic rewrite.'};
+ const repaired={...proposal(),existingId:'01',change:'Unchanged',changeReason:''};
+ const next=await reviewWithRetry(first,[source],tuesday,async repair=>{
+   feedback.push(repair);return JSON.stringify(review(feedback.length===1?invalid:repaired));
+ },{warn:message=>warnings.push(message)});
+ assert.equal(feedback.length,2);assert.equal(feedback[0],null);
+ assert.match(feedback[1].validationError,/Question 01; changed fields: answer; new evidence: false/);
+ assert.deepEqual(feedback[1].rejectedReview,review(invalid));
+ assert.equal(next.questions[0].answer,first.questions[0].answer);
+ assert.equal(next.revision,first.revision);assert.deepEqual(first,snapshot);
+ assert.equal(warnings.length,1);assert.ok(!warnings[0].includes(invalid.answer));
+});
+
+test('repair can add verified evidence with an explicit dated answer revision',async()=>{
+ const {reviewWithRetry}=await import('../scripts/lib/weekly-review.mjs');
+ const first=initial(),other=makeSource('b','two.example');let calls=0;
+ const p={...proposal(),existingId:'01',change:'Unchanged',answer:'The answer is now narrower.',signals:[...proposal().signals,{...proposal().signals[0],sourceId:'b'}]};
+ const next=await reviewWithRetry(first,[source,other],tuesday,async()=>{
+   calls++;return JSON.stringify(review(calls===1?p:{...p,change:'Answer revised',changeReason:'Independent evidence narrows the conclusion.'}));
+ },{warn:()=>{}});
+ assert.equal(calls,2);assert.equal(next.questions[0].history.at(-1).kind,'Answer revised');
+ assert.equal(next.questions[0].history.at(-1).before,first.questions[0].answer);
+ assert.equal(next.questions[0].publisherCount,2);
+});
+
+test('repeated invalid citations stop after three attempts without mutating the edition',async()=>{
+ const {reviewWithRetry}=await import('../scripts/lib/weekly-review.mjs');
+ const first=initial(),snapshot=structuredClone(first);let calls=0;
+ const p={...proposal(),existingId:'01',change:'Unchanged'};p.signals[0].passageId='invented';
+ await assert.rejects(()=>reviewWithRetry(first,[source],tuesday,async()=>{calls++;return JSON.stringify(review(p));},{warn:()=>{}}),/after 3 attempts; previous edition retained.*verified source passage/);
+ assert.equal(calls,3);assert.deepEqual(first,snapshot);
+});
+
+test('malformed JSON is retried without logging output and transport failures are not retried',async()=>{
+ const {reviewWithRetry}=await import('../scripts/lib/weekly-review.mjs');
+ const warnings=[];let calls=0;
+ await reviewWithRetry(null,[source],monday,async repair=>{
+   calls++;if(calls===1)return 'not-json-private-text';
+   assert.equal(repair.validationError,'The review is not valid JSON.');return JSON.stringify(review(proposal()));
+ },{warn:message=>warnings.push(message)});
+ assert.equal(calls,2);assert.ok(!warnings.join('').includes('private-text'));
+ calls=0;
+ await assert.rejects(()=>reviewWithRetry(null,[source],monday,async()=>{calls++;throw new Error('HTTP 429');},{warn:()=>{}}),/HTTP 429/);
+ assert.equal(calls,1);
+});

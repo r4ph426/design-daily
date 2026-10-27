@@ -55,9 +55,10 @@ export function applyWeeklyReview(previous, review, sources, now=new Date()) {
     // Keep earlier evidence when an article becomes temporarily unavailable.
     for(const signal of prior?.signals||[])if(!urls.has(signal.url))signals.push(signal);
     const publishers=new Set(signals.map(s=>publisher(s.url)));
-    const changed=!prior||['answer','question','why','uncertainty','editorialTitle'].some(k=>proposal[k]!==prior[k]);
+    const changedFields=prior?['answer','question','why','uncertainty','editorialTitle'].filter(k=>proposal[k]!==prior[k]):[];
+    const changed=!prior||changedFields.length>0;
     const newEvidence=signals.some(s=>!prior?.signals.some(p=>p.url===s.url));
-    if(prior&&proposal.change==='Unchanged'&&(changed||newEvidence))throw new Error('An unchanged question cannot silently change.');
+    if(prior&&proposal.change==='Unchanged'&&(changed||newEvidence))throw new Error(`An unchanged question cannot silently change. Question ${id}; changed fields: ${changedFields.join(', ')||'none'}; new evidence: ${newEvidence}. Restore unchanged text verbatim or declare and explain a supported material change.`);
     if(prior&&proposal.answer!==prior.answer&&!['Answer revised','Correction'].includes(proposal.change))throw new Error('Changed answers must be explicitly identified.');
     if(prior&&changed&&!newEvidence&&proposal.change!=='Correction')throw new Error('Answer changes need new evidence or an explicit correction.');
     if((changed||newEvidence)&&!proposal.changeReason.trim())throw new Error('Material changes need an explanation.');
