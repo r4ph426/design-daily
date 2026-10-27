@@ -1,17 +1,30 @@
 import {applyWeeklyReview} from './weekly.mjs';
 
-// The model's "Unchanged" can describe an unchanged answer while its citations
-// add evidence. Classify that objective difference before strict validation.
-// Text drift and invalid citations still fail in applyWeeklyReview.
-export function classifyEvidenceAdditions(previous,review,sources) {
-  if(previous?.cadence!=='weekly'||!Array.isArray(review?.questions))return review;
+// "Unchanged" is a carry-forward operation, not a request to rewrite stored
+// editorial text. Repeated valid references count once; invalid references stay
+// in the proposal so the full validator still rejects them.
+export function normalizeWeeklyReview(previous,review,sources) {
+  if(!Array.isArray(review?.questions))return review;
   const sourceMap=new Map(sources.map(s=>[s.id,s]));
   return {...review,questions:review.questions.map(proposal=>{
-    const prior=previous.questions.find(q=>q.id===proposal.existingId);
-    if(!prior||proposal.change!=='Unchanged'||!['answer','question','why','uncertainty','editorialTitle'].every(k=>proposal[k]===prior[k]))return proposal;
-    const added=[...new Map((proposal.signals||[]).map(s=>sourceMap.get(s.sourceId)).filter(s=>s&&!prior.signals.some(p=>p.url===s.url)).map(s=>[s.url,s])).values()];
-    if(!added.length)return proposal;
-    return {...proposal,change:'Evidence added',changeReason:`Answer retained verbatim. Added verified citations: ${added.map(s=>s.url).join(', ')}.`};
+    const prior=previous?.cadence==='weekly'?previous.questions.find(q=>q.id===proposal.existingId):null;
+    const unchanged=prior&&proposal.change==='Unchanged';
+    const seen=new Set();
+    const signals=(proposal.signals||[]).filter(signal=>{
+      const source=sourceMap.get(signal.sourceId),passage=source?.passages.find(p=>p.id===signal.passageId);
+      if(!passage||!source.text.includes(passage.text))return true;
+      if(seen.has(source.url))return false;
+      seen.add(source.url);return true;
+    }).map(signal=>{
+      const source=sourceMap.get(signal.sourceId),old=unchanged&&prior.signals.find(s=>s.url===source?.url);
+      return old?{...signal,happened:old.happened,changes:old.changes,verdict:old.verdict,role:old.role}:signal;
+    });
+    if(!unchanged)return {...proposal,signals};
+    const retained={...proposal,signals,changeReason:''};
+    for(const key of ['answer','question','why','uncertainty','editorialTitle','category','tags','aiLens'])retained[key]=prior[key];
+    const added=[...new Map(signals.map(s=>sourceMap.get(s.sourceId)).filter(s=>s&&!prior.signals.some(p=>p.url===s.url)).map(s=>[s.url,s])).values()];
+    if(!added.length)return retained;
+    return {...retained,change:'Evidence added',changeReason:`Answer retained verbatim. Added verified citations: ${added.map(s=>s.url).join(', ')}.`};
   })};
 }
 
@@ -25,7 +38,7 @@ export async function reviewWithRetry(previous, sources, now, generate, {warn=co
     let review;
     try {
       review=JSON.parse(output);
-      return applyWeeklyReview(previous,classifyEvidenceAdditions(previous,review,sources),sources,now);
+      return applyWeeklyReview(previous,normalizeWeeklyReview(previous,review,sources),sources,now);
     } catch(error) {
       const reason=error instanceof SyntaxError?'The review is not valid JSON.':error.message;
       warn(`Weekly review validation rejected attempt ${attempt}/3: ${reason}`);
