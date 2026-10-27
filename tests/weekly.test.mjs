@@ -141,3 +141,18 @@ test('malformed JSON is retried without logging output and transport failures ar
  await assert.rejects(()=>reviewWithRetry(null,[source],monday,async()=>{calls++;throw new Error('HTTP 429');},{warn:()=>{}}),/HTTP 429/);
  assert.equal(calls,1);
 });
+
+test('generation identifiers are constrained to current evidence without mutating the base schema',async()=>{
+ const {weeklySchemaForSources}=await import('../scripts/lib/weekly.mjs');
+ const dynamic=weeklySchemaForSources([source]);
+ const props=dynamic.properties.questions.items.properties.signals.items.properties;
+ assert.deepEqual(props.sourceId.enum,['a']);assert.deepEqual(props.passageId.enum,['p0']);
+ assert.equal(weeklySchema.properties.questions.items.properties.signals.items.properties.sourceId.enum,undefined);
+});
+
+test('citation validation identifies unknown sources and mismatched passage IDs for repair',()=>{
+ const p=proposal();p.signals[0].sourceId='old-citation';
+ assert.throws(()=>applyWeeklyReview(null,review(p),[source],monday),/sourceId "old-citation".*not in the current sources array/);
+ p.signals[0].sourceId='a';p.signals[0].passageId='p99';
+ assert.throws(()=>applyWeeklyReview(null,review(p),[source],monday),/passageId "p99".*valid passage IDs: p0/);
+});

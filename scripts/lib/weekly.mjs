@@ -32,6 +32,15 @@ const signalProperties={sourceId:str,passageId:str,happened:str,changes:str,verd
 const questionProperties={existingId:str,editorialTitle:str,question:str,answer:str,why:str,category:{type:'string',enum:['UI','UX','Process','Culture']},tags:{type:'array',items:{type:'string',enum:['UI','UX','Process','Culture']}},aiLens:{type:'boolean'},change:{type:'string',enum:['New','Unchanged','Evidence added','Answer revised','Correction']},changeReason:str,uncertainty:str,signals:{type:'array',minItems:1,maxItems:12,items:{type:'object',additionalProperties:false,required:Object.keys(signalProperties),properties:signalProperties}}};
 export const weeklySchema={type:'object',additionalProperties:false,required:['headline','summary','questions'],properties:{headline:str,summary:str,questions:{type:'array',maxItems:4,items:{type:'object',additionalProperties:false,required:Object.keys(questionProperties),properties:questionProperties}}}};
 
+// Bind generated identifiers to this collection, excluding stale prior citations.
+export function weeklySchemaForSources(sources) {
+  const schema=structuredClone(weeklySchema);
+  const properties=schema.properties.questions.items.properties.signals.items.properties;
+  properties.sourceId={type:'string',enum:[...new Set(sources.map(s=>s.id))]};
+  properties.passageId={type:'string',enum:[...new Set(sources.flatMap(s=>s.passages.map(p=>p.id)))]};
+  return schema;
+}
+
 export function applyWeeklyReview(previous, review, sources, now=new Date()) {
   const window=weekWindow(now), same=previous?.weekStart===window.start;
   if(!Array.isArray(review?.questions)||review.questions.length>4)throw new Error('A weekly review may contain at most four questions.');
@@ -46,7 +55,10 @@ export function applyWeeklyReview(previous, review, sources, now=new Date()) {
     const urls=new Set();
     const signals=proposal.signals.map(signal=>{
       const source=sourceMap.get(signal.sourceId),passage=source?.passages.find(p=>p.id===signal.passageId);
-      if(!passage||!source.text.includes(passage.text))throw new Error('Question lacks a verified source passage.');
+      if(!passage||!source.text.includes(passage.text)){
+        const detail=!source?'sourceId is not in the current sources array':!passage?`passageId is not in this source; valid passage IDs: ${source.passages.map(p=>p.id).join(', ')}`:'passage text does not occur in the inspected article';
+        throw new Error(`Question lacks a verified source passage. Question ${id}; sourceId ${JSON.stringify(signal.sourceId)}; passageId ${JSON.stringify(signal.passageId)}: ${detail}. Use sources[].id and that same source's passages[].id, not previous question citation IDs.`);
+      }
       if(urls.has(source.url))throw new Error('Repeated citation is not additional evidence.');urls.add(source.url);
       if(!['Supports','Challenges','Context'].includes(signal.role))throw new Error('Invalid evidence role.');
       const existing=prior?.signals.find(s=>s.url===source.url);
