@@ -6,8 +6,8 @@
   "date": "2026-10-26",
   "editionNumber": "032",
   "displayDate": "Week of 2026-10-26",
-  "headline": "This week: **safer icons, stranger systems** and tighter taste",
-  "summary": "The week holds two solid product questions and one lighter culture signal. The strongest evidence still points to AI work as workflow and permissions, plus a reminder that small UI choices can create real confusion, while the culture coverage stays best treated as a useful practice prompt rather than a broad trend.",
+  "headline": "**Workflow clarity** is now the week’s practical AI test",
+  "summary": "This week’s strongest signal is not that chat got better, but that workflow design, permissions, and evaluation are now the product surface for AI work. On the creative side, several pieces argue for more deliberate judgment, showing process and taste matter as much as output polish.",
   "questions": [
     {
       "id": "01",
@@ -107,13 +107,13 @@
       "why": "When reviewing an AI feature, ask for a task-level comparison with the existing workflow. Measure total effort and outcome quality, including checking or correcting the system.",
       "uncertainty": "The studies concern particular tools, populations and tasks, and the later METR estimates have selection limitations. They do not settle the value of conversational interfaces for design professionals. We need current comparisons in the actual workflow.",
       "counts": {
-        "total": 5,
-        "web": 5,
+        "total": 6,
+        "web": 6,
         "newsletters": 0
       },
-      "publisherCount": 2,
+      "publisherCount": 3,
       "firstSeen": "2026-10-26",
-      "lastUpdatedAt": "2026-10-27T08:28:52.831Z",
+      "lastUpdatedAt": "2026-10-30T05:42:28.692Z",
       "signals": [
         {
           "source": "research.google",
@@ -159,6 +159,21 @@
           "verdict": "Read",
           "role": "Context",
           "evidence": "Our findings reveal an unsettled knowledge environment surrounding humanlike generative AI, where workers’ varying perspectives illuminate a range of potential risks for individuals, knowledge work fields, and society."
+        },
+        {
+          "source": "arxiv.org",
+          "title": "[2505.23006] A Practical Approach for Building Production-Grade Conversational Agents with Workflow Graphs",
+          "kind": "Web",
+          "timing": "Date unavailable",
+          "publishedAt": null,
+          "firstCollectedAt": "2026-10-30T05:42:28.692Z",
+          "sourceId": "e1efe154549f63d5",
+          "url": "https://arxiv.org/abs/2505.23006",
+          "happened": "A workflow-graph paper argues for scalable, controllable, reliable agents in industry.",
+          "changes": "It supports the idea that control and reliability matter in expert workflows.",
+          "verdict": "Read",
+          "role": "Context",
+          "evidence": "Our findings provide insights into bridging the gap between academic research and real-world application, introducing a framework for developing scalable, controllable, and reliable AI-driven agents."
         },
         {
           "source": "metr.org",
@@ -231,6 +246,21 @@
             "596ebdd94b57eb3b",
             "e47ecbbcc03e514c"
           ]
+        },
+        {
+          "at": "2026-10-30T05:42:28.692Z",
+          "kind": "Evidence added",
+          "reason": "Answer retained verbatim. Added verified citations: https://arxiv.org/abs/2505.23006.",
+          "before": "Evaluate the task, the user and the current tool together. Earlier studies show why a universal answer fails: a 2024 Bard study found effects varied by expertise and task, while METR found a slowdown for experienced developers in a specific early-2025 setting. METR’s 2026 follow-up then reported signs of improvement alongside serious measurement limitations. These are background findings, not this week’s discoveries. Compare real task outcomes, including verification and recovery effort, before choosing conversational assistance over direct control. Neither expertise alone nor a favorable benchmark tells us which interface will help in the current product.",
+          "after": "Evaluate the task, the user and the current tool together. Earlier studies show why a universal answer fails: a 2024 Bard study found effects varied by expertise and task, while METR found a slowdown for experienced developers in a specific early-2025 setting. METR’s 2026 follow-up then reported signs of improvement alongside serious measurement limitations. These are background findings, not this week’s discoveries. Compare real task outcomes, including verification and recovery effort, before choosing conversational assistance over direct control. Neither expertise alone nor a favorable benchmark tells us which interface will help in the current product.",
+          "sourceIds": [
+            "9437e759a4071268",
+            "3253ccbf7d74fa86",
+            "e54f537a6bc2ef5c",
+            "e1efe154549f63d5",
+            "596ebdd94b57eb3b",
+            "e47ecbbcc03e514c"
+          ]
         }
       ]
     },
@@ -271,7 +301,7 @@
           "changes": "The interview describes zooming in on damaged or boring details, setting constraints, and letting mistakes generate the next move. That shows a concrete process where constraint is not a restriction but a generator of form.",
           "verdict": "Must read",
           "role": "Supports",
-          "evidence": "Around us there’s architecture, there’s ads, there’s all this stuff that’s so designed… so this practice of looking at the damaged and mundane things that I would usually ignore was like a meditation, in a way, to avoid "
+          "evidence": "There’s an exercise in trying to stop and force yourself to look at something you would usually dismiss, and reflect a little bit on what it is."
         },
         {
           "source": "itsnicethat.com",
@@ -292,7 +322,7 @@
           "source": "itsnicethat.com",
           "title": "“What aesthetic is this?” Elizabeth Goodspeed on the push to categorise visual culture",
           "kind": "Web",
-          "timing": "19 May 2026 · Background",
+          "timing": "Date unavailable",
           "publishedAt": null,
           "firstCollectedAt": "2026-10-26T11:11:07.426Z",
           "sourceId": "40b16980f7bd0090",
@@ -443,15 +473,15 @@
       ]
     }
   ],
-  "generatedAt": "2026-10-27T08:28:52.831Z",
-  "lastCollectedAt": "2026-10-27T08:28:52.831Z",
-  "crawlCompletedAt": "09:28",
+  "generatedAt": "2026-10-30T05:42:28.692Z",
+  "lastCollectedAt": "2026-10-30T05:42:28.692Z",
+  "crawlCompletedAt": "06:42",
   "finalizedAt": null,
-  "revision": "813923f44e4f",
-  "sourceCount": 17,
+  "revision": "d4300d346774",
+  "sourceCount": 33,
   "webSourceCount": 7,
   "teamContributionCount": 0,
   "sourceWarnings": [
-    "47 candidate pages could not provide enough inspectable public article text. They were not used as new evidence."
+    "31 candidate pages could not provide enough inspectable public article text. They were not used as new evidence."
   ]
 }
