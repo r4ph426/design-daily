@@ -6,8 +6,8 @@
   "date": "2026-10-26",
   "editionNumber": "032",
   "displayDate": "Week of 2026-10-26",
-  "headline": "**Workflow clarity** is now the week’s practical AI test",
-  "summary": "This week’s strongest signal is not that chat got better, but that workflow design, permissions, and evaluation are now the product surface for AI work. On the creative side, several pieces argue for more deliberate judgment, showing process and taste matter as much as output polish.",
+  "headline": "**Workflow decisions** now matter more than the chat box",
+  "summary": "This week strengthens one process question and leaves the others unchanged. The clearest signal is that AI work needs explicit workflow design, permissions, and recovery paths before teams expect value.",
   "questions": [
     {
       "id": "01",
@@ -143,7 +143,7 @@
           "changes": "The benchmark makes context-sensitive assistance a testable design concern. It does not itself establish productivity gains for experts.",
           "verdict": "Must read",
           "role": "Context",
-          "evidence": "We introduce GUIDE (GUI Understanding, Intent, and Help Decision Evaluation), a benchmark that evaluates AI models on their ability to perceive user behavior, infer intent, and provide assistance in open-ended GUI tasks."
+          "evidence": "GUIDE defines three tasks—(i) Behavior State Detection, (ii) Intent Prediction, and (iii) Help Prediction that test a model’s ability to recognize behavior state, reason about goals, and decide when and how to help."
         },
         {
           "source": "research.google",
@@ -331,7 +331,7 @@
           "changes": "The article argues that images are increasingly read as category signals rather than singular works, which flattens context. It provides important context for why taste work now includes naming, framing, and resisting over-compression.",
           "verdict": "Read",
           "role": "Context",
-          "evidence": "Today, images increasingly get treated less as singular works than as pieces of a broader aesthetic puzzle."
+          "evidence": "When movements get squashed into recognisable boxes, only their most immediately identifiable visual traits survive; the social conditions and internal contradictions surrounding them recede into the background."
         }
       ],
       "further": [],
@@ -473,15 +473,15 @@
       ]
     }
   ],
-  "generatedAt": "2026-10-30T05:42:28.692Z",
-  "lastCollectedAt": "2026-10-30T05:42:28.692Z",
-  "crawlCompletedAt": "06:42",
+  "generatedAt": "2026-10-30T12:57:24.738Z",
+  "lastCollectedAt": "2026-10-30T12:57:24.738Z",
+  "crawlCompletedAt": "13:57",
   "finalizedAt": null,
-  "revision": "d4300d346774",
-  "sourceCount": 33,
+  "revision": "ee0e4135b984",
+  "sourceCount": 29,
   "webSourceCount": 7,
-  "teamContributionCount": 0,
+  "teamContributionCount": 1,
   "sourceWarnings": [
-    "31 candidate pages could not provide enough inspectable public article text. They were not used as new evidence."
+    "35 candidate pages could not provide enough inspectable public article text. They were not used as new evidence."
   ]
 }
