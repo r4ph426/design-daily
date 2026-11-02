@@ -1,23 +1,32 @@
 {
-  "weekLabel": "Last 7 days · 20 Oct 2026 – 26 Oct 2026",
+  "weekLabel": "Last 7 days · 27 Oct 2026 – 2 Nov 2026",
   "weeklySignals": [
     {
-      "title": "OpenDesign",
+      "title": "Framesmith uses a visual canvas and quality gate for UI design",
       "verdict": "Watching",
-      "summary": "Source-reviewed; not yet team-tested. Pilot it on one team prototype loop and confirm the workflow fits your review and handoff process before adopting it broadly.",
+      "summary": "Source-reviewed; not yet team-tested. Try it on one design iteration that needs a quality gate, then compare the canvas output with your current review criteria.",
       "source": "github.com",
-      "url": "https://github.com/nexu-io/open-design",
-      "foundOn": "2026-10-26",
+      "url": "https://github.com/vicmaster/framesmith",
+      "foundOn": "2026-11-02",
       "id": "01"
     },
     {
-      "title": "chudarin-design-skills",
+      "title": "REA can inspect app behavior and explain it with evidence",
       "verdict": "Watching",
-      "summary": "Source-reviewed; not yet team-tested. Use it on one Figma file with existing components and variables, then check whether binding fixes and screen edits stay targeted.",
+      "summary": "Source-reviewed; not yet team-tested. Use it for one feature investigation where you need evidence-backed reverse engineering, then confirm the findings against the actual product behavior.",
       "source": "github.com",
-      "url": "https://github.com/schudarin/chudarin-design-skills",
-      "foundOn": "2026-10-26",
+      "url": "https://github.com/morluto/rea",
+      "foundOn": "2026-11-02",
       "id": "02"
+    },
+    {
+      "title": "RasanAI is a guided video direction skill with staged approvals",
+      "verdict": "Watching",
+      "summary": "Source-reviewed; not yet team-tested. Try it on one short launch film brief first, then validate the story, look, and timing before a larger motion project.",
+      "source": "github.com",
+      "url": "https://github.com/Sibhimanyu/rasanai",
+      "foundOn": "2026-11-02",
+      "id": "03"
     }
   ],
   "tools": [
@@ -313,15 +322,15 @@
         "Creative exploration",
         "Review"
       ],
-      "description": "Canva’s official remote MCP supports design creation and editing, asset and brand management, library search, export, and commenting.",
+      "description": "Canva’s remote MCP now exposes design creation and editing, asset and brand management, library search, export, and commenting through AI assistants.",
       "verdict": "Worth trying",
       "confidence": "High",
-      "reviewed": "26 Oct 2026",
+      "reviewed": "2 Nov 2026",
       "source": "canva.dev/docs/apps/mcp",
       "url": "https://www.canva.dev/docs/apps/mcp/",
       "access": "Canva account",
       "setup": "5–10 minutes",
-      "recommendation": "Use it for one small design-edit workflow first, then verify permissions and brand fidelity before broader rollout."
+      "recommendation": "Trial it on one small edit and review loop, then verify permissions and brand library behavior in your workspace."
     },
     {
       "id": "14",
@@ -336,15 +345,15 @@
         "Creative exploration",
         "Review"
       ],
-      "description": "Canva’s official skills package adds reusable creative workflows on top of the Canva Connector for Codex, Claude, and Cursor.",
+      "description": "The official Canva skills package adds reusable workflows for resize, bulk create, feedback implementation, and approval-gated edits, bundled for Claude, Cursor, and Codex through the Canva Connector.",
       "verdict": "Worth trying",
       "confidence": "High",
-      "reviewed": "12 Oct 2026",
+      "reviewed": "2 Nov 2026",
       "source": "github.com/canva-sdks/canva-skills",
       "url": "https://github.com/canva-sdks/canva-skills",
       "access": "Open source + Canva account",
       "setup": "10–15 minutes",
-      "recommendation": "Try one supported skill on a single Canva workflow, then check whether the output stays consistent with your team account and library setup."
+      "recommendation": "Start with one supported workflow on a single design, then confirm the output stays consistent with your team library and approvals."
     },
     {
       "id": "15",
@@ -434,14 +443,14 @@
         "Review",
         "Pattern research"
       ],
-      "description": "An MCP and CLI that extracts design tokens, typography, spacing, components, and accessibility findings from live websites.",
+      "description": "This MCP and CLI extracts colors, typography, spacing, borders, shadows, motion, components, breakpoints, and WCAG contrast findings from live websites.",
       "verdict": "Worth trying",
       "confidence": "Medium",
-      "reviewed": "7 Oct 2026",
+      "reviewed": "2 Nov 2026",
       "source": "github.com/dembrandt/dembrandt",
       "url": "https://github.com/dembrandt/dembrandt",
       "access": "Open source",
-      "setup": "10–15 minutes",
+      "setup": "Node.js 18+ and browser installation",
       "recommendation": "Run it against a few reference sites to compare tokens and accessibility findings before using them as evidence."
     },
     {
@@ -548,15 +557,15 @@
         "UI sketches",
         "Review"
       ],
-      "description": "An agent inside Figma Design for generating and editing layouts, applying connected libraries, and getting design feedback.",
+      "description": "In Figma Design, the agent can connect a library from the file, reference specific components, variables, and styles with @, and use that context to produce outputs aligned to the team system.",
       "verdict": "Worth trying",
       "confidence": "Medium",
-      "reviewed": "7 Oct 2026",
+      "reviewed": "2 Nov 2026",
       "source": "help.figma.com",
       "url": "https://help.figma.com/hc/en-us/articles/37998629035799-Work-with-the-Figma-agent-in-design-files",
-      "access": "All plans; AI credits; editing depends on seat and file access",
+      "access": "Figma plan and file access",
       "setup": "Open Agents in a Figma Design file",
-      "recommendation": "Try one bounded layout edit with a connected library, then verify component use, hierarchy, and access scope."
+      "recommendation": "Use it for one bounded edit on a file with an existing library, then check component reuse and hierarchy before wider adoption."
     },
     {
       "id": "auto-4c4e9e4faa27",
@@ -596,13 +605,13 @@
         "Accessibility",
         "Flows"
       ],
-      "description": "Includes screenwright, which builds a UI from a design spec, then renders it, audits accessibility, and fixes what does not match.",
+      "description": "The skill builds a UI from a design spec, renders it, audits accessibility, and fixes mismatches, with explicit verification in its workflow.",
       "recommendation": "Try it on one design-spec-to-UI loop, then compare the rendered result with the original spec and accessibility requirements.",
       "access": "Open source",
-      "setup": "Install via the plugin path or skills CLI; details depend on your host",
+      "setup": "Plugin or skills CLI; host specific",
       "verdict": "Watching",
       "confidence": "Medium",
-      "reviewed": "26 Oct 2026",
+      "reviewed": "2 Nov 2026",
       "source": "github.com",
       "url": "https://github.com/sorawit-w/agent-skills"
     },
@@ -619,13 +628,13 @@
         "UI sketches",
         "Creative exploration"
       ],
-      "description": "Provides animated React, Tailwind CSS, and React Native components for AI agents, with source code, design briefs, and JSON prompts for the same interface.",
-      "recommendation": "Source-reviewed; not yet team-tested. Use one component as a starting point for a single screen or interaction, then verify it fits your stack and motion rules.",
+      "description": "The repository provides animated React, Tailwind CSS, and React Native components, plus design briefs and JSON prompts, with examples that include motion, charts, navigation, and other UI patterns.",
+      "recommendation": "Use one component as a starting point for a single screen or interaction, then verify it fits your stack and motion rules.",
       "access": "Open source",
       "setup": "Project install or registry setup; host details vary",
       "verdict": "Watching",
       "confidence": "Medium",
-      "reviewed": "19 Oct 2026",
+      "reviewed": "2 Nov 2026",
       "source": "github.com",
       "url": "https://github.com/richawo/Design-components-for-AI-agents"
     },
@@ -668,15 +677,87 @@
         "UI sketches",
         "Review"
       ],
-      "description": "A Figma-focused design agent skill set that works from components and variables, plans flows, builds screens, fixes bindings, and makes presentations.",
-      "recommendation": "Source-reviewed; not yet team-tested. Use it on one Figma file with existing components and variables, then check whether binding fixes and screen edits stay targeted.",
+      "description": "The skill set is built for Figma work from components and variables, including planning flows, building screens, finding design system debt, fixing bindings, and making presentations.",
+      "recommendation": "Use it on one Figma file with existing components and variables, then check whether binding fixes and screen edits stay targeted.",
       "access": "Figma and Claude Code",
       "setup": "Not stated; plugin and Figma file access are implied",
       "verdict": "Watching",
       "confidence": "Medium",
-      "reviewed": "26 Oct 2026",
+      "reviewed": "2 Nov 2026",
       "source": "github.com",
       "url": "https://github.com/schudarin/chudarin-design-skills"
+    },
+    {
+      "id": "auto-3f42ae6014de",
+      "title": "Framesmith uses a visual canvas and quality gate for UI design",
+      "type": "MCP",
+      "categories": [
+        "UI",
+        "UX",
+        "Process"
+      ],
+      "practices": [
+        "Drafting",
+        "UI sketches",
+        "Review",
+        "Accessibility"
+      ],
+      "description": "This open-source MCP server turns an AI coding agent into a UI designer with a visual canvas, vetted design patterns, and a quality gate before designs are shown.",
+      "recommendation": "Source-reviewed; not yet team-tested. Try it on one design iteration that needs a quality gate, then compare the canvas output with your current review criteria.",
+      "access": "Open source",
+      "setup": "Not stated; MCP client setup required",
+      "verdict": "Watching",
+      "confidence": "Medium",
+      "reviewed": "2 Nov 2026",
+      "source": "github.com",
+      "url": "https://github.com/vicmaster/framesmith"
+    },
+    {
+      "id": "auto-458c04cd04ca",
+      "title": "REA can inspect app behavior and explain it with evidence",
+      "type": "MCP",
+      "categories": [
+        "UI",
+        "UX",
+        "Process"
+      ],
+      "practices": [
+        "Pattern research",
+        "Review",
+        "Flows"
+      ],
+      "description": "REA connects agents to local analysis tools for binaries, apps, and websites, and returns evidence and limitations so the agent can explain how a feature works and build from it.",
+      "recommendation": "Source-reviewed; not yet team-tested. Use it for one feature investigation where you need evidence-backed reverse engineering, then confirm the findings against the actual product behavior.",
+      "access": "Open source",
+      "setup": "npx rea-agents setup or official release path",
+      "verdict": "Watching",
+      "confidence": "Medium",
+      "reviewed": "2 Nov 2026",
+      "source": "github.com",
+      "url": "https://github.com/morluto/rea"
+    },
+    {
+      "id": "auto-6dde13718e5b",
+      "title": "RasanAI is a guided video direction skill with staged approvals",
+      "type": "Skill",
+      "categories": [
+        "UI",
+        "Process"
+      ],
+      "practices": [
+        "Drafting",
+        "Review",
+        "Creative exploration"
+      ],
+      "description": "The skill directs launch films and motion graphics through a staged flow with brief, story, look, animatic, and final review steps in a browser console.",
+      "recommendation": "Source-reviewed; not yet team-tested. Try it on one short launch film brief first, then validate the story, look, and timing before a larger motion project.",
+      "access": "Claude Code and optional Mac app",
+      "setup": "Not stated; agent skill works without the Mac app",
+      "verdict": "Watching",
+      "confidence": "Medium",
+      "reviewed": "2 Nov 2026",
+      "source": "github.com",
+      "url": "https://github.com/Sibhimanyu/rasanai"
     }
   ],
   "findings": [
@@ -756,6 +837,30 @@
       "source": "github.com",
       "url": "https://github.com/schudarin/chudarin-design-skills",
       "foundOn": "2026-10-26"
+    },
+    {
+      "title": "Framesmith uses a visual canvas and quality gate for UI design",
+      "verdict": "Watching",
+      "summary": "Source-reviewed; not yet team-tested. Try it on one design iteration that needs a quality gate, then compare the canvas output with your current review criteria.",
+      "source": "github.com",
+      "url": "https://github.com/vicmaster/framesmith",
+      "foundOn": "2026-11-02"
+    },
+    {
+      "title": "REA can inspect app behavior and explain it with evidence",
+      "verdict": "Watching",
+      "summary": "Source-reviewed; not yet team-tested. Use it for one feature investigation where you need evidence-backed reverse engineering, then confirm the findings against the actual product behavior.",
+      "source": "github.com",
+      "url": "https://github.com/morluto/rea",
+      "foundOn": "2026-11-02"
+    },
+    {
+      "title": "RasanAI is a guided video direction skill with staged approvals",
+      "verdict": "Watching",
+      "summary": "Source-reviewed; not yet team-tested. Try it on one short launch film brief first, then validate the story, look, and timing before a larger motion project.",
+      "source": "github.com",
+      "url": "https://github.com/Sibhimanyu/rasanai",
+      "foundOn": "2026-11-02"
     }
   ]
 }
