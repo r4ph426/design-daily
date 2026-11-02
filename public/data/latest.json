@@ -1,13 +1,13 @@
 {
   "schemaVersion": 2,
   "cadence": "weekly",
-  "weekStart": "2026-10-26",
-  "weekEnd": "2026-10-30",
-  "date": "2026-10-26",
-  "editionNumber": "032",
-  "displayDate": "Week of 2026-10-26",
-  "headline": "**Workflow decisions** now matter more than the chat box",
-  "summary": "This week strengthens one process question and leaves the others unchanged. The clearest signal is that AI work needs explicit workflow design, permissions, and recovery paths before teams expect value.",
+  "weekStart": "2026-11-02",
+  "weekEnd": "2026-11-06",
+  "date": "2026-11-02",
+  "editionNumber": "033",
+  "displayDate": "Week of 2026-11-02",
+  "headline": "**Workflow design** and **proof over promise** shape the week",
+  "summary": "This week strengthens the case that AI features need workflow-level design, not just a better chat box. It also reinforces a separate creative lesson: strong visual work still depends on constraint, process, and visible reasoning.",
   "questions": [
     {
       "id": "01",
@@ -25,13 +25,13 @@
       "why": "This changes the prototype brief: include how work moves between steps, who can act, and what happens when a step fails. A polished conversation alone cannot test those decisions.",
       "uncertainty": "Both sources are vendor documentation from OpenAI and serve as background context, not independent evidence of a new industry-wide shift. We still need a concrete deployment or comparative study showing a benefit for design teams. The unrelated W3C archive-navigation example has been removed.",
       "counts": {
-        "total": 2,
-        "web": 2,
+        "total": 3,
+        "web": 3,
         "newsletters": 0
       },
-      "publisherCount": 1,
+      "publisherCount": 2,
       "firstSeen": "2026-10-26",
-      "lastUpdatedAt": "2026-10-26T11:17:24.533589Z",
+      "lastUpdatedAt": "2026-11-02T05:57:14.818Z",
       "signals": [
         {
           "source": "developers.openai.com",
@@ -62,6 +62,21 @@
           "verdict": "Must read",
           "role": "Supports",
           "evidence": "Because our agent can access external tools, it’s important to understand the permissions it has to take actions on these tools, and how those permissions change as we share our agent for other teammates to use."
+        },
+        {
+          "source": "nature.com",
+          "title": "From tool to teammate in a randomized controlled trial of clinician-AI collaborative workflows for diagnosis | npj Digital Medicine",
+          "kind": "Web",
+          "timing": "Date unavailable",
+          "publishedAt": null,
+          "firstCollectedAt": "2026-11-02T05:57:14.818Z",
+          "sourceId": "8e2ccf3334d077a8",
+          "url": "https://www.nature.com/articles/s41746-026-02545-1?error=cookies_not_supported&code=57fb2079-963d-4388-b224-61a9bfe41a17",
+          "happened": "A clinical trial compared first-opinion and second-opinion collaborative workflows.",
+          "changes": "It gives independent evidence that workflow ordering changes performance and should be tested, not assumed.",
+          "verdict": "Must read",
+          "role": "Supports",
+          "evidence": "We evaluated two collaborative workflows: AI as first opinion (preceding clinician) and AI as second opinion (following clinician)."
         }
       ],
       "further": [],
@@ -88,6 +103,18 @@
             "bacaa2ac1eb948b6",
             "1cc01032705b3456"
           ]
+        },
+        {
+          "at": "2026-11-02T05:57:14.818Z",
+          "kind": "Evidence added",
+          "reason": "Answer retained verbatim. Added verified citations: https://www.nature.com/articles/s41746-026-02545-1?error=cookies_not_supported&code=57fb2079-963d-4388-b224-61a9bfe41a17.",
+          "before": "For a workflow-based agent, prototype the dependencies, handoffs and recovery paths as carefully as the conversation. The two OpenAI guides describe connected steps, tool access, permissions and deployment, which make those design decisions inspectable. They establish how one vendor structures this kind of system. They do not establish that graph-shaped orchestration is universally better, or that teams are adopting it successfully. Start with a small, testable workflow, explicit approval boundaries and a visible path back from failure. Its value still needs to be demonstrated against the simpler process it would replace.",
+          "after": "For a workflow-based agent, prototype the dependencies, handoffs and recovery paths as carefully as the conversation. The two OpenAI guides describe connected steps, tool access, permissions and deployment, which make those design decisions inspectable. They establish how one vendor structures this kind of system. They do not establish that graph-shaped orchestration is universally better, or that teams are adopting it successfully. Start with a small, testable workflow, explicit approval boundaries and a visible path back from failure. Its value still needs to be demonstrated against the simpler process it would replace.",
+          "sourceIds": [
+            "bacaa2ac1eb948b6",
+            "1cc01032705b3456",
+            "8e2ccf3334d077a8"
+          ]
         }
       ]
     },
@@ -107,13 +134,13 @@
       "why": "When reviewing an AI feature, ask for a task-level comparison with the existing workflow. Measure total effort and outcome quality, including checking or correcting the system.",
       "uncertainty": "The studies concern particular tools, populations and tasks, and the later METR estimates have selection limitations. They do not settle the value of conversational interfaces for design professionals. We need current comparisons in the actual workflow.",
       "counts": {
-        "total": 6,
-        "web": 6,
+        "total": 7,
+        "web": 7,
         "newsletters": 0
       },
-      "publisherCount": 3,
+      "publisherCount": 4,
       "firstSeen": "2026-10-26",
-      "lastUpdatedAt": "2026-10-30T05:42:28.692Z",
+      "lastUpdatedAt": "2026-11-02T05:57:14.818Z",
       "signals": [
         {
           "source": "research.google",
@@ -124,11 +151,56 @@
           "firstCollectedAt": "2026-10-26T11:11:07.426Z",
           "sourceId": "9437e759a4071268",
           "url": "https://research.google/pubs/take-it-leave-it-or-fix-it-measuring-productivity-and-trust-in-human-ai-collaboration",
-          "happened": "A 2024 study examined software engineers using Bard on programming-exam tasks. It found effects depended on expertise and task type, with novice gains on some solve tasks.",
-          "changes": "This is evidence for evaluating assistance by task and user group. It cannot establish the effects of current tools across all expert workflows.",
+          "happened": "A 2024 study found AI effects varied by expertise and question type.",
+          "changes": "It supports judging assistance by task and user group rather than assuming universal gains.",
           "verdict": "Must read",
           "role": "Context",
           "evidence": "Effects on performance, efficiency, satisfaction, and trust vary depending on user expertise, question type (open-ended \"solve\" questions vs."
+        },
+        {
+          "source": "nature.com",
+          "title": "Users’ prompting strategies and ChatGPT’s contextual adaptation shape conversational information-seeking experiences | Scientific Reports",
+          "kind": "Web",
+          "timing": "Date unavailable",
+          "publishedAt": null,
+          "firstCollectedAt": "2026-11-02T05:57:14.818Z",
+          "sourceId": "62f7590c53a1b310",
+          "url": "https://www.nature.com/articles/s41598-026-42465-4?error=cookies_not_supported&code=1a814420-8f00-402f-a008-6cda570b025c",
+          "happened": "A 2026 study found prompts and responses jointly shape information-seeking experiences.",
+          "changes": "It adds evidence that conversational value depends on user behavior and the system’s contextual adaptation.",
+          "verdict": "Must read",
+          "role": "Supports",
+          "evidence": "This study highlights disparities in user prompting behaviors and shows how user prompts and AI responses together shape information-seeking with conversational AI."
+        },
+        {
+          "source": "research.google",
+          "title": "How Tech Workers Contend with Hazards of Humanlikeness in Generative AI",
+          "kind": "Web",
+          "timing": "Date unavailable",
+          "publishedAt": null,
+          "firstCollectedAt": "2026-10-26T11:11:07.426Z",
+          "sourceId": "e54f537a6bc2ef5c",
+          "url": "https://research.google/pubs/how-tech-workers-contend-with-hazards-of-humanlikeness-in-generative-ai",
+          "happened": "Tech workers reported an unsettled knowledge environment around humanlike AI.",
+          "changes": "It reinforces caution about overtrust and unclear norms for when conversational help is appropriate.",
+          "verdict": "Read",
+          "role": "Context",
+          "evidence": "Our findings reveal an unsettled knowledge environment surrounding humanlike generative AI, where workers’ varying perspectives illuminate a range of potential risks for individuals, knowledge work fields, and society."
+        },
+        {
+          "source": "arxiv.org",
+          "title": "[2505.23006] A Practical Approach for Building Production-Grade Conversational Agents with Workflow Graphs",
+          "kind": "Web",
+          "timing": "Date unavailable",
+          "publishedAt": null,
+          "firstCollectedAt": "2026-10-30T05:42:28.692Z",
+          "sourceId": "e1efe154549f63d5",
+          "url": "https://arxiv.org/abs/2505.23006",
+          "happened": "A workflow-graph paper argues for scalable, controllable, reliable agents in industry.",
+          "changes": "It supports the idea that expert workflows may need more structured control, not just chat.",
+          "verdict": "Read",
+          "role": "Context",
+          "evidence": "Our findings provide insights into bridging the gap between academic research and real-world application, introducing a framework for developing scalable, controllable, and reliable AI-driven agents."
         },
         {
           "source": "research.google",
@@ -144,36 +216,6 @@
           "verdict": "Must read",
           "role": "Context",
           "evidence": "GUIDE defines three tasks—(i) Behavior State Detection, (ii) Intent Prediction, and (iii) Help Prediction that test a model’s ability to recognize behavior state, reason about goals, and decide when and how to help."
-        },
-        {
-          "source": "research.google",
-          "title": "How Tech Workers Contend with Hazards of Humanlikeness in Generative AI",
-          "kind": "Web",
-          "timing": "Date unavailable",
-          "publishedAt": null,
-          "firstCollectedAt": "2026-10-26T11:11:07.426Z",
-          "sourceId": "e54f537a6bc2ef5c",
-          "url": "https://research.google/pubs/how-tech-workers-contend-with-hazards-of-humanlikeness-in-generative-ai",
-          "happened": "Workers reported an unsettled knowledge environment around humanlike AI.",
-          "changes": "This supports caution about overtrust and assumptions of helpfulness.",
-          "verdict": "Read",
-          "role": "Context",
-          "evidence": "Our findings reveal an unsettled knowledge environment surrounding humanlike generative AI, where workers’ varying perspectives illuminate a range of potential risks for individuals, knowledge work fields, and society."
-        },
-        {
-          "source": "arxiv.org",
-          "title": "[2505.23006] A Practical Approach for Building Production-Grade Conversational Agents with Workflow Graphs",
-          "kind": "Web",
-          "timing": "Date unavailable",
-          "publishedAt": null,
-          "firstCollectedAt": "2026-10-30T05:42:28.692Z",
-          "sourceId": "e1efe154549f63d5",
-          "url": "https://arxiv.org/abs/2505.23006",
-          "happened": "A workflow-graph paper argues for scalable, controllable, reliable agents in industry.",
-          "changes": "It supports the idea that control and reliability matter in expert workflows.",
-          "verdict": "Read",
-          "role": "Context",
-          "evidence": "Our findings provide insights into bridging the gap between academic research and real-world application, introducing a framework for developing scalable, controllable, and reliable AI-driven agents."
         },
         {
           "source": "metr.org",
@@ -258,6 +300,22 @@
             "3253ccbf7d74fa86",
             "e54f537a6bc2ef5c",
             "e1efe154549f63d5",
+            "596ebdd94b57eb3b",
+            "e47ecbbcc03e514c"
+          ]
+        },
+        {
+          "at": "2026-11-02T05:57:14.818Z",
+          "kind": "Evidence added",
+          "reason": "New public evidence on user prompting and contextual adaptation strengthens the need to compare assistance against the actual workflow, not just expertise or benchmark scores.",
+          "before": "Evaluate the task, the user and the current tool together. Earlier studies show why a universal answer fails: a 2024 Bard study found effects varied by expertise and task, while METR found a slowdown for experienced developers in a specific early-2025 setting. METR’s 2026 follow-up then reported signs of improvement alongside serious measurement limitations. These are background findings, not this week’s discoveries. Compare real task outcomes, including verification and recovery effort, before choosing conversational assistance over direct control. Neither expertise alone nor a favorable benchmark tells us which interface will help in the current product.",
+          "after": "Evaluate the task, the user and the current tool together. Earlier studies show why a universal answer fails: a 2024 Bard study found effects varied by expertise and task, while METR found a slowdown for experienced developers in a specific early-2025 setting. METR’s 2026 follow-up then reported signs of improvement alongside serious measurement limitations. These are background findings, not this week’s discoveries. Compare real task outcomes, including verification and recovery effort, before choosing conversational assistance over direct control. Neither expertise alone nor a favorable benchmark tells us which interface will help in the current product.",
+          "sourceIds": [
+            "9437e759a4071268",
+            "62f7590c53a1b310",
+            "e54f537a6bc2ef5c",
+            "e1efe154549f63d5",
+            "3253ccbf7d74fa86",
             "596ebdd94b57eb3b",
             "e47ecbbcc03e514c"
           ]
@@ -363,125 +421,16 @@
       ]
     }
   ],
-  "retiredQuestions": [
-    {
-      "id": "01",
-      "slug": "why-are-so-many-products-shipping-the-same-ai-panel-and-why-does",
-      "category": "UX",
-      "tags": [
-        "UX"
-      ],
-      "aiLens": true,
-      "editorialTitle": "The **sparkle** off switch",
-      "question": "Why are so many products shipping the same AI panel, and why does that sameness matter for UX?",
-      "answer": "Because vendors are treating AI as a visible feature layer instead of a workflow improvement, the interface keeps asking users to notice the tool rather than finish the task. That creates a recurring off-switch problem and makes the product feel decorative, not useful.",
-      "why": "This question captures the strongest recurring signal across the AI pieces: the interface pattern is repeating faster than the value case. It matters because users are now being trained to distrust AI affordances before they understand them.",
-      "counts": {
-        "total": 1,
-        "newsletters": 0,
-        "web": 1
-      },
-      "firstSeen": "13:33 cet",
-      "signals": [
-        {
-          "source": "UX Collective",
-          "title": "Nobody asked for the sparkle button",
-          "kind": "Web",
-          "timing": "13:33",
-          "happened": "The piece argues that products are shipping the same docked chat panel with prompt suggestions and a sparkle icon, even when users never asked for it. It says people are now actively looking for the off switch after each update.",
-          "changes": "This turns AI from a capability into a **UI tax**. The problem is not that the model lacks power, but that repeated, generic presentation makes the feature feel imposed and replaceable rather than helpful.",
-          "verdict": "Must read",
-          "url": "https://uxdesign.cc/nobody-asked-for-the-sparkle-button-ae54ab5065c6"
-        }
-      ],
-      "further": [
-        [
-          "Where to draw the line before AI reaches professional users",
-          "UX Collective",
-          "https://uxdesign.cc/where-to-draw-the-line-before-ai-reaches-professional-users-09d61f61b2b5"
-        ]
-      ]
-    },
-    {
-      "id": "04",
-      "threadId": "2026-10-26:is-the-web-of-things-charter-a-sign-that-infrastructure-teams-ar",
-      "slug": "is-the-web-of-things-charter-a-sign-that-infrastructure-teams-ar",
-      "category": "Process",
-      "tags": [
-        "Process",
-        "UX"
-      ],
-      "aiLens": true,
-      "editorialTitle": "**Standardize the glue**",
-      "question": "Is the Web of Things charter a sign that infrastructure teams are finally making AI-device integration practical?",
-      "answer": "The charter suggests infrastructure work is shifting toward the unglamorous glue that makes AI agents and devices interoperable: richer descriptions, protocol bindings, registries, and developer guidance. That matters because the problem is no longer only whether a model can reason, but whether it can safely discover, sense, and act in the physical world through standardized interfaces. The evidence is still early and standards-oriented, so this is a directional signal rather than proof of adoption. For product teams, the immediate implication is to design around capabilities, permissions, and device semantics instead of custom one-off integrations.",
-      "why": "This shapes whether physical-world AI should be designed as bespoke plumbing or as reusable platform capability.",
-      "uncertainty": "What remains unknown is whether these standards will be adopted broadly enough to simplify real product work. Evidence that would change the answer would be multiple deployed products or ecosystems showing reduced integration effort and safer agent-device behavior.",
-      "counts": {
-        "total": 2,
-        "web": 2,
-        "newsletters": 0
-      },
-      "publisherCount": 1,
-      "firstSeen": "2026-10-26",
-      "lastUpdatedAt": "2026-10-26T11:11:07.426Z",
-      "signals": [
-        {
-          "source": "w3.org",
-          "title": "Web of Things Working Group recharter: New momentum for IoT interoperability | 2026 | Blog | W3C",
-          "kind": "Web",
-          "timing": "2026-10-21",
-          "publishedAt": "2026-10-21T09:05:00.000Z",
-          "firstCollectedAt": "2026-10-26T11:11:07.426Z",
-          "sourceId": "fbab9ffb88476e2e",
-          "url": "https://www.w3.org/blog/2026/web-of-things-working-group-recharter-new-momentum-for-iot-interoperability",
-          "happened": "W3C says the group is addressing physical AI and interoperability.",
-          "changes": "The blog states the group plans to improve IoT interoperability and address physical AI use cases. It also explains that WoT provides a shared abstraction layer rather than replacing existing protocols, which is the key infrastructure idea.",
-          "verdict": "Read",
-          "role": "Supports",
-          "evidence": "The group plans to further improve interoperability across the Internet of Things (IoT) and address emerging use cases around physical AI."
-        },
-        {
-          "source": "w3.org",
-          "title": "Web of Things Working Group Charter",
-          "kind": "Web",
-          "timing": "Date unavailable",
-          "publishedAt": null,
-          "firstCollectedAt": "2026-10-26T11:11:07.426Z",
-          "sourceId": "5074a1d339635b7b",
-          "url": "https://www.w3.org/2026/07/wot-wg-2026.html",
-          "happened": "The charter expands expressiveness and bindings.",
-          "changes": "The charter adds work on richer Thing Descriptions, protocol bindings, registries, and developer guidance. It also keeps security mechanisms out of scope, which narrows the practical claim to standardization and coordination rather than new security design.",
-          "verdict": "Must read",
-          "role": "Supports",
-          "evidence": "This new charter adds new work to cover additional features and to address emerging developments such as physical AI."
-        }
-      ],
-      "further": [],
-      "history": [
-        {
-          "at": "2026-10-26T11:11:07.426Z",
-          "kind": "New",
-          "reason": "The W3C material introduces a separate infrastructure question about interoperability and physical AI that is materially different from generic product AI patterns.",
-          "before": null,
-          "after": "The charter suggests infrastructure work is shifting toward the unglamorous glue that makes AI agents and devices interoperable: richer descriptions, protocol bindings, registries, and developer guidance. That matters because the problem is no longer only whether a model can reason, but whether it can safely discover, sense, and act in the physical world through standardized interfaces. The evidence is still early and standards-oriented, so this is a directional signal rather than proof of adoption. For product teams, the immediate implication is to design around capabilities, permissions, and device semantics instead of custom one-off integrations.",
-          "sourceIds": [
-            "fbab9ffb88476e2e",
-            "5074a1d339635b7b"
-          ]
-        }
-      ]
-    }
-  ],
-  "generatedAt": "2026-10-30T12:57:24.738Z",
-  "lastCollectedAt": "2026-10-30T12:57:24.738Z",
-  "crawlCompletedAt": "13:57",
-  "finalizedAt": "2026-10-30T13:44:09.046Z",
-  "revision": "ee0e4135b984",
+  "retiredQuestions": [],
+  "generatedAt": "2026-11-02T05:57:14.818Z",
+  "lastCollectedAt": "2026-11-02T05:57:14.818Z",
+  "crawlCompletedAt": "06:57",
+  "finalizedAt": null,
+  "revision": "45c340e2ab31",
   "sourceCount": 29,
   "webSourceCount": 7,
-  "teamContributionCount": 1,
+  "teamContributionCount": 2,
   "sourceWarnings": [
-    "35 candidate pages could not provide enough inspectable public article text. They were not used as new evidence."
+    "32 candidate pages could not provide enough inspectable public article text. They were not used as new evidence."
   ]
 }
