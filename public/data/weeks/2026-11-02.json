@@ -6,9 +6,213 @@
   "date": "2026-11-02",
   "editionNumber": "033",
   "displayDate": "Week of 2026-11-02",
-  "headline": "**Workflow design** and **proof over promise** shape the week",
-  "summary": "This week strengthens the case that AI features need workflow-level design, not just a better chat box. It also reinforces a separate creative lesson: strong visual work still depends on constraint, process, and visible reasoning.",
+  "headline": "**Practical AI work** now needs tighter proof and permissions",
+  "summary": "This week’s evidence points to a more operational view of AI in design: teams are using it broadly, but quality, privacy and user-facing work remain the friction points. The strongest stories are about workflow design, not chat novelty, and about preserving judgment when speed rises.",
   "questions": [
+    {
+      "id": "02",
+      "threadId": "2026-10-26:how-should-teams-decide-when-conversational-ai-helps-expert-user",
+      "slug": "how-should-teams-decide-when-conversational-ai-helps-expert-user",
+      "category": "UX",
+      "tags": [
+        "UX",
+        "UI"
+      ],
+      "aiLens": true,
+      "editorialTitle": "**Human-aware help**",
+      "question": "How should teams decide when conversational AI helps expert users and when it just gets in the way?",
+      "answer": "Evaluate the task, the user and the current tool together. Earlier studies show why a universal answer fails: a 2024 Bard study found effects varied by expertise and task, while METR found a slowdown for experienced developers in a specific early-2025 setting. METR’s 2026 follow-up then reported signs of improvement alongside serious measurement limitations. These are background findings, not this week’s discoveries. Compare real task outcomes, including verification and recovery effort, before choosing conversational assistance over direct control. Neither expertise alone nor a favorable benchmark tells us which interface will help in the current product.",
+      "why": "When reviewing an AI feature, ask for a task-level comparison with the existing workflow. Measure total effort and outcome quality, including checking or correcting the system.",
+      "uncertainty": "The studies concern particular tools, populations and tasks, and the later METR estimates have selection limitations. They do not settle the value of conversational interfaces for design professionals. We need current comparisons in the actual workflow.",
+      "counts": {
+        "total": 7,
+        "web": 7,
+        "newsletters": 0
+      },
+      "publisherCount": 4,
+      "firstSeen": "2026-10-26",
+      "lastUpdatedAt": "2026-11-02T05:57:14.818Z",
+      "signals": [
+        {
+          "source": "research.google",
+          "title": "Take it, Leave it, or Fix it: Measuring Productivity and Trust in Human-AI Collaboration",
+          "kind": "Web",
+          "timing": "Date unavailable",
+          "publishedAt": null,
+          "firstCollectedAt": "2026-10-26T11:11:07.426Z",
+          "sourceId": "9437e759a4071268",
+          "url": "https://research.google/pubs/take-it-leave-it-or-fix-it-measuring-productivity-and-trust-in-human-ai-collaboration",
+          "happened": "A 2024 study found AI effects varied by expertise and question type.",
+          "changes": "It supports judging assistance by task and user group rather than assuming universal gains.",
+          "verdict": "Must read",
+          "role": "Context",
+          "evidence": "Effects on performance, efficiency, satisfaction, and trust vary depending on user expertise, question type (open-ended \"solve\" questions vs."
+        },
+        {
+          "source": "nature.com",
+          "title": "Users’ prompting strategies and ChatGPT’s contextual adaptation shape conversational information-seeking experiences | Scientific Reports",
+          "kind": "Web",
+          "timing": "Date unavailable",
+          "publishedAt": null,
+          "firstCollectedAt": "2026-11-02T05:57:14.818Z",
+          "sourceId": "62f7590c53a1b310",
+          "url": "https://www.nature.com/articles/s41598-026-42465-4?error=cookies_not_supported&code=1a814420-8f00-402f-a008-6cda570b025c",
+          "happened": "A 2026 study found prompts and responses jointly shape information-seeking experiences.",
+          "changes": "It adds evidence that conversational value depends on user behavior and the system’s contextual adaptation.",
+          "verdict": "Must read",
+          "role": "Supports",
+          "evidence": "This study highlights disparities in user prompting behaviors and shows how user prompts and AI responses together shape information-seeking with conversational AI."
+        },
+        {
+          "source": "research.google",
+          "title": "GUIDE: A Benchmark for User Context Understanding and Assistance in GUI Workflow Videos",
+          "kind": "Web",
+          "timing": "Date unavailable",
+          "publishedAt": null,
+          "firstCollectedAt": "2026-10-26T11:11:07.426Z",
+          "sourceId": "3253ccbf7d74fa86",
+          "url": "https://research.google/pubs/guide-a-benchmark-for-user-context-understanding-and-assistance-in-gui-workflow-videos",
+          "happened": "GUIDE evaluates whether agents can interpret behavior, intent and help needs in complex software. Its demonstrations come from novice users.",
+          "changes": "The benchmark makes context-sensitive assistance a testable design concern. It does not itself establish productivity gains for experts.",
+          "verdict": "Must read",
+          "role": "Context",
+          "evidence": "GUIDE defines three tasks—(i) Behavior State Detection, (ii) Intent Prediction, and (iii) Help Prediction that test a model’s ability to recognize behavior state, reason about goals, and decide when and how to help."
+        },
+        {
+          "source": "research.google",
+          "title": "How Tech Workers Contend with Hazards of Humanlikeness in Generative AI",
+          "kind": "Web",
+          "timing": "Date unavailable",
+          "publishedAt": null,
+          "firstCollectedAt": "2026-10-26T11:11:07.426Z",
+          "sourceId": "e54f537a6bc2ef5c",
+          "url": "https://research.google/pubs/how-tech-workers-contend-with-hazards-of-humanlikeness-in-generative-ai",
+          "happened": "Tech workers reported an unsettled knowledge environment around humanlike AI.",
+          "changes": "It reinforces caution about overtrust and unclear norms for when conversational help is appropriate.",
+          "verdict": "Read",
+          "role": "Context",
+          "evidence": "Our findings reveal an unsettled knowledge environment surrounding humanlike generative AI, where workers’ varying perspectives illuminate a range of potential risks for individuals, knowledge work fields, and society."
+        },
+        {
+          "source": "arxiv.org",
+          "title": "[2505.23006] A Practical Approach for Building Production-Grade Conversational Agents with Workflow Graphs",
+          "kind": "Web",
+          "timing": "Date unavailable",
+          "publishedAt": null,
+          "firstCollectedAt": "2026-10-30T05:42:28.692Z",
+          "sourceId": "e1efe154549f63d5",
+          "url": "https://arxiv.org/abs/2505.23006",
+          "happened": "A workflow-graph paper argues for scalable, controllable, reliable agents in industry.",
+          "changes": "It supports the idea that expert workflows may need more structured control, not just chat.",
+          "verdict": "Read",
+          "role": "Context",
+          "evidence": "Our findings provide insights into bridging the gap between academic research and real-world application, introducing a framework for developing scalable, controllable, and reliable AI-driven agents."
+        },
+        {
+          "source": "metr.org",
+          "title": "Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity",
+          "kind": "Web",
+          "url": "https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study",
+          "publishedAt": "2025-07-10T00:00:00Z",
+          "timing": "2025-07-10 · Background",
+          "firstCollectedAt": "2026-10-26T11:17:24.533589Z",
+          "sourceId": "596ebdd94b57eb3b",
+          "happened": "METR studied experienced developers completing real tasks with early-2025 tools. In that setting, AI access increased completion time.",
+          "changes": "The finding challenges automatic productivity assumptions for familiar, demanding work. It is a historical result in a specific setting, not a claim about all current AI assistance.",
+          "verdict": "Read",
+          "role": "Context",
+          "evidence": "When developers are allowed to use AI tools, they take 19% longer to complete issues"
+        },
+        {
+          "source": "metr.org",
+          "title": "We are Changing our Developer Productivity Experiment Design",
+          "kind": "Web",
+          "url": "https://metr.org/blog/2026-02-24-uplift-update",
+          "publishedAt": "2026-02-24T00:00:00Z",
+          "timing": "2026-02-24 · Background",
+          "firstCollectedAt": "2026-10-26T11:17:24.533589Z",
+          "sourceId": "e47ecbbcc03e514c",
+          "happened": "METR later reported signs that newer tools could speed up work. It also explained that participant and task selection made the size of that effect difficult to estimate reliably.",
+          "changes": "The follow-up challenges a fixed story that AI slows experts down. A useful evaluation must account for changing tools, task selection and perceived versus measured benefit.",
+          "verdict": "Read",
+          "role": "Challenges",
+          "evidence": "our data is only very weak evidence for the size of this increase."
+        }
+      ],
+      "further": [],
+      "history": [
+        {
+          "at": "2026-10-26T11:11:07.426Z",
+          "kind": "New",
+          "reason": "This is a distinct, high-value UX question supported by research on expertise, intent, and help decisions, so it deserves its own identity.",
+          "before": null,
+          "after": "The answer is to treat user expertise as the starting point, not the chat interface. One study shows AI can improve novices on some solve tasks, but effects vary by expertise and question type, and the risks include complacency and overreliance. Another benchmark argues agents need to perceive behavior, infer intent, and decide when to help rather than always intervening. For expert workflows, the right move is often less mediation, not more, especially when speed and precision matter more than explanation.",
+          "sourceIds": [
+            "9437e759a4071268",
+            "3253ccbf7d74fa86",
+            "90099be782f7f47b"
+          ]
+        },
+        {
+          "at": "2026-10-26T11:17:24.533589Z",
+          "kind": "Answer revised",
+          "reason": "Independent background research and its later methodological update replace the broad claim that experts generally need less mediation. Evaluate the current task, tool and user together.",
+          "before": "The answer is to treat user expertise as the starting point, not the chat interface. One study shows AI can improve novices on some solve tasks, but effects vary by expertise and question type, and the risks include complacency and overreliance. Another benchmark argues agents need to perceive behavior, infer intent, and decide when to help rather than always intervening. For expert workflows, the right move is often less mediation, not more, especially when speed and precision matter more than explanation.",
+          "after": "Evaluate the task, the user and the current tool together. Earlier studies show why a universal answer fails: a 2024 Bard study found effects varied by expertise and task, while METR found a slowdown for experienced developers in a specific early-2025 setting. METR’s 2026 follow-up then reported signs of improvement alongside serious measurement limitations. These are background findings, not this week’s discoveries. Compare real task outcomes, including verification and recovery effort, before choosing conversational assistance over direct control. Neither expertise alone nor a favorable benchmark tells us which interface will help in the current product.",
+          "sourceIds": [
+            "9437e759a4071268",
+            "3253ccbf7d74fa86",
+            "596ebdd94b57eb3b",
+            "e47ecbbcc03e514c"
+          ]
+        },
+        {
+          "at": "2026-10-27T08:28:52.831Z",
+          "kind": "Evidence added",
+          "reason": "Answer retained verbatim. Added verified citations: https://research.google/pubs/how-tech-workers-contend-with-hazards-of-humanlikeness-in-generative-ai.",
+          "before": "Evaluate the task, the user and the current tool together. Earlier studies show why a universal answer fails: a 2024 Bard study found effects varied by expertise and task, while METR found a slowdown for experienced developers in a specific early-2025 setting. METR’s 2026 follow-up then reported signs of improvement alongside serious measurement limitations. These are background findings, not this week’s discoveries. Compare real task outcomes, including verification and recovery effort, before choosing conversational assistance over direct control. Neither expertise alone nor a favorable benchmark tells us which interface will help in the current product.",
+          "after": "Evaluate the task, the user and the current tool together. Earlier studies show why a universal answer fails: a 2024 Bard study found effects varied by expertise and task, while METR found a slowdown for experienced developers in a specific early-2025 setting. METR’s 2026 follow-up then reported signs of improvement alongside serious measurement limitations. These are background findings, not this week’s discoveries. Compare real task outcomes, including verification and recovery effort, before choosing conversational assistance over direct control. Neither expertise alone nor a favorable benchmark tells us which interface will help in the current product.",
+          "sourceIds": [
+            "9437e759a4071268",
+            "3253ccbf7d74fa86",
+            "e54f537a6bc2ef5c",
+            "596ebdd94b57eb3b",
+            "e47ecbbcc03e514c"
+          ]
+        },
+        {
+          "at": "2026-10-30T05:42:28.692Z",
+          "kind": "Evidence added",
+          "reason": "Answer retained verbatim. Added verified citations: https://arxiv.org/abs/2505.23006.",
+          "before": "Evaluate the task, the user and the current tool together. Earlier studies show why a universal answer fails: a 2024 Bard study found effects varied by expertise and task, while METR found a slowdown for experienced developers in a specific early-2025 setting. METR’s 2026 follow-up then reported signs of improvement alongside serious measurement limitations. These are background findings, not this week’s discoveries. Compare real task outcomes, including verification and recovery effort, before choosing conversational assistance over direct control. Neither expertise alone nor a favorable benchmark tells us which interface will help in the current product.",
+          "after": "Evaluate the task, the user and the current tool together. Earlier studies show why a universal answer fails: a 2024 Bard study found effects varied by expertise and task, while METR found a slowdown for experienced developers in a specific early-2025 setting. METR’s 2026 follow-up then reported signs of improvement alongside serious measurement limitations. These are background findings, not this week’s discoveries. Compare real task outcomes, including verification and recovery effort, before choosing conversational assistance over direct control. Neither expertise alone nor a favorable benchmark tells us which interface will help in the current product.",
+          "sourceIds": [
+            "9437e759a4071268",
+            "3253ccbf7d74fa86",
+            "e54f537a6bc2ef5c",
+            "e1efe154549f63d5",
+            "596ebdd94b57eb3b",
+            "e47ecbbcc03e514c"
+          ]
+        },
+        {
+          "at": "2026-11-02T05:57:14.818Z",
+          "kind": "Evidence added",
+          "reason": "New public evidence on user prompting and contextual adaptation strengthens the need to compare assistance against the actual workflow, not just expertise or benchmark scores.",
+          "before": "Evaluate the task, the user and the current tool together. Earlier studies show why a universal answer fails: a 2024 Bard study found effects varied by expertise and task, while METR found a slowdown for experienced developers in a specific early-2025 setting. METR’s 2026 follow-up then reported signs of improvement alongside serious measurement limitations. These are background findings, not this week’s discoveries. Compare real task outcomes, including verification and recovery effort, before choosing conversational assistance over direct control. Neither expertise alone nor a favorable benchmark tells us which interface will help in the current product.",
+          "after": "Evaluate the task, the user and the current tool together. Earlier studies show why a universal answer fails: a 2024 Bard study found effects varied by expertise and task, while METR found a slowdown for experienced developers in a specific early-2025 setting. METR’s 2026 follow-up then reported signs of improvement alongside serious measurement limitations. These are background findings, not this week’s discoveries. Compare real task outcomes, including verification and recovery effort, before choosing conversational assistance over direct control. Neither expertise alone nor a favorable benchmark tells us which interface will help in the current product.",
+          "sourceIds": [
+            "9437e759a4071268",
+            "62f7590c53a1b310",
+            "e54f537a6bc2ef5c",
+            "e1efe154549f63d5",
+            "3253ccbf7d74fa86",
+            "596ebdd94b57eb3b",
+            "e47ecbbcc03e514c"
+          ]
+        }
+      ]
+    },
     {
       "id": "01",
       "threadId": "2026-10-26:what-does-a-graph-shaped-workflow-change-about-how-design-and-pr",
@@ -119,210 +323,6 @@
       ]
     },
     {
-      "id": "02",
-      "threadId": "2026-10-26:how-should-teams-decide-when-conversational-ai-helps-expert-user",
-      "slug": "how-should-teams-decide-when-conversational-ai-helps-expert-user",
-      "category": "UX",
-      "tags": [
-        "UX",
-        "UI"
-      ],
-      "aiLens": true,
-      "editorialTitle": "**Human-aware help**",
-      "question": "How should teams decide when conversational AI helps expert users and when it just gets in the way?",
-      "answer": "Evaluate the task, the user and the current tool together. Earlier studies show why a universal answer fails: a 2024 Bard study found effects varied by expertise and task, while METR found a slowdown for experienced developers in a specific early-2025 setting. METR’s 2026 follow-up then reported signs of improvement alongside serious measurement limitations. These are background findings, not this week’s discoveries. Compare real task outcomes, including verification and recovery effort, before choosing conversational assistance over direct control. Neither expertise alone nor a favorable benchmark tells us which interface will help in the current product.",
-      "why": "When reviewing an AI feature, ask for a task-level comparison with the existing workflow. Measure total effort and outcome quality, including checking or correcting the system.",
-      "uncertainty": "The studies concern particular tools, populations and tasks, and the later METR estimates have selection limitations. They do not settle the value of conversational interfaces for design professionals. We need current comparisons in the actual workflow.",
-      "counts": {
-        "total": 7,
-        "web": 7,
-        "newsletters": 0
-      },
-      "publisherCount": 4,
-      "firstSeen": "2026-10-26",
-      "lastUpdatedAt": "2026-11-02T05:57:14.818Z",
-      "signals": [
-        {
-          "source": "research.google",
-          "title": "Take it, Leave it, or Fix it: Measuring Productivity and Trust in Human-AI Collaboration",
-          "kind": "Web",
-          "timing": "Date unavailable",
-          "publishedAt": null,
-          "firstCollectedAt": "2026-10-26T11:11:07.426Z",
-          "sourceId": "9437e759a4071268",
-          "url": "https://research.google/pubs/take-it-leave-it-or-fix-it-measuring-productivity-and-trust-in-human-ai-collaboration",
-          "happened": "A 2024 study found AI effects varied by expertise and question type.",
-          "changes": "It supports judging assistance by task and user group rather than assuming universal gains.",
-          "verdict": "Must read",
-          "role": "Context",
-          "evidence": "Effects on performance, efficiency, satisfaction, and trust vary depending on user expertise, question type (open-ended \"solve\" questions vs."
-        },
-        {
-          "source": "nature.com",
-          "title": "Users’ prompting strategies and ChatGPT’s contextual adaptation shape conversational information-seeking experiences | Scientific Reports",
-          "kind": "Web",
-          "timing": "Date unavailable",
-          "publishedAt": null,
-          "firstCollectedAt": "2026-11-02T05:57:14.818Z",
-          "sourceId": "62f7590c53a1b310",
-          "url": "https://www.nature.com/articles/s41598-026-42465-4?error=cookies_not_supported&code=1a814420-8f00-402f-a008-6cda570b025c",
-          "happened": "A 2026 study found prompts and responses jointly shape information-seeking experiences.",
-          "changes": "It adds evidence that conversational value depends on user behavior and the system’s contextual adaptation.",
-          "verdict": "Must read",
-          "role": "Supports",
-          "evidence": "This study highlights disparities in user prompting behaviors and shows how user prompts and AI responses together shape information-seeking with conversational AI."
-        },
-        {
-          "source": "research.google",
-          "title": "How Tech Workers Contend with Hazards of Humanlikeness in Generative AI",
-          "kind": "Web",
-          "timing": "Date unavailable",
-          "publishedAt": null,
-          "firstCollectedAt": "2026-10-26T11:11:07.426Z",
-          "sourceId": "e54f537a6bc2ef5c",
-          "url": "https://research.google/pubs/how-tech-workers-contend-with-hazards-of-humanlikeness-in-generative-ai",
-          "happened": "Tech workers reported an unsettled knowledge environment around humanlike AI.",
-          "changes": "It reinforces caution about overtrust and unclear norms for when conversational help is appropriate.",
-          "verdict": "Read",
-          "role": "Context",
-          "evidence": "Our findings reveal an unsettled knowledge environment surrounding humanlike generative AI, where workers’ varying perspectives illuminate a range of potential risks for individuals, knowledge work fields, and society."
-        },
-        {
-          "source": "arxiv.org",
-          "title": "[2505.23006] A Practical Approach for Building Production-Grade Conversational Agents with Workflow Graphs",
-          "kind": "Web",
-          "timing": "Date unavailable",
-          "publishedAt": null,
-          "firstCollectedAt": "2026-10-30T05:42:28.692Z",
-          "sourceId": "e1efe154549f63d5",
-          "url": "https://arxiv.org/abs/2505.23006",
-          "happened": "A workflow-graph paper argues for scalable, controllable, reliable agents in industry.",
-          "changes": "It supports the idea that expert workflows may need more structured control, not just chat.",
-          "verdict": "Read",
-          "role": "Context",
-          "evidence": "Our findings provide insights into bridging the gap between academic research and real-world application, introducing a framework for developing scalable, controllable, and reliable AI-driven agents."
-        },
-        {
-          "source": "research.google",
-          "title": "GUIDE: A Benchmark for User Context Understanding and Assistance in GUI Workflow Videos",
-          "kind": "Web",
-          "timing": "Date unavailable",
-          "publishedAt": null,
-          "firstCollectedAt": "2026-10-26T11:11:07.426Z",
-          "sourceId": "3253ccbf7d74fa86",
-          "url": "https://research.google/pubs/guide-a-benchmark-for-user-context-understanding-and-assistance-in-gui-workflow-videos",
-          "happened": "GUIDE evaluates whether agents can interpret behavior, intent and help needs in complex software. Its demonstrations come from novice users.",
-          "changes": "The benchmark makes context-sensitive assistance a testable design concern. It does not itself establish productivity gains for experts.",
-          "verdict": "Must read",
-          "role": "Context",
-          "evidence": "GUIDE defines three tasks—(i) Behavior State Detection, (ii) Intent Prediction, and (iii) Help Prediction that test a model’s ability to recognize behavior state, reason about goals, and decide when and how to help."
-        },
-        {
-          "source": "metr.org",
-          "title": "Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity",
-          "kind": "Web",
-          "url": "https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study",
-          "publishedAt": "2025-07-10T00:00:00Z",
-          "timing": "2025-07-10 · Background",
-          "firstCollectedAt": "2026-10-26T11:17:24.533589Z",
-          "sourceId": "596ebdd94b57eb3b",
-          "happened": "METR studied experienced developers completing real tasks with early-2025 tools. In that setting, AI access increased completion time.",
-          "changes": "The finding challenges automatic productivity assumptions for familiar, demanding work. It is a historical result in a specific setting, not a claim about all current AI assistance.",
-          "verdict": "Read",
-          "role": "Context",
-          "evidence": "When developers are allowed to use AI tools, they take 19% longer to complete issues"
-        },
-        {
-          "source": "metr.org",
-          "title": "We are Changing our Developer Productivity Experiment Design",
-          "kind": "Web",
-          "url": "https://metr.org/blog/2026-02-24-uplift-update",
-          "publishedAt": "2026-02-24T00:00:00Z",
-          "timing": "2026-02-24 · Background",
-          "firstCollectedAt": "2026-10-26T11:17:24.533589Z",
-          "sourceId": "e47ecbbcc03e514c",
-          "happened": "METR later reported signs that newer tools could speed up work. It also explained that participant and task selection made the size of that effect difficult to estimate reliably.",
-          "changes": "The follow-up challenges a fixed story that AI slows experts down. A useful evaluation must account for changing tools, task selection and perceived versus measured benefit.",
-          "verdict": "Read",
-          "role": "Challenges",
-          "evidence": "our data is only very weak evidence for the size of this increase."
-        }
-      ],
-      "further": [],
-      "history": [
-        {
-          "at": "2026-10-26T11:11:07.426Z",
-          "kind": "New",
-          "reason": "This is a distinct, high-value UX question supported by research on expertise, intent, and help decisions, so it deserves its own identity.",
-          "before": null,
-          "after": "The answer is to treat user expertise as the starting point, not the chat interface. One study shows AI can improve novices on some solve tasks, but effects vary by expertise and question type, and the risks include complacency and overreliance. Another benchmark argues agents need to perceive behavior, infer intent, and decide when to help rather than always intervening. For expert workflows, the right move is often less mediation, not more, especially when speed and precision matter more than explanation.",
-          "sourceIds": [
-            "9437e759a4071268",
-            "3253ccbf7d74fa86",
-            "90099be782f7f47b"
-          ]
-        },
-        {
-          "at": "2026-10-26T11:17:24.533589Z",
-          "kind": "Answer revised",
-          "reason": "Independent background research and its later methodological update replace the broad claim that experts generally need less mediation. Evaluate the current task, tool and user together.",
-          "before": "The answer is to treat user expertise as the starting point, not the chat interface. One study shows AI can improve novices on some solve tasks, but effects vary by expertise and question type, and the risks include complacency and overreliance. Another benchmark argues agents need to perceive behavior, infer intent, and decide when to help rather than always intervening. For expert workflows, the right move is often less mediation, not more, especially when speed and precision matter more than explanation.",
-          "after": "Evaluate the task, the user and the current tool together. Earlier studies show why a universal answer fails: a 2024 Bard study found effects varied by expertise and task, while METR found a slowdown for experienced developers in a specific early-2025 setting. METR’s 2026 follow-up then reported signs of improvement alongside serious measurement limitations. These are background findings, not this week’s discoveries. Compare real task outcomes, including verification and recovery effort, before choosing conversational assistance over direct control. Neither expertise alone nor a favorable benchmark tells us which interface will help in the current product.",
-          "sourceIds": [
-            "9437e759a4071268",
-            "3253ccbf7d74fa86",
-            "596ebdd94b57eb3b",
-            "e47ecbbcc03e514c"
-          ]
-        },
-        {
-          "at": "2026-10-27T08:28:52.831Z",
-          "kind": "Evidence added",
-          "reason": "Answer retained verbatim. Added verified citations: https://research.google/pubs/how-tech-workers-contend-with-hazards-of-humanlikeness-in-generative-ai.",
-          "before": "Evaluate the task, the user and the current tool together. Earlier studies show why a universal answer fails: a 2024 Bard study found effects varied by expertise and task, while METR found a slowdown for experienced developers in a specific early-2025 setting. METR’s 2026 follow-up then reported signs of improvement alongside serious measurement limitations. These are background findings, not this week’s discoveries. Compare real task outcomes, including verification and recovery effort, before choosing conversational assistance over direct control. Neither expertise alone nor a favorable benchmark tells us which interface will help in the current product.",
-          "after": "Evaluate the task, the user and the current tool together. Earlier studies show why a universal answer fails: a 2024 Bard study found effects varied by expertise and task, while METR found a slowdown for experienced developers in a specific early-2025 setting. METR’s 2026 follow-up then reported signs of improvement alongside serious measurement limitations. These are background findings, not this week’s discoveries. Compare real task outcomes, including verification and recovery effort, before choosing conversational assistance over direct control. Neither expertise alone nor a favorable benchmark tells us which interface will help in the current product.",
-          "sourceIds": [
-            "9437e759a4071268",
-            "3253ccbf7d74fa86",
-            "e54f537a6bc2ef5c",
-            "596ebdd94b57eb3b",
-            "e47ecbbcc03e514c"
-          ]
-        },
-        {
-          "at": "2026-10-30T05:42:28.692Z",
-          "kind": "Evidence added",
-          "reason": "Answer retained verbatim. Added verified citations: https://arxiv.org/abs/2505.23006.",
-          "before": "Evaluate the task, the user and the current tool together. Earlier studies show why a universal answer fails: a 2024 Bard study found effects varied by expertise and task, while METR found a slowdown for experienced developers in a specific early-2025 setting. METR’s 2026 follow-up then reported signs of improvement alongside serious measurement limitations. These are background findings, not this week’s discoveries. Compare real task outcomes, including verification and recovery effort, before choosing conversational assistance over direct control. Neither expertise alone nor a favorable benchmark tells us which interface will help in the current product.",
-          "after": "Evaluate the task, the user and the current tool together. Earlier studies show why a universal answer fails: a 2024 Bard study found effects varied by expertise and task, while METR found a slowdown for experienced developers in a specific early-2025 setting. METR’s 2026 follow-up then reported signs of improvement alongside serious measurement limitations. These are background findings, not this week’s discoveries. Compare real task outcomes, including verification and recovery effort, before choosing conversational assistance over direct control. Neither expertise alone nor a favorable benchmark tells us which interface will help in the current product.",
-          "sourceIds": [
-            "9437e759a4071268",
-            "3253ccbf7d74fa86",
-            "e54f537a6bc2ef5c",
-            "e1efe154549f63d5",
-            "596ebdd94b57eb3b",
-            "e47ecbbcc03e514c"
-          ]
-        },
-        {
-          "at": "2026-11-02T05:57:14.818Z",
-          "kind": "Evidence added",
-          "reason": "New public evidence on user prompting and contextual adaptation strengthens the need to compare assistance against the actual workflow, not just expertise or benchmark scores.",
-          "before": "Evaluate the task, the user and the current tool together. Earlier studies show why a universal answer fails: a 2024 Bard study found effects varied by expertise and task, while METR found a slowdown for experienced developers in a specific early-2025 setting. METR’s 2026 follow-up then reported signs of improvement alongside serious measurement limitations. These are background findings, not this week’s discoveries. Compare real task outcomes, including verification and recovery effort, before choosing conversational assistance over direct control. Neither expertise alone nor a favorable benchmark tells us which interface will help in the current product.",
-          "after": "Evaluate the task, the user and the current tool together. Earlier studies show why a universal answer fails: a 2024 Bard study found effects varied by expertise and task, while METR found a slowdown for experienced developers in a specific early-2025 setting. METR’s 2026 follow-up then reported signs of improvement alongside serious measurement limitations. These are background findings, not this week’s discoveries. Compare real task outcomes, including verification and recovery effort, before choosing conversational assistance over direct control. Neither expertise alone nor a favorable benchmark tells us which interface will help in the current product.",
-          "sourceIds": [
-            "9437e759a4071268",
-            "62f7590c53a1b310",
-            "e54f537a6bc2ef5c",
-            "e1efe154549f63d5",
-            "3253ccbf7d74fa86",
-            "596ebdd94b57eb3b",
-            "e47ecbbcc03e514c"
-          ]
-        }
-      ]
-    },
-    {
       "id": "03",
       "threadId": "2026-10-26:what-do-the-culture-pieces-suggest-about-taste-constraint-and-cr",
       "slug": "what-do-the-culture-pieces-suggest-about-taste-constraint-and-cr",
@@ -422,15 +422,15 @@
     }
   ],
   "retiredQuestions": [],
-  "generatedAt": "2026-11-02T05:57:14.818Z",
-  "lastCollectedAt": "2026-11-02T05:57:14.818Z",
-  "crawlCompletedAt": "06:57",
+  "generatedAt": "2026-11-03T06:43:28.802Z",
+  "lastCollectedAt": "2026-11-03T06:43:28.802Z",
+  "crawlCompletedAt": "07:43",
   "finalizedAt": null,
-  "revision": "45c340e2ab31",
-  "sourceCount": 29,
+  "revision": "3ab9b57cc525",
+  "sourceCount": 27,
   "webSourceCount": 7,
-  "teamContributionCount": 2,
+  "teamContributionCount": 3,
   "sourceWarnings": [
-    "32 candidate pages could not provide enough inspectable public article text. They were not used as new evidence."
+    "37 candidate pages could not provide enough inspectable public article text. They were not used as new evidence."
   ]
 }
