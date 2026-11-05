@@ -1,39 +1,75 @@
 [
   {
+    "id": "9f063f64e7462ce0",
+    "url": "https://arxiv.org/abs/2603.13717",
+    "title": "[2603.13717] \"It Became My Buddy, But I'm Not Afraid to Disagree\": A Multi-Session Study of UX Evaluators Collaborating with Conversational AI Assistants",
+    "source": "arxiv.org",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
+  },
+  {
+    "id": "06ebb40a317e16fe",
+    "url": "https://developers.openai.com/plugins/concepts/ui-guidelines?trk=article-ssr-frontend-pulse_little-text-block",
+    "title": "UI guidelines – Plugins | OpenAI Developers",
+    "source": "developers.openai.com",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
+  },
+  {
+    "id": "d43feec9117c2287",
+    "url": "https://arxiv.org/abs/2506.11610",
+    "title": "[2506.11610] \"If we misunderstand the client, we misspend 100 hours\": Exploring conversational AI and response types for information elicitation",
+    "source": "arxiv.org",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
+  },
+  {
+    "id": "91f9c56dbb7c602d",
+    "url": "https://arxiv.org/abs/2608.19551",
+    "title": "[2608.19551] Delegating or Doing? Understanding User Behavior in Hybrid Human-Agent Interfaces",
+    "source": "arxiv.org",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
+  },
+  {
+    "id": "a8b8ebfe68f7a27e",
+    "url": "https://dis.acm.org/2025/publications",
+    "title": "Publications – DIS2025",
+    "source": "dis.acm.org",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
+  },
+  {
+    "id": "97e74c6ce5db3d9d",
+    "url": "https://mojdigital.blog.gov.uk/2024/08/14/combining-ai-and-content-design-to-extract-insights-from-service-assessment-reports",
+    "title": "Combining AI and content design to extract insights from service assessment reports – Justice Digital, Data and Science",
+    "source": "mojdigital.blog.gov.uk",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
+  },
+  {
+    "id": "971f69715319ef47",
+    "url": "https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government/artificial-intelligence-playbook-for-the-uk-government-html",
+    "title": "Artificial Intelligence Playbook for the UK Government (HTML) - GOV.UK",
+    "source": "gov.uk",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
+  },
+  {
     "id": "bacaa2ac1eb948b6",
     "url": "https://developers.openai.com/api/docs/guides/agent-builder",
     "title": "Agent Builder | OpenAI API",
     "source": "developers.openai.com",
-    "sourceKind": "web research",
+    "sourceKind": "web crawl",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-04T06:12:40.444Z"
-  },
-  {
-    "id": "3f82281ea0da409a",
-    "url": "https://kairos.jetbrains.com/research/articles/developer-needs-and-feasible-features",
-    "title": "Developer Needs and Feasible Features for AI Assistants in IDEs — JetBrains Research",
-    "source": "kairos.jetbrains.com",
-    "sourceKind": "web research",
-    "publishedAt": "2026-01-01T00:00:00.000Z",
-    "firstCollectedAt": "2026-11-04T06:12:40.444Z"
-  },
-  {
-    "id": "cf82e8d4b0be3df2",
-    "url": "https://developers.figma.com/docs/figma-mcp-server/tools-and-prompts",
-    "title": "Tools and prompts | Developer Docs",
-    "source": "developers.figma.com",
-    "sourceKind": "web research",
-    "publishedAt": null,
-    "firstCollectedAt": "2026-11-04T06:12:40.444Z"
-  },
-  {
-    "id": "267d077d49431a23",
-    "url": "https://www.nngroup.com/articles/ai-in-ux-survey-26",
-    "title": "AI in UX: Work Is Faster, But Practitioners Have Mixed Feelings - NN/G",
-    "source": "nngroup.com",
-    "sourceKind": "web research",
-    "publishedAt": null,
-    "firstCollectedAt": "2026-11-04T06:12:40.444Z"
+    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
   },
   {
     "id": "8e2ccf3334d077a8",
@@ -42,7 +78,7 @@
     "source": "nature.com",
     "sourceKind": "web crawl",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-04T06:12:40.444Z"
+    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
   },
   {
     "id": "62f7590c53a1b310",
@@ -51,7 +87,7 @@
     "source": "nature.com",
     "sourceKind": "web crawl",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-04T06:12:40.444Z"
+    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
   },
   {
     "id": "1cc01032705b3456",
@@ -60,7 +96,7 @@
     "source": "developers.openai.com",
     "sourceKind": "web crawl",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-04T06:12:40.444Z"
+    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
   },
   {
     "id": "9437e759a4071268",
@@ -69,7 +105,7 @@
     "source": "research.google",
     "sourceKind": "web crawl",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-04T06:12:40.444Z"
+    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
   },
   {
     "id": "3253ccbf7d74fa86",
@@ -78,7 +114,7 @@
     "source": "research.google",
     "sourceKind": "web crawl",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-04T06:12:40.444Z"
+    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
   },
   {
     "id": "e54f537a6bc2ef5c",
@@ -87,7 +123,7 @@
     "source": "research.google",
     "sourceKind": "web crawl",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-04T06:12:40.444Z"
+    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
   },
   {
     "id": "e1efe154549f63d5",
@@ -96,7 +132,7 @@
     "source": "arxiv.org",
     "sourceKind": "web crawl",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-04T06:12:40.444Z"
+    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
   },
   {
     "id": "9d61b1cadcefc19f",
@@ -105,7 +141,7 @@
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-10-26T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-04T06:12:40.444Z"
+    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
   },
   {
     "id": "b5b120a0c6af3f4b",
@@ -114,61 +150,7 @@
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-04T06:12:40.444Z"
-  },
-  {
-    "id": "40b16980f7bd0090",
-    "url": "https://www.itsnicethat.com/articles/elizabeth-goodspeed-whats-in-a-name-categorising-aesthetics-creative-industry-190526",
-    "title": "“What aesthetic is this?” Elizabeth Goodspeed on the push to categorise visual culture",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": null,
-    "firstCollectedAt": "2026-11-04T06:12:40.444Z"
-  },
-  {
-    "id": "8fc23c6e57236d59",
-    "url": "https://www.itsnicethat.com/articles/beam-eating-the-whole-fish-graphic-design-project-031126",
-    "title": "Never eaten a whole fish? This beautifully designed magazine will show you how to",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-03T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-04T06:12:40.444Z"
-  },
-  {
-    "id": "cef9ed46e5d972a9",
-    "url": "https://www.itsnicethat.com/articles/hot-cottage-ed-davis-rob-cordiner-olivia-radonich-graphic-design-discover-031126",
-    "title": "Welcome to Hot Cottage, the jack of all trades design studio that zigzags between methods and mediums",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-03T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-04T06:12:40.444Z"
-  },
-  {
-    "id": "20d142f2e5c1acf8",
-    "url": "https://www.itsnicethat.com/articles/air-has-built-an-ai-agent-for-creative-tasks-creative-industry-sponsored-content-291026",
-    "title": "Air has built an agent for creative tasks – creative teams are paying attention",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-10-29T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-04T06:12:40.444Z"
-  },
-  {
-    "id": "4143fb808abf5dd4",
-    "url": "https://www.smashingmagazine.com/2026/11/modern-css-might-make-your-front-end-more-complex",
-    "title": "Modern CSS Might Make Your Front-End More Complex — Smashing Magazine",
-    "source": "smashingmagazine.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-03T10:00:00.000Z",
-    "firstCollectedAt": "2026-11-04T06:12:40.444Z"
-  },
-  {
-    "id": "fa71f02395de8fdc",
-    "url": "https://www.smashingmagazine.com/2026/10/desktop-wallpaper-calendars-november-2026",
-    "title": "A Spark Of Color In November’s Gray (2026 Wallpapers Edition) — Smashing Magazine",
-    "source": "smashingmagazine.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-10-31T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-04T06:12:40.444Z"
+    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
   },
   {
     "id": "899779497ade9fce",
@@ -177,51 +159,123 @@
     "source": "designnotes.blog.gov.uk",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-03T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-04T06:12:40.444Z"
+    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
   },
   {
-    "id": "3e0f888ed8a688c5",
-    "url": "https://www.w3.org/blog/2026/historical-www-talk-archives-made-complete",
-    "title": "Historical www-talk archives made complete | 2026 | Blog | W3C",
-    "source": "w3.org",
+    "id": "074db163beada57f",
+    "url": "https://www.itsnicethat.com/articles/polar-pac-graphic-design-project-041126",
+    "title": "Polar’s logo for bakery P.A.C. is just typed out, and all the better for it",
+    "source": "itsnicethat.com",
     "sourceKind": "web crawl",
-    "publishedAt": "2026-10-28T14:07:00.000Z",
-    "firstCollectedAt": "2026-11-04T06:12:40.444Z"
+    "publishedAt": "2026-11-04T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
   },
   {
-    "id": "c495f5b2a0db95e9",
-    "url": "https://www.w3.org/blog/2026/w3c-launches-second-pilot-of-program-to-support-open-source-projects",
-    "title": "W3C launches second pilot of program to support Open Source projects | 2026 | Blog | W3C",
-    "source": "w3.org",
+    "id": "720b4d086773b7aa",
+    "url": "https://www.itsnicethat.com/articles/figur-graphic-design-discover-041126",
+    "title": "A lived-in approach to sportswear shapes Figur’s graphic systems for brands like Hoka, Sap and Unna",
+    "source": "itsnicethat.com",
     "sourceKind": "web crawl",
-    "publishedAt": "2026-10-27T11:50:00.000Z",
-    "firstCollectedAt": "2026-11-04T06:12:40.444Z"
+    "publishedAt": "2026-11-04T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
   },
   {
-    "id": "b691cdbda47e9d6a",
-    "url": "https://www.nngroup.com/articles/test-earlier-with-ai/?lm=context-libraries&pt=article",
-    "title": "Test Complex Interactions Earlier with AI Prototyping - NN/G",
-    "source": "nngroup.com",
-    "sourceKind": "web research",
-    "publishedAt": null,
-    "firstCollectedAt": "2026-11-04T06:12:40.444Z"
+    "id": "8b8a99a3231afed9",
+    "url": "https://www.itsnicethat.com/articles/alex-rorison-photography-discover-021126",
+    "title": "For Alex Rorison, photographs are physical objects to be played with – not just “pixels on a screen”",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-02T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
   },
   {
-    "id": "9f063f64e7462ce0",
-    "url": "https://arxiv.org/abs/2603.13717",
-    "title": "[2603.13717] \"It Became My Buddy, But I'm Not Afraid to Disagree\": A Multi-Session Study of UX Evaluators Collaborating with Conversational AI Assistants",
-    "source": "arxiv.org",
-    "sourceKind": "web research",
-    "publishedAt": null,
-    "firstCollectedAt": "2026-11-04T06:12:40.444Z"
+    "id": "98365c2ed4742a93",
+    "url": "https://www.itsnicethat.com/features/in-house-nothing-charlie-smith-creative-industry-021126",
+    "title": "Why Nothing’s Charlie Smith is doubling down on “joy and wonder”",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-02T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
   },
   {
-    "id": "37cbb846ed95a4f2",
-    "url": "https://arxiv.org/abs/2605.11149",
-    "title": "[2605.11149] Conversational Customization of Productivity Systems: A Design Probe of Malleable AI Interfaces",
-    "source": "arxiv.org",
+    "id": "fd51fd9e6898d94d",
+    "url": "https://www.itsnicethat.com/articles/creative-career-condundrums-if-you-could-jobs-advice-021126",
+    "title": "“It’s not their experience versus your academia”",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-02T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
+  },
+  {
+    "id": "978c77592d8b6e5d",
+    "url": "https://www.itsnicethat.com/features/intl-poster-competition-graphic-design-spotlight-021126",
+    "title": "“Designing a good poster is a dark art” – highlights from this year’s INTL poster competition",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-02T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
+  },
+  {
+    "id": "a0e94b2b0cddc0ea",
+    "url": "https://www.itsnicethat.com/articles/odd-works-toyto-graphic-design-project-021126",
+    "title": "Children’s toys don’t need to be an eyesore with Odd Works’ tasteful identity for Toyto",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-02T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
+  },
+  {
+    "id": "0ca71c81ebd2e423",
+    "url": "https://www.itsnicethat.com/articles/arielle-bobb-willis-nicer-tuesdays-la-3011026",
+    "title": "“Photography allows me to remain available to life”: Arielle Bobb Willis on the power of image making",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-10-30T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
+  },
+  {
+    "id": "6de64757904e52c0",
+    "url": "https://www.itsnicethat.com/articles/the-new-company-nicer-tuesdays-la-291026",
+    "title": "Why brand relevance is driven by novel ideas: The New Company on getting out your creative comfort zone",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-10-29T10:00:00.000Z",
+    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
+  },
+  {
+    "id": "b350c1aa581eb57d",
+    "url": "https://www.itsnicethat.com/articles/studio-lotta-nieminen-aplomb-branding-project-291026",
+    "title": "From wax seals to postal stamps, Aplomb perfume’s packaging has the intimacy of a handwritten letter",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-10-29T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
+  },
+  {
+    "id": "4143fb808abf5dd4",
+    "url": "https://www.smashingmagazine.com/2026/11/modern-css-might-make-your-front-end-more-complex",
+    "title": "Modern CSS Might Make Your Front-End More Complex — Smashing Magazine",
+    "source": "smashingmagazine.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-03T10:00:00.000Z",
+    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
+  },
+  {
+    "id": "fa71f02395de8fdc",
+    "url": "https://www.smashingmagazine.com/2026/10/desktop-wallpaper-calendars-november-2026",
+    "title": "A Spark Of Color In November’s Gray (2026 Wallpapers Edition) — Smashing Magazine",
+    "source": "smashingmagazine.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-10-31T08:00:00.000Z",
+    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
+  },
+  {
+    "id": "3f82281ea0da409a",
+    "url": "https://kairos.jetbrains.com/research/articles/developer-needs-and-feasible-features",
+    "title": "Developer Needs and Feasible Features for AI Assistants in IDEs — JetBrains Research",
+    "source": "kairos.jetbrains.com",
     "sourceKind": "web research",
-    "publishedAt": null,
-    "firstCollectedAt": "2026-11-04T06:12:40.444Z"
+    "publishedAt": "2026-01-01T00:00:00.000Z",
+    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
   }
 ]

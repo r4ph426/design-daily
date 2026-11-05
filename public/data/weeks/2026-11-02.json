@@ -6,8 +6,8 @@
   "date": "2026-11-02",
   "editionNumber": "033",
   "displayDate": "Week of 2026-11-02",
-  "headline": "**Content quality at scale** is now the hard part",
-  "summary": "This week narrows toward one clear operational question: how to scale AI without losing design judgment or reviewability. The strongest evidence points to workflow design, evaluation, and permissions, while the cultural pieces mainly reinforce that speed alone is not the point.",
+  "headline": "**Workflow, evaluation, and ritual** define this week’s design reading",
+  "summary": "The week stays centered on AI as a workflow problem, not a chat problem, with new evidence that permissions, handoffs, and evaluation shape whether these systems are usable. A second thread is steadier: teams are formalizing review for generated content, while culture coverage still points toward slower observation and stronger creative habits.",
   "questions": [
     {
       "id": "01",
@@ -114,6 +114,230 @@
             "bacaa2ac1eb948b6",
             "1cc01032705b3456",
             "8e2ccf3334d077a8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "threadId": "2026-11-02:how-should-content-and-design-teams-evaluate-generated-outputs-w",
+      "slug": "how-should-content-and-design-teams-evaluate-generated-outputs-w",
+      "category": "Process",
+      "tags": [
+        "Process",
+        "UX"
+      ],
+      "aiLens": true,
+      "editorialTitle": "**Evaluate outputs at scale**",
+      "question": "How should content and design teams evaluate generated outputs when there is no single artifact to sign off?",
+      "answer": "Treat the prompt and its evaluation criteria as the design surface. The UK government team shows why: personalized content produces thousands of possible outputs, so they built scenario banks, versioned prompts and rubrics to score recurring failures instead of reviewing one sample. Their approach is useful because it turns content rules into repeatable checks, while still leaving judgment in human hands for ambiguous criteria. The tradeoff is more setup and calibration work, but that is cheaper than shipping an appealing example that fails on the next hundred. The question for teams is less whether generation can look good, and more whether failures are visible and actionable.",
+      "why": "If your product generates many variants, you need a review method that catches patterns, not just one-off examples. This affects content ops, QA and the design system around generated copy.",
+      "uncertainty": "The evidence is from a government design blog and describes one internal experiment, not broad adoption. It would take independent deployments or comparative results to know how generally this scales.",
+      "counts": {
+        "total": 1,
+        "web": 1,
+        "newsletters": 0
+      },
+      "publisherCount": 1,
+      "firstSeen": "2026-11-04",
+      "lastUpdatedAt": "2026-11-04T06:12:40.444Z",
+      "signals": [
+        {
+          "source": "designnotes.blog.gov.uk",
+          "title": "Creating tools for scaling generated content – Design in government",
+          "kind": "Web",
+          "timing": "2026-11-03",
+          "publishedAt": "2026-11-03T09:00:00.000Z",
+          "firstCollectedAt": "2026-11-04T06:12:40.444Z",
+          "sourceId": "899779497ade9fce",
+          "url": "https://designnotes.blog.gov.uk/2026/11/03/creating-tools-for-scaling-generated-content",
+          "happened": "The team says generated content cannot be reviewed output by output because there is no single message to sign off.",
+          "changes": "This directly creates the need for a scalable evaluation method instead of traditional content review.",
+          "verdict": "Must read",
+          "role": "Supports",
+          "evidence": "We generate content, evaluate it, look at the failures, check the ones we disagree with, change the prompts where needed, and run it all again."
+        }
+      ],
+      "further": [],
+      "history": [
+        {
+          "at": "2026-11-04T06:12:40.444Z",
+          "kind": "New",
+          "reason": "This week adds a concrete public example of scalable evaluation for generated content, which creates a new designer-facing process question.",
+          "before": null,
+          "after": "Treat the prompt and its evaluation criteria as the design surface. The UK government team shows why: personalized content produces thousands of possible outputs, so they built scenario banks, versioned prompts and rubrics to score recurring failures instead of reviewing one sample. Their approach is useful because it turns content rules into repeatable checks, while still leaving judgment in human hands for ambiguous criteria. The tradeoff is more setup and calibration work, but that is cheaper than shipping an appealing example that fails on the next hundred. The question for teams is less whether generation can look good, and more whether failures are visible and actionable.",
+          "sourceIds": [
+            "899779497ade9fce"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "threadId": "2026-11-02:what-should-designers-take-from-this-week-s-talk-about-taste-rit",
+      "slug": "what-should-designers-take-from-this-week-s-talk-about-taste-rit",
+      "category": "Culture",
+      "tags": [
+        "Culture",
+        "Process"
+      ],
+      "aiLens": false,
+      "editorialTitle": "**Judgment still needs friction**",
+      "question": "What should designers take from this week’s talk about taste, ritual and creative constraint?",
+      "answer": "Use the culture pieces as permission to slow down the start of a project, not as proof of a new movement. Bráulio Amado describes looking at overlooked details, setting limits and letting accidents become the next idea, while another essay argues rituals protect attention and taste from feed-driven sameness. The useful design takeaway is practical: build small observation or making rituals into the brief, then see whether they sharpen the rationale behind the work. These pieces do not prove that constraint always improves output, but they do suggest that judgment needs inputs the feed will not provide on its own.",
+      "why": "This is a reminder to protect time for noticing, sketching and reflection before locking a direction. It can improve the specificity of concepts and the confidence of the rationale.",
+      "uncertainty": "These are interviews and opinion pieces from one publication, so they show practices and arguments rather than outcomes. We would need independent studio examples or comparative work to know whether the ritual actually improves decisions.",
+      "counts": {
+        "total": 2,
+        "web": 2,
+        "newsletters": 0
+      },
+      "publisherCount": 1,
+      "firstSeen": "2026-11-04",
+      "lastUpdatedAt": "2026-11-04T06:12:40.444Z",
+      "signals": [
+        {
+          "source": "itsnicethat.com",
+          "title": "Mistakes, chaos and meditation: inside the mind of Bráulio Amado",
+          "kind": "Web",
+          "timing": "2026-10-26",
+          "publishedAt": "2026-10-26T09:00:00.000Z",
+          "firstCollectedAt": "2026-11-03T06:43:28.802Z",
+          "sourceId": "9d61b1cadcefc19f",
+          "url": "https://www.itsnicethat.com/features/braulio-amado-graphic-design-spotlight-261026",
+          "happened": "Bráulio Amado describes an exercise of forcing yourself to look at something you would usually dismiss.",
+          "changes": "This supports observation as a deliberate design habit rather than passive inspiration.",
+          "verdict": "Must read",
+          "role": "Supports",
+          "evidence": "There’s an exercise in trying to stop and force yourself to look at something you would usually dismiss, and reflect a little bit on what it is."
+        },
+        {
+          "source": "itsnicethat.com",
+          "title": "More of the same: how creative rituals can help you break free from the idea echo chamber",
+          "kind": "Web",
+          "timing": "Date unavailable",
+          "publishedAt": null,
+          "firstCollectedAt": "2026-11-03T06:43:28.802Z",
+          "sourceId": "b5b120a0c6af3f4b",
+          "url": "https://www.itsnicethat.com/features/more-of-the-same-creative-routines-in-depth-everyday-edition-140526",
+          "happened": "The essay argues creative rituals defend taste, attention and intention from erosion.",
+          "changes": "This provides context for why recurring rituals matter in a high-speed visual culture.",
+          "verdict": "Read",
+          "role": "Context",
+          "evidence": "Which is why creative rituals feel less like a luxury and more like a kind of defence against the slow erosion of taste, attention, and intention."
+        }
+      ],
+      "further": [],
+      "history": [
+        {
+          "at": "2026-11-04T06:12:40.444Z",
+          "kind": "New",
+          "reason": "A coherent cultural thread emerged around ritual and constraint, and it has a direct effect on creative direction practice.",
+          "before": null,
+          "after": "Use the culture pieces as permission to slow down the start of a project, not as proof of a new movement. Bráulio Amado describes looking at overlooked details, setting limits and letting accidents become the next idea, while another essay argues rituals protect attention and taste from feed-driven sameness. The useful design takeaway is practical: build small observation or making rituals into the brief, then see whether they sharpen the rationale behind the work. These pieces do not prove that constraint always improves output, but they do suggest that judgment needs inputs the feed will not provide on its own.",
+          "sourceIds": [
+            "9d61b1cadcefc19f",
+            "b5b120a0c6af3f4b"
+          ]
+        }
+      ]
+    }
+  ],
+  "retiredQuestions": [
+    {
+      "id": "03",
+      "threadId": "2026-10-26:what-do-the-culture-pieces-suggest-about-taste-constraint-and-cr",
+      "slug": "what-do-the-culture-pieces-suggest-about-taste-constraint-and-cr",
+      "category": "Culture",
+      "tags": [
+        "Culture",
+        "Process"
+      ],
+      "aiLens": false,
+      "editorialTitle": "Practising **attention and taste**",
+      "question": "How can deliberate observation and creative constraints strengthen design judgment?",
+      "answer": "Bráulio Amado’s interview offers a concrete practice: notice overlooked surroundings, work with constraints and use accidents as material. Two earlier opinion pieces provide context about creative routines and the limits of aesthetic labels. Together they suggest an exercise worth trying, rather than evidence of a general cultural turn: build a small observation or making ritual into a project, then examine whether it produces more specific decisions. For a design team, the value would be visible in the work and its rationale. The pieces do not prove that constraint-led practice produces better outcomes.",
+      "why": "This offers a creative-direction experiment: protect some time for observation and making, then assess whether it changes the specificity of the ideas. Avoid treating a recognizable aesthetic as evidence of good judgment.",
+      "uncertainty": "All three pieces come from one publication and are interviews or opinion, not comparative studies. The earlier essays are background context. We need independent studio examples and outcomes before treating the approach as a wider shift.",
+      "counts": {
+        "total": 3,
+        "web": 3,
+        "newsletters": 0
+      },
+      "publisherCount": 1,
+      "firstSeen": "2026-10-26",
+      "lastUpdatedAt": "2026-10-26T11:17:24.533589Z",
+      "signals": [
+        {
+          "source": "itsnicethat.com",
+          "title": "Mistakes, chaos and meditation: inside the mind of Bráulio Amado",
+          "kind": "Web",
+          "timing": "2026-10-26",
+          "publishedAt": "2026-10-26T09:00:00.000Z",
+          "firstCollectedAt": "2026-10-26T11:11:07.426Z",
+          "sourceId": "9d61b1cadcefc19f",
+          "url": "https://www.itsnicethat.com/features/braulio-amado-graphic-design-spotlight-261026",
+          "happened": "Bráulio Amado uses mundane observation and limits as method.",
+          "changes": "The interview describes zooming in on damaged or boring details, setting constraints, and letting mistakes generate the next move. That shows a concrete process where constraint is not a restriction but a generator of form.",
+          "verdict": "Must read",
+          "role": "Supports",
+          "evidence": "There’s an exercise in trying to stop and force yourself to look at something you would usually dismiss, and reflect a little bit on what it is."
+        },
+        {
+          "source": "itsnicethat.com",
+          "title": "More of the same: how creative rituals can help you break free from the idea echo chamber",
+          "kind": "Web",
+          "timing": "Date unavailable",
+          "publishedAt": null,
+          "firstCollectedAt": "2026-10-26T11:11:07.426Z",
+          "sourceId": "b5b120a0c6af3f4b",
+          "url": "https://www.itsnicethat.com/features/more-of-the-same-creative-routines-in-depth-everyday-edition-140526",
+          "happened": "Creative rituals are framed as a defense of taste and intention.",
+          "changes": "The piece argues that rituals reconnect makers to their own interests and help them resist algorithmic sameness. It repeatedly ties originality to steadiness, reflection, and time, which is useful but still opinion-led.",
+          "verdict": "Read",
+          "role": "Context",
+          "evidence": "Which is why creative rituals feel less like a luxury and more like a kind of defence against the slow erosion of taste, attention, and intention."
+        },
+        {
+          "source": "itsnicethat.com",
+          "title": "“What aesthetic is this?” Elizabeth Goodspeed on the push to categorise visual culture",
+          "kind": "Web",
+          "timing": "Date unavailable",
+          "publishedAt": null,
+          "firstCollectedAt": "2026-10-26T11:11:07.426Z",
+          "sourceId": "40b16980f7bd0090",
+          "url": "https://www.itsnicethat.com/articles/elizabeth-goodspeed-whats-in-a-name-categorising-aesthetics-creative-industry-190526",
+          "happened": "Aesthetic labels compress visual culture into categories.",
+          "changes": "The article argues that images are increasingly read as category signals rather than singular works, which flattens context. It provides important context for why taste work now includes naming, framing, and resisting over-compression.",
+          "verdict": "Read",
+          "role": "Context",
+          "evidence": "When movements get squashed into recognisable boxes, only their most immediately identifiable visual traits survive; the social conditions and internal contradictions surrounding them recede into the background."
+        }
+      ],
+      "further": [],
+      "history": [
+        {
+          "at": "2026-10-26T11:11:07.426Z",
+          "kind": "New",
+          "reason": "The culture coverage this week is coherent enough to support a dedicated question about taste and constraint, rather than scattering it across AI coverage.",
+          "before": null,
+          "after": "They suggest that originality is being defended through ritual, constraint, and close attention to materials rather than through faster generation. Several pieces argue that taste still comes from repeated practice, not from feed-driven novelty, while others show designers using accidents, limits, and even mundane leftovers as a source of form. The broader pattern is less about anti-AI nostalgia than about protecting judgment from flattening forces. In practical terms, that means creative direction has to be built into process, not appended at the end.",
+          "sourceIds": [
+            "b5b120a0c6af3f4b",
+            "9d61b1cadcefc19f",
+            "40b16980f7bd0090"
+          ]
+        },
+        {
+          "at": "2026-10-26T11:17:24.533589Z",
+          "kind": "Correction",
+          "reason": "Editorial review narrowed the question to a concrete practice and removed the unsupported implication of a broad cultural shift. Earlier essays are explicitly background.",
+          "before": "They suggest that originality is being defended through ritual, constraint, and close attention to materials rather than through faster generation. Several pieces argue that taste still comes from repeated practice, not from feed-driven novelty, while others show designers using accidents, limits, and even mundane leftovers as a source of form. The broader pattern is less about anti-AI nostalgia than about protecting judgment from flattening forces. In practical terms, that means creative direction has to be built into process, not appended at the end.",
+          "after": "Bráulio Amado’s interview offers a concrete practice: notice overlooked surroundings, work with constraints and use accidents as material. Two earlier opinion pieces provide context about creative routines and the limits of aesthetic labels. Together they suggest an exercise worth trying, rather than evidence of a general cultural turn: build a small observation or making ritual into a project, then examine whether it produces more specific decisions. For a design team, the value would be visible in the work and its rationale. The pieces do not prove that constraint-led practice produces better outcomes.",
+          "sourceIds": [
+            "b5b120a0c6af3f4b",
+            "9d61b1cadcefc19f",
+            "40b16980f7bd0090"
           ]
         }
       ]
@@ -353,241 +577,17 @@
           ]
         }
       ]
-    },
-    {
-      "id": "06",
-      "threadId": "2026-11-02:how-should-content-and-design-teams-evaluate-generated-outputs-w",
-      "slug": "how-should-content-and-design-teams-evaluate-generated-outputs-w",
-      "category": "Process",
-      "tags": [
-        "Process",
-        "UX"
-      ],
-      "aiLens": true,
-      "editorialTitle": "**Evaluate outputs at scale**",
-      "question": "How should content and design teams evaluate generated outputs when there is no single artifact to sign off?",
-      "answer": "Treat the prompt and its evaluation criteria as the design surface. The UK government team shows why: personalized content produces thousands of possible outputs, so they built scenario banks, versioned prompts and rubrics to score recurring failures instead of reviewing one sample. Their approach is useful because it turns content rules into repeatable checks, while still leaving judgment in human hands for ambiguous criteria. The tradeoff is more setup and calibration work, but that is cheaper than shipping an appealing example that fails on the next hundred. The question for teams is less whether generation can look good, and more whether failures are visible and actionable.",
-      "why": "If your product generates many variants, you need a review method that catches patterns, not just one-off examples. This affects content ops, QA and the design system around generated copy.",
-      "uncertainty": "The evidence is from a government design blog and describes one internal experiment, not broad adoption. It would take independent deployments or comparative results to know how generally this scales.",
-      "counts": {
-        "total": 1,
-        "web": 1,
-        "newsletters": 0
-      },
-      "publisherCount": 1,
-      "firstSeen": "2026-11-04",
-      "lastUpdatedAt": "2026-11-04T06:12:40.444Z",
-      "signals": [
-        {
-          "source": "designnotes.blog.gov.uk",
-          "title": "Creating tools for scaling generated content – Design in government",
-          "kind": "Web",
-          "timing": "2026-11-03",
-          "publishedAt": "2026-11-03T09:00:00.000Z",
-          "firstCollectedAt": "2026-11-04T06:12:40.444Z",
-          "sourceId": "899779497ade9fce",
-          "url": "https://designnotes.blog.gov.uk/2026/11/03/creating-tools-for-scaling-generated-content",
-          "happened": "The team says generated content cannot be reviewed output by output because there is no single message to sign off.",
-          "changes": "This directly creates the need for a scalable evaluation method instead of traditional content review.",
-          "verdict": "Must read",
-          "role": "Supports",
-          "evidence": "For example: The final content isn’t generated until someone asks for it, so you can't review the exact output beforehand."
-        }
-      ],
-      "further": [],
-      "history": [
-        {
-          "at": "2026-11-04T06:12:40.444Z",
-          "kind": "New",
-          "reason": "This week adds a concrete public example of scalable evaluation for generated content, which creates a new designer-facing process question.",
-          "before": null,
-          "after": "Treat the prompt and its evaluation criteria as the design surface. The UK government team shows why: personalized content produces thousands of possible outputs, so they built scenario banks, versioned prompts and rubrics to score recurring failures instead of reviewing one sample. Their approach is useful because it turns content rules into repeatable checks, while still leaving judgment in human hands for ambiguous criteria. The tradeoff is more setup and calibration work, but that is cheaper than shipping an appealing example that fails on the next hundred. The question for teams is less whether generation can look good, and more whether failures are visible and actionable.",
-          "sourceIds": [
-            "899779497ade9fce"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "07",
-      "threadId": "2026-11-02:what-should-designers-take-from-this-week-s-talk-about-taste-rit",
-      "slug": "what-should-designers-take-from-this-week-s-talk-about-taste-rit",
-      "category": "Culture",
-      "tags": [
-        "Culture",
-        "Process"
-      ],
-      "aiLens": false,
-      "editorialTitle": "**Judgment still needs friction**",
-      "question": "What should designers take from this week’s talk about taste, ritual and creative constraint?",
-      "answer": "Use the culture pieces as permission to slow down the start of a project, not as proof of a new movement. Bráulio Amado describes looking at overlooked details, setting limits and letting accidents become the next idea, while another essay argues rituals protect attention and taste from feed-driven sameness. The useful design takeaway is practical: build small observation or making rituals into the brief, then see whether they sharpen the rationale behind the work. These pieces do not prove that constraint always improves output, but they do suggest that judgment needs inputs the feed will not provide on its own.",
-      "why": "This is a reminder to protect time for noticing, sketching and reflection before locking a direction. It can improve the specificity of concepts and the confidence of the rationale.",
-      "uncertainty": "These are interviews and opinion pieces from one publication, so they show practices and arguments rather than outcomes. We would need independent studio examples or comparative work to know whether the ritual actually improves decisions.",
-      "counts": {
-        "total": 2,
-        "web": 2,
-        "newsletters": 0
-      },
-      "publisherCount": 1,
-      "firstSeen": "2026-11-04",
-      "lastUpdatedAt": "2026-11-04T06:12:40.444Z",
-      "signals": [
-        {
-          "source": "itsnicethat.com",
-          "title": "Mistakes, chaos and meditation: inside the mind of Bráulio Amado",
-          "kind": "Web",
-          "timing": "2026-10-26",
-          "publishedAt": "2026-10-26T09:00:00.000Z",
-          "firstCollectedAt": "2026-11-03T06:43:28.802Z",
-          "sourceId": "9d61b1cadcefc19f",
-          "url": "https://www.itsnicethat.com/features/braulio-amado-graphic-design-spotlight-261026",
-          "happened": "Bráulio Amado describes an exercise of forcing yourself to look at something you would usually dismiss.",
-          "changes": "This supports observation as a deliberate design habit rather than passive inspiration.",
-          "verdict": "Must read",
-          "role": "Supports",
-          "evidence": "There’s an exercise in trying to stop and force yourself to look at something you would usually dismiss, and reflect a little bit on what it is."
-        },
-        {
-          "source": "itsnicethat.com",
-          "title": "More of the same: how creative rituals can help you break free from the idea echo chamber",
-          "kind": "Web",
-          "timing": "Date unavailable",
-          "publishedAt": null,
-          "firstCollectedAt": "2026-11-03T06:43:28.802Z",
-          "sourceId": "b5b120a0c6af3f4b",
-          "url": "https://www.itsnicethat.com/features/more-of-the-same-creative-routines-in-depth-everyday-edition-140526",
-          "happened": "The essay argues creative rituals defend taste, attention and intention from erosion.",
-          "changes": "This provides context for why recurring rituals matter in a high-speed visual culture.",
-          "verdict": "Read",
-          "role": "Context",
-          "evidence": "Which is why creative rituals feel less like a luxury and more like a kind of defence against the slow erosion of taste, attention, and intention."
-        }
-      ],
-      "further": [],
-      "history": [
-        {
-          "at": "2026-11-04T06:12:40.444Z",
-          "kind": "New",
-          "reason": "A coherent cultural thread emerged around ritual and constraint, and it has a direct effect on creative direction practice.",
-          "before": null,
-          "after": "Use the culture pieces as permission to slow down the start of a project, not as proof of a new movement. Bráulio Amado describes looking at overlooked details, setting limits and letting accidents become the next idea, while another essay argues rituals protect attention and taste from feed-driven sameness. The useful design takeaway is practical: build small observation or making rituals into the brief, then see whether they sharpen the rationale behind the work. These pieces do not prove that constraint always improves output, but they do suggest that judgment needs inputs the feed will not provide on its own.",
-          "sourceIds": [
-            "9d61b1cadcefc19f",
-            "b5b120a0c6af3f4b"
-          ]
-        }
-      ]
     }
   ],
-  "retiredQuestions": [
-    {
-      "id": "03",
-      "threadId": "2026-10-26:what-do-the-culture-pieces-suggest-about-taste-constraint-and-cr",
-      "slug": "what-do-the-culture-pieces-suggest-about-taste-constraint-and-cr",
-      "category": "Culture",
-      "tags": [
-        "Culture",
-        "Process"
-      ],
-      "aiLens": false,
-      "editorialTitle": "Practising **attention and taste**",
-      "question": "How can deliberate observation and creative constraints strengthen design judgment?",
-      "answer": "Bráulio Amado’s interview offers a concrete practice: notice overlooked surroundings, work with constraints and use accidents as material. Two earlier opinion pieces provide context about creative routines and the limits of aesthetic labels. Together they suggest an exercise worth trying, rather than evidence of a general cultural turn: build a small observation or making ritual into a project, then examine whether it produces more specific decisions. For a design team, the value would be visible in the work and its rationale. The pieces do not prove that constraint-led practice produces better outcomes.",
-      "why": "This offers a creative-direction experiment: protect some time for observation and making, then assess whether it changes the specificity of the ideas. Avoid treating a recognizable aesthetic as evidence of good judgment.",
-      "uncertainty": "All three pieces come from one publication and are interviews or opinion, not comparative studies. The earlier essays are background context. We need independent studio examples and outcomes before treating the approach as a wider shift.",
-      "counts": {
-        "total": 3,
-        "web": 3,
-        "newsletters": 0
-      },
-      "publisherCount": 1,
-      "firstSeen": "2026-10-26",
-      "lastUpdatedAt": "2026-10-26T11:17:24.533589Z",
-      "signals": [
-        {
-          "source": "itsnicethat.com",
-          "title": "Mistakes, chaos and meditation: inside the mind of Bráulio Amado",
-          "kind": "Web",
-          "timing": "2026-10-26",
-          "publishedAt": "2026-10-26T09:00:00.000Z",
-          "firstCollectedAt": "2026-10-26T11:11:07.426Z",
-          "sourceId": "9d61b1cadcefc19f",
-          "url": "https://www.itsnicethat.com/features/braulio-amado-graphic-design-spotlight-261026",
-          "happened": "Bráulio Amado uses mundane observation and limits as method.",
-          "changes": "The interview describes zooming in on damaged or boring details, setting constraints, and letting mistakes generate the next move. That shows a concrete process where constraint is not a restriction but a generator of form.",
-          "verdict": "Must read",
-          "role": "Supports",
-          "evidence": "There’s an exercise in trying to stop and force yourself to look at something you would usually dismiss, and reflect a little bit on what it is."
-        },
-        {
-          "source": "itsnicethat.com",
-          "title": "More of the same: how creative rituals can help you break free from the idea echo chamber",
-          "kind": "Web",
-          "timing": "Date unavailable",
-          "publishedAt": null,
-          "firstCollectedAt": "2026-10-26T11:11:07.426Z",
-          "sourceId": "b5b120a0c6af3f4b",
-          "url": "https://www.itsnicethat.com/features/more-of-the-same-creative-routines-in-depth-everyday-edition-140526",
-          "happened": "Creative rituals are framed as a defense of taste and intention.",
-          "changes": "The piece argues that rituals reconnect makers to their own interests and help them resist algorithmic sameness. It repeatedly ties originality to steadiness, reflection, and time, which is useful but still opinion-led.",
-          "verdict": "Read",
-          "role": "Context",
-          "evidence": "Which is why creative rituals feel less like a luxury and more like a kind of defence against the slow erosion of taste, attention, and intention."
-        },
-        {
-          "source": "itsnicethat.com",
-          "title": "“What aesthetic is this?” Elizabeth Goodspeed on the push to categorise visual culture",
-          "kind": "Web",
-          "timing": "Date unavailable",
-          "publishedAt": null,
-          "firstCollectedAt": "2026-10-26T11:11:07.426Z",
-          "sourceId": "40b16980f7bd0090",
-          "url": "https://www.itsnicethat.com/articles/elizabeth-goodspeed-whats-in-a-name-categorising-aesthetics-creative-industry-190526",
-          "happened": "Aesthetic labels compress visual culture into categories.",
-          "changes": "The article argues that images are increasingly read as category signals rather than singular works, which flattens context. It provides important context for why taste work now includes naming, framing, and resisting over-compression.",
-          "verdict": "Read",
-          "role": "Context",
-          "evidence": "When movements get squashed into recognisable boxes, only their most immediately identifiable visual traits survive; the social conditions and internal contradictions surrounding them recede into the background."
-        }
-      ],
-      "further": [],
-      "history": [
-        {
-          "at": "2026-10-26T11:11:07.426Z",
-          "kind": "New",
-          "reason": "The culture coverage this week is coherent enough to support a dedicated question about taste and constraint, rather than scattering it across AI coverage.",
-          "before": null,
-          "after": "They suggest that originality is being defended through ritual, constraint, and close attention to materials rather than through faster generation. Several pieces argue that taste still comes from repeated practice, not from feed-driven novelty, while others show designers using accidents, limits, and even mundane leftovers as a source of form. The broader pattern is less about anti-AI nostalgia than about protecting judgment from flattening forces. In practical terms, that means creative direction has to be built into process, not appended at the end.",
-          "sourceIds": [
-            "b5b120a0c6af3f4b",
-            "9d61b1cadcefc19f",
-            "40b16980f7bd0090"
-          ]
-        },
-        {
-          "at": "2026-10-26T11:17:24.533589Z",
-          "kind": "Correction",
-          "reason": "Editorial review narrowed the question to a concrete practice and removed the unsupported implication of a broad cultural shift. Earlier essays are explicitly background.",
-          "before": "They suggest that originality is being defended through ritual, constraint, and close attention to materials rather than through faster generation. Several pieces argue that taste still comes from repeated practice, not from feed-driven novelty, while others show designers using accidents, limits, and even mundane leftovers as a source of form. The broader pattern is less about anti-AI nostalgia than about protecting judgment from flattening forces. In practical terms, that means creative direction has to be built into process, not appended at the end.",
-          "after": "Bráulio Amado’s interview offers a concrete practice: notice overlooked surroundings, work with constraints and use accidents as material. Two earlier opinion pieces provide context about creative routines and the limits of aesthetic labels. Together they suggest an exercise worth trying, rather than evidence of a general cultural turn: build a small observation or making ritual into a project, then examine whether it produces more specific decisions. For a design team, the value would be visible in the work and its rationale. The pieces do not prove that constraint-led practice produces better outcomes.",
-          "sourceIds": [
-            "b5b120a0c6af3f4b",
-            "9d61b1cadcefc19f",
-            "40b16980f7bd0090"
-          ]
-        }
-      ]
-    }
-  ],
-  "generatedAt": "2026-11-04T06:12:40.444Z",
-  "lastCollectedAt": "2026-11-04T06:12:40.444Z",
-  "crawlCompletedAt": "07:12",
+  "generatedAt": "2026-11-05T06:40:25.062Z",
+  "lastCollectedAt": "2026-11-05T06:40:25.062Z",
+  "crawlCompletedAt": "07:40",
   "finalizedAt": null,
-  "revision": "dce710fd10d5",
-  "sourceCount": 25,
+  "revision": "fae2c21c1b60",
+  "sourceCount": 31,
   "webSourceCount": 7,
-  "teamContributionCount": 3,
+  "teamContributionCount": 4,
   "sourceWarnings": [
-    "39 candidate pages could not provide enough inspectable public article text. They were not used as new evidence."
+    "33 candidate pages could not provide enough inspectable public article text. They were not used as new evidence."
   ]
 }
