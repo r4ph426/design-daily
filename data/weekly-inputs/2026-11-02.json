@@ -1,12 +1,30 @@
 [
   {
+    "id": "6e6715c0284c1ce4",
+    "url": "https://www.gov.uk/government/news/designers-to-get-stronger-and-simpler-protection-in-major-reforms",
+    "title": "Designers to get stronger and simpler protection in major reforms - GOV.UK",
+    "source": "gov.uk",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-06T14:17:38.112Z"
+  },
+  {
+    "id": "3e0f888ed8a688c5",
+    "url": "https://www.w3.org/blog/2026/historical-www-talk-archives-made-complete",
+    "title": "Historical www-talk archives made complete | 2026 | Blog | W3C",
+    "source": "w3.org",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-06T14:17:38.112Z"
+  },
+  {
     "id": "bacaa2ac1eb948b6",
     "url": "https://developers.openai.com/api/docs/guides/agent-builder",
     "title": "Agent Builder | OpenAI API",
     "source": "developers.openai.com",
     "sourceKind": "web crawl",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
+    "firstCollectedAt": "2026-11-06T14:17:38.112Z"
   },
   {
     "id": "8e2ccf3334d077a8",
@@ -15,7 +33,7 @@
     "source": "nature.com",
     "sourceKind": "web crawl",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
+    "firstCollectedAt": "2026-11-06T14:17:38.112Z"
   },
   {
     "id": "1cc01032705b3456",
@@ -24,7 +42,7 @@
     "source": "developers.openai.com",
     "sourceKind": "web crawl",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
+    "firstCollectedAt": "2026-11-06T14:17:38.112Z"
   },
   {
     "id": "9d61b1cadcefc19f",
@@ -33,7 +51,7 @@
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-10-26T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
+    "firstCollectedAt": "2026-11-06T14:17:38.112Z"
   },
   {
     "id": "b5b120a0c6af3f4b",
@@ -42,7 +60,7 @@
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
+    "firstCollectedAt": "2026-11-06T14:17:38.112Z"
   },
   {
     "id": "899779497ade9fce",
@@ -51,61 +69,7 @@
     "source": "designnotes.blog.gov.uk",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-03T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
-  },
-  {
-    "id": "32f9a34382bbff5e",
-    "url": "https://www.itsnicethat.com/features/starting-a-creative-career-has-never-felt-harder-27-industry-voices-on-what-comes-next",
-    "title": "Starting a creative career has never felt harder – 27 industry voices on what comes next",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-09T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
-  },
-  {
-    "id": "694f47613b8408f2",
-    "url": "https://www.itsnicethat.com/career-predictions/cat-how",
-    "title": "Cat How: the bottom rung will come back – but someone has to build it on purpose",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-09T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
-  },
-  {
-    "id": "24c8b91912af54fc",
-    "url": "https://www.itsnicethat.com/career-predictions/jay-anderson",
-    "title": "Jay Anderson: if you remove the first rung, who is going to climb the ladder?",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-09T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
-  },
-  {
-    "id": "4d2bc46db683a6ce",
-    "url": "https://www.itsnicethat.com/career-predictions/a-new-directions-oliver-benjamin-be-kind-make-stuff-learn-the-tools",
-    "title": "A New Direction’s Oliver Benjamin: be kind, make stuff, learn the tools",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-09T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
-  },
-  {
-    "id": "70d0e4664d02409b",
-    "url": "https://www.itsnicethat.com/career-predictions/caterina-bianchini",
-    "title": "Caterina Bianchini: we can’t ask where the good designers are if we won’t help anyone become one",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-09T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
-  },
-  {
-    "id": "2837b41321a313a9",
-    "url": "https://www.itsnicethat.com/career-predictions/hilary-chittenden-studios-that-cant-hire-should-start-hosting",
-    "title": "Hilary Chittenden: studios that can’t hire should start hosting",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-09T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
+    "firstCollectedAt": "2026-11-06T14:17:38.112Z"
   },
   {
     "id": "0f2b4f6550d32756",
@@ -114,7 +78,7 @@
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-09T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
+    "firstCollectedAt": "2026-11-06T14:17:38.112Z"
   },
   {
     "id": "1b18396f6b2b71d1",
@@ -123,43 +87,25 @@
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-09T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
+    "firstCollectedAt": "2026-11-06T14:17:38.112Z"
   },
   {
-    "id": "8adfc9145aa55f0e",
-    "url": "https://www.itsnicethat.com/career-predictions/dads-paul-drake-human-craft-will-win-out-isnt-enough-reassurance",
-    "title": "D&AD’s Paul Drake: “human craft will win out” isn’t enough reassurance",
+    "id": "2a54d6d067a91e53",
+    "url": "https://www.itsnicethat.com/features/starting-a-creative-career-has-never-felt-harder",
+    "title": "Starting a creative career has never felt harder – 28 industry voices on what comes next",
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-09T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
+    "firstCollectedAt": "2026-11-06T14:17:38.112Z"
   },
   {
-    "id": "e167a821d1814f36",
-    "url": "https://www.itsnicethat.com/career-predictions/kingstons-rachel-gannon-on-why-design-education-must-learn-to-sit-with-uncertainty",
-    "title": "Kingston’s Rachel Gannon on why design education must learn to sit with uncertainty",
-    "source": "itsnicethat.com",
+    "id": "db3f22aec8a1d234",
+    "url": "https://www.smashingmagazine.com/2026/11/ux-insiders-community-in-house-ux-people",
+    "title": "A New Community For In-House UX People — Smashing Magazine",
+    "source": "smashingmagazine.com",
     "sourceKind": "web crawl",
-    "publishedAt": "2026-11-09T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
-  },
-  {
-    "id": "81f775b5358dd81e",
-    "url": "https://www.itsnicethat.com/career-predictions/creative-pecs-nik-gunn-a-hope-for-a-workforce-that-looks-like-the-country",
-    "title": "Creative PEC’s Nik Gunn: a hope for a workforce that looks like the country",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-09T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
-  },
-  {
-    "id": "a5ba18d47a3be5d5",
-    "url": "https://www.itsnicethat.com/career-predictions/anna-kiernan-on-live-analogue-sell-digital-and-careers-built-outside-the-studio",
-    "title": "Anna Kiernan on “live analogue, sell digital” and careers built outside the studio",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-09T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
+    "publishedAt": "2026-11-06T08:00:00.000Z",
+    "firstCollectedAt": "2026-11-06T14:17:38.112Z"
   },
   {
     "id": "06e82c00d26b79ff",
@@ -168,7 +114,7 @@
     "source": "smashingmagazine.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-05T13:00:00.000Z",
-    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
+    "firstCollectedAt": "2026-11-06T14:17:38.112Z"
   },
   {
     "id": "4143fb808abf5dd4",
@@ -177,7 +123,7 @@
     "source": "smashingmagazine.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-03T10:00:00.000Z",
-    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
+    "firstCollectedAt": "2026-11-06T14:17:38.112Z"
   },
   {
     "id": "fa71f02395de8fdc",
@@ -186,7 +132,88 @@
     "source": "smashingmagazine.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-10-31T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
+    "firstCollectedAt": "2026-11-06T14:17:38.112Z"
+  },
+  {
+    "id": "694f47613b8408f2",
+    "url": "https://www.itsnicethat.com/career-predictions/cat-how",
+    "title": "Cat How: the bottom rung will come back – but someone has to build it on purpose",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-09T08:00:00.000Z",
+    "firstCollectedAt": "2026-11-06T14:17:38.112Z"
+  },
+  {
+    "id": "24c8b91912af54fc",
+    "url": "https://www.itsnicethat.com/career-predictions/jay-anderson",
+    "title": "Jay Anderson: if you remove the first rung, who is going to climb the ladder?",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-09T08:00:00.000Z",
+    "firstCollectedAt": "2026-11-06T14:17:38.112Z"
+  },
+  {
+    "id": "4d2bc46db683a6ce",
+    "url": "https://www.itsnicethat.com/career-predictions/a-new-directions-oliver-benjamin-be-kind-make-stuff-learn-the-tools",
+    "title": "A New Direction’s Oliver Benjamin: be kind, make stuff, learn the tools",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-09T08:00:00.000Z",
+    "firstCollectedAt": "2026-11-06T14:17:38.112Z"
+  },
+  {
+    "id": "70d0e4664d02409b",
+    "url": "https://www.itsnicethat.com/career-predictions/caterina-bianchini",
+    "title": "Caterina Bianchini: we can’t ask where the good designers are if we won’t help anyone become one",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-09T08:00:00.000Z",
+    "firstCollectedAt": "2026-11-06T14:17:38.112Z"
+  },
+  {
+    "id": "2837b41321a313a9",
+    "url": "https://www.itsnicethat.com/career-predictions/hilary-chittenden-studios-that-cant-hire-should-start-hosting",
+    "title": "Hilary Chittenden: studios that can’t hire should start hosting",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-09T08:00:00.000Z",
+    "firstCollectedAt": "2026-11-06T14:17:38.112Z"
+  },
+  {
+    "id": "8adfc9145aa55f0e",
+    "url": "https://www.itsnicethat.com/career-predictions/dads-paul-drake-human-craft-will-win-out-isnt-enough-reassurance",
+    "title": "D&AD’s Paul Drake: “human craft will win out” isn’t enough reassurance",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-09T08:00:00.000Z",
+    "firstCollectedAt": "2026-11-06T14:17:38.112Z"
+  },
+  {
+    "id": "e167a821d1814f36",
+    "url": "https://www.itsnicethat.com/career-predictions/kingstons-rachel-gannon-on-why-design-education-must-learn-to-sit-with-uncertainty",
+    "title": "Kingston’s Rachel Gannon on why design education must learn to sit with uncertainty",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-09T08:00:00.000Z",
+    "firstCollectedAt": "2026-11-06T14:17:38.112Z"
+  },
+  {
+    "id": "81f775b5358dd81e",
+    "url": "https://www.itsnicethat.com/career-predictions/creative-pecs-nik-gunn-a-hope-for-a-workforce-that-looks-like-the-country",
+    "title": "Creative PEC’s Nik Gunn: a hope for a workforce that looks like the country",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-09T08:00:00.000Z",
+    "firstCollectedAt": "2026-11-06T14:17:38.112Z"
+  },
+  {
+    "id": "a5ba18d47a3be5d5",
+    "url": "https://www.itsnicethat.com/career-predictions/anna-kiernan-on-live-analogue-sell-digital-and-careers-built-outside-the-studio",
+    "title": "Anna Kiernan on “live analogue, sell digital” and careers built outside the studio",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-09T08:00:00.000Z",
+    "firstCollectedAt": "2026-11-06T14:17:38.112Z"
   },
   {
     "id": "c29c9b0427141049",
@@ -195,16 +222,7 @@
     "source": "w3.org",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-05T10:57:00.000Z",
-    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
-  },
-  {
-    "id": "3e0f888ed8a688c5",
-    "url": "https://www.w3.org/blog/2026/historical-www-talk-archives-made-complete",
-    "title": "Historical www-talk archives made complete | 2026 | Blog | W3C",
-    "source": "w3.org",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-10-28T14:07:00.000Z",
-    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
+    "firstCollectedAt": "2026-11-06T14:17:38.112Z"
   },
   {
     "id": "c495f5b2a0db95e9",
@@ -213,7 +231,7 @@
     "source": "w3.org",
     "sourceKind": "web crawl",
     "publishedAt": "2026-10-27T11:50:00.000Z",
-    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
+    "firstCollectedAt": "2026-11-06T14:17:38.112Z"
   },
   {
     "id": "9f063f64e7462ce0",
@@ -222,7 +240,7 @@
     "source": "arxiv.org",
     "sourceKind": "web research",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
+    "firstCollectedAt": "2026-11-06T14:17:38.112Z"
   },
   {
     "id": "06ebb40a317e16fe",
@@ -231,7 +249,7 @@
     "source": "developers.openai.com",
     "sourceKind": "web research",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
+    "firstCollectedAt": "2026-11-06T14:17:38.112Z"
   },
   {
     "id": "d43feec9117c2287",
@@ -240,15 +258,6 @@
     "source": "arxiv.org",
     "sourceKind": "web research",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
-  },
-  {
-    "id": "91f9c56dbb7c602d",
-    "url": "https://arxiv.org/abs/2608.19551",
-    "title": "[2608.19551] Delegating or Doing? Understanding User Behavior in Hybrid Human-Agent Interfaces",
-    "source": "arxiv.org",
-    "sourceKind": "web research",
-    "publishedAt": null,
-    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
+    "firstCollectedAt": "2026-11-06T14:17:38.112Z"
   }
 ]
