@@ -1,75 +1,12 @@
 [
   {
-    "id": "9f063f64e7462ce0",
-    "url": "https://arxiv.org/abs/2603.13717",
-    "title": "[2603.13717] \"It Became My Buddy, But I'm Not Afraid to Disagree\": A Multi-Session Study of UX Evaluators Collaborating with Conversational AI Assistants",
-    "source": "arxiv.org",
-    "sourceKind": "web research",
-    "publishedAt": null,
-    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
-  },
-  {
-    "id": "06ebb40a317e16fe",
-    "url": "https://developers.openai.com/plugins/concepts/ui-guidelines?trk=article-ssr-frontend-pulse_little-text-block",
-    "title": "UI guidelines – Plugins | OpenAI Developers",
-    "source": "developers.openai.com",
-    "sourceKind": "web research",
-    "publishedAt": null,
-    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
-  },
-  {
-    "id": "d43feec9117c2287",
-    "url": "https://arxiv.org/abs/2506.11610",
-    "title": "[2506.11610] \"If we misunderstand the client, we misspend 100 hours\": Exploring conversational AI and response types for information elicitation",
-    "source": "arxiv.org",
-    "sourceKind": "web research",
-    "publishedAt": null,
-    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
-  },
-  {
-    "id": "91f9c56dbb7c602d",
-    "url": "https://arxiv.org/abs/2608.19551",
-    "title": "[2608.19551] Delegating or Doing? Understanding User Behavior in Hybrid Human-Agent Interfaces",
-    "source": "arxiv.org",
-    "sourceKind": "web research",
-    "publishedAt": null,
-    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
-  },
-  {
-    "id": "a8b8ebfe68f7a27e",
-    "url": "https://dis.acm.org/2025/publications",
-    "title": "Publications – DIS2025",
-    "source": "dis.acm.org",
-    "sourceKind": "web research",
-    "publishedAt": null,
-    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
-  },
-  {
-    "id": "97e74c6ce5db3d9d",
-    "url": "https://mojdigital.blog.gov.uk/2024/08/14/combining-ai-and-content-design-to-extract-insights-from-service-assessment-reports",
-    "title": "Combining AI and content design to extract insights from service assessment reports – Justice Digital, Data and Science",
-    "source": "mojdigital.blog.gov.uk",
-    "sourceKind": "web research",
-    "publishedAt": null,
-    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
-  },
-  {
-    "id": "971f69715319ef47",
-    "url": "https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government/artificial-intelligence-playbook-for-the-uk-government-html",
-    "title": "Artificial Intelligence Playbook for the UK Government (HTML) - GOV.UK",
-    "source": "gov.uk",
-    "sourceKind": "web research",
-    "publishedAt": null,
-    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
-  },
-  {
     "id": "bacaa2ac1eb948b6",
     "url": "https://developers.openai.com/api/docs/guides/agent-builder",
     "title": "Agent Builder | OpenAI API",
     "source": "developers.openai.com",
     "sourceKind": "web crawl",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
+    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
   },
   {
     "id": "8e2ccf3334d077a8",
@@ -78,16 +15,7 @@
     "source": "nature.com",
     "sourceKind": "web crawl",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
-  },
-  {
-    "id": "62f7590c53a1b310",
-    "url": "https://www.nature.com/articles/s41598-026-42465-4?error=cookies_not_supported&code=1a814420-8f00-402f-a008-6cda570b025c",
-    "title": "Users’ prompting strategies and ChatGPT’s contextual adaptation shape conversational information-seeking experiences | Scientific Reports",
-    "source": "nature.com",
-    "sourceKind": "web crawl",
-    "publishedAt": null,
-    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
+    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
   },
   {
     "id": "1cc01032705b3456",
@@ -96,43 +24,7 @@
     "source": "developers.openai.com",
     "sourceKind": "web crawl",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
-  },
-  {
-    "id": "9437e759a4071268",
-    "url": "https://research.google/pubs/take-it-leave-it-or-fix-it-measuring-productivity-and-trust-in-human-ai-collaboration",
-    "title": "Take it, Leave it, or Fix it: Measuring Productivity and Trust in Human-AI Collaboration",
-    "source": "research.google",
-    "sourceKind": "web crawl",
-    "publishedAt": null,
-    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
-  },
-  {
-    "id": "3253ccbf7d74fa86",
-    "url": "https://research.google/pubs/guide-a-benchmark-for-user-context-understanding-and-assistance-in-gui-workflow-videos",
-    "title": "GUIDE: A Benchmark for User Context Understanding and Assistance in GUI Workflow Videos",
-    "source": "research.google",
-    "sourceKind": "web crawl",
-    "publishedAt": null,
-    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
-  },
-  {
-    "id": "e54f537a6bc2ef5c",
-    "url": "https://research.google/pubs/how-tech-workers-contend-with-hazards-of-humanlikeness-in-generative-ai",
-    "title": "How Tech Workers Contend with Hazards of Humanlikeness in Generative AI",
-    "source": "research.google",
-    "sourceKind": "web crawl",
-    "publishedAt": null,
-    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
-  },
-  {
-    "id": "e1efe154549f63d5",
-    "url": "https://arxiv.org/abs/2505.23006",
-    "title": "[2505.23006] A Practical Approach for Building Production-Grade Conversational Agents with Workflow Graphs",
-    "source": "arxiv.org",
-    "sourceKind": "web crawl",
-    "publishedAt": null,
-    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
+    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
   },
   {
     "id": "9d61b1cadcefc19f",
@@ -141,7 +33,7 @@
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-10-26T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
+    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
   },
   {
     "id": "b5b120a0c6af3f4b",
@@ -150,7 +42,7 @@
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
+    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
   },
   {
     "id": "899779497ade9fce",
@@ -159,97 +51,124 @@
     "source": "designnotes.blog.gov.uk",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-03T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
+    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
   },
   {
-    "id": "074db163beada57f",
-    "url": "https://www.itsnicethat.com/articles/polar-pac-graphic-design-project-041126",
-    "title": "Polar’s logo for bakery P.A.C. is just typed out, and all the better for it",
+    "id": "32f9a34382bbff5e",
+    "url": "https://www.itsnicethat.com/features/starting-a-creative-career-has-never-felt-harder-27-industry-voices-on-what-comes-next",
+    "title": "Starting a creative career has never felt harder – 27 industry voices on what comes next",
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
-    "publishedAt": "2026-11-04T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
+    "publishedAt": "2026-11-09T08:00:00.000Z",
+    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
   },
   {
-    "id": "720b4d086773b7aa",
-    "url": "https://www.itsnicethat.com/articles/figur-graphic-design-discover-041126",
-    "title": "A lived-in approach to sportswear shapes Figur’s graphic systems for brands like Hoka, Sap and Unna",
+    "id": "694f47613b8408f2",
+    "url": "https://www.itsnicethat.com/career-predictions/cat-how",
+    "title": "Cat How: the bottom rung will come back – but someone has to build it on purpose",
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
-    "publishedAt": "2026-11-04T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
+    "publishedAt": "2026-11-09T08:00:00.000Z",
+    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
   },
   {
-    "id": "8b8a99a3231afed9",
-    "url": "https://www.itsnicethat.com/articles/alex-rorison-photography-discover-021126",
-    "title": "For Alex Rorison, photographs are physical objects to be played with – not just “pixels on a screen”",
+    "id": "24c8b91912af54fc",
+    "url": "https://www.itsnicethat.com/career-predictions/jay-anderson",
+    "title": "Jay Anderson: if you remove the first rung, who is going to climb the ladder?",
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
-    "publishedAt": "2026-11-02T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
+    "publishedAt": "2026-11-09T08:00:00.000Z",
+    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
   },
   {
-    "id": "98365c2ed4742a93",
-    "url": "https://www.itsnicethat.com/features/in-house-nothing-charlie-smith-creative-industry-021126",
-    "title": "Why Nothing’s Charlie Smith is doubling down on “joy and wonder”",
+    "id": "4d2bc46db683a6ce",
+    "url": "https://www.itsnicethat.com/career-predictions/a-new-directions-oliver-benjamin-be-kind-make-stuff-learn-the-tools",
+    "title": "A New Direction’s Oliver Benjamin: be kind, make stuff, learn the tools",
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
-    "publishedAt": "2026-11-02T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
+    "publishedAt": "2026-11-09T08:00:00.000Z",
+    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
   },
   {
-    "id": "fd51fd9e6898d94d",
-    "url": "https://www.itsnicethat.com/articles/creative-career-condundrums-if-you-could-jobs-advice-021126",
-    "title": "“It’s not their experience versus your academia”",
+    "id": "70d0e4664d02409b",
+    "url": "https://www.itsnicethat.com/career-predictions/caterina-bianchini",
+    "title": "Caterina Bianchini: we can’t ask where the good designers are if we won’t help anyone become one",
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
-    "publishedAt": "2026-11-02T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
+    "publishedAt": "2026-11-09T08:00:00.000Z",
+    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
   },
   {
-    "id": "978c77592d8b6e5d",
-    "url": "https://www.itsnicethat.com/features/intl-poster-competition-graphic-design-spotlight-021126",
-    "title": "“Designing a good poster is a dark art” – highlights from this year’s INTL poster competition",
+    "id": "2837b41321a313a9",
+    "url": "https://www.itsnicethat.com/career-predictions/hilary-chittenden-studios-that-cant-hire-should-start-hosting",
+    "title": "Hilary Chittenden: studios that can’t hire should start hosting",
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
-    "publishedAt": "2026-11-02T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
+    "publishedAt": "2026-11-09T08:00:00.000Z",
+    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
   },
   {
-    "id": "a0e94b2b0cddc0ea",
-    "url": "https://www.itsnicethat.com/articles/odd-works-toyto-graphic-design-project-021126",
-    "title": "Children’s toys don’t need to be an eyesore with Odd Works’ tasteful identity for Toyto",
+    "id": "0f2b4f6550d32756",
+    "url": "https://www.itsnicethat.com/career-predictions/represents-joe-cooper-from-118-junior-briefs-to-22-someone-has-to-give-them-experience",
+    "title": "Represent’s Joe Cooper: from 118 junior briefs to 22 – someone has to give them experience",
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
-    "publishedAt": "2026-11-02T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
+    "publishedAt": "2026-11-09T08:00:00.000Z",
+    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
   },
   {
-    "id": "0ca71c81ebd2e423",
-    "url": "https://www.itsnicethat.com/articles/arielle-bobb-willis-nicer-tuesdays-la-3011026",
-    "title": "“Photography allows me to remain available to life”: Arielle Bobb Willis on the power of image making",
+    "id": "1b18396f6b2b71d1",
+    "url": "https://www.itsnicethat.com/career-predictions/crafts-dan-crowder-on-why-your-first-creative-job-will-be-a-fixed-term-contract",
+    "title": "Craft’s Dan Crowder on why your first creative job will be a fixed-term contract",
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
-    "publishedAt": "2026-10-30T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
+    "publishedAt": "2026-11-09T08:00:00.000Z",
+    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
   },
   {
-    "id": "6de64757904e52c0",
-    "url": "https://www.itsnicethat.com/articles/the-new-company-nicer-tuesdays-la-291026",
-    "title": "Why brand relevance is driven by novel ideas: The New Company on getting out your creative comfort zone",
+    "id": "8adfc9145aa55f0e",
+    "url": "https://www.itsnicethat.com/career-predictions/dads-paul-drake-human-craft-will-win-out-isnt-enough-reassurance",
+    "title": "D&AD’s Paul Drake: “human craft will win out” isn’t enough reassurance",
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
-    "publishedAt": "2026-10-29T10:00:00.000Z",
-    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
+    "publishedAt": "2026-11-09T08:00:00.000Z",
+    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
   },
   {
-    "id": "b350c1aa581eb57d",
-    "url": "https://www.itsnicethat.com/articles/studio-lotta-nieminen-aplomb-branding-project-291026",
-    "title": "From wax seals to postal stamps, Aplomb perfume’s packaging has the intimacy of a handwritten letter",
+    "id": "e167a821d1814f36",
+    "url": "https://www.itsnicethat.com/career-predictions/kingstons-rachel-gannon-on-why-design-education-must-learn-to-sit-with-uncertainty",
+    "title": "Kingston’s Rachel Gannon on why design education must learn to sit with uncertainty",
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
-    "publishedAt": "2026-10-29T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
+    "publishedAt": "2026-11-09T08:00:00.000Z",
+    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
+  },
+  {
+    "id": "81f775b5358dd81e",
+    "url": "https://www.itsnicethat.com/career-predictions/creative-pecs-nik-gunn-a-hope-for-a-workforce-that-looks-like-the-country",
+    "title": "Creative PEC’s Nik Gunn: a hope for a workforce that looks like the country",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-09T08:00:00.000Z",
+    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
+  },
+  {
+    "id": "a5ba18d47a3be5d5",
+    "url": "https://www.itsnicethat.com/career-predictions/anna-kiernan-on-live-analogue-sell-digital-and-careers-built-outside-the-studio",
+    "title": "Anna Kiernan on “live analogue, sell digital” and careers built outside the studio",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-09T08:00:00.000Z",
+    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
+  },
+  {
+    "id": "06e82c00d26b79ff",
+    "url": "https://www.smashingmagazine.com/2026/11/making-immersive-llm-chat-experiences-more-accessible",
+    "title": "Making Immersive LLM Chat Experiences More Accessible — Smashing Magazine",
+    "source": "smashingmagazine.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-05T13:00:00.000Z",
+    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
   },
   {
     "id": "4143fb808abf5dd4",
@@ -258,7 +177,7 @@
     "source": "smashingmagazine.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-03T10:00:00.000Z",
-    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
+    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
   },
   {
     "id": "fa71f02395de8fdc",
@@ -267,15 +186,69 @@
     "source": "smashingmagazine.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-10-31T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
+    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
   },
   {
-    "id": "3f82281ea0da409a",
-    "url": "https://kairos.jetbrains.com/research/articles/developer-needs-and-feasible-features",
-    "title": "Developer Needs and Feasible Features for AI Assistants in IDEs — JetBrains Research",
-    "source": "kairos.jetbrains.com",
+    "id": "c29c9b0427141049",
+    "url": "https://www.w3.org/blog/2026/w3c-newsletter-october-2026",
+    "title": "W3C Newsletter - October 2026 | 2026 | Blog | W3C",
+    "source": "w3.org",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-05T10:57:00.000Z",
+    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
+  },
+  {
+    "id": "3e0f888ed8a688c5",
+    "url": "https://www.w3.org/blog/2026/historical-www-talk-archives-made-complete",
+    "title": "Historical www-talk archives made complete | 2026 | Blog | W3C",
+    "source": "w3.org",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-10-28T14:07:00.000Z",
+    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
+  },
+  {
+    "id": "c495f5b2a0db95e9",
+    "url": "https://www.w3.org/blog/2026/w3c-launches-second-pilot-of-program-to-support-open-source-projects",
+    "title": "W3C launches second pilot of program to support Open Source projects | 2026 | Blog | W3C",
+    "source": "w3.org",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-10-27T11:50:00.000Z",
+    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
+  },
+  {
+    "id": "9f063f64e7462ce0",
+    "url": "https://arxiv.org/abs/2603.13717",
+    "title": "[2603.13717] \"It Became My Buddy, But I'm Not Afraid to Disagree\": A Multi-Session Study of UX Evaluators Collaborating with Conversational AI Assistants",
+    "source": "arxiv.org",
     "sourceKind": "web research",
-    "publishedAt": "2026-01-01T00:00:00.000Z",
-    "firstCollectedAt": "2026-11-05T06:40:25.062Z"
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
+  },
+  {
+    "id": "06ebb40a317e16fe",
+    "url": "https://developers.openai.com/plugins/concepts/ui-guidelines?trk=article-ssr-frontend-pulse_little-text-block",
+    "title": "UI guidelines – Plugins | OpenAI Developers",
+    "source": "developers.openai.com",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
+  },
+  {
+    "id": "d43feec9117c2287",
+    "url": "https://arxiv.org/abs/2506.11610",
+    "title": "[2506.11610] \"If we misunderstand the client, we misspend 100 hours\": Exploring conversational AI and response types for information elicitation",
+    "source": "arxiv.org",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
+  },
+  {
+    "id": "91f9c56dbb7c602d",
+    "url": "https://arxiv.org/abs/2608.19551",
+    "title": "[2608.19551] Delegating or Doing? Understanding User Behavior in Hybrid Human-Agent Interfaces",
+    "source": "arxiv.org",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-06T06:36:48.236Z"
   }
 ]
