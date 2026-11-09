@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-02",
+  "date": "2026-11-09",
   "changes": [
     {
       "kind": "changed",
@@ -8,36 +8,26 @@
       "url": "https://www.canva.dev/docs/apps/mcp/",
       "fields": [
         {
-          "field": "description",
-          "before": "Canva’s official remote MCP supports design creation and editing, asset and brand management, library search, export, and commenting.",
-          "after": "Canva’s remote MCP now exposes design creation and editing, asset and brand management, library search, export, and commenting through AI assistants."
-        },
-        {
           "field": "recommendation",
-          "before": "Use it for one small design-edit workflow first, then verify permissions and brand fidelity before broader rollout.",
-          "after": "Trial it on one small edit and review loop, then verify permissions and brand library behavior in your workspace."
+          "before": "Trial it on one small edit and review loop, then verify permissions and brand library behavior in your workspace.",
+          "after": "Use it for one small edit and review loop, then verify permissions and brand library behavior in your workspace."
         }
       ],
       "evidence": "it&#x27;s built on the Canva MCP server. The Canva MCP server enables AI assistants to seamlessly interact with Canva&#x27;s design capabilities. By exposing Canva&#x27;s capabilities (including design creation and editing, asset and brand management, library search, export, and commenting) as MCP-compatible tools, you can give your users access"
     },
     {
       "kind": "changed",
-      "id": "14",
-      "title": "Canva Skills",
-      "url": "https://github.com/canva-sdks/canva-skills",
+      "id": "07",
+      "title": "Savee MCP",
+      "url": "https://savee.com/mcp/",
       "fields": [
         {
           "field": "description",
-          "before": "Canva’s official skills package adds reusable creative workflows on top of the Canva Connector for Codex, Claude, and Cursor.",
-          "after": "The official Canva skills package adds reusable workflows for resize, bulk create, feedback implementation, and approval-gated edits, bundled for Claude, Cursor, and Codex through the Canva Connector."
-        },
-        {
-          "field": "recommendation",
-          "before": "Try one supported skill on a single Canva workflow, then check whether the output stays consistent with your team account and library setup.",
-          "after": "Start with one supported workflow on a single design, then confirm the output stays consistent with your team library and approvals."
+          "before": "Searches Savee’s curated reference library and can retrieve personal saves, boards, feed items, and image content in supported clients.",
+          "after": "Savee MCP can search your saves, boards, feed, and the public library, and can fetch actual images for selected saves when write access is granted."
         }
       ],
-      "evidence": "for that host. Active Plugin Skills These skills are exposed by every supported host through the shared plugins/canva/skills/ directory. resize-for-social-media Resize designs for multiple social media platforms (Facebook, Instagram, LinkedIn) in one operation. Use when: You want to quickly distribute a design across multiple social media formats."
+      "evidence": "work. view_saves Fetch the actual images for specific saves, so it can see them. Every save includes its source link, dimensions, and dominant colors. With view_saves, agents can look at the images themselves. Search is metered to keep the library from being scraped. And what it can change, if you let it create_board Make a new board, or a sub"
     },
     {
       "kind": "changed",
@@ -47,193 +37,15 @@
       "fields": [
         {
           "field": "description",
-          "before": "An agent inside Figma Design for generating and editing layouts, applying connected libraries, and getting design feedback.",
-          "after": "In Figma Design, the agent can connect a library from the file, reference specific components, variables, and styles with @, and use that context to produce outputs aligned to the team system."
-        },
-        {
-          "field": "recommendation",
-          "before": "Try one bounded layout edit with a connected library, then verify component use, hierarchy, and access scope.",
-          "after": "Use it for one bounded edit on a file with an existing library, then check component reuse and hierarchy before wider adoption."
-        },
-        {
-          "field": "access",
-          "before": "All plans; AI credits; editing depends on seat and file access",
-          "after": "Figma plan and file access"
+          "before": "In Figma Design, the agent can connect a library from the file, reference specific components, variables, and styles with @, and use that context to produce outputs aligned to the team system.",
+          "after": "The Figma agent can connect a library from the file, reference specific components, variables, and styles with @, and use that context to produce outputs aligned to the team system."
         }
       ],
       "evidence": "visible by default to people with a Full seat and edit access to the file. Chats created before June 23, 2026 remain private unless you make them public. Learn more. Connect a library Connect any library available in the design file to the chat to generate results that match your team's components, styles, and variables. Click in the prompt box,"
-    },
-    {
-      "kind": "changed",
-      "id": "auto-33b8e3ab06b7",
-      "title": "Design-components-for-AI-agents",
-      "url": "https://github.com/richawo/Design-components-for-AI-agents",
-      "fields": [
-        {
-          "field": "description",
-          "before": "Provides animated React, Tailwind CSS, and React Native components for AI agents, with source code, design briefs, and JSON prompts for the same interface.",
-          "after": "The repository provides animated React, Tailwind CSS, and React Native components, plus design briefs and JSON prompts, with examples that include motion, charts, navigation, and other UI patterns."
-        },
-        {
-          "field": "recommendation",
-          "before": "Source-reviewed; not yet team-tested. Use one component as a starting point for a single screen or interaction, then verify it fits your stack and motion rules.",
-          "after": "Use one component as a starting point for a single screen or interaction, then verify it fits your stack and motion rules."
-        }
-      ],
-      "evidence": "point globe with flight arcs and a quiet, precise readout. Try the component · Pro Portfolio chart A hand-drawn SVG chart with range morphs, volume and a crosshair. Try the component · Free Live analytics bento Drawing charts, counting figures and six tiles that tell one story. Try the component · Pro React Native navigation Glass, morphing icons"
-    },
-    {
-      "kind": "new",
-      "id": "auto-3f42ae6014de",
-      "title": "Framesmith uses a visual canvas and quality gate for UI design",
-      "url": "https://github.com/vicmaster/framesmith",
-      "entry": {
-        "id": "auto-3f42ae6014de",
-        "title": "Framesmith uses a visual canvas and quality gate for UI design",
-        "type": "MCP",
-        "categories": [
-          "UI",
-          "UX",
-          "Process"
-        ],
-        "practices": [
-          "Drafting",
-          "UI sketches",
-          "Review",
-          "Accessibility"
-        ],
-        "description": "This open-source MCP server turns an AI coding agent into a UI designer with a visual canvas, vetted design patterns, and a quality gate before designs are shown.",
-        "recommendation": "Source-reviewed; not yet team-tested. Try it on one design iteration that needs a quality gate, then compare the canvas output with your current review criteria.",
-        "access": "Open source",
-        "setup": "Not stated; MCP client setup required",
-        "verdict": "Watching",
-        "confidence": "Medium",
-        "reviewed": "2 Nov 2026",
-        "source": "github.com",
-        "url": "https://github.com/vicmaster/framesmith"
-      },
-      "evidence": "patterns, and a quality gate every design must pass before you see it. HTML/CSS, open JSON, any MCP client. Topics ai canvas claude design-system design-tools html-css mcp mcp-server model-context-protocol puppeteer typescript ui-design Resources Readme MIT license Activity Stars 14 stars Watchers 0 watching Forks 0 forks Report repository master"
-    },
-    {
-      "kind": "new",
-      "id": "auto-458c04cd04ca",
-      "title": "REA can inspect app behavior and explain it with evidence",
-      "url": "https://github.com/morluto/rea",
-      "entry": {
-        "id": "auto-458c04cd04ca",
-        "title": "REA can inspect app behavior and explain it with evidence",
-        "type": "MCP",
-        "categories": [
-          "UI",
-          "UX",
-          "Process"
-        ],
-        "practices": [
-          "Pattern research",
-          "Review",
-          "Flows"
-        ],
-        "description": "REA connects agents to local analysis tools for binaries, apps, and websites, and returns evidence and limitations so the agent can explain how a feature works and build from it.",
-        "recommendation": "Source-reviewed; not yet team-tested. Use it for one feature investigation where you need evidence-backed reverse engineering, then confirm the findings against the actual product behavior.",
-        "access": "Open source",
-        "setup": "npx rea-agents setup or official release path",
-        "verdict": "Watching",
-        "confidence": "Medium",
-        "reviewed": "2 Nov 2026",
-        "source": "github.com",
-        "url": "https://github.com/morluto/rea"
-      },
-      "evidence": "connects your agent to tools for inspecting native binaries, JavaScript and Electron apps, .NET assemblies, and websites. You can also use the same tools from your terminal. Analysis runs locally, and results include the evidence and limitations behind each conclusion. Setup registers REA with your agent and installs matching workflow"
-    },
-    {
-      "kind": "changed",
-      "id": "auto-692d56bda4f0",
-      "title": "chudarin-design-skills",
-      "url": "https://github.com/schudarin/chudarin-design-skills",
-      "fields": [
-        {
-          "field": "description",
-          "before": "A Figma-focused design agent skill set that works from components and variables, plans flows, builds screens, fixes bindings, and makes presentations.",
-          "after": "The skill set is built for Figma work from components and variables, including planning flows, building screens, finding design system debt, fixing bindings, and making presentations."
-        },
-        {
-          "field": "recommendation",
-          "before": "Source-reviewed; not yet team-tested. Use it on one Figma file with existing components and variables, then check whether binding fixes and screen edits stay targeted.",
-          "after": "Use it on one Figma file with existing components and variables, then check whether binding fixes and screen edits stay targeted."
-        }
-      ],
-      "evidence": "find, it asks you, at most two questions, and writes the answers down so it never asks again. Then it works from your components and variables, reads back every binding it set instead of assuming it applied, and shows you the result. You ask to change one element, and it changes that element, not the screen around it. 🧩 The skills"
-    },
-    {
-      "kind": "new",
-      "id": "auto-6dde13718e5b",
-      "title": "RasanAI is a guided video direction skill with staged approvals",
-      "url": "https://github.com/Sibhimanyu/rasanai",
-      "entry": {
-        "id": "auto-6dde13718e5b",
-        "title": "RasanAI is a guided video direction skill with staged approvals",
-        "type": "Skill",
-        "categories": [
-          "UI",
-          "Process"
-        ],
-        "practices": [
-          "Drafting",
-          "Review",
-          "Creative exploration"
-        ],
-        "description": "The skill directs launch films and motion graphics through a staged flow with brief, story, look, animatic, and final review steps in a browser console.",
-        "recommendation": "Source-reviewed; not yet team-tested. Try it on one short launch film brief first, then validate the story, look, and timing before a larger motion project.",
-        "access": "Claude Code and optional Mac app",
-        "setup": "Not stated; agent skill works without the Mac app",
-        "verdict": "Watching",
-        "confidence": "Medium",
-        "reviewed": "2 Nov 2026",
-        "source": "github.com",
-        "url": "https://github.com/Sibhimanyu/rasanai"
-      },
-      "evidence": "macOS 14+). A free community beta; the agent skill below works without it. Website: https://sibhimanyu.github.io/rasanai/ Five calls, and you see your film at every one You say /rasanai make a 45s launch film for tally.app . A Director's Console opens in your browser: a dark review room that shows what Claude is doing, live, and stops you only"
-    },
-    {
-      "kind": "changed",
-      "id": "18",
-      "title": "Dembrandt",
-      "url": "https://github.com/dembrandt/dembrandt",
-      "fields": [
-        {
-          "field": "description",
-          "before": "An MCP and CLI that extracts design tokens, typography, spacing, components, and accessibility findings from live websites.",
-          "after": "This MCP and CLI extracts colors, typography, spacing, borders, shadows, motion, components, breakpoints, and WCAG contrast findings from live websites."
-        },
-        {
-          "field": "setup",
-          "before": "10–15 minutes",
-          "after": "Node.js 18+ and browser installation"
-        }
-      ],
-      "evidence": "confidence, groups similar typography, detects spacing patterns, and returns design tokens. Flags dembrandt dembrandt.com --shadcn # shadcn/ui theme, observed slots only dembrandt dembrandt.com --dtcg # W3C design tokens, for Style Dictionary or Tokens Studio dembrandt dembrandt.com --wcag # WCAG 2.1 contrast on real DOM pairs Default is formatted"
-    },
-    {
-      "kind": "changed",
-      "id": "auto-b301c14c7521",
-      "title": "agent-skills",
-      "url": "https://github.com/sorawit-w/agent-skills",
-      "fields": [
-        {
-          "field": "description",
-          "before": "Includes screenwright, which builds a UI from a design spec, then renders it, audits accessibility, and fixes what does not match.",
-          "after": "The skill builds a UI from a design spec, renders it, audits accessibility, and fixes mismatches, with explicit verification in its workflow."
-        },
-        {
-          "field": "setup",
-          "before": "Install via the plugin path or skills CLI; details depend on your host",
-          "after": "Plugin or skills CLI; host specific"
-        }
-      ],
-      "evidence": "builds a UI from a design spec, then renders it, audits accessibility, and fixes what does not match. Topics accessibility agent-skills ai-agents claude-code codex design-to-code developer-tools mcp Resources Readme MIT license Activity Stars 2 stars Watchers 0 watching Forks 0 forks Report repository main Branches Tags Go to file Code Open more"
     }
   ],
   "warnings": [
-    "Could not verify source: Figma Motion"
+    "Could not verify source: Figma Motion",
+    "Could not verify source: awesome-ai-agent-skills"
   ]
 }

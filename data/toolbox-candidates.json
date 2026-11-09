@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-02T11:37:22.725Z",
+  "generatedAt": "2026-11-09T12:00:29.768Z",
   "editorialStatus": "Candidate queue only. Review in Codex before adding to the published toolbox.",
   "practices": [
     "Taste",
@@ -76,7 +76,7 @@
       "status": "Available",
       "finalUrl": "https://mobbin.com/mcp",
       "title": "Mobbin MCP: The Design MCP Server for AI Agents",
-      "description": "Mobbin MCP is the design MCP server that gives your AI agents 600,000+ real screens from shipped products. Set up in under a minute with Claude and Cursor."
+      "description": "Mobbin MCP is the design MCP server that gives your AI agents over 600,000 real screens from shipped products. Set up in under a minute with Claude and Cursor."
     },
     {
       "url": "https://savee.com/mcp/",
@@ -239,6 +239,79 @@
       "editorialStatus": "Needs review"
     },
     {
+      "id": "github:DemonDamon/AgenticX",
+      "name": "AgenticX",
+      "fullName": "DemonDamon/AgenticX",
+      "description": "AgenticX is a unified, production-ready multi-agent platform — Python SDK + CLI (agx) + Studio server + Machi desktop app. Features Meta-Agent orchestration, 15+ LLM providers, MCP Hub, hierarchical memory, avatar & group chat, skill ecosystem, safety sandbox, and IM gateway (Feishu/WeChat).",
+      "url": "https://github.com/DemonDamon/AgenticX",
+      "source": "GitHub search",
+      "discoveredThrough": "Inspiration MCPs",
+      "topics": [
+        "agent-framework",
+        "agentic-workflows",
+        "ai-agent",
+        "ai-orchestration",
+        "chatbot",
+        "desktop-app",
+        "electron",
+        "fastapi",
+        "graphrag",
+        "llm",
+        "mcp",
+        "multi-agent-system",
+        "python",
+        "rag",
+        "tool-use"
+      ],
+      "stars": 1031,
+      "updatedAt": "2026-11-09T10:29:40Z",
+      "suggestedType": "MCP",
+      "suggestedPractices": [
+        "Flows"
+      ],
+      "relevanceScore": 36,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:bytedance/deer-flow",
+      "name": "deer-flow",
+      "fullName": "bytedance/deer-flow",
+      "description": "An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take minutes to hours.",
+      "url": "https://github.com/bytedance/deer-flow",
+      "source": "GitHub search",
+      "discoveredThrough": "Interface review",
+      "topics": [
+        "agent",
+        "agentic",
+        "agentic-framework",
+        "agentic-workflow",
+        "ai",
+        "ai-agents",
+        "deep-research",
+        "harness",
+        "langchain",
+        "langgraph",
+        "langmanus",
+        "llm",
+        "multi-agent",
+        "nodejs",
+        "podcast",
+        "python",
+        "superagent",
+        "typescript"
+      ],
+      "stars": 85175,
+      "updatedAt": "2026-11-09T12:00:04Z",
+      "suggestedType": "Skill",
+      "suggestedPractices": [
+        "Flows",
+        "Pattern research",
+        "Drafting"
+      ],
+      "relevanceScore": 33,
+      "editorialStatus": "Needs review"
+    },
+    {
       "id": "github:hesreallyhim/awesome-claude-code",
       "name": "awesome-claude-code",
       "fullName": "hesreallyhim/awesome-claude-code",
@@ -272,6 +345,40 @@
       "suggestedType": "Skill",
       "suggestedPractices": [
         "Flows",
+        "Drafting"
+      ],
+      "relevanceScore": 33,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:the911fund/skill-of-skills",
+      "name": "skill-of-skills",
+      "fullName": "the911fund/skill-of-skills",
+      "description": "The quality-ranked discovery engine for AI coding skills, plugins and MCP servers across Claude Code, Codex, Cursor, Windsurf, Cline and more.",
+      "url": "https://github.com/the911fund/skill-of-skills",
+      "source": "GitHub search",
+      "discoveredThrough": "Inspiration MCPs",
+      "topics": [
+        "agent-skills",
+        "ai-agents",
+        "ai-tools",
+        "automation",
+        "claude-code",
+        "claude-skills",
+        "codex",
+        "discovery-engine",
+        "mcp",
+        "mcp-servers",
+        "n8n",
+        "open-source",
+        "plugins",
+        "skills"
+      ],
+      "stars": 84,
+      "updatedAt": "2026-11-09T09:25:09Z",
+      "suggestedType": "MCP",
+      "suggestedPractices": [
+        "Review",
         "Drafting"
       ],
       "relevanceScore": 33,
@@ -312,40 +419,6 @@
       "suggestedPractices": [
         "Flows",
         "Pattern research"
-      ],
-      "relevanceScore": 33,
-      "editorialStatus": "Needs review"
-    },
-    {
-      "id": "github:vicmaster/framesmith",
-      "name": "framesmith",
-      "fullName": "vicmaster/framesmith",
-      "description": "Open-source MCP server that turns your AI coding agent into a UI designer: a visual canvas, vetted design patterns, and a quality gate every design must pass before you see it. HTML/CSS, open JSON, any MCP client.",
-      "url": "https://github.com/vicmaster/framesmith",
-      "source": "GitHub search",
-      "discoveredThrough": "Design MCPs",
-      "topics": [
-        "ai",
-        "canvas",
-        "claude",
-        "design-system",
-        "design-tools",
-        "html-css",
-        "mcp",
-        "mcp-server",
-        "model-context-protocol",
-        "puppeteer",
-        "typescript",
-        "ui-design"
-      ],
-      "stars": 14,
-      "updatedAt": "2026-11-02T11:36:58Z",
-      "suggestedType": "MCP",
-      "suggestedPractices": [
-        "Review",
-        "Taste",
-        "Pattern research",
-        "UI sketches"
       ],
       "relevanceScore": 33,
       "editorialStatus": "Needs review"
@@ -415,46 +488,6 @@
       "editorialStatus": "Needs review"
     },
     {
-      "id": "github:Sibhimanyu/rasanai",
-      "name": "rasanai",
-      "fullName": "Sibhimanyu/rasanai",
-      "description": "AI video director for Claude Code: pick one of three complete films and Claude designs, animates and renders it. Launch films, explainers, reels from your footage, motion graphics. Built on HyperFrames. Formerly Rasa Director.",
-      "url": "https://github.com/Sibhimanyu/rasanai",
-      "source": "GitHub search",
-      "discoveredThrough": "Designer skills",
-      "topics": [
-        "agent-skills",
-        "ai-video",
-        "ai-video-generator",
-        "animation",
-        "anthropic",
-        "claude",
-        "claude-code",
-        "claude-code-skill",
-        "claude-skill",
-        "creative-direction",
-        "explainer-video",
-        "gsap",
-        "hyperframes",
-        "kinetic-typography",
-        "launch-video",
-        "motion-design",
-        "motion-graphics",
-        "product-video",
-        "video-editing",
-        "video-generation"
-      ],
-      "stars": 0,
-      "updatedAt": "2026-10-26T09:18:33Z",
-      "suggestedType": "Skill",
-      "suggestedPractices": [
-        "Drafting",
-        "Creative exploration"
-      ],
-      "relevanceScore": 30,
-      "editorialStatus": "Needs review"
-    },
-    {
       "id": "github:VoltAgent/awesome-openclaw-skills",
       "name": "awesome-openclaw-skills",
       "fullName": "VoltAgent/awesome-openclaw-skills",
@@ -479,44 +512,6 @@
       "stars": 53202,
       "updatedAt": "2026-10-19T07:23:12Z",
       "suggestedType": "Skill",
-      "suggestedPractices": [
-        "Creative exploration"
-      ],
-      "relevanceScore": 27,
-      "editorialStatus": "Needs review"
-    },
-    {
-      "id": "github:morluto/rea",
-      "name": "rea",
-      "fullName": "morluto/rea",
-      "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
-      "url": "https://github.com/morluto/rea",
-      "source": "GitHub search",
-      "discoveredThrough": "Interface review",
-      "topics": [
-        "agent-skills",
-        "ai-agent-tools",
-        "ai-agents",
-        "binary-analysis",
-        "cli",
-        "coding-agent",
-        "coding-agents",
-        "cordis",
-        "decompiler",
-        "disassembler",
-        "dsh",
-        "dsh-plugin",
-        "hopper-disassembler",
-        "mcp",
-        "mcp-server",
-        "model-context-protocol",
-        "reverse-engineering",
-        "reverse-engineering-tools",
-        "static-analysis"
-      ],
-      "stars": 3483,
-      "updatedAt": "2026-10-05T09:33:47Z",
-      "suggestedType": "MCP",
       "suggestedPractices": [
         "Creative exploration"
       ],
@@ -986,34 +981,6 @@
       "editorialStatus": "Needs review"
     },
     {
-      "id": "github:the911fund/skill-of-skills",
-      "name": "skill-of-skills",
-      "fullName": "the911fund/skill-of-skills",
-      "description": "The autonomous discovery engine for AI coding tools. Indexes skills, plugins, MCP servers, agents, and integrations across Claude Code, Codex, Gemini CLI, and more.",
-      "url": "https://github.com/the911fund/skill-of-skills",
-      "source": "GitHub search",
-      "discoveredThrough": "Taste and art direction",
-      "topics": [
-        "ai-tools",
-        "automation",
-        "claude-code",
-        "discovery-engine",
-        "mcp-servers",
-        "n8n",
-        "open-source",
-        "plugins",
-        "skills"
-      ],
-      "stars": 64,
-      "updatedAt": "2026-10-12T09:25:08Z",
-      "suggestedType": "MCP",
-      "suggestedPractices": [
-        "Drafting"
-      ],
-      "relevanceScore": 21,
-      "editorialStatus": "Needs review"
-    },
-    {
       "id": "github:karthikrshet/Career-Agents",
       "name": "Career-Agents",
       "fullName": "karthikrshet/Career-Agents",
@@ -1398,6 +1365,28 @@
       "editorialStatus": "Needs review"
     },
     {
+      "id": "github:geekfujiwara/powerpoint-agent-skills",
+      "name": "powerpoint-agent-skills",
+      "fullName": "geekfujiwara/powerpoint-agent-skills",
+      "description": "Geek's frequently used skills for a more productive Copilot in PowerPoint agent mode. 日本語 / English.",
+      "url": "https://github.com/geekfujiwara/powerpoint-agent-skills",
+      "source": "GitHub search",
+      "discoveredThrough": "Taste and art direction",
+      "topics": [
+        "agent-skills",
+        "microsoft-copilot",
+        "powerpoint"
+      ],
+      "stars": 0,
+      "updatedAt": "2026-11-09T11:49:56Z",
+      "suggestedType": "Skill",
+      "suggestedPractices": [
+        "Creative exploration"
+      ],
+      "relevanceScore": 18,
+      "editorialStatus": "Needs review"
+    },
+    {
       "id": "github:dresar/SKILL-IA-AGENT",
       "name": "SKILL-IA-AGENT",
       "fullName": "dresar/SKILL-IA-AGENT",
@@ -1465,31 +1454,24 @@
       "editorialStatus": "Needs review"
     },
     {
-      "id": "github:jau123/MeiGen-AI-Design-MCP",
-      "name": "MeiGen-AI-Design-MCP",
-      "fullName": "jau123/MeiGen-AI-Design-MCP",
-      "description": "Discover inspiration and create images and videos with the latest AI models. Works with ChatGPT, Claude, Cursor, and other MCP clients.",
-      "url": "https://github.com/jau123/MeiGen-AI-Design-MCP",
+      "id": "github:storytold/figcraft",
+      "name": "figcraft",
+      "fullName": "storytold/figcraft",
+      "description": "FigCraft: interface design and prototyping; an open-source, clean-room reimplementation of collaborative design workflows in pure Rust",
+      "url": "https://github.com/storytold/figcraft",
       "source": "GitHub search",
-      "discoveredThrough": "Inspiration MCPs",
+      "discoveredThrough": "Creative tooling",
       "topics": [
-        "ai-image-generation",
-        "chatgpt",
-        "claude",
-        "codex",
-        "mcp",
-        "mcp-server",
-        "openclaw",
-        "seedance"
+        "design",
+        "rust",
+        "tools"
       ],
-      "stars": 1788,
-      "updatedAt": "2026-10-19T07:51:43Z",
-      "suggestedType": "MCP",
+      "stars": 4726,
+      "updatedAt": "2026-11-09T11:59:36Z",
+      "suggestedType": "Tool",
       "suggestedPractices": [
-        "Review",
-        "Taste",
-        "Drafting",
-        "Creative exploration"
+        "Flows",
+        "UI sketches"
       ],
       "relevanceScore": 15,
       "editorialStatus": "Needs review"

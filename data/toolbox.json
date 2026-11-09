@@ -1,34 +1,6 @@
 {
-  "weekLabel": "Last 7 days · 27 Oct 2026 – 2 Nov 2026",
-  "weeklySignals": [
-    {
-      "title": "Framesmith uses a visual canvas and quality gate for UI design",
-      "verdict": "Watching",
-      "summary": "Source-reviewed; not yet team-tested. Try it on one design iteration that needs a quality gate, then compare the canvas output with your current review criteria.",
-      "source": "github.com",
-      "url": "https://github.com/vicmaster/framesmith",
-      "foundOn": "2026-11-02",
-      "id": "01"
-    },
-    {
-      "title": "REA can inspect app behavior and explain it with evidence",
-      "verdict": "Watching",
-      "summary": "Source-reviewed; not yet team-tested. Use it for one feature investigation where you need evidence-backed reverse engineering, then confirm the findings against the actual product behavior.",
-      "source": "github.com",
-      "url": "https://github.com/morluto/rea",
-      "foundOn": "2026-11-02",
-      "id": "02"
-    },
-    {
-      "title": "RasanAI is a guided video direction skill with staged approvals",
-      "verdict": "Watching",
-      "summary": "Source-reviewed; not yet team-tested. Try it on one short launch film brief first, then validate the story, look, and timing before a larger motion project.",
-      "source": "github.com",
-      "url": "https://github.com/Sibhimanyu/rasanai",
-      "foundOn": "2026-11-02",
-      "id": "03"
-    }
-  ],
+  "weekLabel": "Last 7 days · 3 Nov 2026 – 9 Nov 2026",
+  "weeklySignals": [],
   "tools": [
     {
       "id": "01",
@@ -183,10 +155,10 @@
         "Creative exploration",
         "Pattern research"
       ],
-      "description": "Searches Savee’s curated reference library and can retrieve personal saves, boards, feed items, and image content in supported clients.",
+      "description": "Savee MCP can search your saves, boards, feed, and the public library, and can fetch actual images for selected saves when write access is granted.",
       "verdict": "Worth trying",
       "confidence": "Medium",
-      "reviewed": "19 Oct 2026",
+      "reviewed": "9 Nov 2026",
       "source": "savee.com/mcp",
       "url": "https://savee.com/mcp/",
       "access": "Paid Savee plan",
@@ -325,12 +297,12 @@
       "description": "Canva’s remote MCP now exposes design creation and editing, asset and brand management, library search, export, and commenting through AI assistants.",
       "verdict": "Worth trying",
       "confidence": "High",
-      "reviewed": "2 Nov 2026",
+      "reviewed": "9 Nov 2026",
       "source": "canva.dev/docs/apps/mcp",
       "url": "https://www.canva.dev/docs/apps/mcp/",
       "access": "Canva account",
       "setup": "5–10 minutes",
-      "recommendation": "Trial it on one small edit and review loop, then verify permissions and brand library behavior in your workspace."
+      "recommendation": "Use it for one small edit and review loop, then verify permissions and brand library behavior in your workspace."
     },
     {
       "id": "14",
@@ -557,10 +529,10 @@
         "UI sketches",
         "Review"
       ],
-      "description": "In Figma Design, the agent can connect a library from the file, reference specific components, variables, and styles with @, and use that context to produce outputs aligned to the team system.",
+      "description": "The Figma agent can connect a library from the file, reference specific components, variables, and styles with @, and use that context to produce outputs aligned to the team system.",
       "verdict": "Worth trying",
       "confidence": "Medium",
-      "reviewed": "2 Nov 2026",
+      "reviewed": "9 Nov 2026",
       "source": "help.figma.com",
       "url": "https://help.figma.com/hc/en-us/articles/37998629035799-Work-with-the-Figma-agent-in-design-files",
       "access": "Figma plan and file access",
