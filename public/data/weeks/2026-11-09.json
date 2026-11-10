@@ -6,8 +6,8 @@
   "date": "2026-11-09",
   "editionNumber": "034",
   "displayDate": "Week of 2026-11-09",
-  "headline": "**Junior ladders shrink** while evaluation and access shift",
-  "summary": "This week’s strongest signal is that junior design work is being reorganized, not simply removed. A quieter but important process theme also emerged: teams are turning evaluation, accessibility, and infrastructure into the real design surface.",
+  "headline": "**Junior roles**, generated content, and accessibility are shifting",
+  "summary": "This week’s evidence points to fewer easy entry points, more operational discipline around AI-generated output, and accessibility moving earlier in the UI architecture. The strongest signals are concrete enough to affect hiring, evaluation, and interface design, but most remain early or experimental rather than proven at scale.",
   "questions": [
     {
       "id": "11",
@@ -25,14 +25,74 @@
       "why": "This affects hiring criteria, onboarding and the work you choose to keep manual. If the apprenticeship disappears, your team loses its future seniors.",
       "uncertainty": "These are predictions and opinion from trade commentary, not hiring data or measured outcomes. We need evidence from actual studio practices and retention results to know which redesigns work best.",
       "counts": {
-        "total": 5,
-        "web": 5,
+        "total": 9,
+        "web": 9,
         "newsletters": 0
       },
       "publisherCount": 1,
       "firstSeen": "2026-11-06",
-      "lastUpdatedAt": "2026-11-06T14:17:38.112Z",
+      "lastUpdatedAt": "2026-11-10T07:12:24.096Z",
       "signals": [
+        {
+          "source": "itsnicethat.com",
+          "title": "Starting a creative career has never felt harder – 28 industry voices on what comes next",
+          "kind": "Web",
+          "timing": "2026-11-09",
+          "publishedAt": "2026-11-09T08:00:00.000Z",
+          "firstCollectedAt": "2026-11-10T07:12:24.096Z",
+          "sourceId": "b1017daf38c6a87b",
+          "url": "https://www.itsnicethat.com/features/career-predictions-for-junior-creatives-creative-industry-091126",
+          "happened": "Represent reports an 81 percent drop in junior briefs this year compared with 2016.",
+          "changes": "This is concrete evidence that entry-level demand has fallen sharply in one recruitment pipeline.",
+          "verdict": "Must read",
+          "role": "Supports",
+          "evidence": "So far this year, they’ve worked on 22, an 81 per cent drop."
+        },
+        {
+          "source": "itsnicethat.com",
+          "title": "Cat How: “The industry will have to rebuild the bottom rung on purpose”",
+          "kind": "Web",
+          "timing": "2026-11-09",
+          "publishedAt": "2026-11-09T08:00:00.000Z",
+          "firstCollectedAt": "2026-11-10T07:12:24.096Z",
+          "sourceId": "44e81f5b65f0958f",
+          "url": "https://www.itsnicethat.com/career-predictions/cat-how-091126",
+          "happened": "Cat How argues studios should deliberately rebuild the bottom rung and hire juniors as an investment in judgment.",
+          "changes": "This turns the general pressure into a specific hiring and training recommendation.",
+          "verdict": "Read",
+          "role": "Supports",
+          "evidence": "So I think the smartest studios will start hiring juniors again, deliberately, as an investment in judgement."
+        },
+        {
+          "source": "itsnicethat.com",
+          "title": "Craft’s Dan Crowder: “The typical first creative role will be a 6-12 month contract”",
+          "kind": "Web",
+          "timing": "2026-11-09",
+          "publishedAt": "2026-11-09T08:00:00.000Z",
+          "firstCollectedAt": "2026-11-10T07:12:24.096Z",
+          "sourceId": "3f203813eb5402eb",
+          "url": "https://www.itsnicethat.com/career-predictions/dan-crowder-091126",
+          "happened": "Dan Crowder predicts the typical first creative role will become a 6 to 12 month contract.",
+          "changes": "This suggests the entry point is shifting from permanent rung to supervised trial.",
+          "verdict": "Read",
+          "role": "Supports",
+          "evidence": "My prediction is that within three years the typical first creative role will be a 6-12 month contract, with a permanent offer coming after you’ve proved yourself."
+        },
+        {
+          "source": "itsnicethat.com",
+          "title": "Caterina Bianchini: “We can’t keep asking where all the good designers are if we’re unwilling to help anyone become one”",
+          "kind": "Web",
+          "timing": "2026-11-09",
+          "publishedAt": "2026-11-09T08:00:00.000Z",
+          "firstCollectedAt": "2026-11-10T07:12:24.096Z",
+          "sourceId": "2dd26193e79713b4",
+          "url": "https://www.itsnicethat.com/career-predictions/caterina-bianchini-091126",
+          "happened": "Studio NARI says using AI to replace first-rung work is short-sighted because much of becoming a good designer happens on the job.",
+          "changes": "This reinforces the risk that removing junior work also removes learning.",
+          "verdict": "Read",
+          "role": "Supports",
+          "evidence": "I think using AI to replace the first rung of a creative career is short-sighted, particularly when so much of becoming a good designer happens on the job."
+        },
         {
           "source": "itsnicethat.com",
           "title": "Starting a creative career has never felt harder – 28 industry voices on what comes next",
@@ -136,6 +196,24 @@
             "32f9a34382bbff5e",
             "0f2b4f6550d32756"
           ]
+        },
+        {
+          "at": "2026-11-10T07:12:24.096Z",
+          "kind": "Evidence added",
+          "reason": "Answer retained verbatim. Added verified citations: https://www.itsnicethat.com/features/career-predictions-for-junior-creatives-creative-industry-091126, https://www.itsnicethat.com/career-predictions/cat-how-091126, https://www.itsnicethat.com/career-predictions/dan-crowder-091126, https://www.itsnicethat.com/career-predictions/caterina-bianchini-091126.",
+          "before": "The emerging picture is not that junior roles disappear cleanly, but that the work, contract shape and learning model around them are changing together. Multiple industry voices say AI is squeezing the routine tasks juniors used to learn on, while also making judgement, curiosity and the ability to explain decisions more valuable at hiring time. The risk is obvious: if firms use automation to cut the bottom rung without replacing the learning, they dry up the future middle layer. Studios should redesign junior roles around supervised judgment, real feedback and deliberate inefficiency where it builds craft.",
+          "after": "The emerging picture is not that junior roles disappear cleanly, but that the work, contract shape and learning model around them are changing together. Multiple industry voices say AI is squeezing the routine tasks juniors used to learn on, while also making judgement, curiosity and the ability to explain decisions more valuable at hiring time. The risk is obvious: if firms use automation to cut the bottom rung without replacing the learning, they dry up the future middle layer. Studios should redesign junior roles around supervised judgment, real feedback and deliberate inefficiency where it builds craft.",
+          "sourceIds": [
+            "b1017daf38c6a87b",
+            "44e81f5b65f0958f",
+            "3f203813eb5402eb",
+            "2dd26193e79713b4",
+            "2a54d6d067a91e53",
+            "694f47613b8408f2",
+            "1b18396f6b2b71d1",
+            "0f2b4f6550d32756",
+            "32f9a34382bbff5e"
+          ]
         }
       ]
     },
@@ -176,7 +254,7 @@
           "changes": "This creates the need for a scalable evaluation method instead of traditional content review.",
           "verdict": "Must read",
           "role": "Supports",
-          "evidence": "For example: The final content isn’t generated until someone asks for it, so you can't review the exact output beforehand."
+          "evidence": "What we've done to solve this To measure content quality, we've built a test runner for our content instructions."
         }
       ],
       "further": [],
@@ -230,7 +308,7 @@
           "changes": "This frames accessibility as a product risk, not a polish issue.",
           "verdict": "Must read",
           "role": "Supports",
-          "evidence": "As the LLM chat pattern continues to spread like wildfire across the web, we risk excluding people if these experiences are not built with accessibility as a core consideration."
+          "evidence": "To start, we use live regions ."
         }
       ],
       "further": [],
@@ -303,15 +381,15 @@
     }
   ],
   "retiredQuestions": [],
-  "generatedAt": "2026-11-09T06:19:13.095Z",
-  "lastCollectedAt": "2026-11-09T06:19:13.095Z",
-  "crawlCompletedAt": "07:19",
+  "generatedAt": "2026-11-10T07:12:24.096Z",
+  "lastCollectedAt": "2026-11-10T07:12:24.096Z",
+  "crawlCompletedAt": "08:12",
   "finalizedAt": null,
-  "revision": "09db6644438d",
-  "sourceCount": 27,
+  "revision": "a21e40031e31",
+  "sourceCount": 28,
   "webSourceCount": 7,
   "teamContributionCount": 4,
   "sourceWarnings": [
-    "33 candidate pages could not provide enough inspectable public article text. They were not used as new evidence."
+    "36 candidate pages could not provide enough inspectable public article text. They were not used as new evidence."
   ]
 }

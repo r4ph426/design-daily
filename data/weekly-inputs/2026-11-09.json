@@ -1,66 +1,75 @@
 [
   {
-    "id": "e2df4ce1e5689407",
-    "url": "https://www.microsoft.com/en-us/research/publication/decoupling-of-usefulness-and-novelty-evaluating-the-impact-of-generative-ai-on-design-outputs-and-novice-designers-creative-thinking",
-    "title": "Decoupling of Usefulness and Novelty: Evaluating the Impact of Generative AI on Design Outputs and Novice Designers' Creative Thinking - Microsoft Research",
-    "source": "microsoft.com",
-    "sourceKind": "web research",
-    "publishedAt": null,
-    "firstCollectedAt": "2026-11-09T06:19:13.095Z"
+    "id": "06e82c00d26b79ff",
+    "url": "https://www.smashingmagazine.com/2026/11/making-immersive-llm-chat-experiences-more-accessible",
+    "title": "Making Immersive LLM Chat Experiences More Accessible — Smashing Magazine",
+    "source": "smashingmagazine.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-05T13:00:00.000Z",
+    "firstCollectedAt": "2026-11-10T07:12:24.096Z"
   },
   {
-    "id": "f6dcb158c4d7086e",
-    "url": "https://www.itsnicethat.com/career-predictions/cat-how?cookie-preferences=true",
-    "title": "Cat How: “The industry will have to rebuild the bottom rung on purpose”",
-    "source": "itsnicethat.com",
+    "id": "7de780e6db3a4f6e",
+    "url": "https://www.gov.uk/government/publications/guidance-to-civil-servants-on-use-of-generative-ai/guidance-to-civil-servants-on-use-of-generative-ai?trk=public_post_comment-text",
+    "title": "Guidance to civil servants on use of generative AI - GOV.UK",
+    "source": "gov.uk",
     "sourceKind": "web research",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-09T06:19:13.095Z"
+    "firstCollectedAt": "2026-11-10T07:12:24.096Z"
   },
   {
-    "id": "e0e54d07d26fdf02",
-    "url": "https://www.itsnicethat.com/features/welcome-to-the-entry-level-void-light-and-shade-digital-220925",
-    "title": "Welcome to the entry-level void: what happens when junior design jobs disappear?",
-    "source": "itsnicethat.com",
+    "id": "7b86d06cf9a05117",
+    "url": "https://www.w3.org/blog/2026/crafting-wcag-3-for-more-accessible-user-experiences",
+    "title": "Crafting WCAG 3 for more accessible user experiences | 2026 | Blog | W3C",
+    "source": "w3.org",
     "sourceKind": "web research",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-09T06:19:13.095Z"
+    "firstCollectedAt": "2026-11-10T07:12:24.096Z"
   },
   {
-    "id": "4efba4bafbc8adb2",
-    "url": "https://arxiv.org/abs/2607.24606",
-    "title": "[2607.24606] Verification-Conditioned Use: A Qualitative Study on How Generative AI Reshapes Learning, Autonomy, and Market Entry for Junior Software Developers",
-    "source": "arxiv.org",
+    "id": "a88dcd4ef21bd0ce",
+    "url": "https://www.w3.org/blog",
+    "title": "Blog | W3C",
+    "source": "w3.org",
     "sourceKind": "web research",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-09T06:19:13.095Z"
+    "firstCollectedAt": "2026-11-10T07:12:24.096Z"
   },
   {
-    "id": "2cb4ec276d948793",
-    "url": "https://arxiv.org/abs/2609.26725",
-    "title": "[2609.26725] Does AI Save Time on Product Design? A Randomized Controlled Experiment of AI Prompt-to-Design Workflows",
-    "source": "arxiv.org",
+    "id": "7b6428dcb1972295",
+    "url": "https://www.w3.org/2026/10/btt-wg-charter.html",
+    "title": "Browser Testing and Tools Working Group Charter",
+    "source": "w3.org",
     "sourceKind": "web research",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-09T06:19:13.095Z"
+    "firstCollectedAt": "2026-11-10T07:12:24.096Z"
   },
   {
-    "id": "e25c6f6d04f3f1b1",
-    "url": "https://www.itsnicethat.com/features/starting-a-creative-career-has-never-felt-harder?cookie-preferences=true",
-    "title": "Starting a creative career has never felt harder – 28 industry voices on what comes next",
-    "source": "itsnicethat.com",
+    "id": "267be688551b56e3",
+    "url": "https://www.w3.org/events/meetings/59a6d1d1-d43f-45a6-9dac-57558cbaab2d",
+    "title": "Agentic Web: declarative and imperative solutions | W3C",
+    "source": "w3.org",
     "sourceKind": "web research",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-09T06:19:13.095Z"
+    "firstCollectedAt": "2026-11-10T07:12:24.096Z"
   },
   {
-    "id": "b350fdaacfbe1f7c",
-    "url": "https://arxiv.org/abs/2609.34655",
-    "title": "[2609.34655] AI Tools Adoption across the Double Diamond Workflow: Phase, Mode, and Barriers in Designer Practice",
-    "source": "arxiv.org",
+    "id": "39a85673dcc3f58f",
+    "url": "https://lists.w3.org/Archives/Public/public-new-work/2026Oct/0002.html",
+    "title": "Start of refinement for a draft Agentic Web Working Group charter from Xueyuan Jia on 2026-10-01 (public-new-work@w3.org from October 2026)",
+    "source": "lists.w3.org",
+    "sourceKind": "web research",
+    "publishedAt": "2026-10-01T00:00:00.000Z",
+    "firstCollectedAt": "2026-11-10T07:12:24.096Z"
+  },
+  {
+    "id": "96db118cef2198db",
+    "url": "https://www.w3.org/wiki/WebDriver/2026-10-TPAC",
+    "title": "WebDriver/2026-10-TPAC - W3C Wiki",
+    "source": "w3.org",
     "sourceKind": "web research",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-09T06:19:13.095Z"
+    "firstCollectedAt": "2026-11-10T07:12:24.096Z"
   },
   {
     "id": "899779497ade9fce",
@@ -69,169 +78,7 @@
     "source": "designnotes.blog.gov.uk",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-03T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-09T06:19:13.095Z"
-  },
-  {
-    "id": "2a54d6d067a91e53",
-    "url": "https://www.itsnicethat.com/features/starting-a-creative-career-has-never-felt-harder",
-    "title": "Starting a creative career has never felt harder – 28 industry voices on what comes next",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-09T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-09T06:19:13.095Z"
-  },
-  {
-    "id": "694f47613b8408f2",
-    "url": "https://www.itsnicethat.com/career-predictions/cat-how",
-    "title": "Cat How: “The industry will have to rebuild the bottom rung on purpose”",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-09T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-09T06:19:13.095Z"
-  },
-  {
-    "id": "1b18396f6b2b71d1",
-    "url": "https://www.itsnicethat.com/career-predictions/crafts-dan-crowder-on-why-your-first-creative-job-will-be-a-fixed-term-contract",
-    "title": "Craft’s Dan Crowder: “The typical first creative role will be a 6-12 month contract”",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-09T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-09T06:19:13.095Z"
-  },
-  {
-    "id": "0f2b4f6550d32756",
-    "url": "https://www.itsnicethat.com/career-predictions/represents-joe-cooper-from-118-junior-briefs-to-22-someone-has-to-give-them-experience",
-    "title": "Represent’s Joe Cooper: “Young creatives will increasingly have to make their own way in”",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-09T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-09T06:19:13.095Z"
-  },
-  {
-    "id": "9d61b1cadcefc19f",
-    "url": "https://www.itsnicethat.com/features/braulio-amado-graphic-design-spotlight-261026",
-    "title": "Mistakes, chaos and meditation: inside the mind of Bráulio Amado",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-10-26T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-09T06:19:13.095Z"
-  },
-  {
-    "id": "b5b120a0c6af3f4b",
-    "url": "https://www.itsnicethat.com/features/more-of-the-same-creative-routines-in-depth-everyday-edition-140526",
-    "title": "More of the same: how creative rituals can help you break free from the idea echo chamber",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": null,
-    "firstCollectedAt": "2026-11-09T06:19:13.095Z"
-  },
-  {
-    "id": "24c8b91912af54fc",
-    "url": "https://www.itsnicethat.com/career-predictions/jay-anderson",
-    "title": "Jay Anderson: “The next-generation designer will be increasingly hybrid”",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-09T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-09T06:19:13.095Z"
-  },
-  {
-    "id": "4d2bc46db683a6ce",
-    "url": "https://www.itsnicethat.com/career-predictions/a-new-directions-oliver-benjamin-be-kind-make-stuff-learn-the-tools",
-    "title": "A New Direction’s Oliver Benjamin: “Make stuff and use the process to understand what you’re good at”",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-09T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-09T06:19:13.095Z"
-  },
-  {
-    "id": "70d0e4664d02409b",
-    "url": "https://www.itsnicethat.com/career-predictions/caterina-bianchini",
-    "title": "Caterina Bianchini: “We can’t keep asking where all the good designers are if we’re unwilling to help anyone become one”",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-09T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-09T06:19:13.095Z"
-  },
-  {
-    "id": "2837b41321a313a9",
-    "url": "https://www.itsnicethat.com/career-predictions/hilary-chittenden-studios-that-cant-hire-should-start-hosting",
-    "title": "Hilary Chittenden: “More emerging creatives will start portfolio careers”",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-09T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-09T06:19:13.095Z"
-  },
-  {
-    "id": "8adfc9145aa55f0e",
-    "url": "https://www.itsnicethat.com/career-predictions/dads-paul-drake-human-craft-will-win-out-isnt-enough-reassurance",
-    "title": "D&AD’s Paul Drake: “Careers will become less linear”",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-09T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-09T06:19:13.095Z"
-  },
-  {
-    "id": "e167a821d1814f36",
-    "url": "https://www.itsnicethat.com/career-predictions/kingstons-rachel-gannon-on-why-design-education-must-learn-to-sit-with-uncertainty",
-    "title": "Rachel Gannon: “The graduates who thrive will be those who can hold uncertainty”",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-09T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-09T06:19:13.095Z"
-  },
-  {
-    "id": "81f775b5358dd81e",
-    "url": "https://www.itsnicethat.com/career-predictions/creative-pecs-nik-gunn-a-hope-for-a-workforce-that-looks-like-the-country",
-    "title": "Creative PEC’s Nik Gunn: “Creative flair, technological innovation and entrepreneurial know-how remain crucial”",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-09T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-09T06:19:13.095Z"
-  },
-  {
-    "id": "a5ba18d47a3be5d5",
-    "url": "https://www.itsnicethat.com/career-predictions/anna-kiernan-on-live-analogue-sell-digital-and-careers-built-outside-the-studio",
-    "title": "Dr Anna Kiernan: “As AI absorbs more routine work, how will new creatives find their feet?”",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-09T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-09T06:19:13.095Z"
-  },
-  {
-    "id": "db3f22aec8a1d234",
-    "url": "https://www.smashingmagazine.com/2026/11/ux-insiders-community-in-house-ux-people",
-    "title": "A New Community For In-House UX People — Smashing Magazine",
-    "source": "smashingmagazine.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-06T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-09T06:19:13.095Z"
-  },
-  {
-    "id": "06e82c00d26b79ff",
-    "url": "https://www.smashingmagazine.com/2026/11/making-immersive-llm-chat-experiences-more-accessible",
-    "title": "Making Immersive LLM Chat Experiences More Accessible — Smashing Magazine",
-    "source": "smashingmagazine.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-05T13:00:00.000Z",
-    "firstCollectedAt": "2026-11-09T06:19:13.095Z"
-  },
-  {
-    "id": "4143fb808abf5dd4",
-    "url": "https://www.smashingmagazine.com/2026/11/modern-css-might-make-your-front-end-more-complex",
-    "title": "Modern CSS Might Make Your Front-End More Complex — Smashing Magazine",
-    "source": "smashingmagazine.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-03T10:00:00.000Z",
-    "firstCollectedAt": "2026-11-09T06:19:13.095Z"
-  },
-  {
-    "id": "fa71f02395de8fdc",
-    "url": "https://www.smashingmagazine.com/2026/10/desktop-wallpaper-calendars-november-2026",
-    "title": "A Spark Of Color In November’s Gray (2026 Wallpapers Edition) — Smashing Magazine",
-    "source": "smashingmagazine.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-10-31T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-09T06:19:13.095Z"
+    "firstCollectedAt": "2026-11-10T07:12:24.096Z"
   },
   {
     "id": "c29c9b0427141049",
@@ -240,6 +87,168 @@
     "source": "w3.org",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-05T10:57:00.000Z",
-    "firstCollectedAt": "2026-11-09T06:19:13.095Z"
+    "firstCollectedAt": "2026-11-10T07:12:24.096Z"
+  },
+  {
+    "id": "bb88646494996bd8",
+    "url": "https://www.itsnicethat.com/articles/creative-career-condundrums-if-you-could-jobs-advice-091126",
+    "title": "“You will always be a designer, whether that’s full time or not”",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-09T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-10T07:12:24.096Z"
+  },
+  {
+    "id": "f8854ce9489baee4",
+    "url": "https://www.itsnicethat.com/articles/elizabeth-goodspeed-art-school-economics-education-creative-industry-091126",
+    "title": "Elizabeth Goodspeed on the impossible economics of art education in the US",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-09T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-10T07:12:24.096Z"
+  },
+  {
+    "id": "e9b6349c0f1e7ec9",
+    "url": "https://www.itsnicethat.com/features/mona-chalabi-ten-lives-illustration-spotlight-091126",
+    "title": "Mona Chalabi’s illustrated book about wealth inequality will make you talk to your friends about money",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-09T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-10T07:12:24.096Z"
+  },
+  {
+    "id": "b1017daf38c6a87b",
+    "url": "https://www.itsnicethat.com/features/career-predictions-for-junior-creatives-creative-industry-091126",
+    "title": "Starting a creative career has never felt harder – 28 industry voices on what comes next",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-09T08:00:00.000Z",
+    "firstCollectedAt": "2026-11-10T07:12:24.096Z"
+  },
+  {
+    "id": "44e81f5b65f0958f",
+    "url": "https://www.itsnicethat.com/career-predictions/cat-how-091126",
+    "title": "Cat How: “The industry will have to rebuild the bottom rung on purpose”",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-09T08:00:00.000Z",
+    "firstCollectedAt": "2026-11-10T07:12:24.096Z"
+  },
+  {
+    "id": "581cb64f4229a9bc",
+    "url": "https://www.itsnicethat.com/career-predictions/jay-anderson-091126",
+    "title": "Jay Anderson: “The next-generation designer will be increasingly hybrid”",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-09T08:00:00.000Z",
+    "firstCollectedAt": "2026-11-10T07:12:24.096Z"
+  },
+  {
+    "id": "7d4857116d43ea13",
+    "url": "https://www.itsnicethat.com/career-predictions/oliver-benjamin-091126",
+    "title": "A New Direction’s Oliver Benjamin: “Make stuff and use the process to understand what you’re good at”",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-09T08:00:00.000Z",
+    "firstCollectedAt": "2026-11-10T07:12:24.096Z"
+  },
+  {
+    "id": "2dd26193e79713b4",
+    "url": "https://www.itsnicethat.com/career-predictions/caterina-bianchini-091126",
+    "title": "Caterina Bianchini: “We can’t keep asking where all the good designers are if we’re unwilling to help anyone become one”",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-09T08:00:00.000Z",
+    "firstCollectedAt": "2026-11-10T07:12:24.096Z"
+  },
+  {
+    "id": "152aa3be4c32a520",
+    "url": "https://www.itsnicethat.com/career-predictions/hilary-chittenden-091126",
+    "title": "Hilary Chittenden: “More emerging creatives will start portfolio careers”",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-09T08:00:00.000Z",
+    "firstCollectedAt": "2026-11-10T07:12:24.096Z"
+  },
+  {
+    "id": "45f30c9cac68575d",
+    "url": "https://www.itsnicethat.com/career-predictions/joe-cooper-091126",
+    "title": "Represent’s Joe Cooper: “Young creatives will increasingly have to make their own way in”",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-09T08:00:00.000Z",
+    "firstCollectedAt": "2026-11-10T07:12:24.096Z"
+  },
+  {
+    "id": "3f203813eb5402eb",
+    "url": "https://www.itsnicethat.com/career-predictions/dan-crowder-091126",
+    "title": "Craft’s Dan Crowder: “The typical first creative role will be a 6-12 month contract”",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-09T08:00:00.000Z",
+    "firstCollectedAt": "2026-11-10T07:12:24.096Z"
+  },
+  {
+    "id": "3e642b0c16d87e93",
+    "url": "https://www.itsnicethat.com/career-predictions/paul-drake-091126",
+    "title": "D&AD’s Paul Drake: “Careers will become less linear”",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-09T08:00:00.000Z",
+    "firstCollectedAt": "2026-11-10T07:12:24.096Z"
+  },
+  {
+    "id": "db3f22aec8a1d234",
+    "url": "https://www.smashingmagazine.com/2026/11/ux-insiders-community-in-house-ux-people",
+    "title": "A New Community For In-House UX People — Smashing Magazine",
+    "source": "smashingmagazine.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-06T08:00:00.000Z",
+    "firstCollectedAt": "2026-11-10T07:12:24.096Z"
+  },
+  {
+    "id": "4143fb808abf5dd4",
+    "url": "https://www.smashingmagazine.com/2026/11/modern-css-might-make-your-front-end-more-complex",
+    "title": "Modern CSS Might Make Your Front-End More Complex — Smashing Magazine",
+    "source": "smashingmagazine.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-03T10:00:00.000Z",
+    "firstCollectedAt": "2026-11-10T07:12:24.096Z"
+  },
+  {
+    "id": "fa71f02395de8fdc",
+    "url": "https://www.smashingmagazine.com/2026/10/desktop-wallpaper-calendars-november-2026",
+    "title": "A Spark Of Color In November’s Gray (2026 Wallpapers Edition) — Smashing Magazine",
+    "source": "smashingmagazine.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-10-31T08:00:00.000Z",
+    "firstCollectedAt": "2026-11-10T07:12:24.096Z"
+  },
+  {
+    "id": "a72272cedc2836f6",
+    "url": "https://buttondown.com/agenticdesignschool/archive/six-lesson-notes-and-a-catalog-contract-for-agents",
+    "title": "Six lesson notes and a catalog contract for agents • Buttondown",
+    "source": "buttondown.com",
+    "sourceKind": "newsletter inbox",
+    "publishedAt": "2026-11-09T09:39:44.000Z",
+    "firstCollectedAt": "2026-11-10T07:12:24.096Z"
+  },
+  {
+    "id": "835b4b950532f990",
+    "url": "https://github.com/cjpais/handy?_bhlid=fc71751cd6e4feac252a60095243b52a2d26a073",
+    "title": "GitHub - cjpais/Handy: A free, open source, and extensible speech-to-text application that works completely offline. · GitHub",
+    "source": "github.com",
+    "sourceKind": "newsletter inbox",
+    "publishedAt": "2026-11-06T16:14:56.000Z",
+    "firstCollectedAt": "2026-11-10T07:12:24.096Z"
+  },
+  {
+    "id": "e2df4ce1e5689407",
+    "url": "https://www.microsoft.com/en-us/research/publication/decoupling-of-usefulness-and-novelty-evaluating-the-impact-of-generative-ai-on-design-outputs-and-novice-designers-creative-thinking",
+    "title": "Decoupling of Usefulness and Novelty: Evaluating the Impact of Generative AI on Design Outputs and Novice Designers' Creative Thinking - Microsoft Research",
+    "source": "microsoft.com",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-10T07:12:24.096Z"
   }
 ]
