@@ -6,8 +6,8 @@
   "date": "2026-11-09",
   "editionNumber": "034",
   "displayDate": "Week of 2026-11-09",
-  "headline": "**Junior roles**, generated content, and accessibility are shifting",
-  "summary": "This week’s evidence points to fewer easy entry points, more operational discipline around AI-generated output, and accessibility moving earlier in the UI architecture. The strongest signals are concrete enough to affect hiring, evaluation, and interface design, but most remain early or experimental rather than proven at scale.",
+  "headline": "**AI shifts the first rung** and the tooling around it",
+  "summary": "This week keeps the strongest thread on junior work: AI is compressing entry-level tasks, but the evidence points toward redesigning the role rather than eliminating it. The other durable signal is operational, with evaluation and accessibility moving upstream into the systems that generate content and shape participation.",
   "questions": [
     {
       "id": "11",
@@ -76,7 +76,7 @@
           "changes": "This suggests the entry point is shifting from permanent rung to supervised trial.",
           "verdict": "Read",
           "role": "Supports",
-          "evidence": "My prediction is that within three years the typical first creative role will be a 6-12 month contract, with a permanent offer coming after you’ve proved yourself."
+          "evidence": "For employers, the responsibility is to make the onboarding and induction process meaningful, by agreeing what success looks like at six months and giving someone ownership of developing the person."
         },
         {
           "source": "itsnicethat.com",
@@ -324,7 +324,9 @@
           ]
         }
       ]
-    },
+    }
+  ],
+  "retiredQuestions": [
     {
       "id": "15",
       "threadId": "2026-11-09:what-does-w3c-s-latest-newsletter-imply-for-design-teams-shippin",
@@ -380,16 +382,15 @@
       ]
     }
   ],
-  "retiredQuestions": [],
-  "generatedAt": "2026-11-10T07:12:24.096Z",
-  "lastCollectedAt": "2026-11-10T07:12:24.096Z",
-  "crawlCompletedAt": "08:12",
+  "generatedAt": "2026-11-11T06:08:41.827Z",
+  "lastCollectedAt": "2026-11-11T06:08:41.827Z",
+  "crawlCompletedAt": "07:08",
   "finalizedAt": null,
-  "revision": "a21e40031e31",
-  "sourceCount": 28,
+  "revision": "15d65fc25031",
+  "sourceCount": 25,
   "webSourceCount": 7,
   "teamContributionCount": 4,
   "sourceWarnings": [
-    "36 candidate pages could not provide enough inspectable public article text. They were not used as new evidence."
+    "39 candidate pages could not provide enough inspectable public article text. They were not used as new evidence."
   ]
 }
