@@ -6,7 +6,43 @@
     "source": "smashingmagazine.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-05T13:00:00.000Z",
-    "firstCollectedAt": "2026-11-11T06:08:41.827Z"
+    "firstCollectedAt": "2026-11-12T07:06:01.759Z"
+  },
+  {
+    "id": "c805323a98d6dc1a",
+    "url": "https://developers.openai.com/plugins/concepts/ui-guidelines",
+    "title": "UI guidelines – Plugins | OpenAI Developers",
+    "source": "developers.openai.com",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-12T07:06:01.759Z"
+  },
+  {
+    "id": "82fac8160534e146",
+    "url": "https://developers.openai.com/blog/15-lessons-building-chatgpt-apps",
+    "title": "15 lessons learned building ChatGPT Apps | OpenAI Developers",
+    "source": "developers.openai.com",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-12T07:06:01.759Z"
+  },
+  {
+    "id": "e54e65c1c9394541",
+    "url": "https://www.jobs.service.gov.uk/jobs/6ae20844df032bb20d1b68c0",
+    "title": "View job - AI Learning Content & Course Design Lead - Work Hub",
+    "source": "jobs.service.gov.uk",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-12T07:06:01.759Z"
+  },
+  {
+    "id": "144b2ee7219b4c86",
+    "url": "https://www.w3.org/calendar/tpac2026/breakout-sessions",
+    "title": "Breakout Sessions | Calendar | TPAC 2026 | W3C",
+    "source": "w3.org",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-12T07:06:01.759Z"
   },
   {
     "id": "06a24ebd71bde68c",
@@ -15,25 +51,7 @@
     "source": "w3.org",
     "sourceKind": "web research",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-11T06:08:41.827Z"
-  },
-  {
-    "id": "acf407c609bf4721",
-    "url": "https://www.w3.org/2026/10/28-atag3-minutes.html",
-    "title": "Reimagining Modern Authoring Tools - ATAG 3.0 &ndash; 28 October 2026",
-    "source": "w3.org",
-    "sourceKind": "web research",
-    "publishedAt": null,
-    "firstCollectedAt": "2026-11-11T06:08:41.827Z"
-  },
-  {
-    "id": "6726ef062d280145",
-    "url": "https://forum.figma.com/product-updates-3/new-figma-motion-updates-physics-based-springs-style-and-lottie-export-previews-59976",
-    "title": "New Figma Motion updates: physics based springs, style and Lottie export previews | Figma Forum",
-    "source": "forum.figma.com",
-    "sourceKind": "web research",
-    "publishedAt": null,
-    "firstCollectedAt": "2026-11-11T06:08:41.827Z"
+    "firstCollectedAt": "2026-11-12T07:06:01.759Z"
   },
   {
     "id": "899779497ade9fce",
@@ -42,16 +60,7 @@
     "source": "designnotes.blog.gov.uk",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-03T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-11T06:08:41.827Z"
-  },
-  {
-    "id": "c29c9b0427141049",
-    "url": "https://www.w3.org/blog/2026/w3c-newsletter-october-2026",
-    "title": "W3C Newsletter - October 2026 | 2026 | Blog | W3C",
-    "source": "w3.org",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-05T10:57:00.000Z",
-    "firstCollectedAt": "2026-11-11T06:08:41.827Z"
+    "firstCollectedAt": "2026-11-12T07:06:01.759Z"
   },
   {
     "id": "b1017daf38c6a87b",
@@ -60,7 +69,7 @@
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-09T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-11T06:08:41.827Z"
+    "firstCollectedAt": "2026-11-12T07:06:01.759Z"
   },
   {
     "id": "44e81f5b65f0958f",
@@ -69,7 +78,7 @@
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-09T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-11T06:08:41.827Z"
+    "firstCollectedAt": "2026-11-12T07:06:01.759Z"
   },
   {
     "id": "2dd26193e79713b4",
@@ -78,7 +87,7 @@
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-09T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-11T06:08:41.827Z"
+    "firstCollectedAt": "2026-11-12T07:06:01.759Z"
   },
   {
     "id": "3f203813eb5402eb",
@@ -87,61 +96,52 @@
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-09T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-11T06:08:41.827Z"
+    "firstCollectedAt": "2026-11-12T07:06:01.759Z"
   },
   {
-    "id": "2b4ef8cbe45d7a2f",
-    "url": "https://www.itsnicethat.com/articles/adobe-max-miami-2026-creative-industry-sponsored-content-101126",
-    "title": "Adobe Max Miami 2026 goes live online",
+    "id": "8b02f9081261d426",
+    "url": "https://www.itsnicethat.com/articles/biabum-graphic-design-illustration-discover-111126",
+    "title": "Why the retro brand identities of Biabum studio have illustration built into their DNA",
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
-    "publishedAt": "2026-11-10T16:00:00.000Z",
-    "firstCollectedAt": "2026-11-11T06:08:41.827Z"
+    "publishedAt": "2026-11-11T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-12T07:06:01.759Z"
   },
   {
-    "id": "f6c9174bd866308e",
-    "url": "https://www.itsnicethat.com/articles/trade-secrets-mpb-photography-event-partnership-101126",
-    "title": "Ana Flores, Sam Nicklin and Arielle Bobb-Willis reveal the techniques behind their photographs in our new webinar series",
+    "id": "08a46818c4eec446",
+    "url": "https://www.itsnicethat.com/articles/emily-stein-aquasplash-photography-project-111126",
+    "title": "Missing summer? Dive into Emily Stein colourful and chaotic snaps of Italian waterparks",
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
-    "publishedAt": "2026-11-10T16:00:00.000Z",
-    "firstCollectedAt": "2026-11-11T06:08:41.827Z"
+    "publishedAt": "2026-11-11T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-12T07:06:01.759Z"
   },
   {
-    "id": "57755e29fc231168",
-    "url": "https://www.itsnicethat.com/articles/nicer-tuesdays-december-london-launch-101126",
-    "title": "Nicer Tuesdays London: Get tickets for Studio Feixen, Oscar Hudson, Fiona Quadri and Adam Lin in December!",
+    "id": "bb88646494996bd8",
+    "url": "https://www.itsnicethat.com/articles/creative-career-condundrums-if-you-could-jobs-advice-091126",
+    "title": "“You will always be a designer, whether that’s full time or not”",
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
-    "publishedAt": "2026-11-10T13:00:00.000Z",
-    "firstCollectedAt": "2026-11-11T06:08:41.827Z"
+    "publishedAt": "2026-11-09T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-12T07:06:01.759Z"
   },
   {
-    "id": "80f8096aa693f4ca",
-    "url": "https://www.itsnicethat.com/features/james-barnett-poppy-french-when-james-and-poppy-met-documentary-photography-101126",
-    "title": "James Barnett and Poppy French document the eccentricities of Britain with warmth and humour",
+    "id": "f8854ce9489baee4",
+    "url": "https://www.itsnicethat.com/articles/elizabeth-goodspeed-art-school-economics-education-creative-industry-091126",
+    "title": "Elizabeth Goodspeed on the impossible economics of art education in the US",
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
-    "publishedAt": "2026-11-10T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-11T06:08:41.827Z"
+    "publishedAt": "2026-11-09T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-12T07:06:01.759Z"
   },
   {
-    "id": "2bceec18281f6758",
-    "url": "https://www.itsnicethat.com/articles/nymzo-product-design-project-101126",
-    "title": "“Strong and sporty”: Nymzo is the trendy chess brand designed for a new wave of players",
+    "id": "e9b6349c0f1e7ec9",
+    "url": "https://www.itsnicethat.com/features/mona-chalabi-ten-lives-illustration-spotlight-091126",
+    "title": "Mona Chalabi’s illustrated book about wealth inequality will make you talk to your friends about money",
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
-    "publishedAt": "2026-11-10T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-11T06:08:41.827Z"
-  },
-  {
-    "id": "7978486278dfc8ed",
-    "url": "https://www.itsnicethat.com/articles/eric-timothy-carlson-bon-iver-22-a-million-graphic-design-101126",
-    "title": "Decoding 22, A Million: Eric Timothy Carlson on carving Bon Iver’s iconic visual universe ten years later",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-10T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-11T06:08:41.827Z"
+    "publishedAt": "2026-11-09T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-12T07:06:01.759Z"
   },
   {
     "id": "db3f22aec8a1d234",
@@ -150,7 +150,7 @@
     "source": "smashingmagazine.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-06T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-11T06:08:41.827Z"
+    "firstCollectedAt": "2026-11-12T07:06:01.759Z"
   },
   {
     "id": "4143fb808abf5dd4",
@@ -159,7 +159,16 @@
     "source": "smashingmagazine.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-03T10:00:00.000Z",
-    "firstCollectedAt": "2026-11-11T06:08:41.827Z"
+    "firstCollectedAt": "2026-11-12T07:06:01.759Z"
+  },
+  {
+    "id": "a72272cedc2836f6",
+    "url": "https://buttondown.com/agenticdesignschool/archive/six-lesson-notes-and-a-catalog-contract-for-agents",
+    "title": "Six lesson notes and a catalog contract for agents • Buttondown",
+    "source": "buttondown.com",
+    "sourceKind": "newsletter inbox",
+    "publishedAt": "2026-11-09T09:39:44.000Z",
+    "firstCollectedAt": "2026-11-12T07:06:01.759Z"
   },
   {
     "id": "835b4b950532f990",
@@ -168,60 +177,33 @@
     "source": "github.com",
     "sourceKind": "newsletter inbox",
     "publishedAt": "2026-11-06T16:14:56.000Z",
-    "firstCollectedAt": "2026-11-11T06:08:41.827Z"
+    "firstCollectedAt": "2026-11-12T07:06:01.759Z"
   },
   {
-    "id": "7de780e6db3a4f6e",
-    "url": "https://www.gov.uk/government/publications/guidance-to-civil-servants-on-use-of-generative-ai/guidance-to-civil-servants-on-use-of-generative-ai?trk=public_post_comment-text",
-    "title": "Guidance to civil servants on use of generative AI - GOV.UK",
-    "source": "gov.uk",
-    "sourceKind": "web research",
-    "publishedAt": null,
-    "firstCollectedAt": "2026-11-11T06:08:41.827Z"
-  },
-  {
-    "id": "7b86d06cf9a05117",
-    "url": "https://www.w3.org/blog/2026/crafting-wcag-3-for-more-accessible-user-experiences",
-    "title": "Crafting WCAG 3 for more accessible user experiences | 2026 | Blog | W3C",
+    "id": "acf407c609bf4721",
+    "url": "https://www.w3.org/2026/10/28-atag3-minutes.html",
+    "title": "Reimagining Modern Authoring Tools - ATAG 3.0 &ndash; 28 October 2026",
     "source": "w3.org",
     "sourceKind": "web research",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-11T06:08:41.827Z"
+    "firstCollectedAt": "2026-11-12T07:06:01.759Z"
   },
   {
-    "id": "a88dcd4ef21bd0ce",
-    "url": "https://www.w3.org/blog",
-    "title": "Blog | W3C",
-    "source": "w3.org",
+    "id": "6726ef062d280145",
+    "url": "https://forum.figma.com/product-updates-3/new-figma-motion-updates-physics-based-springs-style-and-lottie-export-previews-59976",
+    "title": "New Figma Motion updates: physics based springs, style and Lottie export previews | Figma Forum",
+    "source": "forum.figma.com",
     "sourceKind": "web research",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-11T06:08:41.827Z"
+    "firstCollectedAt": "2026-11-12T07:06:01.759Z"
   },
   {
-    "id": "7b6428dcb1972295",
-    "url": "https://www.w3.org/2026/10/btt-wg-charter.html",
-    "title": "Browser Testing and Tools Working Group Charter",
+    "id": "c29c9b0427141049",
+    "url": "https://www.w3.org/blog/2026/w3c-newsletter-october-2026",
+    "title": "W3C Newsletter - October 2026 | 2026 | Blog | W3C",
     "source": "w3.org",
-    "sourceKind": "web research",
-    "publishedAt": null,
-    "firstCollectedAt": "2026-11-11T06:08:41.827Z"
-  },
-  {
-    "id": "267be688551b56e3",
-    "url": "https://www.w3.org/events/meetings/59a6d1d1-d43f-45a6-9dac-57558cbaab2d",
-    "title": "Agentic Web: declarative and imperative solutions | W3C",
-    "source": "w3.org",
-    "sourceKind": "web research",
-    "publishedAt": null,
-    "firstCollectedAt": "2026-11-11T06:08:41.827Z"
-  },
-  {
-    "id": "39a85673dcc3f58f",
-    "url": "https://lists.w3.org/Archives/Public/public-new-work/2026Oct/0002.html",
-    "title": "Start of refinement for a draft Agentic Web Working Group charter from Xueyuan Jia on 2026-10-01 (public-new-work@w3.org from October 2026)",
-    "source": "lists.w3.org",
-    "sourceKind": "web research",
-    "publishedAt": "2026-10-01T00:00:00.000Z",
-    "firstCollectedAt": "2026-11-11T06:08:41.827Z"
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-05T10:57:00.000Z",
+    "firstCollectedAt": "2026-11-12T07:06:01.759Z"
   }
 ]
