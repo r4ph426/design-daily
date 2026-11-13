@@ -6,70 +6,79 @@
     "source": "smashingmagazine.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-05T13:00:00.000Z",
-    "firstCollectedAt": "2026-11-13T06:38:30.647Z"
+    "firstCollectedAt": "2026-11-13T14:35:59.747Z"
   },
   {
-    "id": "576ccfeba48c2486",
-    "url": "https://www.w3.org/events/meetings/fcbb935c-c038-4fe8-b0f7-4c0be0bab423",
-    "title": "ATAG CG Meeting | W3C",
+    "id": "4df9bd8adf874666",
+    "url": "https://www.w3.org/news/2026/group-note-drafts-cognitive-accessibility-research-modules",
+    "title": "Group Note Drafts: Cognitive Accessibility Research Modules | 2026 | News | W3C",
     "source": "w3.org",
     "sourceKind": "web research",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-13T06:38:30.647Z"
+    "firstCollectedAt": "2026-11-13T14:35:59.747Z"
+  },
+  {
+    "id": "1b6d557941ea733c",
+    "url": "https://www.microsoft.com/en-us/research/publication/designing-staged-evaluation-workflows-for-llms-integrating-domain-experts-lay-users-and-model-generated-evaluation-criteria",
+    "title": "Designing Staged Evaluation Workflows for LLMs: Integrating Domain Experts, Lay Users, and Model-Generated Evaluation Criteria - Microsoft Research",
+    "source": "microsoft.com",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-13T14:35:59.747Z"
+  },
+  {
+    "id": "b38d4ef82c27e1f7",
+    "url": "https://www.microsoft.com/en-us/research/publication/decoupling-of-usefulness-and-novelty-evaluating-the-impact-of-generative-ai-on-design-outputs-and-novice-designers-creative-thinking/?lang=ja",
+    "title": "Decoupling of Usefulness and Novelty: Evaluating the Impact of Generative AI on Design Outputs and Novice Designers' Creative Thinking - Microsoft Research",
+    "source": "microsoft.com",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-13T14:35:59.747Z"
+  },
+  {
+    "id": "7d35e0aae293e40b",
+    "url": "https://www.w3.org/2026/10/w3c-and-state-of-web-in-ai-era.html",
+    "title": "W3C and the State of the Web in the AI Era",
+    "source": "w3.org",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-13T14:35:59.747Z"
+  },
+  {
+    "id": "acf407c609bf4721",
+    "url": "https://www.w3.org/2026/10/28-atag3-minutes.html",
+    "title": "Reimagining Modern Authoring Tools - ATAG 3.0 &ndash; 28 October 2026",
+    "source": "w3.org",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-13T14:35:59.747Z"
+  },
+  {
+    "id": "3a922286f4e7b41b",
+    "url": "https://developers.openai.com/api/docs/guides/evaluation-best-practices?trk=public_post_comment-text",
+    "title": "Evaluation best practices | OpenAI API",
+    "source": "developers.openai.com",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-13T14:35:59.747Z"
+  },
+  {
+    "id": "e18bd0e04e9639c7",
+    "url": "https://www.inet.ox.ac.uk/publications/skills-or-degree-the-rise-of-skill-based-hiring-for-ai-and-green-jobs",
+    "title": "Skills or degree? The rise of skill-based hiring for AI… | INET Oxford",
+    "source": "inet.ox.ac.uk",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-13T14:35:59.747Z"
   },
   {
     "id": "1ca7fb89d96171f9",
     "url": "https://arxiv.org/abs/2601.18092",
     "title": "[2601.18092] From Struggle to Success: Context-Aware Guidance for Screen Reader Users in Computer Use",
     "source": "arxiv.org",
-    "sourceKind": "web research",
+    "sourceKind": "web crawl",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-13T06:38:30.647Z"
-  },
-  {
-    "id": "bf6862d2d647a1d6",
-    "url": "https://arxiv.org/abs/2605.09803",
-    "title": "[2605.09803] Insight: Enhancing Mobile Accessibility for Blind and Visually Impaired Users with LLMs",
-    "source": "arxiv.org",
-    "sourceKind": "web research",
-    "publishedAt": null,
-    "firstCollectedAt": "2026-11-13T06:38:30.647Z"
-  },
-  {
-    "id": "9b2f211eee3dd74c",
-    "url": "https://arxiv.org/abs/2605.13873",
-    "title": "[2605.13873] Large Language Models for Web Accessibility: A Systematic Literature Review",
-    "source": "arxiv.org",
-    "sourceKind": "web research",
-    "publishedAt": null,
-    "firstCollectedAt": "2026-11-13T06:38:30.647Z"
-  },
-  {
-    "id": "1e95d99320db47c3",
-    "url": "https://www.gov.uk/government/publications/the-sourcing-and-consultancy-playbooks/the-procurement-for-innovation-playbook-html",
-    "title": "The Procurement of Innovation Playbook (HTML) - GOV.UK",
-    "source": "gov.uk",
-    "sourceKind": "web research",
-    "publishedAt": null,
-    "firstCollectedAt": "2026-11-13T06:38:30.647Z"
-  },
-  {
-    "id": "eb5efbb002abc569",
-    "url": "https://www.gov.uk/government/publications/digital-and-technologies-jobs-plan/digital-and-technologies-jobs-plan",
-    "title": "Digital and Technologies Jobs Plan - GOV.UK",
-    "source": "gov.uk",
-    "sourceKind": "web research",
-    "publishedAt": null,
-    "firstCollectedAt": "2026-11-13T06:38:30.647Z"
-  },
-  {
-    "id": "06a24ebd71bde68c",
-    "url": "https://www.w3.org/blog/2026/the-multiplier-effect-how-authoring-tools-can-transform-web-accessibility",
-    "title": "The multiplier effect: How authoring tools can transform web accessibility | 2026 | Blog | W3C",
-    "source": "w3.org",
-    "sourceKind": "web research",
-    "publishedAt": null,
-    "firstCollectedAt": "2026-11-13T06:38:30.647Z"
+    "firstCollectedAt": "2026-11-13T14:35:59.747Z"
   },
   {
     "id": "899779497ade9fce",
@@ -78,7 +87,7 @@
     "source": "designnotes.blog.gov.uk",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-03T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-13T06:38:30.647Z"
+    "firstCollectedAt": "2026-11-13T14:35:59.747Z"
   },
   {
     "id": "b1017daf38c6a87b",
@@ -87,7 +96,7 @@
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-09T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-13T06:38:30.647Z"
+    "firstCollectedAt": "2026-11-13T14:35:59.747Z"
   },
   {
     "id": "44e81f5b65f0958f",
@@ -96,7 +105,7 @@
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-09T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-13T06:38:30.647Z"
+    "firstCollectedAt": "2026-11-13T14:35:59.747Z"
   },
   {
     "id": "2dd26193e79713b4",
@@ -105,7 +114,7 @@
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-09T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-13T06:38:30.647Z"
+    "firstCollectedAt": "2026-11-13T14:35:59.747Z"
   },
   {
     "id": "3f203813eb5402eb",
@@ -114,88 +123,34 @@
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-09T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-13T06:38:30.647Z"
+    "firstCollectedAt": "2026-11-13T14:35:59.747Z"
   },
   {
-    "id": "29fe86d009a5434c",
-    "url": "https://www.itsnicethat.com/articles/vucko-etsy-motion-graphic-design-sponsored-content-121126",
-    "title": "Vucko’s motion identity for Etsy is built on joy, simplicity and craft",
+    "id": "baeed59db90b2cf1",
+    "url": "https://www.itsnicethat.com/features/uefa-womens-champions-league-queenzine-swedish-girls-gothenburg-collaboration-sponsored-content-131126",
+    "title": "UEFA Women’s Champions League zine collaborates with art duo Swedish Girls to bring fandom to the streets of Gothenburg",
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
-    "publishedAt": "2026-11-12T14:00:00.000Z",
-    "firstCollectedAt": "2026-11-13T06:38:30.647Z"
+    "publishedAt": "2026-11-13T11:00:00.000Z",
+    "firstCollectedAt": "2026-11-13T14:35:59.747Z"
   },
   {
-    "id": "3bbaf4118f08c84f",
-    "url": "https://www.itsnicethat.com/articles/georgie-mcausland-illustration-discover-121126",
-    "title": "Georgie McAusland on refusing expensive tools to get more “squish and texture” into her drawings",
+    "id": "8b02f9081261d426",
+    "url": "https://www.itsnicethat.com/articles/biabum-graphic-design-illustration-discover-111126",
+    "title": "Why the retro brand identities of Biabum studio have illustration built into their DNA",
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
-    "publishedAt": "2026-11-12T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-13T06:38:30.647Z"
+    "publishedAt": "2026-11-11T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-13T14:35:59.747Z"
   },
   {
-    "id": "981087988936a186",
-    "url": "https://www.itsnicethat.com/articles/dum-dum-studio-graphic-design-discover-121126",
-    "title": "Dum Dum Studio’s inventive design emerges from an open mind and a love of play",
+    "id": "08a46818c4eec446",
+    "url": "https://www.itsnicethat.com/articles/emily-stein-aquasplash-photography-project-111126",
+    "title": "Missing summer? Dive into Emily Stein colourful and chaotic snaps of Italian waterparks",
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
-    "publishedAt": "2026-11-12T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-13T06:38:30.647Z"
-  },
-  {
-    "id": "2b4ef8cbe45d7a2f",
-    "url": "https://www.itsnicethat.com/articles/adobe-max-miami-2026-creative-industry-sponsored-content-101126",
-    "title": "Adobe Max Miami 2026 goes live online",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-10T16:00:00.000Z",
-    "firstCollectedAt": "2026-11-13T06:38:30.647Z"
-  },
-  {
-    "id": "f6c9174bd866308e",
-    "url": "https://www.itsnicethat.com/articles/trade-secrets-mpb-photography-event-partnership-101126",
-    "title": "Ana Flores, Sam Nicklin and Arielle Bobb-Willis reveal the techniques behind their photographs in our new webinar series",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-10T16:00:00.000Z",
-    "firstCollectedAt": "2026-11-13T06:38:30.647Z"
-  },
-  {
-    "id": "57755e29fc231168",
-    "url": "https://www.itsnicethat.com/articles/nicer-tuesdays-december-london-launch-101126",
-    "title": "Nicer Tuesdays London: Get tickets for Studio Feixen, Oscar Hudson, Fiona Quadri and Adam Lin in December!",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-10T13:00:00.000Z",
-    "firstCollectedAt": "2026-11-13T06:38:30.647Z"
-  },
-  {
-    "id": "80f8096aa693f4ca",
-    "url": "https://www.itsnicethat.com/features/james-barnett-poppy-french-when-james-and-poppy-met-documentary-photography-101126",
-    "title": "James Barnett and Poppy French document the eccentricities of Britain with warmth and humour",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-10T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-13T06:38:30.647Z"
-  },
-  {
-    "id": "2bceec18281f6758",
-    "url": "https://www.itsnicethat.com/articles/nymzo-product-design-project-101126",
-    "title": "“Strong and sporty”: Nymzo is the trendy chess brand designed for a new wave of players",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-10T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-13T06:38:30.647Z"
-  },
-  {
-    "id": "7978486278dfc8ed",
-    "url": "https://www.itsnicethat.com/articles/eric-timothy-carlson-bon-iver-22-a-million-graphic-design-101126",
-    "title": "Decoding 22, A Million: Eric Timothy Carlson on carving Bon Iver’s iconic visual universe ten years later",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-10T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-13T06:38:30.647Z"
+    "publishedAt": "2026-11-11T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-13T14:35:59.747Z"
   },
   {
     "id": "3b112da4a4eadcec",
@@ -204,7 +159,7 @@
     "source": "smashingmagazine.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-12T10:00:00.000Z",
-    "firstCollectedAt": "2026-11-13T06:38:30.647Z"
+    "firstCollectedAt": "2026-11-13T14:35:59.747Z"
   },
   {
     "id": "db3f22aec8a1d234",
@@ -213,16 +168,25 @@
     "source": "smashingmagazine.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-06T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-13T06:38:30.647Z"
+    "firstCollectedAt": "2026-11-13T14:35:59.747Z"
   },
   {
-    "id": "4143fb808abf5dd4",
-    "url": "https://www.smashingmagazine.com/2026/11/modern-css-might-make-your-front-end-more-complex",
-    "title": "Modern CSS Might Make Your Front-End More Complex — Smashing Magazine",
-    "source": "smashingmagazine.com",
+    "id": "c29c9b0427141049",
+    "url": "https://www.w3.org/blog/2026/w3c-newsletter-october-2026",
+    "title": "W3C Newsletter - October 2026 | 2026 | Blog | W3C",
+    "source": "w3.org",
     "sourceKind": "web crawl",
-    "publishedAt": "2026-11-03T10:00:00.000Z",
-    "firstCollectedAt": "2026-11-13T06:38:30.647Z"
+    "publishedAt": "2026-11-05T10:57:00.000Z",
+    "firstCollectedAt": "2026-11-13T14:35:59.747Z"
+  },
+  {
+    "id": "a72272cedc2836f6",
+    "url": "https://buttondown.com/agenticdesignschool/archive/six-lesson-notes-and-a-catalog-contract-for-agents",
+    "title": "Six lesson notes and a catalog contract for agents • Buttondown",
+    "source": "buttondown.com",
+    "sourceKind": "newsletter inbox",
+    "publishedAt": "2026-11-09T09:39:44.000Z",
+    "firstCollectedAt": "2026-11-13T14:35:59.747Z"
   },
   {
     "id": "835b4b950532f990",
@@ -231,15 +195,51 @@
     "source": "github.com",
     "sourceKind": "newsletter inbox",
     "publishedAt": "2026-11-06T16:14:56.000Z",
-    "firstCollectedAt": "2026-11-13T06:38:30.647Z"
+    "firstCollectedAt": "2026-11-13T14:35:59.747Z"
   },
   {
-    "id": "c805323a98d6dc1a",
-    "url": "https://developers.openai.com/plugins/concepts/ui-guidelines",
-    "title": "UI guidelines – Plugins | OpenAI Developers",
-    "source": "developers.openai.com",
+    "id": "576ccfeba48c2486",
+    "url": "https://www.w3.org/events/meetings/fcbb935c-c038-4fe8-b0f7-4c0be0bab423",
+    "title": "ATAG CG Meeting | W3C",
+    "source": "w3.org",
     "sourceKind": "web research",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-13T06:38:30.647Z"
+    "firstCollectedAt": "2026-11-13T14:35:59.747Z"
+  },
+  {
+    "id": "bf6862d2d647a1d6",
+    "url": "https://arxiv.org/abs/2605.09803",
+    "title": "[2605.09803] Insight: Enhancing Mobile Accessibility for Blind and Visually Impaired Users with LLMs",
+    "source": "arxiv.org",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-13T14:35:59.747Z"
+  },
+  {
+    "id": "9b2f211eee3dd74c",
+    "url": "https://arxiv.org/abs/2605.13873",
+    "title": "[2605.13873] Large Language Models for Web Accessibility: A Systematic Literature Review",
+    "source": "arxiv.org",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-13T14:35:59.747Z"
+  },
+  {
+    "id": "1e95d99320db47c3",
+    "url": "https://www.gov.uk/government/publications/the-sourcing-and-consultancy-playbooks/the-procurement-for-innovation-playbook-html",
+    "title": "The Procurement of Innovation Playbook (HTML) - GOV.UK",
+    "source": "gov.uk",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-13T14:35:59.747Z"
+  },
+  {
+    "id": "eb5efbb002abc569",
+    "url": "https://www.gov.uk/government/publications/digital-and-technologies-jobs-plan/digital-and-technologies-jobs-plan",
+    "title": "Digital and Technologies Jobs Plan - GOV.UK",
+    "source": "gov.uk",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-13T14:35:59.747Z"
   }
 ]

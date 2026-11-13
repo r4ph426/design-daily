@@ -6,8 +6,8 @@
   "date": "2026-11-09",
   "editionNumber": "034",
   "displayDate": "Week of 2026-11-09",
-  "headline": "**Accessibility** and evaluation reshape how design systems ship",
-  "summary": "This week keeps the focus on design work that changes implementation, not just surfaces. Accessibility in AI chats and scalable evaluation for generated content look like durable shifts, while junior-role redesign remains a broader structural concern.",
+  "headline": "**Accessible chat, scalable evals, fragile juniors** define the week",
+  "summary": "Three questions still hold: accessible AI chats need nonvisual feedback, generated content needs repeatable evaluation, and junior roles are being redesigned rather than simply removed. The evidence is strongest where concrete guidance or public examples meet measured research, while the labor-market picture for juniors remains more provisional.",
   "questions": [
     {
       "id": "14",
@@ -105,13 +105,13 @@
       "why": "If your product generates many variants, you need a review method that catches patterns, not just one-off examples. This changes content ops, QA, and how you define the design system for generated copy.",
       "uncertainty": "The evidence is from one government design blog and describes one internal experiment, not broad adoption. It would take independent deployments or comparative results to know how generally this scales.",
       "counts": {
-        "total": 1,
-        "web": 1,
+        "total": 3,
+        "web": 3,
         "newsletters": 0
       },
-      "publisherCount": 1,
+      "publisherCount": 3,
       "firstSeen": "2026-11-09",
-      "lastUpdatedAt": "2026-11-09T06:19:13.095Z",
+      "lastUpdatedAt": "2026-11-13T14:35:59.747Z",
       "signals": [
         {
           "source": "designnotes.blog.gov.uk",
@@ -127,6 +127,36 @@
           "verdict": "Must read",
           "role": "Supports",
           "evidence": "What we've done to solve this To measure content quality, we've built a test runner for our content instructions."
+        },
+        {
+          "source": "microsoft.com",
+          "title": "Designing Staged Evaluation Workflows for LLMs: Integrating Domain Experts, Lay Users, and Model-Generated Evaluation Criteria - Microsoft Research",
+          "kind": "Web",
+          "timing": "Date unavailable",
+          "publishedAt": null,
+          "firstCollectedAt": "2026-11-13T14:35:59.747Z",
+          "sourceId": "1b6d557941ea733c",
+          "url": "https://www.microsoft.com/en-us/research/publication/designing-staged-evaluation-workflows-for-llms-integrating-domain-experts-lay-users-and-model-generated-evaluation-criteria",
+          "happened": "Research found experts, lay users and LLMs produce complementary criteria.",
+          "changes": "This supports staged evaluation instead of one score or one reviewer type.",
+          "verdict": "Read",
+          "role": "Supports",
+          "evidence": "Results show that experts produce fact-based criteria with long-term value, lay users emphasize usability with a shorter-term focus, and LLMs target procedural checks for immediate task requirements."
+        },
+        {
+          "source": "developers.openai.com",
+          "title": "Evaluation best practices | OpenAI API",
+          "kind": "Web",
+          "timing": "Date unavailable",
+          "publishedAt": null,
+          "firstCollectedAt": "2026-11-13T14:35:59.747Z",
+          "sourceId": "3a922286f4e7b41b",
+          "url": "https://developers.openai.com/api/docs/guides/evaluation-best-practices?trk=public_post_comment-text",
+          "happened": "OpenAI advises combining metrics with human judgment.",
+          "changes": "This reinforces the need for calibration rather than blind automation.",
+          "verdict": "Read",
+          "role": "Supports",
+          "evidence": "Combine metrics with human judgment to ensure you’re answering the right questions."
         }
       ],
       "further": [],
@@ -139,6 +169,18 @@
           "after": "Treat the prompt and its evaluation criteria as the design surface. The UK government team shows why: personalized content produces thousands of possible outputs, so they built scenario banks, versioned prompts and rubrics to score recurring failures instead of reviewing one sample. Their approach is useful because it turns content rules into repeatable checks, while still leaving judgment in human hands for ambiguous criteria. The tradeoff is more setup and calibration work, but that is cheaper than shipping an appealing example that fails on the next hundred. The question for teams is less whether generation can look good, and more whether failures are visible and actionable.",
           "sourceIds": [
             "899779497ade9fce"
+          ]
+        },
+        {
+          "at": "2026-11-13T14:35:59.747Z",
+          "kind": "Evidence added",
+          "reason": "Answer retained verbatim. Added verified citations: https://www.microsoft.com/en-us/research/publication/designing-staged-evaluation-workflows-for-llms-integrating-domain-experts-lay-users-and-model-generated-evaluation-criteria, https://developers.openai.com/api/docs/guides/evaluation-best-practices?trk=public_post_comment-text.",
+          "before": "Treat the prompt and its evaluation criteria as the design surface. The UK government team shows why: personalized content produces thousands of possible outputs, so they built scenario banks, versioned prompts and rubrics to score recurring failures instead of reviewing one sample. Their approach is useful because it turns content rules into repeatable checks, while still leaving judgment in human hands for ambiguous criteria. The tradeoff is more setup and calibration work, but that is cheaper than shipping an appealing example that fails on the next hundred. The question for teams is less whether generation can look good, and more whether failures are visible and actionable.",
+          "after": "Treat the prompt and its evaluation criteria as the design surface. The UK government team shows why: personalized content produces thousands of possible outputs, so they built scenario banks, versioned prompts and rubrics to score recurring failures instead of reviewing one sample. Their approach is useful because it turns content rules into repeatable checks, while still leaving judgment in human hands for ambiguous criteria. The tradeoff is more setup and calibration work, but that is cheaper than shipping an appealing example that fails on the next hundred. The question for teams is less whether generation can look good, and more whether failures are visible and actionable.",
+          "sourceIds": [
+            "899779497ade9fce",
+            "1b6d557941ea733c",
+            "3a922286f4e7b41b"
           ]
         }
       ]
@@ -159,13 +201,13 @@
       "why": "This affects hiring criteria, onboarding and the work you choose to keep manual. If the apprenticeship disappears, your team loses its future seniors.",
       "uncertainty": "These are predictions and opinion from trade commentary, not hiring data or measured outcomes. We need evidence from actual studio practices and retention results to know which redesigns work best.",
       "counts": {
-        "total": 9,
-        "web": 9,
+        "total": 11,
+        "web": 11,
         "newsletters": 0
       },
-      "publisherCount": 1,
+      "publisherCount": 3,
       "firstSeen": "2026-11-06",
-      "lastUpdatedAt": "2026-11-10T07:12:24.096Z",
+      "lastUpdatedAt": "2026-11-13T14:35:59.747Z",
       "signals": [
         {
           "source": "itsnicethat.com",
@@ -210,7 +252,7 @@
           "changes": "This suggests the entry point is shifting from permanent rung to supervised trial.",
           "verdict": "Read",
           "role": "Supports",
-          "evidence": "For employers, the responsibility is to make the onboarding and induction process meaningful, by agreeing what success looks like at six months and giving someone ownership of developing the person."
+          "evidence": "My prediction is that within three years the typical first creative role will be a 6-12 month contract, with a permanent offer coming after you’ve proved yourself."
         },
         {
           "source": "itsnicethat.com",
@@ -226,6 +268,36 @@
           "verdict": "Read",
           "role": "Supports",
           "evidence": "We’ll need to rethink how we teach, and make sure there’s still room to experiment and make mistakes."
+        },
+        {
+          "source": "inet.ox.ac.uk",
+          "title": "Skills or degree? The rise of skill-based hiring for AI… | INET Oxford",
+          "kind": "Web",
+          "timing": "Date unavailable",
+          "publishedAt": null,
+          "firstCollectedAt": "2026-11-13T14:35:59.747Z",
+          "sourceId": "e18bd0e04e9639c7",
+          "url": "https://www.inet.ox.ac.uk/publications/skills-or-degree-the-rise-of-skill-based-hiring-for-ai-and-green-jobs",
+          "happened": "Oxford research finds skill-based hiring is already rising in AI roles.",
+          "changes": "This adds labor-market evidence that skills and judgment are gaining weight relative to formal credentials.",
+          "verdict": "Read",
+          "role": "Context",
+          "evidence": "Our findings provide evidence that employers have initiated “skill-based hiring” for AI roles, adopting more flexible hiring practices to expand the available talent pool."
+        },
+        {
+          "source": "gov.uk",
+          "title": "Digital and Technologies Jobs Plan - GOV.UK",
+          "kind": "Web",
+          "timing": "Date unavailable",
+          "publishedAt": null,
+          "firstCollectedAt": "2026-11-13T06:38:30.647Z",
+          "sourceId": "eb5efbb002abc569",
+          "url": "https://www.gov.uk/government/publications/digital-and-technologies-jobs-plan/digital-and-technologies-jobs-plan",
+          "happened": "The UK jobs plan aims for 200,000 entry-level tech jobs over ten years.",
+          "changes": "This shows policymakers treating entry routes as an infrastructure problem, not a side effect.",
+          "verdict": "Read",
+          "role": "Context",
+          "evidence": "Together with industry, our ambition is to open around 200,000 genuine entry-level jobs, including apprenticeships, over the same period."
         },
         {
           "source": "itsnicethat.com",
@@ -348,6 +420,26 @@
             "0f2b4f6550d32756",
             "32f9a34382bbff5e"
           ]
+        },
+        {
+          "at": "2026-11-13T14:35:59.747Z",
+          "kind": "Evidence added",
+          "reason": "Answer retained verbatim. Added verified citations: https://www.inet.ox.ac.uk/publications/skills-or-degree-the-rise-of-skill-based-hiring-for-ai-and-green-jobs, https://www.gov.uk/government/publications/digital-and-technologies-jobs-plan/digital-and-technologies-jobs-plan.",
+          "before": "The emerging picture is not that junior roles disappear cleanly, but that the work, contract shape and learning model around them are changing together. Multiple industry voices say AI is squeezing the routine tasks juniors used to learn on, while also making judgement, curiosity and the ability to explain decisions more valuable at hiring time. The risk is obvious: if firms use automation to cut the bottom rung without replacing the learning, they dry up the future middle layer. Studios should redesign junior roles around supervised judgment, real feedback and deliberate inefficiency where it builds craft.",
+          "after": "The emerging picture is not that junior roles disappear cleanly, but that the work, contract shape and learning model around them are changing together. Multiple industry voices say AI is squeezing the routine tasks juniors used to learn on, while also making judgement, curiosity and the ability to explain decisions more valuable at hiring time. The risk is obvious: if firms use automation to cut the bottom rung without replacing the learning, they dry up the future middle layer. Studios should redesign junior roles around supervised judgment, real feedback and deliberate inefficiency where it builds craft.",
+          "sourceIds": [
+            "b1017daf38c6a87b",
+            "44e81f5b65f0958f",
+            "3f203813eb5402eb",
+            "2dd26193e79713b4",
+            "e18bd0e04e9639c7",
+            "eb5efbb002abc569",
+            "2a54d6d067a91e53",
+            "694f47613b8408f2",
+            "1b18396f6b2b71d1",
+            "0f2b4f6550d32756",
+            "32f9a34382bbff5e"
+          ]
         }
       ]
     }
@@ -408,11 +500,11 @@
       ]
     }
   ],
-  "generatedAt": "2026-11-13T06:38:30.647Z",
-  "lastCollectedAt": "2026-11-13T06:38:30.647Z",
-  "crawlCompletedAt": "07:38",
+  "generatedAt": "2026-11-13T14:35:59.747Z",
+  "lastCollectedAt": "2026-11-13T14:35:59.747Z",
+  "crawlCompletedAt": "15:35",
   "finalizedAt": null,
-  "revision": "a3dac22b5c80",
+  "revision": "40188c60dc5f",
   "sourceCount": 27,
   "webSourceCount": 7,
   "teamContributionCount": 4,
