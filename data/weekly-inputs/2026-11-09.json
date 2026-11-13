@@ -6,43 +6,61 @@
     "source": "smashingmagazine.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-05T13:00:00.000Z",
-    "firstCollectedAt": "2026-11-12T07:06:01.759Z"
+    "firstCollectedAt": "2026-11-13T06:38:30.647Z"
   },
   {
-    "id": "c805323a98d6dc1a",
-    "url": "https://developers.openai.com/plugins/concepts/ui-guidelines",
-    "title": "UI guidelines – Plugins | OpenAI Developers",
-    "source": "developers.openai.com",
-    "sourceKind": "web research",
-    "publishedAt": null,
-    "firstCollectedAt": "2026-11-12T07:06:01.759Z"
-  },
-  {
-    "id": "82fac8160534e146",
-    "url": "https://developers.openai.com/blog/15-lessons-building-chatgpt-apps",
-    "title": "15 lessons learned building ChatGPT Apps | OpenAI Developers",
-    "source": "developers.openai.com",
-    "sourceKind": "web research",
-    "publishedAt": null,
-    "firstCollectedAt": "2026-11-12T07:06:01.759Z"
-  },
-  {
-    "id": "e54e65c1c9394541",
-    "url": "https://www.jobs.service.gov.uk/jobs/6ae20844df032bb20d1b68c0",
-    "title": "View job - AI Learning Content & Course Design Lead - Work Hub",
-    "source": "jobs.service.gov.uk",
-    "sourceKind": "web research",
-    "publishedAt": null,
-    "firstCollectedAt": "2026-11-12T07:06:01.759Z"
-  },
-  {
-    "id": "144b2ee7219b4c86",
-    "url": "https://www.w3.org/calendar/tpac2026/breakout-sessions",
-    "title": "Breakout Sessions | Calendar | TPAC 2026 | W3C",
+    "id": "576ccfeba48c2486",
+    "url": "https://www.w3.org/events/meetings/fcbb935c-c038-4fe8-b0f7-4c0be0bab423",
+    "title": "ATAG CG Meeting | W3C",
     "source": "w3.org",
     "sourceKind": "web research",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-12T07:06:01.759Z"
+    "firstCollectedAt": "2026-11-13T06:38:30.647Z"
+  },
+  {
+    "id": "1ca7fb89d96171f9",
+    "url": "https://arxiv.org/abs/2601.18092",
+    "title": "[2601.18092] From Struggle to Success: Context-Aware Guidance for Screen Reader Users in Computer Use",
+    "source": "arxiv.org",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-13T06:38:30.647Z"
+  },
+  {
+    "id": "bf6862d2d647a1d6",
+    "url": "https://arxiv.org/abs/2605.09803",
+    "title": "[2605.09803] Insight: Enhancing Mobile Accessibility for Blind and Visually Impaired Users with LLMs",
+    "source": "arxiv.org",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-13T06:38:30.647Z"
+  },
+  {
+    "id": "9b2f211eee3dd74c",
+    "url": "https://arxiv.org/abs/2605.13873",
+    "title": "[2605.13873] Large Language Models for Web Accessibility: A Systematic Literature Review",
+    "source": "arxiv.org",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-13T06:38:30.647Z"
+  },
+  {
+    "id": "1e95d99320db47c3",
+    "url": "https://www.gov.uk/government/publications/the-sourcing-and-consultancy-playbooks/the-procurement-for-innovation-playbook-html",
+    "title": "The Procurement of Innovation Playbook (HTML) - GOV.UK",
+    "source": "gov.uk",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-13T06:38:30.647Z"
+  },
+  {
+    "id": "eb5efbb002abc569",
+    "url": "https://www.gov.uk/government/publications/digital-and-technologies-jobs-plan/digital-and-technologies-jobs-plan",
+    "title": "Digital and Technologies Jobs Plan - GOV.UK",
+    "source": "gov.uk",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-13T06:38:30.647Z"
   },
   {
     "id": "06a24ebd71bde68c",
@@ -51,7 +69,7 @@
     "source": "w3.org",
     "sourceKind": "web research",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-12T07:06:01.759Z"
+    "firstCollectedAt": "2026-11-13T06:38:30.647Z"
   },
   {
     "id": "899779497ade9fce",
@@ -60,7 +78,7 @@
     "source": "designnotes.blog.gov.uk",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-03T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-12T07:06:01.759Z"
+    "firstCollectedAt": "2026-11-13T06:38:30.647Z"
   },
   {
     "id": "b1017daf38c6a87b",
@@ -69,7 +87,7 @@
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-09T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-12T07:06:01.759Z"
+    "firstCollectedAt": "2026-11-13T06:38:30.647Z"
   },
   {
     "id": "44e81f5b65f0958f",
@@ -78,7 +96,7 @@
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-09T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-12T07:06:01.759Z"
+    "firstCollectedAt": "2026-11-13T06:38:30.647Z"
   },
   {
     "id": "2dd26193e79713b4",
@@ -87,7 +105,7 @@
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-09T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-12T07:06:01.759Z"
+    "firstCollectedAt": "2026-11-13T06:38:30.647Z"
   },
   {
     "id": "3f203813eb5402eb",
@@ -96,52 +114,97 @@
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-09T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-12T07:06:01.759Z"
+    "firstCollectedAt": "2026-11-13T06:38:30.647Z"
   },
   {
-    "id": "8b02f9081261d426",
-    "url": "https://www.itsnicethat.com/articles/biabum-graphic-design-illustration-discover-111126",
-    "title": "Why the retro brand identities of Biabum studio have illustration built into their DNA",
+    "id": "29fe86d009a5434c",
+    "url": "https://www.itsnicethat.com/articles/vucko-etsy-motion-graphic-design-sponsored-content-121126",
+    "title": "Vucko’s motion identity for Etsy is built on joy, simplicity and craft",
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
-    "publishedAt": "2026-11-11T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-12T07:06:01.759Z"
+    "publishedAt": "2026-11-12T14:00:00.000Z",
+    "firstCollectedAt": "2026-11-13T06:38:30.647Z"
   },
   {
-    "id": "08a46818c4eec446",
-    "url": "https://www.itsnicethat.com/articles/emily-stein-aquasplash-photography-project-111126",
-    "title": "Missing summer? Dive into Emily Stein colourful and chaotic snaps of Italian waterparks",
+    "id": "3bbaf4118f08c84f",
+    "url": "https://www.itsnicethat.com/articles/georgie-mcausland-illustration-discover-121126",
+    "title": "Georgie McAusland on refusing expensive tools to get more “squish and texture” into her drawings",
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
-    "publishedAt": "2026-11-11T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-12T07:06:01.759Z"
+    "publishedAt": "2026-11-12T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-13T06:38:30.647Z"
   },
   {
-    "id": "bb88646494996bd8",
-    "url": "https://www.itsnicethat.com/articles/creative-career-condundrums-if-you-could-jobs-advice-091126",
-    "title": "“You will always be a designer, whether that’s full time or not”",
+    "id": "981087988936a186",
+    "url": "https://www.itsnicethat.com/articles/dum-dum-studio-graphic-design-discover-121126",
+    "title": "Dum Dum Studio’s inventive design emerges from an open mind and a love of play",
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
-    "publishedAt": "2026-11-09T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-12T07:06:01.759Z"
+    "publishedAt": "2026-11-12T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-13T06:38:30.647Z"
   },
   {
-    "id": "f8854ce9489baee4",
-    "url": "https://www.itsnicethat.com/articles/elizabeth-goodspeed-art-school-economics-education-creative-industry-091126",
-    "title": "Elizabeth Goodspeed on the impossible economics of art education in the US",
+    "id": "2b4ef8cbe45d7a2f",
+    "url": "https://www.itsnicethat.com/articles/adobe-max-miami-2026-creative-industry-sponsored-content-101126",
+    "title": "Adobe Max Miami 2026 goes live online",
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
-    "publishedAt": "2026-11-09T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-12T07:06:01.759Z"
+    "publishedAt": "2026-11-10T16:00:00.000Z",
+    "firstCollectedAt": "2026-11-13T06:38:30.647Z"
   },
   {
-    "id": "e9b6349c0f1e7ec9",
-    "url": "https://www.itsnicethat.com/features/mona-chalabi-ten-lives-illustration-spotlight-091126",
-    "title": "Mona Chalabi’s illustrated book about wealth inequality will make you talk to your friends about money",
+    "id": "f6c9174bd866308e",
+    "url": "https://www.itsnicethat.com/articles/trade-secrets-mpb-photography-event-partnership-101126",
+    "title": "Ana Flores, Sam Nicklin and Arielle Bobb-Willis reveal the techniques behind their photographs in our new webinar series",
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
-    "publishedAt": "2026-11-09T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-12T07:06:01.759Z"
+    "publishedAt": "2026-11-10T16:00:00.000Z",
+    "firstCollectedAt": "2026-11-13T06:38:30.647Z"
+  },
+  {
+    "id": "57755e29fc231168",
+    "url": "https://www.itsnicethat.com/articles/nicer-tuesdays-december-london-launch-101126",
+    "title": "Nicer Tuesdays London: Get tickets for Studio Feixen, Oscar Hudson, Fiona Quadri and Adam Lin in December!",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-10T13:00:00.000Z",
+    "firstCollectedAt": "2026-11-13T06:38:30.647Z"
+  },
+  {
+    "id": "80f8096aa693f4ca",
+    "url": "https://www.itsnicethat.com/features/james-barnett-poppy-french-when-james-and-poppy-met-documentary-photography-101126",
+    "title": "James Barnett and Poppy French document the eccentricities of Britain with warmth and humour",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-10T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-13T06:38:30.647Z"
+  },
+  {
+    "id": "2bceec18281f6758",
+    "url": "https://www.itsnicethat.com/articles/nymzo-product-design-project-101126",
+    "title": "“Strong and sporty”: Nymzo is the trendy chess brand designed for a new wave of players",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-10T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-13T06:38:30.647Z"
+  },
+  {
+    "id": "7978486278dfc8ed",
+    "url": "https://www.itsnicethat.com/articles/eric-timothy-carlson-bon-iver-22-a-million-graphic-design-101126",
+    "title": "Decoding 22, A Million: Eric Timothy Carlson on carving Bon Iver’s iconic visual universe ten years later",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-10T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-13T06:38:30.647Z"
+  },
+  {
+    "id": "3b112da4a4eadcec",
+    "url": "https://www.smashingmagazine.com/2026/11/should-you-add-ai-audit-product-teams",
+    "title": "Should You Actually Add AI To That? A Four-Question Audit For Product Teams — Smashing Magazine",
+    "source": "smashingmagazine.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-12T10:00:00.000Z",
+    "firstCollectedAt": "2026-11-13T06:38:30.647Z"
   },
   {
     "id": "db3f22aec8a1d234",
@@ -150,7 +213,7 @@
     "source": "smashingmagazine.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-06T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-12T07:06:01.759Z"
+    "firstCollectedAt": "2026-11-13T06:38:30.647Z"
   },
   {
     "id": "4143fb808abf5dd4",
@@ -159,16 +222,7 @@
     "source": "smashingmagazine.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-03T10:00:00.000Z",
-    "firstCollectedAt": "2026-11-12T07:06:01.759Z"
-  },
-  {
-    "id": "a72272cedc2836f6",
-    "url": "https://buttondown.com/agenticdesignschool/archive/six-lesson-notes-and-a-catalog-contract-for-agents",
-    "title": "Six lesson notes and a catalog contract for agents • Buttondown",
-    "source": "buttondown.com",
-    "sourceKind": "newsletter inbox",
-    "publishedAt": "2026-11-09T09:39:44.000Z",
-    "firstCollectedAt": "2026-11-12T07:06:01.759Z"
+    "firstCollectedAt": "2026-11-13T06:38:30.647Z"
   },
   {
     "id": "835b4b950532f990",
@@ -177,33 +231,15 @@
     "source": "github.com",
     "sourceKind": "newsletter inbox",
     "publishedAt": "2026-11-06T16:14:56.000Z",
-    "firstCollectedAt": "2026-11-12T07:06:01.759Z"
+    "firstCollectedAt": "2026-11-13T06:38:30.647Z"
   },
   {
-    "id": "acf407c609bf4721",
-    "url": "https://www.w3.org/2026/10/28-atag3-minutes.html",
-    "title": "Reimagining Modern Authoring Tools - ATAG 3.0 &ndash; 28 October 2026",
-    "source": "w3.org",
+    "id": "c805323a98d6dc1a",
+    "url": "https://developers.openai.com/plugins/concepts/ui-guidelines",
+    "title": "UI guidelines – Plugins | OpenAI Developers",
+    "source": "developers.openai.com",
     "sourceKind": "web research",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-12T07:06:01.759Z"
-  },
-  {
-    "id": "6726ef062d280145",
-    "url": "https://forum.figma.com/product-updates-3/new-figma-motion-updates-physics-based-springs-style-and-lottie-export-previews-59976",
-    "title": "New Figma Motion updates: physics based springs, style and Lottie export previews | Figma Forum",
-    "source": "forum.figma.com",
-    "sourceKind": "web research",
-    "publishedAt": null,
-    "firstCollectedAt": "2026-11-12T07:06:01.759Z"
-  },
-  {
-    "id": "c29c9b0427141049",
-    "url": "https://www.w3.org/blog/2026/w3c-newsletter-october-2026",
-    "title": "W3C Newsletter - October 2026 | 2026 | Blog | W3C",
-    "source": "w3.org",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-05T10:57:00.000Z",
-    "firstCollectedAt": "2026-11-12T07:06:01.759Z"
+    "firstCollectedAt": "2026-11-13T06:38:30.647Z"
   }
 ]

@@ -6,8 +6,8 @@
   "date": "2026-11-09",
   "editionNumber": "034",
   "displayDate": "Week of 2026-11-09",
-  "headline": "**Accessibility and evaluation** shape this week's design work",
-  "summary": "Three questions hold this week: accessible chat interfaces, scalable evaluation for generated content, and the pressure to redesign junior roles. The strongest evidence comes from concrete public examples, while broader hiring and adoption outcomes remain uncertain.",
+  "headline": "**Accessibility** and evaluation reshape how design systems ship",
+  "summary": "This week keeps the focus on design work that changes implementation, not just surfaces. Accessibility in AI chats and scalable evaluation for generated content look like durable shifts, while junior-role redesign remains a broader structural concern.",
   "questions": [
     {
       "id": "14",
@@ -25,13 +25,13 @@
       "why": "If you are adding chat or copilots, accessibility now affects the core interaction pattern. It changes your component architecture, state announcements, and QA checklist.",
       "uncertainty": "This is vendor-adjacent expert guidance, not evidence of widespread implementation or measured user outcomes. Better evidence would be field testing with assistive technology users across real products.",
       "counts": {
-        "total": 1,
-        "web": 1,
+        "total": 2,
+        "web": 2,
         "newsletters": 0
       },
-      "publisherCount": 1,
+      "publisherCount": 2,
       "firstSeen": "2026-11-09",
-      "lastUpdatedAt": "2026-11-09T06:19:13.095Z",
+      "lastUpdatedAt": "2026-11-13T06:38:30.647Z",
       "signals": [
         {
           "source": "smashingmagazine.com",
@@ -47,6 +47,21 @@
           "verdict": "Must read",
           "role": "Supports",
           "evidence": "To start, we use live regions ."
+        },
+        {
+          "source": "arxiv.org",
+          "title": "[2601.18092] From Struggle to Success: Context-Aware Guidance for Screen Reader Users in Computer Use",
+          "kind": "Web",
+          "timing": "Date unavailable",
+          "publishedAt": null,
+          "firstCollectedAt": "2026-11-13T06:38:30.647Z",
+          "sourceId": "1ca7fb89d96171f9",
+          "url": "https://arxiv.org/abs/2601.18092",
+          "happened": "A study of AskEase reports improved task success and reduced workload for screen reader users.",
+          "changes": "This provides evidence that LLM-based accessibility help can improve outcomes for blind and visually impaired users.",
+          "verdict": "Read",
+          "role": "Supports",
+          "evidence": "In a within-subjects study with 12 screen reader users, AskEase significantly improved task success while reducing perceived workload, including physical demand, effort, and frustration."
         }
       ],
       "further": [],
@@ -59,6 +74,17 @@
           "after": "The practical takeaway is that chat UIs need explicit nonvisual feedback, not just visual polish. Eric Bailey’s guidance argues for live regions, delayed loading announcements, headings, and stable response timing so screen reader users can tell when the model is working and when it has finished. That means accessibility work is not an add-on at the end; it changes the interaction model, the DOM structure, and how you represent state. The tradeoff is more implementation care and less reliance on pretty streaming effects. For teams shipping AI chat, the question is whether your interface is comprehensible when the screen is not.",
           "sourceIds": [
             "06e82c00d26b79ff"
+          ]
+        },
+        {
+          "at": "2026-11-13T06:38:30.647Z",
+          "kind": "Evidence added",
+          "reason": "Answer retained verbatim. Added verified citations: https://arxiv.org/abs/2601.18092.",
+          "before": "The practical takeaway is that chat UIs need explicit nonvisual feedback, not just visual polish. Eric Bailey’s guidance argues for live regions, delayed loading announcements, headings, and stable response timing so screen reader users can tell when the model is working and when it has finished. That means accessibility work is not an add-on at the end; it changes the interaction model, the DOM structure, and how you represent state. The tradeoff is more implementation care and less reliance on pretty streaming effects. For teams shipping AI chat, the question is whether your interface is comprehensible when the screen is not.",
+          "after": "The practical takeaway is that chat UIs need explicit nonvisual feedback, not just visual polish. Eric Bailey’s guidance argues for live regions, delayed loading announcements, headings, and stable response timing so screen reader users can tell when the model is working and when it has finished. That means accessibility work is not an add-on at the end; it changes the interaction model, the DOM structure, and how you represent state. The tradeoff is more implementation care and less reliance on pretty streaming effects. For teams shipping AI chat, the question is whether your interface is comprehensible when the screen is not.",
+          "sourceIds": [
+            "06e82c00d26b79ff",
+            "1ca7fb89d96171f9"
           ]
         }
       ]
@@ -100,7 +126,7 @@
           "changes": "This creates the need for a scalable evaluation method instead of traditional content review.",
           "verdict": "Must read",
           "role": "Supports",
-          "evidence": "For example: The final content isn’t generated until someone asks for it, so you can't review the exact output beforehand."
+          "evidence": "What we've done to solve this To measure content quality, we've built a test runner for our content instructions."
         }
       ],
       "further": [],
@@ -184,7 +210,7 @@
           "changes": "This suggests the entry point is shifting from permanent rung to supervised trial.",
           "verdict": "Read",
           "role": "Supports",
-          "evidence": "My prediction is that within three years the typical first creative role will be a 6-12 month contract, with a permanent offer coming after you’ve proved yourself."
+          "evidence": "For employers, the responsibility is to make the onboarding and induction process meaningful, by agreeing what success looks like at six months and giving someone ownership of developing the person."
         },
         {
           "source": "itsnicethat.com",
@@ -382,15 +408,15 @@
       ]
     }
   ],
-  "generatedAt": "2026-11-12T07:06:01.759Z",
-  "lastCollectedAt": "2026-11-12T07:06:01.759Z",
-  "crawlCompletedAt": "08:06",
+  "generatedAt": "2026-11-13T06:38:30.647Z",
+  "lastCollectedAt": "2026-11-13T06:38:30.647Z",
+  "crawlCompletedAt": "07:38",
   "finalizedAt": null,
-  "revision": "a498193b256a",
-  "sourceCount": 23,
+  "revision": "a3dac22b5c80",
+  "sourceCount": 27,
   "webSourceCount": 7,
   "teamContributionCount": 4,
   "sourceWarnings": [
-    "41 candidate pages could not provide enough inspectable public article text. They were not used as new evidence."
+    "37 candidate pages could not provide enough inspectable public article text. They were not used as new evidence."
   ]
 }
