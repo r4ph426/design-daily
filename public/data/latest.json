@@ -1,13 +1,13 @@
 {
   "schemaVersion": 2,
   "cadence": "weekly",
-  "weekStart": "2026-11-09",
-  "weekEnd": "2026-11-13",
-  "date": "2026-11-09",
-  "editionNumber": "034",
-  "displayDate": "Week of 2026-11-09",
-  "headline": "**Accessible chat, scalable evals, fragile juniors** define the week",
-  "summary": "Three questions still hold: accessible AI chats need nonvisual feedback, generated content needs repeatable evaluation, and junior roles are being redesigned rather than simply removed. The evidence is strongest where concrete guidance or public examples meet measured research, while the labor-market picture for juniors remains more provisional.",
+  "weekStart": "2026-11-16",
+  "weekEnd": "2026-11-20",
+  "date": "2026-11-16",
+  "editionNumber": "035",
+  "displayDate": "Week of 2026-11-16",
+  "headline": "**AI design choices** sharpen accessibility, evaluation, and entry routes",
+  "summary": "This week’s strongest signals are about redesigning the interfaces and workflows around AI, not merely adding AI features. Accessibility, evals, and junior hiring each show up as concrete design and operating changes with tradeoffs teams now have to handle.",
   "questions": [
     {
       "id": "14",
@@ -255,21 +255,6 @@
           "evidence": "My prediction is that within three years the typical first creative role will be a 6-12 month contract, with a permanent offer coming after you’ve proved yourself."
         },
         {
-          "source": "itsnicethat.com",
-          "title": "Caterina Bianchini: “We can’t keep asking where all the good designers are if we’re unwilling to help anyone become one”",
-          "kind": "Web",
-          "timing": "2026-11-09",
-          "publishedAt": "2026-11-09T08:00:00.000Z",
-          "firstCollectedAt": "2026-11-10T07:12:24.096Z",
-          "sourceId": "2dd26193e79713b4",
-          "url": "https://www.itsnicethat.com/career-predictions/caterina-bianchini-091126",
-          "happened": "Studio NARI says using AI to replace first-rung work is short-sighted because much of becoming a good designer happens on the job.",
-          "changes": "This reinforces the risk that removing junior work also removes learning.",
-          "verdict": "Read",
-          "role": "Supports",
-          "evidence": "We’ll need to rethink how we teach, and make sure there’s still room to experiment and make mistakes."
-        },
-        {
           "source": "inet.ox.ac.uk",
           "title": "Skills or degree? The rise of skill-based hiring for AI… | INET Oxford",
           "kind": "Web",
@@ -283,6 +268,21 @@
           "verdict": "Read",
           "role": "Context",
           "evidence": "Our findings provide evidence that employers have initiated “skill-based hiring” for AI roles, adopting more flexible hiring practices to expand the available talent pool."
+        },
+        {
+          "source": "itsnicethat.com",
+          "title": "Caterina Bianchini: “We can’t keep asking where all the good designers are if we’re unwilling to help anyone become one”",
+          "kind": "Web",
+          "timing": "2026-11-09",
+          "publishedAt": "2026-11-09T08:00:00.000Z",
+          "firstCollectedAt": "2026-11-10T07:12:24.096Z",
+          "sourceId": "2dd26193e79713b4",
+          "url": "https://www.itsnicethat.com/career-predictions/caterina-bianchini-091126",
+          "happened": "Studio NARI says using AI to replace first-rung work is short-sighted because much of becoming a good designer happens on the job.",
+          "changes": "This reinforces the risk that removing junior work also removes learning.",
+          "verdict": "Read",
+          "role": "Supports",
+          "evidence": "We’ll need to rethink how we teach, and make sure there’s still room to experiment and make mistakes."
         },
         {
           "source": "gov.uk",
@@ -444,71 +444,16 @@
       ]
     }
   ],
-  "retiredQuestions": [
-    {
-      "id": "15",
-      "threadId": "2026-11-09:what-does-w3c-s-latest-newsletter-imply-for-design-teams-shippin",
-      "slug": "what-does-w3c-s-latest-newsletter-imply-for-design-teams-shippin",
-      "category": "Process",
-      "tags": [
-        "Process",
-        "Culture"
-      ],
-      "aiLens": true,
-      "editorialTitle": "**Infrastructure can reshape participation**",
-      "question": "What does W3C’s latest newsletter imply for design teams shipping standards-based products?",
-      "answer": "The most useful signal is not the standards roadmap itself but the operational friction around it. W3C says AI is changing how deliverables are created, how meetings are transcribed, and how community participation works, while also pushing new identity, chat, and tooling decisions into the infrastructure layer. For product teams, that means the web platform is becoming more policy- and process-sensitive, not just more capable. The tradeoff is that adopting new primitives now also means navigating governance, compatibility, and participation constraints later. If you build on standards, this is a reminder to watch the infrastructure that shapes who can reliably use and help evolve them.",
-      "why": "Standards shifts affect what you can build, who can contribute, and what operational constraints your product must respect. That matters for platform choices and long-term maintainability.",
-      "uncertainty": "This is a standards newsletter, so it signals direction and discussion rather than shipped adoption. Stronger evidence would be browser implementation, community uptake, or product case studies showing the downstream effects.",
-      "counts": {
-        "total": 1,
-        "web": 1,
-        "newsletters": 0
-      },
-      "publisherCount": 1,
-      "firstSeen": "2026-11-09",
-      "lastUpdatedAt": "2026-11-09T06:19:13.095Z",
-      "signals": [
-        {
-          "source": "w3.org",
-          "title": "W3C Newsletter - October 2026 | 2026 | Blog | W3C",
-          "kind": "Web",
-          "timing": "2026-11-05",
-          "publishedAt": "2026-11-05T10:57:00.000Z",
-          "firstCollectedAt": "2026-11-09T06:19:13.095Z",
-          "sourceId": "c29c9b0427141049",
-          "url": "https://www.w3.org/blog/2026/w3c-newsletter-october-2026",
-          "happened": "W3C says AI is already affecting how deliverables are created and adopted, creating friction.",
-          "changes": "This suggests the standards process itself is changing in ways product teams will feel later.",
-          "verdict": "Read",
-          "role": "Supports",
-          "evidence": "W3C Standardization Platform revamp AI is not just impacting W3C’s technical agenda, it has also increasingly been used to support the creation or adoption of W3C’s deliverables, sometimes creating friction on when and w"
-        }
-      ],
-      "further": [],
-      "history": [
-        {
-          "at": "2026-11-09T06:19:13.095Z",
-          "kind": "New",
-          "reason": "The newsletter surfaces concrete participation and tooling changes around web infrastructure that affect design teams using standards-based systems.",
-          "before": null,
-          "after": "The most useful signal is not the standards roadmap itself but the operational friction around it. W3C says AI is changing how deliverables are created, how meetings are transcribed, and how community participation works, while also pushing new identity, chat, and tooling decisions into the infrastructure layer. For product teams, that means the web platform is becoming more policy- and process-sensitive, not just more capable. The tradeoff is that adopting new primitives now also means navigating governance, compatibility, and participation constraints later. If you build on standards, this is a reminder to watch the infrastructure that shapes who can reliably use and help evolve them.",
-          "sourceIds": [
-            "c29c9b0427141049"
-          ]
-        }
-      ]
-    }
-  ],
-  "generatedAt": "2026-11-13T14:35:59.747Z",
-  "lastCollectedAt": "2026-11-13T14:35:59.747Z",
-  "crawlCompletedAt": "15:35",
-  "finalizedAt": "2026-11-13T14:59:40.828Z",
-  "revision": "40188c60dc5f",
-  "sourceCount": 27,
+  "retiredQuestions": [],
+  "generatedAt": "2026-11-16T06:22:20.868Z",
+  "lastCollectedAt": "2026-11-16T06:22:20.868Z",
+  "crawlCompletedAt": "07:22",
+  "finalizedAt": null,
+  "revision": "4d7b76e19d66",
+  "sourceCount": 37,
   "webSourceCount": 7,
-  "teamContributionCount": 4,
+  "teamContributionCount": 5,
   "sourceWarnings": [
-    "37 candidate pages could not provide enough inspectable public article text. They were not used as new evidence."
+    "27 candidate pages could not provide enough inspectable public article text. They were not used as new evidence."
   ]
 }
