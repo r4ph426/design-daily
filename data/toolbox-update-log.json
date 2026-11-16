@@ -1,47 +1,64 @@
 {
-  "date": "2026-11-09",
+  "date": "2026-11-16",
   "changes": [
     {
       "kind": "changed",
-      "id": "13",
-      "title": "Canva MCP",
-      "url": "https://www.canva.dev/docs/apps/mcp/",
+      "id": "auto-3f42ae6014de",
+      "title": "Framesmith uses a visual canvas and quality gate for UI design",
+      "url": "https://github.com/vicmaster/framesmith",
       "fields": [
         {
           "field": "recommendation",
-          "before": "Trial it on one small edit and review loop, then verify permissions and brand library behavior in your workspace.",
-          "after": "Use it for one small edit and review loop, then verify permissions and brand library behavior in your workspace."
+          "before": "Source-reviewed; not yet team-tested. Try it on one design iteration that needs a quality gate, then compare the canvas output with your current review criteria.",
+          "after": "Try it on one design iteration that needs a quality gate, then compare the canvas output with your current review criteria."
         }
       ],
-      "evidence": "it&#x27;s built on the Canva MCP server. The Canva MCP server enables AI assistants to seamlessly interact with Canva&#x27;s design capabilities. By exposing Canva&#x27;s capabilities (including design creation and editing, asset and brand management, library search, export, and commenting) as MCP-compatible tools, you can give your users access"
+      "evidence": "navigation Code Issues Pull requests Actions Projects Security and quality Insights More items framesmith Public Notifications You must be signed in to change notification settings Fork 0 ( 0 ) Star 16 ( 16 ) You must be signed in to star a repository About Open-source MCP server that turns your AI coding agent into a UI designer: a visual canvas,"
     },
     {
       "kind": "changed",
-      "id": "07",
-      "title": "Savee MCP",
-      "url": "https://savee.com/mcp/",
+      "id": "auto-6dde13718e5b",
+      "title": "RasanAI is a guided video direction skill with staged approvals",
+      "url": "https://github.com/Sibhimanyu/rasanai",
       "fields": [
         {
-          "field": "description",
-          "before": "Searches Savee’s curated reference library and can retrieve personal saves, boards, feed items, and image content in supported clients.",
-          "after": "Savee MCP can search your saves, boards, feed, and the public library, and can fetch actual images for selected saves when write access is granted."
+          "field": "recommendation",
+          "before": "Source-reviewed; not yet team-tested. Try it on one short launch film brief first, then validate the story, look, and timing before a larger motion project.",
+          "after": "Try it on one short launch film brief first, then validate the story, look, and timing before a larger motion project."
         }
       ],
-      "evidence": "work. view_saves Fetch the actual images for specific saves, so it can see them. Every save includes its source link, dimensions, and dominant colors. With view_saves, agents can look at the images themselves. Search is metered to keep the library from being scraped. And what it can change, if you let it create_board Make a new board, or a sub"
+      "evidence": "Apple Silicon, macOS 14+). A free community beta; the agent skill below works without it. Website: https://sibhimanyu.github.io/rasanai/ Five calls, and you see your film at every one You say /rasanai make a 45s launch film for tally.app . A Director's Console opens in your browser: a dark review room that shows what Claude is doing, live, and"
     },
     {
-      "kind": "changed",
-      "id": "23",
-      "title": "Figma agent",
-      "url": "https://help.figma.com/hc/en-us/articles/37998629035799-Work-with-the-Figma-agent-in-design-files",
-      "fields": [
-        {
-          "field": "description",
-          "before": "In Figma Design, the agent can connect a library from the file, reference specific components, variables, and styles with @, and use that context to produce outputs aligned to the team system.",
-          "after": "The Figma agent can connect a library from the file, reference specific components, variables, and styles with @, and use that context to produce outputs aligned to the team system."
-        }
-      ],
-      "evidence": "visible by default to people with a Full seat and edit access to the file. Chats created before June 23, 2026 remain private unless you make them public. Learn more. Connect a library Connect any library available in the design file to the chat to generate results that match your team's components, styles, and variables. Click in the prompt box,"
+      "kind": "new",
+      "id": "auto-242fbea95694",
+      "title": "agent-skills-guide",
+      "url": "https://github.com/kaydenplayZ/agent-skills-guide",
+      "entry": {
+        "id": "auto-242fbea95694",
+        "title": "agent-skills-guide",
+        "type": "Skill",
+        "categories": [
+          "UI",
+          "UX",
+          "Process"
+        ],
+        "practices": [
+          "Drafting",
+          "UI sketches",
+          "Review"
+        ],
+        "description": "A general guide for creating custom agent skills, with examples, templates, and step-by-step instructions.",
+        "recommendation": "Source-reviewed; not yet team-tested. Use it to draft one small skill outline, then verify the template and workflow fit before building a broader skill library.",
+        "access": "Free to use",
+        "setup": "Not stated; download and install from the listed release",
+        "verdict": "Watching",
+        "confidence": "Medium",
+        "reviewed": "16 Nov 2026",
+        "source": "github.com",
+        "url": "https://github.com/kaydenplayZ/agent-skills-guide"
+      },
+      "evidence": "Windows 10+, macOS 10.13+, or any Linux distribution (Debian-based is preferred). Memory: At least 4 GB of RAM. Disk Space: A minimum of 100 MB of free disk space for installation. Internet Connection: Required for initial setup and updates. 🛠️ Features The agent-skills-guide offers: Step-by-Step Tutorials: Easy-to-follow guides on building"
     }
   ],
   "warnings": [

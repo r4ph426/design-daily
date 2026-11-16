@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-09T12:00:29.768Z",
+  "generatedAt": "2026-11-16T11:58:00.188Z",
   "editorialStatus": "Candidate queue only. Review in Codex before adding to the published toolbox.",
   "practices": [
     "Taste",
@@ -375,7 +375,7 @@
         "skills"
       ],
       "stars": 84,
-      "updatedAt": "2026-11-09T09:25:09Z",
+      "updatedAt": "2026-11-12T16:25:09Z",
       "suggestedType": "MCP",
       "suggestedPractices": [
         "Review",
@@ -485,6 +485,34 @@
         "Review"
       ],
       "relevanceScore": 33,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:longkum/trending-agent-skills",
+      "name": "trending-agent-skills",
+      "fullName": "longkum/trending-agent-skills",
+      "description": "Daily-tracked trending AI agent skills & AI repositories from GitHub Trending — bilingual summaries, refreshed daily. 每日追踪 GitHub 热门 skills 与 AI 仓库",
+      "url": "https://github.com/longkum/trending-agent-skills",
+      "source": "GitHub search",
+      "discoveredThrough": "Inspiration MCPs",
+      "topics": [
+        "agent-skills",
+        "ai",
+        "ai-agents",
+        "awesome-list",
+        "claude-code",
+        "github-trending",
+        "llm",
+        "mcp",
+        "skills"
+      ],
+      "stars": 0,
+      "updatedAt": "2026-11-12T16:04:47Z",
+      "suggestedType": "MCP",
+      "suggestedPractices": [
+        "Drafting"
+      ],
+      "relevanceScore": 30,
       "editorialStatus": "Needs review"
     },
     {
@@ -919,6 +947,38 @@
       "editorialStatus": "Needs review"
     },
     {
+      "id": "github:jasonli0226/pi-slides-skill",
+      "name": "pi-slides-skill",
+      "fullName": "jasonli0226/pi-slides-skill",
+      "description": "pi coding-agent skill: research-backed, animated React web slide decks with automated review and PDF export",
+      "url": "https://github.com/jasonli0226/pi-slides-skill",
+      "source": "GitHub search",
+      "discoveredThrough": "Taste and art direction",
+      "topics": [
+        "agent-skills",
+        "ai-agents",
+        "llm",
+        "motion",
+        "pdf-export",
+        "pi-coding-agent",
+        "presentation",
+        "react",
+        "slide-deck",
+        "slides",
+        "vite"
+      ],
+      "stars": 0,
+      "updatedAt": "2026-11-12T01:09:17Z",
+      "suggestedType": "Skill",
+      "suggestedPractices": [
+        "Review",
+        "Pattern research",
+        "Creative exploration"
+      ],
+      "relevanceScore": 24,
+      "editorialStatus": "Needs review"
+    },
+    {
       "id": "github:exxrawrrr/nyobakantorai",
       "name": "nyobakantorai",
       "fullName": "exxrawrrr/nyobakantorai",
@@ -1021,6 +1081,45 @@
       "editorialStatus": "Needs review"
     },
     {
+      "id": "github:frankShan001/CutVoke",
+      "name": "CutVoke",
+      "fullName": "frankShan001/CutVoke",
+      "description": "Open-source, local-first video editor your AI agent can drive over MCP (Claude Code, Codex, Cursor). Windows · macOS · Linux. The AI makes the cut; you finish it on the same timeline.",
+      "url": "https://github.com/frankShan001/CutVoke",
+      "source": "GitHub search",
+      "discoveredThrough": "Creative tooling",
+      "topics": [
+        "agent-skills",
+        "ai-agents",
+        "ai-video-editor",
+        "capcut-alternative",
+        "captions",
+        "claude-code",
+        "codex",
+        "cursor",
+        "electron",
+        "ffmpeg",
+        "local-first",
+        "mcp",
+        "mcp-server",
+        "model-context-protocol",
+        "open-source",
+        "python",
+        "text-based-video-editing",
+        "timeline-editor",
+        "video-editing",
+        "video-editor"
+      ],
+      "stars": 37,
+      "updatedAt": "2026-11-16T06:33:21Z",
+      "suggestedType": "MCP",
+      "suggestedPractices": [
+        "Drafting"
+      ],
+      "relevanceScore": 21,
+      "editorialStatus": "Needs review"
+    },
+    {
       "id": "github:dibun75/visor",
       "name": "visor",
       "fullName": "dibun75/visor",
@@ -1052,6 +1151,42 @@
       "updatedAt": "2026-11-02T11:37:15Z",
       "suggestedType": "MCP",
       "suggestedPractices": [
+        "Drafting"
+      ],
+      "relevanceScore": 21,
+      "editorialStatus": "Needs review"
+    },
+    {
+      "id": "github:authenticfake/clike",
+      "name": "clike",
+      "fullName": "authenticfake/clike",
+      "description": "Governed AI-native delivery: from idea to a running, documented solution with cloud models and coding agents (Claude Code, Codex)",
+      "url": "https://github.com/authenticfake/clike",
+      "source": "GitHub search",
+      "discoveredThrough": "Design MCPs",
+      "topics": [
+        "agent-skills",
+        "agentic-ai",
+        "agentic-coding",
+        "agentic-workflow",
+        "ai",
+        "anthropic",
+        "claude-code",
+        "codex",
+        "developer-tool",
+        "development",
+        "openai",
+        "spec-driven-development",
+        "swe",
+        "vibe",
+        "vibe-coding",
+        "vibecoding"
+      ],
+      "stars": 1,
+      "updatedAt": "2026-11-09T09:50:32Z",
+      "suggestedType": "Skill",
+      "suggestedPractices": [
+        "Flows",
         "Drafting"
       ],
       "relevanceScore": 21,
@@ -1365,115 +1500,29 @@
       "editorialStatus": "Needs review"
     },
     {
-      "id": "github:geekfujiwara/powerpoint-agent-skills",
-      "name": "powerpoint-agent-skills",
-      "fullName": "geekfujiwara/powerpoint-agent-skills",
-      "description": "Geek's frequently used skills for a more productive Copilot in PowerPoint agent mode. 日本語 / English.",
-      "url": "https://github.com/geekfujiwara/powerpoint-agent-skills",
+      "id": "github:sincekmori/asana-gate",
+      "name": "asana-gate",
+      "fullName": "sincekmori/asana-gate",
+      "description": "A declarative access-control policy in front of the Asana REST API, served to AI agents over MCP",
+      "url": "https://github.com/sincekmori/asana-gate",
       "source": "GitHub search",
-      "discoveredThrough": "Taste and art direction",
+      "discoveredThrough": "Designer skills",
       "topics": [
+        "access-control",
         "agent-skills",
-        "microsoft-copilot",
-        "powerpoint"
-      ],
-      "stars": 0,
-      "updatedAt": "2026-11-09T11:49:56Z",
-      "suggestedType": "Skill",
-      "suggestedPractices": [
-        "Creative exploration"
-      ],
-      "relevanceScore": 18,
-      "editorialStatus": "Needs review"
-    },
-    {
-      "id": "github:dresar/SKILL-IA-AGENT",
-      "name": "SKILL-IA-AGENT",
-      "fullName": "dresar/SKILL-IA-AGENT",
-      "description": "SKILL UIAI - Open Source AI Agent Skill Discovery Platform with Truthful Showcases, Neon PostgreSQL & Auth, and Model Context Protocol (MCP) Server",
-      "url": "https://github.com/dresar/SKILL-IA-AGENT",
-      "source": "GitHub search",
-      "discoveredThrough": "Design MCPs",
-      "topics": [],
-      "stars": 0,
-      "updatedAt": "2026-10-12T09:39:16Z",
-      "suggestedType": "MCP",
-      "suggestedPractices": [
-        "Creative exploration"
-      ],
-      "relevanceScore": 18,
-      "editorialStatus": "Needs review"
-    },
-    {
-      "id": "github:Schengii/AI-Softwareentwickler-Team",
-      "name": "AI-Softwareentwickler-Team",
-      "fullName": "Schengii/AI-Softwareentwickler-Team",
-      "description": "🤖 Multi-agent AI dev team in Python: turns a feature request into a planned, coded and tested project. LLM agents for planning, backend, frontend, QA & security; a verifier runs real tests and loops failures back. FastAPI dashboard, MCP server, pytest, CI.",
-      "url": "https://github.com/Schengii/AI-Softwareentwickler-Team",
-      "source": "GitHub search",
-      "discoveredThrough": "Design MCPs",
-      "topics": [
-        "ai-agents",
-        "claude-code",
-        "code-generation",
-        "fastapi",
-        "gemini-api",
-        "github-actions",
-        "llm",
+        "asana",
+        "asana-api",
+        "mcp",
         "mcp-server",
-        "multi-agent",
-        "pytest",
-        "python"
+        "policy"
       ],
       "stars": 0,
-      "updatedAt": "2026-10-12T09:37:44Z",
+      "updatedAt": "2026-11-12T05:48:13Z",
       "suggestedType": "MCP",
       "suggestedPractices": [
-        "Review",
-        "Drafting"
+        "Creative exploration"
       ],
       "relevanceScore": 18,
-      "editorialStatus": "Needs review"
-    },
-    {
-      "id": "github:RubenVanDerVeen/skills",
-      "name": "skills",
-      "fullName": "RubenVanDerVeen/skills",
-      "description": "Personal agent environment for AI coding agents. All skills, agents, commands and my AI coding workflow is documented in here.",
-      "url": "https://github.com/RubenVanDerVeen/skills",
-      "source": "GitHub search",
-      "discoveredThrough": "Creative tooling",
-      "topics": [],
-      "stars": 0,
-      "updatedAt": "2026-10-05T09:33:13Z",
-      "suggestedType": "Skill",
-      "suggestedPractices": [
-        "Flows"
-      ],
-      "relevanceScore": 18,
-      "editorialStatus": "Needs review"
-    },
-    {
-      "id": "github:storytold/figcraft",
-      "name": "figcraft",
-      "fullName": "storytold/figcraft",
-      "description": "FigCraft: interface design and prototyping; an open-source, clean-room reimplementation of collaborative design workflows in pure Rust",
-      "url": "https://github.com/storytold/figcraft",
-      "source": "GitHub search",
-      "discoveredThrough": "Creative tooling",
-      "topics": [
-        "design",
-        "rust",
-        "tools"
-      ],
-      "stars": 4726,
-      "updatedAt": "2026-11-09T11:59:36Z",
-      "suggestedType": "Tool",
-      "suggestedPractices": [
-        "Flows",
-        "UI sketches"
-      ],
-      "relevanceScore": 15,
       "editorialStatus": "Needs review"
     }
   ]

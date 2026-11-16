@@ -1,6 +1,16 @@
 {
-  "weekLabel": "Last 7 days · 3 Nov 2026 – 9 Nov 2026",
-  "weeklySignals": [],
+  "weekLabel": "Last 7 days · 10 Nov 2026 – 16 Nov 2026",
+  "weeklySignals": [
+    {
+      "title": "agent-skills-guide",
+      "verdict": "Watching",
+      "summary": "Source-reviewed; not yet team-tested. Use it to draft one small skill outline, then verify the template and workflow fit before building a broader skill library.",
+      "source": "github.com",
+      "url": "https://github.com/kaydenplayZ/agent-skills-guide",
+      "foundOn": "2026-11-16",
+      "id": "01"
+    }
+  ],
   "tools": [
     {
       "id": "01",
@@ -675,12 +685,12 @@
         "Accessibility"
       ],
       "description": "This open-source MCP server turns an AI coding agent into a UI designer with a visual canvas, vetted design patterns, and a quality gate before designs are shown.",
-      "recommendation": "Source-reviewed; not yet team-tested. Try it on one design iteration that needs a quality gate, then compare the canvas output with your current review criteria.",
+      "recommendation": "Try it on one design iteration that needs a quality gate, then compare the canvas output with your current review criteria.",
       "access": "Open source",
       "setup": "Not stated; MCP client setup required",
       "verdict": "Watching",
       "confidence": "Medium",
-      "reviewed": "2 Nov 2026",
+      "reviewed": "16 Nov 2026",
       "source": "github.com",
       "url": "https://github.com/vicmaster/framesmith"
     },
@@ -722,14 +732,38 @@
         "Creative exploration"
       ],
       "description": "The skill directs launch films and motion graphics through a staged flow with brief, story, look, animatic, and final review steps in a browser console.",
-      "recommendation": "Source-reviewed; not yet team-tested. Try it on one short launch film brief first, then validate the story, look, and timing before a larger motion project.",
+      "recommendation": "Try it on one short launch film brief first, then validate the story, look, and timing before a larger motion project.",
       "access": "Claude Code and optional Mac app",
       "setup": "Not stated; agent skill works without the Mac app",
       "verdict": "Watching",
       "confidence": "Medium",
-      "reviewed": "2 Nov 2026",
+      "reviewed": "16 Nov 2026",
       "source": "github.com",
       "url": "https://github.com/Sibhimanyu/rasanai"
+    },
+    {
+      "id": "auto-242fbea95694",
+      "title": "agent-skills-guide",
+      "type": "Skill",
+      "categories": [
+        "UI",
+        "UX",
+        "Process"
+      ],
+      "practices": [
+        "Drafting",
+        "UI sketches",
+        "Review"
+      ],
+      "description": "A general guide for creating custom agent skills, with examples, templates, and step-by-step instructions.",
+      "recommendation": "Source-reviewed; not yet team-tested. Use it to draft one small skill outline, then verify the template and workflow fit before building a broader skill library.",
+      "access": "Free to use",
+      "setup": "Not stated; download and install from the listed release",
+      "verdict": "Watching",
+      "confidence": "Medium",
+      "reviewed": "16 Nov 2026",
+      "source": "github.com",
+      "url": "https://github.com/kaydenplayZ/agent-skills-guide"
     }
   ],
   "findings": [
@@ -833,6 +867,14 @@
       "source": "github.com",
       "url": "https://github.com/Sibhimanyu/rasanai",
       "foundOn": "2026-11-02"
+    },
+    {
+      "title": "agent-skills-guide",
+      "verdict": "Watching",
+      "summary": "Source-reviewed; not yet team-tested. Use it to draft one small skill outline, then verify the template and workflow fit before building a broader skill library.",
+      "source": "github.com",
+      "url": "https://github.com/kaydenplayZ/agent-skills-guide",
+      "foundOn": "2026-11-16"
     }
   ]
 }
