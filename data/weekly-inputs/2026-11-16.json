@@ -1,75 +1,30 @@
 [
   {
-    "id": "c8374ce2838a96ba",
-    "url": "https://www.w3.org/WAI/news/2026-02-05/coga",
-    "title": "For Review: Cognitive Accessibility Research Modules — First Draft Notes | Web Accessibility Initiative (WAI) | W3C",
-    "source": "w3.org",
-    "sourceKind": "web research",
-    "publishedAt": "2026-02-05T00:00:00.000Z",
-    "firstCollectedAt": "2026-11-16T06:22:20.868Z"
-  },
-  {
-    "id": "51b2ff5ad76c6a2b",
-    "url": "https://www.w3.org/WAI/ARIA/apg/about/introduction",
-    "title": "Introduction | APG | WAI | W3C",
-    "source": "w3.org",
-    "sourceKind": "web research",
-    "publishedAt": null,
-    "firstCollectedAt": "2026-11-16T06:22:20.868Z"
-  },
-  {
-    "id": "06ebb40a317e16fe",
-    "url": "https://developers.openai.com/plugins/concepts/ui-guidelines?trk=article-ssr-frontend-pulse_little-text-block",
-    "title": "UI guidelines – Plugins | OpenAI Developers",
-    "source": "developers.openai.com",
-    "sourceKind": "web research",
-    "publishedAt": null,
-    "firstCollectedAt": "2026-11-16T06:22:20.868Z"
-  },
-  {
-    "id": "82fac8160534e146",
-    "url": "https://developers.openai.com/blog/15-lessons-building-chatgpt-apps",
-    "title": "15 lessons learned building ChatGPT Apps | OpenAI Developers",
-    "source": "developers.openai.com",
-    "sourceKind": "web research",
-    "publishedAt": null,
-    "firstCollectedAt": "2026-11-16T06:22:20.868Z"
-  },
-  {
-    "id": "a4e62083f733174a",
-    "url": "https://academy.openai.com/public/blogs/making-websites-easier-to-read-with-chatgpt-2026-09-04",
-    "title": "Making websites easier to read with ChatGPT - Blog | OpenAI Academy",
-    "source": "academy.openai.com",
-    "sourceKind": "web research",
-    "publishedAt": null,
-    "firstCollectedAt": "2026-11-16T06:22:20.868Z"
-  },
-  {
-    "id": "a69912b795d53da0",
-    "url": "https://www.gov.uk/government/case-studies/how-gds-used-data-to-improve-content-and-user-journeys-on-govuk",
-    "title": "How GDS used data to improve content and user journeys on GOV.UK - Case study - GOV.UK",
+    "id": "eb5efbb002abc569",
+    "url": "https://www.gov.uk/government/publications/digital-and-technologies-jobs-plan/digital-and-technologies-jobs-plan",
+    "title": "Digital and Technologies Jobs Plan - GOV.UK",
     "source": "gov.uk",
     "sourceKind": "web research",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-16T06:22:20.868Z"
+    "firstCollectedAt": "2026-11-17T07:50:40.567Z"
   },
   {
-    "id": "5169339c7d752706",
-    "url": "https://developers.openai.com/blog/what-makes-a-great-chatgpt-app?trk=article-ssr-frontend-pulse_little-text-block",
-    "title": "What makes a great ChatGPT app | OpenAI Developers",
-    "source": "developers.openai.com",
+    "id": "3a0d76598860a4a1",
+    "url": "https://github.com/uswds/uswds/wiki/Accessibility%E2%80%90first-usability-testing%3A-best-practices",
+    "title": "Accessibility‐first usability testing: best practices · uswds/uswds Wiki · GitHub",
+    "source": "github.com",
     "sourceKind": "web research",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-16T06:22:20.868Z"
+    "firstCollectedAt": "2026-11-17T07:50:40.567Z"
   },
   {
-    "id": "fd2df6f5a9652455",
-    "url": "https://www.nber.org/papers/w31325",
-    "title": "Firm Investments in Artificial Intelligence Technologies and Changes in Workforce Composition | NBER",
-    "source": "nber.org",
+    "id": "63543de72f49632b",
+    "url": "https://www.gov.uk/government/publications/assessment-of-ai-capabilities-and-the-impact-on-the-uk-labour-market/assessment-of-ai-capabilities-and-the-impact-on-the-uk-labour-market?trk=article-ssr-frontend-pulse_little-text-block",
+    "title": "Assessment of AI capabilities and the impact on the UK labour market - GOV.UK",
+    "source": "gov.uk",
     "sourceKind": "web research",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-16T06:22:20.868Z"
+    "firstCollectedAt": "2026-11-17T07:50:40.567Z"
   },
   {
     "id": "06e82c00d26b79ff",
@@ -78,7 +33,7 @@
     "source": "smashingmagazine.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-05T13:00:00.000Z",
-    "firstCollectedAt": "2026-11-16T06:22:20.868Z"
+    "firstCollectedAt": "2026-11-17T07:50:40.567Z"
   },
   {
     "id": "1ca7fb89d96171f9",
@@ -87,7 +42,7 @@
     "source": "arxiv.org",
     "sourceKind": "web crawl",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-16T06:22:20.868Z"
+    "firstCollectedAt": "2026-11-17T07:50:40.567Z"
   },
   {
     "id": "899779497ade9fce",
@@ -96,7 +51,7 @@
     "source": "designnotes.blog.gov.uk",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-03T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-16T06:22:20.868Z"
+    "firstCollectedAt": "2026-11-17T07:50:40.567Z"
   },
   {
     "id": "1b6d557941ea733c",
@@ -105,7 +60,7 @@
     "source": "microsoft.com",
     "sourceKind": "web crawl",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-16T06:22:20.868Z"
+    "firstCollectedAt": "2026-11-17T07:50:40.567Z"
   },
   {
     "id": "3a922286f4e7b41b",
@@ -114,7 +69,7 @@
     "source": "developers.openai.com",
     "sourceKind": "web crawl",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-16T06:22:20.868Z"
+    "firstCollectedAt": "2026-11-17T07:50:40.567Z"
   },
   {
     "id": "b1017daf38c6a87b",
@@ -123,7 +78,7 @@
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-09T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-16T06:22:20.868Z"
+    "firstCollectedAt": "2026-11-17T07:50:40.567Z"
   },
   {
     "id": "44e81f5b65f0958f",
@@ -132,7 +87,7 @@
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-09T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-16T06:22:20.868Z"
+    "firstCollectedAt": "2026-11-17T07:50:40.567Z"
   },
   {
     "id": "3f203813eb5402eb",
@@ -141,7 +96,7 @@
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-09T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-16T06:22:20.868Z"
+    "firstCollectedAt": "2026-11-17T07:50:40.567Z"
   },
   {
     "id": "2dd26193e79713b4",
@@ -150,7 +105,7 @@
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-09T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-16T06:22:20.868Z"
+    "firstCollectedAt": "2026-11-17T07:50:40.567Z"
   },
   {
     "id": "e18bd0e04e9639c7",
@@ -159,124 +114,52 @@
     "source": "inet.ox.ac.uk",
     "sourceKind": "web crawl",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-16T06:22:20.868Z"
+    "firstCollectedAt": "2026-11-17T07:50:40.567Z"
   },
   {
-    "id": "eb5efbb002abc569",
-    "url": "https://www.gov.uk/government/publications/digital-and-technologies-jobs-plan/digital-and-technologies-jobs-plan",
-    "title": "Digital and Technologies Jobs Plan - GOV.UK",
-    "source": "gov.uk",
-    "sourceKind": "web crawl",
-    "publishedAt": null,
-    "firstCollectedAt": "2026-11-16T06:22:20.868Z"
-  },
-  {
-    "id": "baeed59db90b2cf1",
-    "url": "https://www.itsnicethat.com/features/uefa-womens-champions-league-queenzine-swedish-girls-gothenburg-collaboration-sponsored-content-131126",
-    "title": "UEFA Women’s Champions League zine collaborates with art duo Swedish Girls to bring fandom to the streets of Gothenburg",
+    "id": "ac49910868b2f3b4",
+    "url": "https://www.itsnicethat.com/articles/creative-career-condundrums-if-you-could-jobs-advice-161126",
+    "title": "“Your biggest confidence blocker is comparison”",
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
-    "publishedAt": "2026-11-13T11:00:00.000Z",
-    "firstCollectedAt": "2026-11-16T06:22:20.868Z"
+    "publishedAt": "2026-11-16T11:00:00.000Z",
+    "firstCollectedAt": "2026-11-17T07:50:40.567Z"
   },
   {
-    "id": "29fe86d009a5434c",
-    "url": "https://www.itsnicethat.com/articles/vucko-etsy-motion-graphic-design-sponsored-content-121126",
-    "title": "Vucko’s motion identity for Etsy is built on joy, simplicity and craft",
+    "id": "d06d00ea3e43e681",
+    "url": "https://www.itsnicethat.com/articles/maria-zilli-illustration-discover-161126",
+    "title": "Maria Zilli’s sketches steal brilliant costumes and characters from the theatre of the everyday",
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
-    "publishedAt": "2026-11-12T14:00:00.000Z",
-    "firstCollectedAt": "2026-11-16T06:22:20.868Z"
+    "publishedAt": "2026-11-16T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-17T07:50:40.567Z"
   },
   {
-    "id": "3bbaf4118f08c84f",
-    "url": "https://www.itsnicethat.com/articles/georgie-mcausland-illustration-discover-121126",
-    "title": "Georgie McAusland on refusing expensive tools to get more “squish and texture” into her drawings",
+    "id": "68d86d907a147f7f",
+    "url": "https://www.itsnicethat.com/articles/mother-design-major-league-baseball-brand-refresh-graphic-design-project-161126",
+    "title": "Mother Design bats Major League Baseball into the future with five bespoke typefaces",
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
-    "publishedAt": "2026-11-12T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-16T06:22:20.868Z"
+    "publishedAt": "2026-11-16T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-17T07:50:40.567Z"
   },
   {
-    "id": "981087988936a186",
-    "url": "https://www.itsnicethat.com/articles/dum-dum-studio-graphic-design-discover-121126",
-    "title": "Dum Dum Studio’s inventive design emerges from an open mind and a love of play",
+    "id": "b0f3fa8f3db4ff94",
+    "url": "https://www.itsnicethat.com/articles/pov-graphic-design-helped-monetise-loneliness-creative-industry-161126",
+    "title": "How graphic design makes buying feel like belonging and brands feel like community",
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
-    "publishedAt": "2026-11-12T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-16T06:22:20.868Z"
+    "publishedAt": "2026-11-16T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-17T07:50:40.567Z"
   },
   {
-    "id": "8b02f9081261d426",
-    "url": "https://www.itsnicethat.com/articles/biabum-graphic-design-illustration-discover-111126",
-    "title": "Why the retro brand identities of Biabum studio have illustration built into their DNA",
+    "id": "3ece596ac9cf942a",
+    "url": "https://www.itsnicethat.com/features/the-nice-list-2026-creative-gift-guide-161126",
+    "title": "The Nice List 2026: explore It’s Nice That’s creative gift guide",
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
-    "publishedAt": "2026-11-11T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-16T06:22:20.868Z"
-  },
-  {
-    "id": "08a46818c4eec446",
-    "url": "https://www.itsnicethat.com/articles/emily-stein-aquasplash-photography-project-111126",
-    "title": "Missing summer? Dive into Emily Stein colourful and chaotic snaps of Italian waterparks",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-11T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-16T06:22:20.868Z"
-  },
-  {
-    "id": "2b4ef8cbe45d7a2f",
-    "url": "https://www.itsnicethat.com/articles/adobe-max-miami-2026-creative-industry-sponsored-content-101126",
-    "title": "Adobe Max Miami 2026 goes live online",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-10T16:00:00.000Z",
-    "firstCollectedAt": "2026-11-16T06:22:20.868Z"
-  },
-  {
-    "id": "f6c9174bd866308e",
-    "url": "https://www.itsnicethat.com/articles/trade-secrets-mpb-photography-event-partnership-101126",
-    "title": "Trade Secrets: a free webinar series reveals the photography techniques behind Ana Flores, Sam Nicklin and Arielle Bobb-Willis photographs",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-10T16:00:00.000Z",
-    "firstCollectedAt": "2026-11-16T06:22:20.868Z"
-  },
-  {
-    "id": "57755e29fc231168",
-    "url": "https://www.itsnicethat.com/articles/nicer-tuesdays-december-london-launch-101126",
-    "title": "Nicer Tuesdays London: Get tickets for Studio Feixen, Oscar Hudson, Fiona Quadri and Adam Lin in December!",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-10T13:00:00.000Z",
-    "firstCollectedAt": "2026-11-16T06:22:20.868Z"
-  },
-  {
-    "id": "80f8096aa693f4ca",
-    "url": "https://www.itsnicethat.com/features/james-barnett-poppy-french-when-james-and-poppy-met-documentary-photography-101126",
-    "title": "James Barnett and Poppy French document the eccentricities of Britain with warmth and humour",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-10T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-16T06:22:20.868Z"
-  },
-  {
-    "id": "2bceec18281f6758",
-    "url": "https://www.itsnicethat.com/articles/nymzo-product-design-project-101126",
-    "title": "“Strong and sporty”: Nymzo is the trendy chess brand designed for a new wave of players",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-10T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-16T06:22:20.868Z"
-  },
-  {
-    "id": "7978486278dfc8ed",
-    "url": "https://www.itsnicethat.com/articles/eric-timothy-carlson-bon-iver-22-a-million-graphic-design-101126",
-    "title": "Decoding 22, A Million: Eric Timothy Carlson on carving Bon Iver’s iconic visual universe ten years later",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-10T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-16T06:22:20.868Z"
+    "publishedAt": "2026-11-16T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-17T07:50:40.567Z"
   },
   {
     "id": "3b112da4a4eadcec",
@@ -285,25 +168,7 @@
     "source": "smashingmagazine.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-12T10:00:00.000Z",
-    "firstCollectedAt": "2026-11-16T06:22:20.868Z"
-  },
-  {
-    "id": "db3f22aec8a1d234",
-    "url": "https://www.smashingmagazine.com/2026/11/ux-insiders-community-in-house-ux-people",
-    "title": "A New Community For In-House UX People — Smashing Magazine",
-    "source": "smashingmagazine.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-06T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-16T06:22:20.868Z"
-  },
-  {
-    "id": "06a24ebd71bde68c",
-    "url": "https://www.w3.org/blog/2026/the-multiplier-effect-how-authoring-tools-can-transform-web-accessibility",
-    "title": "The multiplier effect: How authoring tools can transform web accessibility | 2026 | Blog | W3C",
-    "source": "w3.org",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-10T16:05:00.000Z",
-    "firstCollectedAt": "2026-11-16T06:22:20.868Z"
+    "firstCollectedAt": "2026-11-17T07:50:40.567Z"
   },
   {
     "id": "ad5bc128fb288392",
@@ -311,17 +176,8 @@
     "title": "Harrison Chase on X: \"Goal Engineering: How to Design Goals\" / X",
     "source": "x.com",
     "sourceKind": "web crawl",
-    "publishedAt": "2026-11-16T06:22:22.966Z",
-    "firstCollectedAt": "2026-11-16T06:22:20.868Z"
-  },
-  {
-    "id": "aa7a4c71d62f1bd4",
-    "url": "https://buttondown.com/agenticdesignschool/archive/plans-before-edits-and-a-sandbox-the-agent-cant",
-    "title": "Plans before edits, and a sandbox the agent can&#x27;t change • Buttondown",
-    "source": "buttondown.com",
-    "sourceKind": "newsletter inbox",
-    "publishedAt": "2026-11-15T22:38:03.000Z",
-    "firstCollectedAt": "2026-11-16T06:22:20.868Z"
+    "publishedAt": "2026-11-17T07:50:42.443Z",
+    "firstCollectedAt": "2026-11-17T07:50:40.567Z"
   },
   {
     "id": "8f24ffa3c513c66e",
@@ -330,6 +186,42 @@
     "source": "github.com",
     "sourceKind": "newsletter inbox",
     "publishedAt": "2026-11-13T19:57:12.000Z",
-    "firstCollectedAt": "2026-11-16T06:22:20.868Z"
+    "firstCollectedAt": "2026-11-17T07:50:40.567Z"
+  },
+  {
+    "id": "c8374ce2838a96ba",
+    "url": "https://www.w3.org/WAI/news/2026-02-05/coga",
+    "title": "For Review: Cognitive Accessibility Research Modules — First Draft Notes | Web Accessibility Initiative (WAI) | W3C",
+    "source": "w3.org",
+    "sourceKind": "web research",
+    "publishedAt": "2026-02-05T00:00:00.000Z",
+    "firstCollectedAt": "2026-11-17T07:50:40.567Z"
+  },
+  {
+    "id": "51b2ff5ad76c6a2b",
+    "url": "https://www.w3.org/WAI/ARIA/apg/about/introduction",
+    "title": "Introduction | APG | WAI | W3C",
+    "source": "w3.org",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-17T07:50:40.567Z"
+  },
+  {
+    "id": "06ebb40a317e16fe",
+    "url": "https://developers.openai.com/plugins/concepts/ui-guidelines?trk=article-ssr-frontend-pulse_little-text-block",
+    "title": "UI guidelines – Plugins | OpenAI Developers",
+    "source": "developers.openai.com",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-17T07:50:40.567Z"
+  },
+  {
+    "id": "82fac8160534e146",
+    "url": "https://developers.openai.com/blog/15-lessons-building-chatgpt-apps",
+    "title": "15 lessons learned building ChatGPT Apps | OpenAI Developers",
+    "source": "developers.openai.com",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-17T07:50:40.567Z"
   }
 ]
