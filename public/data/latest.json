@@ -6,8 +6,8 @@
   "date": "2026-11-16",
   "editionNumber": "035",
   "displayDate": "Week of 2026-11-16",
-  "headline": "**Accessibility and evaluation** are getting more concrete",
-  "summary": "This week’s evidence strengthens two practical themes: accessible AI chat needs explicit nonvisual state, and generated content needs repeatable evaluation, not sample-based approval. A separate labor-market thread also suggests junior work is being redesigned around judgment, feedback, and fixed-term entry points rather than disappearing cleanly.",
+  "headline": "**Accessibility, evaluation, and junior pipelines** reshape AI design work",
+  "summary": "This week reinforces a shift from AI features to AI operating models. Accessibility, evaluation, and entry-level talent are becoming design problems with real workflow consequences, not just abstract principles.",
   "questions": [
     {
       "id": "14",
@@ -25,13 +25,13 @@
       "why": "If you are adding chat or copilots, accessibility now affects the core interaction pattern. It changes your component architecture, state announcements, and QA checklist.",
       "uncertainty": "This is vendor-adjacent expert guidance, not evidence of widespread implementation or measured user outcomes. Better evidence would be field testing with assistive technology users across real products.",
       "counts": {
-        "total": 3,
-        "web": 3,
+        "total": 5,
+        "web": 5,
         "newsletters": 0
       },
-      "publisherCount": 3,
+      "publisherCount": 5,
       "firstSeen": "2026-11-09",
-      "lastUpdatedAt": "2026-11-17T07:50:40.567Z",
+      "lastUpdatedAt": "2026-11-18T07:22:20.728Z",
       "signals": [
         {
           "source": "smashingmagazine.com",
@@ -46,7 +46,37 @@
           "changes": "This frames accessibility as a product risk, not a polish issue.",
           "verdict": "Must read",
           "role": "Supports",
-          "evidence": "As LLM chat patterns become more widespread, making them accessible is essential to ensuring everyone can access the information, tools, and opportunities they offer."
+          "evidence": "To start, we use live regions ."
+        },
+        {
+          "source": "insidegovuk.blog.gov.uk",
+          "title": "Designing GOV.UK Chat for the GOV.UK app – Inside GOV.UK",
+          "kind": "Web",
+          "timing": "Date unavailable",
+          "publishedAt": null,
+          "firstCollectedAt": "2026-11-18T07:22:20.728Z",
+          "sourceId": "968610a4a2b6b46e",
+          "url": "https://insidegovuk.blog.gov.uk/2026/08/19/designing-gov-uk-chat-for-the-gov-uk-app",
+          "happened": "GOV.UK says screen readers announce the character limit for the chat input.",
+          "changes": "This shows accessible chat implementation in a public service context.",
+          "verdict": "Read",
+          "role": "Supports",
+          "evidence": "We also ensured screen readers such as VoiceOver and TalkBack announce the character limit for the text input (if enabled in accessibility settings)."
+        },
+        {
+          "source": "w3.org",
+          "title": "Accessibility Principles | Web Accessibility Initiative (WAI) | W3C",
+          "kind": "Web",
+          "timing": "Date unavailable",
+          "publishedAt": null,
+          "firstCollectedAt": "2026-11-18T07:22:20.728Z",
+          "sourceId": "facde4f4fb2f4668",
+          "url": "https://www.w3.org/WAI/fundamentals/accessibility-principles",
+          "happened": "W3C says involving users early and throughout web projects improves the work.",
+          "changes": "This supports moving accessibility earlier in the process.",
+          "verdict": "Read",
+          "role": "Context",
+          "evidence": "In all cases, involving users early and throughout your web projects will make your work better and easier."
         },
         {
           "source": "arxiv.org",
@@ -113,6 +143,20 @@
             "1ca7fb89d96171f9",
             "3a0d76598860a4a1"
           ]
+        },
+        {
+          "at": "2026-11-18T07:22:20.728Z",
+          "kind": "Evidence added",
+          "reason": "Answer retained verbatim. Added verified citations: https://insidegovuk.blog.gov.uk/2026/08/19/designing-gov-uk-chat-for-the-gov-uk-app, https://www.w3.org/WAI/fundamentals/accessibility-principles.",
+          "before": "The practical takeaway is that chat UIs need explicit nonvisual feedback, not just visual polish. Eric Bailey’s guidance argues for live regions, delayed loading announcements, headings, and stable response timing so screen reader users can tell when the model is working and when it has finished. That means accessibility work is not an add-on at the end; it changes the interaction model, the DOM structure, and how you represent state. The tradeoff is more implementation care and less reliance on pretty streaming effects. For teams shipping AI chat, the question is whether your interface is comprehensible when the screen is not.",
+          "after": "The practical takeaway is that chat UIs need explicit nonvisual feedback, not just visual polish. Eric Bailey’s guidance argues for live regions, delayed loading announcements, headings, and stable response timing so screen reader users can tell when the model is working and when it has finished. That means accessibility work is not an add-on at the end; it changes the interaction model, the DOM structure, and how you represent state. The tradeoff is more implementation care and less reliance on pretty streaming effects. For teams shipping AI chat, the question is whether your interface is comprehensible when the screen is not.",
+          "sourceIds": [
+            "06e82c00d26b79ff",
+            "968610a4a2b6b46e",
+            "facde4f4fb2f4668",
+            "1ca7fb89d96171f9",
+            "3a0d76598860a4a1"
+          ]
         }
       ]
     },
@@ -153,7 +197,7 @@
           "changes": "This creates the need for a scalable evaluation method instead of traditional content review.",
           "verdict": "Must read",
           "role": "Supports",
-          "evidence": "What we've done to solve this To measure content quality, we've built a test runner for our content instructions."
+          "evidence": "For example: The final content isn’t generated until someone asks for it, so you can't review the exact output beforehand."
         },
         {
           "source": "microsoft.com",
@@ -279,7 +323,22 @@
           "changes": "This suggests the entry point is shifting from permanent rung to supervised trial.",
           "verdict": "Read",
           "role": "Supports",
-          "evidence": "My prediction is that within three years the typical first creative role will be a 6-12 month contract, with a permanent offer coming after you’ve proved yourself."
+          "evidence": "For employers, the responsibility is to make the onboarding and induction process meaningful, by agreeing what success looks like at six months and giving someone ownership of developing the person."
+        },
+        {
+          "source": "gov.uk",
+          "title": "Assessment of AI capabilities and the impact on the UK labour market - GOV.UK",
+          "kind": "Web",
+          "timing": "Date unavailable",
+          "publishedAt": null,
+          "firstCollectedAt": "2026-11-17T07:50:40.567Z",
+          "sourceId": "63543de72f49632b",
+          "url": "https://www.gov.uk/government/publications/assessment-of-ai-capabilities-and-the-impact-on-the-uk-labour-market/assessment-of-ai-capabilities-and-the-impact-on-the-uk-labour-market?trk=article-ssr-frontend-pulse_little-text-block",
+          "happened": "The UK assessment notes a 44 percent drop in 16 to 24 year olds in computer programming in 2024, while cautioning against direct attribution to AI.",
+          "changes": "This is a stronger market signal, but not proof of causation.",
+          "verdict": "Read",
+          "role": "Context",
+          "evidence": "[footnote 17] In 2024, UK digital sector employment dropped for the first time in a decade, with the number of 16–24-year-olds in computer programming down 44% in a single year."
         },
         {
           "source": "itsnicethat.com",
@@ -310,21 +369,6 @@
           "verdict": "Read",
           "role": "Context",
           "evidence": "Our findings provide evidence that employers have initiated “skill-based hiring” for AI roles, adopting more flexible hiring practices to expand the available talent pool."
-        },
-        {
-          "source": "gov.uk",
-          "title": "Assessment of AI capabilities and the impact on the UK labour market - GOV.UK",
-          "kind": "Web",
-          "timing": "Date unavailable",
-          "publishedAt": null,
-          "firstCollectedAt": "2026-11-17T07:50:40.567Z",
-          "sourceId": "63543de72f49632b",
-          "url": "https://www.gov.uk/government/publications/assessment-of-ai-capabilities-and-the-impact-on-the-uk-labour-market/assessment-of-ai-capabilities-and-the-impact-on-the-uk-labour-market?trk=article-ssr-frontend-pulse_little-text-block",
-          "happened": "The UK assessment notes a 44 percent drop in 16 to 24 year olds in computer programming in 2024, while cautioning against direct attribution to AI.",
-          "changes": "This is a stronger market signal, but not proof of causation.",
-          "verdict": "Read",
-          "role": "Context",
-          "evidence": "[footnote 17] In 2024, UK digital sector employment dropped for the first time in a decade, with the number of 16–24-year-olds in computer programming down 44% in a single year."
         },
         {
           "source": "gov.uk",
@@ -508,15 +552,15 @@
     }
   ],
   "retiredQuestions": [],
-  "generatedAt": "2026-11-17T07:50:40.567Z",
-  "lastCollectedAt": "2026-11-17T07:50:40.567Z",
-  "crawlCompletedAt": "08:50",
+  "generatedAt": "2026-11-18T07:22:20.728Z",
+  "lastCollectedAt": "2026-11-18T07:22:20.728Z",
+  "crawlCompletedAt": "08:22",
   "finalizedAt": null,
-  "revision": "906c32583a8f",
-  "sourceCount": 25,
+  "revision": "4f35aa4cf081",
+  "sourceCount": 35,
   "webSourceCount": 7,
   "teamContributionCount": 5,
   "sourceWarnings": [
-    "39 candidate pages could not provide enough inspectable public article text. They were not used as new evidence."
+    "29 candidate pages could not provide enough inspectable public article text. They were not used as new evidence."
   ]
 }

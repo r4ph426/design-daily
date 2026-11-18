@@ -1,30 +1,102 @@
 [
   {
+    "id": "facde4f4fb2f4668",
+    "url": "https://www.w3.org/WAI/fundamentals/accessibility-principles",
+    "title": "Accessibility Principles | Web Accessibility Initiative (WAI) | W3C",
+    "source": "w3.org",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
+  },
+  {
+    "id": "968610a4a2b6b46e",
+    "url": "https://insidegovuk.blog.gov.uk/2026/08/19/designing-gov-uk-chat-for-the-gov-uk-app",
+    "title": "Designing GOV.UK Chat for the GOV.UK app – Inside GOV.UK",
+    "source": "insidegovuk.blog.gov.uk",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
+  },
+  {
+    "id": "6fbeb297d9e7f05e",
+    "url": "https://design-histories.education.gov.uk/find-user-insights/how-we-made-ai-responses-easier-to-use-and-trust",
+    "title": "How we made AI responses easier to use and trust - Design histories - Department for Education",
+    "source": "design-histories.education.gov.uk",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
+  },
+  {
+    "id": "97e74c6ce5db3d9d",
+    "url": "https://mojdigital.blog.gov.uk/2024/08/14/combining-ai-and-content-design-to-extract-insights-from-service-assessment-reports",
+    "title": "Combining AI and content design to extract insights from service assessment reports – Justice Digital, Data and Science",
+    "source": "mojdigital.blog.gov.uk",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
+  },
+  {
+    "id": "4efba4bafbc8adb2",
+    "url": "https://arxiv.org/abs/2607.24606",
+    "title": "[2607.24606] Verification-Conditioned Use: A Qualitative Study on How Generative AI Reshapes Learning, Autonomy, and Market Entry for Junior Software Developers",
+    "source": "arxiv.org",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
+  },
+  {
+    "id": "c0db7376b606611a",
+    "url": "https://arxiv.org/abs/2607.17067",
+    "title": "[2607.17067] Who Will Become the Next Senior? How Generative AI Erodes the Development Pathway in Software Engineering",
+    "source": "arxiv.org",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
+  },
+  {
+    "id": "b350fdaacfbe1f7c",
+    "url": "https://arxiv.org/abs/2609.34655",
+    "title": "[2609.34655] AI Tools Adoption across the Double Diamond Workflow: Phase, Mode, and Barriers in Designer Practice",
+    "source": "arxiv.org",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
+  },
+  {
+    "id": "70e272954a7243ba",
+    "url": "https://arxiv.org/abs/2611.20519",
+    "title": "[2611.20519] AI Tool Adoption and Loyalty among Product, Industrial, and UX/UI Designers across the Double Diamond",
+    "source": "arxiv.org",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
+  },
+  {
     "id": "eb5efbb002abc569",
     "url": "https://www.gov.uk/government/publications/digital-and-technologies-jobs-plan/digital-and-technologies-jobs-plan",
     "title": "Digital and Technologies Jobs Plan - GOV.UK",
     "source": "gov.uk",
-    "sourceKind": "web research",
+    "sourceKind": "web crawl",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-17T07:50:40.567Z"
+    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
   },
   {
     "id": "3a0d76598860a4a1",
     "url": "https://github.com/uswds/uswds/wiki/Accessibility%E2%80%90first-usability-testing%3A-best-practices",
     "title": "Accessibility‐first usability testing: best practices · uswds/uswds Wiki · GitHub",
     "source": "github.com",
-    "sourceKind": "web research",
+    "sourceKind": "web crawl",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-17T07:50:40.567Z"
+    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
   },
   {
     "id": "63543de72f49632b",
     "url": "https://www.gov.uk/government/publications/assessment-of-ai-capabilities-and-the-impact-on-the-uk-labour-market/assessment-of-ai-capabilities-and-the-impact-on-the-uk-labour-market?trk=article-ssr-frontend-pulse_little-text-block",
     "title": "Assessment of AI capabilities and the impact on the UK labour market - GOV.UK",
     "source": "gov.uk",
-    "sourceKind": "web research",
+    "sourceKind": "web crawl",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-17T07:50:40.567Z"
+    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
   },
   {
     "id": "06e82c00d26b79ff",
@@ -33,7 +105,7 @@
     "source": "smashingmagazine.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-05T13:00:00.000Z",
-    "firstCollectedAt": "2026-11-17T07:50:40.567Z"
+    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
   },
   {
     "id": "1ca7fb89d96171f9",
@@ -42,7 +114,7 @@
     "source": "arxiv.org",
     "sourceKind": "web crawl",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-17T07:50:40.567Z"
+    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
   },
   {
     "id": "899779497ade9fce",
@@ -51,7 +123,7 @@
     "source": "designnotes.blog.gov.uk",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-03T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-17T07:50:40.567Z"
+    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
   },
   {
     "id": "1b6d557941ea733c",
@@ -60,7 +132,7 @@
     "source": "microsoft.com",
     "sourceKind": "web crawl",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-17T07:50:40.567Z"
+    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
   },
   {
     "id": "3a922286f4e7b41b",
@@ -69,7 +141,7 @@
     "source": "developers.openai.com",
     "sourceKind": "web crawl",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-17T07:50:40.567Z"
+    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
   },
   {
     "id": "b1017daf38c6a87b",
@@ -78,7 +150,7 @@
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-09T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-17T07:50:40.567Z"
+    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
   },
   {
     "id": "44e81f5b65f0958f",
@@ -87,7 +159,7 @@
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-09T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-17T07:50:40.567Z"
+    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
   },
   {
     "id": "3f203813eb5402eb",
@@ -96,7 +168,7 @@
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-09T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-17T07:50:40.567Z"
+    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
   },
   {
     "id": "2dd26193e79713b4",
@@ -105,7 +177,7 @@
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-09T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-17T07:50:40.567Z"
+    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
   },
   {
     "id": "e18bd0e04e9639c7",
@@ -114,52 +186,88 @@
     "source": "inet.ox.ac.uk",
     "sourceKind": "web crawl",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-17T07:50:40.567Z"
+    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
   },
   {
-    "id": "ac49910868b2f3b4",
-    "url": "https://www.itsnicethat.com/articles/creative-career-condundrums-if-you-could-jobs-advice-161126",
-    "title": "“Your biggest confidence blocker is comparison”",
+    "id": "f5b42df0ad487556",
+    "url": "https://www.itsnicethat.com/articles/nico-therin-photography-zanzibar-project-171126",
+    "title": "Nico Therin’s photographs of beach footballers in Zanzibar captures the sport in its purest form",
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
-    "publishedAt": "2026-11-16T11:00:00.000Z",
-    "firstCollectedAt": "2026-11-17T07:50:40.567Z"
+    "publishedAt": "2026-11-17T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
   },
   {
-    "id": "d06d00ea3e43e681",
-    "url": "https://www.itsnicethat.com/articles/maria-zilli-illustration-discover-161126",
-    "title": "Maria Zilli’s sketches steal brilliant costumes and characters from the theatre of the everyday",
+    "id": "cbbfe8bf728d9270",
+    "url": "https://www.itsnicethat.com/articles/north-design-sainsbury-museum-and-art-centre-graphic-design-171126",
+    "title": "A 1970s architectural sketch and Otl Aicher inspire North Design’s new art centre brand mark",
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
-    "publishedAt": "2026-11-16T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-17T07:50:40.567Z"
+    "publishedAt": "2026-11-17T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
   },
   {
-    "id": "68d86d907a147f7f",
-    "url": "https://www.itsnicethat.com/articles/mother-design-major-league-baseball-brand-refresh-graphic-design-project-161126",
-    "title": "Mother Design bats Major League Baseball into the future with five bespoke typefaces",
+    "id": "baeed59db90b2cf1",
+    "url": "https://www.itsnicethat.com/features/uefa-womens-champions-league-queenzine-swedish-girls-gothenburg-collaboration-sponsored-content-131126",
+    "title": "UEFA Women’s Champions League zine collaborates with art duo Swedish Girls to bring fandom to the streets of Gothenburg",
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
-    "publishedAt": "2026-11-16T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-17T07:50:40.567Z"
+    "publishedAt": "2026-11-13T11:00:00.000Z",
+    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
   },
   {
-    "id": "b0f3fa8f3db4ff94",
-    "url": "https://www.itsnicethat.com/articles/pov-graphic-design-helped-monetise-loneliness-creative-industry-161126",
-    "title": "How graphic design makes buying feel like belonging and brands feel like community",
+    "id": "29fe86d009a5434c",
+    "url": "https://www.itsnicethat.com/articles/vucko-etsy-motion-graphic-design-sponsored-content-121126",
+    "title": "Vucko’s motion identity for Etsy is built on joy, simplicity and craft",
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
-    "publishedAt": "2026-11-16T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-17T07:50:40.567Z"
+    "publishedAt": "2026-11-12T14:00:00.000Z",
+    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
   },
   {
-    "id": "3ece596ac9cf942a",
-    "url": "https://www.itsnicethat.com/features/the-nice-list-2026-creative-gift-guide-161126",
-    "title": "The Nice List 2026: explore It’s Nice That’s creative gift guide",
+    "id": "3bbaf4118f08c84f",
+    "url": "https://www.itsnicethat.com/articles/georgie-mcausland-illustration-discover-121126",
+    "title": "Georgie McAusland on refusing expensive tools to get more “squish and texture” into her drawings",
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
-    "publishedAt": "2026-11-16T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-17T07:50:40.567Z"
+    "publishedAt": "2026-11-12T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
+  },
+  {
+    "id": "981087988936a186",
+    "url": "https://www.itsnicethat.com/articles/dum-dum-studio-graphic-design-discover-121126",
+    "title": "Dum Dum Studio’s inventive design emerges from an open mind and a love of play",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-12T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
+  },
+  {
+    "id": "8b02f9081261d426",
+    "url": "https://www.itsnicethat.com/articles/biabum-graphic-design-illustration-discover-111126",
+    "title": "Why the retro brand identities of Biabum studio have illustration built into their DNA",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-11T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
+  },
+  {
+    "id": "9dde1de7fe74c52e",
+    "url": "https://www.smashingmagazine.com/2026/11/online-smashingconf-ai-2027",
+    "title": "Meet AI 2027 Conference (Dec 1) — Smashing Magazine",
+    "source": "smashingmagazine.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-17T12:00:00.000Z",
+    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
+  },
+  {
+    "id": "8f0d80b2c196b8b0",
+    "url": "https://www.smashingmagazine.com/2026/11/ai-sped-up-build-how-can-accessibility-testing-keep-up",
+    "title": "AI Sped Up The Build: How Can Accessibility Testing Keep Up? — Smashing Magazine",
+    "source": "smashingmagazine.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-17T08:00:00.000Z",
+    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
   },
   {
     "id": "3b112da4a4eadcec",
@@ -168,7 +276,16 @@
     "source": "smashingmagazine.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-12T10:00:00.000Z",
-    "firstCollectedAt": "2026-11-17T07:50:40.567Z"
+    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
+  },
+  {
+    "id": "06a24ebd71bde68c",
+    "url": "https://www.w3.org/blog/2026/the-multiplier-effect-how-authoring-tools-can-transform-web-accessibility",
+    "title": "The multiplier effect: How authoring tools can transform web accessibility | 2026 | Blog | W3C",
+    "source": "w3.org",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-10T16:05:00.000Z",
+    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
   },
   {
     "id": "ad5bc128fb288392",
@@ -176,8 +293,17 @@
     "title": "Harrison Chase on X: \"Goal Engineering: How to Design Goals\" / X",
     "source": "x.com",
     "sourceKind": "web crawl",
-    "publishedAt": "2026-11-17T07:50:42.443Z",
-    "firstCollectedAt": "2026-11-17T07:50:40.567Z"
+    "publishedAt": "2026-11-18T07:22:21.967Z",
+    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
+  },
+  {
+    "id": "aa7a4c71d62f1bd4",
+    "url": "https://buttondown.com/agenticdesignschool/archive/plans-before-edits-and-a-sandbox-the-agent-cant",
+    "title": "Plans before edits, and a sandbox the agent can&#x27;t change • Buttondown",
+    "source": "buttondown.com",
+    "sourceKind": "newsletter inbox",
+    "publishedAt": "2026-11-15T22:38:03.000Z",
+    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
   },
   {
     "id": "8f24ffa3c513c66e",
@@ -186,42 +312,6 @@
     "source": "github.com",
     "sourceKind": "newsletter inbox",
     "publishedAt": "2026-11-13T19:57:12.000Z",
-    "firstCollectedAt": "2026-11-17T07:50:40.567Z"
-  },
-  {
-    "id": "c8374ce2838a96ba",
-    "url": "https://www.w3.org/WAI/news/2026-02-05/coga",
-    "title": "For Review: Cognitive Accessibility Research Modules — First Draft Notes | Web Accessibility Initiative (WAI) | W3C",
-    "source": "w3.org",
-    "sourceKind": "web research",
-    "publishedAt": "2026-02-05T00:00:00.000Z",
-    "firstCollectedAt": "2026-11-17T07:50:40.567Z"
-  },
-  {
-    "id": "51b2ff5ad76c6a2b",
-    "url": "https://www.w3.org/WAI/ARIA/apg/about/introduction",
-    "title": "Introduction | APG | WAI | W3C",
-    "source": "w3.org",
-    "sourceKind": "web research",
-    "publishedAt": null,
-    "firstCollectedAt": "2026-11-17T07:50:40.567Z"
-  },
-  {
-    "id": "06ebb40a317e16fe",
-    "url": "https://developers.openai.com/plugins/concepts/ui-guidelines?trk=article-ssr-frontend-pulse_little-text-block",
-    "title": "UI guidelines – Plugins | OpenAI Developers",
-    "source": "developers.openai.com",
-    "sourceKind": "web research",
-    "publishedAt": null,
-    "firstCollectedAt": "2026-11-17T07:50:40.567Z"
-  },
-  {
-    "id": "82fac8160534e146",
-    "url": "https://developers.openai.com/blog/15-lessons-building-chatgpt-apps",
-    "title": "15 lessons learned building ChatGPT Apps | OpenAI Developers",
-    "source": "developers.openai.com",
-    "sourceKind": "web research",
-    "publishedAt": null,
-    "firstCollectedAt": "2026-11-17T07:50:40.567Z"
+    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
   }
 ]
