@@ -6,8 +6,8 @@
   "date": "2026-11-16",
   "editionNumber": "035",
   "displayDate": "Week of 2026-11-16",
-  "headline": "**Accessibility, evaluation, and junior pipelines** reshape AI design work",
-  "summary": "This week reinforces a shift from AI features to AI operating models. Accessibility, evaluation, and entry-level talent are becoming design problems with real workflow consequences, not just abstract principles.",
+  "headline": "**Accessibility and evals** reset the week for design teams",
+  "summary": "This week strengthens two existing questions rather than adding new ones. Accessibility guidance for LLM chat now has stronger evidence, and generated-content evaluation remains the clearest process shift worth tracking.",
   "questions": [
     {
       "id": "14",
@@ -25,13 +25,13 @@
       "why": "If you are adding chat or copilots, accessibility now affects the core interaction pattern. It changes your component architecture, state announcements, and QA checklist.",
       "uncertainty": "This is vendor-adjacent expert guidance, not evidence of widespread implementation or measured user outcomes. Better evidence would be field testing with assistive technology users across real products.",
       "counts": {
-        "total": 5,
-        "web": 5,
+        "total": 6,
+        "web": 6,
         "newsletters": 0
       },
-      "publisherCount": 5,
+      "publisherCount": 6,
       "firstSeen": "2026-11-09",
-      "lastUpdatedAt": "2026-11-18T07:22:20.728Z",
+      "lastUpdatedAt": "2026-11-19T07:20:02.202Z",
       "signals": [
         {
           "source": "smashingmagazine.com",
@@ -64,6 +64,36 @@
           "evidence": "We also ensured screen readers such as VoiceOver and TalkBack announce the character limit for the text input (if enabled in accessibility settings)."
         },
         {
+          "source": "scale.stanford.edu",
+          "title": "From Struggle To Success: Context-Aware Guidance For Screen Reader Users In Computer Use | SCALE Initiative",
+          "kind": "Web",
+          "timing": "Date unavailable",
+          "publishedAt": null,
+          "firstCollectedAt": "2026-11-19T07:20:02.202Z",
+          "sourceId": "1ccd342a5529c411",
+          "url": "https://scale.stanford.edu/ai/repository/struggle-success-context-aware-guidance-screen-reader-users-computer-use",
+          "happened": "AskEase improved task success and reduced workload in a study with 12 screen reader users.",
+          "changes": "This adds outcome evidence that AI assistance can help blind users complete tasks.",
+          "verdict": "Must read",
+          "role": "Supports",
+          "evidence": "In a within-subjects study with 12 screen reader users, AskEase significantly improved task success while reducing perceived workload, including physical demand, effort, and frustration."
+        },
+        {
+          "source": "github.com",
+          "title": "Accessibility‐first usability testing: best practices · uswds/uswds Wiki · GitHub",
+          "kind": "Web",
+          "timing": "Date unavailable",
+          "publishedAt": null,
+          "firstCollectedAt": "2026-11-17T07:50:40.567Z",
+          "sourceId": "3a0d76598860a4a1",
+          "url": "https://github.com/uswds/uswds/wiki/Accessibility%E2%80%90first-usability-testing%3A-best-practices",
+          "happened": "USWDS says accessibility expertise should be included in all phases of a project.",
+          "changes": "This supports shifting accessibility earlier in the process rather than bolting it on later.",
+          "verdict": "Read",
+          "role": "Context",
+          "evidence": "This approach means that projects should include accessibility expertise in all phases of the project as an essential — rather than expendable or reduceable —ingredient."
+        },
+        {
           "source": "w3.org",
           "title": "Accessibility Principles | Web Accessibility Initiative (WAI) | W3C",
           "kind": "Web",
@@ -92,21 +122,6 @@
           "verdict": "Read",
           "role": "Supports",
           "evidence": "In a within-subjects study with 12 screen reader users, AskEase significantly improved task success while reducing perceived workload, including physical demand, effort, and frustration."
-        },
-        {
-          "source": "github.com",
-          "title": "Accessibility‐first usability testing: best practices · uswds/uswds Wiki · GitHub",
-          "kind": "Web",
-          "timing": "Date unavailable",
-          "publishedAt": null,
-          "firstCollectedAt": "2026-11-17T07:50:40.567Z",
-          "sourceId": "3a0d76598860a4a1",
-          "url": "https://github.com/uswds/uswds/wiki/Accessibility%E2%80%90first-usability-testing%3A-best-practices",
-          "happened": "USWDS says accessibility expertise should be included in all phases of a project.",
-          "changes": "This supports shifting accessibility earlier in the process rather than bolting it on later.",
-          "verdict": "Read",
-          "role": "Context",
-          "evidence": "This approach means that projects should include accessibility expertise in all phases of the project as an essential — rather than expendable or reduceable —ingredient."
         }
       ],
       "further": [],
@@ -157,6 +172,21 @@
             "1ca7fb89d96171f9",
             "3a0d76598860a4a1"
           ]
+        },
+        {
+          "at": "2026-11-19T07:20:02.202Z",
+          "kind": "Evidence added",
+          "reason": "Answer retained verbatim. Added verified citations: https://scale.stanford.edu/ai/repository/struggle-success-context-aware-guidance-screen-reader-users-computer-use.",
+          "before": "The practical takeaway is that chat UIs need explicit nonvisual feedback, not just visual polish. Eric Bailey’s guidance argues for live regions, delayed loading announcements, headings, and stable response timing so screen reader users can tell when the model is working and when it has finished. That means accessibility work is not an add-on at the end; it changes the interaction model, the DOM structure, and how you represent state. The tradeoff is more implementation care and less reliance on pretty streaming effects. For teams shipping AI chat, the question is whether your interface is comprehensible when the screen is not.",
+          "after": "The practical takeaway is that chat UIs need explicit nonvisual feedback, not just visual polish. Eric Bailey’s guidance argues for live regions, delayed loading announcements, headings, and stable response timing so screen reader users can tell when the model is working and when it has finished. That means accessibility work is not an add-on at the end; it changes the interaction model, the DOM structure, and how you represent state. The tradeoff is more implementation care and less reliance on pretty streaming effects. For teams shipping AI chat, the question is whether your interface is comprehensible when the screen is not.",
+          "sourceIds": [
+            "06e82c00d26b79ff",
+            "968610a4a2b6b46e",
+            "1ccd342a5529c411",
+            "3a0d76598860a4a1",
+            "facde4f4fb2f4668",
+            "1ca7fb89d96171f9"
+          ]
         }
       ]
     },
@@ -197,7 +227,7 @@
           "changes": "This creates the need for a scalable evaluation method instead of traditional content review.",
           "verdict": "Must read",
           "role": "Supports",
-          "evidence": "For example: The final content isn’t generated until someone asks for it, so you can't review the exact output beforehand."
+          "evidence": "We generate content, evaluate it, look at the failures, check the ones we disagree with, change the prompts where needed, and run it all again."
         },
         {
           "source": "microsoft.com",
@@ -297,21 +327,6 @@
         },
         {
           "source": "itsnicethat.com",
-          "title": "Cat How: “The industry will have to rebuild the bottom rung on purpose”",
-          "kind": "Web",
-          "timing": "2026-11-09",
-          "publishedAt": "2026-11-09T08:00:00.000Z",
-          "firstCollectedAt": "2026-11-10T07:12:24.096Z",
-          "sourceId": "44e81f5b65f0958f",
-          "url": "https://www.itsnicethat.com/career-predictions/cat-how-091126",
-          "happened": "Cat How argues studios should deliberately rebuild the bottom rung and hire juniors as an investment in judgment.",
-          "changes": "This turns the general pressure into a specific hiring and training recommendation.",
-          "verdict": "Read",
-          "role": "Supports",
-          "evidence": "So I think the smartest studios will start hiring juniors again, deliberately, as an investment in judgement."
-        },
-        {
-          "source": "itsnicethat.com",
           "title": "Craft’s Dan Crowder: “The typical first creative role will be a 6-12 month contract”",
           "kind": "Web",
           "timing": "2026-11-09",
@@ -323,7 +338,22 @@
           "changes": "This suggests the entry point is shifting from permanent rung to supervised trial.",
           "verdict": "Read",
           "role": "Supports",
-          "evidence": "For employers, the responsibility is to make the onboarding and induction process meaningful, by agreeing what success looks like at six months and giving someone ownership of developing the person."
+          "evidence": "My prediction is that within three years the typical first creative role will be a 6-12 month contract, with a permanent offer coming after you’ve proved yourself."
+        },
+        {
+          "source": "itsnicethat.com",
+          "title": "Caterina Bianchini: “We can’t keep asking where all the good designers are if we’re unwilling to help anyone become one”",
+          "kind": "Web",
+          "timing": "2026-11-09",
+          "publishedAt": "2026-11-09T08:00:00.000Z",
+          "firstCollectedAt": "2026-11-10T07:12:24.096Z",
+          "sourceId": "2dd26193e79713b4",
+          "url": "https://www.itsnicethat.com/career-predictions/caterina-bianchini-091126",
+          "happened": "Studio NARI says using AI to replace first-rung work is short-sighted because much of becoming a good designer happens on the job.",
+          "changes": "This reinforces the risk that removing junior work also removes learning.",
+          "verdict": "Read",
+          "role": "Supports",
+          "evidence": "I think using AI to replace the first rung of a creative career is short-sighted, particularly when so much of becoming a good designer happens on the job."
         },
         {
           "source": "gov.uk",
@@ -342,18 +372,18 @@
         },
         {
           "source": "itsnicethat.com",
-          "title": "Caterina Bianchini: “We can’t keep asking where all the good designers are if we’re unwilling to help anyone become one”",
+          "title": "Cat How: “The industry will have to rebuild the bottom rung on purpose”",
           "kind": "Web",
           "timing": "2026-11-09",
           "publishedAt": "2026-11-09T08:00:00.000Z",
           "firstCollectedAt": "2026-11-10T07:12:24.096Z",
-          "sourceId": "2dd26193e79713b4",
-          "url": "https://www.itsnicethat.com/career-predictions/caterina-bianchini-091126",
-          "happened": "Studio NARI says using AI to replace first-rung work is short-sighted because much of becoming a good designer happens on the job.",
-          "changes": "This reinforces the risk that removing junior work also removes learning.",
+          "sourceId": "44e81f5b65f0958f",
+          "url": "https://www.itsnicethat.com/career-predictions/cat-how-091126",
+          "happened": "Cat How argues studios should deliberately rebuild the bottom rung and hire juniors as an investment in judgment.",
+          "changes": "This turns the general pressure into a specific hiring and training recommendation.",
           "verdict": "Read",
           "role": "Supports",
-          "evidence": "We’ll need to rethink how we teach, and make sure there’s still room to experiment and make mistakes."
+          "evidence": "So I think the smartest studios will start hiring juniors again, deliberately, as an investment in judgement."
         },
         {
           "source": "inet.ox.ac.uk",
@@ -552,15 +582,15 @@
     }
   ],
   "retiredQuestions": [],
-  "generatedAt": "2026-11-18T07:22:20.728Z",
-  "lastCollectedAt": "2026-11-18T07:22:20.728Z",
-  "crawlCompletedAt": "08:22",
+  "generatedAt": "2026-11-19T07:20:02.202Z",
+  "lastCollectedAt": "2026-11-19T07:20:02.202Z",
+  "crawlCompletedAt": "08:20",
   "finalizedAt": null,
-  "revision": "4f35aa4cf081",
-  "sourceCount": 35,
+  "revision": "7de34668ae57",
+  "sourceCount": 28,
   "webSourceCount": 7,
   "teamContributionCount": 5,
   "sourceWarnings": [
-    "29 candidate pages could not provide enough inspectable public article text. They were not used as new evidence."
+    "36 candidate pages could not provide enough inspectable public article text. They were not used as new evidence."
   ]
 }

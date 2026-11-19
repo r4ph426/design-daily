@@ -6,70 +6,25 @@
     "source": "w3.org",
     "sourceKind": "web research",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
+    "firstCollectedAt": "2026-11-19T07:20:02.202Z"
+  },
+  {
+    "id": "1ccd342a5529c411",
+    "url": "https://scale.stanford.edu/ai/repository/struggle-success-context-aware-guidance-screen-reader-users-computer-use",
+    "title": "From Struggle To Success: Context-Aware Guidance For Screen Reader Users In Computer Use | SCALE Initiative",
+    "source": "scale.stanford.edu",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-19T07:20:02.202Z"
   },
   {
     "id": "968610a4a2b6b46e",
     "url": "https://insidegovuk.blog.gov.uk/2026/08/19/designing-gov-uk-chat-for-the-gov-uk-app",
     "title": "Designing GOV.UK Chat for the GOV.UK app – Inside GOV.UK",
     "source": "insidegovuk.blog.gov.uk",
-    "sourceKind": "web research",
+    "sourceKind": "web crawl",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
-  },
-  {
-    "id": "6fbeb297d9e7f05e",
-    "url": "https://design-histories.education.gov.uk/find-user-insights/how-we-made-ai-responses-easier-to-use-and-trust",
-    "title": "How we made AI responses easier to use and trust - Design histories - Department for Education",
-    "source": "design-histories.education.gov.uk",
-    "sourceKind": "web research",
-    "publishedAt": null,
-    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
-  },
-  {
-    "id": "97e74c6ce5db3d9d",
-    "url": "https://mojdigital.blog.gov.uk/2024/08/14/combining-ai-and-content-design-to-extract-insights-from-service-assessment-reports",
-    "title": "Combining AI and content design to extract insights from service assessment reports – Justice Digital, Data and Science",
-    "source": "mojdigital.blog.gov.uk",
-    "sourceKind": "web research",
-    "publishedAt": null,
-    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
-  },
-  {
-    "id": "4efba4bafbc8adb2",
-    "url": "https://arxiv.org/abs/2607.24606",
-    "title": "[2607.24606] Verification-Conditioned Use: A Qualitative Study on How Generative AI Reshapes Learning, Autonomy, and Market Entry for Junior Software Developers",
-    "source": "arxiv.org",
-    "sourceKind": "web research",
-    "publishedAt": null,
-    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
-  },
-  {
-    "id": "c0db7376b606611a",
-    "url": "https://arxiv.org/abs/2607.17067",
-    "title": "[2607.17067] Who Will Become the Next Senior? How Generative AI Erodes the Development Pathway in Software Engineering",
-    "source": "arxiv.org",
-    "sourceKind": "web research",
-    "publishedAt": null,
-    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
-  },
-  {
-    "id": "b350fdaacfbe1f7c",
-    "url": "https://arxiv.org/abs/2609.34655",
-    "title": "[2609.34655] AI Tools Adoption across the Double Diamond Workflow: Phase, Mode, and Barriers in Designer Practice",
-    "source": "arxiv.org",
-    "sourceKind": "web research",
-    "publishedAt": null,
-    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
-  },
-  {
-    "id": "70e272954a7243ba",
-    "url": "https://arxiv.org/abs/2611.20519",
-    "title": "[2611.20519] AI Tool Adoption and Loyalty among Product, Industrial, and UX/UI Designers across the Double Diamond",
-    "source": "arxiv.org",
-    "sourceKind": "web research",
-    "publishedAt": null,
-    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
+    "firstCollectedAt": "2026-11-19T07:20:02.202Z"
   },
   {
     "id": "eb5efbb002abc569",
@@ -78,7 +33,7 @@
     "source": "gov.uk",
     "sourceKind": "web crawl",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
+    "firstCollectedAt": "2026-11-19T07:20:02.202Z"
   },
   {
     "id": "3a0d76598860a4a1",
@@ -87,7 +42,7 @@
     "source": "github.com",
     "sourceKind": "web crawl",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
+    "firstCollectedAt": "2026-11-19T07:20:02.202Z"
   },
   {
     "id": "63543de72f49632b",
@@ -96,7 +51,7 @@
     "source": "gov.uk",
     "sourceKind": "web crawl",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
+    "firstCollectedAt": "2026-11-19T07:20:02.202Z"
   },
   {
     "id": "06e82c00d26b79ff",
@@ -105,7 +60,7 @@
     "source": "smashingmagazine.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-05T13:00:00.000Z",
-    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
+    "firstCollectedAt": "2026-11-19T07:20:02.202Z"
   },
   {
     "id": "1ca7fb89d96171f9",
@@ -114,7 +69,7 @@
     "source": "arxiv.org",
     "sourceKind": "web crawl",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
+    "firstCollectedAt": "2026-11-19T07:20:02.202Z"
   },
   {
     "id": "899779497ade9fce",
@@ -123,7 +78,7 @@
     "source": "designnotes.blog.gov.uk",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-03T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
+    "firstCollectedAt": "2026-11-19T07:20:02.202Z"
   },
   {
     "id": "1b6d557941ea733c",
@@ -132,7 +87,7 @@
     "source": "microsoft.com",
     "sourceKind": "web crawl",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
+    "firstCollectedAt": "2026-11-19T07:20:02.202Z"
   },
   {
     "id": "3a922286f4e7b41b",
@@ -141,7 +96,7 @@
     "source": "developers.openai.com",
     "sourceKind": "web crawl",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
+    "firstCollectedAt": "2026-11-19T07:20:02.202Z"
   },
   {
     "id": "b1017daf38c6a87b",
@@ -150,7 +105,7 @@
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-09T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
+    "firstCollectedAt": "2026-11-19T07:20:02.202Z"
   },
   {
     "id": "44e81f5b65f0958f",
@@ -159,7 +114,7 @@
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-09T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
+    "firstCollectedAt": "2026-11-19T07:20:02.202Z"
   },
   {
     "id": "3f203813eb5402eb",
@@ -168,7 +123,7 @@
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-09T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
+    "firstCollectedAt": "2026-11-19T07:20:02.202Z"
   },
   {
     "id": "2dd26193e79713b4",
@@ -177,7 +132,7 @@
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-09T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
+    "firstCollectedAt": "2026-11-19T07:20:02.202Z"
   },
   {
     "id": "e18bd0e04e9639c7",
@@ -186,70 +141,79 @@
     "source": "inet.ox.ac.uk",
     "sourceKind": "web crawl",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
+    "firstCollectedAt": "2026-11-19T07:20:02.202Z"
   },
   {
-    "id": "f5b42df0ad487556",
-    "url": "https://www.itsnicethat.com/articles/nico-therin-photography-zanzibar-project-171126",
-    "title": "Nico Therin’s photographs of beach footballers in Zanzibar captures the sport in its purest form",
+    "id": "954282d45a14147f",
+    "url": "https://www.itsnicethat.com/features/agnes-lee-metropolitan-diary-illustration-spotlight-181126",
+    "title": "Illustrator Agnes Lee on 50 years of Metropolitan Diary, the hand-drawn column where NYC is the main theme",
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
-    "publishedAt": "2026-11-17T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
+    "publishedAt": "2026-11-18T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-19T07:20:02.202Z"
   },
   {
-    "id": "cbbfe8bf728d9270",
-    "url": "https://www.itsnicethat.com/articles/north-design-sainsbury-museum-and-art-centre-graphic-design-171126",
-    "title": "A 1970s architectural sketch and Otl Aicher inspire North Design’s new art centre brand mark",
+    "id": "8a5aadbc91cd77f1",
+    "url": "https://www.itsnicethat.com/articles/callum-abbott-other-almanac-mutt-art-review-graphic-design-publication-project-181126",
+    "title": "“A good designer can make a free font look expensive”: Callum Abbott on designing publications around type",
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
-    "publishedAt": "2026-11-17T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
+    "publishedAt": "2026-11-18T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-19T07:20:02.202Z"
   },
   {
-    "id": "baeed59db90b2cf1",
-    "url": "https://www.itsnicethat.com/features/uefa-womens-champions-league-queenzine-swedish-girls-gothenburg-collaboration-sponsored-content-131126",
-    "title": "UEFA Women’s Champions League zine collaborates with art duo Swedish Girls to bring fandom to the streets of Gothenburg",
+    "id": "756f680999fb3347",
+    "url": "https://www.itsnicethat.com/articles/matthew-wilcock-sound-design-project-181126",
+    "title": "Matthew Wilcock’s data-driven approach to sound design lets everyday life make the music",
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
-    "publishedAt": "2026-11-13T11:00:00.000Z",
-    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
+    "publishedAt": "2026-11-18T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-19T07:20:02.202Z"
   },
   {
-    "id": "29fe86d009a5434c",
-    "url": "https://www.itsnicethat.com/articles/vucko-etsy-motion-graphic-design-sponsored-content-121126",
-    "title": "Vucko’s motion identity for Etsy is built on joy, simplicity and craft",
+    "id": "ac49910868b2f3b4",
+    "url": "https://www.itsnicethat.com/articles/creative-career-condundrums-if-you-could-jobs-advice-161126",
+    "title": "“Your biggest confidence blocker is comparison”",
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
-    "publishedAt": "2026-11-12T14:00:00.000Z",
-    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
+    "publishedAt": "2026-11-16T11:00:00.000Z",
+    "firstCollectedAt": "2026-11-19T07:20:02.202Z"
   },
   {
-    "id": "3bbaf4118f08c84f",
-    "url": "https://www.itsnicethat.com/articles/georgie-mcausland-illustration-discover-121126",
-    "title": "Georgie McAusland on refusing expensive tools to get more “squish and texture” into her drawings",
+    "id": "d06d00ea3e43e681",
+    "url": "https://www.itsnicethat.com/articles/maria-zilli-illustration-discover-161126",
+    "title": "Maria Zilli’s sketches steal brilliant costumes and characters from the theatre of the everyday",
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
-    "publishedAt": "2026-11-12T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
+    "publishedAt": "2026-11-16T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-19T07:20:02.202Z"
   },
   {
-    "id": "981087988936a186",
-    "url": "https://www.itsnicethat.com/articles/dum-dum-studio-graphic-design-discover-121126",
-    "title": "Dum Dum Studio’s inventive design emerges from an open mind and a love of play",
+    "id": "68d86d907a147f7f",
+    "url": "https://www.itsnicethat.com/articles/mother-design-major-league-baseball-brand-refresh-graphic-design-project-161126",
+    "title": "Mother Design bats Major League Baseball into the future with five bespoke typefaces",
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
-    "publishedAt": "2026-11-12T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
+    "publishedAt": "2026-11-16T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-19T07:20:02.202Z"
   },
   {
-    "id": "8b02f9081261d426",
-    "url": "https://www.itsnicethat.com/articles/biabum-graphic-design-illustration-discover-111126",
-    "title": "Why the retro brand identities of Biabum studio have illustration built into their DNA",
+    "id": "b0f3fa8f3db4ff94",
+    "url": "https://www.itsnicethat.com/articles/pov-graphic-design-helped-monetise-loneliness-creative-industry-161126",
+    "title": "How graphic design makes buying feel like belonging and brands feel like community",
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
-    "publishedAt": "2026-11-11T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
+    "publishedAt": "2026-11-16T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-19T07:20:02.202Z"
+  },
+  {
+    "id": "3ece596ac9cf942a",
+    "url": "https://www.itsnicethat.com/features/the-nice-list-2026-creative-gift-guide-161126",
+    "title": "The Nice List 2026: explore It’s Nice That’s creative gift guide",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-16T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-19T07:20:02.202Z"
   },
   {
     "id": "9dde1de7fe74c52e",
@@ -258,7 +222,7 @@
     "source": "smashingmagazine.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-17T12:00:00.000Z",
-    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
+    "firstCollectedAt": "2026-11-19T07:20:02.202Z"
   },
   {
     "id": "8f0d80b2c196b8b0",
@@ -267,7 +231,7 @@
     "source": "smashingmagazine.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-17T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
+    "firstCollectedAt": "2026-11-19T07:20:02.202Z"
   },
   {
     "id": "3b112da4a4eadcec",
@@ -276,16 +240,7 @@
     "source": "smashingmagazine.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-12T10:00:00.000Z",
-    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
-  },
-  {
-    "id": "06a24ebd71bde68c",
-    "url": "https://www.w3.org/blog/2026/the-multiplier-effect-how-authoring-tools-can-transform-web-accessibility",
-    "title": "The multiplier effect: How authoring tools can transform web accessibility | 2026 | Blog | W3C",
-    "source": "w3.org",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-10T16:05:00.000Z",
-    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
+    "firstCollectedAt": "2026-11-19T07:20:02.202Z"
   },
   {
     "id": "ad5bc128fb288392",
@@ -293,25 +248,7 @@
     "title": "Harrison Chase on X: \"Goal Engineering: How to Design Goals\" / X",
     "source": "x.com",
     "sourceKind": "web crawl",
-    "publishedAt": "2026-11-18T07:22:21.967Z",
-    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
-  },
-  {
-    "id": "aa7a4c71d62f1bd4",
-    "url": "https://buttondown.com/agenticdesignschool/archive/plans-before-edits-and-a-sandbox-the-agent-cant",
-    "title": "Plans before edits, and a sandbox the agent can&#x27;t change • Buttondown",
-    "source": "buttondown.com",
-    "sourceKind": "newsletter inbox",
-    "publishedAt": "2026-11-15T22:38:03.000Z",
-    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
-  },
-  {
-    "id": "8f24ffa3c513c66e",
-    "url": "https://github.com/FujiwaraChoki/supoclip?_bhlid=5dc8a3c416da9ca9c83fdfdaefa040b4fa94bd83",
-    "title": "GitHub - FujiwaraChoki/supoclip: An open-source OpusClip alternative · GitHub",
-    "source": "github.com",
-    "sourceKind": "newsletter inbox",
-    "publishedAt": "2026-11-13T19:57:12.000Z",
-    "firstCollectedAt": "2026-11-18T07:22:20.728Z"
+    "publishedAt": "2026-11-19T07:20:03.225Z",
+    "firstCollectedAt": "2026-11-19T07:20:02.202Z"
   }
 ]
