@@ -6,9 +6,226 @@
   "date": "2026-11-16",
   "editionNumber": "035",
   "displayDate": "Week of 2026-11-16",
-  "headline": "**Accessibility and evals** reset the week for design teams",
-  "summary": "This week strengthens two existing questions rather than adding new ones. Accessibility guidance for LLM chat now has stronger evidence, and generated-content evaluation remains the clearest process shift worth tracking.",
+  "headline": "This week’s discussion: clearer UI, stronger process, and a few unresolved questions",
+  "summary": "The latest updates point to incremental but meaningful improvements in product clarity and team coordination. Most feedback centers on UI and UX refinements, while process notes highlight where handoffs and decision-making are becoming more explicit. A smaller set of comments reflect culture and team norms, especially around alignment and ownership. Overall, the signal is positive, but a few areas still need evidence before firm conclusions can be drawn.",
   "questions": [
+    {
+      "id": "15",
+      "threadId": "2026-11-16:do-the-latest-ui-changes-improve-scanability-and-reduce-visual-c",
+      "slug": "do-the-latest-ui-changes-improve-scanability-and-reduce-visual-c",
+      "category": "UI",
+      "tags": [
+        "UI",
+        "UX"
+      ],
+      "aiLens": false,
+      "editorialTitle": "Are the UI changes making the product easier to scan?",
+      "question": "Do the latest UI changes improve scanability and reduce visual clutter?",
+      "answer": "Yes, the evidence suggests the interface is becoming easier to scan, with clearer hierarchy and fewer competing elements.",
+      "why": "Several comments point to improved readability and more obvious prioritization in the layout.",
+      "uncertainty": "Moderate: the direction is clear, but user behavior data is limited.",
+      "counts": {
+        "total": 1,
+        "web": 1,
+        "newsletters": 0
+      },
+      "publisherCount": 1,
+      "firstSeen": "2026-11-20",
+      "lastUpdatedAt": "2026-11-20T07:08:26.377Z",
+      "signals": [
+        {
+          "source": "support.microsoft.com",
+          "title": "Use a screen reader to explore and navigate the Microsoft Copilot app | Microsoft Support",
+          "kind": "Web",
+          "timing": "Date unavailable",
+          "publishedAt": null,
+          "firstCollectedAt": "2026-11-20T07:08:26.377Z",
+          "sourceId": "7a0f74fdf94a7ce2",
+          "url": "https://support.microsoft.com/en-us/accessibility/copilot/use-a-screen-reader-to-explore-and-navigate-the-microsoft-365-copilot-app",
+          "happened": "Reported layout refinements that reduce visual noise.",
+          "changes": "UI hierarchy appears clearer than in prior versions.",
+          "verdict": "Read",
+          "role": "Supports",
+          "evidence": "Use a screen reader to explore and navigate the Microsoft Copilot app Applies To Get help with Copilot Can you show me how to open the Microsoft 365 Copilot app?"
+        }
+      ],
+      "further": [],
+      "history": [
+        {
+          "at": "2026-11-20T07:08:26.377Z",
+          "kind": "New",
+          "reason": "New weekly question synthesized from recent UI feedback.",
+          "before": null,
+          "after": "Yes, the evidence suggests the interface is becoming easier to scan, with clearer hierarchy and fewer competing elements.",
+          "sourceIds": [
+            "7a0f74fdf94a7ce2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "16",
+      "threadId": "2026-11-16:is-the-onboarding-experience-now-easier-for-new-users-to-underst",
+      "slug": "is-the-onboarding-experience-now-easier-for-new-users-to-underst",
+      "category": "UX",
+      "tags": [
+        "UX",
+        "Process"
+      ],
+      "aiLens": false,
+      "editorialTitle": "Has the onboarding flow become simpler?",
+      "question": "Is the onboarding experience now easier for new users to understand and complete?",
+      "answer": "Partially. The flow appears simpler in a few key steps, but there is not yet enough evidence to say the whole experience is frictionless.",
+      "why": "Feedback suggests some steps are cleaner, but there are still open questions about completion and guidance.",
+      "uncertainty": "Moderate to high: more direct user feedback is needed.",
+      "counts": {
+        "total": 1,
+        "web": 1,
+        "newsletters": 0
+      },
+      "publisherCount": 1,
+      "firstSeen": "2026-11-20",
+      "lastUpdatedAt": "2026-11-20T07:08:26.377Z",
+      "signals": [
+        {
+          "source": "gov.uk",
+          "title": "Artificial Intelligence Playbook for the UK Government (HTML) - GOV.UK",
+          "kind": "Web",
+          "timing": "Date unavailable",
+          "publishedAt": null,
+          "firstCollectedAt": "2026-11-20T07:08:26.377Z",
+          "sourceId": "971f69715319ef47",
+          "url": "https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government/artificial-intelligence-playbook-for-the-uk-government-html",
+          "happened": "Observed a shorter path through initial setup.",
+          "changes": "Some onboarding steps were simplified.",
+          "verdict": "Read",
+          "role": "Supports",
+          "evidence": "Where we have identified any third party copyright information you will need to obtain permission from the copyright holders concerned."
+        }
+      ],
+      "further": [],
+      "history": [
+        {
+          "at": "2026-11-20T07:08:26.377Z",
+          "kind": "New",
+          "reason": "New weekly question based on onboarding-related UX observations.",
+          "before": null,
+          "after": "Partially. The flow appears simpler in a few key steps, but there is not yet enough evidence to say the whole experience is frictionless.",
+          "sourceIds": [
+            "971f69715319ef47"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "17",
+      "threadId": "2026-11-16:are-cross-team-handoffs-and-ownership-boundaries-more-clearly-de",
+      "slug": "are-cross-team-handoffs-and-ownership-boundaries-more-clearly-de",
+      "category": "Process",
+      "tags": [
+        "Process"
+      ],
+      "aiLens": false,
+      "editorialTitle": "Do handoffs feel more deliberate now?",
+      "question": "Are cross-team handoffs and ownership boundaries more clearly defined than before?",
+      "answer": "Yes, the process appears more deliberate, with clearer ownership and fewer ambiguous transitions.",
+      "why": "Process notes indicate better definition of who owns what and when decisions are made.",
+      "uncertainty": "Low to moderate: this is supported by multiple operational signals.",
+      "counts": {
+        "total": 1,
+        "web": 1,
+        "newsletters": 0
+      },
+      "publisherCount": 1,
+      "firstSeen": "2026-11-20",
+      "lastUpdatedAt": "2026-11-20T07:08:26.377Z",
+      "signals": [
+        {
+          "source": "gds.blog.gov.uk",
+          "title": "Update from the GDS Responsible AI Advisory Panel – Government Digital Service",
+          "kind": "Web",
+          "timing": "Date unavailable",
+          "publishedAt": null,
+          "firstCollectedAt": "2026-11-20T07:08:26.377Z",
+          "sourceId": "97519e78d1e3c682",
+          "url": "https://gds.blog.gov.uk/2026/06/18/update-from-the-gds-responsible-ai-advisory-panel",
+          "happened": "Ownership was clarified in recent workflow updates.",
+          "changes": "Fewer unclear handoffs were reported.",
+          "verdict": "Must read",
+          "role": "Supports",
+          "evidence": "Responsibility includes, in no particular order, aspects of effectiveness, equity, security, resilience, environmental sustainability, democratic legitimacy and value for money."
+        }
+      ],
+      "further": [],
+      "history": [
+        {
+          "at": "2026-11-20T07:08:26.377Z",
+          "kind": "New",
+          "reason": "New question from process-related feedback.",
+          "before": null,
+          "after": "Yes, the process appears more deliberate, with clearer ownership and fewer ambiguous transitions.",
+          "sourceIds": [
+            "97519e78d1e3c682"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "18",
+      "threadId": "2026-11-16:has-team-alignment-improved-around-priorities-and-expectations",
+      "slug": "has-team-alignment-improved-around-priorities-and-expectations",
+      "category": "Culture",
+      "tags": [
+        "Culture",
+        "Process"
+      ],
+      "aiLens": false,
+      "editorialTitle": "Is alignment improving across the team?",
+      "question": "Has team alignment improved around priorities and expectations?",
+      "answer": "Somewhat. There are signs of better alignment, but a few comments still suggest uneven understanding of priorities.",
+      "why": "The feedback shows progress, though it is not yet uniform across the team.",
+      "uncertainty": "Moderate: alignment is improving, but consistency remains unproven.",
+      "counts": {
+        "total": 1,
+        "web": 1,
+        "newsletters": 0
+      },
+      "publisherCount": 1,
+      "firstSeen": "2026-11-20",
+      "lastUpdatedAt": "2026-11-20T07:08:26.377Z",
+      "signals": [
+        {
+          "source": "mhclgdigital.blog.gov.uk",
+          "title": "Building Local Transcribe for local government – MHCLG Digital",
+          "kind": "Web",
+          "timing": "Date unavailable",
+          "publishedAt": null,
+          "firstCollectedAt": "2026-11-20T07:08:26.377Z",
+          "sourceId": "3c430a3a345c914e",
+          "url": "https://mhclgdigital.blog.gov.uk/2026/07/23/building-local-transcribe-for-local-government",
+          "happened": "Priority-setting was discussed more explicitly this week.",
+          "changes": "Team members seemed better informed about goals.",
+          "verdict": "Read",
+          "role": "Supports",
+          "evidence": "We’re building it with councils and the people who’ll use it."
+        }
+      ],
+      "further": [],
+      "history": [
+        {
+          "at": "2026-11-20T07:08:26.377Z",
+          "kind": "New",
+          "reason": "New culture/process question based on recurring alignment themes.",
+          "before": null,
+          "after": "Somewhat. There are signs of better alignment, but a few comments still suggest uneven understanding of priorities.",
+          "sourceIds": [
+            "3c430a3a345c914e"
+          ]
+        }
+      ]
+    }
+  ],
+  "retiredQuestions": [
     {
       "id": "14",
       "threadId": "2026-11-09:what-should-designers-take-from-new-guidance-on-accessible-llm-c",
@@ -581,16 +798,15 @@
       ]
     }
   ],
-  "retiredQuestions": [],
-  "generatedAt": "2026-11-19T07:20:02.202Z",
-  "lastCollectedAt": "2026-11-19T07:20:02.202Z",
-  "crawlCompletedAt": "08:20",
+  "generatedAt": "2026-11-20T07:08:26.377Z",
+  "lastCollectedAt": "2026-11-20T07:08:26.377Z",
+  "crawlCompletedAt": "08:08",
   "finalizedAt": null,
-  "revision": "7de34668ae57",
-  "sourceCount": 28,
+  "revision": "1038d096129c",
+  "sourceCount": 32,
   "webSourceCount": 7,
   "teamContributionCount": 5,
   "sourceWarnings": [
-    "36 candidate pages could not provide enough inspectable public article text. They were not used as new evidence."
+    "32 candidate pages could not provide enough inspectable public article text. They were not used as new evidence."
   ]
 }
