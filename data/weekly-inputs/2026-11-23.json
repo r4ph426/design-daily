@@ -1,0 +1,200 @@
+[
+  {
+    "id": "8f0d80b2c196b8b0",
+    "url": "https://www.smashingmagazine.com/2026/11/ai-sped-up-build-how-can-accessibility-testing-keep-up",
+    "title": "AI Sped Up The Build: How Can Accessibility Testing Keep Up? — Smashing Magazine",
+    "source": "smashingmagazine.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-17T08:00:00.000Z",
+    "firstCollectedAt": "2026-11-23T07:30:17.230Z"
+  },
+  {
+    "id": "3f28258957630601",
+    "url": "https://forum.figma.com/ask-the-community-7/figma-s-mcp-product-57290",
+    "title": "Figma's MCP product | Figma Forum",
+    "source": "forum.figma.com",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-23T07:30:17.230Z"
+  },
+  {
+    "id": "7a0f74fdf94a7ce2",
+    "url": "https://support.microsoft.com/en-us/accessibility/copilot/use-a-screen-reader-to-explore-and-navigate-the-microsoft-365-copilot-app",
+    "title": "Use a screen reader to explore and navigate the Microsoft Copilot app | Microsoft Support",
+    "source": "support.microsoft.com",
+    "sourceKind": "web crawl",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-23T07:30:17.230Z"
+  },
+  {
+    "id": "971f69715319ef47",
+    "url": "https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government/artificial-intelligence-playbook-for-the-uk-government-html",
+    "title": "Artificial Intelligence Playbook for the UK Government (HTML) - GOV.UK",
+    "source": "gov.uk",
+    "sourceKind": "web crawl",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-23T07:30:17.230Z"
+  },
+  {
+    "id": "97519e78d1e3c682",
+    "url": "https://gds.blog.gov.uk/2026/06/18/update-from-the-gds-responsible-ai-advisory-panel",
+    "title": "Update from the GDS Responsible AI Advisory Panel – Government Digital Service",
+    "source": "gds.blog.gov.uk",
+    "sourceKind": "web crawl",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-23T07:30:17.230Z"
+  },
+  {
+    "id": "3c430a3a345c914e",
+    "url": "https://mhclgdigital.blog.gov.uk/2026/07/23/building-local-transcribe-for-local-government",
+    "title": "Building Local Transcribe for local government – MHCLG Digital",
+    "source": "mhclgdigital.blog.gov.uk",
+    "sourceKind": "web crawl",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-23T07:30:17.230Z"
+  },
+  {
+    "id": "52183692e4ba2709",
+    "url": "https://www.itsnicethat.com/articles/alice-poyzer-other-joys-photography-discover-191126",
+    "title": "Taxidermy, cat shows, and beauty pageants: Alice Poyzer takes us into her world and what it means to be neurodivergent",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-19T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-23T07:30:17.230Z"
+  },
+  {
+    "id": "dff78e608047ff63",
+    "url": "https://www.itsnicethat.com/articles/nika-belskaya-vivid-cereal-graphic-design-discover-191126",
+    "title": "Enter the Vivid Cereal multiverse: Nika Belskaya’s “Frankenstein” world of graphic storytelling",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-19T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-23T07:30:17.230Z"
+  },
+  {
+    "id": "954282d45a14147f",
+    "url": "https://www.itsnicethat.com/features/agnes-lee-metropolitan-diary-illustration-spotlight-181126",
+    "title": "Illustrator Agnes Lee on 50 years of Metropolitan Diary, the hand-drawn column where NYC is the main theme",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-18T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-23T07:30:17.230Z"
+  },
+  {
+    "id": "8a5aadbc91cd77f1",
+    "url": "https://www.itsnicethat.com/articles/callum-abbott-other-almanac-mutt-art-review-graphic-design-publication-project-181126",
+    "title": "“A good designer can make a free font look expensive”: Callum Abbott on designing publications around type",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-18T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-23T07:30:17.230Z"
+  },
+  {
+    "id": "756f680999fb3347",
+    "url": "https://www.itsnicethat.com/articles/matthew-wilcock-sound-design-project-181126",
+    "title": "Matthew Wilcock’s data-driven approach to sound design lets everyday life make the music",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-18T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-23T07:30:17.230Z"
+  },
+  {
+    "id": "f5b42df0ad487556",
+    "url": "https://www.itsnicethat.com/articles/nico-therin-photography-zanzibar-project-171126",
+    "title": "Nico Therin’s photographs of beach footballers in Zanzibar captures the sport in its purest form",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-17T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-23T07:30:17.230Z"
+  },
+  {
+    "id": "cbbfe8bf728d9270",
+    "url": "https://www.itsnicethat.com/articles/north-design-sainsbury-museum-and-art-centre-graphic-design-171126",
+    "title": "A 1970s architectural sketch and Otl Aicher inspire North Design’s new art centre brand mark",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-17T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-23T07:30:17.230Z"
+  },
+  {
+    "id": "ac49910868b2f3b4",
+    "url": "https://www.itsnicethat.com/articles/creative-career-condundrums-if-you-could-jobs-advice-161126",
+    "title": "“Your biggest confidence blocker is comparison”",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-16T11:00:00.000Z",
+    "firstCollectedAt": "2026-11-23T07:30:17.230Z"
+  },
+  {
+    "id": "d06d00ea3e43e681",
+    "url": "https://www.itsnicethat.com/articles/maria-zilli-illustration-discover-161126",
+    "title": "Maria Zilli’s sketches steal brilliant costumes and characters from the theatre of the everyday",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-16T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-23T07:30:17.230Z"
+  },
+  {
+    "id": "68d86d907a147f7f",
+    "url": "https://www.itsnicethat.com/articles/mother-design-major-league-baseball-brand-refresh-graphic-design-project-161126",
+    "title": "Mother Design bats Major League Baseball into the future with five bespoke typefaces",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-16T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-23T07:30:17.230Z"
+  },
+  {
+    "id": "b0f3fa8f3db4ff94",
+    "url": "https://www.itsnicethat.com/articles/pov-graphic-design-helped-monetise-loneliness-creative-industry-161126",
+    "title": "How graphic design makes buying feel like belonging and brands feel like community",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-16T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-23T07:30:17.230Z"
+  },
+  {
+    "id": "3ece596ac9cf942a",
+    "url": "https://www.itsnicethat.com/features/the-nice-list-2026-creative-gift-guide-161126",
+    "title": "The Nice List 2026: explore It’s Nice That’s creative gift guide",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-16T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-23T07:30:17.230Z"
+  },
+  {
+    "id": "9dde1de7fe74c52e",
+    "url": "https://www.smashingmagazine.com/2026/11/online-smashingconf-ai-2027",
+    "title": "Meet AI 2027 Conference (Dec 1) — Smashing Magazine",
+    "source": "smashingmagazine.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-17T12:00:00.000Z",
+    "firstCollectedAt": "2026-11-23T07:30:17.230Z"
+  },
+  {
+    "id": "f50f9f1c892580a6",
+    "url": "https://www.linkedin.com/posts/ralfchille_we-moved-design-into-the-repo-activity-7529125116010504192-WegC?rcm=ACoAABW0mB8BYRHo8ehBcHiwAjpZoPAdJomSjQ0",
+    "title": "We moved design into the repo. | Ralf Chille | 26 comments",
+    "source": "linkedin.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-23T07:30:18.757Z",
+    "firstCollectedAt": "2026-11-23T07:30:17.230Z"
+  },
+  {
+    "id": "ad5bc128fb288392",
+    "url": "https://x.com/hwchase17/status/2121635683999883577?shem=dsdf,sharefoc,agadiscoversdl,adpsc,,sh/x/discover/m1/4",
+    "title": "Harrison Chase on X: \"Goal Engineering: How to Design Goals\" / X",
+    "source": "x.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-23T07:30:18.664Z",
+    "firstCollectedAt": "2026-11-23T07:30:17.230Z"
+  },
+  {
+    "id": "be055e2d2b2d7384",
+    "url": "https://github.com/elder-plinius/G0DM0D3?_bhlid=84dbeaae5d02f921c1bd7b866a3ae2568f5a075b",
+    "title": "GitHub - elder-plinius/G0DM0D3: LIBERATED AI CHAT · GitHub",
+    "source": "github.com",
+    "sourceKind": "newsletter inbox",
+    "publishedAt": "2026-11-20T20:20:03.000Z",
+    "firstCollectedAt": "2026-11-23T07:30:17.230Z"
+  }
+]
