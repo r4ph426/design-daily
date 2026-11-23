@@ -19,5 +19,8 @@
   },
   "2026-11-16:published": {
     "status": "accepted"
+  },
+  "2026-11-23:failed": {
+    "status": "sending"
   }
 }
