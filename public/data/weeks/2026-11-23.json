@@ -6,9 +6,79 @@
   "date": "2026-11-23",
   "editionNumber": "036",
   "displayDate": "Week of 2026-11-23",
-  "headline": "**Guardrails** now matter more than AI speed",
-  "summary": "This week’s evidence still points to the same core pattern: AI is accelerating design and build work faster than validation, so teams are moving judgment earlier and making ownership more explicit. The practical consequence for design managers is that quality now depends less on producing faster drafts and more on where review, accessibility, and accountability are embedded.",
+  "headline": "**Accessible AI workflows** are moving earlier, while **repo-based design** raises review burdens",
+  "summary": "This week shifts toward earlier accessibility checks and tighter design-engineering handoffs, but both depend on stronger operating models than tools alone. The clearest new consequence is that speed gains are now creating more review, not less, for designers and teams.",
   "questions": [
+    {
+      "id": "21",
+      "threadId": "2026-11-23:are-accessibility-checks-keeping-up-with-faster-ai-assisted-desi",
+      "slug": "are-accessibility-checks-keeping-up-with-faster-ai-assisted-desi",
+      "category": "UX",
+      "tags": [
+        "UX",
+        "Process"
+      ],
+      "aiLens": true,
+      "editorialTitle": "Is **accessibility** keeping pace?",
+      "question": "Are accessibility checks keeping up with faster AI-assisted design and build work?",
+      "answer": "Not yet. The clearest evidence says AI is accelerating planning, design, and development much faster than validation, and mature teams are compensating by moving accessibility checks earlier and embedding them into handoffs, pull requests, and CI. Accessibility is becoming less of a late QA gate and more of a workflow responsibility, but only for teams that can sustain the extra coordination and human review.",
+      "why": "I need to move accessibility decisions earlier in my process, or speed gains will turn into downstream fixes.",
+      "uncertainty": "What remains unknown is whether these practices are spreading beyond mature programs and whether they measurably reduce accessibility regressions. I’d change this if we saw direct evidence that high-speed AI workflows are still delivering accessible output without extra review.",
+      "counts": {
+        "total": 2,
+        "web": 2,
+        "newsletters": 0
+      },
+      "publisherCount": 2,
+      "firstSeen": "2026-11-23",
+      "lastUpdatedAt": "2026-11-23T07:30:17.230Z",
+      "signals": [
+        {
+          "source": "smashingmagazine.com",
+          "title": "AI Sped Up The Build: How Can Accessibility Testing Keep Up? — Smashing Magazine",
+          "kind": "Web",
+          "timing": "2026-11-17",
+          "publishedAt": "2026-11-17T08:00:00.000Z",
+          "firstCollectedAt": "2026-11-23T07:30:17.230Z",
+          "sourceId": "8f0d80b2c196b8b0",
+          "url": "https://www.smashingmagazine.com/2026/11/ai-sped-up-build-how-can-accessibility-testing-keep-up",
+          "happened": "The article framed the core problem as AI outpacing testing.",
+          "changes": "Build speed is ahead of validation speed.",
+          "verdict": "Must read",
+          "role": "Supports",
+          "evidence": "AI has sped up how teams design and build, but quality assurance (QA) testing hasn’t kept pace, and the web may be getting less accessible."
+        },
+        {
+          "source": "mhclgdigital.blog.gov.uk",
+          "title": "Building Local Transcribe for local government – MHCLG Digital",
+          "kind": "Web",
+          "timing": "Date unavailable",
+          "publishedAt": null,
+          "firstCollectedAt": "2026-11-23T07:30:17.230Z",
+          "sourceId": "3c430a3a345c914e",
+          "url": "https://mhclgdigital.blog.gov.uk/2026/07/23/building-local-transcribe-for-local-government",
+          "happened": "Local Transcribe said it will embed accessibility from the start.",
+          "changes": "Accessibility is being treated as an upstream design requirement.",
+          "verdict": "Read",
+          "role": "Context",
+          "evidence": "UK Design System , embedding accessibility from the start and ensuring it will be independently assessed before launch."
+        }
+      ],
+      "further": [],
+      "history": [
+        {
+          "at": "2026-11-23T07:30:17.230Z",
+          "kind": "New",
+          "reason": "This adds a substantive question about the practical consequence of AI speed on accessibility quality, supported by a primary study and workflow guidance.",
+          "before": null,
+          "after": "Not yet. The clearest evidence says AI is accelerating planning, design, and development much faster than validation, and mature teams are compensating by moving accessibility checks earlier and embedding them into handoffs, pull requests, and CI. Accessibility is becoming less of a late QA gate and more of a workflow responsibility, but only for teams that can sustain the extra coordination and human review.",
+          "sourceIds": [
+            "8f0d80b2c196b8b0",
+            "3c430a3a345c914e"
+          ]
+        }
+      ]
+    },
     {
       "id": "17",
       "threadId": "2026-11-16:are-cross-team-handoffs-and-ownership-boundaries-more-clearly-de",
@@ -45,14 +115,14 @@
           "changes": "It recommended placing responsibility at handoff, pull request, and review stages.",
           "verdict": "Read",
           "role": "Supports",
-          "evidence": "Build The Judgment Calls Into Your Workflow As AI takes on more work, people need to stay involved at three points: finding issues, fixing them, and documenting the evidence."
+          "evidence": "” When teams decide, in advance, who is responsible for each check, they create the clarity and communication that our data shows sets the organizations improving accessibility apart from those stuck fighting ever-growin"
         },
         {
           "source": "linkedin.com",
-          "title": "We moved design into the repo. | Ralf Chille | 26 comments",
+          "title": "We moved design into the repo. | Ralf Chille | 29 comments",
           "kind": "Web",
-          "timing": "2026-11-23",
-          "publishedAt": "2026-11-23T07:30:18.757Z",
+          "timing": "2026-11-24",
+          "publishedAt": "2026-11-24T09:49:50.434Z",
           "firstCollectedAt": "2026-11-23T07:30:17.230Z",
           "sourceId": "f50f9f1c892580a6",
           "url": "https://www.linkedin.com/posts/ralfchille_we-moved-design-into-the-repo-activity-7529125116010504192-WegC?rcm=ACoAABW0mB8BYRHo8ehBcHiwAjpZoPAdJomSjQ0",
@@ -60,7 +130,7 @@
           "changes": "The repo workflow depended on a machine-readable design system.",
           "verdict": "Read",
           "role": "Supports",
-          "evidence": "It only works on a machine-readable design system."
+          "evidence": "The hard part was the operating model."
         },
         {
           "source": "gds.blog.gov.uk",
@@ -175,10 +245,10 @@
         },
         {
           "source": "linkedin.com",
-          "title": "We moved design into the repo. | Ralf Chille | 26 comments",
+          "title": "We moved design into the repo. | Ralf Chille | 29 comments",
           "kind": "Web",
-          "timing": "2026-11-23",
-          "publishedAt": "2026-11-23T07:30:18.757Z",
+          "timing": "2026-11-24",
+          "publishedAt": "2026-11-24T09:49:50.434Z",
           "firstCollectedAt": "2026-11-23T07:30:17.230Z",
           "sourceId": "f50f9f1c892580a6",
           "url": "https://www.linkedin.com/posts/ralfchille_we-moved-design-into-the-repo-activity-7529125116010504192-WegC?rcm=ACoAABW0mB8BYRHo8ehBcHiwAjpZoPAdJomSjQ0",
@@ -186,7 +256,7 @@
           "changes": "Guardrails and shared standards made cross-functional work viable.",
           "verdict": "Read",
           "role": "Context",
-          "evidence": "Designers now build right alongside engineers, and guardrails like drift checks against the design system and screenshot comparisons let us rely on what they ship."
+          "evidence": "AI made it possible, but trust made it work."
         }
       ],
       "further": [],
@@ -215,88 +285,18 @@
           ]
         }
       ]
-    },
-    {
-      "id": "21",
-      "threadId": "2026-11-23:are-accessibility-checks-keeping-up-with-faster-ai-assisted-desi",
-      "slug": "are-accessibility-checks-keeping-up-with-faster-ai-assisted-desi",
-      "category": "UX",
-      "tags": [
-        "UX",
-        "Process"
-      ],
-      "aiLens": true,
-      "editorialTitle": "Is **accessibility** keeping pace?",
-      "question": "Are accessibility checks keeping up with faster AI-assisted design and build work?",
-      "answer": "Not yet. The clearest evidence says AI is accelerating planning, design, and development much faster than validation, and mature teams are compensating by moving accessibility checks earlier and embedding them into handoffs, pull requests, and CI. Accessibility is becoming less of a late QA gate and more of a workflow responsibility, but only for teams that can sustain the extra coordination and human review.",
-      "why": "I need to move accessibility decisions earlier in my process, or speed gains will turn into downstream fixes.",
-      "uncertainty": "What remains unknown is whether these practices are spreading beyond mature programs and whether they measurably reduce accessibility regressions. I’d change this if we saw direct evidence that high-speed AI workflows are still delivering accessible output without extra review.",
-      "counts": {
-        "total": 2,
-        "web": 2,
-        "newsletters": 0
-      },
-      "publisherCount": 2,
-      "firstSeen": "2026-11-23",
-      "lastUpdatedAt": "2026-11-23T07:30:17.230Z",
-      "signals": [
-        {
-          "source": "smashingmagazine.com",
-          "title": "AI Sped Up The Build: How Can Accessibility Testing Keep Up? — Smashing Magazine",
-          "kind": "Web",
-          "timing": "2026-11-17",
-          "publishedAt": "2026-11-17T08:00:00.000Z",
-          "firstCollectedAt": "2026-11-23T07:30:17.230Z",
-          "sourceId": "8f0d80b2c196b8b0",
-          "url": "https://www.smashingmagazine.com/2026/11/ai-sped-up-build-how-can-accessibility-testing-keep-up",
-          "happened": "The article framed the core problem as AI outpacing testing.",
-          "changes": "Build speed is ahead of validation speed.",
-          "verdict": "Must read",
-          "role": "Supports",
-          "evidence": "Basically: AI is helping us hit fast-forward on the build, but testing practices haven’t kept up."
-        },
-        {
-          "source": "mhclgdigital.blog.gov.uk",
-          "title": "Building Local Transcribe for local government – MHCLG Digital",
-          "kind": "Web",
-          "timing": "Date unavailable",
-          "publishedAt": null,
-          "firstCollectedAt": "2026-11-23T07:30:17.230Z",
-          "sourceId": "3c430a3a345c914e",
-          "url": "https://mhclgdigital.blog.gov.uk/2026/07/23/building-local-transcribe-for-local-government",
-          "happened": "Local Transcribe said it will embed accessibility from the start.",
-          "changes": "Accessibility is being treated as an upstream design requirement.",
-          "verdict": "Read",
-          "role": "Context",
-          "evidence": "UK Design System , embedding accessibility from the start and ensuring it will be independently assessed before launch."
-        }
-      ],
-      "further": [],
-      "history": [
-        {
-          "at": "2026-11-23T07:30:17.230Z",
-          "kind": "New",
-          "reason": "This adds a substantive question about the practical consequence of AI speed on accessibility quality, supported by a primary study and workflow guidance.",
-          "before": null,
-          "after": "Not yet. The clearest evidence says AI is accelerating planning, design, and development much faster than validation, and mature teams are compensating by moving accessibility checks earlier and embedding them into handoffs, pull requests, and CI. Accessibility is becoming less of a late QA gate and more of a workflow responsibility, but only for teams that can sustain the extra coordination and human review.",
-          "sourceIds": [
-            "8f0d80b2c196b8b0",
-            "3c430a3a345c914e"
-          ]
-        }
-      ]
     }
   ],
   "retiredQuestions": [],
-  "generatedAt": "2026-11-23T07:30:17.230Z",
-  "lastCollectedAt": "2026-11-23T07:30:17.230Z",
-  "crawlCompletedAt": "08:30",
+  "generatedAt": "2026-11-24T09:49:49.118Z",
+  "lastCollectedAt": "2026-11-24T09:49:49.118Z",
+  "crawlCompletedAt": "10:49",
   "finalizedAt": null,
-  "revision": "10e7c112b8b6",
-  "sourceCount": 22,
+  "revision": "59cbec1376b3",
+  "sourceCount": 32,
   "webSourceCount": 7,
   "teamContributionCount": 6,
   "sourceWarnings": [
-    "33 candidate pages could not provide enough inspectable public article text. They were not used as new evidence."
+    "32 candidate pages could not provide enough inspectable public article text. They were not used as new evidence."
   ]
 }
