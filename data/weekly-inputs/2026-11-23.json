@@ -6,34 +6,52 @@
     "source": "smashingmagazine.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-17T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-24T09:49:49.118Z"
+    "firstCollectedAt": "2026-11-25T08:26:12.231Z"
   },
   {
-    "id": "3e2e4c685d6bbf13",
-    "url": "https://developers.figma.com/docs/figma-mcp-server/write-to-canvas",
-    "title": "Write to canvas | Developer Docs",
-    "source": "developers.figma.com",
+    "id": "81e6191740284eca",
+    "url": "https://www.w3.org/events/meetings/9078a773-7154-4c1f-8819-3d869b1f5766",
+    "title": "Web Accessibility Evaluation Using AI agents | W3C",
+    "source": "w3.org",
     "sourceKind": "web research",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-24T09:49:49.118Z"
+    "firstCollectedAt": "2026-11-25T08:26:12.231Z"
   },
   {
-    "id": "8e7018dff2170215",
-    "url": "https://forum.figma.com/report-a-problem-6/add-ai-link-to-the-remote-mcp-server-client-allowlist-59542",
-    "title": "Add AI Link to the remote MCP server client allowlist | Figma Forum",
-    "source": "forum.figma.com",
+    "id": "d436b4f1d6ba9372",
+    "url": "https://github.com/Dxlxz/gold-standard-guidelines/blob/main/standards/design/36-handoff-figma.md",
+    "title": "gold-standard-guidelines/standards/design/36-handoff-figma.md at main · Dxlxz/gold-standard-guidelines · GitHub",
+    "source": "github.com",
     "sourceKind": "web research",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-24T09:49:49.118Z"
+    "firstCollectedAt": "2026-11-25T08:26:12.231Z"
   },
   {
-    "id": "3f28258957630601",
-    "url": "https://forum.figma.com/ask-the-community-7/figma-s-mcp-product-57290",
-    "title": "Figma's MCP product | Figma Forum",
-    "source": "forum.figma.com",
+    "id": "4e0276d06d08c80b",
+    "url": "https://www.w3.org/2026/09/30-maturity-minutes.html",
+    "title": "Maturity Model Task Force &ndash; 30 September 2026",
+    "source": "w3.org",
     "sourceKind": "web research",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-24T09:49:49.118Z"
+    "firstCollectedAt": "2026-11-25T08:26:12.231Z"
+  },
+  {
+    "id": "1d463bc22b1bced1",
+    "url": "https://www.smashingmagazine.com/2026/06/why-accessibility-operational-capability-not-feature",
+    "title": "Why Accessibility Is An Operational Capability, Not A Feature — Smashing Magazine",
+    "source": "smashingmagazine.com",
+    "sourceKind": "web research",
+    "publishedAt": "2026-06-30T12:00:00.000Z",
+    "firstCollectedAt": "2026-11-25T08:26:12.231Z"
+  },
+  {
+    "id": "bf3c03b60fa8445e",
+    "url": "https://github.com/github/annotation-toolkit/blob/main/deep-dives/best-practices-for-hand-off.md",
+    "title": "annotation-toolkit/deep-dives/best-practices-for-hand-off.md at main · github/annotation-toolkit · GitHub",
+    "source": "github.com",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-25T08:26:12.231Z"
   },
   {
     "id": "971f69715319ef47",
@@ -42,7 +60,7 @@
     "source": "gov.uk",
     "sourceKind": "web crawl",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-24T09:49:49.118Z"
+    "firstCollectedAt": "2026-11-25T08:26:12.231Z"
   },
   {
     "id": "97519e78d1e3c682",
@@ -51,7 +69,7 @@
     "source": "gds.blog.gov.uk",
     "sourceKind": "web crawl",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-24T09:49:49.118Z"
+    "firstCollectedAt": "2026-11-25T08:26:12.231Z"
   },
   {
     "id": "3c430a3a345c914e",
@@ -60,7 +78,7 @@
     "source": "mhclgdigital.blog.gov.uk",
     "sourceKind": "web crawl",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-24T09:49:49.118Z"
+    "firstCollectedAt": "2026-11-25T08:26:12.231Z"
   },
   {
     "id": "f50f9f1c892580a6",
@@ -68,80 +86,8 @@
     "title": "We moved design into the repo. | Ralf Chille | 29 comments",
     "source": "linkedin.com",
     "sourceKind": "web crawl",
-    "publishedAt": "2026-11-24T09:49:50.434Z",
-    "firstCollectedAt": "2026-11-24T09:49:49.118Z"
-  },
-  {
-    "id": "71d50ce75c54a4a3",
-    "url": "https://www.itsnicethat.com/articles/jake-hollings-drawing-with-scissors-art-discover-241126",
-    "title": "Jake Hollings had a hand operation that impeded his usual style – so he started “drawing with scissors”",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-24T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-24T09:49:49.118Z"
-  },
-  {
-    "id": "dc36298e47f44f05",
-    "url": "https://www.itsnicethat.com/articles/nicer-tuesdays-london-october-silvana-trivale-241126",
-    "title": "Silvana Trevale on capturing the wounds, beauty, hardships and hope of Venezuelan youth",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-24T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-24T09:49:49.118Z"
-  },
-  {
-    "id": "20f801f15b3e9e51",
-    "url": "https://www.itsnicethat.com/articles/base-design-visa-brand-refresh-graphic-design-project-241126",
-    "title": "To V or not to V? Base Design refreshes Visa’s global identity with new symbol and typeface",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-24T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-24T09:49:49.118Z"
-  },
-  {
-    "id": "7306b4f40a43cd9f",
-    "url": "https://www.itsnicethat.com/articles/artist-biopics-gary-grimes-culture-column-231126",
-    "title": "Gary Grimes on the poisoned chalice of fictionalising artists on the big screen",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-23T11:00:00.000Z",
-    "firstCollectedAt": "2026-11-24T09:49:49.118Z"
-  },
-  {
-    "id": "71d13caf593358a4",
-    "url": "https://www.itsnicethat.com/articles/teemill-christmas-call-creative-industry-sponsored-content-231126",
-    "title": "Launch your sustainable merch store in time for Christmas with Teemill",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-23T11:00:00.000Z",
-    "firstCollectedAt": "2026-11-24T09:49:49.118Z"
-  },
-  {
-    "id": "e967c8c057c43ac0",
-    "url": "https://www.itsnicethat.com/articles/creative-career-condundrums-if-you-could-jobs-advice-231126",
-    "title": "“Take back control of your diary”",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-23T10:00:00.000Z",
-    "firstCollectedAt": "2026-11-24T09:49:49.118Z"
-  },
-  {
-    "id": "2a1359983783d4d5",
-    "url": "https://www.itsnicethat.com/features/paris-photo-2026-photobooks-photography-spotlight-231126",
-    "title": "Paris Photo was proof that the future of photography demands we keep publishing",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-23T10:00:00.000Z",
-    "firstCollectedAt": "2026-11-24T09:49:49.118Z"
-  },
-  {
-    "id": "7cbeb7fefc96236b",
-    "url": "https://www.itsnicethat.com/articles/casey-roarty-graphic-design-discover-231126",
-    "title": "Casey Roarty is drawn to minimal design, but his graphics for Chicken Shop Date don’t skimp on personality",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-23T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-24T09:49:49.118Z"
+    "publishedAt": "2026-11-25T08:26:13.741Z",
+    "firstCollectedAt": "2026-11-25T08:26:12.231Z"
   },
   {
     "id": "9dde1de7fe74c52e",
@@ -150,7 +96,25 @@
     "source": "smashingmagazine.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-17T12:00:00.000Z",
-    "firstCollectedAt": "2026-11-24T09:49:49.118Z"
+    "firstCollectedAt": "2026-11-25T08:26:12.231Z"
+  },
+  {
+    "id": "c1654fef59b7b0fd",
+    "url": "https://www.w3.org/blog/2026/tag-note-explained-user-agents",
+    "title": "TAG Note explained: User Agents | 2026 | Blog | W3C",
+    "source": "w3.org",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-24T10:49:00.000Z",
+    "firstCollectedAt": "2026-11-25T08:26:12.231Z"
+  },
+  {
+    "id": "13eede7805a350c3",
+    "url": "https://www.w3.org/blog/2026/tag-note-explained-self-review-questionnaire",
+    "title": "TAG Note explained: Self-Review Questionnaire: Societal Impact | 2026 | Blog | W3C",
+    "source": "w3.org",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-24T10:05:50.000Z",
+    "firstCollectedAt": "2026-11-25T08:26:12.231Z"
   },
   {
     "id": "ad5bc128fb288392",
@@ -159,7 +123,7 @@
     "source": "x.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-23T07:30:18.664Z",
-    "firstCollectedAt": "2026-11-24T09:49:49.118Z"
+    "firstCollectedAt": "2026-11-25T08:26:12.231Z"
   },
   {
     "id": "be055e2d2b2d7384",
@@ -168,7 +132,106 @@
     "source": "github.com",
     "sourceKind": "newsletter inbox",
     "publishedAt": "2026-11-20T20:20:03.000Z",
-    "firstCollectedAt": "2026-11-24T09:49:49.118Z"
+    "firstCollectedAt": "2026-11-25T08:26:12.231Z"
+  },
+  {
+    "id": "3e2e4c685d6bbf13",
+    "url": "https://developers.figma.com/docs/figma-mcp-server/write-to-canvas",
+    "title": "Write to canvas | Developer Docs",
+    "source": "developers.figma.com",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-25T08:26:12.231Z"
+  },
+  {
+    "id": "8e7018dff2170215",
+    "url": "https://forum.figma.com/report-a-problem-6/add-ai-link-to-the-remote-mcp-server-client-allowlist-59542",
+    "title": "Add AI Link to the remote MCP server client allowlist | Figma Forum",
+    "source": "forum.figma.com",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-25T08:26:12.231Z"
+  },
+  {
+    "id": "3f28258957630601",
+    "url": "https://forum.figma.com/ask-the-community-7/figma-s-mcp-product-57290",
+    "title": "Figma's MCP product | Figma Forum",
+    "source": "forum.figma.com",
+    "sourceKind": "web research",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-25T08:26:12.231Z"
+  },
+  {
+    "id": "71d50ce75c54a4a3",
+    "url": "https://www.itsnicethat.com/articles/jake-hollings-drawing-with-scissors-art-discover-241126",
+    "title": "Jake Hollings had a hand operation that impeded his usual style – so he started “drawing with scissors”",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-24T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-25T08:26:12.231Z"
+  },
+  {
+    "id": "dc36298e47f44f05",
+    "url": "https://www.itsnicethat.com/articles/nicer-tuesdays-london-october-silvana-trivale-241126",
+    "title": "Silvana Trevale on capturing the wounds, beauty, hardships and hope of Venezuelan youth",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-24T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-25T08:26:12.231Z"
+  },
+  {
+    "id": "20f801f15b3e9e51",
+    "url": "https://www.itsnicethat.com/articles/base-design-visa-brand-refresh-graphic-design-project-241126",
+    "title": "To V or not to V? Base Design refreshes Visa’s global identity with new symbol and typeface",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-24T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-25T08:26:12.231Z"
+  },
+  {
+    "id": "7306b4f40a43cd9f",
+    "url": "https://www.itsnicethat.com/articles/artist-biopics-gary-grimes-culture-column-231126",
+    "title": "Gary Grimes on the poisoned chalice of fictionalising artists on the big screen",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-23T11:00:00.000Z",
+    "firstCollectedAt": "2026-11-25T08:26:12.231Z"
+  },
+  {
+    "id": "71d13caf593358a4",
+    "url": "https://www.itsnicethat.com/articles/teemill-christmas-call-creative-industry-sponsored-content-231126",
+    "title": "Launch your sustainable merch store in time for Christmas with Teemill",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-23T11:00:00.000Z",
+    "firstCollectedAt": "2026-11-25T08:26:12.231Z"
+  },
+  {
+    "id": "e967c8c057c43ac0",
+    "url": "https://www.itsnicethat.com/articles/creative-career-condundrums-if-you-could-jobs-advice-231126",
+    "title": "“Take back control of your diary”",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-23T10:00:00.000Z",
+    "firstCollectedAt": "2026-11-25T08:26:12.231Z"
+  },
+  {
+    "id": "2a1359983783d4d5",
+    "url": "https://www.itsnicethat.com/features/paris-photo-2026-photobooks-photography-spotlight-231126",
+    "title": "Paris Photo was proof that the future of photography demands we keep publishing",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-23T10:00:00.000Z",
+    "firstCollectedAt": "2026-11-25T08:26:12.231Z"
+  },
+  {
+    "id": "7cbeb7fefc96236b",
+    "url": "https://www.itsnicethat.com/articles/casey-roarty-graphic-design-discover-231126",
+    "title": "Casey Roarty is drawn to minimal design, but his graphics for Chicken Shop Date don’t skimp on personality",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-23T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-25T08:26:12.231Z"
   },
   {
     "id": "7a0f74fdf94a7ce2",
@@ -177,7 +240,7 @@
     "source": "support.microsoft.com",
     "sourceKind": "web crawl",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-24T09:49:49.118Z"
+    "firstCollectedAt": "2026-11-25T08:26:12.231Z"
   },
   {
     "id": "52183692e4ba2709",
@@ -186,7 +249,7 @@
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-19T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-24T09:49:49.118Z"
+    "firstCollectedAt": "2026-11-25T08:26:12.231Z"
   },
   {
     "id": "dff78e608047ff63",
@@ -195,96 +258,6 @@
     "source": "itsnicethat.com",
     "sourceKind": "web crawl",
     "publishedAt": "2026-11-19T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-24T09:49:49.118Z"
-  },
-  {
-    "id": "954282d45a14147f",
-    "url": "https://www.itsnicethat.com/features/agnes-lee-metropolitan-diary-illustration-spotlight-181126",
-    "title": "Illustrator Agnes Lee on 50 years of Metropolitan Diary, the hand-drawn column where NYC is the main theme",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-18T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-24T09:49:49.118Z"
-  },
-  {
-    "id": "8a5aadbc91cd77f1",
-    "url": "https://www.itsnicethat.com/articles/callum-abbott-other-almanac-mutt-art-review-graphic-design-publication-project-181126",
-    "title": "“A good designer can make a free font look expensive”: Callum Abbott on designing publications around type",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-18T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-24T09:49:49.118Z"
-  },
-  {
-    "id": "756f680999fb3347",
-    "url": "https://www.itsnicethat.com/articles/matthew-wilcock-sound-design-project-181126",
-    "title": "Matthew Wilcock’s data-driven approach to sound design lets everyday life make the music",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-18T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-24T09:49:49.118Z"
-  },
-  {
-    "id": "f5b42df0ad487556",
-    "url": "https://www.itsnicethat.com/articles/nico-therin-photography-zanzibar-project-171126",
-    "title": "Nico Therin’s photographs of beach footballers in Zanzibar captures the sport in its purest form",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-17T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-24T09:49:49.118Z"
-  },
-  {
-    "id": "cbbfe8bf728d9270",
-    "url": "https://www.itsnicethat.com/articles/north-design-sainsbury-museum-and-art-centre-graphic-design-171126",
-    "title": "A 1970s architectural sketch and Otl Aicher inspire North Design’s new art centre brand mark",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-17T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-24T09:49:49.118Z"
-  },
-  {
-    "id": "ac49910868b2f3b4",
-    "url": "https://www.itsnicethat.com/articles/creative-career-condundrums-if-you-could-jobs-advice-161126",
-    "title": "“Your biggest confidence blocker is comparison”",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-16T11:00:00.000Z",
-    "firstCollectedAt": "2026-11-24T09:49:49.118Z"
-  },
-  {
-    "id": "d06d00ea3e43e681",
-    "url": "https://www.itsnicethat.com/articles/maria-zilli-illustration-discover-161126",
-    "title": "Maria Zilli’s sketches steal brilliant costumes and characters from the theatre of the everyday",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-16T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-24T09:49:49.118Z"
-  },
-  {
-    "id": "68d86d907a147f7f",
-    "url": "https://www.itsnicethat.com/articles/mother-design-major-league-baseball-brand-refresh-graphic-design-project-161126",
-    "title": "Mother Design bats Major League Baseball into the future with five bespoke typefaces",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-16T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-24T09:49:49.118Z"
-  },
-  {
-    "id": "b0f3fa8f3db4ff94",
-    "url": "https://www.itsnicethat.com/articles/pov-graphic-design-helped-monetise-loneliness-creative-industry-161126",
-    "title": "How graphic design makes buying feel like belonging and brands feel like community",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-16T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-24T09:49:49.118Z"
-  },
-  {
-    "id": "3ece596ac9cf942a",
-    "url": "https://www.itsnicethat.com/features/the-nice-list-2026-creative-gift-guide-161126",
-    "title": "The Nice List 2026: explore It’s Nice That’s creative gift guide",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-16T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-24T09:49:49.118Z"
+    "firstCollectedAt": "2026-11-25T08:26:12.231Z"
   }
 ]

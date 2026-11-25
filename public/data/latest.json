@@ -6,8 +6,8 @@
   "date": "2026-11-23",
   "editionNumber": "036",
   "displayDate": "Week of 2026-11-23",
-  "headline": "**Accessible AI workflows** are moving earlier, while **repo-based design** raises review burdens",
-  "summary": "This week shifts toward earlier accessibility checks and tighter design-engineering handoffs, but both depend on stronger operating models than tools alone. The clearest new consequence is that speed gains are now creating more review, not less, for designers and teams.",
+  "headline": "**Accessibility** moves upstream, but validation still lags behind",
+  "summary": "This week reinforces that AI is speeding up design and build work faster than accessibility validation can keep up. The strongest signals now point to moving checks into handoff, PR, and CI, while recognizing that mature teams still rely on human judgment and clear ownership.",
   "questions": [
     {
       "id": "21",
@@ -42,8 +42,8 @@
           "firstCollectedAt": "2026-11-23T07:30:17.230Z",
           "sourceId": "8f0d80b2c196b8b0",
           "url": "https://www.smashingmagazine.com/2026/11/ai-sped-up-build-how-can-accessibility-testing-keep-up",
-          "happened": "The article framed the core problem as AI outpacing testing.",
-          "changes": "Build speed is ahead of validation speed.",
+          "happened": "Smashing summarized new accessibility research by saying AI has sped up design and build work, but QA testing has not kept pace.",
+          "changes": "That keeps the core question focused on the gap between generation and validation.",
           "verdict": "Must read",
           "role": "Supports",
           "evidence": "AI has sped up how teams design and build, but quality assurance (QA) testing hasn’t kept pace, and the web may be getting less accessible."
@@ -57,11 +57,11 @@
           "firstCollectedAt": "2026-11-23T07:30:17.230Z",
           "sourceId": "3c430a3a345c914e",
           "url": "https://mhclgdigital.blog.gov.uk/2026/07/23/building-local-transcribe-for-local-government",
-          "happened": "Local Transcribe said it will embed accessibility from the start.",
-          "changes": "Accessibility is being treated as an upstream design requirement.",
+          "happened": "MHCLG said Local Transcribe will run continuous automated evaluations on accuracy, summarization quality, and bias.",
+          "changes": "This shows a real product team building continuous validation into the service model.",
           "verdict": "Read",
-          "role": "Context",
-          "evidence": "UK Design System , embedding accessibility from the start and ensuring it will be independently assessed before launch."
+          "role": "Supports",
+          "evidence": "We will run continuous automated evaluations on transcription accuracy, summarisation quality, and bias across protected characteristics, to ensure the draft is reliable."
         }
       ],
       "further": [],
@@ -94,13 +94,13 @@
       "why": "Process notes indicate better definition of who owns what and when decisions are made.",
       "uncertainty": "Low to moderate: this is supported by multiple operational signals.",
       "counts": {
-        "total": 3,
-        "web": 3,
+        "total": 4,
+        "web": 4,
         "newsletters": 0
       },
-      "publisherCount": 3,
+      "publisherCount": 4,
       "firstSeen": "2026-11-20",
-      "lastUpdatedAt": "2026-11-23T07:30:17.230Z",
+      "lastUpdatedAt": "2026-11-25T08:26:12.231Z",
       "signals": [
         {
           "source": "smashingmagazine.com",
@@ -111,8 +111,8 @@
           "firstCollectedAt": "2026-11-23T07:30:17.230Z",
           "sourceId": "8f0d80b2c196b8b0",
           "url": "https://www.smashingmagazine.com/2026/11/ai-sped-up-build-how-can-accessibility-testing-keep-up",
-          "happened": "The article argued that AI speed needs explicit judgment points in the workflow.",
-          "changes": "It recommended placing responsibility at handoff, pull request, and review stages.",
+          "happened": "Smashing said teams improve accessibility by deciding in advance who owns each check.",
+          "changes": "That sharpens the handoff question into explicit role assignment.",
           "verdict": "Read",
           "role": "Supports",
           "evidence": "” When teams decide, in advance, who is responsible for each check, they create the clarity and communication that our data shows sets the organizations improving accessibility apart from those stuck fighting ever-growin"
@@ -121,16 +121,31 @@
           "source": "linkedin.com",
           "title": "We moved design into the repo. | Ralf Chille | 29 comments",
           "kind": "Web",
-          "timing": "2026-11-24",
-          "publishedAt": "2026-11-24T09:49:50.434Z",
+          "timing": "2026-11-25",
+          "publishedAt": "2026-11-25T08:26:13.741Z",
           "firstCollectedAt": "2026-11-23T07:30:17.230Z",
           "sourceId": "f50f9f1c892580a6",
           "url": "https://www.linkedin.com/posts/ralfchille_we-moved-design-into-the-repo-activity-7529125116010504192-WegC?rcm=ACoAABW0mB8BYRHo8ehBcHiwAjpZoPAdJomSjQ0",
-          "happened": "A team described moving design work directly into a repo.",
-          "changes": "The repo workflow depended on a machine-readable design system.",
+          "happened": "Babbel said the hard part of moving design into the repo was the operating model, not the tooling.",
+          "changes": "That suggests ownership boundaries matter more than the software itself.",
           "verdict": "Read",
           "role": "Supports",
           "evidence": "The hard part was the operating model."
+        },
+        {
+          "source": "developers.figma.com",
+          "title": "Write to canvas | Developer Docs",
+          "kind": "Web",
+          "timing": "Date unavailable",
+          "publishedAt": null,
+          "firstCollectedAt": "2026-11-24T09:49:49.118Z",
+          "sourceId": "3e2e4c685d6bbf13",
+          "url": "https://developers.figma.com/docs/figma-mcp-server/write-to-canvas",
+          "happened": "Figma’s MCP docs say output is beta quality and needs manual review and cleanup.",
+          "changes": "That adds a concrete review requirement to the repo-based workflow.",
+          "verdict": "Read",
+          "role": "Context",
+          "evidence": "caution Because this feature is in beta, test on a duplicate of your library or a draft file before changing production files, and keep a backup copy."
         },
         {
           "source": "gds.blog.gov.uk",
@@ -171,6 +186,19 @@
             "f50f9f1c892580a6",
             "97519e78d1e3c682"
           ]
+        },
+        {
+          "at": "2026-11-25T08:26:12.231Z",
+          "kind": "Evidence added",
+          "reason": "Reinforced the existing answer with a stronger, more concrete repo-based operating model example.",
+          "before": "Yes, the process appears more deliberate, with clearer ownership and fewer ambiguous transitions.",
+          "after": "Yes, the process appears more deliberate, with clearer ownership and fewer ambiguous transitions.",
+          "sourceIds": [
+            "8f0d80b2c196b8b0",
+            "f50f9f1c892580a6",
+            "3e2e4c685d6bbf13",
+            "97519e78d1e3c682"
+          ]
         }
       ]
     },
@@ -184,19 +212,19 @@
         "Process"
       ],
       "aiLens": false,
-      "editorialTitle": "Is alignment improving across the team?",
+      "editorialTitle": "Is **alignment** improving across the team?",
       "question": "Has team alignment improved around priorities and expectations?",
       "answer": "Somewhat. There are signs of better alignment, but a few comments still suggest uneven understanding of priorities.",
       "why": "The feedback shows progress, though it is not yet uniform across the team.",
       "uncertainty": "Moderate: alignment is improving, but consistency remains unproven.",
       "counts": {
-        "total": 4,
-        "web": 4,
+        "total": 5,
+        "web": 5,
         "newsletters": 0
       },
-      "publisherCount": 4,
+      "publisherCount": 5,
       "firstSeen": "2026-11-20",
-      "lastUpdatedAt": "2026-11-23T07:30:17.230Z",
+      "lastUpdatedAt": "2026-11-25T08:26:12.231Z",
       "signals": [
         {
           "source": "gov.uk",
@@ -207,11 +235,56 @@
           "firstCollectedAt": "2026-11-23T07:30:17.230Z",
           "sourceId": "971f69715319ef47",
           "url": "https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government/artificial-intelligence-playbook-for-the-uk-government-html",
-          "happened": "The playbook said ethical concerns should be communicated throughout the project.",
-          "changes": "It framed alignment as something established from design through deployment.",
+          "happened": "The UK AI Playbook says ethical concerns should be addressed throughout the project from design to deployment.",
+          "changes": "That frames alignment as an ongoing practice rather than a kickoff event.",
           "verdict": "Must read",
           "role": "Supports",
           "evidence": "You should establish and communicate how you will address ethical concerns throughout your project, from design to deployment, so that diverse and inclusive participation is built into the project life cycle."
+        },
+        {
+          "source": "gds.blog.gov.uk",
+          "title": "Update from the GDS Responsible AI Advisory Panel – Government Digital Service",
+          "kind": "Web",
+          "timing": "Date unavailable",
+          "publishedAt": null,
+          "firstCollectedAt": "2026-11-24T09:49:49.118Z",
+          "sourceId": "97519e78d1e3c682",
+          "url": "https://gds.blog.gov.uk/2026/06/18/update-from-the-gds-responsible-ai-advisory-panel",
+          "happened": "GDS said its panel is already engaging with AI projects and offering early challenge.",
+          "changes": "This suggests alignment is being worked through earlier in delivery, not after launch.",
+          "verdict": "Read",
+          "role": "Supports",
+          "evidence": "The panel is already beginning to engage with government AI projects, offering early advice and challenge."
+        },
+        {
+          "source": "linkedin.com",
+          "title": "We moved design into the repo. | Ralf Chille | 29 comments",
+          "kind": "Web",
+          "timing": "2026-11-25",
+          "publishedAt": "2026-11-25T08:26:13.741Z",
+          "firstCollectedAt": "2026-11-23T07:30:17.230Z",
+          "sourceId": "f50f9f1c892580a6",
+          "url": "https://www.linkedin.com/posts/ralfchille_we-moved-design-into-the-repo-activity-7529125116010504192-WegC?rcm=ACoAABW0mB8BYRHo8ehBcHiwAjpZoPAdJomSjQ0",
+          "happened": "A repo-based design workflow commenter said AI made it possible, but trust made it work.",
+          "changes": "That points to alignment resting on social agreement as much as tooling.",
+          "verdict": "Read",
+          "role": "Context",
+          "evidence": "AI made it possible, but trust made it work."
+        },
+        {
+          "source": "smashingmagazine.com",
+          "title": "AI Sped Up The Build: How Can Accessibility Testing Keep Up? — Smashing Magazine",
+          "kind": "Web",
+          "timing": "2026-11-17",
+          "publishedAt": "2026-11-17T08:00:00.000Z",
+          "firstCollectedAt": "2026-11-23T07:30:17.230Z",
+          "sourceId": "8f0d80b2c196b8b0",
+          "url": "https://www.smashingmagazine.com/2026/11/ai-sped-up-build-how-can-accessibility-testing-keep-up",
+          "happened": "The accessibility research said mature programs outperform through training, communication, and culture.",
+          "changes": "This supports the idea that alignment is improving where organizational habits are stronger.",
+          "verdict": "Read",
+          "role": "Supports",
+          "evidence": "Their edge shows up in the maturity of their surrounding accessibility practices &mdash; things like training , communication , and a culture of accessibility ."
         },
         {
           "source": "mhclgdigital.blog.gov.uk",
@@ -227,36 +300,6 @@
           "verdict": "Read",
           "role": "Supports",
           "evidence": "We’re building it with councils and the people who’ll use it."
-        },
-        {
-          "source": "smashingmagazine.com",
-          "title": "AI Sped Up The Build: How Can Accessibility Testing Keep Up? — Smashing Magazine",
-          "kind": "Web",
-          "timing": "2026-11-17",
-          "publishedAt": "2026-11-17T08:00:00.000Z",
-          "firstCollectedAt": "2026-11-23T07:30:17.230Z",
-          "sourceId": "8f0d80b2c196b8b0",
-          "url": "https://www.smashingmagazine.com/2026/11/ai-sped-up-build-how-can-accessibility-testing-keep-up",
-          "happened": "The accessibility article distinguished mature programs by training, communication, and culture.",
-          "changes": "It suggested organizational maturity matters more than AI adoption itself.",
-          "verdict": "Read",
-          "role": "Supports",
-          "evidence": "Their edge shows up in the maturity of their surrounding accessibility practices &mdash; things like training , communication , and a culture of accessibility ."
-        },
-        {
-          "source": "linkedin.com",
-          "title": "We moved design into the repo. | Ralf Chille | 29 comments",
-          "kind": "Web",
-          "timing": "2026-11-24",
-          "publishedAt": "2026-11-24T09:49:50.434Z",
-          "firstCollectedAt": "2026-11-23T07:30:17.230Z",
-          "sourceId": "f50f9f1c892580a6",
-          "url": "https://www.linkedin.com/posts/ralfchille_we-moved-design-into-the-repo-activity-7529125116010504192-WegC?rcm=ACoAABW0mB8BYRHo8ehBcHiwAjpZoPAdJomSjQ0",
-          "happened": "A commenter said trust, not tooling, made the repo model work.",
-          "changes": "Guardrails and shared standards made cross-functional work viable.",
-          "verdict": "Read",
-          "role": "Context",
-          "evidence": "AI made it possible, but trust made it work."
         }
       ],
       "further": [],
@@ -283,20 +326,34 @@
             "8f0d80b2c196b8b0",
             "f50f9f1c892580a6"
           ]
+        },
+        {
+          "at": "2026-11-25T08:26:12.231Z",
+          "kind": "Evidence added",
+          "reason": "Kept the same conclusion while adding clearer evidence that alignment now depends on explicit review and shared standards.",
+          "before": "Somewhat. There are signs of better alignment, but a few comments still suggest uneven understanding of priorities.",
+          "after": "Somewhat. There are signs of better alignment, but a few comments still suggest uneven understanding of priorities.",
+          "sourceIds": [
+            "971f69715319ef47",
+            "97519e78d1e3c682",
+            "f50f9f1c892580a6",
+            "8f0d80b2c196b8b0",
+            "3c430a3a345c914e"
+          ]
         }
       ]
     }
   ],
   "retiredQuestions": [],
-  "generatedAt": "2026-11-24T09:49:49.118Z",
-  "lastCollectedAt": "2026-11-24T09:49:49.118Z",
-  "crawlCompletedAt": "10:49",
+  "generatedAt": "2026-11-25T08:26:12.231Z",
+  "lastCollectedAt": "2026-11-25T08:26:12.231Z",
+  "crawlCompletedAt": "09:26",
   "finalizedAt": null,
-  "revision": "59cbec1376b3",
-  "sourceCount": 32,
+  "revision": "574c2bb1b106",
+  "sourceCount": 29,
   "webSourceCount": 7,
   "teamContributionCount": 6,
   "sourceWarnings": [
-    "32 candidate pages could not provide enough inspectable public article text. They were not used as new evidence."
+    "35 candidate pages could not provide enough inspectable public article text. They were not used as new evidence."
   ]
 }
