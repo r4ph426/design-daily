@@ -6,8 +6,8 @@
   "date": "2026-11-23",
   "editionNumber": "036",
   "displayDate": "Week of 2026-11-23",
-  "headline": "**Accessibility** moves upstream, but validation still lags behind",
-  "summary": "This week reinforces that AI is speeding up design and build work faster than accessibility validation can keep up. The strongest signals now point to moving checks into handoff, PR, and CI, while recognizing that mature teams still rely on human judgment and clear ownership.",
+  "headline": "**Accessibility** checks are still lagging build speed",
+  "summary": "This week still points to a two-speed workflow: AI is accelerating design and development faster than validation. The strongest evidence says mature teams are compensating by moving accessibility checks into handoffs, pull requests, and CI, but that adds operating-model burden and review discipline.",
   "questions": [
     {
       "id": "21",
@@ -25,13 +25,13 @@
       "why": "I need to move accessibility decisions earlier in my process, or speed gains will turn into downstream fixes.",
       "uncertainty": "What remains unknown is whether these practices are spreading beyond mature programs and whether they measurably reduce accessibility regressions. I’d change this if we saw direct evidence that high-speed AI workflows are still delivering accessible output without extra review.",
       "counts": {
-        "total": 2,
-        "web": 2,
+        "total": 3,
+        "web": 3,
         "newsletters": 0
       },
-      "publisherCount": 2,
+      "publisherCount": 3,
       "firstSeen": "2026-11-23",
-      "lastUpdatedAt": "2026-11-23T07:30:17.230Z",
+      "lastUpdatedAt": "2026-11-26T08:10:29.403Z",
       "signals": [
         {
           "source": "smashingmagazine.com",
@@ -43,10 +43,25 @@
           "sourceId": "8f0d80b2c196b8b0",
           "url": "https://www.smashingmagazine.com/2026/11/ai-sped-up-build-how-can-accessibility-testing-keep-up",
           "happened": "Smashing summarized new accessibility research by saying AI has sped up design and build work, but QA testing has not kept pace.",
-          "changes": "That keeps the core question focused on the gap between generation and validation.",
+          "changes": "This keeps the core question focused on the gap between generation and validation.",
           "verdict": "Must read",
           "role": "Supports",
           "evidence": "AI has sped up how teams design and build, but quality assurance (QA) testing hasn’t kept pace, and the web may be getting less accessible."
+        },
+        {
+          "source": "webaim.org",
+          "title": "WebAIM: The WebAIM Million - The 2026 report on the accessibility of the top 1,000,000 home pages",
+          "kind": "Web",
+          "timing": "Date unavailable",
+          "publishedAt": null,
+          "firstCollectedAt": "2026-11-26T08:10:29.403Z",
+          "sourceId": "9d40c7a9e46c54d0",
+          "url": "https://webaim.org/projects/million/?directory=true",
+          "happened": "WebAIM reported that the share of home pages with detected WCAG failures rose again in 2026, reversing prior gains.",
+          "changes": "That suggests faster production can still correlate with worse accessibility outcomes.",
+          "verdict": "Must read",
+          "role": "Supports",
+          "evidence": "8% in 2025&mdash;reversing a trend of small improvements each of the previous 6 years."
         },
         {
           "source": "mhclgdigital.blog.gov.uk",
@@ -57,8 +72,8 @@
           "firstCollectedAt": "2026-11-23T07:30:17.230Z",
           "sourceId": "3c430a3a345c914e",
           "url": "https://mhclgdigital.blog.gov.uk/2026/07/23/building-local-transcribe-for-local-government",
-          "happened": "MHCLG said Local Transcribe will run continuous automated evaluations on accuracy, summarization quality, and bias.",
-          "changes": "This shows a real product team building continuous validation into the service model.",
+          "happened": "MHCLG said its Local Transcribe service will run continuous automated evaluations for accuracy, summarization quality, and bias.",
+          "changes": "That is a concrete example of validation being built into an AI product from the start.",
           "verdict": "Read",
           "role": "Supports",
           "evidence": "We will run continuous automated evaluations on transcription accuracy, summarisation quality, and bias across protected characteristics, to ensure the draft is reliable."
@@ -74,6 +89,18 @@
           "after": "Not yet. The clearest evidence says AI is accelerating planning, design, and development much faster than validation, and mature teams are compensating by moving accessibility checks earlier and embedding them into handoffs, pull requests, and CI. Accessibility is becoming less of a late QA gate and more of a workflow responsibility, but only for teams that can sustain the extra coordination and human review.",
           "sourceIds": [
             "8f0d80b2c196b8b0",
+            "3c430a3a345c914e"
+          ]
+        },
+        {
+          "at": "2026-11-26T08:10:29.403Z",
+          "kind": "Evidence added",
+          "reason": "This week’s sources strengthened the same conclusion with fresh report data and more concrete workflow examples, which matters because it confirms the issue is operational, not just rhetorical.",
+          "before": "Not yet. The clearest evidence says AI is accelerating planning, design, and development much faster than validation, and mature teams are compensating by moving accessibility checks earlier and embedding them into handoffs, pull requests, and CI. Accessibility is becoming less of a late QA gate and more of a workflow responsibility, but only for teams that can sustain the extra coordination and human review.",
+          "after": "Not yet. The clearest evidence says AI is accelerating planning, design, and development much faster than validation, and mature teams are compensating by moving accessibility checks earlier and embedding them into handoffs, pull requests, and CI. Accessibility is becoming less of a late QA gate and more of a workflow responsibility, but only for teams that can sustain the extra coordination and human review.",
+          "sourceIds": [
+            "8f0d80b2c196b8b0",
+            "9d40c7a9e46c54d0",
             "3c430a3a345c914e"
           ]
         }
@@ -119,10 +146,10 @@
         },
         {
           "source": "linkedin.com",
-          "title": "We moved design into the repo. | Ralf Chille | 29 comments",
+          "title": "We moved design into the repo. | Ralf Chille | 30 comments",
           "kind": "Web",
-          "timing": "2026-11-25",
-          "publishedAt": "2026-11-25T08:26:13.741Z",
+          "timing": "2026-11-26",
+          "publishedAt": "2026-11-26T08:10:30.874Z",
           "firstCollectedAt": "2026-11-23T07:30:17.230Z",
           "sourceId": "f50f9f1c892580a6",
           "url": "https://www.linkedin.com/posts/ralfchille_we-moved-design-into-the-repo-activity-7529125116010504192-WegC?rcm=ACoAABW0mB8BYRHo8ehBcHiwAjpZoPAdJomSjQ0",
@@ -160,7 +187,7 @@
           "changes": "Fewer unclear handoffs were reported.",
           "verdict": "Must read",
           "role": "Supports",
-          "evidence": "Responsibility includes, in no particular order, aspects of effectiveness, equity, security, resilience, environmental sustainability, democratic legitimacy and value for money."
+          "evidence": "The panel is already beginning to engage with government AI projects, offering early advice and challenge."
         }
       ],
       "further": [],
@@ -257,21 +284,6 @@
           "evidence": "The panel is already beginning to engage with government AI projects, offering early advice and challenge."
         },
         {
-          "source": "linkedin.com",
-          "title": "We moved design into the repo. | Ralf Chille | 29 comments",
-          "kind": "Web",
-          "timing": "2026-11-25",
-          "publishedAt": "2026-11-25T08:26:13.741Z",
-          "firstCollectedAt": "2026-11-23T07:30:17.230Z",
-          "sourceId": "f50f9f1c892580a6",
-          "url": "https://www.linkedin.com/posts/ralfchille_we-moved-design-into-the-repo-activity-7529125116010504192-WegC?rcm=ACoAABW0mB8BYRHo8ehBcHiwAjpZoPAdJomSjQ0",
-          "happened": "A repo-based design workflow commenter said AI made it possible, but trust made it work.",
-          "changes": "That points to alignment resting on social agreement as much as tooling.",
-          "verdict": "Read",
-          "role": "Context",
-          "evidence": "AI made it possible, but trust made it work."
-        },
-        {
           "source": "smashingmagazine.com",
           "title": "AI Sped Up The Build: How Can Accessibility Testing Keep Up? — Smashing Magazine",
           "kind": "Web",
@@ -285,6 +297,21 @@
           "verdict": "Read",
           "role": "Supports",
           "evidence": "Their edge shows up in the maturity of their surrounding accessibility practices &mdash; things like training , communication , and a culture of accessibility ."
+        },
+        {
+          "source": "linkedin.com",
+          "title": "We moved design into the repo. | Ralf Chille | 30 comments",
+          "kind": "Web",
+          "timing": "2026-11-26",
+          "publishedAt": "2026-11-26T08:10:30.874Z",
+          "firstCollectedAt": "2026-11-23T07:30:17.230Z",
+          "sourceId": "f50f9f1c892580a6",
+          "url": "https://www.linkedin.com/posts/ralfchille_we-moved-design-into-the-repo-activity-7529125116010504192-WegC?rcm=ACoAABW0mB8BYRHo8ehBcHiwAjpZoPAdJomSjQ0",
+          "happened": "A repo-based design workflow commenter said AI made it possible, but trust made it work.",
+          "changes": "That points to alignment resting on social agreement as much as tooling.",
+          "verdict": "Read",
+          "role": "Context",
+          "evidence": "AI made it possible, but trust made it work."
         },
         {
           "source": "mhclgdigital.blog.gov.uk",
@@ -345,15 +372,15 @@
     }
   ],
   "retiredQuestions": [],
-  "generatedAt": "2026-11-25T08:26:12.231Z",
-  "lastCollectedAt": "2026-11-25T08:26:12.231Z",
-  "crawlCompletedAt": "09:26",
+  "generatedAt": "2026-11-26T08:10:29.403Z",
+  "lastCollectedAt": "2026-11-26T08:10:29.403Z",
+  "crawlCompletedAt": "09:10",
   "finalizedAt": null,
-  "revision": "574c2bb1b106",
-  "sourceCount": 29,
+  "revision": "67fb3374b19d",
+  "sourceCount": 23,
   "webSourceCount": 7,
   "teamContributionCount": 6,
   "sourceWarnings": [
-    "35 candidate pages could not provide enough inspectable public article text. They were not used as new evidence."
+    "41 candidate pages could not provide enough inspectable public article text. They were not used as new evidence."
   ]
 }
