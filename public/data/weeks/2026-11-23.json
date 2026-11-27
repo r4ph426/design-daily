@@ -6,8 +6,8 @@
   "date": "2026-11-23",
   "editionNumber": "036",
   "displayDate": "Week of 2026-11-23",
-  "headline": "**Accessibility** checks are still lagging build speed",
-  "summary": "This week still points to a two-speed workflow: AI is accelerating design and development faster than validation. The strongest evidence says mature teams are compensating by moving accessibility checks into handoffs, pull requests, and CI, but that adds operating-model burden and review discipline.",
+  "headline": "**AI validation** still trails faster design and build work",
+  "summary": "This week’s evidence keeps the same conclusion: AI is speeding up design and delivery faster than accessibility validation, so teams need earlier checks and clearer review ownership. The strongest new signal is not that tools are enough, but that mature practices and explicit human judgment still decide whether speed becomes quality or drift.",
   "questions": [
     {
       "id": "21",
@@ -25,14 +25,59 @@
       "why": "I need to move accessibility decisions earlier in my process, or speed gains will turn into downstream fixes.",
       "uncertainty": "What remains unknown is whether these practices are spreading beyond mature programs and whether they measurably reduce accessibility regressions. I’d change this if we saw direct evidence that high-speed AI workflows are still delivering accessible output without extra review.",
       "counts": {
-        "total": 3,
-        "web": 3,
+        "total": 6,
+        "web": 6,
         "newsletters": 0
       },
-      "publisherCount": 3,
+      "publisherCount": 5,
       "firstSeen": "2026-11-23",
-      "lastUpdatedAt": "2026-11-26T08:10:29.403Z",
+      "lastUpdatedAt": "2026-11-27T08:21:46.513Z",
       "signals": [
+        {
+          "source": "w3.org",
+          "title": "Selecting Web Accessibility Evaluation Tools | Web Accessibility Initiative (WAI) | W3C",
+          "kind": "Web",
+          "timing": "Date unavailable",
+          "publishedAt": null,
+          "firstCollectedAt": "2026-11-27T08:21:46.513Z",
+          "sourceId": "cf003fd37598ef04",
+          "url": "https://www.w3.org/WAI/test-evaluate/tools/selecting",
+          "happened": "W3C says some accessibility checks cannot be automated and need manual intervention.",
+          "changes": "That supports the conclusion that faster generation does not remove the need for human validation.",
+          "verdict": "Must read",
+          "role": "Supports",
+          "evidence": "Some accessibility checks just cannot be automated and require manual intervention."
+        },
+        {
+          "source": "webaim.org",
+          "title": "WebAIM: The WebAIM Million - The 2026 report on the accessibility of the top 1,000,000 home pages",
+          "kind": "Web",
+          "timing": "Date unavailable",
+          "publishedAt": null,
+          "firstCollectedAt": "2026-11-27T08:21:46.513Z",
+          "sourceId": "3e8747e21783900c",
+          "url": "https://webaim.org/projects/million/?lang=en",
+          "happened": "WebAIM reported that detected WCAG failures rose again in 2026.",
+          "changes": "That suggests accessibility outcomes are not automatically improving alongside faster production.",
+          "verdict": "Must read",
+          "role": "Supports",
+          "evidence": "8% in 2025&mdash;reversing a trend of small improvements each of the previous 6 years."
+        },
+        {
+          "source": "arxiv.org",
+          "title": "[2611.29822] Can Vibe Coding Produce Accessible Websites: An Empirical Study on LLM Coding Agents and Skills",
+          "kind": "Web",
+          "timing": "Date unavailable",
+          "publishedAt": null,
+          "firstCollectedAt": "2026-11-27T08:21:46.513Z",
+          "sourceId": "35a5566173bb57eb",
+          "url": "https://arxiv.org/abs/2611.29822",
+          "happened": "An empirical study found accessibility does not reliably emerge from vibe coding.",
+          "changes": "That directly challenges any assumption that agentic generation will produce accessible output by default.",
+          "verdict": "Must read",
+          "role": "Challenges",
+          "evidence": "Our findings show that accessibility does not reliably emerge from vibe coding, and agentic interventions can both improve some accessibility issues and introduce new functional ones."
+        },
         {
           "source": "smashingmagazine.com",
           "title": "AI Sped Up The Build: How Can Accessibility Testing Keep Up? — Smashing Magazine",
@@ -42,11 +87,11 @@
           "firstCollectedAt": "2026-11-23T07:30:17.230Z",
           "sourceId": "8f0d80b2c196b8b0",
           "url": "https://www.smashingmagazine.com/2026/11/ai-sped-up-build-how-can-accessibility-testing-keep-up",
-          "happened": "Smashing summarized new accessibility research by saying AI has sped up design and build work, but QA testing has not kept pace.",
-          "changes": "This keeps the core question focused on the gap between generation and validation.",
-          "verdict": "Must read",
+          "happened": "Smashing described AI-accelerated workflows that still need accessibility checks at handoffs, pull requests, and reviews.",
+          "changes": "That gives a concrete operating model for moving validation earlier without adding new ceremony.",
+          "verdict": "Read",
           "role": "Supports",
-          "evidence": "AI has sped up how teams design and build, but quality assurance (QA) testing hasn’t kept pace, and the web may be getting less accessible."
+          "evidence": "Each one plugs into a step your team already takes, like a handoff, a pull request, or a review, so nothing new gets added to the timeline, and accessibility keeps pace with the work that’s in motion."
         },
         {
           "source": "webaim.org",
@@ -103,6 +148,21 @@
             "9d40c7a9e46c54d0",
             "3c430a3a345c914e"
           ]
+        },
+        {
+          "at": "2026-11-27T08:21:46.513Z",
+          "kind": "Evidence added",
+          "reason": "New primary and secondary sources reinforced the same workflow gap, which matters because it confirms the issue is operational rather than anecdotal.",
+          "before": "Not yet. The clearest evidence says AI is accelerating planning, design, and development much faster than validation, and mature teams are compensating by moving accessibility checks earlier and embedding them into handoffs, pull requests, and CI. Accessibility is becoming less of a late QA gate and more of a workflow responsibility, but only for teams that can sustain the extra coordination and human review.",
+          "after": "Not yet. The clearest evidence says AI is accelerating planning, design, and development much faster than validation, and mature teams are compensating by moving accessibility checks earlier and embedding them into handoffs, pull requests, and CI. Accessibility is becoming less of a late QA gate and more of a workflow responsibility, but only for teams that can sustain the extra coordination and human review.",
+          "sourceIds": [
+            "cf003fd37598ef04",
+            "3e8747e21783900c",
+            "35a5566173bb57eb",
+            "8f0d80b2c196b8b0",
+            "9d40c7a9e46c54d0",
+            "3c430a3a345c914e"
+          ]
         }
       ]
     },
@@ -148,8 +208,8 @@
           "source": "linkedin.com",
           "title": "We moved design into the repo. | Ralf Chille | 30 comments",
           "kind": "Web",
-          "timing": "2026-11-26",
-          "publishedAt": "2026-11-26T08:10:30.874Z",
+          "timing": "2026-11-27",
+          "publishedAt": "2026-11-27T08:21:47.989Z",
           "firstCollectedAt": "2026-11-23T07:30:17.230Z",
           "sourceId": "f50f9f1c892580a6",
           "url": "https://www.linkedin.com/posts/ralfchille_we-moved-design-into-the-repo-activity-7529125116010504192-WegC?rcm=ACoAABW0mB8BYRHo8ehBcHiwAjpZoPAdJomSjQ0",
@@ -302,8 +362,8 @@
           "source": "linkedin.com",
           "title": "We moved design into the repo. | Ralf Chille | 30 comments",
           "kind": "Web",
-          "timing": "2026-11-26",
-          "publishedAt": "2026-11-26T08:10:30.874Z",
+          "timing": "2026-11-27",
+          "publishedAt": "2026-11-27T08:21:47.989Z",
           "firstCollectedAt": "2026-11-23T07:30:17.230Z",
           "sourceId": "f50f9f1c892580a6",
           "url": "https://www.linkedin.com/posts/ralfchille_we-moved-design-into-the-repo-activity-7529125116010504192-WegC?rcm=ACoAABW0mB8BYRHo8ehBcHiwAjpZoPAdJomSjQ0",
@@ -372,15 +432,15 @@
     }
   ],
   "retiredQuestions": [],
-  "generatedAt": "2026-11-26T08:10:29.403Z",
-  "lastCollectedAt": "2026-11-26T08:10:29.403Z",
-  "crawlCompletedAt": "09:10",
+  "generatedAt": "2026-11-27T08:21:46.513Z",
+  "lastCollectedAt": "2026-11-27T08:21:46.513Z",
+  "crawlCompletedAt": "09:21",
   "finalizedAt": null,
-  "revision": "67fb3374b19d",
-  "sourceCount": 23,
+  "revision": "9cc1cf86e87a",
+  "sourceCount": 30,
   "webSourceCount": 7,
   "teamContributionCount": 6,
   "sourceWarnings": [
-    "41 candidate pages could not provide enough inspectable public article text. They were not used as new evidence."
+    "34 candidate pages could not provide enough inspectable public article text. They were not used as new evidence."
   ]
 }

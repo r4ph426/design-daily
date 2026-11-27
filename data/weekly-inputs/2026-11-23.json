@@ -1,165 +1,48 @@
 [
   {
-    "id": "da2eb4be11b3071c",
-    "url": "https://shop.smashingmagazine.com/2026/11/ai-sped-up-build-how-can-accessibility-testing-keep-up",
-    "title": "AI Sped Up The Build: How Can Accessibility Testing Keep Up? — Smashing Magazine",
-    "source": "shop.smashingmagazine.com",
-    "sourceKind": "web research",
-    "publishedAt": "2026-11-17T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-26T08:10:29.403Z"
-  },
-  {
-    "id": "596fcfe5d331ac37",
-    "url": "https://github.com/aws-samples/sample-claude-code-agents-for-product-teams/blob/main/phases/3-design/artifacts/build-ready-package.md",
-    "title": "sample-claude-code-agents-for-product-teams/phases/3-design/artifacts/build-ready-package.md at main · aws-samples/sample-claude-code-agents-for-product-teams · GitHub",
-    "source": "github.com",
+    "id": "cf003fd37598ef04",
+    "url": "https://www.w3.org/WAI/test-evaluate/tools/selecting",
+    "title": "Selecting Web Accessibility Evaluation Tools | Web Accessibility Initiative (WAI) | W3C",
+    "source": "w3.org",
     "sourceKind": "web research",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-26T08:10:29.403Z"
+    "firstCollectedAt": "2026-11-27T08:21:46.513Z"
   },
   {
-    "id": "9d40c7a9e46c54d0",
-    "url": "https://webaim.org/projects/million/?directory=true",
+    "id": "3e8747e21783900c",
+    "url": "https://webaim.org/projects/million/?lang=en",
     "title": "WebAIM: The WebAIM Million - The 2026 report on the accessibility of the top 1,000,000 home pages",
     "source": "webaim.org",
     "sourceKind": "web research",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-26T08:10:29.403Z"
+    "firstCollectedAt": "2026-11-27T08:21:46.513Z"
   },
   {
-    "id": "8f0d80b2c196b8b0",
-    "url": "https://www.smashingmagazine.com/2026/11/ai-sped-up-build-how-can-accessibility-testing-keep-up",
-    "title": "AI Sped Up The Build: How Can Accessibility Testing Keep Up? — Smashing Magazine",
-    "source": "smashingmagazine.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-17T08:00:00.000Z",
-    "firstCollectedAt": "2026-11-26T08:10:29.403Z"
-  },
-  {
-    "id": "971f69715319ef47",
-    "url": "https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government/artificial-intelligence-playbook-for-the-uk-government-html",
-    "title": "Artificial Intelligence Playbook for the UK Government (HTML) - GOV.UK",
-    "source": "gov.uk",
-    "sourceKind": "web crawl",
+    "id": "35a5566173bb57eb",
+    "url": "https://arxiv.org/abs/2611.29822",
+    "title": "[2611.29822] Can Vibe Coding Produce Accessible Websites: An Empirical Study on LLM Coding Agents and Skills",
+    "source": "arxiv.org",
+    "sourceKind": "web research",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-26T08:10:29.403Z"
+    "firstCollectedAt": "2026-11-27T08:21:46.513Z"
   },
   {
-    "id": "97519e78d1e3c682",
-    "url": "https://gds.blog.gov.uk/2026/06/18/update-from-the-gds-responsible-ai-advisory-panel",
-    "title": "Update from the GDS Responsible AI Advisory Panel – Government Digital Service",
-    "source": "gds.blog.gov.uk",
-    "sourceKind": "web crawl",
-    "publishedAt": null,
-    "firstCollectedAt": "2026-11-26T08:10:29.403Z"
-  },
-  {
-    "id": "3c430a3a345c914e",
-    "url": "https://mhclgdigital.blog.gov.uk/2026/07/23/building-local-transcribe-for-local-government",
-    "title": "Building Local Transcribe for local government – MHCLG Digital",
-    "source": "mhclgdigital.blog.gov.uk",
-    "sourceKind": "web crawl",
-    "publishedAt": null,
-    "firstCollectedAt": "2026-11-26T08:10:29.403Z"
-  },
-  {
-    "id": "f50f9f1c892580a6",
-    "url": "https://www.linkedin.com/posts/ralfchille_we-moved-design-into-the-repo-activity-7529125116010504192-WegC?rcm=ACoAABW0mB8BYRHo8ehBcHiwAjpZoPAdJomSjQ0",
-    "title": "We moved design into the repo. | Ralf Chille | 30 comments",
-    "source": "linkedin.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-26T08:10:30.874Z",
-    "firstCollectedAt": "2026-11-26T08:10:29.403Z"
-  },
-  {
-    "id": "3e2e4c685d6bbf13",
-    "url": "https://developers.figma.com/docs/figma-mcp-server/write-to-canvas",
-    "title": "Write to canvas | Developer Docs",
-    "source": "developers.figma.com",
-    "sourceKind": "web crawl",
-    "publishedAt": null,
-    "firstCollectedAt": "2026-11-26T08:10:29.403Z"
-  },
-  {
-    "id": "614a141d26ebfd5e",
-    "url": "https://www.itsnicethat.com/articles/yury-ostromentsky-backslanted-graphic-design-project-251126",
-    "title": "Like italics, but backwards: Inside Yury Ostromentsky’s inverted typeface series, Backslanted",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-25T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-26T08:10:29.403Z"
-  },
-  {
-    "id": "a64f21d8515909fe",
-    "url": "https://www.itsnicethat.com/articles/offcuts-magazine-publication-sponsored-content-251126",
-    "title": "Offcuts, amongst other things, wants you to stop doomscrolling",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-25T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-26T08:10:29.403Z"
-  },
-  {
-    "id": "d41bb109adab28c4",
-    "url": "https://www.itsnicethat.com/articles/abi-tucker-art-discover-251126",
-    "title": "“I try to think about drawing as a way of remembering”: Abi Tucker’s folkloric art is full of feeling",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-25T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-26T08:10:29.403Z"
-  },
-  {
-    "id": "4bd242ea977885a0",
-    "url": "https://www.itsnicethat.com/articles/nicer-tuesdays-london-october-luci-pina-251126",
-    "title": "Kokoroko to Marseille Jazz Festival: Luci Pina on turning music notes into pencil strokes",
-    "source": "itsnicethat.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-24T09:00:00.000Z",
-    "firstCollectedAt": "2026-11-26T08:10:29.403Z"
-  },
-  {
-    "id": "9dde1de7fe74c52e",
-    "url": "https://www.smashingmagazine.com/2026/11/online-smashingconf-ai-2027",
-    "title": "Meet AI 2027 Conference (Dec 1) — Smashing Magazine",
-    "source": "smashingmagazine.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-17T12:00:00.000Z",
-    "firstCollectedAt": "2026-11-26T08:10:29.403Z"
-  },
-  {
-    "id": "ad5bc128fb288392",
-    "url": "https://x.com/hwchase17/status/2121635683999883577?shem=dsdf,sharefoc,agadiscoversdl,adpsc,,sh/x/discover/m1/4",
-    "title": "Harrison Chase on X: \"Goal Engineering: How to Design Goals\" / X",
-    "source": "x.com",
-    "sourceKind": "web crawl",
-    "publishedAt": "2026-11-23T07:30:18.664Z",
-    "firstCollectedAt": "2026-11-26T08:10:29.403Z"
-  },
-  {
-    "id": "be055e2d2b2d7384",
-    "url": "https://github.com/elder-plinius/G0DM0D3?_bhlid=84dbeaae5d02f921c1bd7b866a3ae2568f5a075b",
-    "title": "GitHub - elder-plinius/G0DM0D3: LIBERATED AI CHAT · GitHub",
-    "source": "github.com",
-    "sourceKind": "newsletter inbox",
-    "publishedAt": "2026-11-20T20:20:03.000Z",
-    "firstCollectedAt": "2026-11-26T08:10:29.403Z"
-  },
-  {
-    "id": "81e6191740284eca",
-    "url": "https://www.w3.org/events/meetings/9078a773-7154-4c1f-8819-3d869b1f5766",
-    "title": "Web Accessibility Evaluation Using AI agents | W3C",
+    "id": "c124dc6734f2158d",
+    "url": "https://www.w3.org/events/talks/2026/ai-augmented-accessibility-from-automated-alt-text-to-governance-gates",
+    "title": "AI-Augmented Accessibility: From Automated Alt-Text to Governance Gates | 2026 | Talks | Events | W3C",
     "source": "w3.org",
     "sourceKind": "web research",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-26T08:10:29.403Z"
+    "firstCollectedAt": "2026-11-27T08:21:46.513Z"
   },
   {
-    "id": "d436b4f1d6ba9372",
-    "url": "https://github.com/Dxlxz/gold-standard-guidelines/blob/main/standards/design/36-handoff-figma.md",
-    "title": "gold-standard-guidelines/standards/design/36-handoff-figma.md at main · Dxlxz/gold-standard-guidelines · GitHub",
-    "source": "github.com",
+    "id": "06a24ebd71bde68c",
+    "url": "https://www.w3.org/blog/2026/the-multiplier-effect-how-authoring-tools-can-transform-web-accessibility",
+    "title": "The multiplier effect: How authoring tools can transform web accessibility | 2026 | Blog | W3C",
+    "source": "w3.org",
     "sourceKind": "web research",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-26T08:10:29.403Z"
+    "firstCollectedAt": "2026-11-27T08:21:46.513Z"
   },
   {
     "id": "4e0276d06d08c80b",
@@ -168,42 +51,222 @@
     "source": "w3.org",
     "sourceKind": "web research",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-26T08:10:29.403Z"
+    "firstCollectedAt": "2026-11-27T08:21:46.513Z"
   },
   {
-    "id": "1d463bc22b1bced1",
-    "url": "https://www.smashingmagazine.com/2026/06/why-accessibility-operational-capability-not-feature",
-    "title": "Why Accessibility Is An Operational Capability, Not A Feature — Smashing Magazine",
+    "id": "9d40c7a9e46c54d0",
+    "url": "https://webaim.org/projects/million/?directory=true",
+    "title": "WebAIM: The WebAIM Million - The 2026 report on the accessibility of the top 1,000,000 home pages",
+    "source": "webaim.org",
+    "sourceKind": "web crawl",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-27T08:21:46.513Z"
+  },
+  {
+    "id": "8f0d80b2c196b8b0",
+    "url": "https://www.smashingmagazine.com/2026/11/ai-sped-up-build-how-can-accessibility-testing-keep-up",
+    "title": "AI Sped Up The Build: How Can Accessibility Testing Keep Up? — Smashing Magazine",
     "source": "smashingmagazine.com",
-    "sourceKind": "web research",
-    "publishedAt": "2026-06-30T12:00:00.000Z",
-    "firstCollectedAt": "2026-11-26T08:10:29.403Z"
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-17T08:00:00.000Z",
+    "firstCollectedAt": "2026-11-27T08:21:46.513Z"
   },
   {
-    "id": "bf3c03b60fa8445e",
-    "url": "https://github.com/github/annotation-toolkit/blob/main/deep-dives/best-practices-for-hand-off.md",
-    "title": "annotation-toolkit/deep-dives/best-practices-for-hand-off.md at main · github/annotation-toolkit · GitHub",
+    "id": "971f69715319ef47",
+    "url": "https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government/artificial-intelligence-playbook-for-the-uk-government-html",
+    "title": "Artificial Intelligence Playbook for the UK Government (HTML) - GOV.UK",
+    "source": "gov.uk",
+    "sourceKind": "web crawl",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-27T08:21:46.513Z"
+  },
+  {
+    "id": "97519e78d1e3c682",
+    "url": "https://gds.blog.gov.uk/2026/06/18/update-from-the-gds-responsible-ai-advisory-panel",
+    "title": "Update from the GDS Responsible AI Advisory Panel – Government Digital Service",
+    "source": "gds.blog.gov.uk",
+    "sourceKind": "web crawl",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-27T08:21:46.513Z"
+  },
+  {
+    "id": "3c430a3a345c914e",
+    "url": "https://mhclgdigital.blog.gov.uk/2026/07/23/building-local-transcribe-for-local-government",
+    "title": "Building Local Transcribe for local government – MHCLG Digital",
+    "source": "mhclgdigital.blog.gov.uk",
+    "sourceKind": "web crawl",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-27T08:21:46.513Z"
+  },
+  {
+    "id": "f50f9f1c892580a6",
+    "url": "https://www.linkedin.com/posts/ralfchille_we-moved-design-into-the-repo-activity-7529125116010504192-WegC?rcm=ACoAABW0mB8BYRHo8ehBcHiwAjpZoPAdJomSjQ0",
+    "title": "We moved design into the repo. | Ralf Chille | 30 comments",
+    "source": "linkedin.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-27T08:21:47.989Z",
+    "firstCollectedAt": "2026-11-27T08:21:46.513Z"
+  },
+  {
+    "id": "3e2e4c685d6bbf13",
+    "url": "https://developers.figma.com/docs/figma-mcp-server/write-to-canvas",
+    "title": "Write to canvas | Developer Docs",
+    "source": "developers.figma.com",
+    "sourceKind": "web crawl",
+    "publishedAt": null,
+    "firstCollectedAt": "2026-11-27T08:21:46.513Z"
+  },
+  {
+    "id": "7dbd81930a66784a",
+    "url": "https://www.itsnicethat.com/articles/jacob-hulmston-martin-uhrecky-the-soulbreaker-codex-graphic-design-publication-project-261126",
+    "title": "This illustrated A.G. Cook book is a multi-media manual that embodies PC Music",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-26T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-27T08:21:46.513Z"
+  },
+  {
+    "id": "38d4ddf2de0bfd37",
+    "url": "https://www.itsnicethat.com/articles/fiona-quadri-the-abundance-of-being-art-project-261126",
+    "title": "Fiona Quadri on transforming London’s billboards from something trying to sell us stuff into maximalist artworks",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-26T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-27T08:21:46.513Z"
+  },
+  {
+    "id": "dc36298e47f44f05",
+    "url": "https://www.itsnicethat.com/articles/nicer-tuesdays-london-october-silvana-trivale-241126",
+    "title": "Silvana Trevale on capturing the wounds, beauty, hardships and hope of Venezuelan youth",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-24T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-27T08:21:46.513Z"
+  },
+  {
+    "id": "20f801f15b3e9e51",
+    "url": "https://www.itsnicethat.com/articles/base-design-visa-brand-refresh-graphic-design-project-241126",
+    "title": "To V or not to V? Base Design refreshes Visa’s global identity with new symbol and typeface",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-24T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-27T08:21:46.513Z"
+  },
+  {
+    "id": "71d50ce75c54a4a3",
+    "url": "https://www.itsnicethat.com/articles/jake-hollings-drawing-with-scissors-art-discover-241126",
+    "title": "Jake Hollings had a hand operation that impeded his usual style – so he started “drawing with scissors”",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-24T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-27T08:21:46.513Z"
+  },
+  {
+    "id": "b51621b1de850bac",
+    "url": "https://www.itsnicethat.com/articles/nicer-tuesdays-london-october-manvsmachine-261126",
+    "title": "ManvsMachine bounce the silly off the serious in its premium motion design projects",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-24T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-27T08:21:46.513Z"
+  },
+  {
+    "id": "7306b4f40a43cd9f",
+    "url": "https://www.itsnicethat.com/articles/artist-biopics-gary-grimes-culture-column-231126",
+    "title": "Gary Grimes on the poisoned chalice of fictionalising artists on the big screen",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-23T11:00:00.000Z",
+    "firstCollectedAt": "2026-11-27T08:21:46.513Z"
+  },
+  {
+    "id": "71d13caf593358a4",
+    "url": "https://www.itsnicethat.com/articles/teemill-christmas-call-creative-industry-sponsored-content-231126",
+    "title": "Launch your sustainable merch store in time for Christmas with Teemill",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-23T11:00:00.000Z",
+    "firstCollectedAt": "2026-11-27T08:21:46.513Z"
+  },
+  {
+    "id": "9dde1de7fe74c52e",
+    "url": "https://www.smashingmagazine.com/2026/11/online-smashingconf-ai-2027",
+    "title": "Meet AI 2027 Conference (Dec 1) — Smashing Magazine",
+    "source": "smashingmagazine.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-17T12:00:00.000Z",
+    "firstCollectedAt": "2026-11-27T08:21:46.513Z"
+  },
+  {
+    "id": "ad5bc128fb288392",
+    "url": "https://x.com/hwchase17/status/2121635683999883577?shem=dsdf,sharefoc,agadiscoversdl,adpsc,,sh/x/discover/m1/4",
+    "title": "Harrison Chase on X: \"Goal Engineering: How to Design Goals\" / X",
+    "source": "x.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-23T07:30:18.664Z",
+    "firstCollectedAt": "2026-11-27T08:21:46.513Z"
+  },
+  {
+    "id": "be055e2d2b2d7384",
+    "url": "https://github.com/elder-plinius/G0DM0D3?_bhlid=84dbeaae5d02f921c1bd7b866a3ae2568f5a075b",
+    "title": "GitHub - elder-plinius/G0DM0D3: LIBERATED AI CHAT · GitHub",
+    "source": "github.com",
+    "sourceKind": "newsletter inbox",
+    "publishedAt": "2026-11-20T20:20:03.000Z",
+    "firstCollectedAt": "2026-11-27T08:21:46.513Z"
+  },
+  {
+    "id": "da2eb4be11b3071c",
+    "url": "https://shop.smashingmagazine.com/2026/11/ai-sped-up-build-how-can-accessibility-testing-keep-up",
+    "title": "AI Sped Up The Build: How Can Accessibility Testing Keep Up? — Smashing Magazine",
+    "source": "shop.smashingmagazine.com",
+    "sourceKind": "web research",
+    "publishedAt": "2026-11-17T08:00:00.000Z",
+    "firstCollectedAt": "2026-11-27T08:21:46.513Z"
+  },
+  {
+    "id": "596fcfe5d331ac37",
+    "url": "https://github.com/aws-samples/sample-claude-code-agents-for-product-teams/blob/main/phases/3-design/artifacts/build-ready-package.md",
+    "title": "sample-claude-code-agents-for-product-teams/phases/3-design/artifacts/build-ready-package.md at main · aws-samples/sample-claude-code-agents-for-product-teams · GitHub",
     "source": "github.com",
     "sourceKind": "web research",
     "publishedAt": null,
-    "firstCollectedAt": "2026-11-26T08:10:29.403Z"
+    "firstCollectedAt": "2026-11-27T08:21:46.513Z"
   },
   {
-    "id": "c1654fef59b7b0fd",
-    "url": "https://www.w3.org/blog/2026/tag-note-explained-user-agents",
-    "title": "TAG Note explained: User Agents | 2026 | Blog | W3C",
-    "source": "w3.org",
+    "id": "614a141d26ebfd5e",
+    "url": "https://www.itsnicethat.com/articles/yury-ostromentsky-backslanted-graphic-design-project-251126",
+    "title": "Like italics, but backwards: Inside Yury Ostromentsky’s inverted typeface series, Backslanted",
+    "source": "itsnicethat.com",
     "sourceKind": "web crawl",
-    "publishedAt": "2026-11-24T10:49:00.000Z",
-    "firstCollectedAt": "2026-11-26T08:10:29.403Z"
+    "publishedAt": "2026-11-25T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-27T08:21:46.513Z"
   },
   {
-    "id": "13eede7805a350c3",
-    "url": "https://www.w3.org/blog/2026/tag-note-explained-self-review-questionnaire",
-    "title": "TAG Note explained: Self-Review Questionnaire: Societal Impact | 2026 | Blog | W3C",
-    "source": "w3.org",
+    "id": "a64f21d8515909fe",
+    "url": "https://www.itsnicethat.com/articles/offcuts-magazine-publication-sponsored-content-251126",
+    "title": "Offcuts, amongst other things, wants you to stop doomscrolling",
+    "source": "itsnicethat.com",
     "sourceKind": "web crawl",
-    "publishedAt": "2026-11-24T10:05:50.000Z",
-    "firstCollectedAt": "2026-11-26T08:10:29.403Z"
+    "publishedAt": "2026-11-25T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-27T08:21:46.513Z"
+  },
+  {
+    "id": "d41bb109adab28c4",
+    "url": "https://www.itsnicethat.com/articles/abi-tucker-art-discover-251126",
+    "title": "“I try to think about drawing as a way of remembering”: Abi Tucker’s folkloric art is full of feeling",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-25T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-27T08:21:46.513Z"
+  },
+  {
+    "id": "4bd242ea977885a0",
+    "url": "https://www.itsnicethat.com/articles/nicer-tuesdays-london-october-luci-pina-251126",
+    "title": "Kokoroko to Marseille Jazz Festival: Luci Pina on turning music notes into pencil strokes",
+    "source": "itsnicethat.com",
+    "sourceKind": "web crawl",
+    "publishedAt": "2026-11-24T09:00:00.000Z",
+    "firstCollectedAt": "2026-11-27T08:21:46.513Z"
   }
 ]
